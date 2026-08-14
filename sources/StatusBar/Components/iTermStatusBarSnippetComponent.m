@@ -83,7 +83,7 @@
 
     [menu addItem:[NSMenuItem separatorItem]];
 
-    NSMenuItem *item = [[NSMenuItem alloc] initWithTitle:@"Edit Snippets…" action:@selector(editSnippets:) keyEquivalent:@""];
+    NSMenuItem *item = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Edit Snippets…", @"Status bar context menu") action:@selector(editSnippets:) keyEquivalent:@""];
     item.target = self;
     [menu addItem:item];
 

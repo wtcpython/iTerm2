@@ -1,0 +1,24 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "CkN-Sz-DhG.title": {
+      "comment": "Class = \"NSButtonCell\"; title = \"Black and white\"; ObjectID = \"CkN-Sz-DhG\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Black and white"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "黑白"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

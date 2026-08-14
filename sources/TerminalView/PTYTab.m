@@ -7002,11 +7002,9 @@ typedef struct {
         notify &&
         [[NSDate date] timeIntervalSinceDate:[SessionView lastResizeDate]] > POST_WINDOW_RESIZE_SILENCE_SEC) {
         if ([iTermProfilePreferences boolForKey:KEY_SEND_NEW_OUTPUT_ALERT inProfile:self.activeSession.profile]) {
-            [[iTermNotificationController sharedInstance] notify:NSLocalizedStringFromTableInBundle(@"New Output",
-                                                                                                @"iTerm",
-                                                                                                [NSBundle bundleForClass:[self class]],
-                                                                                                @"User Alerts")
-                                             withDescription:[NSString stringWithFormat:@"New output was received in %@, tab #%d.",
+            [[iTermNotificationController sharedInstance] notify:NSLocalizedString(@"New Output",
+                                                                                   @"User Alerts")
+                                             withDescription:[NSString stringWithFormat:NSLocalizedString(@"New output was received in %@, tab #%d.", @"User Alerts"),
                                                               [[[self activeSession] name] removingHTMLFromTabTitleIfNeeded],
                                                               [self tabNumber]]
                                                  windowIndex:[[self activeSession] screenWindowIndex]

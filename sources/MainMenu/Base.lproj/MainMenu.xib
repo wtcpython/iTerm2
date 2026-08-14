@@ -966,7 +966,7 @@ DQ
                         </items>
                     </menu>
                 </menuItem>
-                <menuItem title="View" id="802">
+                <menuItem title="View" id="802" identifier="View">
                     <menu key="submenu" title="View" id="803">
                         <items>
                             <menuItem title="Show Tabs in Fullscreen" keyEquivalent="U" identifier="Show Tabs in Fullscreen" id="1257">

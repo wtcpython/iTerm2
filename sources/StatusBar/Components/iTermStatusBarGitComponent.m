@@ -323,7 +323,7 @@ static const NSTimeInterval iTermStatusBarGitComponentDefaultCadence = 2;
         item.target = self;
         [menu addItem:item];
 
-        item = [[NSMenuItem alloc] initWithTitle:@"Reveal" action:@selector(revealSession:) keyEquivalent:@""];
+        item = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Reveal", @"Status bar context menu") action:@selector(revealSession:) keyEquivalent:@""];
         item.target = self;
         [menu addItem:item];
         [menu popUpMenuPositioningItem:menu.itemArray.firstObject atLocation:NSMakePoint(0, 0) inView:containingView];
@@ -348,7 +348,7 @@ static const NSTimeInterval iTermStatusBarGitComponentDefaultCadence = 2;
 
     if (_maker.branch.length == 0) {
         NSMenu *menu = [[NSMenu alloc] init];
-        NSMenuItem *item = [[NSMenuItem alloc] initWithTitle:@"Show Debug Info" action:@selector(debug) keyEquivalent:@""];
+        NSMenuItem *item = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Show Debug Info", @"Status bar context menu") action:@selector(debug) keyEquivalent:@""];
         item.target = self;
         [menu addItem:item];
         [menu popUpMenuPositioningItem:menu.itemArray.firstObject atLocation:NSMakePoint(0, 0) inView:containingView];

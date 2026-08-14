@@ -1,0 +1,564 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "5Lu-I0-zTV.title": {
+      "comment": "Class = \"NSTextFieldCell\"; title = \"Requires Shell Integration for prompt detection\"; ObjectID = \"5Lu-I0-zTV\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Requires Shell Integration for prompt detection"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "提示符检测需要 Shell 集成"
+          }
+        }
+      }
+    },
+    "65A-9c-omm.title": {
+      "comment": "Class = \"NSButtonCell\"; title = \"Replace\"; ObjectID = \"65A-9c-omm\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Replace"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "替换"
+          }
+        }
+      }
+    },
+    "8UF-96-NRu.title": {
+      "comment": "Class = \"NSButtonCell\"; title = \"Escape tabs with ^V\"; ObjectID = \"8UF-96-NRu\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Escape tabs with ^V"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "使用 ^V 转义制表符"
+          }
+        }
+      }
+    },
+    "9FR-lE-vZJ.title": {
+      "comment": "Class = \"NSButtonCell\"; title = \"Paste with tabs\"; ObjectID = \"9FR-lE-vZJ\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Paste with tabs"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "带制表符粘贴"
+          }
+        }
+      }
+    },
+    "Ba7-4w-YL4.title": {
+      "comment": "Class = \"NSTextFieldCell\"; title = \"1 ms\"; ObjectID = \"Ba7-4w-YL4\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "1 ms"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 ms"
+          }
+        }
+      }
+    },
+    "EeN-We-9AA.title": {
+      "comment": "Class = \"NSButtonCell\"; title = \"Convert tabs to spaces:\"; ObjectID = \"EeN-We-9AA\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Convert tabs to spaces:"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "将制表符转换为空格："
+          }
+        }
+      }
+    },
+    "IOU-ld-y0b.title": {
+      "comment": "Class = \"NSTextFieldCell\"; title = \"Transforms\"; ObjectID = \"IOU-ld-y0b\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Transforms"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "转换"
+          }
+        }
+      }
+    },
+    "Iuq-a0-6jh.title": {
+      "comment": "Class = \"NSTextFieldCell\"; title = \"ICU regular expression syntax\"; ObjectID = \"Iuq-a0-6jh\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "ICU regular expression syntax"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ICU regular expression syntax"
+          }
+        }
+      }
+    },
+    "J7i-FI-poE.title": {
+      "comment": "Class = \"NSTextFieldCell\"; title = \"100 ms\"; ObjectID = \"J7i-FI-poE\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "100 ms"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "100 ms"
+          }
+        }
+      }
+    },
+    "M1n-rk-o3M.title": {
+      "comment": "Class = \"NSTextFieldCell\"; title = \"with\"; ObjectID = \"M1n-rk-o3M\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "with"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "使用"
+          }
+        }
+      }
+    },
+    "Nc9-bk-vWI.title": {
+      "comment": "Class = \"NSButtonCell\"; title = \"Remove unsafe control codes\"; ObjectID = \"Nc9-bk-vWI\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Remove unsafe control codes"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "移除不安全控制码"
+          }
+        }
+      }
+    },
+    "RNM-1C-IVn.title": {
+      "comment": "Class = \"NSTextFieldCell\"; title = \"1.2 kB\"; ObjectID = \"RNM-1C-IVn\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "1.2 kB"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1.2 kB"
+          }
+        }
+      }
+    },
+    "Rzy-TP-eag.title": {
+      "comment": "Class = \"NSTextFieldCell\"; title = \"150 ms\"; ObjectID = \"Rzy-TP-eag\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "150 ms"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "150 ms"
+          }
+        }
+      }
+    },
+    "T6S-me-J0t.title": {
+      "comment": "Class = \"NSButtonCell\"; title = \"Radio\"; ObjectID = \"T6S-me-J0t\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Radio"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "单选按钮"
+          }
+        }
+      }
+    },
+    "TcS-Fq-kZn.title": {
+      "comment": "Class = \"NSButtonCell\"; title = \"Remove newlines\"; ObjectID = \"TcS-Fq-kZn\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Remove newlines"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "移除换行符"
+          }
+        }
+      }
+    },
+    "WDY-mt-Qhp.title": {
+      "comment": "Class = \"NSTextFieldCell\"; title = \"1 MB\"; ObjectID = \"WDY-mt-Qhp\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "1 MB"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 MB"
+          }
+        }
+      }
+    },
+    "YGo-el-jcx.title": {
+      "comment": "Class = \"NSButtonCell\"; title = \"Convert CRLF and LF to CR\"; ObjectID = \"YGo-el-jcx\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Convert CRLF and LF to CR"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "将 CRLF 和 LF 转换为 CR"
+          }
+        }
+      }
+    },
+    "YXc-NP-geE.title": {
+      "comment": "Class = \"NSButtonCell\"; title = \"Base-64 encode\"; ObjectID = \"YXc-NP-geE\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Base-64 encode"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Base64 编码"
+          }
+        }
+      }
+    },
+    "a6z-Q5-O3y.title": {
+      "comment": "Class = \"NSButtonCell\"; title = \"Convert Unicode punctuation\"; ObjectID = \"a6z-Q5-O3y\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Convert Unicode punctuation"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "转换 Unicode 标点"
+          }
+        }
+      }
+    },
+    "a9K-ff-GBV.title": {
+      "comment": "Class = \"NSTextFieldCell\"; title = \"Respects vim escape sequences\"; ObjectID = \"a9K-ff-GBV\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Respects vim escape sequences"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "遵循 vim 转义序列"
+          }
+        }
+      }
+    },
+    "geX-hg-c5A.title": {
+      "comment": "Class = \"NSButtonCell\"; title = \"Escape shell characters with \\\\\"; ObjectID = \"geX-hg-c5A\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Escape shell characters with \\\\"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Escape shell characters with \\\\"
+          }
+        }
+      }
+    },
+    "gmQ-6D-hd3.title": {
+      "comment": "Class = \"NSTextFieldCell\"; title = \"Chunk Size:\"; ObjectID = \"gmQ-6D-hd3\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Chunk Size:"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "块大小："
+          }
+        }
+      }
+    },
+    "lBa-zz-w0b.title": {
+      "comment": "Class = \"NSTextFieldCell\"; title = \"1 kB\"; ObjectID = \"lBa-zz-w0b\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "1 kB"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 kB"
+          }
+        }
+      }
+    },
+    "mzg-ua-zxf.title": {
+      "comment": "Class = \"NSTextFieldCell\"; title = \"Speed\"; ObjectID = \"mzg-ua-zxf\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Speed"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "速度"
+          }
+        }
+      }
+    },
+    "nQ4-xf-lMs.title": {
+      "comment": "Class = \"NSButtonCell\"; title = \"Wait for shell prompt before pasting each line\"; ObjectID = \"nQ4-xf-lMs\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Wait for shell prompt before pasting each line"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "粘贴每行前等待 Shell 提示符"
+          }
+        }
+      }
+    },
+    "oIL-MU-4nf.title": {
+      "comment": "Class = \"NSTextFieldCell\"; title = \"Interchunk Delay:\"; ObjectID = \"oIL-MU-4nf\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Interchunk Delay:"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "块间延迟："
+          }
+        }
+      }
+    },
+    "q05-F1-Nx6.title": {
+      "comment": "Class = \"NSTextFieldCell\"; title = \"1 byte\"; ObjectID = \"q05-F1-Nx6\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "1 byte"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 byte"
+          }
+        }
+      }
+    },
+    "sRn-9b-46B.title": {
+      "comment": "Class = \"NSTextFieldCell\"; title = \"100\"; ObjectID = \"sRn-9b-46B\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "100"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "100"
+          }
+        }
+      }
+    },
+    "tpG-Jk-bWC.title": {
+      "comment": "Class = \"NSTextFieldCell\"; title = \"Use $1, $2, etc. for capture groups\"; ObjectID = \"tpG-Jk-bWC\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Use $1, $2, etc. for capture groups"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "使用 $1、$2 等作为捕获组"
+          }
+        }
+      }
+    },
+    "vTr-f3-LoJ.title": {
+      "comment": "Class = \"NSButtonCell\"; title = \"Bracketed paste mode\"; ObjectID = \"vTr-f3-LoJ\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Bracketed paste mode"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "括号粘贴模式"
+          }
+        }
+      }
+    },
+    "zMi-ws-xdZ.title": {
+      "comment": "Class = \"NSTextFieldCell\"; title = \"10 sec\"; ObjectID = \"zMi-ws-xdZ\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "10 sec"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "10 sec"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

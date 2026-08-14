@@ -103,9 +103,9 @@ private extension NSMenuItem {
     func title(descendsFromProfiles: Bool) -> String {
         switch itemType(descendsFromProfiles: descendsFromProfiles) {
         case .newWindow:
-            return "\(self.title) — New Window"
+            return String(format: String(localized: "%@ — New Window", comment: "Menu item popup"), self.title)
         case .newTab:
-            return "\(self.title) — New Tab"
+            return String(format: String(localized: "%@ — New Tab", comment: "Menu item popup"), self.title)
         case .other:
             return self.title
         }

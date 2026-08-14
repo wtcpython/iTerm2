@@ -45,11 +45,11 @@ enum iTermWorkgroupSessionMode: Int, Codable, Equatable, CaseIterable {
     var localizedTitle: String {
         switch self {
         case .regular:
-            return NSLocalizedString("Regular", comment: "Workgroup session mode")
+            return String(localized: "Regular", comment: "Workgroup session mode")
         case .codeReview:
-            return NSLocalizedString("Code Review", comment: "Workgroup session mode")
+            return String(localized: "Code Review", comment: "Workgroup session mode")
         case .diff:
-            return NSLocalizedString("Diff", comment: "Workgroup session mode")
+            return String(localized: "Diff", comment: "Workgroup session mode")
         }
     }
 }

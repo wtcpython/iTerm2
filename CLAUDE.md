@@ -41,4 +41,12 @@
 - Don't use sleep to solve concurrency problems.
 - Tests should not be flaky. Don't write tests that will fail if the system is slower than usual.
 - Write new classes in Swift unless there is a very good reason not to.
+
+## Localization
+
+- iTerm2 is localized via a String Catalog at `sources/Localizable.xcstrings` (source language: en; localized language: zh-Hans). It is the single source of truth; do not create `.strings` files.
+- Use `NSLocalizedString(key, comment)` in Objective-C and `String(localized: "key", comment: "...")` in Swift. Xcode adds new keys to the catalog automatically at build time.
+- To translate a string, add a zh-Hans entry in the catalog (Xcode UI: select the string, open the zh-Hans row, enter the translation). Mark untranslated new keys as needed.
+- The app declares `CFBundleLocalizations` (en, zh-Hans) in `plists/*-iTerm2.plist`; keep all variants in sync.
+- Legacy `Interfaces/*.strings` files are pre-catalog leftovers; do not add new strings to them.
 - Do not modify CLAUDE.md without express written permission

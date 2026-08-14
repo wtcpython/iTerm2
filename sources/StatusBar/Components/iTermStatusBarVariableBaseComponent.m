@@ -359,35 +359,35 @@ static NSString *const iTermStatusBarHostnameComponentAbbreviateLocalhost = @"ab
     if (currentPath.length) {
         [menu addItem:[NSMenuItem separatorItem]];
 
-        NSMenuItem *copyPath = [[NSMenuItem alloc] initWithTitle:@"Copy Path"
-                                                          action:@selector(copyCurrentPath:)
-                                                   keyEquivalent:@""];
+        NSMenuItem *copyPath = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Copy Path", @"Status bar context menu")
+                                                           action:@selector(copyCurrentPath:)
+                                                    keyEquivalent:@""];
         copyPath.target = self;
         [menu addItem:copyPath];
 
-        NSMenuItem *copyBasename = [[NSMenuItem alloc] initWithTitle:@"Copy Folder Name"
-                                                              action:@selector(copyCurrentBasename:)
-                                                       keyEquivalent:@""];
+        NSMenuItem *copyBasename = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Copy Folder Name", @"Status bar context menu")
+                                                               action:@selector(copyCurrentBasename:)
+                                                        keyEquivalent:@""];
         copyBasename.target = self;
         [menu addItem:copyBasename];
 
-        NSMenuItem *openInFinder = [[NSMenuItem alloc] initWithTitle:@"Reveal in Finder"
-                                                              action:@selector(openCurrentPathInFinder:)
-                                                       keyEquivalent:@""];
+        NSMenuItem *openInFinder = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Reveal in Finder", @"Status bar context menu")
+                                                               action:@selector(openCurrentPathInFinder:)
+                                                        keyEquivalent:@""];
         openInFinder.target = self;
         [menu addItem:openInFinder];
 
         [menu addItem:[NSMenuItem separatorItem]];
 
-        NSMenuItem *openInNewWindow = [[NSMenuItem alloc] initWithTitle:@"New Session Here in New Window"
+        NSMenuItem *openInNewWindow = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"New Session Here in New Window", @"Status bar context menu")
                                                                  action:@selector(openCurrentPathInNewWindow:)
                                                           keyEquivalent:@""];
         openInNewWindow.target = self;
         [menu addItem:openInNewWindow];
 
-        NSMenuItem *openInNewTab = [[NSMenuItem alloc] initWithTitle:@"New Session Here in New Tab"
-                                                              action:@selector(openCurrentPathInNewTab:)
-                                                       keyEquivalent:@""];
+        NSMenuItem *openInNewTab = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"New Session Here in New Tab", @"Status bar context menu")
+                                                               action:@selector(openCurrentPathInNewTab:)
+                                                        keyEquivalent:@""];
         openInNewTab.target = self;
         [menu addItem:openInNewTab];
     }

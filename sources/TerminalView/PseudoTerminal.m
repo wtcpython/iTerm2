@@ -6880,27 +6880,18 @@ hidingToolbeltShouldResizeWindow:(BOOL)hidingToolbeltShouldResizeWindow
     }
 
     // Bookmarks
-    [theMenu insertItemWithTitle:NSLocalizedStringFromTableInBundle(@"New Window",
-                                                                    @"iTerm",
-                                                                    [NSBundle bundleForClass:[self class]],
-                                                                    @"Context menu")
+    [theMenu insertItemWithTitle:NSLocalizedString(@"New Window", @"Context menu")
                           action:nil
                    keyEquivalent:@""
                          atIndex:nextIndex++];
-    [theMenu insertItemWithTitle:NSLocalizedStringFromTableInBundle(@"New Tab",
-                                                                    @"iTerm",
-                                                                    [NSBundle bundleForClass:[self class]],
-                                                                    @"Context menu")
+    [theMenu insertItemWithTitle:NSLocalizedString(@"New Tab", @"Context menu")
                           action:nil
                    keyEquivalent:@""
                          atIndex:nextIndex++];
 
     // Create a menu with a submenu to navigate between tabs if there are more than one
     if ([_contentView.tabView numberOfTabViewItems] > 1) {
-        [theMenu insertItemWithTitle:NSLocalizedStringFromTableInBundle(@"Select",
-                                                                        @"iTerm",
-                                                                        [NSBundle bundleForClass:[self class]],
-                                                                        @"Context menu")
+        [theMenu insertItemWithTitle:NSLocalizedString(@"Select", @"Context menu")
                               action:nil
                        keyEquivalent:@""
                              atIndex:nextIndex];
@@ -7904,7 +7895,7 @@ hidingToolbeltShouldResizeWindow:(BOOL)hidingToolbeltShouldResizeWindow
             [tabMenu addItem:item];
         }
 
-        [rootMenu addItemWithTitle:@"Select"
+        [rootMenu addItemWithTitle:NSLocalizedString(@"Select", @"Tab context menu")
                             action:nil
                      keyEquivalent:@""];
         [rootMenu setSubmenu:tabMenu forItem:[rootMenu itemAtIndex:0]];
@@ -7912,19 +7903,19 @@ hidingToolbeltShouldResizeWindow:(BOOL)hidingToolbeltShouldResizeWindow
    }
 
     // add tasks
-    item = [[[NSMenuItem alloc] initWithTitle:@"New Tab to the Right"
+    item = [[[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"New Tab to the Right", @"Tab context menu")
                                        action:@selector(newTabToTheRight:)
                                 keyEquivalent:@""] autorelease];
     [item setRepresentedObject:tabViewItem];
     [rootMenu addItem:item];
 
-    item = [[[NSMenuItem alloc] initWithTitle:@"Edit Session…"
+    item = [[[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Edit Session…", @"Tab context menu")
                                        action:@selector(editSession:)
                                 keyEquivalent:@""] autorelease];
     [item setRepresentedObject:tabViewItem];
     [rootMenu addItem:item];
 
-    item = [[[NSMenuItem alloc] initWithTitle:@"Close Tab"
+    item = [[[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Close Tab", @"Tab context menu")
                                        action:@selector(closeTabContextualMenuAction:)
                                 keyEquivalent:@""] autorelease];
     [item setRepresentedObject:tabViewItem];
@@ -7934,21 +7925,21 @@ hidingToolbeltShouldResizeWindow:(BOOL)hidingToolbeltShouldResizeWindow
 
     PTYTab *theTab = [tabViewItem identifier];
     if (![theTab isTmuxTab]) {
-        item = [[[NSMenuItem alloc] initWithTitle:@"Duplicate Tab"
+        item = [[[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Duplicate Tab", @"Tab context menu")
                                            action:@selector(duplicateTab:)
                                     keyEquivalent:@""] autorelease];
         [item setRepresentedObject:tabViewItem];
         [rootMenu addItem:item];
     }
 
-    item = [[[NSMenuItem alloc] initWithTitle:@"Save Tab as Window Arrangement"
+    item = [[[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Save Tab as Window Arrangement", @"Tab context menu")
                                        action:@selector(saveTabAsWindowArrangement:)
                                 keyEquivalent:@""] autorelease];
     [item setRepresentedObject:tabViewItem];
     [rootMenu addItem:item];
 
     if ([_contentView.tabView numberOfTabViewItems] > 1 && !theTab.isPinned) {
-        item = [[[NSMenuItem alloc] initWithTitle:@"Move to New Window"
+        item = [[[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Move to New Window", @"Tab context menu")
                                            action:@selector(moveTabToNewWindowContextualMenuAction:)
                                     keyEquivalent:@""] autorelease];
         [item setRepresentedObject:tabViewItem];
@@ -7974,7 +7965,7 @@ hidingToolbeltShouldResizeWindow:(BOOL)hidingToolbeltShouldResizeWindow
         }
 
         if (hasUnpinnedOther) {
-            item = [[[NSMenuItem alloc] initWithTitle:@"Close Other Tabs"
+            item = [[[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Close Other Tabs", @"Tab context menu")
                                                action:@selector(closeOtherTabs:)
                                         keyEquivalent:@""] autorelease];
             [item setRepresentedObject:tabViewItem];
@@ -7985,9 +7976,9 @@ hidingToolbeltShouldResizeWindow:(BOOL)hidingToolbeltShouldResizeWindow
             NSString *title;
             const PSMTabPosition tabPosition = [iTermPreferences intForKey:kPreferenceKeyTabPosition];
             if (tabPosition == PSMTab_LeftTab || tabPosition == PSMTab_RightTab) {
-                title = @"Close Tabs Below";
+                title = NSLocalizedString(@"Close Tabs Below", @"Tab context menu");
             } else {
-                title = @"Close Tabs to the Right";
+                title = NSLocalizedString(@"Close Tabs to the Right", @"Tab context menu");
             }
             item = [[[NSMenuItem alloc] initWithTitle:title
                                                action:@selector(closeTabsToTheRight:)
@@ -8000,7 +7991,8 @@ hidingToolbeltShouldResizeWindow:(BOOL)hidingToolbeltShouldResizeWindow
     // pin/unpin tab (not available for tmux tabs)
     if (![theTab isTmuxTab]) {
         [rootMenu addItem:[NSMenuItem separatorItem]];
-        NSString *pinTitle = theTab.isPinned ? @"Unpin Tab" : @"Pin Tab";
+        NSString *pinTitle = theTab.isPinned ? NSLocalizedString(@"Unpin Tab", @"Tab context menu")
+                                             : NSLocalizedString(@"Pin Tab", @"Tab context menu");
         item = [[[NSMenuItem alloc] initWithTitle:pinTitle
                                            action:@selector(togglePinTab:)
                                     keyEquivalent:@""] autorelease];
@@ -8016,7 +8008,7 @@ hidingToolbeltShouldResizeWindow:(BOOL)hidingToolbeltShouldResizeWindow
     PTYTab *tab = [tabViewItem identifier];
     labelTrackView.currentColor = tab.activeSession.tabColor;
     labelTrackView.delegate = self;
-    item = [[[NSMenuItem alloc] initWithTitle:@"Tab Color"
+    item = [[[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Tab Color", @"Tab context menu")
                                        action:@selector(changeTabColorToMenuAction:)
                                 keyEquivalent:@""] autorelease];
     [item setView:labelTrackView];
@@ -8425,7 +8417,7 @@ hidingToolbeltShouldResizeWindow:(BOOL)hidingToolbeltShouldResizeWindow
     }
     NSMenu *groupMenu = [[[NSMenu alloc] initWithTitle:@""] autorelease];
 
-    NSMenuItem *newGroupItem = [[[NSMenuItem alloc] initWithTitle:@"New Group…"
+    NSMenuItem *newGroupItem = [[[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"New Group…", @"Tab context menu")
                                                            action:@selector(addTabToNewGroup:)
                                                     keyEquivalent:@""] autorelease];
     newGroupItem.representedObject = tabViewItem;
@@ -8436,7 +8428,7 @@ hidingToolbeltShouldResizeWindow:(BOOL)hidingToolbeltShouldResizeWindow
     if (groups.count > 0) {
         [groupMenu addItem:[NSMenuItem separatorItem]];
         for (iTermTabGroup *group in groups) {
-            NSString *title = group.name.length > 0 ? group.name : @"Untitled";
+            NSString *title = group.name.length > 0 ? group.name : NSLocalizedString(@"Untitled", @"Tab group name");
             NSMenuItem *gi = [[[NSMenuItem alloc] initWithTitle:title
                                                          action:@selector(addTabToExistingGroup:)
                                                   keyEquivalent:@""] autorelease];
@@ -8448,21 +8440,21 @@ hidingToolbeltShouldResizeWindow:(BOOL)hidingToolbeltShouldResizeWindow
         }
     }
 
-    NSMenuItem *groupRoot = [[[NSMenuItem alloc] initWithTitle:@"Add Tab to Group"
+    NSMenuItem *groupRoot = [[[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Add Tab to Group", @"Tab context menu")
                                                         action:nil
                                                  keyEquivalent:@""] autorelease];
     [rootMenu addItem:groupRoot];
     [rootMenu setSubmenu:groupMenu forItem:groupRoot];
 
     if (theTab.tabGroupID) {
-        NSMenuItem *renameItem = [[[NSMenuItem alloc] initWithTitle:@"Rename Group…"
+        NSMenuItem *renameItem = [[[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Rename Group…", @"Tab context menu")
                                                             action:@selector(renameTabGroup:)
                                                      keyEquivalent:@""] autorelease];
         renameItem.representedObject = tabViewItem;
         renameItem.target = self;
         [rootMenu addItem:renameItem];
 
-        NSMenuItem *removeItem = [[[NSMenuItem alloc] initWithTitle:@"Remove Tab from Group"
+        NSMenuItem *removeItem = [[[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Remove Tab from Group", @"Tab context menu")
                                                              action:@selector(removeTabFromGroup:)
                                                       keyEquivalent:@""] autorelease];
         removeItem.representedObject = tabViewItem;
@@ -8478,7 +8470,7 @@ hidingToolbeltShouldResizeWindow:(BOOL)hidingToolbeltShouldResizeWindow
         return;
     }
     NSString *defaultName = [tabViewItem label].length > 0 ? [tabViewItem label] : @"Group";
-    NSString *name = [self promptForTabGroupName:defaultName title:@"New Tab Group"];
+    NSString *name = [self promptForTabGroupName:defaultName title:NSLocalizedString(@"New Tab Group", @"Tab group name prompt")];
     if (!name) {
         return;  // user cancelled
     }
@@ -8836,17 +8828,17 @@ hidingToolbeltShouldResizeWindow:(BOOL)hidingToolbeltShouldResizeWindow
     NSMenu *menu = [[[NSMenu alloc] initWithTitle:@""] autorelease];
     menu.autoenablesItems = NO;  // contextual actions are always applicable
     NSArray<NSArray<NSString *> *> *specs = @[
-        @[@"Rename Group…", @"renameTabGroupFromMenu:"],
+        @[NSLocalizedString(@"Rename Group…", @"Tab group context menu"), @"renameTabGroupFromMenu:"],
         @[@"-", @""],
-        @[@"Duplicate Group", @"duplicateTabGroup:"],
-        @[@"Move Group to New Window", @"moveTabGroupToNewWindow:"],
-        @[@"Save Group as Window Arrangement…", @"saveTabGroupAsWindowArrangement:"],
+        @[NSLocalizedString(@"Duplicate Group", @"Tab group context menu"), @"duplicateTabGroup:"],
+        @[NSLocalizedString(@"Move Group to New Window", @"Tab group context menu"), @"moveTabGroupToNewWindow:"],
+        @[NSLocalizedString(@"Save Group as Window Arrangement…", @"Tab group context menu"), @"saveTabGroupAsWindowArrangement:"],
         @[@"-", @""],
-        @[@"Remove All Tabs from Group", @"ungroupTabGroup:"],
+        @[NSLocalizedString(@"Remove All Tabs from Group", @"Tab group context menu"), @"ungroupTabGroup:"],
         @[@"-", @""],
-        @[@"Close Group", @"closeTabGroup:"],
-        @[@"Close Other Tabs", @"closeTabsOutsideGroup:"],
-        @[@"Close Tabs to the Right", @"closeTabsRightOfGroup:"],
+        @[NSLocalizedString(@"Close Group", @"Tab group context menu"), @"closeTabGroup:"],
+        @[NSLocalizedString(@"Close Other Tabs", @"Tab group context menu"), @"closeTabsOutsideGroup:"],
+        @[NSLocalizedString(@"Close Tabs to the Right", @"Tab group context menu"), @"closeTabsRightOfGroup:"],
     ];
     for (NSArray<NSString *> *spec in specs) {
         if ([spec[0] isEqualToString:@"-"]) {
@@ -8878,7 +8870,7 @@ hidingToolbeltShouldResizeWindow:(BOOL)hidingToolbeltShouldResizeWindow
     // created before this fix) makes the swatch view throw in -colorSpace.
     colorView.currentColor = [members.firstObject.tabGroupColor it_colorInDefaultColorSpace];
     colorView.delegate = self;
-    NSMenuItem *item = [[[NSMenuItem alloc] initWithTitle:@"Group Color"
+    NSMenuItem *item = [[[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Group Color", @"Tab group context menu")
                                                   action:@selector(changeTabGroupColorToMenuAction:)
                                            keyEquivalent:@""] autorelease];
     item.view = colorView;

@@ -1,0 +1,24 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "0cd-As-C9U.title": {
+      "comment": "Class = \"NSTextFieldCell\"; title = \"Label\"; ObjectID = \"0cd-As-C9U\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Label"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "标签"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

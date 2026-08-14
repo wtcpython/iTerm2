@@ -88,7 +88,7 @@ static NSString *const iTermStatusBarSpringComponentSizeMultipleKey = @"iTermSta
     switch (self.advancedConfiguration.layoutAlgorithm) {
         case iTermStatusBarLayoutAlgorithmSettingTightlyPacked:
             springConstantKnob =
-            [[iTermStatusBarComponentKnob alloc] initWithLabelText:@"Compression Resistance:"
+            [[iTermStatusBarComponentKnob alloc] initWithLabelText:NSLocalizedString(@"Compression Resistance:", @"Status bar knob")
                                                               type:iTermStatusBarComponentKnobTypeDouble
                                                        placeholder:@""
                                                       defaultValue:@0.01
@@ -96,7 +96,7 @@ static NSString *const iTermStatusBarSpringComponentSizeMultipleKey = @"iTermSta
             break;
         case iTermStatusBarLayoutAlgorithmSettingStable:
             springConstantKnob =
-            [[iTermStatusBarComponentKnob alloc] initWithLabelText:@"Size Multiple:"
+            [[iTermStatusBarComponentKnob alloc] initWithLabelText:NSLocalizedString(@"Size Multiple:", @"Status bar knob")
                                                               type:iTermStatusBarComponentKnobTypeDouble
                                                        placeholder:@""
                                                       defaultValue:@1

@@ -361,7 +361,7 @@ typedef enum {
         // don't want to break that.
         [tabButton_ setEnabled:!anySelectionDisablesTabs];
         [windowButton_ setEnabled:YES];
-        [windowButton_ setTitle:([guids count] > 1 ? @"New Windows" : @"New Window")];
+        [windowButton_ setTitle:([guids count] > 1 ? NSLocalizedString(@"New Windows", @"Profiles window") : NSLocalizedString(@"New Window", @"Profiles window"))];
         if ([guids count] > 1) {
             [newTabsInNewWindowButton_ setEnabled:!anySelectionDisablesTabs];
             [horizontalPaneButton_ setEnabled:YES];

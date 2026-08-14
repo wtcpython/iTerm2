@@ -188,13 +188,13 @@ const double iTermStatusBarBaseComponentDefaultPriority = 5;
 
 - (NSArray<iTermStatusBarComponentKnob *> *)minMaxWidthKnobs {
     iTermStatusBarComponentKnob *maxWidthKnob =
-    [[iTermStatusBarComponentKnob alloc] initWithLabelText:@"Maximum Width:"
+    [[iTermStatusBarComponentKnob alloc] initWithLabelText:NSLocalizedString(@"Maximum Width:", @"Status bar knob")
                                                       type:iTermStatusBarComponentKnobTypeDouble
                                                placeholder:@""
                                               defaultValue:@(INFINITY)
                                                        key:iTermStatusBarMaximumWidthKey];
     iTermStatusBarComponentKnob *minWidthKnob =
-    [[iTermStatusBarComponentKnob alloc] initWithLabelText:@"Minimum Width:"
+    [[iTermStatusBarComponentKnob alloc] initWithLabelText:NSLocalizedString(@"Minimum Width:", @"Status bar knob")
                                                       type:iTermStatusBarComponentKnobTypeDouble
                                                placeholder:@""
                                               defaultValue:[@(self.defaultMinimumWidth) stringValue]
@@ -242,10 +242,10 @@ const double iTermStatusBarBaseComponentDefaultPriority = 5;
         NSString *title;
         switch (self.advancedConfiguration.layoutAlgorithm) {
             case iTermStatusBarLayoutAlgorithmSettingTightlyPacked:
-                title = @"Compression Resistance:";
+                title = NSLocalizedString(@"Compression Resistance:", @"Status bar knob");
                 break;
             case iTermStatusBarLayoutAlgorithmSettingStable:
-                title = @"Size Multiple:";
+                title = NSLocalizedString(@"Size Multiple:", @"Status bar knob");
                 break;
         }
         compressionResistanceKnob =

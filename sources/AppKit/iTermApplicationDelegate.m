@@ -597,7 +597,7 @@ static NSModalResponse iTermCompareRenderingRunModal(id self, SEL _cmd) {
         }
         return !!(menuItem.tag & profileType);
     } else if (menuItem.action == @selector(newSessionAlternate:)) {
-        menuItem.title = [self alternateNewSessionShouldOpenAtEnd] ? @"New Tab At End" : @"New Tab Next to Current Tab";
+        menuItem.title = [self alternateNewSessionShouldOpenAtEnd] ? NSLocalizedString(@"New Tab At End", @"File menu") : NSLocalizedString(@"New Tab Next to Current Tab", @"File menu");
         return YES;
     } else {
         return YES;
@@ -1148,16 +1148,16 @@ static NSModalResponse iTermCompareRenderingRunModal(id self, SEL _cmd) {
 - (NSMenu *)applicationDockMenu:(NSApplication *)sender {
     NSMenu* aMenu = [[NSMenu alloc] initWithTitle: @"Dock Menu"];
 
-    [aMenu addItemWithTitle:@"New Window (Default Profile)"
+    [aMenu addItemWithTitle:NSLocalizedString(@"New Window (Default Profile)", @"Dock menu")
                      action:@selector(newWindow:)
               keyEquivalent:@""];
     [aMenu addItem:[NSMenuItem separatorItem]];
     [self newSessionMenu:aMenu
-                   title:@"New Window…"
+                   title:NSLocalizedString(@"New Window…", @"Dock menu")
                 selector:@selector(newSessionInWindowAtIndex:)
          openAllSelector:@selector(newSessionsInNewWindow:)];
     [self newSessionMenu:aMenu
-                   title:@"New Tab…"
+                   title:NSLocalizedString(@"New Tab…", @"Dock menu")
                 selector:@selector(newSessionInTabAtIndex:)
          openAllSelector:@selector(newSessionsInWindow:)];
     [self addArrangementsToDockMenu:aMenu];
@@ -1798,12 +1798,12 @@ static iTermKeyEventReplayer *gReplayer;
     NSMenu *menu = [[[NSMenu alloc] init] autorelease];
     NSMenuItem *item;
 
-    item = [[[NSMenuItem alloc] initWithTitle:@"Settings"
+    item = [[[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Settings", @"Status bar menu")
                                        action:@selector(showAndOrderFrontRegardlessPrefWindow:)
                                 keyEquivalent:@""] autorelease];
     [menu addItem:item];
 
-    item = [[[NSMenuItem alloc] initWithTitle:@"Bring All Windows to Front"
+    item = [[[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Bring All Windows to Front", @"Status bar menu")
                                        action:@selector(arrangeInFront:)
                                 keyEquivalent:@""] autorelease];
     [menu addItem:item];
@@ -1811,21 +1811,21 @@ static iTermKeyEventReplayer *gReplayer;
     item = [[[NSMenuItem alloc] init] autorelease];
     _statusIconBuriedSessions = [[[NSMenu alloc] init] autorelease];
     item.submenu = _statusIconBuriedSessions;
-    item.title = @"Buried Sessions";
+    item.title = NSLocalizedString(@"Buried Sessions", @"Status bar menu");
     [menu addItem:item];
 
     [[iTermBuriedSessions sharedInstance] setMenus:[NSArray arrayWithObjects:_buriedSessions, _statusIconBuriedSessions, nil]];
 
-    item = [[[NSMenuItem alloc] initWithTitle:@"Check For Updates"
+    item = [[[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Check For Updates", @"Status bar menu")
                                        action:@selector(checkForUpdatesFromMenu:)
                                 keyEquivalent:@""] autorelease];
     [menu addItem:item];
 
-    NSMenuItem *mainMenuItem = [[[NSMenuItem alloc] initWithTitle:@"Main Menu" action:nil keyEquivalent:@""] autorelease];
+    NSMenuItem *mainMenuItem = [[[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Main Menu", @"Status bar menu") action:nil keyEquivalent:@""] autorelease];
     mainMenuItem.submenu = [[NSApp mainMenu] it_deepCopy];
     [menu addItem:mainMenuItem];
     
-    item = [[[NSMenuItem alloc] initWithTitle:@"Quit iTerm2"
+    item = [[[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Quit iTerm2", @"Status bar menu")
                                        action:@selector(terminate:)
                                 keyEquivalent:@""] autorelease];
     [menu addItem:item];
@@ -2572,11 +2572,14 @@ static iTermKeyEventReplayer *gReplayer;
                                             identifier:asTabs ? @"Restore Window Arrangement as Tabs" : @"Restore Window Arrangement"];
 }
 
-- (NSMenu *)topLevelViewNamed:(NSString *)menuName {
+- (NSMenu *)topLevelViewNamed:(NSString *)identifier {
     NSMenu *appMenu = [NSApp mainMenu];
-    NSMenuItem *topLevelMenuItem = [appMenu itemWithTitle:menuName];
-    NSMenu *menu = [topLevelMenuItem submenu];
-    return menu;
+    for (NSMenuItem *topLevelMenuItem in appMenu.itemArray) {
+        if ([topLevelMenuItem.identifier isEqualToString:identifier]) {
+            return topLevelMenuItem.submenu;
+        }
+    }
+    return nil;
 }
 
 - (void)addMenuItemView:(NSView *)view toMenu:(NSMenu *)menu title:(NSString *)title {
@@ -2618,7 +2621,7 @@ static iTermKeyEventReplayer *gReplayer;
 }
 
 - (void)addArrangementsToDockMenu:(NSMenu *)theMenu {
-    NSMenuItem *container = [theMenu addItemWithTitle:@"Restore Arrangement"
+    NSMenuItem *container = [theMenu addItemWithTitle:NSLocalizedString(@"Restore Arrangement", @"Dock menu")
                                                action:nil
                                         keyEquivalent:@""];
     NSMenu *subMenu = [[[NSMenu alloc] init] autorelease];

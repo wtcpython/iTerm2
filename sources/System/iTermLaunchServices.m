@@ -78,19 +78,17 @@ static NSString *const kOldStyleUrlHandlersUserDefaultsKey = @"URLHandlers";
 
     if (appURL == nil) {
         NSAlert *alert = [[[NSAlert alloc] init] autorelease];
-        alert.messageText = [NSString stringWithFormat:@"iTerm is not the default handler for %@. "
-                             @"Would you like to set iTerm as the default handler?",
+        alert.messageText = [NSString stringWithFormat:NSLocalizedString(@"iTerm is not the default handler for %@. Would you like to set iTerm as the default handler?", @"UI"),
                              scheme];
-        alert.informativeText = @"There is currently no handler.";
+        alert.informativeText = NSLocalizedString(@"There is currently no handler.", @"UI");
         [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
         [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
         set = ([alert runModal] == NSAlertFirstButtonReturn);
     } else if (![[[NSFileManager defaultManager] displayNameAtPath:[appURL path]] isEqualToString:@"iTerm 2"]) {
-        NSString *theTitle = [NSString stringWithFormat:@"iTerm is not the default handler for %@. "
-                                                        @"Would you like to set iTerm as the default handler?", scheme];
+        NSString *theTitle = [NSString stringWithFormat:NSLocalizedString(@"iTerm is not the default handler for %@. Would you like to set iTerm as the default handler?", @"UI"), scheme];
         NSAlert *alert = [[[NSAlert alloc] init] autorelease];
         alert.messageText = theTitle;
-        alert.informativeText = [NSString stringWithFormat:@"The current handler is: %@",
+        alert.informativeText = [NSString stringWithFormat:NSLocalizedString(@"The current handler is: %@", @"UI"),
                                  [[NSFileManager defaultManager] displayNameAtPath:[appURL path]]];
         [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
         [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
@@ -175,8 +173,8 @@ static NSString *const kOldStyleUrlHandlersUserDefaultsKey = @"URLHandlers";
 
 - (BOOL)offerToPickApplicationToOpenFile:(NSString *)fullPath {
     NSAlert *alert = [[[NSAlert alloc] init] autorelease];
-    alert.messageText = [NSString stringWithFormat:@"There is no application set to open the document “%@”", [fullPath lastPathComponent]];
-    alert.informativeText = @"Choose an application on your computer to open this file.";
+    alert.messageText = [NSString stringWithFormat:NSLocalizedString(@"There is no application set to open the document “%@”", @"UI"), [fullPath lastPathComponent]];
+    alert.informativeText = NSLocalizedString(@"Choose an application on your computer to open this file.", @"UI");
     [alert addButtonWithTitle:NSLocalizedString(@"Choose Application…", @"UI")];
     [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
 

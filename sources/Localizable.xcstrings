@@ -1171,16 +1171,6 @@
         }
       }
     },
-    "Command": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "命令"
-          }
-        }
-      }
-    },
     "Command Info": {
       "localizations": {
         "zh-Hans": {
@@ -2097,16 +2087,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "仿真级别"
-          }
-        }
-      }
-    },
-    "Enable": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "启用"
           }
         }
       }
@@ -3946,7 +3926,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "新建窗口（默认配置）"
+            "value": "新建窗口（默认配置文件）"
           }
         }
       }
@@ -3997,16 +3977,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "下一步"
-          }
-        }
-      }
-    },
-    "No": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "否"
           }
         }
       }
@@ -6841,16 +6811,6 @@
         }
       }
     },
-    "The iTerm2 Buddy app on your phone is too old to connect to ": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "你手机上的 iTerm2 Buddy 应用版本太旧，无法连接到 "
-          }
-        }
-      }
-    },
     "The image “%@” could not be loaded because it is corrupt or not a supported format.": {
       "localizations": {
         "zh-Hans": {
@@ -7027,16 +6987,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "这将从以下位置移除 cc-status 钩子："
-          }
-        }
-      }
-    },
-    "This version of iTerm2 is too old to connect to the iTerm2 ": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "此版本的 iTerm2 太旧，无法连接到 iTerm2 "
           }
         }
       }
@@ -7761,16 +7711,6 @@
         }
       }
     },
-    "When you activate Semantic History on a filename, the associated app loads the file.": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "当你在文件名上启用语义历史记录时，关联的应用会载入该文件。"
-          }
-        }
-      }
-    },
     "When you check “Remember my choice” or “Suppress this message ": {
       "localizations": {
         "zh-Hans": {
@@ -7897,16 +7837,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "你已请求升级到较新的 Python 版本。依赖项需要重新安装。继续吗？"
-          }
-        }
-      }
-    },
-    "You have chosen to have an option key act as Meta. This option is useful for backward compatibility with older systems. The \\": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "你已选择让选项键充当 Meta。此选项有助于与较旧系统的向后兼容。\\"
           }
         }
       }
@@ -8581,16 +8511,6 @@
         }
       }
     },
-    "An error occurred while removing the file that authorizes clipboard reporting: %@.\\nAs long as this file exists, clipboard reporting could be enabled by programs running on this computer.": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "移除授权剪贴板报告的文件时出错：%@。\\n只要此文件存在，此计算机上运行的程序就可能启用剪贴板报告。"
-          }
-        }
-      }
-    },
     "How would you like to paste %@?": {
       "localizations": {
         "zh-Hans": {
@@ -8899,6 +8819,4983 @@
           "stringUnit": {
             "state": "translated",
             "value": "始终拒绝"
+          }
+        }
+      }
+    },
+    "Quit iTerm2?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "退出 iTerm2？"
+          }
+        }
+      }
+    },
+    "All sessions will be closed.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "所有会话都将关闭。"
+          }
+        }
+      }
+    },
+    "Sessions will be restored automatically when iTerm2 is relaunched.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iTerm2 重新启动时，会话将自动恢复。"
+          }
+        }
+      }
+    },
+    "Why am I being prompted?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "为什么提示我？"
+          }
+        }
+      }
+    },
+    "You are being prompted because:\n\n%@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "提示原因：\n\n%@"
+          }
+        }
+      }
+    },
+    "The iTerm2 Buddy app on your phone is too old to connect to this version of iTerm2. Update the iPhone app to continue.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你手机上的 iTerm2 Buddy 应用版本太旧，无法连接到这个版本的 iTerm2。请更新 iPhone 应用以继续。"
+          }
+        }
+      }
+    },
+    "This version of iTerm2 is too old to connect to the iTerm2 Buddy app on your phone. Update iTerm2 to continue.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这个版本的 iTerm2 太旧，无法连接到手机上的 iTerm2 Buddy 应用。请更新 iTerm2 以继续。"
+          }
+        }
+      }
+    },
+    "The profile “%@” always requires confirmation.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "配置文件“%@”始终要求确认。"
+          }
+        }
+      }
+    },
+    "You can change this setting in Settings > Profiles > Session": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你可以在“设置 > 配置文件 > 会话”中更改此设置。"
+          }
+        }
+      }
+    },
+    "A session with profile “%@” is running %@.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "配置文件“%@”的会话正在运行 %@。"
+          }
+        }
+      }
+    },
+    "A session with profile “%@” is running %@, and %@ other %@.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "配置文件“%@”的会话正在运行 %@，以及其他 %@ 个%@。"
+          }
+        }
+      }
+    },
+    "job": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "任务"
+          }
+        }
+      }
+    },
+    "jobs": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "任务"
+          }
+        }
+      }
+    },
+    "A tmux session is configured to prompt if jobs are running, but tmux doesn’t expose the process tree.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "tmux 会话已配置为在运行任务时提示，但 tmux 不会暴露进程树。"
+          }
+        }
+      }
+    },
+    "This pane is locked.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此窗格已锁定。"
+          }
+        }
+      }
+    },
+    "Tab #%d is pinned.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "标签页 #%d 已固定。"
+          }
+        }
+      }
+    },
+    "Settings > General > Closing": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设置 > 通用 > 关闭"
+          }
+        }
+      }
+    },
+    "Confirm \"Quit iTerm2 (⌘Q)\"": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "确认\"退出 iTerm2 (⌘Q)\""
+          }
+        }
+      }
+    },
+    "Even if there are no windows": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "即使没有窗口"
+          }
+        }
+      }
+    },
+    "Confirm closing multiple sessions": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "关闭多个会话时确认"
+          }
+        }
+      }
+    },
+    "“%@ > %@” is enabled and there is at least one terminal window.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "“%@ > %@”已启用，并且至少有一个终端窗口。"
+          }
+        }
+      }
+    },
+    "“%@ > %@” and “%@” is enabled.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "“%@ > %@”和“%@”已启用。"
+          }
+        }
+      }
+    },
+    "“%@ > %@” is enabled.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "“%@ > %@”已启用。"
+          }
+        }
+      }
+    },
+    "An error occurred while removing the file that authorizes clipboard reporting: %@.\nAs long as this file exists, clipboard reporting could be enabled by programs running on this computer.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "移除授权剪贴板报告的文件时出错：%@。\n只要此文件存在，此计算机上运行的程序就可能启用剪贴板报告。"
+          }
+        }
+      }
+    },
+    "A session ended very soon after starting. Check that the command in profile \"%@\" is correct.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "会话在启动后很快结束。请检查配置文件“%@”中的命令是否正确。"
+          }
+        }
+      }
+    },
+    "You have chosen to have an option key act as Meta. This option is useful for backward compatibility with older systems. The \"Esc+\" option is recommended for most users.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你已选择让选项键充当 Meta。此选项有助于与较旧系统向后兼容。建议大多数用户使用“Esc+”选项。"
+          }
+        }
+      }
+    },
+    "The shell for this account, “%@”, does not exist. Change the profile to use /bin/zsh instead?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此账户的 shell“%@”不存在。是否将配置文件更改为使用 /bin/zsh？"
+          }
+        }
+      }
+    },
+    "The directory “%@” is unavailable. Started in home directory instead.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "目录“%@”不可用。已改用主目录启动。"
+          }
+        }
+      }
+    },
+    "Force Detach?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "强制分离？"
+          }
+        }
+      }
+    },
+    "Tmux is not responding. Would you like to force detach?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "tmux 未响应。是否强制分离？"
+          }
+        }
+      }
+    },
+    "A previous detach request has not yet been honored. Force detach?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "之前的分离请求尚未处理。是否强制分离？"
+          }
+        }
+      }
+    },
+    "Error Preparing Upload": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "准备上传时出错"
+          }
+        }
+      }
+    },
+    "tar failed with this message: %@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "tar 命令失败，错误信息：%@"
+          }
+        }
+      }
+    },
+    "Upload in Progress": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在上传"
+          }
+        }
+      }
+    },
+    "Please wait for the current upload to complete or cancel it before starting another.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请等待当前上传完成或将其取消，然后再开始另一项上传。"
+          }
+        }
+      }
+    },
+    "The terminal has initiated display of a file named “%@” of size %@. Allow it?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "终端已发起显示文件“%@”（大小 %@）。是否允许？"
+          }
+        }
+      }
+    },
+    "Allow Terminal-Initiated Display?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "是否允许终端发起的显示？"
+          }
+        }
+      }
+    },
+    "The terminal has initiated transfer of a file named “%@” of size %@. Download it?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "终端已发起传输文件“%@”（大小 %@）。是否下载？"
+          }
+        }
+      }
+    },
+    "Allow Terminal-Initiated Download?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "是否允许终端发起的下载？"
+          }
+        }
+      }
+    },
+    "%@ wants to load a URL in this browser session.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@想要在此浏览器会话中载入 URL。"
+          }
+        }
+      }
+    },
+    "Allow loading URLs from %@?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "是否允许载入来自 %@ 的 URL？"
+          }
+        }
+      }
+    },
+    "%@ wants to control iTerm2 using the API over SSH integration. The API can view and modify iTerm2’s contents. Allow it for this session?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@想要通过 SSH 集成使用 API 控制 iTerm2。此 API 可查看和修改 iTerm2 的内容。是否允许本次会话使用该 API？"
+          }
+        }
+      }
+    },
+    "%@: Can't run two coprocesses at once.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@：无法同时运行两个协同进程。"
+          }
+        }
+      }
+    },
+    "Advanced SSH features are unavailable because Python %@ or later was not found on %@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "高级 SSH 功能不可用，因为在 %@ 上找不到 Python %@ 或更高版本"
+          }
+        }
+      }
+    },
+    "Can’t Disconnect": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法断开连接"
+          }
+        }
+      }
+    },
+    "Mark set in session “%@.”": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已在会话“%@”中设置标记。"
+          }
+        }
+      }
+    },
+    "Cannot start logging to session with profile “%@”: %@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法开始将日志写入使用配置文件“%@”的会话：%@"
+          }
+        }
+      }
+    },
+    "Session Logging Problem": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "会话日志问题"
+          }
+        }
+      }
+    },
+    "A request to report variable “%@” was denied. Allow it in the future?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "报告变量“%@”的请求已被拒绝。以后是否允许？"
+          }
+        }
+      }
+    },
+    "An app tried to change the profile property **%@**": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "某个应用尝试更改配置文件属性 **%@**"
+          }
+        }
+      }
+    },
+    "This session’s profile, “%@”, no longer exists. A profile with that name happens to exist.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此会话的配置文件“%@”已不存在。恰好存在同名配置文件。"
+          }
+        }
+      }
+    },
+    "This session’s profile, “%@”, no longer exists.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此会话的配置文件“%@”已不存在。"
+          }
+        }
+      }
+    },
+    "The saved arrangement “%@” has a bad initial directory of “%@” for this session.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已存储的窗口布局“%@”包含此会话的无效起始目录“%@”。"
+          }
+        }
+      }
+    },
+    "Because of a bug in tmux 2.2, the character “%@” cannot be sent.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "由于 tmux 2.2 中的错误，无法发送字符“%@”。"
+          }
+        }
+      }
+    },
+    "Set background image to “%@”?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "是否将背景图像设置为“%@”？"
+          }
+        }
+      }
+    },
+    "Remove background image?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "是否移除背景图像？"
+          }
+        }
+      }
+    },
+    "Open this URL? %@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "是否打开此 URL？%@"
+          }
+        }
+      }
+    },
+    "Silence Warning": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "静默警告"
+          }
+        }
+      }
+    },
+    "Repair Saved Arrangement": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "修复已存储的窗口布局"
+          }
+        }
+      }
+    },
+    "Always allow for this host": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "始终允许此主机"
+          }
+        }
+      }
+    },
+    "Never allow": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "从不允许"
+          }
+        }
+      }
+    },
+    "A remote session": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "远程会话"
+          }
+        }
+      }
+    },
+    "remote host": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "远程主机"
+          }
+        }
+      }
+    },
+    "%@ Current Session Only": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "仅 %@ 当前会话"
+          }
+        }
+      }
+    },
+    "%@ all sessions to which input is broadcast? This will affect %@ sessions.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ 所有接收输入广播的会话？这将影响 %@ 个会话。"
+          }
+        }
+      }
+    },
+    "%@ in All Broadcasted-to Sessions?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在所有接收广播的会话中 %@？"
+          }
+        }
+      }
+    },
+    "%@ is running %@.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ 正在运行 %@。"
+          }
+        }
+      }
+    },
+    "%@ is running the following jobs: %@, plus %ld %@.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ 正在运行以下作业：%@，以及另外 %ld 个%@。"
+          }
+        }
+      }
+    },
+    "%@ is running the following jobs: %@.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ 正在运行以下作业：%@。"
+          }
+        }
+      }
+    },
+    "%@ will be closed.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ 将被关闭。"
+          }
+        }
+      }
+    },
+    "Close %@?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "关闭%@？"
+          }
+        }
+      }
+    },
+    "Enter a name for this tab group.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "输入这个标签页组的名称。"
+          }
+        }
+      }
+    },
+    "If this is empty, the tab takes the active session’s title. Variables and function calls enclosed in \\(…) will be replaced with their evaluation. This interpolated string is evaluated in the tab’s context.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "若留空，标签页将采用活动会话的标题。用 \\(…) 括起来的变量和函数调用将被替换为其计算结果。此插值字符串将在标签页的上下文中求值。"
+          }
+        }
+      }
+    },
+    "If this is empty, the window takes the active session’s title. Variables and function calls enclosed in \\(…) will be replaced with their evaluation. This interpolated string is evaluated in the window’s context.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "若留空，窗口将采用活动会话的标题。用 \\(…) 括起来的变量和函数调用将被替换为其计算结果。此插值字符串将在窗口的上下文中求值。"
+          }
+        }
+      }
+    },
+    "Kill all tmux windows and their jobs, hide windows from view, or detach from tmux session?\n\nHidden windows may be restored from the tmux dashboard.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "终止所有 tmux 窗口及其作业、从视图中隐藏窗口，或从 tmux 会话分离？\n\n隐藏的窗口可从 tmux 仪表盘中恢复。"
+          }
+        }
+      }
+    },
+    "Kill window and its jobs, hide window from view, or detach from tmux session?\n\nHidden windows may be restored from the tmux dashboard.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "终止窗口及其作业、从视图中隐藏窗口，或从 tmux 会话分离？\n\n隐藏的窗口可从 tmux 仪表盘中恢复。"
+          }
+        }
+      }
+    },
+    "Log at %@.txt": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "记录于 %@.txt"
+          }
+        }
+      }
+    },
+    "OK to %@\n%@\nto\n%@@%@:%@?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "确定要%@\n%@\n到\n%@@%@:%@？"
+          }
+        }
+      }
+    },
+    "OK to %@ the following files:\n%@\n\nto\n%@@%@:%@?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "确定要%@以下文件：\n%@\n\n到\n%@@%@:%@？"
+          }
+        }
+      }
+    },
+    "Restart session?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重新启动会话？"
+          }
+        }
+      }
+    },
+    "Set Tab Title": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设置标签页标题"
+          }
+        }
+      }
+    },
+    "Set Window Title": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设置窗口标题"
+          }
+        }
+      }
+    },
+    "The following sessions to which input is broadcast do not appear to be at a password prompt: %@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "以下接收输入广播的会话似乎没有显示密码提示符：%@"
+          }
+        }
+      }
+    },
+    "The session named “%@” does not appear to be at a password prompt.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "名为“%@”的会话似乎没有显示密码提示符。"
+          }
+        }
+      }
+    },
+    "This %@multi-pane tab": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这个%@多窗格标签页"
+          }
+        }
+      }
+    },
+    "This %@multi-pane tab (with locked sessions)": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这个%@多窗格标签页（含已锁定的会话）"
+          }
+        }
+      }
+    },
+    "This %@tab": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这个%@标签页"
+          }
+        }
+      }
+    },
+    "This %@tab (with a locked session)": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这个%@标签页（含已锁定的会话）"
+          }
+        }
+      }
+    },
+    "Wrong subview order.\n%@\n%@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "子视图顺序错误。\n%@\n%@"
+          }
+        }
+      }
+    },
+    "copy": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拷贝"
+          }
+        }
+      }
+    },
+    "other": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "其他"
+          }
+        }
+      }
+    },
+    "others": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "其他"
+          }
+        }
+      }
+    },
+    "scp": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "scp"
+          }
+        }
+      }
+    },
+    "tab #%d": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "标签页 #%d"
+          }
+        }
+      }
+    },
+    "Add these settings to the profile named “%@” in “%@”:\n%@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请将这些设置添加到“%2$@”中名为“%1$@”的配置文件：\n%3$@"
+          }
+        }
+      }
+    },
+    "An error was encountered while creating a temporary file with mkstemps. Verify that %@ exists and is writable.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "使用 mkstemps 创建临时文件时出错。请确认 %@ 存在且可写入。"
+          }
+        }
+      }
+    },
+    "Changes to Make": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "需要进行的更改"
+          }
+        }
+      }
+    },
+    "Choose an application on your computer to open this file.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请选择电脑上的应用来打开此文件。"
+          }
+        }
+      }
+    },
+    "Colors Scheme Imported": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已导入颜色方案"
+          }
+        }
+      }
+    },
+    "Could Not Save": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法存储"
+          }
+        }
+      }
+    },
+    "Could not install the Python runtime: %@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法安装 Python 运行时：%@"
+          }
+        }
+      }
+    },
+    "Could not prepare the Python environment for the REPL: %@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法为 REPL 准备 Python 环境：%@"
+          }
+        }
+      }
+    },
+    "Directory Listing": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "目录列表"
+          }
+        }
+      }
+    },
+    "Error": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "错误"
+          }
+        }
+      }
+    },
+    "Failed to launch coprocess.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法启动协同进程。"
+          }
+        }
+      }
+    },
+    "Failed to save retrospective debug logs: %@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "存储回顾性调试日志失败：%@"
+          }
+        }
+      }
+    },
+    "File Transfer Summary": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "文件传输摘要"
+          }
+        }
+      }
+    },
+    "GPU Renderer Availability": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "GPU 渲染器可用性"
+          }
+        }
+      }
+    },
+    "GPU rendering is enabled for the current session.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "当前会话已启用 GPU 渲染。"
+          }
+        }
+      }
+    },
+    "GPU rendering is off in the current session because %@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "由于 %@，当前会话中的 GPU 渲染已关闭。"
+          }
+        }
+      }
+    },
+    "Installation Failed": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "安装失败"
+          }
+        }
+      }
+    },
+    "Manual Update Needed": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "需要手动更新"
+          }
+        }
+      }
+    },
+    "New tmux Tab": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新建 tmux 标签页"
+          }
+        }
+      }
+    },
+    "New tmux Window": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新建 tmux 窗口"
+          }
+        }
+      }
+    },
+    "No Retrospective Logs": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "没有回顾性日志"
+          }
+        }
+      }
+    },
+    "No retrospective debug logs have been recorded yet.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "尚未记录任何回顾性调试日志。"
+          }
+        }
+      }
+    },
+    "Python Environment Unavailable": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Python 环境不可用"
+          }
+        }
+      }
+    },
+    "Python Runtime": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Python 运行时"
+          }
+        }
+      }
+    },
+    "Remove Hotkey": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "移除热键"
+          }
+        }
+      }
+    },
+    "See Tips of the Day?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "要查看“每日提示”吗？"
+          }
+        }
+      }
+    },
+    "Show Me What to Add": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "显示要添加的内容"
+          }
+        }
+      }
+    },
+    "Still restoring your windows…": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "仍在恢复你的窗口…"
+          }
+        }
+      }
+    },
+    "The color scheme was imported and added to presets. You can find it under Settings > Profiles > Colors > Load Presets….": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已导入该颜色方案并添加到预设中。你可以在“设置 > 配置文件 > 颜色 > 载入预设…”下找到它。"
+          }
+        }
+      }
+    },
+    "The current handler is: %@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "当前处理程序为：%@"
+          }
+        }
+      }
+    },
+    "The current session is a tmux session. Would you like to create a new tmux %@ or use the default profile?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "当前会话是 tmux 会话。你希望创建新的 tmux %@，还是使用默认配置文件？"
+          }
+        }
+      }
+    },
+    "The system Python's iterm2 module is out of date and won't work with this version of iTerm2. Run `%@` to fix it.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "系统 Python 的 iterm2 模块已过时，将无法与此版本的 iTerm2 配合使用。请运行 `%@` 进行修复。"
+          }
+        }
+      }
+    },
+    "There is currently no handler.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "当前没有处理程序。"
+          }
+        }
+      }
+    },
+    "There is no application set to open the document “%@”": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未设置可打开文稿“%@”的应用"
+          }
+        }
+      }
+    },
+    "Update Failed": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "更新失败"
+          }
+        }
+      }
+    },
+    "Update File": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "更新文件"
+          }
+        }
+      }
+    },
+    "What kind of %@ do you want to open?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你想打开哪种%@？"
+          }
+        }
+      }
+    },
+    "You have dynamic profiles whose “Dynamic Profile Parent Name” is set to your hotkey window's profile, “%@.” Because multiple hotkey windows are now supported, the hotkey will now toggle a separate window for each of these profiles. Please update your dynamic profiles appropriately. The affected profiles are:\n%@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你有一些动态配置文件，其“Dynamic Profile Parent Name”设置为热键窗口的配置文件“%@”。由于现在支持多个热键窗口，热键将为每个此类配置文件分别切换一个窗口。请相应地更新你的动态配置文件。受影响的配置文件为：\n%@"
+          }
+        }
+      }
+    },
+    "Your hotkey window‘s profile is a dynamic profile named “%@.” It needs to be updated for this version of iTerm2 because hotkey settings are now stored in the profile.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你的热键窗口的配置文件是名为“%@”的动态配置文件。由于热键设置现在存储在配置文件中，因此必须针对此版本的 iTerm2 进行更新。"
+          }
+        }
+      }
+    },
+    "iTerm is not the default handler for %@. Would you like to set iTerm as the default handler?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iTerm 不是 %@ 的默认处理程序。是否要将 iTerm 设为默认处理程序？"
+          }
+        }
+      }
+    },
+    "iTerm2 can show you a Tip of the Day message to help you learn about its many features. Are you interested?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iTerm2 可以向你显示“每日提示”消息，帮助你了解其众多功能。你有兴趣吗？"
+          }
+        }
+      }
+    },
+    "iTerm2 is taking longer than usual to verify your saved windows and tabs. This usually means the system is busy and it’s safe to keep waiting, but a damaged state restoration database could also cause it. You can discard the saved windows instead if you’d rather not wait.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iTerm2 验证已存储的窗口和标签页所花的时间比平时更长。这通常意味着系统繁忙，继续等待是安全的，但状态恢复数据库损坏也可能导致此情况。如果你不想等待，可以改为丢弃已存储的窗口。"
+          }
+        }
+      }
+    },
+    "iTerm2's Application Support directory has changed.\n\nPreviously, both these directories were supported:\n~/Library/Application Support/iTerm\n~/Library/Application Support/iTerm2.\n\nNow, only the iTerm2 version is supported. But you have files in both so please move everything from iTerm to iTerm2.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iTerm2 的 Application Support 目录已更改。\n\n以前，以下两个目录均受支持：\n~/Library/Application Support/iTerm\n~/Library/Application Support/iTerm2。\n\n现在仅支持 iTerm2 版本。但两个目录中都有你的文件，因此请将所有文件从 iTerm 移到 iTerm2。"
+          }
+        }
+      }
+    },
+    "tab": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "标签页"
+          }
+        }
+      }
+    },
+    "window": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "窗口"
+          }
+        }
+      }
+    },
+    "%@\n…and %@ more": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@\n…另外还有 %@ 个文件"
+          }
+        }
+      }
+    },
+    "Missing Information": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "缺少信息"
+          }
+        }
+      }
+    },
+    "Enter a model name and URL before testing the connection.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请先输入模型名称和 URL，再测试连接。"
+          }
+        }
+      }
+    },
+    "Connection Succeeded": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "连接成功"
+          }
+        }
+      }
+    },
+    "Connection Failed": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "连接失败"
+          }
+        }
+      }
+    },
+    "Model is required.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "必须提供模型名称。"
+          }
+        }
+      }
+    },
+    "URL is required.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "必须提供 URL。"
+          }
+        }
+      }
+    },
+    "Context tokens must be greater than zero.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "上下文令牌数必须大于 0。"
+          }
+        }
+      }
+    },
+    "Max response tokens must be greater than zero.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "最大响应令牌数必须大于 0。"
+          }
+        }
+      }
+    },
+    "Manual model names must be unique.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "手动模型名称必须唯一。"
+          }
+        }
+      }
+    },
+    "Invalid Manual AI Model": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无效的手动 AI 模型"
+          }
+        }
+      }
+    },
+    "Manage AI API Keys": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "管理 AI API 密钥"
+          }
+        }
+      }
+    },
+    "Keys are stored securely in the macOS Keychain.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "密钥安全存储在 macOS 钥匙串中。"
+          }
+        }
+      }
+    },
+    "Add Custom Header": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "添加自定标头"
+          }
+        }
+      }
+    },
+    "Enter a header name and value. The name is required.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "输入标头名称和值。名称为必填项。"
+          }
+        }
+      }
+    },
+    "The header name must be non-empty and contain only RFC 7230 token characters (letters, digits, and any of !#$%&'*+-.^_`|~).": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "标头名称不能为空，且只能包含 RFC 7230 令牌字符（字母、数字以及 !#$%&'*+-.^_`|~ 中的字符）。"
+          }
+        }
+      }
+    },
+    "The header value must not contain newline or null characters.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "标头值不能包含换行符或空字符。"
+          }
+        }
+      }
+    },
+    "Invalid HTTP header": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无效的 HTTP 标头"
+          }
+        }
+      }
+    },
+    "Copy local settings to custom folder now?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "立即将本地设置拷贝到自定义文件夹？"
+          }
+        }
+      }
+    },
+    "Value:": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "值："
+          }
+        }
+      }
+    },
+    "Enable for reasoning models with a thinking mode, such as GPT-5, o-series, or DeepSeek models, so the chat’s Think toggle appears.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "为具有思考模式的推理模型（如 GPT-5、o 系列或 DeepSeek 模型）启用，以便在聊天中显示“思考”开关。"
+          }
+        }
+      }
+    },
+    "The prompt must contain the substring %@. %@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "提示词必须包含子字符串 %@。%@"
+          }
+        }
+      }
+    },
+    "Hotkey Window Successfully Configured": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已成功配置热键窗口"
+          }
+        }
+      }
+    },
+    "A new profile called “%@” was created for you. It is tuned to work well for the Hotkey Window feature and it can be customized in the Profiles tab.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已为你创建名为“%@”的新配置文件。它针对热键窗口功能进行了调优，可在“配置文件”标签页中自定。"
+          }
+        }
+      }
+    },
+    "Emulate US Keyboard": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "模拟美式键盘"
+          }
+        }
+      }
+    },
+    "Some keyboard layouts (such as AZERTY) require a modifier to press a number key. This causes problems for switching to a window, tab, or split pane by pressing modifier+number: you might need other modifiers or conflicting modifiers. When “Emulate US Keyboard” is enabled, you can press the configured modifier plus the key on the top row that corresponds to a number key on a US keyboard. For example, on AZERTY, the & key would act as the 1 key.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "某些键盘布局（如 AZERTY）需要按住修饰键才能按下数字键。这会导致通过修饰键+数字键切换窗口、标签页或分屏时出现问题：你可能需要其他修饰键，或出现修饰键冲突。启用“模拟美式键盘”后，你可以按下配置的修饰键加上美式键盘顶行中与数字键对应的按键。例如，在 AZERTY 键盘上，& 键将充当 1 键。"
+          }
+        }
+      }
+    },
+    "Couldn't save to “%@” on %@: %@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法存储到 %@ 上的“%@”：%@"
+          }
+        }
+      }
+    },
+    "Couldn't convert profile to JSON: %@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法将配置文件转换为 JSON：%@"
+          }
+        }
+      }
+    },
+    "Couldn't convert one or more profiles to JSON. Check Console.app for errors.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法将一个或多个配置文件转换为 JSON。请检查“控制台”应用中的错误。"
+          }
+        }
+      }
+    },
+    "The selected profile, “%@”, is a dynamic profile. These are generally only edited by hand.\n\niTerm2 is now able to write changes back to dynamic profiles when they are marked as “rewritable“. Rewriting can cause the order of values to change.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "所选配置文件“%@”是动态配置文件。此类文件通常只能手动编辑。\n\niTerm2 现在可以在动态配置文件被标记为“可重写”时，将更改写回这些配置文件。重写可能导致值的顺序发生变化。"
+          }
+        }
+      }
+    },
+    "Mark as Rewritable": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "标记为可重写"
+          }
+        }
+      }
+    },
+    "Changes Will Be Lost": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "更改将丢失"
+          }
+        }
+      }
+    },
+    "Save Color Preset": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "存储颜色预设"
+          }
+        }
+      }
+    },
+    "Select preset name": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选择预设名称"
+          }
+        }
+      }
+    },
+    "No deletable color presets.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "没有可删除的颜色预设。"
+          }
+        }
+      }
+    },
+    "You cannot erase the built-in presets and no custom presets have been imported.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你无法抹掉内置预设，且尚未导入自定义预设。"
+          }
+        }
+      }
+    },
+    "Select a preset to delete:": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选择要删除的预设："
+          }
+        }
+      }
+    },
+    "Save Failed.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "存储失败。"
+          }
+        }
+      }
+    },
+    "Could not save to %@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法存储到 %@"
+          }
+        }
+      }
+    },
+    "Plugin Invalid": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "插件无效"
+          }
+        }
+      }
+    },
+    "Command not found. You may need to specify the full path because your shell is not used when running this command. The search path contains the following folders: %@.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "找不到命令。由于运行此命令时不使用你的 shell，你可能需要指定完整路径。搜索路径包含以下文件夹：%@。"
+          }
+        }
+      }
+    },
+    "Automatic loading doesn’t work with %@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自动载入不适用于 %@"
+          }
+        }
+      }
+    },
+    "The profile “%@” is already bound to hostname “%@”.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "配置文件“%@”已绑定到主机名“%@”。"
+          }
+        }
+      }
+    },
+    "Remove from “%@”": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "从“%@”中移除"
+          }
+        }
+      }
+    },
+    "Enter a rule…": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "输入规则…"
+          }
+        }
+      }
+    },
+    "Replace Existing Saved Window Arrangement?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "替换已存储的窗口布局？"
+          }
+        }
+      }
+    },
+    "There is an existing saved window arrangement with this name. Would you like to replace it with the current arrangement?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已存在使用此名称存储的窗口布局。是否用当前布局替换它？"
+          }
+        }
+      }
+    },
+    "Replace Arrangement?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "替换布局？"
+          }
+        }
+      }
+    },
+    "An arrangement named “%@” already exists. Would you like to replace it?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已存在名为“%@”的布局。是否替换它？"
+          }
+        }
+      }
+    },
+    "Name for saved window arrangement:": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已存储窗口布局的名称："
+          }
+        }
+      }
+    },
+    "Import Failed.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "导入失败。"
+          }
+        }
+      }
+    },
+    "The selected file could not be read or did not contain a valid color scheme.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法读取所选文件，或所选文件不包含有效的颜色方案。"
+          }
+        }
+      }
+    },
+    "Add duplicate color preset?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "添加重复的颜色预设？"
+          }
+        }
+      }
+    },
+    "The color preset “%@” is the same as the preset you're trying to add. Really add it?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "颜色预设“%@”与你尝试添加的预设相同。确定要添加吗？"
+          }
+        }
+      }
+    },
+    "Escaping": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "转义"
+          }
+        }
+      }
+    },
+    "Import Failed": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "导入失败"
+          }
+        }
+      }
+    },
+    "Export Failed": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "导出失败"
+          }
+        }
+      }
+    },
+    "There was a problem with one of your Dynamic Profiles:\n\n%@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你的一个动态配置文件出现问题：\n\n%@"
+          }
+        }
+      }
+    },
+    "\n\n%@ additional error%@ may be seen in the log.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\n\n日志中可能还会显示其他 %@ 个错误。"
+          }
+        }
+      }
+    },
+    "Ignoring dynamic profiles in “%@” because of an error.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "由于出错，将忽略“%@”中的动态配置文件。"
+          }
+        }
+      }
+    },
+    "Could not read Dynamic Profile from file %@: %@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法从文件 %@ 读取动态配置文件：%@"
+          }
+        }
+      }
+    },
+    "Dynamic Profiles file %@ contains invalid JSON: %@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "动态配置文件 %@ 包含无效的 JSON：%@"
+          }
+        }
+      }
+    },
+    "Dynamic Profiles file %@ does not have an Object (i.e., a dictionary) as its root element": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "动态配置文件 %@ 的根元素不是对象（即字典）"
+          }
+        }
+      }
+    },
+    "Dynamic Profiles file %@ does not have a “Profiles” key at the root.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "动态配置文件 %@ 的根上没有“Profiles”键。"
+          }
+        }
+      }
+    },
+    "Dynamic profile is missing the Guid field in file %@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "文件 %@ 中的动态配置文件缺少 Guid 字段"
+          }
+        }
+      }
+    },
+    "Dynamic profile with Guid %@ is missing the “name” field": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Guid 为 %@ 的动态配置文件缺少“name”字段"
+          }
+        }
+      }
+    },
+    "Dynamic profile with Guid %@ conflicts with non-dynamic profile with same Guid": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Guid 为 %@ 的动态配置文件与具有相同 Guid 的非动态配置文件冲突"
+          }
+        }
+      }
+    },
+    "Two dynamic profiles have the same Guid: %@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "两个动态配置文件具有相同的 Guid：%@"
+          }
+        }
+      }
+    },
+    "Dynamic profile %@ references unknown parent %@ %@. Using default profile as parent.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "动态配置文件 %@ 引用了未知的父级 %@ %@。将使用默认配置文件作为父级。"
+          }
+        }
+      }
+    },
+    "Dynamic Profiles Error": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "动态配置文件错误"
+          }
+        }
+      }
+    },
+    "View Log": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "查看日志"
+          }
+        }
+      }
+    },
+    "While trying to load the setting for “%@”: %@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "尝试载入“%@”的设置时：%@"
+          }
+        }
+      }
+    },
+    "On “%@”, %@%@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在“%@”上，%@%@"
+          }
+        }
+      }
+    },
+    "  instantly": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "  立即"
+          }
+        }
+      }
+    },
+    "…and %@ more": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "…以及另外 %@ 个"
+          }
+        }
+      }
+    },
+    "Select the profiles into which these triggers should be imported:\n\n%@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选择要将这些触发器导入到的配置文件：\n\n%@"
+          }
+        }
+      }
+    },
+    "Copy these settings from profile “%@”:": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "从配置文件“%@”拷贝这些设置："
+          }
+        }
+      }
+    },
+    "Failed to load settings from URL. Falling back to local copy.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "从 URL 载入设置失败。将回退到本地副本。"
+          }
+        }
+      }
+    },
+    "HTTP request failed: %@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "HTTP 请求失败：%@"
+          }
+        }
+      }
+    },
+    "Load settings from URL? Some changes were made to the local copy that will be lost.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "从 URL 载入设置？本地副本中的某些更改将丢失。"
+          }
+        }
+      }
+    },
+    "Error Loading Settings": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "载入设置时出错"
+          }
+        }
+      }
+    },
+    "You have enabled “Load settings from a custom folder or URL” in settings but the location is not set.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你已在设置中启用“从自定义文件夹或 URL 载入设置”，但尚未设置位置。"
+          }
+        }
+      }
+    },
+    "Failed to load settings from custom directory. Falling back to local copy.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "从自定义目录载入设置失败。将回退到本地副本。"
+          }
+        }
+      }
+    },
+    "Missing or malformed file at \"%@\"": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\"%@\" 处的文件缺失或格式错误"
+          }
+        }
+      }
+    },
+    "Settings cannot be copied to a URL.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设置无法拷贝到 URL。"
+          }
+        }
+      }
+    },
+    "To make it available, first quit iTerm2 and then manually copy ~/Library/Preferences/com.googlecode.iterm2.plist to your hosting provider.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "要使其可用，请先退出 iTerm2，然后手动将 ~/Library/Preferences/com.googlecode.iterm2.plist 拷贝到你的托管服务提供商。"
+          }
+        }
+      }
+    },
+    "Failed to copy settings to custom directory.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法将设置拷贝到自定义目录。"
+          }
+        }
+      }
+    },
+    "Tried to copy %@ to %@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "尝试将 %@ 拷贝到 %@"
+          }
+        }
+      }
+    },
+    "iTerm2 can also keep your snippets, global notes, and session icon customizations in the settings folder “%@” so they sync across machines. Notes and snippets can contain sensitive text such as passwords or tokens. Sync them too?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iTerm2 还可以将你的代码片段、全局笔记和会话图标自定义项保存在设置文件夹“%@”中，以便在机器之间同步。笔记和代码片段可能包含密码或令牌等敏感文本。也同步它们？"
+          }
+        }
+      }
+    },
+    "Snippets, notes, or icon customizations changed both on this Mac and in the settings folder “%@” since they were last in sync. Which copy would you like to keep?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自上次同步以来，代码片段、笔记或图标自定义项在这台 Mac 和设置文件夹“%@”中都发生了更改。你想保留哪个副本？"
+          }
+        }
+      }
+    },
+    "Settings and your snippets, notes, or icon customizations have changed. Copy them to %@?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设置以及你的代码片段、笔记或图标自定义项已更改。将其拷贝到 %@？"
+          }
+        }
+      }
+    },
+    "Settings have changed. Copy them to %@?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设置已更改。将其拷贝到 %@？"
+          }
+        }
+      }
+    },
+    "Your snippets, notes, or icon customizations changed. Copy them to %@?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你的代码片段、笔记或图标自定义项已更改。将其拷贝到 %@？"
+          }
+        }
+      }
+    },
+    "Lose Changes": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "放弃更改"
+          }
+        }
+      }
+    },
+    "You can provide substitutions as follows:\n  \\1 will be replaced with the filename.\n  \\2 will be replaced with the line number.\n  \\3 will be replaced with the text before the click.\n  \\4 will be replaced with the text after the click.\n  \\5 will be replaced with the working directory.\n\nThis is also an interpolated string evaluated in the context of the current session. In addition to the usual variables, the following substitutions are available:\n  \\(semanticHistory.path) will be replaced with the filename.\n  \\(semanticHistory.lineNumber) will be replaced with the line number.\n  \\(semanticHistory.columnNumber) will be replaced with the column number.\n  \\(semanticHistory.prefix) will be replaced with the text before the click.\n  \\(semanticHistory.suffix) will be replaced with the text after the click.\n  \\(semanticHistory.workingDirectory) will be replaced with the working directory.\n": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你可以按以下方式提供替换项：\n  \\1 将替换为文件名。\n  \\2 将替换为行号。\n  \\3 将替换为点按前的文本。\n  \\4 将替换为点按后的文本。\n  \\5 将替换为工作目录。\n\n这也是在当前会话上下文中求值的内插字符串。除常用变量外，还可以使用以下替换项：\n  \\(semanticHistory.path) 将替换为文件名。\n  \\(semanticHistory.lineNumber) 将替换为行号。\n  \\(semanticHistory.columnNumber) 将替换为列号。\n  \\(semanticHistory.prefix) 将替换为点按前的文本。\n  \\(semanticHistory.suffix) 将替换为点按后的文本。\n  \\(semanticHistory.workingDirectory) 将替换为工作目录。\n"
+          }
+        }
+      }
+    },
+    "In this mode semantic history will be activated on any click, even if you click on something that is not an existing file.\n%@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在此模式下，即使你点按的不是现有文件，语义历史记录也会在任意点按时激活。\n%@"
+          }
+        }
+      }
+    },
+    "In this mode semantic history will only be activated when you click on an existing file name.\n%@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在此模式下，仅当你点按现有文件名时，语义历史记录才会激活。\n%@"
+          }
+        }
+      }
+    },
+    "When you activate Semantic History on a filename, the browser opens a URL.\nUse \\1 for the filename you clicked on and \\2 for the line number. ": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在文件名上激活语义历史记录时，浏览器会打开一个 URL。\n使用 \\1 表示你点按的文件名，\\2 表示行号。"
+          }
+        }
+      }
+    },
+    "Command runs when you activate Semantic History on any filename. Use \\1 for filename, \\2 for line number, \\3 for text before click, \\4 for text after click, \\5 for pwd. You can also use interpolated string syntax. ": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在任何文件名上激活语义历史记录时运行命令。使用 \\1 表示文件名，\\2 表示行号，\\3 表示点按前的文本，\\4 表示点按后的文本，\\5 表示当前目录。你也可以使用内插字符串语法。"
+          }
+        }
+      }
+    },
+    "Command runs when you activate Semantic History on any text, even if it’s not a valid filename. Use \\1 for filename, \\2 for line number, \\3 for text before click, \\4 for text after click, \\5 for pwd. ": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在任何文本上激活语义历史记录时运行命令，即使它不是有效的文件名。使用 \\1 表示文件名，\\2 表示行号，\\3 表示点按前的文本，\\4 表示点按后的文本，\\5 表示当前目录。"
+          }
+        }
+      }
+    },
+    "Coprocess runs when you activate Semantic History on any filename. Use \\1 for filename, \\2 for line number, \\3 for text before click, \\4 for text after click, \\5 for pwd. ": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在任何文件名上激活语义历史记录时运行协同进程。使用 \\1 表示文件名，\\2 表示行号，\\3 表示点按前的文本，\\4 表示点按后的文本，\\5 表示当前目录。"
+          }
+        }
+      }
+    },
+    "Text is sent when you activate Semantic History on any filename. Use vim-style special characters.Use \\1 for filename, \\2 for line number, \\3 for text before click, \\4 for text after click, \\5 for pwd. ": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在任何文件名上激活语义历史记录时发送文本。使用 vim 风格的特殊字符。使用 \\1 表示文件名，\\2 表示行号，\\3 表示点按前的文本，\\4 表示点按后的文本，\\5 表示当前目录。"
+          }
+        }
+      }
+    },
+    "Enter URL.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "输入 URL。"
+          }
+        }
+      }
+    },
+    "Enter command": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "输入命令"
+          }
+        }
+      }
+    },
+    "Enter text": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "输入文本"
+          }
+        }
+      }
+    },
+    "Button #%d": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "按钮 #%d"
+          }
+        }
+      }
+    },
+    "Bad name: %@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "错误名称：%@"
+          }
+        }
+      }
+    },
+    "Bad tag %d": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "错误标签 %d"
+          }
+        }
+      }
+    },
+    "Select Menu Item “%@”": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选择菜单项“%@”"
+          }
+        }
+      }
+    },
+    "characters to send": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "要发送的字符"
+          }
+        }
+      }
+    },
+    "ex: 0x7f 0x20": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "例如：0x7f 0x20"
+          }
+        }
+      }
+    },
+    "Enter value to send": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "输入要发送的值"
+          }
+        }
+      }
+    },
+    "Enter function invocation": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "输入函数调用"
+          }
+        }
+      }
+    },
+    "Actions…": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "操作…"
+          }
+        }
+      }
+    },
+    "Actions (%@)…": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "操作（%@）…"
+          }
+        }
+      }
+    },
+    "Main Screen": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "主屏幕"
+          }
+        }
+      }
+    },
+    "^⌘%@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "^⌘%@"
+          }
+        }
+      }
+    },
+    "LANG=%@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LANG=%@"
+          }
+        }
+      }
+    },
+    "LC_CTYPE=%@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LC_CTYPE=%@"
+          }
+        }
+      }
+    },
+    "Settings: %@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设置：%@"
+          }
+        }
+      }
+    },
+    "Error running “%@”:\n%@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "运行“%@”时出错：\n%@"
+          }
+        }
+      }
+    },
+    "Reveal in Script Console": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在脚本控制台中显示"
+          }
+        }
+      }
+    },
+    "%@ Function Call Failed": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ 函数调用失败"
+          }
+        }
+      }
+    },
+    "Another process is trying to use the iTerm2 API. The API allows a script to control iTerm2 and view and modify its contents. Allow the connection?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "另一个进程正在尝试使用 iTerm2 API。API 允许脚本控制 iTerm2 并查看和修改其内容。允许此连接吗？"
+          }
+        }
+      }
+    },
+    "%@\n\nAlthough you have chosen to allow connections automatically, this script has not presented a valid cookie.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@\n\n虽然你已选择自动允许连接，但此脚本未提供有效的 cookie。"
+          }
+        }
+      }
+    },
+    "The Python API script “%@” needs a newer version of the runtime environment for security reasons. You must upgrade it before this version of iTerm2 can launch the script.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "由于安全原因，Python API 脚本“%@”需要更新版本的运行时环境。必须先升级它，此版本的 iTerm2 才能启动该脚本。"
+          }
+        }
+      }
+    },
+    "Could not prepare the Python environment for this script: %@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法为此脚本准备 Python 环境：%@"
+          }
+        }
+      }
+    },
+    "unknown error": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未知错误"
+          }
+        }
+      }
+    },
+    "“%@” uses an Intel-only Python environment, which cannot run on this version of macOS because Rosetta is not available.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "“%@”使用的是仅限 Intel 的 Python 环境，由于未安装 Rosetta，它无法在这版 macOS 上运行。"
+          }
+        }
+      }
+    },
+    "Script Cannot Run": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法运行脚本"
+          }
+        }
+      }
+    },
+    "Error running script": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "运行脚本时出错"
+          }
+        }
+      }
+    },
+    "Script at \"%@\" failed.\n\n%@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "位于“%@”的脚本运行失败。\n\n%@"
+          }
+        }
+      }
+    },
+    "Can’t upgrade because %@ already exists": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法升级，因为 %@ 已存在"
+          }
+        }
+      }
+    },
+    "Please file a bug report at https://iterm2.com/bugs. The following error occurred while upgrading a dependency: %@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请访问 https://iterm2.com/bugs 提交错误报告。升级依赖项时发生了以下错误：%@"
+          }
+        }
+      }
+    },
+    "Error creating %@: %@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "创建 %@ 时出错：%@"
+          }
+        }
+      }
+    },
+    "Error moving %@ to %@: %@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "将 %@ 移动到 %@ 时出错：%@"
+          }
+        }
+      }
+    },
+    "Could Not Change Python Version": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法更改 Python 版本"
+          }
+        }
+      }
+    },
+    "Unknown error": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未知错误"
+          }
+        }
+      }
+    },
+    "Download Python Runtime?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "下载 Python 运行时？"
+          }
+        }
+      }
+    },
+    "The Python Runtime is used by Python scripts that work with iTerm2. It must be downloaded to complete the requested action. The download is about %@. OK to download it now?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iTerm2 的 Python 脚本需要使用 Python 运行时。要完成所请求的操作，必须先下载它。下载大小约为 %@。现在下载可以吗？"
+          }
+        }
+      }
+    },
+    "The Python Runtime is used by Python scripts that work with iTerm2. The download is about %@. OK to download it now?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iTerm2 的 Python 脚本需要使用 Python 运行时。下载大小约为 %@。现在下载可以吗？"
+          }
+        }
+      }
+    },
+    "Download Canceled": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "下载已取消"
+          }
+        }
+      }
+    },
+    "Python Runtime Unavailable": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Python 运行时不可用"
+          }
+        }
+      }
+    },
+    "\n\nThe download failed: %@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\n\n下载失败：%@"
+          }
+        }
+      }
+    },
+    "An iTerm2 Python Runtime with Python version %@ must be downloaded to proceed.%@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "要继续，必须下载 Python 版本为 %@ 的 iTerm2 Python 运行时。%@"
+          }
+        }
+      }
+    },
+    "An iTerm2 Python Runtime must be downloaded to proceed.%@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "要继续，必须下载 iTerm2 Python 运行时。%@"
+          }
+        }
+      }
+    },
+    "Signature Verification Failed": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "签名验证失败"
+          }
+        }
+      }
+    },
+    "The Python runtime's signature failed validation: %@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Python 运行时的签名未能通过验证：%@"
+          }
+        }
+      }
+    },
+    "Error unzipping python environment": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解压 Python 环境时出错"
+          }
+        }
+      }
+    },
+    "An error occurred while unzipping the downloaded python environment": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解压已下载的 Python 环境时出错"
+          }
+        }
+      }
+    },
+    "Dependency Installation Failed": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "依赖项安装失败"
+          }
+        }
+      }
+    },
+    "The following dependencies failed to install: %@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "以下依赖项安装失败：%@"
+          }
+        }
+      }
+    },
+    "Output": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "输出"
+          }
+        }
+      }
+    },
+    "“%@” would like to launch automatically when iTerm2 starts. Would you like to allow that?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "“%@”想要在 iTerm2 启动时自动运行。允许吗？"
+          }
+        }
+      }
+    },
+    "“%@” can launch automatically when iTerm2 starts. Would you like to allow that?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "“%@”可以在 iTerm2 启动时自动运行。允许吗？"
+          }
+        }
+      }
+    },
+    "The signature of ”%@” has been verified. The author is:\n\n%@\n\nWould you like to install it?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "”%@”的签名已验证。作者是：\n\n%@\n\n要安装它吗？"
+          }
+        }
+      }
+    },
+    "A script archive named “%@” was found in the Scripts directory. Would you like to install it?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在“脚本”文件夹中发现了名为“%@”的脚本归档。要安装它吗？"
+          }
+        }
+      }
+    },
+    "Failed to create archive": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "创建归档失败"
+          }
+        }
+      }
+    },
+    "Could Not Install Script": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法安装脚本"
+          }
+        }
+      }
+    },
+    "Script Imported Successfully": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "脚本导入成功"
+          }
+        }
+      }
+    },
+    "The script “%@” is malformed.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "脚本“%@”已损坏。"
+          }
+        }
+      }
+    },
+    "Could Not Rebuild Environment": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法重建环境"
+          }
+        }
+      }
+    },
+    "An error occurred while creating the Python environment. The error was: %@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "创建 Python 环境时出错。错误信息：%@"
+          }
+        }
+      }
+    },
+    "An error ocurred while installing the Python runtime. Remove ~/Library/Application Support/iTerm2/iterm2env and try again. The error was: %@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "安装 Python 运行时出错。请删除 ~/Library/Application Support/iTerm2/iterm2env 后重试。错误信息：%@"
+          }
+        }
+      }
+    },
+    "Open new script in %@?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在 %@ 中打开新脚本？"
+          }
+        }
+      }
+    },
+    "Spaces Not Allowed": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "不允许使用空格"
+          }
+        }
+      }
+    },
+    "Scripts can't have space characters in their filenames.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "脚本文件名中不能包含空格字符。"
+          }
+        }
+      }
+    },
+    "Problem running script": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "运行脚本时出现问题"
+          }
+        }
+      }
+    },
+    "The script at “%@” failed:\n\n%@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "“%@”处的脚本运行失败：\n\n%@"
+          }
+        }
+      }
+    },
+    "Full-environment scripts must be located under in your Application Support/iTerm2/Scripts directory:\n%@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "完整环境脚本必须位于 Application Support/iTerm2/Scripts 文件夹中：\n%@"
+          }
+        }
+      }
+    },
+    "Python versions are not always compatible across releases, so a bumped script may need small changes.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Python 版本之间不一定总是兼容的，因此升级版本后的脚本可能需要进行小幅调整。"
+          }
+        }
+      }
+    },
+    "The script “%@” was written for Python %@, which is no longer available, so it now uses Python %@. %@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "脚本“%@”是为 Python %@ 编写的，该版本已不再可用，因此它现在改用 Python %@。%@"
+          }
+        }
+      }
+    },
+    "• “%@”: %@ → %@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "• “%@”：%@ → %@"
+          }
+        }
+      }
+    },
+    "Some scripts were written for Python versions that are no longer available and now use newer ones. %@\n\n%@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "某些脚本是为已不再可用的 Python 版本编写的，现在改用更新的版本。%@\n\n%@"
+          }
+        }
+      }
+    },
+    "Are you sure you want to delete this password?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "确定要删除此密码吗？"
+          }
+        }
+      }
+    },
+    "Enter password for %@:": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "输入“%@”的密码："
+          }
+        }
+      }
+    },
+    "%@ Settings": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ 设置"
+          }
+        }
+      }
+    },
+    "Command Failed": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "命令失败"
+          }
+        }
+      }
+    },
+    "Password for %@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "“%@”的密码"
+          }
+        }
+      }
+    },
+    "Could not get password. Keychain query failed: %@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法获取密码。钥匙串查询失败：%@"
+          }
+        }
+      }
+    },
+    "An error occurred.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "发生错误。"
+          }
+        }
+      }
+    },
+    "Can't open window: missing layout": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法打开窗口：缺少布局"
+          }
+        }
+      }
+    },
+    "Error parsing layout %@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解析布局 %@ 时出错"
+          }
+        }
+      }
+    },
+    "Error: malformed history line from tmux.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "错误：来自 tmux 的历史记录行格式有误。"
+          }
+        }
+      }
+    },
+    "See Console.app for details": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请参阅 Console.app 了解详情"
+          }
+        }
+      }
+    },
+    "New Session %d": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新会话 %d"
+          }
+        }
+      }
+    },
+    "Bad response for initial list windows request: %@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "初始窗口列表请求响应错误：%@"
+          }
+        }
+      }
+    },
+    "Bad response for list windows request: %@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "窗口列表请求响应错误：%@"
+          }
+        }
+      }
+    },
+    "Error: %@.\n\nTmux 2.1 and earlier will refuse to create a new window pane with a nonexistent initial working directory.\n\nInfo:\n%@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "错误：%@。\n\nTmux 2.1 及更早版本会拒绝使用不存在的初始工作目录创建新的窗口窗格。\n\n信息：\n%@"
+          }
+        }
+      }
+    },
+    "Error: %@.\n\nInfo:\n%@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "错误：%@。\n\n信息：\n%@"
+          }
+        }
+      }
+    },
+    "Erase Command History": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "抹掉命令历史记录"
+          }
+        }
+      }
+    },
+    "Command history for all hosts will be erased. Continue?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "将抹掉所有主机上的命令历史记录。是否继续？"
+          }
+        }
+      }
+    },
+    "Erase Saved Directories?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "抹掉已存储的目录？"
+          }
+        }
+      }
+    },
+    "Erase Paste History": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "抹掉粘贴历史记录"
+          }
+        }
+      }
+    },
+    "Paste history will be erased. Continue?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "将抹掉粘贴历史记录。是否继续？"
+          }
+        }
+      }
+    },
+    "Running git in %@ didn’t finish within %@ seconds, so the status bar component can’t show the branch. This often happens in very large repositories or when the working tree is on a slow filesystem.\n\nWould you like to increase the timeout to %@ seconds?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在 %@ 中运行的 git 未在 %@ 秒内完成，因此状态栏组件无法显示分支。这常见于非常大的代码库，或工作树位于较慢文件系统上的情况。\n\n是否要将超时时间增加到 %@ 秒？"
+          }
+        }
+      }
+    },
+    "the current directory": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "当前目录"
+          }
+        }
+      }
+    },
+    "Increase to %@s": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "增加到 %@ 秒"
+          }
+        }
+      }
+    },
+    "Debug Logging Enabled": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已启用调试日志"
+          }
+        }
+      }
+    },
+    "Please reproduce the bug. Then toggle debug logging again to save the log.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请复现该问题，然后再次切换调试日志以保存日志。"
+          }
+        }
+      }
+    },
+    "Debug Logging Stopped": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "调试日志已停止"
+          }
+        }
+      }
+    },
+    "Please send /tmp/debuglog.txt to the developers.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请将 /tmp/debuglog.txt 发送给开发者。"
+          }
+        }
+      }
+    },
+    "iTerm2 can keep its built-in list of AI models current by periodically downloading a cryptographically signed list from iterm2.com. No terminal content or personal data is sent. Allow this?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iTerm2 可以定期从 iterm2.com 下载经过加密签名的列表，以保持内置 AI 模型列表的最新状态。不会发送任何终端内容或个人数据。允许吗？"
+          }
+        }
+      }
+    },
+    "iTerm2 can include this session’s visible screen and terminal state with every message you send in AI chats where you’ve allowed it, so the assistant sees what you see. You can turn this off any time from a chat’s permission settings.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iTerm2 可以在你允许的 AI 聊天中，将每条消息附带该会话的可见屏幕和终端状态，以便助手看到你所看到的内容。你可以随时在聊天的权限设置中关闭此功能。"
+          }
+        }
+      }
+    },
+    "All terminal content will be sent to AI, which may go to a third party. Ensure this is safe to do before proceeding.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "所有终端内容都会发送给 AI，可能会发送给第三方。继续前请确保这样做是安全的。"
+          }
+        }
+      }
+    },
+    "Orchestration mode lets the agent coordinate across any iTerm2 sessions. It can read screen contents from any session, but to type into a session requires your permission. This is a more permissive model than when an agent is linked to a single session, where there are very fine-grained permission settings.\n\nEnabling will detach any linked terminal or browser session and switch the chat to Orchestration mode.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "编排模式可让智能体跨任意 iTerm2 会话进行协调。它可以读取任何会话的屏幕内容，但要向会话中输入文字则需要你的许可。这种模式比智能体关联到单个会话时更加宽松，后者具有非常细粒度的权限设置。\n\n启用后将取消关联任何已链接的终端或浏览器会话，并将聊天切换到编排模式。"
+          }
+        }
+      }
+    },
+    "AI Chat could not open because of a problem loading the database. Verify there is only one instance of iTerm2 running.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI 聊天无法打开，因为加载数据库时出现问题。请确认只有一个 iTerm2 实例在运行。"
+          }
+        }
+      }
+    },
+    "The chat could not be renamed.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "聊天无法重命名。"
+          }
+        }
+      }
+    },
+    "iTerm2 can use AI to check the safety of commands suggested by your AI agent. Would you like to enable safety checking?\n\nWhen enabled, each proposed command will be sent to your configured AI provider for a safety check.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iTerm2 可以使用 AI 检查你的 AI 智能体建议的命令是否安全。要启用安全检查吗？\n\n启用后，每条建议的命令都将发送给你配置的 AI 提供商进行安全检查。"
+          }
+        }
+      }
+    },
+    "Until now, iTerm2 checked the safety of AI-suggested commands on your Mac using Apple Intelligence, at no cost. It can now use your configured AI model instead, which is more accurate but sends each checked command to your AI provider and may incur charges.\n\nSwitch to your configured model? If you decline, iTerm2 keeps using Apple Intelligence.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "到目前为止，iTerm2 一直在你的 Mac 上使用 Apple Intelligence 免费检查 AI 建议命令的安全性。现在它可以改用你配置的 AI 模型，准确度更高，但会将每条被检查的命令发送给你的 AI 提供商，并可能产生费用。\n\n要切换到你的模型吗？如果你拒绝，iTerm2 将继续使用 Apple Intelligence。"
+          }
+        }
+      }
+    },
+    "Generative AI features have been disabled. Check with your system administrator.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "生成式 AI 功能已被禁用。请联系你的系统管理员。"
+          }
+        }
+      }
+    },
+    "You must install the AI plugin before you can use this feature.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "使用此功能前，你必须先安装 AI 插件。"
+          }
+        }
+      }
+    },
+    "You must enable AI features in settings before you can use this feature.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "使用此功能前，你必须在设置中启用 AI 功能。"
+          }
+        }
+      }
+    },
+    "Would you like to open the profile formerly named %@ that is now called %@ (which this shortcut refers to), or the profile that currently has the name %@?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "要打开以前名为 %1$@、现在名为 %2$@（此快捷方式所指向的）的配置文件，还是打开当前名为 %3$@ 的配置文件？"
+          }
+        }
+      }
+    },
+    "Open %@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "打开“%@”"
+          }
+        }
+      }
+    },
+    "Future versions of iTerm2 will require macOS 13 (Ventura) or later. This is the last version that supports macOS 12. Sorry for the inconvenience!": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未来版本的 iTerm2 将需要 macOS 13（Ventura）或更高版本。这是支持 macOS 12 的最后一个版本。给你带来不便，敬请谅解！"
+          }
+        }
+      }
+    },
+    "There was a problem saving the file: %@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "保存文件时出现问题：%@"
+          }
+        }
+      }
+    },
+    "You must install the Browser Plugin first. Download it now?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你必须先安装浏览器插件。现在下载吗？"
+          }
+        }
+      }
+    },
+    "Could not create movie: %@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法创建影片：%@"
+          }
+        }
+      }
+    },
+    "Would you like to create the directory at %@?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "要创建位于 %@ 的目录吗？"
+          }
+        }
+      }
+    },
+    "Failed to create %@:\n\n%@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法创建 %@：\n\n%@"
+          }
+        }
+      }
+    },
+    "This removes the cc-status hook from ~/.claude/settings.json, the Claude Code workgroup from your settings, and the Enter/Exit Workgroup triggers from every profile. You can reinstall any time using iTerm2 > Install Claude Code Integration.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这将从 ~/.claude/settings.json 中移除 cc-status 钩子，从你的设置中移除 Claude Code 工作组，并从每个配置文件中移除“进入/退出工作组”触发器。你可以随时通过“iTerm2 > 安装 Claude Code 集成”重新安装。"
+          }
+        }
+      }
+    },
+    "The installer enabled iTerm2’s Python API. Other scripts or integrations may be using it now. Leave it enabled, or turn it off?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "安装程序启用了 iTerm2 的 Python API。其他脚本或集成现在可能正在使用它。保持启用，还是将其关闭？"
+          }
+        }
+      }
+    },
+    "Pick the profiles you’ll run claude in. We’ll add Enter/Exit Workgroup triggers to each one so the Claude Code workgroup is entered automatically.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选择你将在其中运行 claude 的配置文件。我们将为每个配置文件添加“进入/退出工作组”触发器，以便自动进入 Claude Code 工作组。"
+          }
+        }
+      }
+    },
+    "These profiles are dynamic and not marked “rewritable,” so iTerm2 normally regenerates them from disk and any change here would be lost:\n\n%@\n\niTerm2 can write the triggers back to dynamic profiles when they’re marked rewritable. Rewriting can change the order of values in the underlying file.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这些配置文件是动态的，且未标记为“可重写”，因此 iTerm2 通常会从磁盘重新生成它们，此处的任何更改都会丢失：\n\n%@\n\niTerm2 可以在配置文件被标记为可重写后，将触发器写回动态配置文件。重写可能会更改底层文件中值的顺序。"
+          }
+        }
+      }
+    },
+    "This will open %@ in %@.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这将在 %2$@ 中打开 %1$@。"
+          }
+        }
+      }
+    },
+    "The iTerm2 server has moved to a new address. Your paired iPhone is still registered with the old server. The old server will go away soon. You should re-pair to avoid problems when that happens.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iTerm2 服务器已迁移到新地址。你的配对 iPhone 仍注册在旧服务器上。旧服务器很快将关闭。为避免出现问题，你应该重新配对。"
+          }
+        }
+      }
+    },
+    "Your paired iPhone can’t connect because some pairing information stored on this Mac is missing (%@). This can happen after reinstalling or rebuilding iTerm2, or after a keychain reset. Re-pair to fix it.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你的配对 iPhone 无法连接，因为此 Mac 上存储的某些配对信息缺失（%@）。这可能在重新安装或重建 iTerm2 之后，或钥匙串重置之后发生。重新配对即可修复。"
+          }
+        }
+      }
+    },
+    "iTerm2 has moved to the new relay. For your Mac and iPhone to keep connecting, update the iTerm2 Buddy app on your iPhone to the latest version.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iTerm2 已迁移到新的中继服务器。为让 Mac 与 iPhone 保持连接，请将 iPhone 上的 iTerm2 Buddy 应用更新到最新版本。"
+          }
+        }
+      }
+    },
+    "Daily relay data limit reached (reconnecting…)": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已达到每日中继数据流量上限（正在重新连接…）"
+          }
+        }
+      }
+    },
+    "Daily relay data limit reached (retry in %@)": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已达到每日中继数据流量上限（%@ 后重试）"
+          }
+        }
+      }
+    },
+    "%@\n\nYou can finish setting up in Companion Device Settings.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@\n\n你可以在“Companion 设备设置”中完成设置。"
+          }
+        }
+      }
+    },
+    "No ssh connection to %@ is available to upload %@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "没有可用的 ssh 连接（%@）来上传 %@"
+          }
+        }
+      }
+    },
+    "OK to run:\n%@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "确认运行：\n%@"
+          }
+        }
+      }
+    },
+    "OK to open this file?\n%@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "确认打开此文件？\n%@"
+          }
+        }
+      }
+    },
+    "AI Chat could not be opened. Verify you only have one instance of iTerm2 running.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI 聊天无法打开。请确认你只运行了一个 iTerm2 实例。"
+          }
+        }
+      }
+    },
+    "Open file at %@?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "要打开位于 %@ 的文件吗？"
+          }
+        }
+      }
+    },
+    "Open URL %@?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "要打开 URL %@ 吗？"
+          }
+        }
+      }
+    },
+    "Any needed Python runtimes will be installed and secure settings will be updated, which may require you to enter your password. Then iTerm2 will restart and finish importing. This can take several minutes.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "任何需要的 Python 运行时都将被安装，安全设置将被更新，这可能要求你输入密码。然后 iTerm2 将重新启动并完成导入。这可能需要几分钟。"
+          }
+        }
+      }
+    },
+    "Would you like to export your settings and data first? You will be able to re-import the exported file later if you change your mind.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "是否要先导出你的设置和数据？如果改变主意，稍后可以重新导入导出的文件。"
+          }
+        }
+      }
+    },
+    "iTerm2 logged what it would have erased to Console.app. Nothing was actually deleted because the “Dry-run Erase All Settings and Data” advanced setting is enabled.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iTerm2 已将本应擦除的内容记录到“控制台”应用中。由于“干运行擦除所有设置和数据”高级设置已启用，实际上没有删除任何内容。"
+          }
+        }
+      }
+    },
+    "To install the Nerd Font Bundle iTerm2 must first download and install these fonts: %@.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "要安装 Nerd 字体包，iTerm2 必须首先下载并安装以下字体：%@。"
+          }
+        }
+      }
+    },
+    "This will replace existing special exceptions. Continue?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这将替换现有的特殊例外。继续吗？"
+          }
+        }
+      }
+    },
+    "### For This Setting\n%@\n\n\n": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "### 本设置\n%@\n\n\n"
+          }
+        }
+      }
+    },
+    "### Background\nBinding a setting to an expression lets you change settings programmatically.\n\niTerm2 tracks a collection of “Variables” for each session. You can learn more about them in [Scripting Fundamentals](https://iterm2.com/documentation-scripting-fundamentals.html).\n\nTypically this feature is used by binding a setting to a user-defined variable.\n\n### Example\nThe easiest way to set a user-defined variable is to install shell integration and then define a `iterm2_print_user_vars` function. Here’s an example using bash:\n\n```\niterm2_print_user_vars() {\n  iterm2_set_user_var %@ $(echo $%@)\n}\n```\n\nThis runs each time the shell prompt is printed. The example sets a user-defined variable to the value of the environment variable `%@`.\n\nThe appropriate expression to bind this example would be `user.%@`. All user-defined variables go in the `user` scope.\n\n### Debugging\nYou can view variables in the Inspector (**Scripts > Manage > Console** and then click **Inspector**).": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "### 背景\n将设置绑定到表达式可以让你以编程方式更改设置。\n\niTerm2 会为每个会话跟踪一组“变量”。你可以通过[脚本基础](https://iterm2.com/documentation-scripting-fundamentals.html)了解详情。\n\n通常，此功能用于将设置绑定到用户定义的变量。\n\n### 示例\n设置用户定义变量的最简单方法是安装 shell 集成，然后定义一个 `iterm2_print_user_vars` 函数。以下是使用 bash 的示例：\n\n```\niterm2_print_user_vars() {\n  iterm2_set_user_var %@ $(echo $%@)\n}\n```\n\n每次打印 shell 提示符时都会运行此函数。该示例将用户定义变量设置为环境变量 `%@` 的值。\n\n绑定此示例的合适表达式为 `user.%@`。所有用户定义的变量都位于 `user` 作用域中。\n\n### 调试\n你可以在“检查器”（**脚本 > 管理 > 控制台**，然后点按**检查器**）中查看变量。"
+          }
+        }
+      }
+    },
+    "Your codecierge session has been going on for a long time. Are you still using it? If not, stop it to save money and privacy.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你的 codecierge 会话已持续很长时间。你还在使用它吗？如果没有，请停止它，以节省费用并保护隐私。"
+          }
+        }
+      }
+    },
+    "This lets an AI completely control your computer. It could delete your files, do something stupid or dangerous, or lead to the downfall of humanity. Proceed with caution.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这将让 AI 完全控制你的电脑。它可能会删除你的文件、做出愚蠢或危险的事情，甚至导致人类走向灭亡。请谨慎操作。"
+          }
+        }
+      }
+    },
+    "Everything that happens in your terminal while Codecierge is running will be sent to your AI provider. Don’t send them confidential information!": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Codecierge 运行时，你的终端中发生的一切都将发送给你的 AI 提供商。请勿向它们发送机密信息！"
+          }
+        }
+      }
+    },
+    "The Touch ID install script is missing from the iTerm2 application bundle.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "从 iTerm2 应用包中找不到 Touch ID 安装脚本。"
+          }
+        }
+      }
+    },
+    "%@?\nIt will run silently in the background.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@？\n它将在后台静默运行。"
+          }
+        }
+      }
+    },
+    "Saved prompts can be re-loaded from the Prompts pulldown.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已保存的提示可以从“提示”下拉菜单中重新加载。"
+          }
+        }
+      }
+    },
+    "⌘⇧T now restores recently closed tabs (Undo Close). The Show Tabs in Fullscreen shortcut has moved to ⌘⇧U.\n\nWould you like to keep ⌘⇧T as the shortcut for Show Tabs in Fullscreen by adding a key binding?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "⌘⇧T 现在用于恢复最近关闭的标签页（撤销关闭）。“全屏显示标签页”的快捷键已移至 ⌘⇧U。\n\n是否要通过添加按键绑定，将 ⌘⇧T 保留为“全屏显示标签页”的快捷键？"
+          }
+        }
+      }
+    },
+    "These alerts are being answered automatically because you chose to remember your response. Select one and click Un-suppress to be asked again.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这些提醒会被自动应答，因为你选择了记住你的答复。请选择其中一个，然后点按“取消屏蔽”以再次询问。"
+          }
+        }
+      }
+    },
+    "no usable GPU found on this machine.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未在此电脑上找到可用的 GPU。"
+          }
+        }
+      }
+    },
+    "GPU Renderer is disabled in Settings > General.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已在“设置 > 通用”中停用 GPU 渲染器。"
+          }
+        }
+      }
+    },
+    "the current session is not a terminal.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "当前会话不是终端。"
+          }
+        }
+      }
+    },
+    "ligatures are enabled. You can disable them in Settings > Profiles > Text > Use ligatures.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已启用连字。你可以在“设置 > 配置文件 > 文本 > 使用连字”中将其停用。"
+          }
+        }
+      }
+    },
+    "the GPU renderer is initializing. It should be ready soon.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "GPU 渲染器正在初始化，应该很快就可以就绪。"
+          }
+        }
+      }
+    },
+    "the session is too large or too small.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "会话太大或太小。"
+          }
+        }
+      }
+    },
+    "the session is initializing.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "会话正在初始化。"
+          }
+        }
+      }
+    },
+    "transparent windows are not supported. They can be disabled in Settings > Profiles > Window > Transparency.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "不支持透明窗口。你可以在“设置 > 配置文件 > 窗口 > 透明度”中将其停用。"
+          }
+        }
+      }
+    },
+    "the font's vertical spacing set to less than 100%. You can change it in Settings > Profiles > Text > Change Font.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "字体垂直间距设置为小于 100%。你可以在“设置 > 配置文件 > 文本 > 更改字体”中更改此设置。"
+          }
+        }
+      }
+    },
+    "terminal window margins are too small. You can edit them in Settings > Advanced.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "终端窗口边距太小。你可以在“设置 > 高级”中进行编辑。"
+          }
+        }
+      }
+    },
+    "annotations or URL shortcuts are open.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "有注释或 URL 快捷键处于打开状态。"
+          }
+        }
+      }
+    },
+    "this session has natively rendered items.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此会话包含原生渲染的项目。"
+          }
+        }
+      }
+    },
+    "the find panel is open.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "查找面板处于打开状态。"
+          }
+        }
+      }
+    },
+    "the paste progress indicator is open.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "粘贴进度指示器处于打开状态。"
+          }
+        }
+      }
+    },
+    "an announcement (yellow bar) is visible.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "有通告（黄色横幅）可见。"
+          }
+        }
+      }
+    },
+    "a URL preview is visible.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "有 URL 预览可见。"
+          }
+        }
+      }
+    },
+    "the window is being resized.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "窗口正在调整大小。"
+          }
+        }
+      }
+    },
+    "the computer is not connected to power. You can enable GPU rendering while disconnected from power in Settings > General > Advanced GPU Settings.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "电脑未连接电源。你可以在“设置 > 通用 > 高级 GPU 设置”中启用电脑未连接电源时的 GPU 渲染。"
+          }
+        }
+      }
+    },
+    "the session is idle. You can enable Metal while idle in Settings > Advanced.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "会话处于空闲状态。你可以在“设置 > 高级”中启用空闲时使用 Metal。"
+          }
+        }
+      }
+    },
+    "This tab has too many split panes": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此标签页有太多分屏窗格"
+          }
+        }
+      }
+    },
+    "the window does not have keyboard focus.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "窗口没有键盘焦点。"
+          }
+        }
+      }
+    },
+    "this tab is not active.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此标签页未激活。"
+          }
+        }
+      }
+    },
+    "the tab bar is temporarily visible.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "标签栏暂时可见。"
+          }
+        }
+      }
+    },
+    "the screen configuration has just changed.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "屏幕配置刚刚发生了变化。"
+          }
+        }
+      }
+    },
+    "of a temporary failure to allocate a graphics context.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "临时分配图形上下文失败。"
+          }
+        }
+      }
+    },
+    "a tab is being dragged.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在拖移标签页。"
+          }
+        }
+      }
+    },
+    "the current session has no window (this shouldn't happen).": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "当前会话没有窗口（本不应出现此情况）。"
+          }
+        }
+      }
+    },
+    "secure copy drop targets are visible.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "安全拷贝拖放目标可见。"
+          }
+        }
+      }
+    },
+    "swiping between tabs": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在标签页之间轻扫"
+          }
+        }
+      }
+    },
+    "a split pane is being dragged.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在拖移分屏窗格。"
+          }
+        }
+      }
+    },
+    "the window is mostly under another window.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "窗口大部分位于另一个窗口之下。"
+          }
+        }
+      }
+    },
+    "macOS is in low power mode.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "macOS 处于低电量模式。"
+          }
+        }
+      }
+    },
+    "of an internal error. Please file a bug report!": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "发生内部错误。请提交错误报告！"
+          }
+        }
+      }
+    },
+    "OK to paste %d lines at shell prompt?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "确定要在 shell 提示符处粘贴 %d 行？"
+          }
+        }
+      }
+    },
+    "OK to paste %d lines?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "确定要粘贴 %d 行？"
+          }
+        }
+      }
+    },
+    "OK to paste one line ending in a newline at shell prompt?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "确定要在 shell 提示符处粘贴以换行符结尾的单行？"
+          }
+        }
+      }
+    },
+    "OK to paste one line ending in a newline?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "确定要粘贴以换行符结尾的单行？"
+          }
+        }
+      }
+    },
+    "Confirm Multi-Line Paste": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "确认多行粘贴"
+          }
+        }
+      }
+    },
+    "Type directly to the terminal (for example to answer a password prompt) instead of queueing your keystrokes until the paste finishes.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "直接输入到终端（例如回答密码提示），而不是将按键排入队列直到粘贴完成。"
+          }
+        }
+      }
+    },
+    "%@ byte%@ in %@ line%@.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ 字节%@，共 %@ 行%@。"
+          }
+        }
+      }
+    },
+    "Tabs->%@ spcs": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tabs->%@ 空格"
+          }
+        }
+      }
+    },
+    "Problem with Application Support Directory": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "应用程序支持目录出现问题"
+          }
+        }
+      }
+    },
+    "Problem Creating Config Folder": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "创建配置文件夹时出现问题"
+          }
+        }
+      }
+    },
+    "When you activate Semantic History on a filename, the browser opens a URL.\n": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "当你在文件名上启用语义历史记录时，关联的应用会载入该文件。"
+          }
+        }
+      }
+    },
+    "Command runs when you activate Semantic History on any text, even if it’s not a valid filename. ": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "命令"
+          }
+        }
+      }
+    },
+    "Toggle Economy Model. A cheaper model used for frequent background jobs ": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "切换经济模型。一种更便宜的模型，用于频繁的后台任务，例如命令安全检查与屏幕空闲检测。"
+          }
+        }
+      }
+    },
+    "Enable for reasoning models with a thinking mode, such as GPT-5, ": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "启用"
+          }
+        }
+      }
+    },
+    "Uncheck for models that reject a temperature parameter, such as ": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "对于拒绝温度参数的模型（例如 Anthropic Opus 4.7 及更高版本），请取消选中。"
+          }
+        }
+      }
+    },
+    "Settings at %@ changed since iTerm2 started. ": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自 iTerm2 启动以来，%@ 处的设置已更改。覆盖它？"
+          }
+        }
+      }
+    },
+    "No Image Selected\\u2009—\\u2009Click to set": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "否"
+          }
+        }
+      }
+    },
+    "No": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "否"
+          }
+        }
+      }
+    },
+    "Enable": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "启用"
+          }
+        }
+      }
+    },
+    "Command": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "命令"
+          }
+        }
+      }
+    },
+    "Toggle Economy Model. A cheaper model used for frequent background jobs like command-safety checks and screen-idle detection.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "切换经济模型。一种更便宜的模型，用于频繁的后台任务，例如命令安全检查与屏幕空闲检测。"
+          }
+        }
+      }
+    },
+    "Uncheck for models that reject a temperature parameter, such as Anthropic Opus 4.7 and later.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "对于拒绝温度参数的模型（例如 Anthropic Opus 4.7 及更高版本），请取消选中。"
+          }
+        }
+      }
+    },
+    "Settings at %@ changed since iTerm2 started. Overwrite it?": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自 iTerm2 启动以来，%@ 处的设置已更改。覆盖它？"
+          }
+        }
+      }
+    },
+    "When you activate Semantic History on a filename, the associated app loads the file.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "对文件名激活语义历史记录时，关联的应用会载入该文件。"
+          }
+        }
+      }
+    },
+    "Shell integration needs a newer version of bash.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shell 集成需要更新版本的 bash。"
+          }
+        }
+      }
+    },
+    "Toggle Default": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "切换默认值"
+          }
+        }
+      }
+    },
+    "C-Style Backslash Escaping supports: \\a (bell), \\b (backspace), \\e (escape), \\\n (newline), \\r (carriage return), \\\t (tab), \\\\ (backslash), and \\x followed by two hex digits giving a single byte of UTF-8.\n\nUnescaped Literal Text does not have any special characters.\n\nBackward Compatibility Escaping, which is not recommended for new snippets, supports: \\\n (newline), \\e (escape), \\a (bell), and \\\t (tab).\n\n": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "C 风格反斜杠转义支持：\\a（提示音）、\\b（退格）、\\e（转义）、\\n（换行）、\\r（回车）、\\t（制表符）、\\\\（反斜杠），以及 \\x 后跟两位十六进制数字以表示单个 UTF-8 字节。\\n\\n未转义的文本没有任何特殊字符。\\n\\n不推荐新片段使用的向后兼容转义支持：\\n（换行）、\\e（转义）、\\a（提示音）和 \\t（制表符）。\\n\\n"
+          }
+        }
+      }
+    },
+    "   %@": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "   %@"
           }
         }
       }

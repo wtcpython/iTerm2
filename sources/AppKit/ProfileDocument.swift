@@ -40,8 +40,8 @@ class ProfileDocument: NSObject {
                 newName != name,
                 let profileWithName = ProfileModel.sharedInstance().bookmark(withName: name) {
                 let selection = iTermWarning.show(
-                    withTitle: "Would you like to open the profile formerly named \(name) that is now called \(newName) (which this shortcut refers to), or the profile that currently has the name \(name)?",
-                    actions: [ "Open \(name)", "Open \(newName)", NSLocalizedString("Cancel", comment: "UI")],
+                    withTitle: String(format: NSLocalizedString("Would you like to open the profile formerly named %@ that is now called %@ (which this shortcut refers to), or the profile that currently has the name %@?", comment: "UI"), name, newName, name),
+                    actions: [String(format: NSLocalizedString("Open %@", comment: "UI"), name), String(format: NSLocalizedString("Open %@", comment: "UI"), newName), NSLocalizedString("Cancel", comment: "UI")],
                     accessory: nil,
                     identifier: "NoSyncOpenRenamedProfile",
                     silenceable: .kiTermWarningTypePermanentlySilenceable,

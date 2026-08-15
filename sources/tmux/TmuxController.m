@@ -592,7 +592,7 @@ static NSDictionary *iTermTmuxControllerDefaultFontOverridesFromProfile(Profile 
     TSVDocument *doc = [response tsvDocumentWithFields:[self listWindowFields] workAroundTabBug:_shouldWorkAroundTabBug];
     if (!doc) {
         RLog(@"Failed to parse %@", response);
-        [gateway_ abortWithErrorMessage:[NSString stringWithFormat:@"Bad response for initial list windows request: %@", response]];
+        [gateway_ abortWithErrorMessage:[NSString stringWithFormat:NSLocalizedString(@"Bad response for initial list windows request: %@", @"UI"), response]];
         return;
     }
     NSMutableArray<NSArray *> *windowsToOpen = [NSMutableArray array];
@@ -3367,7 +3367,7 @@ static NSDictionary *iTermTmuxControllerDefaultFontOverridesFromProfile(Profile 
     TSVDocument *doc = [response tsvDocumentWithFields:[self listWindowFields]
                                       workAroundTabBug:_shouldWorkAroundTabBug];
     if (!doc) {
-        [gateway_ abortWithErrorMessage:[NSString stringWithFormat:@"Bad response for list windows request: %@",
+        [gateway_ abortWithErrorMessage:[NSString stringWithFormat:NSLocalizedString(@"Bad response for list windows request: %@", @"UI"),
                                          response]];
         return;
     }

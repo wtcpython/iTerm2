@@ -475,7 +475,7 @@ extension TextViewPorthole: NSTextViewDelegate {
             return false
         }
         if url.scheme == "file" {
-            if iTermWarning.show(withTitle: "Open file at \(url.path)?",
+            if iTermWarning.show(withTitle: String(format: NSLocalizedString("Open file at %@?", comment: "UI"), url.path),
                                  actions: [NSLocalizedString("OK", comment: "UI"), NSLocalizedString("Cancel", comment: "UI")],
                                  accessory: nil,
                                  identifier: "NoSyncOpenFileFromMarkdownLink",
@@ -485,7 +485,7 @@ extension TextViewPorthole: NSTextViewDelegate {
                 NSWorkspace.shared.open(url)
             }
         } else {
-            if iTermWarning.show(withTitle: "Open URL \(url.absoluteString)?",
+            if iTermWarning.show(withTitle: String(format: NSLocalizedString("Open URL %@?", comment: "UI"), url.absoluteString),
                                  actions: [NSLocalizedString("OK", comment: "UI"), NSLocalizedString("Cancel", comment: "UI")],
                                  accessory: nil,
                                  identifier: "NoSyncOpenURLFromMarkdownLink",

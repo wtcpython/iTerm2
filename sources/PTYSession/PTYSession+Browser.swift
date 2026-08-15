@@ -258,7 +258,7 @@ extension PTYSession: iTermBrowserViewControllerDelegate {
     }
 
     func browserViewController(_ controller: iTermBrowserViewController, runCommand command: String) {
-        guard iTermWarning.show(withTitle: "OK to run:\n\(command)",
+        guard iTermWarning.show(withTitle: String(format: NSLocalizedString("OK to run:\n%@", comment: "UI"), command),
                                 actions: [NSLocalizedString("OK", comment: "UI"), NSLocalizedString("Cancel", comment: "UI")],
                                 accessory: nil,
                                 identifier: nil,
@@ -293,7 +293,7 @@ extension PTYSession: iTermBrowserViewControllerDelegate {
     }
 
     func browserViewController(_ controller: iTermBrowserViewController, openFile file: String) {
-        guard iTermWarning.show(withTitle: "OK to open this file?\n\(file)",
+        guard iTermWarning.show(withTitle: String(format: NSLocalizedString("OK to open this file?\n%@", comment: "UI"), file),
                                 actions: [NSLocalizedString("OK", comment: "UI"), NSLocalizedString("Cancel", comment: "UI")],
                                 accessory: nil,
                                 identifier: nil,

@@ -12,71 +12,70 @@ NSString *iTermMetalUnavailableReasonDescription(iTermMetalUnavailableReason rea
         case iTermMetalUnavailableReasonNone:
             return nil;
         case iTermMetalUnavailableReasonNoGPU:
-            return @"no usable GPU found on this machine.";
+            return NSLocalizedString(@"no usable GPU found on this machine.", @"UI");
         case iTermMetalUnavailableReasonDisabled:
-            return @"GPU Renderer is disabled in Settings > General.";
+            return NSLocalizedString(@"GPU Renderer is disabled in Settings > General.", @"UI");
         case iTermMetalUnavailableReasonNotATerminal:
-            return @"the current session is not a terminal.";
+            return NSLocalizedString(@"the current session is not a terminal.", @"UI");
         case iTermMetalUnavailableReasonLigatures:
-            return @"ligatures are enabled. You can disable them in Settings > Profiles > Text > Use ligatures.";
+            return NSLocalizedString(@"ligatures are enabled. You can disable them in Settings > Profiles > Text > Use ligatures.", @"UI");
         case iTermMetalUnavailableReasonInitializing:
-            return @"the GPU renderer is initializing. It should be ready soon.";
+            return NSLocalizedString(@"the GPU renderer is initializing. It should be ready soon.", @"UI");
         case iTermMetalUnavailableReasonInvalidSize:
-            return @"the session is too large or too small.";
+            return NSLocalizedString(@"the session is too large or too small.", @"UI");
         case iTermMetalUnavailableReasonSessionInitializing:
-            return @"the session is initializing.";
+            return NSLocalizedString(@"the session is initializing.", @"UI");
         case iTermMetalUnavailableReasonTransparency:
-            return @"transparent windows are not supported. They can be disabled in Settings > Profiles > Window > Transparency.";
+            return NSLocalizedString(@"transparent windows are not supported. They can be disabled in Settings > Profiles > Window > Transparency.", @"UI");
         case iTermMetalUnavailableReasonVerticalSpacing:
-            return @"the font's vertical spacing set to less than 100%. You can change it in Settings > Profiles > Text > Change Font.";
+            return NSLocalizedString(@"the font's vertical spacing set to less than 100%. You can change it in Settings > Profiles > Text > Change Font.", @"UI");
         case iTermMetalUnavailableReasonMarginSize:
-            return @"terminal window margins are too small. You can edit them in Settings > Advanced.";
+            return NSLocalizedString(@"terminal window margins are too small. You can edit them in Settings > Advanced.", @"UI");
         case iTermMetalUnavailableReasonAnnotations:
-            return @"annotations or URL shortcuts are open.";
+            return NSLocalizedString(@"annotations or URL shortcuts are open.", @"UI");
         case iTermMetalUnavailableReasonPortholes:
-            return @"this session has natively rendered items.";
+            return NSLocalizedString(@"this session has natively rendered items.", @"UI");
         case iTermMetalUnavailableReasonFindPanel:
-            return @"the find panel is open.";
+            return NSLocalizedString(@"the find panel is open.", @"UI");
         case iTermMetalUnavailableReasonPasteIndicator:
-            return @"the paste progress indicator is open.";
+            return NSLocalizedString(@"the paste progress indicator is open.", @"UI");
         case iTermMetalUnavailableReasonAnnouncement:
-            return @"an announcement (yellow bar) is visible.";
+            return NSLocalizedString(@"an announcement (yellow bar) is visible.", @"UI");
         case iTermMetalUnavailableReasonURLPreview:
-            return @"a URL preview is visible.";
+            return NSLocalizedString(@"a URL preview is visible.", @"UI");
         case iTermMetalUnavailableReasonWindowResizing:
-            return @"the window is being resized.";
+            return NSLocalizedString(@"the window is being resized.", @"UI");
         case iTermMetalUnavailableReasonDisconnectedFromPower:
-            return @"the computer is not connected to power. You can enable GPU rendering while disconnected from "
-            @"power in Settings > General > Advanced GPU Settings.";
+            return NSLocalizedString(@"the computer is not connected to power. You can enable GPU rendering while disconnected from power in Settings > General > Advanced GPU Settings.", @"UI");
         case iTermMetalUnavailableReasonIdle:
-            return @"the session is idle. You can enable Metal while idle in Settings > Advanced.";
+            return NSLocalizedString(@"the session is idle. You can enable Metal while idle in Settings > Advanced.", @"UI");
         case iTermMetalUnavailableReasonTooManyPanesReason:
-            return @"This tab has too many split panes";
+            return NSLocalizedString(@"This tab has too many split panes", @"UI");
         case iTermMetalUnavailableReasonNoFocus:
-            return @"the window does not have keyboard focus.";
+            return NSLocalizedString(@"the window does not have keyboard focus.", @"UI");
         case iTermMetalUnavailableReasonTabInactive:
-            return @"this tab is not active.";
+            return NSLocalizedString(@"this tab is not active.", @"UI");
         case iTermMetalUnavailableReasonTabBarTemporarilyVisible:
-            return @"the tab bar is temporarily visible.";
+            return NSLocalizedString(@"the tab bar is temporarily visible.", @"UI");
         case iTermMetalUnavailableReasonScreensChanging:
-            return @"the screen configuration has just changed.";
+            return NSLocalizedString(@"the screen configuration has just changed.", @"UI");
         case iTermMetalUnavailableReasonContextAllocationFailure:
-            return @"of a temporary failure to allocate a graphics context.";
+            return NSLocalizedString(@"of a temporary failure to allocate a graphics context.", @"UI");
         case iTermMetalUnavailableReasonTabDragInProgress:
-            return @"a tab is being dragged.";
+            return NSLocalizedString(@"a tab is being dragged.", @"UI");
         case iTermMetalUnavailableReasonSessionHasNoWindow:
-            return @"the current session has no window (this shouldn't happen).";
+            return NSLocalizedString(@"the current session has no window (this shouldn't happen).", @"UI");
         case iTermMetalUnavailableReasonDropTargetsVisible:
-            return @"secure copy drop targets are visible.";
+            return NSLocalizedString(@"secure copy drop targets are visible.", @"UI");
         case iTermMetalUnavailableReasonSwipingBetweenTabs:
-            return @"swiping between tabs";
+            return NSLocalizedString(@"swiping between tabs", @"UI");
         case iTermMetalUnavailableReasonSplitPaneBeingDragged:
-            return @"a split pane is being dragged.";
+            return NSLocalizedString(@"a split pane is being dragged.", @"UI");
         case iTermMetalUnavailableReasonWindowObscured:
-            return @"the window is mostly under another window.";
+            return NSLocalizedString(@"the window is mostly under another window.", @"UI");
         case iTermMetalUnavailableReasonLowerPowerMode:
-            return @"macOS is in low power mode.";
+            return NSLocalizedString(@"macOS is in low power mode.", @"UI");
     }
 
-    return @"of an internal error. Please file a bug report!";
+    return NSLocalizedString(@"of an internal error. Please file a bug report!", @"UI");
 }

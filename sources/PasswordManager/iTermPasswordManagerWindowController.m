@@ -709,7 +709,7 @@ static NSArray<NSString *> *gTerminalCachedCombinedAccountNames;
 
 - (BOOL)shouldRemoveSelection {
     NSAlert *alert = [[NSAlert alloc] init];
-    alert.messageText = @"Are you sure you want to delete this password?";
+    alert.messageText = NSLocalizedString(@"Are you sure you want to delete this password?", @"UI");
     [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
     [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
     return [alert runSheetModalForWindow:self.window] == NSAlertFirstButtonReturn;
@@ -725,7 +725,7 @@ static NSArray<NSString *> *gTerminalCachedCombinedAccountNames;
 
         @autoreleasepool {
             NSAlert *alert = [[NSAlert alloc] init];
-            alert.messageText = [NSString stringWithFormat:@"Enter password for %@:", accountName];
+            alert.messageText = [NSString stringWithFormat:NSLocalizedString(@"Enter password for %@:", @"UI"), accountName];
             [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
             [alert addButtonWithTitle:NSLocalizedString(@"Generate", @"UI")];
             [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
@@ -900,7 +900,7 @@ static NSArray<NSString *> *gTerminalCachedCombinedAccountNames;
     }
 
     NSAlert *alert = [[NSAlert alloc] init];
-    alert.messageText = [NSString stringWithFormat:@"%@ Settings", [self currentDataSource].name];
+    alert.messageText = [NSString stringWithFormat:NSLocalizedString(@"%@ Settings", @"UI"), [self currentDataSource].name];
     [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
     [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
 
@@ -1049,12 +1049,12 @@ static NSArray<NSString *> *gTerminalCachedCombinedAccountNames;
             [weakSelf ifCancelCountUnchanged:cancelCount perform:^{
                 [weakSelf decrBusy];
                 if (error) {
-                    NSMutableString *info = [NSMutableString stringWithString:error.localizedDescription ?: @"An error occurred."];
+                    NSMutableString *info = [NSMutableString stringWithString:error.localizedDescription ?: NSLocalizedString(@"An error occurred.", @"UI")];
                     if (message.length > 0) {
                         [info appendFormat:@"\n\n%@", message];
                     }
                     NSAlert *alert = [[NSAlert alloc] init];
-                    alert.messageText = @"Command Failed";
+                    alert.messageText = NSLocalizedString(@"Command Failed", @"UI");
                     alert.informativeText = info;
                     [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
                     [alert runModal];
@@ -1158,7 +1158,7 @@ static NSArray<NSString *> *gTerminalCachedCombinedAccountNames;
         return;
     }
     NSAlert *alert = [[NSAlert alloc] init];
-    alert.messageText = [NSString stringWithFormat:@"Password for %@", accountName];
+    alert.messageText = [NSString stringWithFormat:NSLocalizedString(@"Password for %@", @"UI"), accountName];
     alert.informativeText = password;
     [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
     [alert addButtonWithTitle:NSLocalizedString(@"Copy", @"UI")];
@@ -1485,7 +1485,7 @@ static NSInteger const kDynamicMenuItemTag = 9999;
                 RLog(@"passwordForRow: return nil, keychain gave error %@", error);
 
                 NSAlert *alert = [[NSAlert alloc] init];
-                alert.messageText = [NSString stringWithFormat:@"Could not get password. Keychain query failed: %@",
+                alert.messageText = [NSString stringWithFormat:NSLocalizedString(@"Could not get password. Keychain query failed: %@", @"UI"),
                                      error.localizedDescription];
                 [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
                 [self runModal:alert completion:^(NSModalResponse response) { }];

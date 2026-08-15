@@ -789,23 +789,23 @@ const NSInteger iTermQuickPasteBytesPerCallDefaultValue = 768;
     BOOL prompt = YES;
     if (lines.count > 1) {
         if (atShellPrompt) {
-            theTitle = [NSString stringWithFormat:@"OK to paste %d lines at shell prompt?",
+            theTitle = [NSString stringWithFormat:NSLocalizedString(@"OK to paste %d lines at shell prompt?", @"UI"),
                         (int)[lines count]];
         } else {
             prompt = [iTermAdvancedSettingsModel promptForPasteWhenNotAtPrompt];
             DLog(@"set prompt to %@: there are multiple lines and we are not at the shell prompt", @(prompt));
-            theTitle = [NSString stringWithFormat:@"OK to paste %d lines?",
+            theTitle = [NSString stringWithFormat:NSLocalizedString(@"OK to paste %d lines?", @"UI"),
                         (int)[lines count]];
         }
     } else {
         [actions insertObject:pasteWithoutNewline atIndex:1];
         if (atShellPrompt) {
             identifier = [iTermAdvancedSettingsModel noSyncDoNotWarnBeforePastingOneLineEndingInNewlineAtShellPromptUserDefaultsKey];
-            theTitle = @"OK to paste one line ending in a newline at shell prompt?";
+            theTitle = NSLocalizedString(@"OK to paste one line ending in a newline at shell prompt?", @"UI");
         } else {
             prompt = [iTermAdvancedSettingsModel promptForPasteWhenNotAtPrompt];
             DLog(@"set prompt to %@: pasting 0 or 1 lines and not at shell prompt", @(prompt));
-            theTitle = @"OK to paste one line ending in a newline?";
+            theTitle = NSLocalizedString(@"OK to paste one line ending in a newline?", @"UI");
         }
     }
 
@@ -826,7 +826,7 @@ const NSInteger iTermQuickPasteBytesPerCallDefaultValue = 768;
         result = NO;
     }]];
     iTermWarning *warning = [[iTermWarning alloc] init];
-    warning.heading = @"Confirm Multi-Line Paste";
+    warning.heading = NSLocalizedString(@"Confirm Multi-Line Paste", @"UI");
     warning.title = theTitle;
     warning.warningActions = actions;
     warning.identifier = identifier;

@@ -291,8 +291,8 @@ static const CGFloat kMargin = 4;
 
 - (void)clear:(id)sender {
     NSAlert *alert = [[NSAlert alloc] init];
-    alert.messageText = @"Erase Paste History";
-    alert.informativeText = @"Paste history will be erased. Continue?";
+    alert.messageText = NSLocalizedString(@"Erase Paste History", @"UI");
+    alert.informativeText = NSLocalizedString(@"Paste history will be erased. Continue?", @"UI");
     [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
     [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
     if ([alert runModal] == NSAlertFirstButtonReturn) {

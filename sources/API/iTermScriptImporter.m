@@ -263,7 +263,7 @@ static NSString *const iTermInstallStagingPrefix = @".installing-";
                              withCertificate:(SIGCertificate *)cert
                                   completion:(void (^)(BOOL ok, BOOL toTemp))completion {
     DLog(@"Confirming");
-    NSString *body = [NSString stringWithFormat:@"The signature of ”%@” has been verified. The author is:\n\n%@\n\nWould you like to install it?",
+    NSString *body = [NSString stringWithFormat:NSLocalizedString(@"The signature of ”%@” has been verified. The author is:\n\n%@\n\nWould you like to install it?", @"UI"),
                       reader.url.lastPathComponent,
                       ((cert.name ?: cert.longDescription) ?: NSLocalizedString(@"Unknown", @"UI"))];
     iTermWarningSelection selection = [iTermWarning showWarningWithTitle:body

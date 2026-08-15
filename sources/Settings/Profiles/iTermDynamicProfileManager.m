@@ -179,10 +179,10 @@
 
 - (void)reallyReportError:(NSString *)error file:(NSString *)file {
     NSString *message =
-    [NSString stringWithFormat:@"There was a problem with one of your Dynamic Profiles:\n\n%@", error];
+    [NSString stringWithFormat:NSLocalizedString(@"There was a problem with one of your Dynamic Profiles:\n\n%@", @"UI"), error];
     if (_pendingErrors > 1) {
         const NSInteger count = _pendingErrors - 1;
-        message = [message stringByAppendingFormat:@"\n\n%@ additional error%@ may be seen in the log.",
+        message = [message stringByAppendingFormat:NSLocalizedString(@"\n\n%@ additional error%@ may be seen in the log.", @"UI"),
                    @(count), count == 1 ? @"" : @"s"];
     }
     _pendingErrors = 0;
@@ -202,12 +202,12 @@
     // "View Log" is a one-time navigation action and shouldn't be remembered.
     iTermWarning *warning = [[iTermWarning alloc] init];
     warning.title = message;
-    warning.actionLabels = @[ NSLocalizedString(@"OK", @"UI"), @"View Log" ];
+    warning.actionLabels = @[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"View Log", @"UI") ];
     warning.accessory = container;
     warning.identifier = @"NoSyncDynamicProfilesWarning";
     warning.warningType = kiTermWarningTypeTemporarilySilenceable;
-    warning.heading = @"Dynamic Profiles Error";
-    warning.doNotRememberLabels = @[ @"View Log" ];
+    warning.heading = NSLocalizedString(@"Dynamic Profiles Error", @"UI");
+    warning.doNotRememberLabels = @[ NSLocalizedString(@"View Log", @"UI") ];
     const iTermWarningSelection selection = [warning runModal];
     if (selection == 1) {
         [[iTermScriptConsole sharedInstance] revealTailOfHistoryEntry:[iTermScriptHistoryEntry dynamicProfilesEntry]];
@@ -307,7 +307,7 @@
         }
         NSString *fullName = [path stringByAppendingPathComponent:file];
         if (![self loadDynamicProfilesFromFile:fullName intoArray:newProfiles guids:guids]) {
-            [self reportError:[NSString stringWithFormat:@"Ignoring dynamic profiles in “%@” because of an error.", fullName]
+            [self reportError:[NSString stringWithFormat:NSLocalizedString(@"Ignoring dynamic profiles in “%@” because of an error.", @"UI"), fullName]
                          file:fullName];
         }
     }
@@ -359,7 +359,7 @@
         NSError *error = nil;
         NSData *data = [NSData dataWithContentsOfFile:filename options:0 error:&error];
         if (!data) {
-            [self reportError:[NSString stringWithFormat:@"Could not read Dynamic Profile from file %@: %@",
+            [self reportError:[NSString stringWithFormat:NSLocalizedString(@"Could not read Dynamic Profile from file %@: %@", @"UI"),
                                filename, error.localizedDescription]
                          file:filename];
             return nil;
@@ -368,13 +368,13 @@
                                                options:0
                                                  error:&error];
         if (!dict) {
-            [self reportError:[NSString stringWithFormat:@"Dynamic Profiles file %@ contains invalid JSON: %@", filename, error.localizedDescription]
+            [self reportError:[NSString stringWithFormat:NSLocalizedString(@"Dynamic Profiles file %@ contains invalid JSON: %@", @"UI"), filename, error.localizedDescription]
                          file:filename];
             return nil;
         }
         dict = [NSDictionary castFrom:dict];
         if (!dict) {
-            [self reportError:[NSString stringWithFormat:@"Dynamic Profiles file %@ does not have an Object (i.e., a dictionary) as its root element", filename]
+            [self reportError:[NSString stringWithFormat:NSLocalizedString(@"Dynamic Profiles file %@ does not have an Object (i.e., a dictionary) as its root element", @"UI"), filename]
                          file:filename];
             return nil;
         }
@@ -385,7 +385,7 @@
     NSArray *entries = dict[@"Profiles"];
     if (!entries) {
         XLog(@"Property list in %@ has no entries", entries);
-        [self reportError:[NSString stringWithFormat:@"Dynamic Profiles file %@ does not have a “Profiles” key at the root.",
+        [self reportError:[NSString stringWithFormat:NSLocalizedString(@"Dynamic Profiles file %@ does not have a “Profiles” key at the root.", @"UI"),
                            filename]
                      file:filename];
         return nil;
@@ -394,17 +394,17 @@
     NSMutableArray *profiles = [NSMutableArray array];
     for (Profile *profile in entries) {
         if (![profile[KEY_GUID] isKindOfClass:[NSString class]]) {
-            [self reportError:[NSString stringWithFormat:@"Dynamic profile is missing the Guid field in file %@", filename]
+            [self reportError:[NSString stringWithFormat:NSLocalizedString(@"Dynamic profile is missing the Guid field in file %@", @"UI"), filename]
                          file:filename];
             continue;
         }
         if (![profile[KEY_NAME] isKindOfClass:[NSString class]]) {
-            [self reportError:[NSString stringWithFormat:@"Dynamic profile with Guid %@ is missing the “name” field", profile[KEY_GUID]]
+            [self reportError:[NSString stringWithFormat:NSLocalizedString(@"Dynamic profile with Guid %@ is missing the “name” field", @"UI"), profile[KEY_GUID]]
                          file:filename];
             continue;
         }
         if ([self nonDynamicProfileHasGuid:profile[KEY_GUID]]) {
-            [self reportError:[NSString stringWithFormat:@"Dynamic profile with Guid %@ conflicts with non-dynamic profile with same Guid",
+            [self reportError:[NSString stringWithFormat:NSLocalizedString(@"Dynamic profile with Guid %@ conflicts with non-dynamic profile with same Guid", @"UI"),
                  profile[KEY_GUID]]
                          file:filename];
             continue;
@@ -464,7 +464,7 @@
             continue;
         }
         if ([guids containsObject:profile[KEY_GUID]]) {
-            [self reportError:[NSString stringWithFormat:@"Two dynamic profiles have the same Guid: %@", profile[KEY_GUID]]
+            [self reportError:[NSString stringWithFormat:NSLocalizedString(@"Two dynamic profiles have the same Guid: %@", @"UI"), profile[KEY_GUID]]
                          file:filename];
             continue;
         }
@@ -617,7 +617,7 @@
         value = parentName;
         feature = @"name";
     }
-    [self reportError:[NSString stringWithFormat:@"Dynamic profile %@ references unknown parent %@ %@. Using default profile as parent.",
+    [self reportError:[NSString stringWithFormat:NSLocalizedString(@"Dynamic profile %@ references unknown parent %@ %@. Using default profile as parent.", @"UI"),
                        profile[KEY_NAME], feature, value]
                  file:profile[KEY_DYNAMIC_PROFILE_FILENAME]];
     return nil;

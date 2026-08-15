@@ -673,8 +673,8 @@ static NSString * const kColorGalleryURL = @"https://www.iterm2.com/colorgallery
 - (void)showSaveColorPresetAlertWithItems:(NSArray<NSString *> *)items
                                completion:(void (^)(NSString *name))completion {
     NSAlert *alert = [[NSAlert alloc] init];
-    alert.messageText = @"Save Color Preset";
-    alert.informativeText = @"Select preset name";
+    alert.messageText = NSLocalizedString(@"Save Color Preset", @"UI");
+    alert.informativeText = NSLocalizedString(@"Select preset name", @"UI");
     alert.alertStyle = NSAlertStyleInformational;
 
     // Add the ComboBox
@@ -716,15 +716,15 @@ static NSString * const kColorGalleryURL = @"https://www.iterm2.com/colorgallery
     iTermColorPresetDictionary *customPresets = [iTermColorPresets customColorPresets];
     if (!customPresets || [customPresets count] == 0) {
         NSAlert *alert = [[NSAlert alloc] init];
-        alert.messageText = @"No deletable color presets.";
-        alert.informativeText = @"You cannot erase the built-in presets and no custom presets have been imported.";
+        alert.messageText = NSLocalizedString(@"No deletable color presets.", @"UI");
+        alert.informativeText = NSLocalizedString(@"You cannot erase the built-in presets and no custom presets have been imported.", @"UI");
         [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
         [alert runModal];
         return;
     }
 
     NSAlert *alert = [[NSAlert alloc] init];
-    alert.messageText = @"Select a preset to delete:";
+    alert.messageText = NSLocalizedString(@"Select a preset to delete:", @"UI");
     [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
     [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
     NSPopUpButton *popUpButton = [[NSPopUpButton alloc] init];
@@ -769,8 +769,8 @@ static NSString * const kColorGalleryURL = @"https://www.iterm2.com/colorgallery
     [theDict writeToSaveItem:item completionHandler:^(NSError *error) {
         if (error) {
             NSAlert *alert = [[NSAlert alloc] init];
-            alert.messageText = @"Save Failed.";
-            alert.informativeText = [NSString stringWithFormat:@"Could not save to %@", item.displayName];
+            alert.messageText = NSLocalizedString(@"Save Failed.", @"UI");
+            alert.informativeText = [NSString stringWithFormat:NSLocalizedString(@"Could not save to %@", @"UI"), item.displayName];
             [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
             [alert runModal];
         } else {

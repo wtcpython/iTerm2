@@ -273,7 +273,7 @@ extension iTermBrowserViewController {
                 } catch {
                     videoWindowController?.close()
                     videoWindowController = nil
-                    iTermWarning.show(withTitle: "Could not create movie: \(error.localizedDescription)",
+                    iTermWarning.show(withTitle: String(format: NSLocalizedString("Could not create movie: %@", comment: "UI"), error.localizedDescription),
                                       actions: [NSLocalizedString("OK", comment: "UI")],
                                       accessory: nil,
                                       identifier: nil,

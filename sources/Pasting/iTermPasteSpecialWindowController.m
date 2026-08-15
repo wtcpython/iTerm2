@@ -408,7 +408,7 @@
         linesFormatter.numberStyle = NSNumberFormatterDecimalStyle;
     }
 
-    _statsLabel.stringValue = [NSString stringWithFormat:@"%@ byte%@ in %@ line%@.",
+    _statsLabel.stringValue = [NSString stringWithFormat:NSLocalizedString(@"%@ byte%@ in %@ line%@.", @"UI"),
                                [[bytesFormatter stringFromNumber:@(numBytes)] stringWithFirstLetterCapitalized],
                                numBytes == 1 ? @"" : @"s",
                                [linesFormatter stringFromNumber:@(numberOfLines)],

@@ -3452,7 +3452,7 @@ webViewConfiguration:(WKWebViewConfiguration *)webViewConfiguration
         return;
     }
     self.unavailableWorkingDirectory = nil;
-    NSString *message = [NSString stringWithFormat:@"The directory “%@” is unavailable. Started in home directory instead.",
+    NSString *message = [NSString stringWithFormat:NSLocalizedString(@"The directory “%@” is unavailable. Started in home directory instead.", @"UI"),
                          unavailable];
     [_screen mutateAsynchronously:^(VT100Terminal *terminal,
                                     VT100ScreenMutableState *mutableState,
@@ -3611,8 +3611,7 @@ webViewConfiguration:(WKWebViewConfiguration *)webViewConfiguration
                 !profile.profileIsDynamic &&
                 ![[NSFileManager defaultManager] fileExistsAtPath:shell]) {
                 NSString *theKey = [NSString stringWithFormat:@"ShellDoesNotExist_%@", guid];
-                NSString *theTitle = [NSString stringWithFormat:
-                                      @"The shell for this account, “%@”, does not exist. Change the profile to use /bin/zsh instead?",
+                NSString *theTitle = [NSString stringWithFormat:NSLocalizedString(@"The shell for this account, “%@”, does not exist. Change the profile to use /bin/zsh instead?", @"UI"),
                                       shell];
                 const iTermWarningSelection selection =
                 [iTermWarning showWarningWithTitle:theTitle
@@ -3635,10 +3634,7 @@ webViewConfiguration:(WKWebViewConfiguration *)webViewConfiguration
             }
         }
         NSString *theKey = [iTermPreferences warningIdentifierForNeverWarnAboutShortLivedSessions:guid];
-        NSString *theTitle = [NSString stringWithFormat:
-                              @"A session ended very soon after starting. Check that the command "
-                              @"in profile \"%@\" is correct.",
-                              theName];
+        NSString *theTitle = [NSString stringWithFormat:NSLocalizedString(@"A session ended very soon after starting. Check that the command in profile \"%@\" is correct.", @"UI"), theName];
         [iTermWarning showWarningWithTitle:theTitle
                                    actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                 identifier:theKey
@@ -10095,13 +10091,13 @@ typedef NS_ENUM(NSUInteger, PTYSessionTmuxReport) {
 
 - (void)textViewDisconnectSSH {
     if (!_conductor.framing) {
-        NSString *title = [NSString stringWithFormat:@"Advanced SSH features are unavailable because Python %@ or later was not found on %@", [iTermConductor minimumPythonVersionForFramer], _conductor.sshIdentity.hostname ?: @"remote host"];
+        NSString *title = [NSString stringWithFormat:NSLocalizedString(@"Advanced SSH features are unavailable because Python %@ or later was not found on %@", @"UI"), [iTermConductor minimumPythonVersionForFramer], _conductor.sshIdentity.hostname ?: NSLocalizedString(@"remote host", @"UI")];
         [iTermWarning showWarningWithTitle:title
                                    actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                  accessory:nil
                                 identifier:nil
                                silenceable:kiTermWarningTypePersistent
-                                   heading:@"Can’t Disconnect"
+                                   heading:NSLocalizedString(@"Can’t Disconnect", @"UI")
                                     window:self.view.window];
         return;
     }
@@ -10469,8 +10465,8 @@ typedef NS_ENUM(NSUInteger, PTYSessionTmuxReport) {
         return;
     }
     NSAlert *alert = [[[NSAlert alloc] init] autorelease];
-    alert.messageText = @"Force Detach?";
-    alert.informativeText = @"Tmux is not responding. Would you like to force detach?";
+    alert.messageText = NSLocalizedString(@"Force Detach?", @"UI");
+    alert.informativeText = NSLocalizedString(@"Tmux is not responding. Would you like to force detach?", @"UI");
     [alert addButtonWithTitle:NSLocalizedString(@"Detach", @"UI")];
     [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
     NSWindow *window = self.view.window;
@@ -10495,8 +10491,8 @@ typedef NS_ENUM(NSUInteger, PTYSessionTmuxReport) {
 
 - (BOOL)tmuxGatewayShouldForceDetach {
     NSAlert *alert = [[[NSAlert alloc] init] autorelease];
-    alert.messageText = @"Force Detach?";
-    alert.informativeText = @"A previous detach request has not yet been honored. Force detach?";
+    alert.messageText = NSLocalizedString(@"Force Detach?", @"UI");
+    alert.informativeText = NSLocalizedString(@"A previous detach request has not yet been honored. Force detach?", @"UI");
     [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
     [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
     NSWindow *window = self.view.window;
@@ -16199,7 +16195,7 @@ typedef NS_ENUM(NSUInteger, PTYSessionTmuxReport) {
 - (void)showMarkSetAlert {
     NSAlert *alert = [[[NSAlert alloc] init] autorelease];
     alert.messageText = NSLocalizedString(@"Alert", @"UI");
-    alert.informativeText = [NSString stringWithFormat:@"Mark set in session “%@.”", [self name]];
+    alert.informativeText = [NSString stringWithFormat:NSLocalizedString(@"Mark set in session “%@.”", @"UI"), [self name]];
     [alert addButtonWithTitle:NSLocalizedString(@"Reveal", @"UI")];
     [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
     if ([alert runModal] == NSAlertFirstButtonReturn) {
@@ -16635,8 +16631,8 @@ typedef NS_ENUM(NSUInteger, PTYSessionTmuxReport) {
                 NSString *message = error.userInfo[@"errorMessage"];
                 if (message) {
                     NSAlert *alert = [[[NSAlert alloc] init] autorelease];
-                    alert.messageText = @"Error Preparing Upload";
-                    alert.informativeText = [NSString stringWithFormat:@"tar failed with this message: %@", message];
+                    alert.messageText = NSLocalizedString(@"Error Preparing Upload", @"UI");
+                    alert.informativeText = [NSString stringWithFormat:NSLocalizedString(@"tar failed with this message: %@", @"UI"), message];
                     [alert runModal];
                     return;
                 }
@@ -19134,13 +19130,13 @@ static const NSTimeInterval PTYSessionFocusReportBellSquelchTimeIntervalThreshol
     NSString *title;
     NSString *heading;
     if (displayInline) {
-        title = [NSString stringWithFormat:@"The terminal has initiated display of a file named “%@” of size %@. Allow it?",
+        title = [NSString stringWithFormat:NSLocalizedString(@"The terminal has initiated display of a file named “%@” of size %@. Allow it?", @"UI"),
                  name, [NSString it_formatBytes:size]];
-        heading = @"Allow Terminal-Initiated Display?";
+        heading = NSLocalizedString(@"Allow Terminal-Initiated Display?", @"UI");
     } else {
-        title = [NSString stringWithFormat:@"The terminal has initiated transfer of a file named “%@” of size %@. Download it?",
+        title = [NSString stringWithFormat:NSLocalizedString(@"The terminal has initiated transfer of a file named “%@” of size %@. Download it?", @"UI"),
                  name, [NSString it_formatBytes:size]];
-        heading = @"Allow Terminal-Initiated Download?";
+        heading = NSLocalizedString(@"Allow Terminal-Initiated Download?", @"UI");
     }
     const iTermWarningSelection selection =
     [iTermWarning showWarningWithTitle:title
@@ -19971,8 +19967,8 @@ static const NSTimeInterval PTYSessionFocusReportBellSquelchTimeIntervalThreshol
     if (_uploadAndPasteTransfer) {
         DLog(@"Upload already in progress, blocking new upload");
         NSAlert *alert = [[[NSAlert alloc] init] autorelease];
-        alert.messageText = @"Upload in Progress";
-        alert.informativeText = @"Please wait for the current upload to complete or cancel it before starting another.";
+        alert.messageText = NSLocalizedString(@"Upload in Progress", @"UI");
+        alert.informativeText = NSLocalizedString(@"Please wait for the current upload to complete or cancel it before starting another.", @"UI");
         alert.alertStyle = NSAlertStyleWarning;
         [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
         if (self.view.window) {
@@ -22894,10 +22890,10 @@ static const NSTimeInterval PTYSessionFocusReportBellSquelchTimeIntervalThreshol
     iTermScriptHistoryEntry *entry = [apiHelper scriptHistoryEntryForConnectionKey:connectionKey];
     NSString *scriptName = entry.name ?: @"A script";
 
-    NSString *heading = [NSString stringWithFormat:
-        @"%@ wants to load a URL in this browser session.", scriptName];
-    NSString *title = [NSString stringWithFormat:
-        @"Allow loading URLs from %@?", domain];
+    NSString *heading = [NSString stringWithFormat:NSLocalizedString(@"%@ wants to load a URL in this browser session.", @"UI"),
+        scriptName];
+    NSString *title = [NSString stringWithFormat:NSLocalizedString(@"Allow loading URLs from %@?", @"UI"),
+        domain];
     NSString *identifier = [@"NoSyncLoadURLAllowed_" stringByAppendingString:domain];
 
     [iTermWarning asyncShowWarningWithTitle:title
@@ -24486,8 +24482,8 @@ getOptionKeyBehaviorLeft:(iTermOptionKeyBehavior *)left
         if (identifier && [[iTermUserDefaults userDefaults] boolForKey:identifier]) {
             return;
         }
-        NSString *message = [NSString stringWithFormat:@"%@: Can't run two coprocesses at once.", triggerName];
-        NSArray<NSString *> *actions = identifier ? @[ @"Silence Warning" ] : @[];
+        NSString *message = [NSString stringWithFormat:NSLocalizedString(@"%@: Can't run two coprocesses at once.", @"UI"), triggerName];
+        NSArray<NSString *> *actions = identifier ? @[ NSLocalizedString(@"Silence Warning", @"UI") ] : @[];
         iTermAnnouncementViewController *announcement =
         [iTermAnnouncementViewController announcementWithTitle:message
                                                          style:kiTermAnnouncementViewStyleWarning
@@ -24758,11 +24754,10 @@ static NSString *IT2AuthorizationAnnouncementIdentifier(NSString *guid) {
 - (void)conductorRequestIT2AuthorizationWithGUID:(NSString *)guid
                                      displayName:(NSString *)displayName
                                       completion:(void (^)(BOOL granted, BOOL remember))completion {
-    NSString *who = displayName.length ? displayName : @"A remote session";
+    NSString *who = displayName.length ? displayName : NSLocalizedString(@"A remote session", @"UI");
     NSString *title =
-        [NSString stringWithFormat:
-         @"%@ wants to control iTerm2 using the API over SSH integration. The API can "
-         @"view and modify iTerm2’s contents. Allow it for this session?", who];
+        [NSString stringWithFormat:NSLocalizedString(@"%@ wants to control iTerm2 using the API over SSH integration. The API can view and modify iTerm2’s contents. Allow it for this session?", @"UI"),
+         who];
     iTermAnnouncementViewController *announcement =
         [iTermAnnouncementViewController announcementWithTitle:title
                                                          style:kiTermAnnouncementViewStyleWarning

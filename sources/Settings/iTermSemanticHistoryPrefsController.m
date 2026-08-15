@@ -404,7 +404,7 @@ enum {
 
 - (NSString *)detailTextForCurrentMode {
     NSString *subs =
-    @"You can provide substitutions as follows:\n"
+    NSLocalizedString(@"You can provide substitutions as follows:\n"
     @"  \\1 will be replaced with the filename.\n"
     @"  \\2 will be replaced with the line number.\n"
     @"  \\3 will be replaced with the text before the click.\n"
@@ -417,7 +417,7 @@ enum {
     @"  \\(semanticHistory.columnNumber) will be replaced with the column number.\n"
     @"  \\(semanticHistory.prefix) will be replaced with the text before the click.\n"
     @"  \\(semanticHistory.suffix) will be replaced with the text after the click.\n"
-    @"  \\(semanticHistory.workingDirectory) will be replaced with the working directory.\n";
+    @"  \\(semanticHistory.workingDirectory) will be replaced with the working directory.\n", @"UI");
 
     switch ([[action_ selectedItem] tag]) {
         case 1:
@@ -425,15 +425,13 @@ enum {
             break;
 
         case 5:
-            return [@"In this mode semantic history will be activated on any click, even if you click on something that is not an existing file.\n"
-                    stringByAppendingString:subs];
+            return [NSString stringWithFormat:NSLocalizedString(@"In this mode semantic history will be activated on any click, even if you click on something that is not an existing file.\n%@", @"UI"), subs];
 
         case 2:
         case 4:
         case 6:
         case 7:
-            return [@"In this mode semantic history will only be activated when you click on an existing file name.\n"
-                    stringByAppendingString:subs];
+            return [NSString stringWithFormat:NSLocalizedString(@"In this mode semantic history will only be activated when you click on an existing file name.\n%@", @"UI"), subs];
     }
     return @"";
 }
@@ -450,10 +448,10 @@ enum {
             break;
 
         case 2: {
-            [[text_ cell] setPlaceholderString:@"Enter URL."];
+            [[text_ cell] setPlaceholderString:NSLocalizedString(@"Enter URL.", @"UI")];
             NSString *text =
-            @"When you activate Semantic History on a filename, the browser opens a URL.\n"
-            @"Use \\1 for the filename you clicked on and \\2 for the line number. ";
+            NSLocalizedString(@"When you activate Semantic History on a filename, the browser opens a URL.\n"
+                              @"Use \\1 for the filename you clicked on and \\2 for the line number. ", @"UI");
             caveat_.attributedStringValue = [self attributedStringWithLearnMoreLinkAfterText:text];
             hideCaveat = NO;
             hideText = NO;
@@ -467,11 +465,11 @@ enum {
             break;
 
         case 4: {
-            [[text_ cell] setPlaceholderString:@"Enter command"];
+            [[text_ cell] setPlaceholderString:NSLocalizedString(@"Enter command", @"UI")];
             NSString *text =
-            @"Command runs when you activate Semantic History on any filename. "
-            @"Use \\1 for filename, \\2 for line number, \\3 for text before click, \\4 for text after click, \\5 for pwd. "
-            @"You can also use interpolated string syntax. ";
+            NSLocalizedString(@"Command runs when you activate Semantic History on any filename. "
+                              @"Use \\1 for filename, \\2 for line number, \\3 for text before click, \\4 for text after click, \\5 for pwd. "
+                              @"You can also use interpolated string syntax. ", @"UI");
 
             caveat_.attributedStringValue = [self attributedStringWithLearnMoreLinkAfterText:text];
             hideCaveat = NO;
@@ -480,11 +478,11 @@ enum {
         }
 
         case 5: {
-            [[text_ cell] setPlaceholderString:@"Enter command"];
+            [[text_ cell] setPlaceholderString:NSLocalizedString(@"Enter command", @"UI")];
 
             NSString *text =
-            @"Command runs when you activate Semantic History on any text, even if it’s not a valid filename. "
-            @"Use \\1 for filename, \\2 for line number, \\3 for text before click, \\4 for text after click, \\5 for pwd. ";
+            NSLocalizedString(@"Command runs when you activate Semantic History on any text, even if it’s not a valid filename. "
+                              @"Use \\1 for filename, \\2 for line number, \\3 for text before click, \\4 for text after click, \\5 for pwd. ", @"UI");
 
             caveat_.attributedStringValue = [self attributedStringWithLearnMoreLinkAfterText:text];
             hideCaveat = NO;
@@ -493,10 +491,10 @@ enum {
         }
 
         case 6: {
-            [[text_ cell] setPlaceholderString:@"Enter command"];
+            [[text_ cell] setPlaceholderString:NSLocalizedString(@"Enter command", @"UI")];
             NSString *text =
-            @"Coprocess runs when you activate Semantic History on any filename. "
-            @"Use \\1 for filename, \\2 for line number, \\3 for text before click, \\4 for text after click, \\5 for pwd. ";
+            NSLocalizedString(@"Coprocess runs when you activate Semantic History on any filename. "
+                              @"Use \\1 for filename, \\2 for line number, \\3 for text before click, \\4 for text after click, \\5 for pwd. ", @"UI");
             caveat_.attributedStringValue = [self attributedStringWithLearnMoreLinkAfterText:text];
             hideCaveat = NO;
             hideText = NO;
@@ -504,10 +502,10 @@ enum {
         }
 
         case 7: {
-            [[text_ cell] setPlaceholderString:@"Enter text"];
+            [[text_ cell] setPlaceholderString:NSLocalizedString(@"Enter text", @"UI")];
             NSString *text =
-            @"Text is sent when you activate Semantic History on any filename. Use vim-style special characters."
-            @"Use \\1 for filename, \\2 for line number, \\3 for text before click, \\4 for text after click, \\5 for pwd. ";
+            NSLocalizedString(@"Text is sent when you activate Semantic History on any filename. Use vim-style special characters."
+                              @"Use \\1 for filename, \\2 for line number, \\3 for text before click, \\4 for text after click, \\5 for pwd. ", @"UI");
             caveat_.attributedStringValue = [self attributedStringWithLearnMoreLinkAfterText:text];
             hideCaveat = NO;
             hideText = NO;

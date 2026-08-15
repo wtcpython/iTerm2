@@ -70,7 +70,7 @@ class AttributedStringSaver: NSObject {
                 try await rtfData.writeTo(saveItem: item)
             }
         } catch {
-            _ = iTermWarning.show(withTitle: "There was a problem saving the file: \(error.localizedDescription)",
+            _ = iTermWarning.show(withTitle: String(format: NSLocalizedString("There was a problem saving the file: %@", comment: "UI"), error.localizedDescription),
                                   actions: [NSLocalizedString("OK", comment: "UI")],
                                   accessory: nil,
                                   identifier: nil,

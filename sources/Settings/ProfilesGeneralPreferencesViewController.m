@@ -747,7 +747,7 @@ static NSString *const iTermProfilePreferencesUpdateSessionName = @"iTermProfile
             NSArray<NSString *> *parts = [param componentsInShellCommand];
             if ([parts.firstObject isEqual:@"/bin/bash"]) {
                 // Apple's bash disables sourcing ENV when --posix is set 🤬
-                *reasonOut = @"Shell integration needs a newer version of bash.";
+                *reasonOut = NSLocalizedString(@"Shell integration needs a newer version of bash.", @"UI");
                 return NO;
             }
             NSString *shell = [parts.firstObject lastPathComponent];
@@ -756,7 +756,7 @@ static NSString *const iTermProfilePreferencesUpdateSessionName = @"iTermProfile
                 *reasonOut = nil;
                 return YES;
             } else if (shell) {
-                *reasonOut = [NSString stringWithFormat:@"Automatic loading doesn’t work with %@", shell];
+                *reasonOut = [NSString stringWithFormat:NSLocalizedString(@"Automatic loading doesn’t work with %@", @"UI"), shell];
                 return NO;
             } else {
                 *reasonOut = nil;
@@ -766,7 +766,7 @@ static NSString *const iTermProfilePreferencesUpdateSessionName = @"iTermProfile
         case iTermGeneralProfilePreferenceCustomCommandTagLoginShell: {
             if ([self.loginShell isEqual:@"/bin/bash"]) {
                 // Apple's bash disables sourcing ENV when --posix is set 🤬
-                *reasonOut = @"Shell integration needs a newer version of bash.";
+                *reasonOut = NSLocalizedString(@"Shell integration needs a newer version of bash.", @"UI");
                 return NO;
             }
             NSString *shell = [self.loginShell lastPathComponent];
@@ -775,7 +775,7 @@ static NSString *const iTermProfilePreferencesUpdateSessionName = @"iTermProfile
                 *reasonOut = nil;
                 return YES;
             } else if (shell) {
-                *reasonOut = [NSString stringWithFormat:@"Automatic loading doesn’t work with %@", shell];
+                *reasonOut = [NSString stringWithFormat:NSLocalizedString(@"Automatic loading doesn’t work with %@", @"UI"), shell];
                 return NO;
             } else {
                 *reasonOut = nil;
@@ -910,7 +910,7 @@ static NSString *const iTermProfilePreferencesUpdateSessionName = @"iTermProfile
         return;
     }
     NSAlert *alert = [[NSAlert alloc] init];
-    alert.messageText = @"Plugin Invalid";
+    alert.messageText = NSLocalizedString(@"Plugin Invalid", @"UI");
     alert.informativeText = error;
     [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
     [alert runSheetModalForWindow:self.view.window];
@@ -1116,7 +1116,7 @@ static NSString *const iTermProfilePreferencesUpdateSessionName = @"iTermProfile
 - (void)handleCommandWarningClick:(NSClickGestureRecognizer *)recognizer {
     NSString *pathEnv = [[[NSProcessInfo processInfo] environment] objectForKey:@"PATH"];
     NSArray *paths = [pathEnv componentsSeparatedByString:@":"];
-    NSString *message = [NSString stringWithFormat:@"Command not found. You may need to specify the full path because your shell is not used when running this command. The search path contains the following folders: %@.", [paths componentsJoinedWithOxfordComma]];
+    NSString *message = [NSString stringWithFormat:NSLocalizedString(@"Command not found. You may need to specify the full path because your shell is not used when running this command. The search path contains the following folders: %@.", @"UI"), [paths componentsJoinedWithOxfordComma]];
     [_commandWarningImageView it_showWarning:message];
 }
 

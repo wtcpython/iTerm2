@@ -188,14 +188,14 @@ static const NSTimeInterval iTermStatusBarGitComponentDefaultCadence = 2;
     const double currentTimeout = [iTermAdvancedSettingsModel gitTimeout];
     const double proposedTimeout = MAX(currentTimeout * 2, currentTimeout + 2);
     NSString *title = [NSString stringWithFormat:
-                       @"Running git in %@ didn’t finish within %@ seconds, so the status bar "
-                       @"component can’t show the branch. This often happens in very large "
-                       @"repositories or when the working tree is on a slow filesystem.\n\n"
-                       @"Would you like to increase the timeout to %@ seconds?",
-                       _maker.gitPoller.currentDirectory ?: @"the current directory",
+                       NSLocalizedString(@"Running git in %@ didn’t finish within %@ seconds, so the status bar "
+                                         @"component can’t show the branch. This often happens in very large "
+                                         @"repositories or when the working tree is on a slow filesystem.\n\n"
+                                         @"Would you like to increase the timeout to %@ seconds?", @"UI"),
+                       _maker.gitPoller.currentDirectory ?: NSLocalizedString(@"the current directory", @"UI"),
                        [self formatTimeoutSeconds:currentTimeout],
                        [self formatTimeoutSeconds:proposedTimeout]];
-    NSString *increaseAction = [NSString stringWithFormat:@"Increase to %@s",
+    NSString *increaseAction = [NSString stringWithFormat:NSLocalizedString(@"Increase to %@s", @"UI"),
                                 [self formatTimeoutSeconds:proposedTimeout]];
     const iTermWarningSelection selection =
     [iTermWarning showWarningWithTitle:title

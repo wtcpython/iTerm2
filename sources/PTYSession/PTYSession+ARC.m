@@ -116,7 +116,7 @@ extern NSString *const SESSION_ARRANGEMENT_SERVER_DICT;
 - (void)failWithError:(NSError *)error {
     RLog(@"%@", error);
     NSString *message =
-        [NSString stringWithFormat:@"Cannot start logging to session with profile “%@”: %@",
+        [NSString stringWithFormat:NSLocalizedString(@"Cannot start logging to session with profile “%@”: %@", @"UI"),
          self.profile[KEY_NAME],
          error.localizedDescription];
     [iTermWarning showWarningWithTitle:message
@@ -124,7 +124,7 @@ extern NSString *const SESSION_ARRANGEMENT_SERVER_DICT;
                              accessory:nil
                             identifier:@"NoSyncCannotStartLogging"
                            silenceable:kiTermWarningTypePersistent
-                               heading:@"Session Logging Problem"
+                               heading:NSLocalizedString(@"Session Logging Problem", @"UI")
                                 window:nil];
 }
 

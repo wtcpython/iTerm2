@@ -98,7 +98,7 @@ static NSString *const iTermNaggingControllerRestoreIconAndWindowNameChoiceAlway
 
     return [self requestPermissionWithOriginalValue:originalValue
                                                 key:[NSString stringWithFormat:@"ShouldReportVariable%@", name]
-                                   prompt:[NSString stringWithFormat:@"A request to report variable “%@” was denied. Allow it in the future?", name]
+                                   prompt:[NSString stringWithFormat:NSLocalizedString(@"A request to report variable “%@” was denied. Allow it in the future?", @"UI"), name]
                                    setter:^(BOOL shouldAllow) {
         NSArray<NSString *> *parts = [self variablesToReportEntries];
         NSString *prefix = shouldAllow ? allow : deny;
@@ -148,7 +148,7 @@ static NSString *const iTermNaggingControllerRestoreIconAndWindowNameChoiceAlway
     NSString *notice;
     if (dict.count == 1) {
         NSString *key = dict.allKeys.firstObject;
-        notice = [NSString stringWithFormat:@"An app tried to change the profile property **%@**", [iTermProfilePreferences descriptionForKey:key]];
+        notice = [NSString stringWithFormat:NSLocalizedString(@"An app tried to change the profile property **%@**", @"UI"), [iTermProfilePreferences descriptionForKey:key]];
     } else {
         NSMutableArray<NSString *> *descriptions = [NSMutableArray array];
         for (NSString *key in dict.allKeys) {
@@ -238,12 +238,12 @@ static NSString *const iTermNaggingControllerRestoreIconAndWindowNameChoiceAlway
     NSString *notice;
     NSArray<NSString *> *actions = @[ NSLocalizedString(@"Don’t Warn Again", @"UI") ];
     if ([[ProfileModel sharedInstance] bookmarkWithName:missingProfileName]) {
-        notice = [NSString stringWithFormat:@"This session’s profile, “%@”, no longer exists. A profile with that name happens to exist.", missingProfileName];
+        notice = [NSString stringWithFormat:NSLocalizedString(@"This session’s profile, “%@”, no longer exists. A profile with that name happens to exist.", @"UI"), missingProfileName];
         if (savedArrangementName) {
-            actions = [actions arrayByAddingObject:@"Repair Saved Arrangement"];
+            actions = [actions arrayByAddingObject:NSLocalizedString(@"Repair Saved Arrangement", @"UI")];
         }
     } else {
-        notice = [NSString stringWithFormat:@"This session’s profile, “%@”, no longer exists.", missingProfileName];
+        notice = [NSString stringWithFormat:NSLocalizedString(@"This session’s profile, “%@”, no longer exists.", @"UI"), missingProfileName];
     }
     _missingSavedArrangementProfileGUID = [guid copy];
     [self.delegate naggingControllerShowMessage:notice
@@ -266,7 +266,7 @@ static NSString *const iTermNaggingControllerRestoreIconAndWindowNameChoiceAlway
     if ([iTermAdvancedSettingsModel noSyncSuppressBadPWDInArrangementWarning]) {
         return;
     }
-    NSString *notice = [NSString stringWithFormat:@"The saved arrangement “%@” has a bad initial directory of “%@” for this session.", arrangementName, badPWD];
+    NSString *notice = [NSString stringWithFormat:NSLocalizedString(@"The saved arrangement “%@” has a bad initial directory of “%@” for this session.", @"UI"), arrangementName, badPWD];
 
     [self.delegate naggingControllerShowMessage:notice
                                      isQuestion:NO
@@ -368,7 +368,7 @@ static NSString *const iTermNaggingControllerRestoreIconAndWindowNameChoiceAlway
 }
 
 - (void)tmuxSupplementaryPlaneErrorForCharacter:(NSString *)string {
-    NSString *message = [NSString stringWithFormat:@"Because of a bug in tmux 2.2, the character “%@” cannot be sent.", string];
+    NSString *message = [NSString stringWithFormat:NSLocalizedString(@"Because of a bug in tmux 2.2, the character “%@” cannot be sent.", @"UI"), string];
     [self.delegate naggingControllerShowMessage:message
                                      isQuestion:NO
                                       important:NO
@@ -437,9 +437,9 @@ static NSString *const iTermNaggingControllerRestoreIconAndWindowNameChoiceAlway
 
     NSString *title;
     if (filename.length) {
-        title = [NSString stringWithFormat:@"Set background image to “%@”?", filename];
+        title = [NSString stringWithFormat:NSLocalizedString(@"Set background image to “%@”?", @"UI"), filename];
     } else {
-        title = @"Remove background image?";
+        title = NSLocalizedString(@"Remove background image?", @"UI");
     }
     [self.delegate naggingControllerShowMessage:title
                                      isQuestion:YES
@@ -929,11 +929,11 @@ static NSString *const iTermNaggingControllerRestoreIconAndWindowNameChoiceAlway
         return;
     }
 
-    [_delegate naggingControllerShowMessage:[NSString stringWithFormat: @"Open this URL? %@", url.sanitizedForPrinting.absoluteString]
+    [_delegate naggingControllerShowMessage:[NSString stringWithFormat:NSLocalizedString(@"Open this URL? %@", @"UI"), url.sanitizedForPrinting.absoluteString]
                                  isQuestion:YES
                                   important:YES
                                  identifier:allowHostKey
-                                    options:@[ NSLocalizedString(@"Allow", @"UI"), @"Always allow for this host", @"Never allow" ]
+                                    options:@[ NSLocalizedString(@"Allow", @"UI"), NSLocalizedString(@"Always allow for this host", @"UI"), NSLocalizedString(@"Never allow", @"UI") ]
                                  completion:^(int selection) {
         switch (selection) {
             case -2:  // Dismiss programmatically
@@ -1053,7 +1053,7 @@ static NSString *const iTermNaggingControllerTouchIDForSudoUserDefaultsKey = @"N
                                      isQuestion:YES
                                       important:YES
                                      identifier:key
-                                        options:@[ @"Always Allow", @"Always Deny" ]
+                                        options:@[ NSLocalizedString(@"Always Allow", @"UI"), NSLocalizedString(@"Always Deny", @"UI") ]
                                      completion:^(int selection) {
         if (selection == 0) {
             setter(YES);

@@ -359,9 +359,9 @@
     NSString *title = [iTermLocaleGuesser titleForLocale:lang] ?: @"(No description available)";
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] init];
     NSFont *monoFont = [NSFont userFixedPitchFontOfSize:[NSFont systemFontSize]];
-    NSAttributedString *langAS = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"LANG=%@", lang]
+    NSAttributedString *langAS = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:NSLocalizedString(@"LANG=%@", @"UI"), lang]
                                                                  attributes:@{ NSFontAttributeName: monoFont} ];
-    NSAttributedString *titleAS = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"\u2002\u2002\u2002%@", title]
+    NSAttributedString *titleAS = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:NSLocalizedString(@"\u2002\u2002\u2002%@", @"UI"), title]
                                                                   attributes:@{NSForegroundColorAttributeName: [[NSColor textColor] colorWithAlphaComponent:0.5] }];
     [attributedString appendAttributedString:langAS];
     [attributedString appendAttributedString:titleAS];
@@ -382,7 +382,7 @@
             }
             NSString *ctype = [[guesser dictionaryWithLC_CTYPE] objectForKey:@"LC_CTYPE"];
             if (ctype) {
-                _localeName.stringValue = [NSString stringWithFormat:@"LC_CTYPE=%@", ctype];
+                _localeName.stringValue = [NSString stringWithFormat:NSLocalizedString(@"LC_CTYPE=%@", @"UI"), ctype];
             } else {
                 RLog(@"enc=%@ %@", @([self unsignedIntegerForKey:KEY_CHARACTER_ENCODING]), [guesser dictionaryWithLC_CTYPE]);
                 _localeName.stringValue = NSLocalizedString(@"Unexpectedly missing LC_CTYPE. Report a bug.", @"UI");

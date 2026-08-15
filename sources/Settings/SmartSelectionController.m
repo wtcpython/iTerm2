@@ -444,9 +444,9 @@ const double SmartSelectionVeryHighPrecision = 1000000.0;
         [self updateVisualization];
         const NSInteger actionCount = [[NSArray castFrom:rule[kActionsKey]] count];
         if (actionCount == 0) {
-            _actionsButton.title = [NSString stringWithFormat:@"Actions…"];
+            _actionsButton.title = NSLocalizedString(@"Actions…", @"UI");
         } else {
-            _actionsButton.title = [NSString stringWithFormat:@"Actions (%@)…", @(actionCount)];
+            _actionsButton.title = [NSString stringWithFormat:NSLocalizedString(@"Actions (%@)…", @"UI"), @(actionCount)];
         }
     } else {
         _nameTextField.stringValue = @"";

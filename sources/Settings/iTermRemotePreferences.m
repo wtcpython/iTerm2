@@ -208,8 +208,8 @@ respectingTimeoutSetting:(BOOL)respectingTimeoutSetting
 
 - (NSData *)didFailToLoadFromURL:(NSURL *)url withError:(NSError *)error {
     NSAlert *alert = [[NSAlert alloc] init];
-    alert.messageText = @"Failed to load settings from URL. Falling back to local copy.";
-    alert.informativeText = [NSString stringWithFormat:@"HTTP request failed: %@",
+    alert.messageText = NSLocalizedString(@"Failed to load settings from URL. Falling back to local copy.", @"UI");
+    alert.informativeText = [NSString stringWithFormat:NSLocalizedString(@"HTTP request failed: %@", @"UI"),
                              [error localizedDescription] ?: @"unknown error"];
     [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
     [alert addButtonWithTitle:NSLocalizedString(@"Reveal in Settings", @"UI")];
@@ -244,7 +244,7 @@ respectingTimeoutSetting:(BOOL)respectingTimeoutSetting
         if ([promptURL isEqual:filename]) {
             DLog(@"Prompting");
             NSString *theTitle = [NSString stringWithFormat:
-                                  @"Load settings from URL? Some changes were made to the local copy that will be lost."];
+                                  NSLocalizedString(@"Load settings from URL? Some changes were made to the local copy that will be lost.", @"UI")];
             const iTermWarningSelection selection =
             [iTermWarning showWarningWithTitle:theTitle
                                        actions:@[ NSLocalizedString(@"Keep Local Changes", @"UI"),
@@ -293,8 +293,8 @@ respectingTimeoutSetting:(BOOL)respectingTimeoutSetting
         RLog(@"It's empty");
         if ([[self customFolderOrURL] length] == 0) {
             NSAlert *alert = [[NSAlert alloc] init];
-            alert.messageText = @"Error Loading Settings";
-            alert.informativeText = @"You have enabled “Load settings from a custom folder or URL” in settings but the location is not set.";
+            alert.messageText = NSLocalizedString(@"Error Loading Settings", @"UI");
+            alert.informativeText = NSLocalizedString(@"You have enabled “Load settings from a custom folder or URL” in settings but the location is not set.", @"UI");
             [alert addButtonWithTitle:NSLocalizedString(@"Don’t Load Remote Settings", @"UI")];
             [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
             if ([alert runModal] == NSAlertFirstButtonReturn) {
@@ -302,8 +302,8 @@ respectingTimeoutSetting:(BOOL)respectingTimeoutSetting
             }
         } else {
             NSAlert *alert = [[NSAlert alloc] init];
-            alert.messageText = @"Failed to load settings from custom directory. Falling back to local copy.";
-            alert.informativeText = [NSString stringWithFormat:@"Missing or malformed file at \"%@\"",
+            alert.messageText = NSLocalizedString(@"Failed to load settings from custom directory. Falling back to local copy.", @"UI");
+            alert.informativeText = [NSString stringWithFormat:NSLocalizedString(@"Missing or malformed file at \"%@\"", @"UI"),
                                      [self customFolderOrURL]];
             [alert runModal];
         }
@@ -337,8 +337,8 @@ respectingTimeoutSetting:(BOOL)respectingTimeoutSetting
     DLog(@"saveLocalUserDefaultsToRemotePrefs interactive=%@\n%@", @(interactive), [NSThread callStackSymbols]);
     if ([self remotePrefsHaveChanged]) {
         NSString *theTitle =
-            [NSString stringWithFormat:@"Settings at %@ changed since iTerm2 started. "
-                                       @"Overwrite it?",
+            [NSString stringWithFormat:NSLocalizedString(@"Settings at %@ changed since iTerm2 started. "
+                                                       @"Overwrite it?", @"UI"),
                                        [self customFolderOrURL]];
         if ([iTermWarning showWarningWithTitle:theTitle actions:@[ NSLocalizedString(@"Overwrite", @"UI"),
                                                                    NSLocalizedString(@"Discard Local Changes", @"UI") ]
@@ -363,11 +363,11 @@ respectingTimeoutSetting:(BOOL)respectingTimeoutSetting
     NSString *folder = [self expandedCustomFolderOrURL];
     if ([folder stringIsUrlLike]) {
         NSString *informativeText =
-            @"To make it available, first quit iTerm2 and then manually "
-            @"copy ~/Library/Preferences/com.googlecode.iterm2.plist to "
-            @"your hosting provider.";
+            NSLocalizedString(@"To make it available, first quit iTerm2 and then manually "
+                              @"copy ~/Library/Preferences/com.googlecode.iterm2.plist to "
+                              @"your hosting provider.", @"UI");
         NSAlert *alert = [[NSAlert alloc] init];
-        alert.messageText = @"Settings cannot be copied to a URL.";
+        alert.messageText = NSLocalizedString(@"Settings cannot be copied to a URL.", @"UI");
         alert.informativeText = informativeText;
         [alert runModal];
         return;
@@ -377,8 +377,8 @@ respectingTimeoutSetting:(BOOL)respectingTimeoutSetting
     NSDictionary *myDict = iTermRemotePreferencesSave(iTermUserDefaultsDictionary(self.preservedKeys), filename);
     if (!myDict) {
         NSAlert *alert = [[NSAlert alloc] init];
-        alert.messageText = @"Failed to copy settings to custom directory.";
-        alert.informativeText = [NSString stringWithFormat:@"Tried to copy %@ to %@",
+        alert.messageText = NSLocalizedString(@"Failed to copy settings to custom directory.", @"UI");
+        alert.informativeText = [NSString stringWithFormat:NSLocalizedString(@"Tried to copy %@ to %@", @"UI"),
                                  [self remotePrefsLocation], filename];
         [alert runModal];
     } else {
@@ -795,10 +795,10 @@ static NSDictionary *iTermRemotePreferencesSave(NSDictionary *myDict, NSString *
         return NO;
     }
     NSString *title =
-        [NSString stringWithFormat:@"iTerm2 can also keep your snippets, global notes, and session "
-                                   @"icon customizations in the settings folder “%@” so they sync "
-                                   @"across machines. Notes and snippets can contain sensitive text "
-                                   @"such as passwords or tokens. Sync them too?",
+        [NSString stringWithFormat:NSLocalizedString(@"iTerm2 can also keep your snippets, global notes, and session "
+                                                   @"icon customizations in the settings folder “%@” so they sync "
+                                                   @"across machines. Notes and snippets can contain sensitive text "
+                                                   @"such as passwords or tokens. Sync them too?", @"UI"),
                                    [self customFolderOrURL]];
     const iTermWarningSelection selection =
         [iTermWarning showWarningWithTitle:title
@@ -1365,9 +1365,9 @@ static NSDictionary *iTermRemotePreferencesSave(NSDictionary *myDict, NSString *
 - (void)resolveDataFileConflictWithRemoteFolder:(NSString *)folder
                                 remoteSignature:(NSString *)remoteSignature {
     NSString *title =
-        [NSString stringWithFormat:@"Snippets, notes, or icon customizations changed both on this Mac "
-                                   @"and in the settings folder “%@” since they were last in sync. "
-                                   @"Which copy would you like to keep?",
+        [NSString stringWithFormat:NSLocalizedString(@"Snippets, notes, or icon customizations changed both on this Mac "
+                                                   @"and in the settings folder “%@” since they were last in sync. "
+                                                   @"Which copy would you like to keep?", @"UI"),
                                    [self customFolderOrURL]];
     const iTermWarningSelection selection =
         [iTermWarning showWarningWithTitle:title
@@ -1673,19 +1673,19 @@ static NSDictionary *iTermRemotePreferencesSave(NSDictionary *myDict, NSString *
             NSString *theTitle =
                 dataFilesDiffer
                     ? [NSString stringWithFormat:
-                       @"Settings and your snippets, notes, or icon customizations have changed. Copy them to %@?",
+                       NSLocalizedString(@"Settings and your snippets, notes, or icon customizations have changed. Copy them to %@?", @"UI"),
                        [self customFolderOrURL]]
                     : [NSString stringWithFormat:
-                       @"Settings have changed. Copy them to %@?",
+                       NSLocalizedString(@"Settings have changed. Copy them to %@?", @"UI"),
                        [self customFolderOrURL]];
 
             // "Lose Changes" is destructive and shouldn't be remembered.
             iTermWarning *warning = [[iTermWarning alloc] init];
             warning.title = theTitle;
-            warning.actionLabels = @[ NSLocalizedString(@"Copy", @"UI"), @"Lose Changes" ];
+            warning.actionLabels = @[ NSLocalizedString(@"Copy", @"UI"), NSLocalizedString(@"Lose Changes", @"UI") ];
             warning.identifier = @"NoSyncNeverRemindPrefsChangesLostForFile";
             warning.warningType = kiTermWarningTypePermanentlySilenceable;
-            warning.doNotRememberLabels = @[ @"Lose Changes" ];
+            warning.doNotRememberLabels = @[ NSLocalizedString(@"Lose Changes", @"UI") ];
             // Suppress background pushes while this modal is up: its runloop can drain a pending
             // debounced save, which would push the data files even though the user may pick "Lose
             // Changes". (The data-only branch below does the same; both must, or "Lose Changes" leaks.)
@@ -1716,14 +1716,14 @@ static NSDictionary *iTermRemotePreferencesSave(NSDictionary *myDict, NSString *
             [self writeDataFilesToRemoteFolder:folder localSignature:localDataSignature];
         } else {
             NSString *theTitle = [NSString stringWithFormat:
-                                  @"Your snippets, notes, or icon customizations changed. Copy them to %@?",
+                                  NSLocalizedString(@"Your snippets, notes, or icon customizations changed. Copy them to %@?", @"UI"),
                                   [self customFolderOrURL]];
             iTermWarning *warning = [[iTermWarning alloc] init];
             warning.title = theTitle;
-            warning.actionLabels = @[ NSLocalizedString(@"Copy", @"UI"), @"Lose Changes" ];
+            warning.actionLabels = @[ NSLocalizedString(@"Copy", @"UI"), NSLocalizedString(@"Lose Changes", @"UI") ];
             warning.identifier = @"NoSyncNeverRemindDataFileChangesLostForFile";
             warning.warningType = kiTermWarningTypePermanentlySilenceable;
-            warning.doNotRememberLabels = @[ @"Lose Changes" ];
+            warning.doNotRememberLabels = @[ NSLocalizedString(@"Lose Changes", @"UI") ];
             // Suppress background pushes during the modal: its runloop can drain a pending debounced
             // save, which would push the data files even if the user picks "Lose Changes".
             __block iTermWarningSelection selection;

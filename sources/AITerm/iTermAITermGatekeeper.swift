@@ -24,7 +24,7 @@ class iTermAITermGatekeeper: NSObject {
         DLog("check")
         if !iTermAdvancedSettingsModel.generativeAIAllowed() {
             if !silent {
-                iTermWarning.show(withTitle: "Generative AI features have been disabled. Check with your system administrator.",
+                iTermWarning.show(withTitle: NSLocalizedString("Generative AI features have been disabled. Check with your system administrator.", comment: "UI"),
                                   actions: [NSLocalizedString("OK", comment: "UI")],
                                   accessory: nil,
                                   identifier: nil,
@@ -36,7 +36,7 @@ class iTermAITermGatekeeper: NSObject {
         }
         if !iTermAITermGatekeeper.pluginInstalled() {
             if !silent {
-                let selection = iTermWarning.show(withTitle: "You must install the AI plugin before you can use this feature.",
+                let selection = iTermWarning.show(withTitle: NSLocalizedString("You must install the AI plugin before you can use this feature.", comment: "UI"),
                                                   actions: ["Reveal in Settings", NSLocalizedString("Cancel", comment: "UI")],
                                                   accessory: nil,
                                                   identifier: nil,
@@ -51,7 +51,7 @@ class iTermAITermGatekeeper: NSObject {
         }
         if !SecureUserDefaults.instance.enableAI.value {
             if !silent {
-                let selection = iTermWarning.show(withTitle: "You must enable AI features in settings before you can use this feature.",
+                let selection = iTermWarning.show(withTitle: NSLocalizedString("You must enable AI features in settings before you can use this feature.", comment: "UI"),
                                                   actions: [NSLocalizedString("Reveal", comment: "UI"), NSLocalizedString("Cancel", comment: "UI")],
                                                   accessory: nil,
                                                   identifier: nil,

@@ -246,8 +246,8 @@ final class CompanionPairingWindowController: NSWindowController, NSWindowDelega
             relayStatusLabel.textColor = .systemOrange
             let wait = Self.remaining(until: retryAt)
             relayStatusLabel.stringValue = wait.isEmpty
-                ? "Daily relay data limit reached (reconnecting…)"
-                : "Daily relay data limit reached (retry in \(wait))"
+                ? NSLocalizedString("Daily relay data limit reached (reconnecting…)", comment: "UI")
+                : String(format: NSLocalizedString("Daily relay data limit reached (retry in %@)", comment: "UI"), wait)
         }
     }
 

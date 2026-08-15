@@ -72,7 +72,7 @@ class CommandExplainer: NSObject {
         guard let url = components.url else {
             return
         }
-        let selection = iTermWarning.show(withTitle: "This will open \(url.absoluteString) in \(browserName).",
+        let selection = iTermWarning.show(withTitle: String(format: NSLocalizedString("This will open %@ in %@.", comment: "UI"), url.absoluteString, browserName),
                                           actions: [NSLocalizedString("OK", comment: "UI"), NSLocalizedString("Cancel", comment: "UI")],
                                           accessory: nil,
                                           identifier: "NoSyncExplainShell",

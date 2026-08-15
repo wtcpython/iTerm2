@@ -338,11 +338,11 @@ NSString *const iTermPythonRuntimeDownloaderDidInstallRuntimeNotification = @"iT
         if (stillNeedsConfirmation) {
             DLog(@"Request confirmation from user with alert box");
             NSAlert *alert = [[NSAlert alloc] init];
-            alert.messageText = @"Download Python Runtime?";
+            alert.messageText = NSLocalizedString(@"Download Python Runtime?", @"UI");
             if (requiredToContinue) {
-                alert.informativeText = [NSString stringWithFormat:@"The Python Runtime is used by Python scripts that work with iTerm2. It must be downloaded to complete the requested action. The download is about %@. OK to download it now?", [NSString it_formatBytes:info.size]];
+                alert.informativeText = [NSString stringWithFormat:NSLocalizedString(@"The Python Runtime is used by Python scripts that work with iTerm2. It must be downloaded to complete the requested action. The download is about %@. OK to download it now?", @"UI"), [NSString it_formatBytes:info.size]];
             } else {
-                alert.informativeText = [NSString stringWithFormat:@"The Python Runtime is used by Python scripts that work with iTerm2. The download is about %@. OK to download it now?", [NSString it_formatBytes:info.size]];
+                alert.informativeText = [NSString stringWithFormat:NSLocalizedString(@"The Python Runtime is used by Python scripts that work with iTerm2. The download is about %@. OK to download it now?", @"UI"), [NSString it_formatBytes:info.size]];
             }
             [alert addButtonWithTitle:silent ? NSLocalizedString(@"Download", @"UI") : NSLocalizedString(@"OK", @"UI")];
             [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
@@ -435,19 +435,19 @@ NSString *const iTermPythonRuntimeDownloaderDidInstallRuntimeNotification = @"iT
             return YES;
         }
         _status = iTermPythonRuntimeDownloaderStatusCanceledByUser;
-        alert.messageText = @"Download Canceled";
+        alert.messageText = NSLocalizedString(@"Download Canceled", @"UI");
         reason = @"";
     } else {
         _status = iTermPythonRuntimeDownloaderStatusError;
-        alert.messageText = @"Python Runtime Unavailable";
-        reason = [NSString stringWithFormat:@"\n\nThe download failed: %@", error.localizedDescription];
+        alert.messageText = NSLocalizedString(@"Python Runtime Unavailable", @"UI");
+        reason = [NSString stringWithFormat:NSLocalizedString(@"\n\nThe download failed: %@", @"UI"), error.localizedDescription];
     }
 
     if (pythonVersion) {
-        alert.informativeText = [NSString stringWithFormat:@"An iTerm2 Python Runtime with Python version %@ must be downloaded to proceed.%@",
+        alert.informativeText = [NSString stringWithFormat:NSLocalizedString(@"An iTerm2 Python Runtime with Python version %@ must be downloaded to proceed.%@", @"UI"),
                                  pythonVersion, reason];
     } else {
-        alert.informativeText = [NSString stringWithFormat:@"An iTerm2 Python Runtime must be downloaded to proceed.%@",
+        alert.informativeText = [NSString stringWithFormat:NSLocalizedString(@"An iTerm2 Python Runtime must be downloaded to proceed.%@", @"UI"),
                                  reason];
     }
     [alert runModal];
@@ -487,8 +487,8 @@ NSString *const iTermPythonRuntimeDownloaderDidInstallRuntimeNotification = @"iT
         RLog(@"Signature validation failed");
         [[NSFileManager defaultManager] removeItemAtPath:tempfile error:nil];
         NSAlert *alert = [[NSAlert alloc] init];
-        alert.messageText = @"Signature Verification Failed";
-        alert.informativeText = [NSString stringWithFormat:@"The Python runtime's signature failed validation: %@", verifyError.localizedDescription];
+        alert.messageText = NSLocalizedString(@"Signature Verification Failed", @"UI");
+        alert.informativeText = [NSString stringWithFormat:NSLocalizedString(@"The Python runtime's signature failed validation: %@", @"UI"), verifyError.localizedDescription];
         [alert runModal];
         _status = iTermPythonRuntimeDownloaderStatusError;
         [self->_downloadController.window close];
@@ -509,8 +509,8 @@ NSString *const iTermPythonRuntimeDownloaderDidInstallRuntimeNotification = @"iT
             [self->_downloadController.window close];
             self->_downloadController = nil;
             NSAlert *alert = [[NSAlert alloc] init];
-            alert.messageText = @"Error unzipping python environment";
-            alert.informativeText = error.localizedDescription ?: @"An error occurred while unzipping the downloaded python environment";
+            alert.messageText = NSLocalizedString(@"Error unzipping python environment", @"UI");
+            alert.informativeText = error.localizedDescription ?: NSLocalizedString(@"An error occurred while unzipping the downloaded python environment", @"UI");
             [alert runModal];
             self->_status = iTermPythonRuntimeDownloaderStatusError;
             dispatch_group_leave(group);
@@ -916,9 +916,9 @@ static NSArray<NSString *> *iTermConvertThreePartVersionNumbersToTwoPart(NSArray
                 RLog(@"Dependency installation finished with these failures: %@", failures);
                 if (failures.count) {
                     NSAlert *alert = [[NSAlert alloc] init];
-                    alert.messageText = @"Dependency Installation Failed";
+                    alert.messageText = NSLocalizedString(@"Dependency Installation Failed", @"UI");
                     NSString *failureList = [[failures sortedArrayUsingSelector:@selector(compare:)] componentsJoinedByString:@", "];
-                    alert.informativeText = [NSString stringWithFormat:@"The following dependencies failed to install: %@", failureList];
+                    alert.informativeText = [NSString stringWithFormat:NSLocalizedString(@"The following dependencies failed to install: %@", @"UI"), failureList];
 
                     NSMutableArray<NSString *> *messages = [NSMutableArray array];
                     for (NSInteger i = 0; i < failures.count; i++) {
@@ -931,7 +931,7 @@ static NSArray<NSString *> *iTermConvertThreePartVersionNumbersToTwoPart(NSArray
                     }
                     DLog(@"%@", messages);
                     iTermDisclosableView *accessory = [[iTermDisclosableView alloc] initWithFrame:NSZeroRect
-                                                                                           prompt:@"Output"
+                                                                                           prompt:NSLocalizedString(@"Output", @"UI")
                                                                                           message:[messages componentsJoinedByString:@"\n\n"]];
                     iTermAccessoryViewUnfucker *unfucker = [[iTermAccessoryViewUnfucker alloc] initWithView:accessory];
                     accessory.frame = NSMakeRect(0, 0, accessory.intrinsicContentSize.width, accessory.intrinsicContentSize.height);

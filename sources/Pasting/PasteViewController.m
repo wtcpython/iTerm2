@@ -140,8 +140,7 @@ static NSString *iTermPasteViewControllerNibName(BOOL mini) {
     button.target = self;
     button.action = @selector(toggleKeystrokePassthrough:);
     button.toolTip =
-        @"Type directly to the terminal (for example to answer a password prompt) "
-        @"instead of queueing your keystrokes until the paste finishes.";
+        NSLocalizedString(@"Type directly to the terminal (for example to answer a password prompt) instead of queueing your keystrokes until the paste finishes.", @"UI");
     button.hidden = YES;
     [self.view addSubview:button];
     _keystrokePassthroughButton = button;

@@ -41,10 +41,7 @@ final class ClaudeCodeIntegrationMenuController: NSObject {
     @objc func uninstall(_ sender: Any?) {
         let confirm = NSAlert()
         confirm.messageText = NSLocalizedString("Uninstall Claude Code Integration?", comment: "UI")
-        confirm.informativeText = NSLocalizedString("This removes the cc-status hook from ", comment: "UI")
-            + "~/.claude/settings.json, the Claude Code workgroup from your "
-            + "settings, and the Enter/Exit Workgroup triggers from every "
-            + "profile. You can reinstall any time using iTerm2 > Install Claude Code Integration."
+        confirm.informativeText = NSLocalizedString("This removes the cc-status hook from ~/.claude/settings.json, the Claude Code workgroup from your settings, and the Enter/Exit Workgroup triggers from every profile. You can reinstall any time using iTerm2 > Install Claude Code Integration.", comment: "UI")
         confirm.alertStyle = .warning
         confirm.addButton(withTitle: NSLocalizedString("Uninstall", comment: "UI"))
         confirm.addButton(withTitle: NSLocalizedString("Cancel", comment: "UI"))
@@ -100,9 +97,7 @@ final class ClaudeCodeIntegrationMenuController: NSObject {
         if iTermAPIHelper.isEnabled() {
             let apiAlert = NSAlert()
             apiAlert.messageText = NSLocalizedString("Disable the Python API?", comment: "UI")
-            apiAlert.informativeText = NSLocalizedString("The installer enabled iTerm2\u{2019}s ", comment: "UI")
-                + "Python API. Other scripts or integrations may be using "
-                + "it now. Leave it enabled, or turn it off?"
+            apiAlert.informativeText = NSLocalizedString("The installer enabled iTerm2’s Python API. Other scripts or integrations may be using it now. Leave it enabled, or turn it off?", comment: "UI")
             apiAlert.addButton(withTitle: NSLocalizedString("Leave Enabled", comment: "UI"))
             apiAlert.addButton(withTitle: NSLocalizedString("Disable", comment: "UI"))
             if apiAlert.runModal() == .alertSecondButtonReturn {

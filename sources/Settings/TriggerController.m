@@ -667,10 +667,10 @@ NSString *const kStatusTextComboBoxIdentifier = @"kStatusTextComboBoxIdentifier"
 }
 
 + (NSString *)importDescriptionForTrigger:(Trigger *)trigger {
-    return [NSString stringWithFormat:@"On “%@”, %@%@",
+    return [NSString stringWithFormat:NSLocalizedString(@"On “%@”, %@%@", @"UI"),
             [trigger.regex it_sanitized],
             [trigger.description it_sanitized],
-            trigger.partialLine ? @"  instantly" : @""];
+            trigger.partialLine ? NSLocalizedString(@"  instantly", @"UI") : @""];
 }
 
 + (NSArray<NSString *> *)guidsForProfilesToImportTriggersInto:(NSArray<Trigger *> *)triggers {
@@ -681,11 +681,11 @@ NSString *const kStatusTextComboBoxIdentifier = @"kStatusTextComboBoxIdentifier"
         return [@"• " stringByAppendingString:[self importDescriptionForTrigger:trigger]];
     }];
     if (triggers.count > maxShown) {
-        descriptions = [descriptions arrayByAddingObject:[NSString stringWithFormat:@"…and %@ more",
+        descriptions = [descriptions arrayByAddingObject:[NSString stringWithFormat:NSLocalizedString(@"…and %@ more", @"UI"),
                                                           @(triggers.count - maxShown)]];
     }
     NSString *joined = [descriptions componentsJoinedByString:@"\n"];
-    NSString *message = [NSString stringWithFormat:@"Select the profiles into which these triggers should be imported:\n\n%@", joined];
+    NSString *message = [NSString stringWithFormat:NSLocalizedString(@"Select the profiles into which these triggers should be imported:\n\n%@", @"UI"), joined];
     [alert setMessageText:message];
     [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
     [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];

@@ -1250,7 +1250,7 @@ extension ChatViewController {
             stopStreaming()
             return
         }
-        let selection = iTermWarning.show(withTitle: "All terminal content will be sent to AI, which may go to a third party. Ensure this is safe to do before proceeding.",
+        let selection = iTermWarning.show(withTitle: NSLocalizedString("All terminal content will be sent to AI, which may go to a third party. Ensure this is safe to do before proceeding.", comment: "UI"),
                                           actions: [NSLocalizedString("OK", comment: "UI"), NSLocalizedString("Cancel", comment: "UI")],
                                           accessory: nil,
                                           identifier: nil,
@@ -3564,15 +3564,7 @@ extension ChatViewController {
         // menu-driven toggle won't know that without being told.
         let alert = NSAlert()
         alert.messageText = NSLocalizedString("Enable orchestration mode?", comment: "UI")
-        alert.informativeText = """
-            Orchestration mode lets the agent coordinate across any iTerm2 sessions. \
-            It can read screen contents from any session, but to type into a session requires \
-            your permission. This is a more permissive model than when an agent is linked to \
-            a single session, where there are very fine-grained permission settings.
-
-            Enabling will detach any linked terminal or browser session and switch \
-            the chat to Orchestration mode.
-            """
+        alert.informativeText = NSLocalizedString("Orchestration mode lets the agent coordinate across any iTerm2 sessions. It can read screen contents from any session, but to type into a session requires your permission. This is a more permissive model than when an agent is linked to a single session, where there are very fine-grained permission settings.\n\nEnabling will detach any linked terminal or browser session and switch the chat to Orchestration mode.", comment: "UI")
         alert.alertStyle = .warning
         alert.addButton(withTitle: NSLocalizedString("Enable Orchestration", comment: "UI"))
         alert.addButton(withTitle: NSLocalizedString("Cancel", comment: "UI"))

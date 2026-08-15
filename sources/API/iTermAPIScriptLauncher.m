@@ -69,7 +69,7 @@ static NSString *const iTermAPIScriptLauncherScriptDidFailUserNotificationCallba
                           configParser:(iTermSetupCfgParser *)configParser
                             completion:(void (^)(NSString *))completion {
     DLog(@"%@", fullPath);
-    NSString *message = [NSString stringWithFormat:@"The Python API script “%@” needs a newer version of the runtime environment for security reasons. You must upgrade it before this version of iTerm2 can launch the script.", fullPath.lastPathComponent];
+    NSString *message = [NSString stringWithFormat:NSLocalizedString(@"The Python API script “%@” needs a newer version of the runtime environment for security reasons. You must upgrade it before this version of iTerm2 can launch the script.", @"UI"), fullPath.lastPathComponent];
     const iTermWarningSelection selection =
     [iTermWarning showWarningWithTitle:message
                                actions:@[ NSLocalizedString(@"Upgrade", @"UI"), NSLocalizedString(@"Cancel", @"UI") ]
@@ -399,9 +399,9 @@ static NSString *const iTermAPIScriptLauncherScriptDidFailUserNotificationCallba
                 }
                 if (uvError != nil || sharedPython == nil) {
                     NSAlert *alert = [[NSAlert alloc] init];
-                    alert.messageText = @"Python Environment Unavailable";
-                    alert.informativeText = [NSString stringWithFormat:@"Could not prepare the Python environment for this script: %@",
-                                             uvError.localizedDescription ?: @"unknown error"];
+                    alert.messageText = NSLocalizedString(@"Python Environment Unavailable", @"UI");
+                    alert.informativeText = [NSString stringWithFormat:NSLocalizedString(@"Could not prepare the Python environment for this script: %@", @"UI"),
+                                             uvError.localizedDescription ?: NSLocalizedString(@"unknown error", @"UI")];
                     [alert runModal];
                     return;
                 }
@@ -519,11 +519,11 @@ static NSString *const iTermAPIScriptLauncherScriptDidFailUserNotificationCallba
 // caller-specific hint for what the user can do about it.
 + (void)showIntelOnlyUnrunnableErrorForScript:(NSString *)fullPath recovery:(NSString *)recovery {
     NSString *name = [[fullPath pathComponents] lastObject] ?: fullPath;
-    NSString *base = [NSString stringWithFormat:@"“%@” uses an Intel-only Python environment, which cannot run on this version of macOS because Rosetta is not available.", name];
+    NSString *base = [NSString stringWithFormat:NSLocalizedString(@"“%@” uses an Intel-only Python environment, which cannot run on this version of macOS because Rosetta is not available.", @"UI"), name];
     [[iTermScriptHistoryEntry globalEntry] addOutput:[NSString stringWithFormat:@"%@ %@\n", base, recovery] completion:^{}];
     dispatch_async(dispatch_get_main_queue(), ^{
         NSAlert *alert = [[NSAlert alloc] init];
-        alert.messageText = @"Script Cannot Run";
+        alert.messageText = NSLocalizedString(@"Script Cannot Run", @"UI");
         alert.informativeText = [NSString stringWithFormat:@"%@ %@", base, recovery];
         [alert runModal];
     });
@@ -1021,8 +1021,8 @@ static NSString *const iTermAPIScriptLauncherScriptDidFailUserNotificationCallba
 + (void)didFailToLaunchScript:(NSString *)filename withException:(NSException *)e {
     ELog(@"Exception occurred %@", e);
     NSAlert *alert = [[NSAlert alloc] init];
-    alert.messageText = @"Error running script";
-    alert.informativeText = [NSString stringWithFormat:@"Script at \"%@\" failed.\n\n%@",
+    alert.messageText = NSLocalizedString(@"Error running script", @"UI");
+    alert.informativeText = [NSString stringWithFormat:NSLocalizedString(@"Script at \"%@\" failed.\n\n%@", @"UI"),
                              filename, e.reason];
     [alert runModal];
 }

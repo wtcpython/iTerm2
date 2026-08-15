@@ -622,7 +622,7 @@ static iTermPreferencesSearchEngine *gSearchEngine;
         [self resizeWindowForTabViewItem:_globalTabViewItem animated:NO];
         NSString *suiteName = [iTermUserDefaults customSuiteName];
         if (suiteName.length > 0) {
-            self.window.title = [NSString stringWithFormat:@"Settings: %@", suiteName];
+            self.window.title = [NSString stringWithFormat:NSLocalizedString(@"Settings: %@", @"UI"), suiteName];
         } else {
             self.window.title = NSLocalizedString(@"Settings", @"UI");
         }

@@ -358,9 +358,9 @@
     }
     if (dupProfile) {
         NSString *theTitle;
-        theTitle = [NSString stringWithFormat:@"The profile “%@” is already bound to hostname “%@”.",
+        theTitle = [NSString stringWithFormat:NSLocalizedString(@"The profile “%@” is already bound to hostname “%@”.", @"UI"),
                     dupProfile[KEY_NAME], anObject];
-        NSString *removeFromOtherAction = [NSString stringWithFormat:@"Remove from “%@”", dupProfile[KEY_NAME]];
+        NSString *removeFromOtherAction = [NSString stringWithFormat:NSLocalizedString(@"Remove from “%@”", @"UI"), dupProfile[KEY_NAME]];
         switch ([iTermWarning showWarningWithTitle:theTitle
                                            actions:@[ removeFromOtherAction,
                                                       NSLocalizedString(@"Remove from This Profile", @"UI") ]
@@ -398,7 +398,7 @@
     dataCellForTableColumn:(NSTableColumn *)tableColumn
                        row:(NSInteger)row {
     NSTextFieldCell *cell = [[NSTextFieldCell alloc] initTextCell:@"hostname"];
-    [cell setPlaceholderString:@"Enter a rule…"];
+    [cell setPlaceholderString:NSLocalizedString(@"Enter a rule…", @"UI")];
     [cell setEditable:YES];
     return cell;
 }

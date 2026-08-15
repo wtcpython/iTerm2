@@ -1121,7 +1121,7 @@ class ChatAgent {
             // resolved consent while this was queued.
             guard iTermUserDefaults.autoProvideConsent == .unknown else { return }
             let selection = iTermWarning.show(
-                withTitle: "iTerm2 can include this session’s visible screen and terminal state with every message you send in AI chats where you’ve allowed it, so the assistant sees what you see. You can turn this off any time from a chat’s permission settings.",
+                withTitle: NSLocalizedString("iTerm2 can include this session’s visible screen and terminal state with every message you send in AI chats where you’ve allowed it, so the assistant sees what you see. You can turn this off any time from a chat’s permission settings.", comment: "UI"),
                 actions: ["Turn On", "Not Now"],
                 accessory: nil,
                 identifier: nil,

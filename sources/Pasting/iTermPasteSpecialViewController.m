@@ -453,7 +453,7 @@ static NSString *const kSubstitution = @"Substitution";
     }
 
     if (tabTransform == kTabTransformConvertToSpaces) {
-        [components addObject:[NSString stringWithFormat:@"Tabs->%@ spcs", dict[kNumberOfSpacesPerTab]]];
+        [components addObject:[NSString stringWithFormat:NSLocalizedString(@"Tabs->%@ spcs", @"UI"), dict[kNumberOfSpacesPerTab]]];
     } else if (tabTransform == kTabTransformEscapeWithCtrlV) {
         [components addObject:@"^V+Tab"];
     }

@@ -110,12 +110,10 @@ final class CompanionPairingController: NSObject {
         switch verdict {
         case .peerMustUpgrade:
             alert.messageText = NSLocalizedString("Companion Device Needs an Update", comment: "UI")
-            alert.informativeText = NSLocalizedString("The iTerm2 Buddy app on your phone is too old to connect to ", comment: "UI")
-                + "this version of iTerm2. Update the iPhone app to continue."
+            alert.informativeText = NSLocalizedString("The iTerm2 Buddy app on your phone is too old to connect to this version of iTerm2. Update the iPhone app to continue.", comment: "UI")
         case .selfMustUpgrade:
             alert.messageText = NSLocalizedString("iTerm2 Needs an Update", comment: "UI")
-            alert.informativeText = NSLocalizedString("This version of iTerm2 is too old to connect to the iTerm2 ", comment: "UI")
-                + "Buddy app on your phone. Update iTerm2 to continue."
+            alert.informativeText = NSLocalizedString("This version of iTerm2 is too old to connect to the iTerm2 Buddy app on your phone. Update iTerm2 to continue.", comment: "UI")
         case .compatible:
             return
         }
@@ -182,10 +180,7 @@ final class CompanionPairingController: NSObject {
             let alert = NSAlert()
             alert.messageText = NSLocalizedString("Re-pair Your Companion Device", comment: "UI")
             alert.informativeText =
-                "The iTerm2 server has moved to a new address. Your paired "
-                + "iPhone is still registered with the old server. The old "
-                + "server will go away soon. You should re-pair to avoid "
-                + "problems when that happens."
+                NSLocalizedString("The iTerm2 server has moved to a new address. Your paired iPhone is still registered with the old server. The old server will go away soon. You should re-pair to avoid problems when that happens.", comment: "UI")
             alert.addButton(withTitle: NSLocalizedString("OK", comment: "UI"))
             alert.addButton(withTitle: NSLocalizedString("Later", comment: "UI"))
             if alert.runModal() == .alertFirstButtonReturn {
@@ -248,10 +243,7 @@ final class CompanionPairingController: NSObject {
             let alert = NSAlert()
             alert.messageText = NSLocalizedString("Re-pair Your Companion Device", comment: "UI")
             alert.informativeText =
-                "Your paired iPhone can’t connect because some pairing information "
-                + "stored on this Mac is missing (\(missing.joined(separator: ", "))). "
-                + "This can happen after reinstalling or rebuilding iTerm2, or after a "
-                + "keychain reset. Re-pair to fix it."
+                String(format: NSLocalizedString("Your paired iPhone can’t connect because some pairing information stored on this Mac is missing (%@). This can happen after reinstalling or rebuilding iTerm2, or after a keychain reset. Re-pair to fix it.", comment: "UI"), missing.joined(separator: ", "))
             alert.addButton(withTitle: NSLocalizedString("Re-pair…", comment: "UI"))
             alert.addButton(withTitle: NSLocalizedString("Later", comment: "UI"))
             if alert.runModal() == .alertFirstButtonReturn {
@@ -653,8 +645,7 @@ final class CompanionPairingController: NSObject {
         DispatchQueue.main.async {
             let alert = NSAlert()
             alert.messageText = NSLocalizedString("Update iTerm2 Buddy on your iPhone", comment: "UI")
-            alert.informativeText = NSLocalizedString("iTerm2 has moved to the new relay. For your Mac and iPhone to keep connecting, ", comment: "UI")
-                + "update the iTerm2 Buddy app on your iPhone to the latest version."
+            alert.informativeText = NSLocalizedString("iTerm2 has moved to the new relay. For your Mac and iPhone to keep connecting, update the iTerm2 Buddy app on your iPhone to the latest version.", comment: "UI")
             alert.addButton(withTitle: NSLocalizedString("OK", comment: "UI"))
             alert.runModal()
         }

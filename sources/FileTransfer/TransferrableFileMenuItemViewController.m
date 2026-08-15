@@ -222,7 +222,7 @@ static const CGFloat kCollapsedHeight = 51;
                       [self stringForStatus:_transferrableFile.status],
                       extra];
     NSAlert *alert = [[NSAlert alloc] init];
-    alert.messageText = @"File Transfer Summary";
+    alert.messageText = NSLocalizedString(@"File Transfer Summary", @"UI");
     alert.informativeText = text;
     [alert layout];
     [alert runModal];

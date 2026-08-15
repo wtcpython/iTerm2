@@ -844,8 +844,8 @@ static void HandleSigChld(int n) {
 
 - (void)showFailedToCreateTempSocketError {
     NSAlert *alert = [[NSAlert alloc] init];
-    alert.messageText = @"Error";
-    alert.informativeText = [NSString stringWithFormat:@"An error was encountered while creating a temporary file with mkstemps. Verify that %@ exists and is writable.", NSTemporaryDirectory()];
+    alert.messageText = NSLocalizedString(@"Error", @"UI");
+    alert.informativeText = [NSString stringWithFormat:NSLocalizedString(@"An error was encountered while creating a temporary file with mkstemps. Verify that %@ exists and is writable.", @"UI"), NSTemporaryDirectory()];
     [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
     [alert runModal];
 }

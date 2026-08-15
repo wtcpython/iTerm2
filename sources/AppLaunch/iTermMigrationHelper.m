@@ -110,10 +110,10 @@
         }
 
         NSAlert *alert = [[NSAlert alloc] init];
-        alert.messageText = @"Manual Update Needed";
-        alert.informativeText = @"iTerm2's Application Support directory has changed.\n\n"
-        @"Previously, both these directories were supported:\n~/Library/Application Support/iTerm\n~/Library/Application Support/iTerm2.\n\n"
-            @"Now, only the iTerm2 version is supported. But you have files in both so please move everything from iTerm to iTerm2.";
+        alert.messageText = NSLocalizedString(@"Manual Update Needed", @"UI");
+        alert.informativeText = NSLocalizedString(@"iTerm2's Application Support directory has changed.\n\n"
+                                                  @"Previously, both these directories were supported:\n~/Library/Application Support/iTerm\n~/Library/Application Support/iTerm2.\n\n"
+                                                  @"Now, only the iTerm2 version is supported. But you have files in both so please move everything from iTerm to iTerm2.", @"UI");
 
         NSMutableArray<NSString *> *files = [NSMutableArray array];
         int over = 0;
@@ -129,11 +129,11 @@
         if (over == 0) {
             message = [files componentsJoinedByString:@"\n"];
         } else {
-            message = [NSString stringWithFormat:@"%@\n…and %@ more", [files componentsJoinedByString:@"\n"], @(over)];
+            message = [NSString stringWithFormat:NSLocalizedString(@"%@\n…and %@ more", @"UI"), [files componentsJoinedByString:@"\n"], @(over)];
         }
 
         iTermDisclosableView *accessory = [[iTermDisclosableView alloc] initWithFrame:NSZeroRect
-                                                                               prompt:@"Directory Listing"
+                                                                               prompt:NSLocalizedString(@"Directory Listing", @"UI")
                                                                               message:message];
         iTermAccessoryViewUnfucker *unfucker = [[iTermAccessoryViewUnfucker alloc] initWithView:accessory];
         accessory.frame = NSMakeRect(0, 0, accessory.intrinsicContentSize.width, accessory.intrinsicContentSize.height);

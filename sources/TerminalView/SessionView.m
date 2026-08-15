@@ -928,7 +928,7 @@ NSString *const SessionViewWasSelectedForInspectionNotification = @"SessionViewW
         return obj == _scrollview;
     }];
     if (l != NSNotFound && s != NSNotFound && l > s)  {
-        NSString *message = [NSString stringWithFormat:@"Wrong subview order.\n%@\n%@", [self subviews], [NSThread callStackSymbols]];
+        NSString *message = [NSString stringWithFormat:NSLocalizedString(@"Wrong subview order.\n%@\n%@", @"UI"), [self subviews], [NSThread callStackSymbols]];
 #if BETA
         ITCriticalError(NO, @"%@", message);
 #else

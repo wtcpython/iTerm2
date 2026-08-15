@@ -578,7 +578,7 @@ NSString *const iTermPreferencesDidToggleIndicateNonDefaultValues = @"iTermPrefe
     }
     NSAlert *alert = [[NSAlert alloc] init];
     [alert setMessageText:NSLocalizedString(@"Application Corrupt", @"UI")];
-    [alert setInformativeText:[NSString stringWithFormat:@"While trying to load the setting for “%@”: %@", key, message]];
+    [alert setInformativeText:[NSString stringWithFormat:NSLocalizedString(@"While trying to load the setting for “%@”: %@", @"UI"), key, message]];
     [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
     [alert setAlertStyle:NSAlertStyleCritical];
     [alert runModal];

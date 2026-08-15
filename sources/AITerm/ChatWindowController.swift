@@ -95,7 +95,7 @@ final class ChatWindowController: NSWindowController, DictionaryCodable {
             _instance = ChatWindowController(model: model,
                                              client: client)
         } else if showErrors && _instance == nil {
-            iTermWarning.show(withTitle: "AI Chat could not open because of a problem loading the database. Verify there is only one instance of iTerm2 running.",
+            iTermWarning.show(withTitle: NSLocalizedString("AI Chat could not open because of a problem loading the database. Verify there is only one instance of iTerm2 running.", comment: "UI"),
                               actions: [NSLocalizedString("OK", comment: "UI")],
                               accessory: nil,
                               identifier: nil,
@@ -719,7 +719,7 @@ extension ChatWindowController: ChatListViewControllerDelegate {
             }
         } catch {
             DLog("Failed to rename chat \(chatID): \(error)")
-            iTermWarning.show(withTitle: "The chat could not be renamed.",
+            iTermWarning.show(withTitle: NSLocalizedString("The chat could not be renamed.", comment: "UI"),
                               actions: [NSLocalizedString("OK", comment: "UI")],
                               accessory: nil,
                               identifier: nil,

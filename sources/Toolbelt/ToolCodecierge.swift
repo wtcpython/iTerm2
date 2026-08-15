@@ -248,7 +248,7 @@ class ToolCodecierge: NSView, ToolbeltTool {
                 commandCount += 1
                 if commandCount >= iTermAdvancedSettingsModel.codeciergeCommandWarningCount() {
                     let selection =
-                    iTermWarning.show(withTitle: "Your codecierge session has been going on for a long time. Are you still using it? If not, stop it to save money and privacy.",
+                    iTermWarning.show(withTitle: NSLocalizedString("Your codecierge session has been going on for a long time. Are you still using it? If not, stop it to save money and privacy.", comment: "UI"),
                                       actions: ["Keep Going", "Stop Codecierge"],
                                       accessory: nil,
                                       identifier: "CodeciergeCommandWarning",
@@ -836,7 +836,7 @@ class CodeciergeGoalView: NSView, NSTextViewDelegate, NSControlTextEditingDelega
 
     @objc func autoToggled(_ sender: Any) {
         if autoButton.state == .on {
-            let selection = iTermWarning.show(withTitle: "This lets an AI completely control your computer. It could delete your files, do something stupid or dangerous, or lead to the downfall of humanity. Proceed with caution.",
+            let selection = iTermWarning.show(withTitle: NSLocalizedString("This lets an AI completely control your computer. It could delete your files, do something stupid or dangerous, or lead to the downfall of humanity. Proceed with caution.", comment: "UI"),
                               actions: [ NSLocalizedString("OK", comment: "UI"), NSLocalizedString("Cancel", comment: "UI") ],
                               accessory: nil,
                               identifier: nil,
@@ -885,7 +885,7 @@ class CodeciergeGoalView: NSView, NSTextViewDelegate, NSControlTextEditingDelega
 
     @objc private func startButtonPressed() {
         if !iTermUserDefaults.userDefaults().bool(forKey: codeciergeWarningAcknowledgedUserDefaultsKey) {
-            let option = iTermWarning.show(withTitle: "Everything that happens in your terminal while Codecierge is running will be sent to your AI provider. Don't send them confidential information!",
+            let option = iTermWarning.show(withTitle: NSLocalizedString("Everything that happens in your terminal while Codecierge is running will be sent to your AI provider. Don’t send them confidential information!", comment: "UI"),
                               actions: [ NSLocalizedString("OK", comment: "UI"), NSLocalizedString("Cancel", comment: "UI") ],
                               accessory: nil,
                               identifier: nil,

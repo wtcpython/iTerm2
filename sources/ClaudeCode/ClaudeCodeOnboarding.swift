@@ -1570,9 +1570,7 @@ class ClaudeCodeOnboarding: NSObject {
 
         let alert = NSAlert()
         alert.messageText = NSLocalizedString("Install Auto-Enter Triggers", comment: "UI")
-        alert.informativeText = NSLocalizedString("Pick the profiles you\u{2019}ll run claude in. ", comment: "UI")
-            + "We\u{2019}ll add Enter/Exit Workgroup triggers to each one so the "
-            + "Claude Code workgroup is entered automatically."
+        alert.informativeText = NSLocalizedString("Pick the profiles you’ll run claude in. We’ll add Enter/Exit Workgroup triggers to each one so the Claude Code workgroup is entered automatically.", comment: "UI")
         alert.addButton(withTitle: NSLocalizedString("Install", comment: "UI"))
         alert.addButton(withTitle: NSLocalizedString("Cancel", comment: "UI"))
         alert.accessoryView = accessoryView
@@ -1772,12 +1770,7 @@ class ClaudeCodeOnboarding: NSObject {
         let listed = profiles.map { "\u{2022} \($0.name)" }.joined(separator: "\n")
         let warning = iTermWarning()
         warning.heading = NSLocalizedString("Dynamic Profiles Selected", comment: "UI")
-        warning.title = NSLocalizedString("These profiles are dynamic and not marked ", comment: "UI")
-            + "\u{201C}rewritable,\u{201D} so iTerm2 normally regenerates them "
-            + "from disk and any change here would be lost:\n\n\(listed)\n\n"
-            + "iTerm2 can write the triggers back to dynamic profiles when "
-            + "they\u{2019}re marked rewritable. Rewriting can change the "
-            + "order of values in the underlying file."
+        warning.title = String(format: NSLocalizedString("These profiles are dynamic and not marked “rewritable,” so iTerm2 normally regenerates them from disk and any change here would be lost:\n\n%@\n\niTerm2 can write the triggers back to dynamic profiles when they’re marked rewritable. Rewriting can change the order of values in the underlying file.", comment: "UI"), listed)
         warning.warningType = .kiTermWarningTypePersistent
         warning.actionLabels = [
             "Mark Rewritable & Install",

@@ -82,7 +82,7 @@ class iTermSavePanelItem: NSObject {
         } else if let endpoint = host.endpoint {
             _ = try await endpoint.replace(filename, content: data)
         } else {
-            iTermWarning.show(withTitle: "No ssh connection to \(host.displayName) is available to upload \(filename.lastPathComponent)",
+            iTermWarning.show(withTitle: String(format: NSLocalizedString("No ssh connection to %@ is available to upload %@", comment: "UI"), host.displayName, filename.lastPathComponent),
                               actions: [NSLocalizedString("OK", comment: "UI")],
                               accessory: nil,
                               identifier: nil,

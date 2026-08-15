@@ -119,41 +119,13 @@ extension ExpressionBindableView where Self: NSView, Self: NSAlertDelegate {
 extension ExpressionBindableView {
     func showHelp(alert: NSAlert, exampleUserVar: String, exampleEnvironmentVar: String) -> Bool {
         let optionalTypeHelp = if let typeHelp {
-            """
-            ### For This Setting
-            \(typeHelp)
-            
-            
-            """
+            String(format: NSLocalizedString("### For This Setting\n%@\n\n\n", comment: "UI"), typeHelp)
         } else {
             ""
         }
         alert.accessoryView?.it_showInformativeMessage(withMarkdown:
                                                             optionalTypeHelp +
-            """
-            ### Background
-            Binding a setting to an expression lets you change settings programmatically.
-            
-            iTerm2 tracks a collection of “Variables” for each session. You can learn more about them in [Scripting Fundamentals](https://iterm2.com/documentation-scripting-fundamentals.html).
-            
-            Typically this feature is used by binding a setting to a user-defined variable.
-            
-            ### Example
-            The easiest way to set a user-defined variable is to install shell integration and then define a `iterm2_print_user_vars` function. Here's an example using bash:
-            
-            ```
-            iterm2_print_user_vars() {
-              iterm2_set_user_var \(exampleUserVar) $(echo $\(exampleEnvironmentVar))
-            }
-            ```
-            
-            This runs each time the shell prompt is printed. The example sets a user-defined variable to the value of the environment variable `\(exampleEnvironmentVar)`.
-            
-            The appropriate expression to bind this example would be `user.\(exampleUserVar)`. All user-defined variables go in the `user` scope.
-            
-            ### Debugging
-            You can view variables in the Inspector (**Scripts > Manage > Console** and then click **Inspector**).
-            """)
+            String(format: NSLocalizedString("### Background\nBinding a setting to an expression lets you change settings programmatically.\n\niTerm2 tracks a collection of “Variables” for each session. You can learn more about them in [Scripting Fundamentals](https://iterm2.com/documentation-scripting-fundamentals.html).\n\nTypically this feature is used by binding a setting to a user-defined variable.\n\n### Example\nThe easiest way to set a user-defined variable is to install shell integration and then define a `iterm2_print_user_vars` function. Here’s an example using bash:\n\n```\niterm2_print_user_vars() {\n  iterm2_set_user_var %@ $(echo $%@)\n}\n```\n\nThis runs each time the shell prompt is printed. The example sets a user-defined variable to the value of the environment variable `%@`.\n\nThe appropriate expression to bind this example would be `user.%@`. All user-defined variables go in the `user` scope.\n\n### Debugging\nYou can view variables in the Inspector (**Scripts > Manage > Console** and then click **Inspector**).", comment: "UI"), exampleUserVar, exampleEnvironmentVar, exampleEnvironmentVar, exampleUserVar))
         return true
     }
 }

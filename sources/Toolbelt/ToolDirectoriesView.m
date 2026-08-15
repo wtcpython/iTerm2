@@ -324,7 +324,7 @@ static const CGFloat kHelpMargin = 5;
 
 - (void)clear:(id)sender {
     NSAlert *alert = [[NSAlert alloc] init];
-    alert.messageText = @"Erase Saved Directories?";
+    alert.messageText = NSLocalizedString(@"Erase Saved Directories?", @"UI");
     [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
     [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
     if ([alert runModal] == NSAlertFirstButtonReturn) {

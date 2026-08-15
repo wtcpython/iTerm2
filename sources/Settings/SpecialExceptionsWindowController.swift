@@ -540,7 +540,7 @@ final class SpecialExceptionsWindowController: NSWindowController {
 
     @IBAction func installNerdFontBundle(_ sender: Any) {
         if !config.entries.isEmpty {
-            let selection = iTermWarning.show(withTitle: "This will replace existing special exceptions. Continue?",
+            let selection = iTermWarning.show(withTitle: NSLocalizedString("This will replace existing special exceptions. Continue?", comment: "UI"),
                                               actions: [NSLocalizedString("OK", comment: "UI"), NSLocalizedString("Cancel", comment: "UI")],
                                               accessory: nil,
                                               identifier: "SpecialExceptionsInstallNerdBundleConfirmation",

@@ -2088,17 +2088,17 @@ ITERM_WEAKLY_REFERENCEABLE
     NSString *message;
     NSArray *sortedNames = [names countedInstancesStrings];
     if ([sortedNames count] == 1) {
-        message = [NSString stringWithFormat:@"%@ is running %@.", identifier, [sortedNames objectAtIndex:0]];
+        message = [NSString stringWithFormat:NSLocalizedString(@"%@ is running %@.", @"UI"), identifier, [sortedNames objectAtIndex:0]];
     } else if ([sortedNames count] > 1 && [sortedNames count] <= 10) {
-        message = [NSString stringWithFormat:@"%@ is running the following jobs: %@.", identifier, [sortedNames componentsJoinedWithOxfordComma]];
+        message = [NSString stringWithFormat:NSLocalizedString(@"%@ is running the following jobs: %@.", @"UI"), identifier, [sortedNames componentsJoinedWithOxfordComma]];
     } else if ([sortedNames count] > 10) {
-        message = [NSString stringWithFormat:@"%@ is running the following jobs: %@, plus %ld %@.",
+        message = [NSString stringWithFormat:NSLocalizedString(@"%@ is running the following jobs: %@, plus %ld %@.", @"UI"),
                    identifier,
                    [sortedNames componentsJoinedWithOxfordComma],
                    (long)[sortedNames count] - 10,
-                   [sortedNames count] == 11 ? @"other" : @"others"];
+                   [sortedNames count] == 11 ? NSLocalizedString(@"other", @"UI") : NSLocalizedString(@"others", @"UI")];
     } else {
-        message = [NSString stringWithFormat:@"%@ will be closed.", identifier];
+        message = [NSString stringWithFormat:NSLocalizedString(@"%@ will be closed.", @"UI"), identifier];
     }
     if (additionalMessage.length > 0) {
         message = [NSString stringWithFormat:@"%@\n\n%@", message, additionalMessage];
@@ -2107,7 +2107,7 @@ ITERM_WEAKLY_REFERENCEABLE
     [[self retain] autorelease];
 
     NSAlert *alert = [[[NSAlert alloc] init] autorelease];
-    alert.messageText = [NSString stringWithFormat:@"Close %@?", genericName];
+    alert.messageText = [NSString stringWithFormat:NSLocalizedString(@"Close %@?", @"UI"), genericName];
     alert.informativeText = message;
     [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
     [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
@@ -2151,16 +2151,16 @@ ITERM_WEAKLY_REFERENCEABLE
         NSString *identifier;
         if (singular) {
             identifier = anyIsLocked
-                ? [NSString stringWithFormat:@"This %@tab (with a locked session)", pinnedPrefix]
-                : [NSString stringWithFormat:@"This %@tab", pinnedPrefix];
+                ? [NSString stringWithFormat:NSLocalizedString(@"This %@tab (with a locked session)", @"UI"), pinnedPrefix]
+                : [NSString stringWithFormat:NSLocalizedString(@"This %@tab", @"UI"), pinnedPrefix];
         } else {
             identifier = anyIsLocked
-                ? [NSString stringWithFormat:@"This %@multi-pane tab (with locked sessions)", pinnedPrefix]
-                : [NSString stringWithFormat:@"This %@multi-pane tab", pinnedPrefix];
+                ? [NSString stringWithFormat:NSLocalizedString(@"This %@multi-pane tab (with locked sessions)", @"UI"), pinnedPrefix]
+                : [NSString stringWithFormat:NSLocalizedString(@"This %@multi-pane tab", @"UI"), pinnedPrefix];
         }
         return [self confirmCloseForSessions:sessions
                                   identifier:identifier
-                                 genericName:[NSString stringWithFormat:@"tab #%d",
+                                 genericName:[NSString stringWithFormat:NSLocalizedString(@"tab #%d", @"UI"),
                                               [aTab tabNumber]]
                            additionalMessage:[iTermWorkgroupInstance closeCascadeWarningForSessions:sessions]];
     }
@@ -2614,7 +2614,7 @@ ITERM_WEAKLY_REFERENCEABLE
                                                      }
                                                  }];
         iTermWarning *warning = [[[iTermWarning alloc] init] autorelease];
-        warning.heading = @"Restart session?";
+        warning.heading = NSLocalizedString(@"Restart session?", @"UI");
         warning.title = NSLocalizedString(@"Running jobs will be killed.", @"UI");
         warning.warningActions = @[ ok, cancel ];
         warning.identifier = @"NoSyncSuppressRestartSessionConfirmationAlert";
@@ -3539,8 +3539,8 @@ ITERM_WEAKLY_REFERENCEABLE
 
 - (IBAction)editWindowTitle:(id)sender {
     NSAlert *alert = [[[NSAlert alloc] init] autorelease];
-    alert.messageText = @"Set Window Title";
-    alert.informativeText = @"If this is empty, the window takes the active session’s title. Variables and function calls enclosed in \\(…) will be replaced with their evaluation. This interpolated string is evaluated in the window’s context.";
+    alert.messageText = NSLocalizedString(@"Set Window Title", @"UI");
+    alert.informativeText = NSLocalizedString(@"If this is empty, the window takes the active session’s title. Variables and function calls enclosed in \\(…) will be replaced with their evaluation. This interpolated string is evaluated in the window’s context.", @"UI");
     NSTextField *titleTextField = [[[NSTextField alloc] initWithFrame:NSMakeRect(0, 0, 400, 24 * 3)] autorelease];
     iTermFunctionCallTextFieldDelegate *delegate;
     delegate = [[[iTermFunctionCallTextFieldDelegate alloc] initWithPathSource:[iTermVariableHistory pathSourceForContext:iTermVariablesSuggestionContextWindow]
@@ -4496,11 +4496,9 @@ hidingToolbeltShouldResizeWindow:(BOOL)hidingToolbeltShouldResizeWindow
     }
     NSString *title = nil;
     if (n == 1) {
-        title = @"Kill window and its jobs, hide window from view, or detach from tmux session?\n\n"
-                @"Hidden windows may be restored from the tmux dashboard.";
+        title = NSLocalizedString(@"Kill window and its jobs, hide window from view, or detach from tmux session?\n\nHidden windows may be restored from the tmux dashboard.", @"UI");
     } else if (n > 1) {
-        title = @"Kill all tmux windows and their jobs, hide windows from view, or detach from tmux session?\n\n"
-                @"Hidden windows may be restored from the tmux dashboard.";
+        title = NSLocalizedString(@"Kill all tmux windows and their jobs, hide windows from view, or detach from tmux session?\n\nHidden windows may be restored from the tmux dashboard.", @"UI");
     }
     if (title) {
         iTermWarningSelection selection =
@@ -8257,8 +8255,8 @@ hidingToolbeltShouldResizeWindow:(BOOL)hidingToolbeltShouldResizeWindow
 
 - (void)openEditTabTitleWindow {
     NSAlert *alert = [[[NSAlert alloc] init] autorelease];
-    alert.messageText = @"Set Tab Title";
-    alert.informativeText = @"If this is empty, the tab takes the active session’s title. Variables and function calls enclosed in \\(…) will be replaced with their evaluation. This interpolated string is evaluated in the tab’s context.";
+    alert.messageText = NSLocalizedString(@"Set Tab Title", @"UI");
+    alert.informativeText = NSLocalizedString(@"If this is empty, the tab takes the active session’s title. Variables and function calls enclosed in \\(…) will be replaced with their evaluation. This interpolated string is evaluated in the tab’s context.", @"UI");
     NSTextField *titleTextField = [[[NSTextField alloc] initWithFrame:NSMakeRect(0, 0, 400, 24 * 3)] autorelease];
     _currentTabTitleTextFieldDelegate = [[iTermFunctionCallTextFieldDelegate alloc] initWithPathSource:[iTermVariableHistory pathSourceForContext:iTermVariablesSuggestionContextTab]
                                                                                            passthrough:nil
@@ -8509,7 +8507,7 @@ hidingToolbeltShouldResizeWindow:(BOOL)hidingToolbeltShouldResizeWindow
 - (NSString *)promptForTabGroupName:(NSString *)initialValue title:(NSString *)title {
     NSAlert *alert = [[[NSAlert alloc] init] autorelease];
     alert.messageText = title;
-    alert.informativeText = @"Enter a name for this tab group.";
+    alert.informativeText = NSLocalizedString(@"Enter a name for this tab group.", @"UI");
     [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
     [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
     NSTextField *field = [[[NSTextField alloc] initWithFrame:NSMakeRect(0, 0, 240, 24)] autorelease];
@@ -12833,24 +12831,24 @@ typedef NS_ENUM(NSUInteger, iTermBroadcastCommand) {
     NSString *action;
     switch (command) {
     case iTermBroadcastCommandClear:
-        action = @"Clear";
+        action = NSLocalizedString(@"Clear", @"UI");
         break;
     case iTermBroadcastCommandReset:
             action = NSLocalizedString(@"Reset", @"UI");
         break;
     }
-    NSString *title = [NSString stringWithFormat:@"%@ all sessions to which input is broadcast? This will affect %@ sessions.",
+    NSString *title = [NSString stringWithFormat:NSLocalizedString(@"%@ all sessions to which input is broadcast? This will affect %@ sessions.", @"UI"),
                        action,
                        @(broadcast.count)];
     const iTermWarningSelection selection =
     [iTermWarning showWarningWithTitle:title
                                actions:@[ [NSString stringWithFormat:NSLocalizedString(@"%@ All", @"UI"), action],
-                                          [NSString stringWithFormat:@"%@ Current Session Only", action],
+                                           [NSString stringWithFormat:NSLocalizedString(@"%@ Current Session Only", @"UI"), action],
                                           NSLocalizedString(@"Cancel", @"UI") ]
                              accessory:nil
                             identifier:[NSString stringWithFormat:@"NoSync%@AllBroadcast", action]
                            silenceable:kiTermWarningTypePermanentlySilenceable
-                               heading:[NSString stringWithFormat:@"%@ in All Broadcasted-to Sessions?", action]
+                               heading:[NSString stringWithFormat:NSLocalizedString(@"%@ in All Broadcasted-to Sessions?", @"UI"), action]
                                 window:self.window];
     if (selection == kiTermWarningSelection0) {
         return broadcast;
@@ -14422,9 +14420,9 @@ typedef NS_ENUM(NSUInteger, iTermBroadcastCommand) {
          }];
          NSString *message;
          if (names.count < 2) {
-             message = [NSString stringWithFormat:@"The session named “%@” does not appear to be at a password prompt.", names.firstObject];
+             message = [NSString stringWithFormat:NSLocalizedString(@"The session named “%@” does not appear to be at a password prompt.", @"UI"), names.firstObject];
          } else {
-             message = [NSString stringWithFormat:@"The following sessions to which input is broadcast do not appear to be at a password prompt: %@", [names componentsJoinedWithOxfordComma]];
+             message = [NSString stringWithFormat:NSLocalizedString(@"The following sessions to which input is broadcast do not appear to be at a password prompt: %@", @"UI"), [names componentsJoinedWithOxfordComma]];
          }
          NSArray *actions;
          if (okSessions.count > 0) {

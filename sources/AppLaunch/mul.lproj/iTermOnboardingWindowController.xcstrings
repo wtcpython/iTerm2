@@ -8,7 +8,7 @@
         "en": {
           "stringUnit": {
             "state": "new",
-            "value": "Use iTerm2 while you are apart from your Mac. You can control it via AI chat, view session content, and receive push notifications. End-to-end encryption keeps your data safe. <a href=\\\"iterm2whatsnew:companion\\\">Try it now!</a>"
+            "value": "Use iTerm2 while you are apart from your Mac. You can control it via AI chat, view session content, and receive push notifications. End-to-end encryption keeps your data safe. <a href=\"iterm2whatsnew:companion\">Try it now!</a>"
           }
         },
         "zh-Hans": {
@@ -98,7 +98,7 @@
         "en": {
           "stringUnit": {
             "state": "new",
-            "value": "The Claude Code integration organizes multiple related sessions—such as code review and reading diffs—into a customizable UI. It also exposes Claude’s status so you can easily find instances that are blocked on your attention. <a href=\\\"iterm2whatsnew:claudecode\\\">Try it now!</a>"
+            "value": "The Claude Code integration organizes multiple related sessions—such as code review and reading diffs—into a customizable UI. It also exposes Claude’s status so you can easily find instances that are blocked on your attention. <a href=\"iterm2whatsnew:claudecode\">Try it now!</a>"
           }
         },
         "zh-Hans": {
@@ -188,7 +188,7 @@
         "en": {
           "stringUnit": {
             "state": "new",
-            "value": "A new AI chat mode, Orchestration, lets AI run the show for you. It can create windows, wait for tasks to complete (even in interactive apps), and the new automatic safety checker relieves you of having to respond to almost all permission prompts. <a href=\\\"iterm2whatsnew:orchestration\\\">Try it now!</a>"
+            "value": "A new AI chat mode, Orchestration, lets AI run the show for you. It can create windows, wait for tasks to complete (even in interactive apps), and the new automatic safety checker relieves you of having to respond to almost all permission prompts. <a href=\"iterm2whatsnew:orchestration\">Try it now!</a>"
           }
         },
         "zh-Hans": {
@@ -206,7 +206,7 @@
         "en": {
           "stringUnit": {
             "state": "new",
-            "value": "The new Screenshots feature simplifies creating a PNG of your terminal content. It supports redactions and highlights. Use <a href=\\\"iterm2whatsnew:screenshot\\\">Session > Make Screenshot</a> to activate it."
+            "value": "The new Screenshots feature simplifies creating a PNG of your terminal content. It supports redactions and highlights. Use <a href=\"iterm2whatsnew:screenshot\">Session > Make Screenshot</a> to activate it."
           }
         },
         "zh-Hans": {

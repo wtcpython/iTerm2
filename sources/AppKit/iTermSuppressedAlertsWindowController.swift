@@ -72,9 +72,7 @@ class iTermSuppressedAlertsWindowController: NSWindowController {
         let bounds = content.bounds
 
         // Explanatory text at the top.
-        let explanation = label(withText: "These alerts are being answered automatically because you " +
-                                          "chose to remember your response. Select one and click " +
-                                          "Un-suppress to be asked again.")
+        let explanation = label(withText: NSLocalizedString("These alerts are being answered automatically because you chose to remember your response. Select one and click Un-suppress to be asked again.", comment: "UI"))
         explanation.frame = NSRect(x: margin,
                                    y: bounds.maxY - margin - 40,
                                    width: bounds.width - margin * 2,

@@ -1040,8 +1040,8 @@ andEditComponentWithIdentifier:(NSString *)identifier
         dispatch_async(dispatch_get_main_queue(), ^{
             if (error) {
                 NSAlert *alert = [[NSAlert alloc] init];
-                alert.messageText = @"Error";
-                alert.informativeText = [NSString stringWithFormat:@"Couldn't save to “%@” on %@: %@",
+                alert.messageText = NSLocalizedString(@"Error", @"UI");
+                alert.informativeText = [NSString stringWithFormat:NSLocalizedString(@"Couldn't save to “%@” on %@: %@", @"UI"),
                                          item.filename,
                                          item.host.displayName,
                                          [error localizedDescription]];
@@ -1080,8 +1080,8 @@ andEditComponentWithIdentifier:(NSString *)identifier
     NSString *string = [self jsonForProfile:profile error:&error];
     if (!string) {
         NSAlert *alert = [[NSAlert alloc] init];
-        alert.messageText = @"Error";
-        alert.informativeText = [NSString stringWithFormat:@"Couldn't convert profile to JSON: %@",
+        alert.messageText = NSLocalizedString(@"Error", @"UI");
+        alert.informativeText = [NSString stringWithFormat:NSLocalizedString(@"Couldn't convert profile to JSON: %@", @"UI"),
                                  [error localizedDescription]];
         [alert runModal];
         return;
@@ -1115,8 +1115,8 @@ andEditComponentWithIdentifier:(NSString *)identifier
     NSString *string = [self jsonForAllProfilesWithErrorCount:&errors];
     if (errors) {
         NSAlert *alert = [[NSAlert alloc] init];
-        alert.messageText = @"Error";
-        alert.informativeText = [NSString stringWithFormat:@"Couldn't convert one or more profiles to JSON. Check Console.app for errors."];
+        alert.messageText = NSLocalizedString(@"Error", @"UI");
+        alert.informativeText = [NSString stringWithFormat:NSLocalizedString(@"Couldn't convert one or more profiles to JSON. Check Console.app for errors.", @"UI")];
         [alert runModal];
         return;
     }
@@ -1215,14 +1215,14 @@ andEditComponentWithIdentifier:(NSString *)identifier
         return;
     }
     NSString *profileName = [profile objectForKey:KEY_NAME] ?: @"(unknown name)";
-    NSString *message = [NSString stringWithFormat:@"The selected profile, “%@”, is a dynamic profile. These are generally only edited by hand.\n\niTerm2 is now able to write changes back to dynamic profiles when they are marked as “rewritable“. Rewriting can cause the order of values to change.", profileName];
+    NSString *message = [NSString stringWithFormat:NSLocalizedString(@"The selected profile, “%@”, is a dynamic profile. These are generally only edited by hand.\n\niTerm2 is now able to write changes back to dynamic profiles when they are marked as “rewritable“. Rewriting can cause the order of values to change.", @"UI"), profileName];
     // @"Reveal in Finder" is a one-time navigation action and shouldn't be remembered.
     iTermWarning *warning = [[iTermWarning alloc] init];
     warning.title = message;
-    warning.actionLabels = @[ @"Mark as Rewritable", NSLocalizedString(@"Reveal in Finder", @"UI"), NSLocalizedString(@"Cancel", @"UI") ];
+    warning.actionLabels = @[ NSLocalizedString(@"Mark as Rewritable", @"UI"), NSLocalizedString(@"Reveal in Finder", @"UI"), NSLocalizedString(@"Cancel", @"UI") ];
     warning.identifier = @"NoSyncDynamicProfileChangeWillBeLost";
     warning.warningType = kiTermWarningTypeTemporarilySilenceable;
-    warning.heading = @"Changes Will Be Lost";
+    warning.heading = NSLocalizedString(@"Changes Will Be Lost", @"UI");
     warning.window = self.view.window;
     warning.doNotRememberLabels = @[ NSLocalizedString(@"Reveal in Finder", @"UI") ];
     const iTermWarningSelection selection = [warning runModal];

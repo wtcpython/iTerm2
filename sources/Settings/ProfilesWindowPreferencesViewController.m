@@ -1047,7 +1047,7 @@ typedef NS_ENUM(NSUInteger, iTermWindowUnitsTag) {
     const int numScreens = [screens count];
     for (i = 0; i < numScreens; i++) {
         if (i == 0) {
-            [_screen addItemWithTitle:[NSString stringWithFormat:@"Main Screen"]];
+            [_screen addItemWithTitle:NSLocalizedString(@"Main Screen", @"UI")];
         } else {
             [_screen addItemWithTitle:screens[i].it_uniqueName];
         }

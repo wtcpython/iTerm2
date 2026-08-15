@@ -416,7 +416,7 @@ class CommandURLHandler: NSObject {
             if let directory {
                 parts.append("in \(directory)")
             }
-            let selection = iTermWarning.show(withTitle: parts.joined(separator: " ") + "?\nIt will run silently in the background.",
+            let selection = iTermWarning.show(withTitle: String(format: NSLocalizedString("%@?\nIt will run silently in the background.", comment: "UI"), parts.joined(separator: " ")),
                                               actions: [ NSLocalizedString("OK", comment: "UI"), NSLocalizedString("Cancel", comment: "UI")],
                                               accessory: nil,
                                               identifier: "NoSyncRunCommand_\(self.command)",

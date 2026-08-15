@@ -396,8 +396,7 @@ final class CompanionWizardWindowController: NSWindowController, NSWindowDelegat
         let alert = NSAlert()
         alert.alertStyle = .warning
         alert.messageText = NSLocalizedString("Setup Could Not Be Completed", comment: "UI")
-        alert.informativeText = error.localizedDescription
-            + "\n\nYou can finish setting up in Companion Device Settings."
+        alert.informativeText = String(format: NSLocalizedString("%@\n\nYou can finish setting up in Companion Device Settings.", comment: "UI"), error.localizedDescription)
         alert.addButton(withTitle: NSLocalizedString("OK", comment: "UI"))
         let finish = { [weak self] in
             self?.close()

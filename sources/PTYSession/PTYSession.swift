@@ -299,7 +299,7 @@ extension PTYSession {
                                             sessionID: guid,
                                             baseOffset: screen.totalScrollbackOverflow()))
         guard let client = ChatClient.instance else {
-            iTermWarning.show(withTitle: "AI Chat could not be opened. Verify you only have one instance of iTerm2 running.",
+            iTermWarning.show(withTitle: NSLocalizedString("AI Chat could not be opened. Verify you only have one instance of iTerm2 running.", comment: "UI"),
                               actions: [NSLocalizedString("OK", comment: "UI")],
                               accessory: nil,
                               identifier: nil,

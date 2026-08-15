@@ -278,12 +278,12 @@ static NSString *iTermManualAIModelHost(NSDictionary *configuration) {
         @{ @"symbol": SFSymbolGetString(SFSymbolMinus), @"tip": NSLocalizedString(@"Delete", @"UI") }
     ] action:@selector(addDeleteClicked:)];
     _editControl = [self makeSegmentedControlWithSegments:@[
-        @{ @"symbol": SFSymbolGetString(SFSymbolPencil), @"tip": @"Edit" },
-        @{ @"symbol": SFSymbolGetString(SFSymbolPlusSquareOnSquare), @"tip": @"Duplicate" },
-        @{ @"symbol": SFSymbolGetString(SFSymbolStar), @"tip": @"Toggle Default" },
+        @{ @"symbol": SFSymbolGetString(SFSymbolPencil), @"tip": NSLocalizedString(@"Edit", @"UI") },
+        @{ @"symbol": SFSymbolGetString(SFSymbolPlusSquareOnSquare), @"tip": NSLocalizedString(@"Duplicate", @"UI") },
+        @{ @"symbol": SFSymbolGetString(SFSymbolStar), @"tip": NSLocalizedString(@"Toggle Default", @"UI") },
         @{ @"symbol": SFSymbolGetString(SFSymbolLeaf),
-           @"tip": @"Toggle Economy Model. A cheaper model used for frequent background jobs "
-                   @"like command-safety checks and screen-idle detection." }
+           @"tip": NSLocalizedString(@"Toggle Economy Model. A cheaper model used for frequent background jobs "
+                                     @"like command-safety checks and screen-idle detection.", @"UI") }
     ] action:@selector(editControlClicked:)];
 
     const CGFloat controlY = bottomRowY + (okHeight - _addDeleteControl.frame.size.height) / 2.0;
@@ -689,8 +689,8 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
         [self addQuirkCheckboxWithTitle:@"Configurable thinking"
                                     key:kAIManualModelConfigurableThinkingKey
                            catalogValue:[[AIMetadata instance] modelSupportsConfigurableThinking:baseName]
-                                tooltip:@"Enable for reasoning models with a thinking mode, such as GPT-5, "
-                                        @"o-series, or DeepSeek models, so the chat’s Think toggle appears."
+                                tooltip:NSLocalizedString(@"Enable for reasoning models with a thinking mode, such as GPT-5, "
+                                                          @"o-series, or DeepSeek models, so the chat’s Think toggle appears.", @"UI")
                                     toY:&y
                                  fieldX:fieldX
                                   width:fieldWidth
@@ -699,8 +699,8 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
         [self addQuirkCheckboxWithTitle:@"Supports temperature"
                                     key:kAIManualModelSupportsTemperatureKey
                            catalogValue:[[AIMetadata instance] modelSupportsTemperature:baseName]
-                                tooltip:@"Uncheck for models that reject a temperature parameter, such as "
-                                        @"Anthropic Opus 4.7 and later."
+                                tooltip:NSLocalizedString(@"Uncheck for models that reject a temperature parameter, such as "
+                                                          @"Anthropic Opus 4.7 and later.", @"UI")
                                     toY:&y
                                  fieldX:fieldX
                                   width:fieldWidth
@@ -842,8 +842,8 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
         [_urlField.stringValue stringByTrimmingCharactersInSet:NSCharacterSet.whitespaceAndNewlineCharacterSet];
     if (name.length == 0 || url.length == 0) {
         NSAlert *alert = [[NSAlert alloc] init];
-        alert.messageText = @"Missing Information";
-        alert.informativeText = @"Enter a model name and URL before testing the connection.";
+        alert.messageText = NSLocalizedString(@"Missing Information", @"UI");
+        alert.informativeText = NSLocalizedString(@"Enter a model name and URL before testing the connection.", @"UI");
         [alert beginSheetModalForWindow:_window completionHandler:^(NSModalResponse returnCode) {}];
         return;
     }
@@ -875,10 +875,10 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
         NSAlert *alert = [[NSAlert alloc] init];
         if (outcome == iTermAIConnectionTestOutcomeSuccess) {
             alert.alertStyle = NSAlertStyleInformational;
-            alert.messageText = @"Connection Succeeded";
+            alert.messageText = NSLocalizedString(@"Connection Succeeded", @"UI");
         } else {
             alert.alertStyle = NSAlertStyleWarning;
-            alert.messageText = @"Connection Failed";
+            alert.messageText = NSLocalizedString(@"Connection Failed", @"UI");
         }
         alert.informativeText = message ?: @"";
         [alert beginSheetModalForWindow:strongSelf->_window completionHandler:^(NSModalResponse returnCode) {}];
@@ -896,19 +896,19 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
         [_urlField.stringValue stringByTrimmingCharactersInSet:NSCharacterSet.whitespaceAndNewlineCharacterSet];
     NSString *failure = nil;
     if (name.length == 0) {
-        failure = @"Model is required.";
+        failure = NSLocalizedString(@"Model is required.", @"UI");
     } else if (url.length == 0) {
-        failure = @"URL is required.";
+        failure = NSLocalizedString(@"URL is required.", @"UI");
     } else if (_contextField.integerValue <= 0) {
-        failure = @"Context tokens must be greater than zero.";
+        failure = NSLocalizedString(@"Context tokens must be greater than zero.", @"UI");
     } else if (_responseField.integerValue <= 0) {
-        failure = @"Max response tokens must be greater than zero.";
+        failure = NSLocalizedString(@"Max response tokens must be greater than zero.", @"UI");
     } else if (_nameIsTaken && _nameIsTaken(name)) {
-        failure = @"Manual model names must be unique.";
+        failure = NSLocalizedString(@"Manual model names must be unique.", @"UI");
     }
     if (failure) {
         NSAlert *alert = [[NSAlert alloc] init];
-        alert.messageText = @"Invalid Manual AI Model";
+        alert.messageText = NSLocalizedString(@"Invalid Manual AI Model", @"UI");
         alert.informativeText = failure;
         [alert beginSheetModalForWindow:_window completionHandler:^(NSModalResponse returnCode) {}];
         return;
@@ -2433,7 +2433,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
         variableName ? [NSString stringWithFormat:@"\\(ai.%@)", variableName] : nil;
     if (requiredVariable && ![[self stringForKey:key] containsString:requiredVariable]) {
         _aiPromptWarning.toolTip =
-            [NSString stringWithFormat:@"The prompt must contain the substring %@. %@",
+            [NSString stringWithFormat:NSLocalizedString(@"The prompt must contain the substring %@. %@", @"UI"),
              requiredVariable, explanation];
         _aiPromptWarning.alphaValue = 1.0;
     } else {
@@ -2537,8 +2537,8 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
 
 - (IBAction)changeAPIKey:(id)sender {
     NSAlert *alert = [[NSAlert alloc] init];
-    alert.messageText = @"Manage AI API Keys";
-    alert.informativeText = @"Keys are stored securely in the macOS Keychain.";
+    alert.messageText = NSLocalizedString(@"Manage AI API Keys", @"UI");
+    alert.informativeText = NSLocalizedString(@"Keys are stored securely in the macOS Keychain.", @"UI");
     [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
     [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
 
@@ -2685,8 +2685,8 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
 
 - (void)addCustomHeader {
     NSAlert *alert = [[NSAlert alloc] init];
-    alert.messageText = @"Add Custom Header";
-    alert.informativeText = @"Enter a header name and value. The name is required.";
+    alert.messageText = NSLocalizedString(@"Add Custom Header", @"UI");
+    alert.informativeText = NSLocalizedString(@"Enter a header name and value. The name is required.", @"UI");
     [alert addButtonWithTitle:NSLocalizedString(@"Add", @"UI")];
     [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
 
@@ -2702,7 +2702,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
     CGFloat y = totalHeight;
 
     y -= labelHeight;
-    NSTextField *nameLabel = [NSTextField labelWithString:@"Name:"];
+    NSTextField *nameLabel = [NSTextField labelWithString:NSLocalizedString(@"Name:", @"UI")];
     nameLabel.frame = NSMakeRect(0, y, width, labelHeight);
     [accessory addSubview:nameLabel];
 
@@ -2711,7 +2711,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
     [accessory addSubview:nameField];
 
     y -= sectionGap + labelHeight;
-    NSTextField *valueLabel = [NSTextField labelWithString:@"Value:"];
+    NSTextField *valueLabel = [NSTextField labelWithString:NSLocalizedString(@"Value:", @"UI")];
     valueLabel.frame = NSMakeRect(0, y, width, labelHeight);
     [accessory addSubview:valueLabel];
 
@@ -2731,12 +2731,12 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
         NSString *name = [nameField.stringValue stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
         NSString *value = valueField.stringValue ?: @"";
         if (![AICustomHeaders isValidName:name]) {
-            alert.informativeText = @"The header name must be non-empty and contain only RFC 7230 token characters (letters, digits, and any of !#$%&'*+-.^_`|~).";
+            alert.informativeText = NSLocalizedString(@"The header name must be non-empty and contain only RFC 7230 token characters (letters, digits, and any of !#$%&'*+-.^_`|~).", @"UI");
             focusField = nameField;
             continue;
         }
         if (![AICustomHeaders isValidValue:value]) {
-            alert.informativeText = @"The header value must not contain newline or null characters.";
+            alert.informativeText = NSLocalizedString(@"The header value must not contain newline or null characters.", @"UI");
             focusField = valueField;
             continue;
         }
@@ -2844,16 +2844,16 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
     if ([tableColumn.identifier isEqualToString:@"name"]) {
         newValue = [newValue stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
         if (![AICustomHeaders isValidName:newValue]) {
-            failure = @"The header name must be non-empty and contain only RFC 7230 token characters (letters, digits, and any of !#$%&'*+-.^_`|~).";
+            failure = NSLocalizedString(@"The header name must be non-empty and contain only RFC 7230 token characters (letters, digits, and any of !#$%&'*+-.^_`|~).", @"UI");
         }
     } else if ([tableColumn.identifier isEqualToString:@"value"]) {
         if (![AICustomHeaders isValidValue:newValue]) {
-            failure = @"The header value must not contain newline or null characters.";
+            failure = NSLocalizedString(@"The header value must not contain newline or null characters.", @"UI");
         }
     }
     if (failure) {
         NSAlert *alert = [[NSAlert alloc] init];
-        alert.messageText = @"Invalid HTTP header";
+        alert.messageText = NSLocalizedString(@"Invalid HTTP header", @"UI");
         alert.informativeText = failure;
         [alert runModal];
         // Put the user back into the same cell so they can fix the value
@@ -3478,7 +3478,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
                 // User didn't hit cancel; if he chose a writable directory, ask if he wants to write to it.
                 if ([[iTermRemotePreferences sharedInstance] remoteLocationIsValid]) {
                     NSAlert *alert = [[NSAlert alloc] init];
-                    alert.messageText = @"Copy local settings to custom folder now?";
+                    alert.messageText = NSLocalizedString(@"Copy local settings to custom folder now?", @"UI");
                     [alert addButtonWithTitle:NSLocalizedString(@"Copy", @"UI")];
                     [alert addButtonWithTitle:NSLocalizedString(@"Don’t Copy", @"UI")];
                     if ([alert runModal] == NSAlertFirstButtonReturn) {

@@ -789,8 +789,8 @@ static NSModalResponse iTermCompareRenderingRunModal(id self, SEL _cmd) {
         RLog(@"Importing color presets from %@", filename);
         if ([iTermColorPresets importColorPresetFromFile:filename]) {
             NSAlert *alert = [[[NSAlert alloc] init] autorelease];
-            alert.messageText = @"Colors Scheme Imported";
-            alert.informativeText = @"The color scheme was imported and added to presets. You can find it under Settings > Profiles > Colors > Load Presets….";
+            alert.messageText = NSLocalizedString(@"Colors Scheme Imported", @"UI");
+            alert.informativeText = NSLocalizedString(@"The color scheme was imported and added to presets. You can find it under Settings > Profiles > Colors > Load Presets….", @"UI");
             [alert runModal];
         }
         return YES;
@@ -1027,19 +1027,19 @@ static NSModalResponse iTermCompareRenderingRunModal(id self, SEL _cmd) {
         RLog(@"Showing quit alert");
         NSString *message;
         if ([[iTermController sharedInstance] shouldLeaveSessionsRunningOnQuit]) {
-            message = @"Sessions will be restored automatically when iTerm2 is relaunched.";
+            message = NSLocalizedString(@"Sessions will be restored automatically when iTerm2 is relaunched.", @"UI");
         } else {
-            message = @"All sessions will be closed.";
+            message = NSLocalizedString(@"All sessions will be closed.", @"UI");
         }
         [NSApp activateIgnoringOtherApps:YES];
         NSAlert *alert = [[[NSAlert alloc] init] autorelease];
-        alert.messageText = @"Quit iTerm2?";
+        alert.messageText = NSLocalizedString(@"Quit iTerm2?", @"UI");
         alert.informativeText = message;
         [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
         [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
         iTermDisclosableView *accessory = [[iTermDisclosableView alloc] initWithFrame:NSZeroRect
-                                                                               prompt:@"Why am I being prompted?"
-                                                                              message:[NSString stringWithFormat:@"You are being prompted because:\n\n%@",
+                                                                               prompt:NSLocalizedString(@"Why am I being prompted?", @"UI")
+                                                                              message:[NSString stringWithFormat:NSLocalizedString(@"You are being prompted because:\n\n%@", @"UI"),
                                                                                        reason.message]];
         iTermAccessoryViewUnfucker *unfucker = [[iTermAccessoryViewUnfucker alloc] initWithView:accessory];
         accessory.frame = NSMakeRect(0, 0, accessory.intrinsicContentSize.width, accessory.intrinsicContentSize.height);
@@ -3145,8 +3145,8 @@ static iTermKeyEventReplayer *gReplayer;
     NSString *ring = iTermRetrospectiveLogString();
     if (ring.length == 0) {
         NSAlert *alert = [[NSAlert alloc] init];
-        alert.messageText = @"No Retrospective Logs";
-        alert.informativeText = @"No retrospective debug logs have been recorded yet.";
+        alert.messageText = NSLocalizedString(@"No Retrospective Logs", @"UI");
+        alert.informativeText = NSLocalizedString(@"No retrospective debug logs have been recorded yet.", @"UI");
         [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
         [alert runModal];
         return;
@@ -3163,8 +3163,8 @@ static iTermKeyEventReplayer *gReplayer;
     NSError *error = nil;
     if (![log writeToURL:panel.URL atomically:YES encoding:NSUTF8StringEncoding error:&error]) {
         NSAlert *alert = [[NSAlert alloc] init];
-        alert.messageText = @"Could Not Save";
-        alert.informativeText = [NSString stringWithFormat:@"Failed to save retrospective debug logs: %@", error.localizedDescription];
+        alert.messageText = NSLocalizedString(@"Could Not Save", @"UI");
+        alert.informativeText = [NSString stringWithFormat:NSLocalizedString(@"Failed to save retrospective debug logs: %@", @"UI"), error.localizedDescription];
         [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
         [alert runModal];
     }
@@ -3243,7 +3243,7 @@ static iTermKeyEventReplayer *gReplayer;
         [[iTermUvProvisioner shared] userRequestedUpgradeCheckWithCompletion:^(BOOL ok, NSString *message) {
             [[iTermScriptHistoryEntry globalEntry] addOutput:[message stringByAppendingString:@"\n"] completion:^{}];
             NSAlert *alert = [[[NSAlert alloc] init] autorelease];
-            alert.messageText = ok ? @"Python Runtime" : @"Update Failed";
+            alert.messageText = ok ? NSLocalizedString(@"Python Runtime", @"UI") : NSLocalizedString(@"Update Failed", @"UI");
             alert.informativeText = message;
             [alert runModal];
         }];
@@ -3257,8 +3257,8 @@ static iTermKeyEventReplayer *gReplayer;
         }
         if (error != nil || python == nil) {
             NSAlert *alert = [[[NSAlert alloc] init] autorelease];
-            alert.messageText = @"Installation Failed";
-            alert.informativeText = [NSString stringWithFormat:@"Could not install the Python runtime: %@",
+            alert.messageText = NSLocalizedString(@"Installation Failed", @"UI");
+            alert.informativeText = [NSString stringWithFormat:NSLocalizedString(@"Could not install the Python runtime: %@", @"UI"),
                                      error.localizedDescription ?: @"unknown error"];
             [alert runModal];
             return;
@@ -3350,8 +3350,8 @@ static iTermKeyEventReplayer *gReplayer;
             }
             if (interpreter == nil) {
                 NSAlert *alert = [[[NSAlert alloc] init] autorelease];
-                alert.messageText = @"Python Environment Unavailable";
-                alert.informativeText = [NSString stringWithFormat:@"Could not prepare the Python environment for the REPL: %@",
+                alert.messageText = NSLocalizedString(@"Python Environment Unavailable", @"UI");
+                alert.informativeText = [NSString stringWithFormat:NSLocalizedString(@"Could not prepare the Python environment for the REPL: %@", @"UI"),
                                          uvError.localizedDescription ?: @"unknown error"];
                 [alert runModal];
                 return;
@@ -3497,15 +3497,15 @@ static iTermKeyEventReplayer *gReplayer;
 
 - (IBAction)gpuRendererAvailability:(id)sender {
     NSAlert *alert = [[[NSAlert alloc] init] autorelease];
-    alert.messageText = @"GPU Renderer Availability";
+    alert.messageText = NSLocalizedString(@"GPU Renderer Availability", @"UI");
     PseudoTerminal *term = [[iTermController sharedInstance] currentTerminal];
     PTYSession *session = [term currentSession];
     PTYTab *tab = [term tabForSession:session];
     NSString *reason = [self gpuUnavailableStringForReason:tab.metalUnavailableReason];
     if (reason) {
-        alert.informativeText = [NSString stringWithFormat:@"GPU rendering is off in the current session because %@", reason];
+        alert.informativeText = [NSString stringWithFormat:NSLocalizedString(@"GPU rendering is off in the current session because %@", @"UI"), reason];
     } else {
-        alert.informativeText = @"GPU rendering is enabled for the current session.";
+        alert.informativeText = NSLocalizedString(@"GPU rendering is enabled for the current session.", @"UI");
     }
     [alert runModal];
 }
@@ -3577,13 +3577,12 @@ static iTermKeyEventReplayer *gReplayer;
 
     if ([[[[iTermController sharedInstance] currentTerminal] currentSession] isTmuxClient]) {
         NSString *heading =
-            [NSString stringWithFormat:@"What kind of %@ do you want to open?",
-                isWindow ? @"window" : @"tab"];
+            [NSString stringWithFormat:NSLocalizedString(@"What kind of %@ do you want to open?", @"UI"),
+                isWindow ? NSLocalizedString(@"window", @"UI") : NSLocalizedString(@"tab", @"UI")];
         NSString *title =
-            [NSString stringWithFormat:@"The current session is a tmux session. "
-                                       @"Would you like to create a new tmux %@ or use the default profile?",
-                                       isWindow ? @"window" : @"tab"];
-        NSString *tmuxAction = isWindow ? @"New tmux Window" : @"New tmux Tab";
+            [NSString stringWithFormat:NSLocalizedString(@"The current session is a tmux session. Would you like to create a new tmux %@ or use the default profile?", @"UI"),
+                isWindow ? NSLocalizedString(@"window", @"UI") : NSLocalizedString(@"tab", @"UI")];
+        NSString *tmuxAction = isWindow ? NSLocalizedString(@"New tmux Window", @"UI") : NSLocalizedString(@"New tmux Tab", @"UI");
         iTermWarningSelection selection = [iTermWarning showWarningWithTitle:title
                                                                      actions:@[ tmuxAction, NSLocalizedString(@"Use Default Profile", @"UI"), NSLocalizedString(@"Cancel", @"UI") ]
                                                                    accessory:nil

@@ -91,7 +91,7 @@ class ImportExport: NSObject {
 
         do {
             let selection = iTermWarning.show(
-                withTitle: "Any needed Python runtimes will be installed and secure settings will be updated, which may require you to enter your password. Then iTerm2 will restart and finish importing. This can take several minutes.",
+                withTitle: NSLocalizedString("Any needed Python runtimes will be installed and secure settings will be updated, which may require you to enter your password. Then iTerm2 will restart and finish importing. This can take several minutes.", comment: "UI"),
                 actions: [NSLocalizedString("OK", comment: "UI"), NSLocalizedString("Cancel", comment: "UI")],
                 accessory: nil,
                 identifier: nil,
@@ -125,7 +125,7 @@ class ImportExport: NSObject {
     @objc
     static func eraseAll(window: NSWindow?) -> String? {
         let exportSelection = iTermWarning.show(
-            withTitle: "Would you like to export your settings and data first? You will be able to re-import the exported file later if you change your mind.",
+            withTitle: NSLocalizedString("Would you like to export your settings and data first? You will be able to re-import the exported file later if you change your mind.", comment: "UI"),
             actions: ["Export First", "Skip Export", NSLocalizedString("Cancel", comment: "UI")],
             accessory: nil,
             identifier: nil,
@@ -210,7 +210,7 @@ class ImportExport: NSObject {
             _exit(0)
         }
         _ = iTermWarning.show(
-            withTitle: "iTerm2 logged what it would have erased to Console.app. Nothing was actually deleted because the “Dry-run Erase All Settings and Data” advanced setting is enabled.",
+            withTitle: NSLocalizedString("iTerm2 logged what it would have erased to Console.app. Nothing was actually deleted because the “Dry-run Erase All Settings and Data” advanced setting is enabled.", comment: "UI"),
             actions: [NSLocalizedString("OK", comment: "UI")],
             accessory: nil,
             identifier: nil,

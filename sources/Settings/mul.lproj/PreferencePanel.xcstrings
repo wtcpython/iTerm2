@@ -3644,7 +3644,7 @@
         "en": {
           "stringUnit": {
             "state": "new",
-            "value": "\\\"Zoom\\\" is the green button, except on OS 10.10 where you must hold Option while pressing the green button."
+            "value": "\"Zoom\" is the green button, except on OS 10.10 where you must hold Option while pressing the green button."
           }
         },
         "zh-Hans": {
@@ -4388,7 +4388,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "列乘"
+            "value": "列 ×"
           }
         }
       }
@@ -8378,7 +8378,7 @@
         "en": {
           "stringUnit": {
             "state": "new",
-            "value": "Confirm \\\"Quit iTerm2 (⌘)\\\" even if there are no windows"
+            "value": "Confirm \"Quit iTerm2 (⌘)\" even if there are no windows"
           }
         },
         "zh-Hans": {
@@ -8540,7 +8540,7 @@
         "en": {
           "stringUnit": {
             "state": "new",
-            "value": "For this setting to take effect you must disable \\\"Native full screen windows\\\" in Settings > General. If this setting is enabled, the menu bar will remain visible. This is useful for multi-monitor systems."
+            "value": "For this setting to take effect you must disable \"Native full screen windows\" in Settings > General. If this setting is enabled, the menu bar will remain visible. This is useful for multi-monitor systems."
           }
         },
         "zh-Hans": {
@@ -10934,7 +10934,7 @@
         "en": {
           "stringUnit": {
             "state": "new",
-            "value": "Some programs (such as vim and emacs) want to put the numeric keypad in \\\"application\\\" mode. Turn this off if you always want it to act as a numeric keypad."
+            "value": "Some programs (such as vim and emacs) want to put the numeric keypad in \"application\" mode. Turn this off if you always want it to act as a numeric keypad."
           }
         },
         "zh-Hans": {
@@ -11114,7 +11114,7 @@
         "en": {
           "stringUnit": {
             "state": "new",
-            "value": "Some programs (such as vim and emacs) want to put the numeric keypad in \\\"application\\\" mode. Turn this off if you always want it to act as a numeric keypad. NOTE: This setting affects the older xterm control sequence (CSI > Pp m), not the Kitty control sequence related to CSI > flags u."
+            "value": "Some programs (such as vim and emacs) want to put the numeric keypad in \"application\" mode. Turn this off if you always want it to act as a numeric keypad. NOTE: This setting affects the older xterm control sequence (CSI > Pp m), not the Kitty control sequence related to CSI > flags u."
           }
         },
         "zh-Hans": {
@@ -11240,7 +11240,7 @@
         "en": {
           "stringUnit": {
             "state": "new",
-            "value": "Brightens text for \\\"normal\\\" ANSI colors. Does not affect \\\"bright\\\" ANSI colors, 8-bit colors, 24-bit colors, or the default foreground color."
+            "value": "Brightens text for \"normal\" ANSI colors. Does not affect \"bright\" ANSI colors, 8-bit colors, 24-bit colors, or the default foreground color."
           }
         },
         "zh-Hans": {
@@ -13364,7 +13364,7 @@
         "en": {
           "stringUnit": {
             "state": "new",
-            "value": "Some programs (such as vim and emacs) want to put the numeric keypad in \\\"application\\\" mode. Turn this off if you always want it to act as a numeric keypad."
+            "value": "Some programs (such as vim and emacs) want to put the numeric keypad in \"application\" mode. Turn this off if you always want it to act as a numeric keypad."
           }
         },
         "zh-Hans": {
@@ -14768,7 +14768,7 @@
         "en": {
           "stringUnit": {
             "state": "new",
-            "value": "For this setting to take effect you must disable \\\"Native full screen windows\\\" in Settings > General. If this setting is enabled, the menu bar will remain visible. This is useful for multi-monitor systems."
+            "value": "For this setting to take effect you must disable \"Native full screen windows\" in Settings > General. If this setting is enabled, the menu bar will remain visible. This is useful for multi-monitor systems."
           }
         },
         "zh-Hans": {
@@ -17234,7 +17234,7 @@
         "en": {
           "stringUnit": {
             "state": "new",
-            "value": "When enabled the 256-color mode colors (aside from the 16 ANSI colors) will be selected to visually match well with the 8 \\\"normal\\\" ANSI colors. Otherwise, the standard RGB cube is used. Changes to this setting take effect when new sessions are created or existing sessions are reset."
+            "value": "When enabled the 256-color mode colors (aside from the 16 ANSI colors) will be selected to visually match well with the 8 \"normal\" ANSI colors. Otherwise, the standard RGB cube is used. Changes to this setting take effect when new sessions are created or existing sessions are reset."
           }
         },
         "zh-Hans": {

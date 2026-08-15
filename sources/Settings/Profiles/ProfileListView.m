@@ -751,7 +751,7 @@ const CGFloat kDefaultTagsWidth = 80;
     } else if (aTableColumn == shortcutColumn_) {
         NSString* key = [bookmark objectForKey:KEY_SHORTCUT];
         if ([key length]) {
-            NSString *theString = [NSString stringWithFormat:@"^⌘%@", [bookmark objectForKey:KEY_SHORTCUT]];
+            NSString *theString = [NSString stringWithFormat:NSLocalizedString(@"^⌘%@", @"UI"), [bookmark objectForKey:KEY_SHORTCUT]];
             return [self attributedStringForString:theString
                                           selected:[[tableView_ selectedRowIndexes] containsIndex:rowIndex]];
         } else {

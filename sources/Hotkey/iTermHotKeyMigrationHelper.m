@@ -91,7 +91,7 @@
     if (childrensNames.count) {
         RLog(@"Warning about children of hotkey profile");
         NSString *concatenatedNames = [childrensNames componentsJoinedWithOxfordComma];
-        NSString *title = [NSString stringWithFormat:@"You have dynamic profiles whose “Dynamic Profile Parent Name” is set to your hotkey window's profile, “%@.” Because multiple hotkey windows are now supported, the hotkey will now toggle a separate window for each of these profiles. Please update your dynamic profiles appropriately. The affected profiles are:\n%@",
+        NSString *title = [NSString stringWithFormat:NSLocalizedString(@"You have dynamic profiles whose “Dynamic Profile Parent Name” is set to your hotkey window's profile, “%@.” Because multiple hotkey windows are now supported, the hotkey will now toggle a separate window for each of these profiles. Please update your dynamic profiles appropriately. The affected profiles are:\n%@", @"UI"),
                            profile[KEY_NAME], concatenatedNames];
         [iTermWarning showWarningWithTitle:title
                                    actions:@[ NSLocalizedString(@"OK", @"UI") ]
@@ -104,7 +104,7 @@
 
 - (void)migrateDynamicProfileHotKeySettings:(Profile *)profile {
     RLog(@"Have a dynamic profile to migrate");
-    NSString *title = [NSString stringWithFormat:@"Your hotkey window‘s profile is a dynamic profile named “%@.” It needs to be updated for this version of iTerm2 because hotkey settings are now stored in the profile.", profile[KEY_NAME]];
+    NSString *title = [NSString stringWithFormat:NSLocalizedString(@"Your hotkey window‘s profile is a dynamic profile named “%@.” It needs to be updated for this version of iTerm2 because hotkey settings are now stored in the profile.", @"UI"), profile[KEY_NAME]];
 
     NSArray *actions;
     NSData *replacementFile = [self modifiedDynamicProfileFileWithNewHotKeySettingsFromProfile:profile];
@@ -115,10 +115,10 @@
     if (replacementFile) {
         update = kiTermWarningSelection0;
         show = kiTermWarningSelection1;
-        actions = @[ @"Update File", @"Show Me What to Add", @"Remove Hotkey" ];
+        actions = @[ NSLocalizedString(@"Update File", @"UI"), NSLocalizedString(@"Show Me What to Add", @"UI"), NSLocalizedString(@"Remove Hotkey", @"UI") ];
     } else {
         show = kiTermWarningSelection0;
-        actions = @[ @"Show Me What to Add", @"Remove Hotkey" ];
+        actions = @[ NSLocalizedString(@"Show Me What to Add", @"UI"), NSLocalizedString(@"Remove Hotkey", @"UI") ];
     }
 
     iTermWarningSelection selection = [iTermWarning showWarningWithTitle:title
@@ -202,8 +202,8 @@
 
     }
     NSAlert *alert = [[[NSAlert alloc] init] autorelease];
-    alert.messageText = @"Changes to Make";
-    alert.informativeText = [NSString stringWithFormat:@"Add these settings to the profile named “%@” in “%@”:\n%@",
+    alert.messageText = NSLocalizedString(@"Changes to Make", @"UI");
+    alert.informativeText = [NSString stringWithFormat:NSLocalizedString(@"Add these settings to the profile named “%@” in “%@”:\n%@", @"UI"),
                              profile[KEY_NAME],
                              filename,
                              lines];

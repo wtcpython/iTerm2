@@ -111,11 +111,11 @@
 }
 
 - (NSString *)message {
-    return [NSString stringWithFormat:@"The profile “%@” always requires confirmation.", _name];
+    return [NSString stringWithFormat:NSLocalizedString(@"The profile “%@” always requires confirmation.", @"UI"), _name];
 }
 
 + (NSString *)groupFooter {
-    return @"You can change this setting in Settings > Profiles > Session";
+    return NSLocalizedString(@"You can change this setting in Settings > Profiles > Session", @"UI");
 }
 
 - (NSNumber *)priority {
@@ -150,20 +150,20 @@
 - (NSString *)message {
     const NSInteger maxJobsToList = 3;
     if (_jobs.count <= maxJobsToList) {
-        return [NSString stringWithFormat:@"A session with profile “%@” is running %@.",
+        return [NSString stringWithFormat:NSLocalizedString(@"A session with profile “%@” is running %@.", @"UI"),
                 _name,
                 [_jobs componentsJoinedWithOxfordComma]];
     } else {
-        return [NSString stringWithFormat:@"A session with profile “%@” is running %@, and %@ other %@.",
+        return [NSString stringWithFormat:NSLocalizedString(@"A session with profile “%@” is running %@, and %@ other %@.", @"UI"),
                 _name,
                 [[_jobs subarrayWithRange:NSMakeRange(0, maxJobsToList)] componentsJoinedByString:@", "],
                 @(_jobs.count - maxJobsToList),
-                _jobs.count == (maxJobsToList + 1) ? @"job" : @"jobs"];
+                _jobs.count == (maxJobsToList + 1) ? NSLocalizedString(@"job", @"UI") : NSLocalizedString(@"jobs", @"UI")];
     }
 }
 
 + (NSString *)groupFooter {
-    return @"You can change this setting in Settings > Profiles > Session";
+    return NSLocalizedString(@"You can change this setting in Settings > Profiles > Session", @"UI");
 }
 
 - (NSNumber *)priority {
@@ -219,27 +219,37 @@
 }
 
 + (instancetype)alwaysConfirmQuitPreferenceEnabled {
-    return [[[iTermPromptOnCloseMessageReason alloc] initWithMessage:@"“Settings > General > Closing > Confirm Quit iTerm2” is enabled and there is at least one terminal window." priority:100] autorelease];
+    NSString *message = [NSString stringWithFormat:NSLocalizedString(@"“%@ > %@” is enabled and there is at least one terminal window.", @"UI"),
+                         NSLocalizedString(@"Settings > General > Closing", @"UI"),
+                         NSLocalizedString(@"Confirm \"Quit iTerm2 (⌘Q)\"", @"UI")];
+    return [[[iTermPromptOnCloseMessageReason alloc] initWithMessage:message priority:100] autorelease];
 }
 
 + (instancetype)alwaysConfirmQuitPreferenceEvenIfThereAreNoWindowsEnabled {
-    return [[[iTermPromptOnCloseMessageReason alloc] initWithMessage:@"“Settings > General > Closing > Confirm Quit iTerm2” and “Even if there are no windows” is enabled." priority:100] autorelease];
+    NSString *message = [NSString stringWithFormat:NSLocalizedString(@"“%@ > %@” and “%@” is enabled.", @"UI"),
+                         NSLocalizedString(@"Settings > General > Closing", @"UI"),
+                         NSLocalizedString(@"Confirm \"Quit iTerm2 (⌘Q)\"", @"UI"),
+                         NSLocalizedString(@"Even if there are no windows", @"UI")];
+    return [[[iTermPromptOnCloseMessageReason alloc] initWithMessage:message priority:100] autorelease];
 }
 
 + (instancetype)closingMultipleSessionsPreferenceEnabled {
-    return [[[iTermPromptOnCloseMessageReason alloc] initWithMessage:@"“Settings > General > Closing > Confirm closing multiple sessions” is enabled." priority:90] autorelease];
+    NSString *message = [NSString stringWithFormat:NSLocalizedString(@"“%@ > %@” is enabled.", @"UI"),
+                         NSLocalizedString(@"Settings > General > Closing", @"UI"),
+                         NSLocalizedString(@"Confirm closing multiple sessions", @"UI")];
+    return [[[iTermPromptOnCloseMessageReason alloc] initWithMessage:message priority:90] autorelease];
 }
 
 + (instancetype)tmuxClientsAlwaysPromptBecauseJobsAreNotExposed {
-    return [[[iTermPromptOnCloseMessageReason alloc] initWithMessage:@"A tmux session is configured to prompt if jobs are running, but tmux doesn’t expose the process tree." priority:80] autorelease];
+    return [[[iTermPromptOnCloseMessageReason alloc] initWithMessage:NSLocalizedString(@"A tmux session is configured to prompt if jobs are running, but tmux doesn’t expose the process tree.", @"UI") priority:80] autorelease];
 }
 
 + (instancetype)sessionIsLocked {
-    return [[[iTermPromptOnCloseMessageReason alloc] initWithMessage:@"This pane is locked." priority:75] autorelease];
+    return [[[iTermPromptOnCloseMessageReason alloc] initWithMessage:NSLocalizedString(@"This pane is locked.", @"UI") priority:75] autorelease];
 }
 
 + (instancetype)tabIsPinnedWithNumber:(int)tabNumber {
-    NSString *const message = [NSString stringWithFormat:@"Tab #%d is pinned.", tabNumber];
+    NSString *const message = [NSString stringWithFormat:NSLocalizedString(@"Tab #%d is pinned.", @"UI"), tabNumber];
     return [[[iTermPromptOnCloseMessageReason alloc] initWithMessage:message priority:70] autorelease];
 }
 

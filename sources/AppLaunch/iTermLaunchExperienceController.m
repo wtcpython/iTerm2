@@ -220,7 +220,7 @@ typedef NS_ENUM(NSUInteger, iTermLaunchExperienceChoice) {
             command = @"pip3 install --user --upgrade iterm2";
         }
         dispatch_async(dispatch_get_main_queue(), ^{
-            NSString *message = [NSString stringWithFormat:@"The system Python's iterm2 module is out of date and won't work with this version of iTerm2. Run `%@` to fix it.", command];
+            NSString *message = [NSString stringWithFormat:NSLocalizedString(@"The system Python's iterm2 module is out of date and won't work with this version of iTerm2. Run `%@` to fix it.", @"UI"), command];
             const iTermWarningSelection selection =
             [iTermWarning showWarningWithTitle:message
                                        actions:@[ NSLocalizedString(@"Copy Command", @"UI"), NSLocalizedString(@"Ignore", @"UI"), NSLocalizedString(@"Remind me Later", @"UI")]

@@ -283,7 +283,7 @@ static NSInteger sWindowArrangementGeneration;
 }
 
 + (void)nameForNewArrangement:(void (^)(NSString *))completion {
-    [WindowArrangements showAlertWithText:@"Name for saved window arrangement:"
+    [WindowArrangements showAlertWithText:NSLocalizedString(@"Name for saved window arrangement:", @"UI")
                              defaultInput:[self nameForNewArrangement]
                               offerExport:NO
                                completion:^(NSString *name, iTermSavePanelItem *saveItem) {
@@ -293,8 +293,8 @@ static NSInteger sWindowArrangementGeneration;
         }
         if ([WindowArrangements hasWindowArrangement:name]) {
             NSAlert *alert = [[NSAlert alloc] init];
-            alert.messageText = @"Replace Existing Saved Window Arrangement?";
-            alert.informativeText = @"There is an existing saved window arrangement with this name. Would you like to replace it with the current arrangement?";
+            alert.messageText = NSLocalizedString(@"Replace Existing Saved Window Arrangement?", @"UI");
+            alert.informativeText = NSLocalizedString(@"There is an existing saved window arrangement with this name. Would you like to replace it with the current arrangement?", @"UI");
             [alert addButtonWithTitle:NSLocalizedString(@"Yes", @"UI")];
             [alert addButtonWithTitle:NSLocalizedString(@"No", @"UI")];
             if ([alert runModal] == NSAlertSecondButtonReturn) {
@@ -307,7 +307,7 @@ static NSInteger sWindowArrangementGeneration;
 }
 
 + (void)selectNameAndWhetherToIncludeContentsWithCompletion:(void (^)(NSString *name, iTermSavePanelItem *saveItem))completion {
-    [self showAlertWithText:@"Name for saved window arrangement:"
+    [self showAlertWithText:NSLocalizedString(@"Name for saved window arrangement:", @"UI")
                defaultInput:[self nameForNewArrangement]
                 offerExport:YES
                  completion:completion];
@@ -361,8 +361,8 @@ static NSInteger sWindowArrangementGeneration;
     NSDictionary *value = [dict[oldName] copy];
     if (dict[newName]) {
         NSAlert *alert = [[NSAlert alloc] init];
-        alert.messageText = @"Replace Arrangement?";
-        alert.informativeText = [NSString stringWithFormat:@"An arrangement named “%@” already exists. Would you like to replace it?", newName];
+        alert.messageText = NSLocalizedString(@"Replace Arrangement?", @"UI");
+        alert.informativeText = [NSString stringWithFormat:NSLocalizedString(@"An arrangement named “%@” already exists. Would you like to replace it?", @"UI"), newName];
         [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
         [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
         if ([alert runSheetModalForWindow:self.view.window] == NSAlertSecondButtonReturn) {

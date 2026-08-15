@@ -563,10 +563,10 @@ static NSString *kCommandTimestamp = @"timestamp";
 
 - (void)abortWithErrorForCurrentCommand {
     if ([self commandIsTmux21Quirk]) {
-        [self abortWithErrorMessage:[NSString stringWithFormat:@"Error: %@.\n\nTmux 2.1 and earlier will refuse to create a new window pane with a nonexistent initial working directory.\n\nInfo:\n%@",
+        [self abortWithErrorMessage:[NSString stringWithFormat:NSLocalizedString(@"Error: %@.\n\nTmux 2.1 and earlier will refuse to create a new window pane with a nonexistent initial working directory.\n\nInfo:\n%@", @"UI"),
                                      currentCommandResponse_, currentCommand_]];
     } else {
-        [self abortWithErrorMessage:[NSString stringWithFormat:@"Error: %@.\n\nInfo:\n%@", currentCommandResponse_, currentCommand_]];
+        [self abortWithErrorMessage:[NSString stringWithFormat:NSLocalizedString(@"Error: %@.\n\nInfo:\n%@", @"UI"), currentCommandResponse_, currentCommand_]];
     }
 }
 

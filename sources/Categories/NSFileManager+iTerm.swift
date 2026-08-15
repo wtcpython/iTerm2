@@ -17,7 +17,7 @@ extension FileManager {
         if fileExists(atPath: directoryPath, isDirectory: &isDir) && isDir.boolValue {
             return true
         }
-        let selection = iTermWarning.show(withTitle: "Would you like to create the directory at \(directoryPath)?",
+        let selection = iTermWarning.show(withTitle: String(format: NSLocalizedString("Would you like to create the directory at %@?", comment: "UI"), directoryPath),
                                           actions: [NSLocalizedString("OK", comment: "UI"), NSLocalizedString("Cancel", comment: "UI")],
                                           accessory: nil,
                                           identifier: "CreateDirectory_" + identifier,
@@ -32,7 +32,7 @@ extension FileManager {
                                     attributes: nil)
                 return true
             } catch {
-                let selection = iTermWarning.show(withTitle: "Failed to create \(directoryPath):\n\n\(error.localizedDescription)",
+                let selection = iTermWarning.show(withTitle: String(format: NSLocalizedString("Failed to create %@:\n\n%@", comment: "UI"), directoryPath, error.localizedDescription),
                                                   actions: ["Try Again", NSLocalizedString("Cancel", comment: "UI")],
                                                   accessory: nil,
                                                   identifier: nil,

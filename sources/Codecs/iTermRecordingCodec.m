@@ -35,7 +35,7 @@
     NSError *error = nil;
     NSData *gzipped = [NSData dataWithContentsOfURL:url options:0 error:&error];
     if (!gzipped) {
-        [iTermWarning showWarningWithTitle:error.localizedDescription ?: @"Unknown error"
+        [iTermWarning showWarningWithTitle:error.localizedDescription ?: NSLocalizedString(@"Unknown error", @"UI")
                                    actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                  accessory:nil
                                 identifier:@"RecordingMalformed"

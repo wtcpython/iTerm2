@@ -446,7 +446,7 @@ static NSString *const iTermSnippetsEditingPasteboardType = @"com.googlecode.ite
                                  accessory:nil
                                 identifier:@"NoSyncImportSnippetsFailed"
                                silenceable:kiTermWarningTypePersistent
-                                   heading:[NSString stringWithFormat:@"Import Failed"]
+                                   heading:NSLocalizedString(@"Import Failed", @"UI")
                                     window:self.view.window];
         return;
     }
@@ -458,7 +458,7 @@ static NSString *const iTermSnippetsEditingPasteboardType = @"com.googlecode.ite
                                  accessory:nil
                                 identifier:@"NoSyncImportSnippetsFailed"
                                silenceable:kiTermWarningTypePersistent
-                                   heading:[NSString stringWithFormat:@"Import Failed"]
+                                   heading:NSLocalizedString(@"Import Failed", @"UI")
                                     window:self.view.window];
         return;
     }
@@ -491,7 +491,7 @@ static NSString *const iTermSnippetsEditingPasteboardType = @"com.googlecode.ite
                              accessory:nil
                             identifier:@"NoSyncSnippetEncodingError"
                            silenceable:kiTermWarningTypePersistent
-                               heading:[NSString stringWithFormat:@"Import Failed"]
+                               heading:NSLocalizedString(@"Import Failed", @"UI")
                                 window:self.view.window];
 }
 
@@ -513,7 +513,7 @@ static NSString *const iTermSnippetsEditingPasteboardType = @"com.googlecode.ite
                                      accessory:nil
                                     identifier:@"NoSyncSnippetWritingError"
                                    silenceable:kiTermWarningTypePersistent
-                                       heading:[NSString stringWithFormat:@"Export Failed"]
+                                       heading:NSLocalizedString(@"Export Failed", @"UI")
                                         window:self.view.window];
         } else {
             [item revealInFinderIfLocal];

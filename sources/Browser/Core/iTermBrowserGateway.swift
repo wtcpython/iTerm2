@@ -107,7 +107,7 @@ class iTermBrowserGateway: NSObject {
 
     @objc
     static func offerPlugin() {
-        let selection = iTermWarning.show(withTitle: "You must install the Browser Plugin first. Download it now?",
+        let selection = iTermWarning.show(withTitle: NSLocalizedString("You must install the Browser Plugin first. Download it now?", comment: "UI"),
                                           actions: [NSLocalizedString("OK", comment: "UI"), NSLocalizedString("Cancel", comment: "UI")],
                                           accessory: nil,
                                           identifier: nil,

@@ -482,7 +482,7 @@
     NSURL *folder = [[[NSURL fileURLWithPath:_selectedScriptItem.path] URLByDeletingLastPathComponent] URLByAppendingPathComponent:name];
     if ([[NSFileManager defaultManager] fileExistsAtPath:folder.path]) {
         iTermWarning *warning = [[iTermWarning alloc] init];
-        warning.title = [NSString stringWithFormat:@"Can’t upgrade because %@ already exists", folder.path];
+        warning.title = [NSString stringWithFormat:NSLocalizedString(@"Can’t upgrade because %@ already exists", @"UI"), folder.path];
         warning.heading = @"Error";
         warning.actionLabels = @[ NSLocalizedString(@"OK", @"UI") ];
         warning.warningType = kiTermWarningTypePersistent;
@@ -505,8 +505,8 @@
                 return;
             }
             NSAlert *alert = [[NSAlert alloc] init];
-            alert.messageText = @"Installation Failed";
-            alert.informativeText = [NSString stringWithFormat:@"Please file a bug report at https://iterm2.com/bugs. The following error occurred while upgrading a dependency: %@", errorStatus.localizedDescription];
+            alert.messageText = NSLocalizedString(@"Installation Failed", @"UI");
+            alert.informativeText = [NSString stringWithFormat:NSLocalizedString(@"Please file a bug report at https://iterm2.com/bugs. The following error occurred while upgrading a dependency: %@", @"UI"), errorStatus.localizedDescription];
             [alert runModal];
             return;
         }
@@ -548,8 +548,8 @@
                                  error:&error];
     if (error) {
         NSAlert *alert = [[NSAlert alloc] init];
-        alert.messageText = @"Installation Failed";
-        alert.informativeText = [NSString stringWithFormat:@"Error creating %@: %@", innerFolder, error.localizedDescription];
+        alert.messageText = NSLocalizedString(@"Installation Failed", @"UI");
+        alert.informativeText = [NSString stringWithFormat:NSLocalizedString(@"Error creating %@: %@", @"UI"), innerFolder, error.localizedDescription];
         [alert runModal];
         return;
     }
@@ -561,8 +561,8 @@
                           error:&error];
     if (error) {
         NSAlert *alert = [[NSAlert alloc] init];
-        alert.messageText = @"Installation Failed";
-        alert.informativeText = [NSString stringWithFormat:@"Error moving %@ to %@: %@", item.path, destination, error.localizedDescription];
+        alert.messageText = NSLocalizedString(@"Installation Failed", @"UI");
+        alert.informativeText = [NSString stringWithFormat:NSLocalizedString(@"Error moving %@ to %@: %@", @"UI"), item.path, destination, error.localizedDescription];
         [alert runModal];
         return;
     }
@@ -723,8 +723,8 @@
             [strongSelf setEditingControlsEnabled:YES];
             if (error != nil && ![iTermUvProvisioner isCancelationError:error]) {
                 NSAlert *alert = [[NSAlert alloc] init];
-                alert.messageText = @"Could Not Change Python Version";
-                alert.informativeText = error.localizedDescription ?: @"Unknown error";
+                alert.messageText = NSLocalizedString(@"Could Not Change Python Version", @"UI");
+                alert.informativeText = error.localizedDescription ?: NSLocalizedString(@"Unknown error", @"UI");
                 [alert runModal];
             }
             // Refresh the editor from the (rebuilt) environment and setup.cfg.

@@ -4396,7 +4396,7 @@ static NSString *iTermStringForEventPhase(NSEventPhase eventPhase) {
     NSString *formattedDate = [dateFormatter stringFromDate:[NSDate date]];
     // Stupid mac os can't have colons in filenames
     formattedDate = [formattedDate stringByReplacingOccurrencesOfString:@":" withString:@"-"];
-    NSString *nowStr = [NSString stringWithFormat:@"Log at %@.txt", formattedDate];
+    NSString *nowStr = [NSString stringWithFormat:NSLocalizedString(@"Log at %@.txt", @"UI"), formattedDate];
 
     // Show the save panel. The first time it's done set the path, and from then on the save panel
     // will remember the last path you used.tmp
@@ -5206,13 +5206,13 @@ static NSString *iTermStringForEventPhase(NSEventPhase eventPhase) {
         return NO;
     }
     if (files.count == 1) {
-        text = [NSString stringWithFormat:@"OK to %@\n%@\nto\n%@@%@:%@?",
-                useSSHIntegration ? @"copy" : @"scp",
+        text = [NSString stringWithFormat:NSLocalizedString(@"OK to %@\n%@\nto\n%@@%@:%@?", @"UI"),
+                useSSHIntegration ? NSLocalizedString(@"copy", @"UI") : NSLocalizedString(@"scp", @"UI"),
                 [files componentsJoinedByString:@", "],
                 path.username, path.hostname, path.path];
     } else {
-        text = [NSString stringWithFormat:@"OK to %@ the following files:\n%@\n\nto\n%@@%@:%@?",
-                useSSHIntegration ? @"copy" : @"scp",
+        text = [NSString stringWithFormat:NSLocalizedString(@"OK to %@ the following files:\n%@\n\nto\n%@@%@:%@?", @"UI"),
+                useSSHIntegration ? NSLocalizedString(@"copy", @"UI") : NSLocalizedString(@"scp", @"UI"),
                 [files componentsJoinedByString:@", "],
                 path.username, path.hostname, path.path];
     }

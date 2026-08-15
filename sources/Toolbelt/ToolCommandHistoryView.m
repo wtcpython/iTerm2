@@ -360,8 +360,8 @@ static const CGFloat kHelpMargin = 5;
 
 - (void)clear:(id)sender {
     NSAlert *alert = [[NSAlert alloc] init];
-    alert.messageText = @"Erase Command History";
-    alert.informativeText = @"Command history for all hosts will be erased. Continue?";
+    alert.messageText = NSLocalizedString(@"Erase Command History", @"UI");
+    alert.informativeText = NSLocalizedString(@"Command history for all hosts will be erased. Continue?", @"UI");
     [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
     [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
     if ([alert runModal] == NSAlertFirstButtonReturn) {

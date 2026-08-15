@@ -554,12 +554,12 @@ static BOOL iTermAPIHelperLastApplescriptAuthRequiredSetting;
 }
 
 + (void)reportFunctionCallError:(NSError *)error forInvocation:(NSString *)invocation origin:(NSString *)origin window:(NSWindow *)window {
-    NSString *message = [NSString stringWithFormat:@"Error running “%@”:\n%@",
+    NSString *message = [NSString stringWithFormat:NSLocalizedString(@"Error running “%@”:\n%@", @"UI"),
                          invocation, error.localizedDescription];
     NSString *traceback = error.localizedFailureReason;
     NSArray *actions = @[ NSLocalizedString(@"OK", @"UI") ];
     if (traceback) {
-        actions = [actions arrayByAddingObject:@"Reveal in Script Console"];
+        actions = [actions arrayByAddingObject:NSLocalizedString(@"Reveal in Script Console", @"UI")];
     }
     NSString *connectionKey = error.userInfo[iTermAPIHelperFunctionCallErrorUserInfoKeyConnection];
     iTermScriptHistoryEntry *entry = [[iTermScriptHistory sharedInstance] entryWithIdentifier:connectionKey];
@@ -573,7 +573,7 @@ static BOOL iTermAPIHelperLastApplescriptAuthRequiredSetting;
                                                                accessory:nil
                                                               identifier:@"NoSyncFunctionCallError"
                                                              silenceable:kiTermWarningTypeTemporarilySilenceable
-                                                                 heading:[NSString stringWithFormat:@"%@ Function Call Failed", origin]
+                                                                  heading:[NSString stringWithFormat:NSLocalizedString(@"%@ Function Call Failed", @"UI"), origin]
                                                                   window:window];
     if (selection == kiTermWarningSelection1) {
         [[iTermScriptConsole sharedInstance] revealTailOfHistoryEntry:entry];
@@ -1551,15 +1551,15 @@ static BOOL iTermAPIHelperLastApplescriptAuthRequiredSetting;
     }
 
     NSString *message =
-        @"Another process is trying to use the iTerm2 API. The API allows a script to control iTerm2 and view and modify its contents. Allow the connection?";
+        NSLocalizedString(@"Another process is trying to use the iTerm2 API. The API allows a script to control iTerm2 and view and modify its contents. Allow the connection?", @"UI");
 
     if ([iTermAdvancedSettingsModel setCookie]) {
-        message = [NSString stringWithFormat:@"%@\n\nAlthough you have chosen to allow connections automatically, this script has not presented a valid cookie.", message];
+        message = [NSString stringWithFormat:NSLocalizedString(@"%@\n\nAlthough you have chosen to allow connections automatically, this script has not presented a valid cookie.", @"UI"), message];
     }
 
     NSArray<NSString *> *actions = @[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI"), NSLocalizedString(@"More Info", @"UI") ];
     if (![iTermAdvancedSettingsModel setCookie]) {
-        actions = [actions arrayByAddingObject:@"Always"];
+        actions = [actions arrayByAddingObject:NSLocalizedString(@"Always", @"UI")];
     }
     const iTermWarningSelection selection =
     [iTermWarning showWarningWithTitle:message

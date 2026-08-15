@@ -324,7 +324,7 @@ typedef enum {
         case kMiddleButton:
             return @"Middle button";
         default:
-            return [NSString stringWithFormat:@"Button #%d", n+1];
+            return [NSString stringWithFormat:NSLocalizedString(@"Button #%d", @"UI"), n+1];
     }
 }
 
@@ -376,7 +376,7 @@ typedef enum {
             return action;
         }
     }
-    return [NSString stringWithFormat:@"Bad name: %@", localizedName];
+    return [NSString stringWithFormat:NSLocalizedString(@"Bad name: %@", @"UI"), localizedName];
 }
 
 + (NSString *)gestureIdentifierForTag:(int)tag
@@ -395,7 +395,7 @@ typedef enum {
         case kForceTouchSingleClickTag:
             return kForceTouchSingleClick;
         default:
-            return [NSString stringWithFormat:@"Bad tag %d", tag];
+            return [NSString stringWithFormat:NSLocalizedString(@"Bad tag %d", @"UI"), tag];
     }
 }
 
@@ -525,7 +525,7 @@ typedef enum {
                 if (!title.length) {
                     break;
                 }
-                return [NSString stringWithFormat:@"Select Menu Item “%@”", title];
+                return [NSString stringWithFormat:NSLocalizedString(@"Select Menu Item “%@”", @"UI"), title];
             }
         }
     }
@@ -916,7 +916,7 @@ typedef enum {
             [editArgumentButton_ setHidden:YES];
             _menuItemPopupView.hidden = YES;
             [editArgumentLabel_ setStringValue:NSLocalizedString(@"Esc +", @"UI")];
-            [[editArgumentField_ cell] setPlaceholderString:@"characters to send"];
+            [[editArgumentField_ cell] setPlaceholderString:NSLocalizedString(@"characters to send", @"UI")];
             [editArgumentField_ setStringValue:currentArg];
             [editArgumentField_ setRefusesFirstResponder:NO];
             [editArgumentField_ setSelectable:YES];
@@ -931,7 +931,7 @@ typedef enum {
             [editArgumentButton_ setHidden:YES];
             _menuItemPopupView.hidden = YES;
             [editArgumentLabel_ setStringValue:NSLocalizedString(@"Hex codes:", @"UI")];
-            [[editArgumentField_ cell] setPlaceholderString:@"ex: 0x7f 0x20"];
+            [[editArgumentField_ cell] setPlaceholderString:NSLocalizedString(@"ex: 0x7f 0x20", @"UI")];
             [editArgumentField_ setStringValue:currentArg];
             _pasteSpecialViewContainer.hidden = YES;
             editArgumentField_.delegate = nil;
@@ -944,7 +944,7 @@ typedef enum {
             [editArgumentButton_ setHidden:YES];
             _menuItemPopupView.hidden = YES;
             [editArgumentLabel_ setStringValue:NSLocalizedString(@"Text:", @"UI")];
-            [[editArgumentField_ cell] setPlaceholderString:@"Enter value to send"];
+            [[editArgumentField_ cell] setPlaceholderString:NSLocalizedString(@"Enter value to send", @"UI")];
             [editArgumentField_ setStringValue:currentArg];
             _pasteSpecialViewContainer.hidden = YES;
             editArgumentField_.delegate = nil;
@@ -957,7 +957,7 @@ typedef enum {
             [editArgumentButton_ setHidden:YES];
             _menuItemPopupView.hidden = YES;
             [editArgumentLabel_ setStringValue:NSLocalizedString(@"Text:", @"UI")];
-            [[editArgumentField_ cell] setPlaceholderString:@"Enter function invocation"];
+            [[editArgumentField_ cell] setPlaceholderString:NSLocalizedString(@"Enter function invocation", @"UI")];
             [editArgumentField_ setStringValue:currentArg];
             _pasteSpecialViewContainer.hidden = YES;
             _invocationDelegate = [[iTermFunctionCallTextFieldDelegate alloc] initWithPathSource:[iTermVariableHistory pathSourceForContext:iTermVariablesSuggestionContextSession]

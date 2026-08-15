@@ -311,7 +311,7 @@ class CodeReviewPromptView: iTermLayerBackedSolidColorView {
         let alert = NSAlert()
         alert.messageText = NSLocalizedString("Name this prompt", comment: "UI")
         alert.informativeText =
-            "Saved prompts can be re-loaded from the Prompts pulldown."
+            NSLocalizedString("Saved prompts can be re-loaded from the Prompts pulldown.", comment: "UI")
         alert.addButton(withTitle: NSLocalizedString("Save", comment: "UI"))
         alert.addButton(withTitle: NSLocalizedString("Cancel", comment: "UI"))
 

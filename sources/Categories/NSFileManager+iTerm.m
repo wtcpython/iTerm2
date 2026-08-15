@@ -147,7 +147,7 @@ NSString * const DirectoryLocationDomain = @"DirectoryLocationDomain";
                                      accessory:nil
                                     identifier:@"NoSyncAppSupportFail"
                                    silenceable:kiTermWarningTypePersistent
-                                       heading:@"Problem with Application Support Directory"
+                                       heading:NSLocalizedString(@"Problem with Application Support Directory", @"UI")
                                         window:nil];
         });
     }
@@ -391,7 +391,7 @@ NSString * const DirectoryLocationDomain = @"DirectoryLocationDomain";
                                      accessory:nil
                                     identifier:@"NoSyncErrorCreatingConfigFolder"
                                    silenceable:kiTermWarningTypePersistent
-                                       heading:@"Problem Creating Config Folder"
+                                       heading:NSLocalizedString(@"Problem Creating Config Folder", @"UI")
                                         window:nil];
         });
     }

@@ -133,7 +133,7 @@ static NSString *kCommandTimestamp = @"timestamp";
         NSAlert *alert = [[NSAlert alloc] init];
         alert.messageText = title;
         alert.informativeText = message;
-        [alert addButtonWithTitle:@"OK"];
+        [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
         [alert runModal];
     });
     [self detach];

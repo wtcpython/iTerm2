@@ -414,7 +414,7 @@ didCompleteWithError:(nullable NSError *)error {
     // and it routes through the phase-cancel/completion logic correctly.
     self.window.styleMask &= ~NSWindowStyleMaskClosable;
 
-    _titleLabel.stringValue = @"Initializing…";
+    _titleLabel.stringValue = NSLocalizedString(@"Initializing…", @"UI");
     _progressLabel.stringValue = [NSString stringWithFormat:@""];
 }
 
@@ -443,7 +443,7 @@ didCompleteWithError:(nullable NSError *)error {
     [phase download];
     _progressLabel.stringValue = phase.progressString;
     _button.enabled = phase.buttonEnabled;
-    _button.title = @"Cancel";
+    _button.title = NSLocalizedString(@"Cancel", @"UI");
 }
 
 - (void)showMessage:(NSString *)message {
@@ -452,7 +452,7 @@ didCompleteWithError:(nullable NSError *)error {
     _titleLabel.stringValue = message;
     _progressLabel.stringValue = @"";
     _button.enabled = YES;
-    _button.title = @"OK";
+    _button.title = NSLocalizedString(@"OK", @"UI");
 }
 
 - (IBAction)button:(id)sender {
@@ -471,13 +471,13 @@ didCompleteWithError:(nullable NSError *)error {
 - (void)downloadDidFailWithError:(NSError *)error {
     RLog(@"error=%@ %@", error, self);
     _button.enabled = YES;
-    _button.title = @"Try Again";
+    _button.title = NSLocalizedString(@"Try Again", @"UI");
     if (error.code == -999 && [error.domain isEqualToString:@"com.iterm2"]) {
-        _progressLabel.stringValue = @"Canceled";
+        _progressLabel.stringValue = NSLocalizedString(@"Canceled", @"UI");
         _titleLabel.stringValue = @"";
     } else {
         _progressLabel.stringValue = error.localizedDescription;
-        _titleLabel.stringValue = @"Download Failed";
+        _titleLabel.stringValue = NSLocalizedString(@"Download Failed", @"UI");
     }
     _progressIndicator.doubleValue = 0;
     iTermOptionalComponentDownloadPhase *phase = _currentPhase;

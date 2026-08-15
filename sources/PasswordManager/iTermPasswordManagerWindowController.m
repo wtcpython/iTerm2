@@ -214,7 +214,7 @@ static NSArray<NSString *> *gTerminalCachedCombinedAccountNames;
         NSMenu *menu = _settingsButton.menu;
         NSInteger index = [menu indexOfItemWithTarget:self andAction:@selector(useBitwarden:)];
         if (index != -1) {
-            NSMenuItem *item = [[NSMenuItem alloc] initWithTitle:@"Test Adapter (Dev)"
+            NSMenuItem *item = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Test Adapter (Dev)", @"Menu")
                                                           action:@selector(useTestAdapter:)
                                                    keyEquivalent:@""];
             item.tag = 1;
@@ -255,13 +255,13 @@ static NSArray<NSString *> *gTerminalCachedCombinedAccountNames;
 
     if (_sendUserByDefault && _didSendUserName == nil) {
         _secondaryButton.hidden = YES;
-        _defaultButton.title = @"Enter User Name";
+        _defaultButton.title = NSLocalizedString(@"Enter User Name", @"UI");
     } else {
         _secondaryButton.hidden = NO;
         if (_didSendUserName) {
-            _defaultButton.title = @"Enter Username & Password";
+            _defaultButton.title = NSLocalizedString(@"Enter Username & Password", @"UI");
         } else {
-            _defaultButton.title = @"Enter Password";
+            _defaultButton.title = NSLocalizedString(@"Enter Password", @"UI");
         }
     }
 
@@ -710,8 +710,8 @@ static NSArray<NSString *> *gTerminalCachedCombinedAccountNames;
 - (BOOL)shouldRemoveSelection {
     NSAlert *alert = [[NSAlert alloc] init];
     alert.messageText = @"Are you sure you want to delete this password?";
-    [alert addButtonWithTitle:@"OK"];
-    [alert addButtonWithTitle:@"Cancel"];
+    [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
+    [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
     return [alert runSheetModalForWindow:self.window] == NSAlertFirstButtonReturn;
 }
 
@@ -726,9 +726,9 @@ static NSArray<NSString *> *gTerminalCachedCombinedAccountNames;
         @autoreleasepool {
             NSAlert *alert = [[NSAlert alloc] init];
             alert.messageText = [NSString stringWithFormat:@"Enter password for %@:", accountName];
-            [alert addButtonWithTitle:@"OK"];
-            [alert addButtonWithTitle:@"Generate"];
-            [alert addButtonWithTitle:@"Cancel"];
+            [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
+            [alert addButtonWithTitle:NSLocalizedString(@"Generate", @"UI")];
+            [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
 
             NSSecureTextField *newPassword = [[NSSecureTextField alloc] initWithFrame:NSMakeRect(0, 0, 200, 24)];
             newPassword.editable = YES;
@@ -901,8 +901,8 @@ static NSArray<NSString *> *gTerminalCachedCombinedAccountNames;
 
     NSAlert *alert = [[NSAlert alloc] init];
     alert.messageText = [NSString stringWithFormat:@"%@ Settings", [self currentDataSource].name];
-    [alert addButtonWithTitle:@"OK"];
-    [alert addButtonWithTitle:@"Cancel"];
+    [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
+    [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
 
     const CGFloat width = 560;
     const CGFloat rowHeight = 22;
@@ -1056,7 +1056,7 @@ static NSArray<NSString *> *gTerminalCachedCombinedAccountNames;
                     NSAlert *alert = [[NSAlert alloc] init];
                     alert.messageText = @"Command Failed";
                     alert.informativeText = info;
-                    [alert addButtonWithTitle:@"OK"];
+                    [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
                     [alert runModal];
                 } else {
                     [weakSelf reloadItems:nil];
@@ -1064,7 +1064,7 @@ static NSArray<NSString *> *gTerminalCachedCombinedAccountNames;
                         NSAlert *alert = [[NSAlert alloc] init];
                         alert.messageText = commandName;
                         alert.informativeText = message;
-                        [alert addButtonWithTitle:@"OK"];
+                        [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
                         [alert runModal];
                     }
                 }
@@ -1160,8 +1160,8 @@ static NSArray<NSString *> *gTerminalCachedCombinedAccountNames;
     NSAlert *alert = [[NSAlert alloc] init];
     alert.messageText = [NSString stringWithFormat:@"Password for %@", accountName];
     alert.informativeText = password;
-    [alert addButtonWithTitle:@"OK"];
-    [alert addButtonWithTitle:@"Copy"];
+    [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
+    [alert addButtonWithTitle:NSLocalizedString(@"Copy", @"UI")];
 
     __weak __typeof(self) weakSelf = self;
     [self runModal:alert completion:^(NSModalResponse response) {
@@ -1241,7 +1241,7 @@ static NSInteger const kDynamicMenuItemTag = 9999;
     BOOL addedAny = NO;
 
     if (adapter.hasSettingsFields) {
-        NSMenuItem *settingsItem = [[NSMenuItem alloc] initWithTitle:@"Settings\u2026"
+        NSMenuItem *settingsItem = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Settings…", @"Menu")
                                                               action:@selector(adapterSettings:)
                                                        keyEquivalent:@""];
         settingsItem.target = self;
@@ -1325,7 +1325,7 @@ static NSInteger const kDynamicMenuItemTag = 9999;
         if (allowed) {
             menuItem.title = [NSString stringWithFormat:@"Reset %@ Configuration", [[self currentDataSource] name]];
         } else {
-            menuItem.title = @"Reset Integration Configuration";
+            menuItem.title = NSLocalizedString(@"Reset Integration Configuration", @"UI");
         }
         return allowed;
     } else if (menuItem.action == @selector(editAccountName:) ||
@@ -1487,7 +1487,7 @@ static NSInteger const kDynamicMenuItemTag = 9999;
                 NSAlert *alert = [[NSAlert alloc] init];
                 alert.messageText = [NSString stringWithFormat:@"Could not get password. Keychain query failed: %@",
                                      error.localizedDescription];
-                [alert addButtonWithTitle:@"OK"];
+                [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
                 [self runModal:alert completion:^(NSModalResponse response) { }];
                 completion(nil, nil);
             } else {

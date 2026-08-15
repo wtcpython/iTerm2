@@ -57,7 +57,7 @@ static const CGFloat kMargin = 4;
             clear_.frame = NSMakeRect(0, 0, 22, 22);
         } else {
             [clear_ setButtonType:NSButtonTypeMomentaryPushIn];
-            [clear_ setTitle:@"Clear All"];
+            [clear_ setTitle:NSLocalizedString(@"Clear All", @"Menu")];
             [clear_ setBezelStyle:NSBezelStyleSmallSquare];
             [clear_ sizeToFit];
         }
@@ -67,7 +67,7 @@ static const CGFloat kMargin = 4;
         [self addSubview:clear_];
 
         _secureKeyboardEntryWarning = [NSTextField newLabelStyledTextField];
-        _secureKeyboardEntryWarning.stringValue = @"⚠️ Secure keyboard entry disables paste history.";
+        _secureKeyboardEntryWarning.stringValue = NSLocalizedString(@"⚠️ Secure keyboard entry disables paste history.", @"UI");
         _secureKeyboardEntryWarning.font = [NSFont systemFontOfSize:[NSFont smallSystemFontSize]];
         _secureKeyboardEntryWarning.cell.truncatesLastVisibleLine = YES;
         _secureKeyboardEntryWarning.hidden = ![[iTermSecureKeyboardEntryController sharedInstance] isEnabled];
@@ -103,13 +103,13 @@ static const CGFloat kMargin = 4;
         _tableView.menu = [[NSMenu alloc] init];
         _tableView.menu.delegate = self;
         NSMenuItem *item;
-        item = [[NSMenuItem alloc] initWithTitle:@"Copy"
+        item = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Copy", @"Menu")
                                           action:@selector(copySelection:)
                                    keyEquivalent:@""];
         item.target = self;
         [_tableView.menu addItem:item];
 
-        item = [[NSMenuItem alloc] initWithTitle:@"Open in Advanced Paste"
+        item = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Open in Advanced Paste", @"Menu")
                                           action:@selector(openInAdvancedPaste:)
                                    keyEquivalent:@""];
         item.target = self;
@@ -293,8 +293,8 @@ static const CGFloat kMargin = 4;
     NSAlert *alert = [[NSAlert alloc] init];
     alert.messageText = @"Erase Paste History";
     alert.informativeText = @"Paste history will be erased. Continue?";
-    [alert addButtonWithTitle:@"OK"];
-    [alert addButtonWithTitle:@"Cancel"];
+    [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
+    [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
     if ([alert runModal] == NSAlertFirstButtonReturn) {
         [pasteHistory_ eraseHistory];
         [pasteHistory_ clear];

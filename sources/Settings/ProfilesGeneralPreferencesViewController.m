@@ -839,9 +839,9 @@ static NSString *const iTermProfilePreferencesUpdateSessionName = @"iTermProfile
     [super updateBrowserSpecific];
     NSMenuItem *item = [_icon.menu itemWithTag:iTermProfileIconAutomatic];
     if ([[self stringForKey:KEY_CUSTOM_COMMAND] isEqualToString:kProfilePreferenceCommandTypeBrowserValue]) {
-        item.title = @"Favicon";
+        item.title = NSLocalizedString(@"Favicon", @"UI");
     } else {
-        item.title = @"Built-in Icon for Current App";
+        item.title = NSLocalizedString(@"Built-in Icon for Current App", @"UI");
     }
 }
 
@@ -912,7 +912,7 @@ static NSString *const iTermProfilePreferencesUpdateSessionName = @"iTermProfile
     NSAlert *alert = [[NSAlert alloc] init];
     alert.messageText = @"Plugin Invalid";
     alert.informativeText = error;
-    [alert addButtonWithTitle:@"OK"];
+    [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
     [alert runSheetModalForWindow:self.view.window];
 }
 
@@ -1029,12 +1029,12 @@ static NSString *const iTermProfilePreferencesUpdateSessionName = @"iTermProfile
             NSString *rhs = obj2[@"CFBundleURLSchemes"][0];
             return [lhs compare:rhs];
         }];
-        [_urlSchemes addItemWithTitle:@"Select URL Schemes…"];
+        [_urlSchemes addItemWithTitle:NSLocalizedString(@"Select URL Schemes…", @"Menu")];
         for (NSDictionary *dict in urlArray) {
             NSString *scheme = dict[@"CFBundleURLSchemes"][0];
             [_urlSchemes addItemWithTitle:scheme];
         }
-        [_urlSchemes setTitle:@"Select URL Schemes…"];
+        [_urlSchemes setTitle:NSLocalizedString(@"Select URL Schemes…", @"Menu")];
     }
 
     [[_urlSchemes menu] setAutoenablesItems:YES];

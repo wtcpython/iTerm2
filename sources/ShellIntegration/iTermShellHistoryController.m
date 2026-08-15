@@ -371,10 +371,10 @@ static NSString *iTermShellIntegrationRemoteHostKey(id<VT100RemoteHostReading> s
         @"Select Output of Last Command, "
         @"and Automatic Profile Switching, "
         @"your shell must be properly configured.";
-    [alert addButtonWithTitle:@"Learn More…"];
-    [alert addButtonWithTitle:@"OK"];
+    [alert addButtonWithTitle:NSLocalizedString(@"Learn More…", @"UI")];
+    [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
     if (firstResponder) {
-        [alert addButtonWithTitle:@"Install Now"];
+        [alert addButtonWithTitle:NSLocalizedString(@"Install Now", @"UI")];
     }
     [alert beginSheetModalForWindow:window completionHandler:^(NSModalResponse returnCode) {
         switch (returnCode) {

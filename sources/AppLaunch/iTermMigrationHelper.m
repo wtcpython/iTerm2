@@ -146,9 +146,9 @@
         [unfucker layout];
         alert.accessoryView = unfucker;
 
-        [alert addButtonWithTitle:@"Open in Finder"];
-        [alert addButtonWithTitle:@"I Fixed It"];
-        [alert addButtonWithTitle:@"Not Now"];
+        [alert addButtonWithTitle:NSLocalizedString(@"Open in Finder", @"UI")];
+        [alert addButtonWithTitle:NSLocalizedString(@"I Fixed It", @"UI")];
+        [alert addButtonWithTitle:NSLocalizedString(@"Not Now", @"UI")];
         switch ([alert runModal]) {
             case NSAlertFirstButtonReturn:
                 [[NSWorkspace sharedWorkspace] activateFileViewerSelectingURLs:@[ [NSURL fileURLWithPath:legacy],

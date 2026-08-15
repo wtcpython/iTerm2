@@ -82,8 +82,8 @@ static NSString *const kOldStyleUrlHandlersUserDefaultsKey = @"URLHandlers";
                              @"Would you like to set iTerm as the default handler?",
                              scheme];
         alert.informativeText = @"There is currently no handler.";
-        [alert addButtonWithTitle:@"OK"];
-        [alert addButtonWithTitle:@"Cancel"];
+        [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
+        [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
         set = ([alert runModal] == NSAlertFirstButtonReturn);
     } else if (![[[NSFileManager defaultManager] displayNameAtPath:[appURL path]] isEqualToString:@"iTerm 2"]) {
         NSString *theTitle = [NSString stringWithFormat:@"iTerm is not the default handler for %@. "
@@ -92,8 +92,8 @@ static NSString *const kOldStyleUrlHandlersUserDefaultsKey = @"URLHandlers";
         alert.messageText = theTitle;
         alert.informativeText = [NSString stringWithFormat:@"The current handler is: %@",
                                  [[NSFileManager defaultManager] displayNameAtPath:[appURL path]]];
-        [alert addButtonWithTitle:@"OK"];
-        [alert addButtonWithTitle:@"Cancel"];
+        [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
+        [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
         set = ([alert runModal] == NSAlertFirstButtonReturn);
     }
 
@@ -177,8 +177,8 @@ static NSString *const kOldStyleUrlHandlersUserDefaultsKey = @"URLHandlers";
     NSAlert *alert = [[[NSAlert alloc] init] autorelease];
     alert.messageText = [NSString stringWithFormat:@"There is no application set to open the document “%@”", [fullPath lastPathComponent]];
     alert.informativeText = @"Choose an application on your computer to open this file.";
-    [alert addButtonWithTitle:@"Choose Application…"];
-    [alert addButtonWithTitle:@"Cancel"];
+    [alert addButtonWithTitle:NSLocalizedString(@"Choose Application…", @"UI")];
+    [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
 
     DLog(@"Offer to pick an app to open %@", fullPath);
     if ([alert runModal] == NSAlertFirstButtonReturn) {

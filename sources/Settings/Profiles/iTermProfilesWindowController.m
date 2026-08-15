@@ -435,20 +435,20 @@ typedef enum {
 
     int count = [[profileTable selectedGuids] count];
     if (count == 1) {
-        [menu addItemWithTitle:@"Edit Profile..."
+        [menu addItemWithTitle:NSLocalizedString(@"Edit Profile...", @"Menu")
                         action:@selector(editSelectedBookmark:)
                  keyEquivalent:@""];
-        [menu addItemWithTitle:@"Open in New Tab"
+        [menu addItemWithTitle:NSLocalizedString(@"Open in New Tab", @"Menu")
                         action:@selector(openBookmarkInTab:)
                  keyEquivalent:@""];
-        [menu addItemWithTitle:@"Open in New Window"
+        [menu addItemWithTitle:NSLocalizedString(@"Open in New Window", @"Menu")
                         action:@selector(openBookmarkInWindow:)
                  keyEquivalent:@""];
     } else if (count > 1) {
-        [menu addItemWithTitle:@"Open in New Tabs"
+        [menu addItemWithTitle:NSLocalizedString(@"Open in New Tabs", @"Menu")
                         action:@selector(openBookmarkInTab:)
                  keyEquivalent:@""];
-        [menu addItemWithTitle:@"Open in New Windows"
+        [menu addItemWithTitle:NSLocalizedString(@"Open in New Windows", @"Menu")
                         action:@selector(openBookmarkInWindow:)
                  keyEquivalent:@""];
     }

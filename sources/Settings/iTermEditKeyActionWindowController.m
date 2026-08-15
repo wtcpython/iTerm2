@@ -548,17 +548,17 @@ const CGFloat sideMarginWidth = 40;
     (void)[_comboView selectItemWithTag:self.action];
 
     _applyButton = [[NSPopUpButton alloc] initWithFrame:NSZeroRect pullsDown:NO];
-    [_applyButton addItemWithTitle:@"Apply to current session"];
+    [_applyButton addItemWithTitle:NSLocalizedString(@"Apply to current session", @"Menu")];
     _applyButton.menu.itemArray.lastObject.tag = iTermActionApplyModeCurrentSession;
-    [_applyButton addItemWithTitle:@"Apply to all sessions"];
+    [_applyButton addItemWithTitle:NSLocalizedString(@"Apply to all sessions", @"Menu")];
     _applyButton.menu.itemArray.lastObject.tag = iTermActionApplyModeAllSessions;
-    [_applyButton addItemWithTitle:@"Apply to all sessions except current"];
+    [_applyButton addItemWithTitle:NSLocalizedString(@"Apply to all sessions except current", @"Menu")];
     _applyButton.menu.itemArray.lastObject.tag = iTermActionApplyModeUnfocusedSessions;
-    [_applyButton addItemWithTitle:@"Apply to all sessions in window"];
+    [_applyButton addItemWithTitle:NSLocalizedString(@"Apply to all sessions in window", @"Menu")];
     _applyButton.menu.itemArray.lastObject.tag = iTermActionApplyModeAllInWindow;
-    [_applyButton addItemWithTitle:@"Apply to all sessions in tab"];
+    [_applyButton addItemWithTitle:NSLocalizedString(@"Apply to all sessions in tab", @"Menu")];
     _applyButton.menu.itemArray.lastObject.tag = iTermActionApplyModeAllInTab;
-    [_applyButton addItemWithTitle:@"Apply to broadcasted-to sessions"];
+    [_applyButton addItemWithTitle:NSLocalizedString(@"Apply to broadcasted-to sessions", @"Menu")];
     _applyButton.menu.itemArray.lastObject.tag = iTermActionApplyModeBroadcasting;
 
     _applyButton.target = self;
@@ -692,7 +692,7 @@ const CGFloat sideMarginWidth = 40;
 - (void)updateViewsAnimated:(BOOL)animated secondary:(BOOL)secondary {
     switch (self.mode) {
         case iTermEditKeyActionWindowControllerModeUnbound:
-            _keyboardShortcutLabel.stringValue = @"Title";
+            _keyboardShortcutLabel.stringValue = NSLocalizedString(@"Title", @"UI");
             if (self.titleIsInterpolated) {
                 if (!_labelDelegate) {
                     _labelDelegate = [[iTermFunctionCallTextFieldDelegate alloc] initWithPathSource:[iTermVariableHistory pathSourceForContext:iTermVariablesSuggestionContextSession]
@@ -707,13 +707,13 @@ const CGFloat sideMarginWidth = 40;
             _shortcutField.hidden = YES;
             break;
         case iTermEditKeyActionWindowControllerModeTouchBarItem:
-            _keyboardShortcutLabel.stringValue = @"Touch Bar Label";
+            _keyboardShortcutLabel.stringValue = NSLocalizedString(@"Touch Bar Label", @"UI");
             _touchBarLabel.delegate = self;
             _touchBarLabel.hidden = NO;
             _shortcutField.hidden = YES;
             break;
         case iTermEditKeyActionWindowControllerModeKeyboardShortcut:
-            _keyboardShortcutLabel.stringValue = @"Keyboard Shortcut:";
+            _keyboardShortcutLabel.stringValue = NSLocalizedString(@"Keyboard Shortcut:", @"UI");
             _touchBarLabel.hidden = YES;
             _shortcutField.hidden = NO;
             break;

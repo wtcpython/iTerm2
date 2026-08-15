@@ -91,6 +91,24 @@
         }
       }
     },
+    "eTW-VX-hX3.label": {
+      "comment": "Class = \"NSTabViewItem\"; label = \"Calls\"; ObjectID = \"eTW-VX-hX3\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Calls"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Calls"
+          }
+        }
+      }
+    },
     "fkE-fZ-wke.title": {
       "comment": "Class = \"NSTextFieldCell\"; title = \"Table View Cell\"; ObjectID = \"fkE-fZ-wke\";",
       "extractionState": "extracted_with_value",
@@ -123,6 +141,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "名称"
+          }
+        }
+      }
+    },
+    "r7v-l8-Wnw.label": {
+      "comment": "Class = \"NSTabViewItem\"; label = \"Logs\"; ObjectID = \"r7v-l8-Wnw\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Logs"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Logs"
           }
         }
       }

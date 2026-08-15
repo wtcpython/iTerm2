@@ -427,7 +427,7 @@
         duration = ceil(duration);
     }
     if (duration < 0.01) {
-        _estimatedDuration.stringValue = @"Instant";
+        _estimatedDuration.stringValue = NSLocalizedString(@"Instant", @"UI");
     } else {
         _estimatedDuration.stringValue = [_pasteSpecialViewController descriptionForDuration:duration];
     }

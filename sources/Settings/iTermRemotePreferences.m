@@ -211,10 +211,10 @@ respectingTimeoutSetting:(BOOL)respectingTimeoutSetting
     alert.messageText = @"Failed to load settings from URL. Falling back to local copy.";
     alert.informativeText = [NSString stringWithFormat:@"HTTP request failed: %@",
                              [error localizedDescription] ?: @"unknown error"];
-    [alert addButtonWithTitle:@"OK"];
-    [alert addButtonWithTitle:@"Reveal in Settings"];
+    [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
+    [alert addButtonWithTitle:NSLocalizedString(@"Reveal in Settings", @"UI")];
     if ([error.domain isEqual:NSURLErrorDomain] && error.code == NSURLErrorTimedOut) {
-        [alert addButtonWithTitle:@"Try Again Without Timeout"];
+        [alert addButtonWithTitle:NSLocalizedString(@"Try Again Without Timeout", @"UI")];
     }
 
     const NSModalResponse response = [alert runModal];
@@ -295,8 +295,8 @@ respectingTimeoutSetting:(BOOL)respectingTimeoutSetting
             NSAlert *alert = [[NSAlert alloc] init];
             alert.messageText = @"Error Loading Settings";
             alert.informativeText = @"You have enabled “Load settings from a custom folder or URL” in settings but the location is not set.";
-            [alert addButtonWithTitle:@"Don’t Load Remote Settings"];
-            [alert addButtonWithTitle:@"Cancel"];
+            [alert addButtonWithTitle:NSLocalizedString(@"Don’t Load Remote Settings", @"UI")];
+            [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
             if ([alert runModal] == NSAlertFirstButtonReturn) {
                 [iTermPreferences setBool:NO forKey:kPreferenceKeyLoadPrefsFromCustomFolder];
             }

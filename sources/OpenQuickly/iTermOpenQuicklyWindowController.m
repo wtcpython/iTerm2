@@ -518,9 +518,9 @@
                                                              window:nil];
                         } else {
                             NSAlert *alert = [[NSAlert alloc] init];
-                            [alert setMessageText:@"Function Call Result"];
+                            [alert setMessageText:NSLocalizedString(@"Function Call Result", @"UI")];
                             [alert setInformativeText:[NSString stringWithFormat:@"%@ returned:\n%@", item.identifier, [value description]]];
-                            [alert addButtonWithTitle:@"OK"];
+                            [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
                             [alert runModal];
                         }
                     }];

@@ -1,0 +1,60 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "QvC-M9-y7g.title": {
+      "comment": "Class = \"NSWindow\"; title = \"Importing…\"; ObjectID = \"QvC-M9-y7g\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Importing…"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在导入…"
+          }
+        }
+      }
+    },
+    "WA4-h3-M1u.title": {
+      "comment": "Class = \"NSTextFieldCell\"; title = \"Importing settings and data…\"; ObjectID = \"WA4-h3-M1u\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Importing settings and data…"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在导入设置和数据…"
+          }
+        }
+      }
+    },
+    "a01-5T-ogh.title": {
+      "comment": "Class = \"NSTextFieldCell\"; title = \"Status\"; ObjectID = \"a01-5T-ogh\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Status"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "状态"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

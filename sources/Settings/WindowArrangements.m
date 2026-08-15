@@ -205,11 +205,11 @@ static NSInteger sWindowArrangementGeneration;
                completion:(void (^)(NSString *name, iTermSavePanelItem *saveItem))completion {
     NSAlert *alert = [[NSAlert alloc] init];
     alert.messageText = prompt;
-    [alert addButtonWithTitle:@"OK"];
+    [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
     if (offerExport) {
-        [alert addButtonWithTitle:@"Save to File with Contents…"];
+        [alert addButtonWithTitle:NSLocalizedString(@"Save to File with Contents…", @"UI")];
     }
-    [alert addButtonWithTitle:@"Cancel"];
+    [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
 
     NSTextField *input = [[NSTextField alloc] initWithFrame:NSMakeRect(0, 0, 300, 24)];
     [input setStringValue:defaultValue];
@@ -295,8 +295,8 @@ static NSInteger sWindowArrangementGeneration;
             NSAlert *alert = [[NSAlert alloc] init];
             alert.messageText = @"Replace Existing Saved Window Arrangement?";
             alert.informativeText = @"There is an existing saved window arrangement with this name. Would you like to replace it with the current arrangement?";
-            [alert addButtonWithTitle:@"Yes"];
-            [alert addButtonWithTitle:@"No"];
+            [alert addButtonWithTitle:NSLocalizedString(@"Yes", @"UI")];
+            [alert addButtonWithTitle:NSLocalizedString(@"No", @"UI")];
             if ([alert runModal] == NSAlertSecondButtonReturn) {
                 completion(nil);
                 return;
@@ -323,7 +323,7 @@ static NSInteger sWindowArrangementGeneration;
         }
         NSString *key = [self nameAtIndex:row];
         if ([key isEqualToString:[WindowArrangements defaultArrangementName]]) {
-            result.stringValue = @"★";
+            result.stringValue = NSLocalizedString(@"★", @"UI");
         } else {
             result.stringValue = @"";
         }
@@ -363,8 +363,8 @@ static NSInteger sWindowArrangementGeneration;
         NSAlert *alert = [[NSAlert alloc] init];
         alert.messageText = @"Replace Arrangement?";
         alert.informativeText = [NSString stringWithFormat:@"An arrangement named “%@” already exists. Would you like to replace it?", newName];
-        [alert addButtonWithTitle:@"OK"];
-        [alert addButtonWithTitle:@"Cancel"];
+        [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
+        [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
         if ([alert runSheetModalForWindow:self.view.window] == NSAlertSecondButtonReturn) {
             textField.stringValue = oldName;
             return;

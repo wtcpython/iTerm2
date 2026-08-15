@@ -158,7 +158,7 @@ iTermCommandInfoViewControllerDelegate>
             item.title = [NSString stringWithFormat:@"Disconnect from %@", name];
             return YES;
         } else {
-            item.title = @"Disconnect";
+            item.title = NSLocalizedString(@"Disconnect", @"UI");
         }
     }
     if (item.action == @selector(toggleRemoteHostCanControlIterm2:)) {
@@ -177,13 +177,13 @@ iTermCommandInfoViewControllerDelegate>
             return NO;
         }
         if (!self.selection.hasSelection && !self.selection.live) {
-            item.title = @"Fold/Unfold";
+            item.title = NSLocalizedString(@"Fold/Unfold", @"UI");
             return NO;
         }
         if ([self selectionContainsFold]) {
-            item.title = @"Unfold in Selection";
+            item.title = NSLocalizedString(@"Unfold in Selection", @"UI");
         } else {
-            item.title = @"Fold Selected Lines";
+            item.title = NSLocalizedString(@"Fold Selected Lines", @"UI");
         }
         return YES;
     }
@@ -829,10 +829,10 @@ iTermCommandInfoViewControllerDelegate>
                         mouseLocation:(NSPoint)mouseLocation {
     iTermSimpleContextMenu *menu = [[iTermSimpleContextMenu alloc] init];
     __weak __typeof(self) weakSelf = self;
-    [menu addItemWithTitle:@"Look Up in Dictionary" action:^{
+    [menu addItemWithTitle:NSLocalizedString(@"Look Up in Dictionary", @"Menu") action:^{
         [weakSelf showDefinitionForWordAt:clickPoint];
     }];
-    [menu addItemWithTitle:@"Quick Look" action:^{
+    [menu addItemWithTitle:NSLocalizedString(@"Quick Look", @"Menu") action:^{
         [weakSelf openQuickLookForURL:url
                             urlAction:urlAction
                             withEvent:event];
@@ -2157,7 +2157,7 @@ toggleTerminalStateForMenuItem:(nonnull NSMenuItem *)item {
 
         NSAlert *alert = [[NSAlert alloc] init];
         alert.messageText = text;
-        [alert addButtonWithTitle:@"OK"];
+        [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
         [alert layout];
         [alert runModal];
     }

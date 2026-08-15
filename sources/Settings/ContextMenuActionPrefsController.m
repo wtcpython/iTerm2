@@ -336,7 +336,7 @@ static ContextMenuActionDeclaration ContextMenuActionDeclarationForTag(ContextMe
         _parameterInfoTextField.selectable = YES;
         _parameterInfoTextField.allowsEditingTextAttributes = YES;
     } else {
-        _parameterInfoTextField.stringValue = @"You can use captured strings from the Smart Selection's regular expression in the parameter. Use \\0 for match, \\1…\\9 for match groups, \\d for directory, \\u for user, \\h for host.";
+        _parameterInfoTextField.stringValue = NSLocalizedString(@"You can use captured strings from the Smart Selection's regular expression in the parameter. Use \\0 for match, \\1…\\9 for match groups, \\d for directory, \\u for user, \\h for host.", @"UI");
     }
 }
 

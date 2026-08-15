@@ -86,7 +86,7 @@ ITERM_IGNORE_PARTIAL_BEGIN
         iTermTouchBarButton *button = (iTermTouchBarButton *)item.view;
         NSString *touchBarStatusString = self.currentSession.keyLabels[@"status"];
         if (touchBarStatusString == nil) {
-            button.title = @"Status";
+            button.title = NSLocalizedString(@"Status", @"UI");
             button.enabled = NO;
             item.visibilityPriority = NSTouchBarItemPriorityLow;
         } else {

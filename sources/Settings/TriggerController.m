@@ -687,8 +687,8 @@ NSString *const kStatusTextComboBoxIdentifier = @"kStatusTextComboBoxIdentifier"
     NSString *joined = [descriptions componentsJoinedByString:@"\n"];
     NSString *message = [NSString stringWithFormat:@"Select the profiles into which these triggers should be imported:\n\n%@", joined];
     [alert setMessageText:message];
-    [alert addButtonWithTitle:@"OK"];
-    [alert addButtonWithTitle:@"Cancel"];
+    [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
+    [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
 
     ProfileListView *profiles = [[ProfileListView alloc] initWithFrame:NSMakeRect(0, 0, 300, 300)];
     [profiles disableArrowHandler];
@@ -1104,7 +1104,7 @@ NSString *const kStatusTextComboBoxIdentifier = @"kStatusTextComboBoxIdentifier"
 
     iTermSimpleContextMenu *menu = [[iTermSimpleContextMenu alloc] init];
     NSURL *url = [self urlForSelectedTriggers];
-    [menu addItemWithTitle:@"Copy Trigger as URL to Clipboard" action:^{
+    [menu addItemWithTitle:NSLocalizedString(@"Copy Trigger as URL to Clipboard", @"Menu") action:^{
         NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
         [pasteboard clearContents];
         NSArray *objects = @[ url, url.absoluteString ];
@@ -1114,7 +1114,7 @@ NSString *const kStatusTextComboBoxIdentifier = @"kStatusTextComboBoxIdentifier"
                             topLeftScreenCoordinate:screenPoint
                                           pointSize:12];
     }];
-    [menu addItemWithTitle:@"Export to File" action:^{
+    [menu addItemWithTitle:NSLocalizedString(@"Export to File", @"Menu") action:^{
         [self exportSelectedTriggers];
     }];
     [menu showInView:_tableView forEvent:[NSApp currentEvent]];

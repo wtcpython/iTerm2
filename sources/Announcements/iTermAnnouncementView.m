@@ -177,7 +177,7 @@ const CGFloat iTermAnnouncementViewHeightPadding = 29;
         [pullDown setTarget:self];
         [pullDown setAction:@selector(pullDownItemSelected:)];
         [_internalView addSubview:pullDown];
-        [pullDown addItemWithTitle:@"More Actions…"];
+        [pullDown addItemWithTitle:NSLocalizedString(@"More Actions…", @"Menu")];
         for (int i = limit; i < actions.count; i++) {
             NSString *action = actions[i];
             [pullDown addItemWithTitle:[self stringByAddingShortcutInString:action]];

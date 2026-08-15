@@ -94,7 +94,7 @@ static NSString *iTermPasteViewControllerNibName(BOOL mini) {
 
 - (void)awakeFromNib {
     if (pasteContext_.isUpload) {
-        _label.stringValue = @"Sending…";
+        _label.stringValue = NSLocalizedString(@"Sending…", @"UI");
     }
     [self createKeystrokePassthroughButton];
 }

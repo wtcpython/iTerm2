@@ -198,9 +198,9 @@
     for (NSInteger i = 0; i < self.previewCommandButtons.count; i++){
         buttons[i].hidden = unavailable || (i != stage) || preview == nil;
         if (_busy && i == stage) {
-            [buttons[i] setTitle:@"Send Again"];
+            [buttons[i] setTitle:NSLocalizedString(@"Send Again", @"Menu")];
         } else {
-            [buttons[i] setTitle:@"Preview Command"];
+            [buttons[i] setTitle:NSLocalizedString(@"Preview Command", @"Menu")];
         }
     }
     self.previewTextView.string = preview ?: @"";

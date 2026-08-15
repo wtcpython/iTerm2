@@ -207,8 +207,8 @@
                              profile[KEY_NAME],
                              filename,
                              lines];
-    [alert addButtonWithTitle:@"OK"];
-    [alert addButtonWithTitle:@"Copy to Pasteboard"];
+    [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
+    [alert addButtonWithTitle:NSLocalizedString(@"Copy to Pasteboard", @"UI")];
     if ([alert runModal] == NSAlertSecondButtonReturn) {
         NSPasteboard *pasteBoard = [NSPasteboard generalPasteboard];
         [pasteBoard declareTypes:@[ NSPasteboardTypeString ] owner:self];

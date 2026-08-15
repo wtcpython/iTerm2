@@ -75,10 +75,10 @@
 
 - (void)updateOverlayText {
     if (self.image == nil) {
-        _overlayLabel.stringValue = @"No Image Selected\u2009—\u2009Click to set";
+        _overlayLabel.stringValue = NSLocalizedString(@"No Image Selected\u2009—\u2009Click to set", @"UI");
     }
     else {
-        _overlayLabel.stringValue = @"Click to change";
+        _overlayLabel.stringValue = NSLocalizedString(@"Click to change", @"UI");
     }
     [self setNeedsLayout:YES];
 }

@@ -96,18 +96,18 @@ static id gAltOpenAllRepresentedObject;
 + (void)addOpenAllToMenu:(NSMenu *)menu params:(iTermProfileModelJournalParams *)params identifier:(NSString *)identifier {
     // Add separator + open all menu items
     [menu addItem:[NSMenuItem separatorItem]];
-    NSMenuItem *openAll = [menu addItemWithTitle:@"Open All" action:params.openAllSelector keyEquivalent:@""];
+    NSMenuItem *openAll = [menu addItemWithTitle:NSLocalizedString(@"Open All", @"Menu") action:params.openAllSelector keyEquivalent:@""];
     if (@available(macOS 26, *)) {
         if (iTermMainMenuMangler.menuActionImagesEnabled) {
             openAll.image = [NSImage imageWithSystemSymbolName:@"person.3.sequence"
                                       accessibilityDescription:nil];
         }
     }
-    openAll.identifier = identifier ?: @"Open All";
+    openAll.identifier = identifier ?: NSLocalizedString(@"Open All", @"Menu");
     [openAll setTarget:params.target];
 
     // Add alternate open all menu
-    NSMenuItem *altOpenAll = [[NSMenuItem alloc] initWithTitle:@"Open All in New Window"
+    NSMenuItem *altOpenAll = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Open All in New Window", @"Menu")
                                                         action:params.alternateOpenAllSelector
                                                  keyEquivalent:@""];
     [altOpenAll setTarget:params.target];

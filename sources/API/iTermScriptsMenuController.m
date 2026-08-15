@@ -654,16 +654,16 @@ NS_ASSUME_NONNULL_BEGIN
         NSAlert *alert = [[NSAlert alloc] init];
         alert.messageText = @"Could Not Install Script";
         alert.informativeText = errorMessage;
-        [alert addButtonWithTitle:@"OK"];
-        [alert addButtonWithTitle:@"Try Again"];
+        [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
+        [alert addButtonWithTitle:NSLocalizedString(@"Try Again", @"UI")];
         if ([alert runModal] ==  NSAlertSecondButtonReturn) {
             [self importFromURL:url];
         }
     } else {
         NSAlert *alert = [[NSAlert alloc] init];
         alert.messageText = @"Script Imported Successfully";
-        [alert addButtonWithTitle:@"OK"];
-        [alert addButtonWithTitle:@"Launch"];
+        [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
+        [alert addButtonWithTitle:NSLocalizedString(@"Launch", @"UI")];
         const NSModalResponse response = [alert runModal];
         if (response == NSAlertFirstButtonReturn) {
             return;
@@ -1348,8 +1348,8 @@ NS_ASSUME_NONNULL_BEGIN
             NSAlert *alert = [[NSAlert alloc] init];
             alert.messageText = @"Spaces Not Allowed";
             alert.informativeText = @"Scripts can't have space characters in their filenames.";
-            [alert addButtonWithTitle:@"Use _ Instead of Space"];
-            [alert addButtonWithTitle:@"Change Name"];
+            [alert addButtonWithTitle:NSLocalizedString(@"Use _ Instead of Space", @"UI")];
+            [alert addButtonWithTitle:NSLocalizedString(@"Change Name", @"UI")];
             if ([alert runModal] == NSAlertFirstButtonReturn) {
                 return [[url URLByDeletingLastPathComponent] URLByAppendingPathComponent:safeFilename];
             } else {

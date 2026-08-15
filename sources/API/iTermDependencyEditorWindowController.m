@@ -345,7 +345,7 @@
 
     iTermWarning *warning = [[iTermWarning alloc] init];
     warning.heading = @"Add Dependency";
-    warning.title = @"What dependency would you like to add?";
+    warning.title = NSLocalizedString(@"What dependency would you like to add?", @"UI");
     warning.actionLabels = @[ @"OK", @"Cancel" ];
     warning.accessory = textField;
     warning.warningType = kiTermWarningTypePersistent;
@@ -660,7 +660,7 @@
     SUStandardVersionComparator *comparator = [[SUStandardVersionComparator alloc] init];
     if ([comparator compareVersion:selectedVersion toVersion:_pythonVersion] == NSOrderedAscending) {
         iTermWarning *warning = [[iTermWarning alloc] init];
-        warning.title = @"You have asked to downgrade to an older Python version. Dependencies will need to be reinstalled. This may go badly. Are you sure you want to do this?";
+        warning.title = NSLocalizedString(@"You have asked to downgrade to an older Python version. Dependencies will need to be reinstalled. This may go badly. Are you sure you want to do this?", @"UI");
         warning.heading = @"Confirm Python Downgrade";
         warning.actionLabels = @[ @"OK", @"Cancel" ];
         warning.identifier = @"DependencyEditorConfirmDowngrade";
@@ -674,7 +674,7 @@
         }
     } else {
         iTermWarning *warning = [[iTermWarning alloc] init];
-        warning.title = @"You have asked to upgrade to a newer Python version. Dependencies will need to be reinstalled. OK to continue?";
+        warning.title = NSLocalizedString(@"You have asked to upgrade to a newer Python version. Dependencies will need to be reinstalled. OK to continue?", @"UI");
         warning.heading = @"Confirm Python Upgrade";
         warning.actionLabels = @[ @"OK", @"Cancel" ];
         warning.identifier = @"DependencyEditorConfirmUpgrade";

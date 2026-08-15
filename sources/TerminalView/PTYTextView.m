@@ -4377,7 +4377,7 @@ static NSString *iTermStringForEventPhase(NSEventPhase eventPhase) {
 
     NSButton *timestampsButton = [[[NSButton alloc] init] autorelease];
     [timestampsButton setButtonType:NSButtonTypeSwitch];
-    timestampsButton.title = @"Include timestamps";
+    timestampsButton.title = NSLocalizedString(@"Include timestamps", @"UI");
     NSString *userDefaultsKey = @"NoSyncSaveWithTimestamps";
     timestampsButton.state = [[iTermUserDefaults userDefaults] boolForKey:userDefaultsKey] ? NSControlStateValueOn : NSControlStateValueOff;
     [timestampsButton sizeToFit];
@@ -5218,8 +5218,8 @@ static NSString *iTermStringForEventPhase(NSEventPhase eventPhase) {
     }
     NSAlert *alert = [[[NSAlert alloc] init] autorelease];
     alert.messageText = text;
-    [alert addButtonWithTitle:@"OK"];
-    [alert addButtonWithTitle:@"Cancel"];
+    [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
+    [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
     [alert layout];
     NSInteger button = [alert runModal];
     return (button == NSAlertFirstButtonReturn);
@@ -6856,11 +6856,11 @@ extendResultsAcrossSoftBoundaries:(BOOL)extendResultsAcrossSoftBoundaries {
 - (void)popCommandSettingsButtonAt:(NSPoint)locationInWindow for:(id<VT100ScreenMarkReading>)mark {
     iTermSimpleContextMenu *menu = [[[iTermSimpleContextMenu alloc] init] autorelease];
     __weak __typeof(self) weakSelf = self;
-    [menu addItemWithTitle:@"Disable Command Selection" action:^{
+    [menu addItemWithTitle:NSLocalizedString(@"Disable Command Selection", @"Menu") action:^{
         [iTermPreferences setBool:NO forKey:kPreferenceKeyClickToSelectCommand];
         [weakSelf.delegate textViewReloadSelectedCommand];
     }];
-    [menu addItemWithTitle:@"Help" action:^{
+    [menu addItemWithTitle:NSLocalizedString(@"Help", @"Menu") action:^{
         if (!weakSelf) {
             return;
         }
@@ -6886,14 +6886,14 @@ extendResultsAcrossSoftBoundaries:(BOOL)extendResultsAcrossSoftBoundaries {
     iTermSimpleContextMenu *menu = [[[iTermSimpleContextMenu alloc] init] autorelease];
     if (command.length) {
         __weak __typeof(self) weakSelf = self;
-        [menu addItemWithTitle:@"Copy Command" action:^{
+        [menu addItemWithTitle:NSLocalizedString(@"Copy Command", @"Menu") action:^{
             [weakSelf copyString:command];
             [ToastWindowController showToastWithMessage:@"Command Copied"
                                                duration:1.5
                                 topLeftScreenCoordinate:[weakSelf.window convertPointToScreen:locationInWindow]
                                               pointSize:12];
         }];
-        [menu addItemWithTitle:@"Copy Output" action:^{
+        [menu addItemWithTitle:NSLocalizedString(@"Copy Output", @"Menu") action:^{
             iTermRenegablePromise<NSString *> *promise = [self promisedOutputForMark:mark progress:nil];
             [[promise wait] whenFirst:^(NSString * _Nonnull string) {
                 [weakSelf copyString:string];

@@ -42,7 +42,7 @@
 }
 
 - (void)showShellUnsupportedError {
-    self.textField.stringValue = @"😞 Your shell is not supported, or perhaps your $SHELL environment variable is not set correctly. Press “Continue” to try again.";
+    self.textField.stringValue = NSLocalizedString(@"😞 Your shell is not supported, or perhaps your $SHELL environment variable is not set correctly. Press “Continue” to try again.", @"UI");
 }
 
 - (IBAction)pipeCurlToBash:(id)sender {

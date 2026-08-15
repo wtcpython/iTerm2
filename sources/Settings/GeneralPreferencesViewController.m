@@ -234,7 +234,7 @@ static NSString *iTermManualAIModelHost(NSDictionary *configuration) {
                                           styleMask:NSWindowStyleMaskTitled
                                             backing:NSBackingStoreBuffered
                                               defer:NO];
-    _window.title = @"Manual AI Models";
+    _window.title = NSLocalizedString(@"Manual AI Models", @"UI");
     NSView *content = _window.contentView;
 
     NSScrollView *scrollView =
@@ -590,7 +590,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
     // from something close to what they want and tweak it.
     addLabel(@"Preset:");
     _presetPopup = [[NSPopUpButton alloc] initWithFrame:NSMakeRect(fieldX, y, fieldWidth, 24)];
-    [_presetPopup addItemWithTitle:@"Custom"];
+    [_presetPopup addItemWithTitle:NSLocalizedString(@"Custom", @"Menu")];
     _presetPopup.lastItem.tag = -1;
     [_presetPopup.menu addItem:[NSMenuItem separatorItem]];
     _presets = [[AIMetadata instance] presetModels];
@@ -651,9 +651,9 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
 
     addLabel(@"Vector store:");
     _vectorStorePopup = [[NSPopUpButton alloc] initWithFrame:NSMakeRect(fieldX, y, fieldWidth, 24)];
-    [_vectorStorePopup addItemWithTitle:@"Disabled"];
+    [_vectorStorePopup addItemWithTitle:NSLocalizedString(@"Disabled", @"Menu")];
     _vectorStorePopup.lastItem.tag = 0;
-    [_vectorStorePopup addItemWithTitle:@"OpenAI"];
+    [_vectorStorePopup addItemWithTitle:NSLocalizedString(@"OpenAI", @"Menu")];
     _vectorStorePopup.lastItem.tag = 1;
     [_vectorStorePopup selectItemWithTag:iTermManualAIModelIntegerValue(_base, kAIManualModelVectorStoreKey, 0)];
     [content addSubview:_vectorStorePopup];
@@ -853,7 +853,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
 
     NSString *savedTitle = _testButton.title;
     _testButton.enabled = NO;
-    _testButton.title = @"Testing…";
+    _testButton.title = NSLocalizedString(@"Testing…", @"UI");
     [_testSpinner startAnimation:nil];
     __weak __typeof(self) weakSelf = self;
     [iTermAIConnectionTester testModelName:name
@@ -2317,7 +2317,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
 
 - (void)validatePlugin {
     DLog(@"validatePlugin");
-    _pluginStatus.stringValue = @"Checking plugin status…";
+    _pluginStatus.stringValue = NSLocalizedString(@"Checking plugin status…", @"UI");
     __weak __typeof(self) weakSelf = self;
     [iTermAITermGatekeeper validatePlugin:^(NSString * _Nullable problem) {
         [weakSelf setPluginProblem:problem];
@@ -2328,7 +2328,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
     DLog(@"problem=%@", problem);
     if (problem) {
         _pluginStatus.stringValue = problem;
-        _installPluginButton.title = @"Install…";
+        _installPluginButton.title = NSLocalizedString(@"Install…", @"UI");
         _installPluginButton.action = @selector(installPlugin:);
         [_installPluginButton sizeToFit];
         _installPluginButton.enabled = [iTermAdvancedSettingsModel generativeAIAllowed];
@@ -2338,8 +2338,8 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
             [weakSelf validatePlugin];
         });
     } else {
-        _pluginStatus.stringValue = @"Plugin installed and working ✅";
-        _installPluginButton.title = @"Reveal in Finder";
+        _pluginStatus.stringValue = NSLocalizedString(@"Plugin installed and working ✅", @"UI");
+        _installPluginButton.title = NSLocalizedString(@"Reveal in Finder", @"UI");
         [_installPluginButton sizeToFit];
         _installPluginButton.action = @selector(revealPlugin:);
         _installPluginButton.enabled = YES;
@@ -2360,7 +2360,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
 - (NSString *)aiAPIKeyProviderNameForVendor:(iTermAIVendor)vendor {
     switch (vendor) {
         case iTermAIVendorOpenAI:
-            return @"OpenAI";
+            return NSLocalizedString(@"OpenAI", @"Menu");
         case iTermAIVendorAnthropic:
             return @"Anthropic";
         case iTermAIVendorGemini:
@@ -2539,8 +2539,8 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
     NSAlert *alert = [[NSAlert alloc] init];
     alert.messageText = @"Manage AI API Keys";
     alert.informativeText = @"Keys are stored securely in the macOS Keychain.";
-    [alert addButtonWithTitle:@"OK"];
-    [alert addButtonWithTitle:@"Cancel"];
+    [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
+    [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
 
     NSArray<NSNumber *> *vendors = [self aiAPIKeyProviderVendors];
     const CGFloat width = 620;
@@ -2687,8 +2687,8 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
     NSAlert *alert = [[NSAlert alloc] init];
     alert.messageText = @"Add Custom Header";
     alert.informativeText = @"Enter a header name and value. The name is required.";
-    [alert addButtonWithTitle:@"Add"];
-    [alert addButtonWithTitle:@"Cancel"];
+    [alert addButtonWithTitle:NSLocalizedString(@"Add", @"UI")];
+    [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
 
     const CGFloat width = 280.0;
     const CGFloat fieldHeight = 22.0;
@@ -3479,8 +3479,8 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
                 if ([[iTermRemotePreferences sharedInstance] remoteLocationIsValid]) {
                     NSAlert *alert = [[NSAlert alloc] init];
                     alert.messageText = @"Copy local settings to custom folder now?";
-                    [alert addButtonWithTitle:@"Copy"];
-                    [alert addButtonWithTitle:@"Don’t Copy"];
+                    [alert addButtonWithTitle:NSLocalizedString(@"Copy", @"UI")];
+                    [alert addButtonWithTitle:NSLocalizedString(@"Don’t Copy", @"UI")];
                     if ([alert runModal] == NSAlertFirstButtonReturn) {
                         [[iTermRemotePreferences sharedInstance] saveLocalUserDefaultsToRemotePrefs];
                     }

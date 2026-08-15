@@ -284,8 +284,8 @@ static NSDictionary *gIntrospection;
     [button setAction:@selector(toggleOnOff:)];
     button.identifier = @"onoff";
     [button.menu removeAllItems];
-    [button.menu addItemWithTitle:@"No" action:nil keyEquivalent:@""];
-    [button.menu addItemWithTitle:@"Yes" action:nil keyEquivalent:@""];
+    [button.menu addItemWithTitle:NSLocalizedString(@"No", @"Menu") action:nil keyEquivalent:@""];
+    [button.menu addItemWithTitle:NSLocalizedString(@"Yes", @"Menu") action:nil keyEquivalent:@""];
     [button selectItemAtIndex:on ? 1 : 0];
     return button;
 }
@@ -324,9 +324,9 @@ static NSDictionary *gIntrospection;
     [button setAction:@selector(toggleTristate:)];
     button.identifier = @"tristate";
     [button.menu removeAllItems];
-    [button.menu addItemWithTitle:@"Unspecified" action:nil keyEquivalent:@""];
-    [button.menu addItemWithTitle:@"No" action:nil keyEquivalent:@""];
-    [button.menu addItemWithTitle:@"Yes" action:nil keyEquivalent:@""];
+    [button.menu addItemWithTitle:NSLocalizedString(@"Unspecified", @"Menu") action:nil keyEquivalent:@""];
+    [button.menu addItemWithTitle:NSLocalizedString(@"No", @"Menu") action:nil keyEquivalent:@""];
+    [button.menu addItemWithTitle:NSLocalizedString(@"Yes", @"Menu") action:nil keyEquivalent:@""];
 
     NSNumber *value = [self objectForRow:row];
     if (!value) {

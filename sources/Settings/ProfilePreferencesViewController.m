@@ -167,9 +167,9 @@ NSString *const kProfileSessionHotkeyDidChange = @"kProfileSessionHotkeyDidChang
         message = @"A required user interface component is missing or corrupted, yet against all odds the code signature for iTerm2 is valid. Please file a bug at https://iterm2.com/bugs";
     }
     NSAlert *alert = [[NSAlert alloc] init];
-    [alert setMessageText:@"Application Corrupt"];
+    [alert setMessageText:NSLocalizedString(@"Application Corrupt", @"UI")];
     [alert setInformativeText:message];
-    [alert addButtonWithTitle:@"OK"];
+    [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
     [alert setAlertStyle:NSAlertStyleCritical];
     [alert runModal];
     exit(1);

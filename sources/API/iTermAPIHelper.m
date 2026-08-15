@@ -439,7 +439,7 @@ static BOOL iTermAPIHelperLastApplescriptAuthRequiredSetting;
 
     // "Reveal Preference" is a one-time navigation action and shouldn't be remembered.
     iTermWarning *warning = [[iTermWarning alloc] init];
-    warning.title = @"The location of your Application Support directory appears to have moved or its contents have changed unexpectedly. As a precaution, the authentication mechanism for Python API scripts for iTerm2 has been reverted to always require Automation permission.";
+    warning.title = NSLocalizedString(@"The location of your Application Support directory appears to have moved or its contents have changed unexpectedly. As a precaution, the authentication mechanism for Python API scripts for iTerm2 has been reverted to always require Automation permission.", @"UI");
     warning.actionLabels = @[ @"OK", @"Reveal Preference" ];
     warning.identifier = @"NoSyncAppSupportMoved";
     warning.warningType = kiTermWarningTypePermanentlySilenceable;
@@ -624,7 +624,7 @@ static BOOL iTermAPIHelperLastApplescriptAuthRequiredSetting;
     warning.actionLabels = @[ @"OK", @"Cancel" ];
     warning.identifier = iTermAPIHelperEnablePythonAPIWarningIdentifier;
     warning.warningType = forced ? kiTermWarningTypePersistent : kiTermWarningTypePermanentlySilenceable;
-    warning.title = @"The Python API allows scripts you run to control iTerm2 and access all its data.";
+    warning.title = NSLocalizedString(@"The Python API allows scripts you run to control iTerm2 and access all its data.", @"UI");
     static BOOL showing;
     if (showing) {
         // This can happen because the call to -runModal below starts a runloop and a delayed perform can then call this.

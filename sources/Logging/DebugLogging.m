@@ -533,7 +533,7 @@ void ToggleDebugLogging(void) {
         NSAlert *alert = [[NSAlert alloc] init];
         alert.messageText = @"Debug Logging Enabled";
         alert.informativeText = @"Please reproduce the bug. Then toggle debug logging again to save the log.";
-        [alert addButtonWithTitle:@"OK"];
+        [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
         [alert runModal];
         StartDebugLogging();
     } else {
@@ -541,7 +541,7 @@ void ToggleDebugLogging(void) {
         NSAlert *alert = [[NSAlert alloc] init];
         alert.messageText = @"Debug Logging Stopped";
         alert.informativeText = @"Please send /tmp/debuglog.txt to the developers.";
-        [alert addButtonWithTitle:@"OK"];
+        [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
         [alert runModal];
     }
 }

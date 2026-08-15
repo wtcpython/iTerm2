@@ -479,7 +479,7 @@ static NSString *const kKeyCode0MitigationSuffixGlobal = @"Global";
             alert.informativeText = [NSString stringWithFormat:@"A new profile called “%@” was created for you. It is tuned to work well "
                                      @"for the Hotkey Window feature and it can be customized in the Profiles tab.",
                                      newProfileName];
-            [alert addButtonWithTitle:@"OK"];
+            [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
             [alert runModal];
         }
     }];

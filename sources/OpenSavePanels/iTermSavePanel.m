@@ -108,22 +108,22 @@ static NSString *const iTermSavePanelLoggingStyleUserDefaultsKey = @"NoSyncLoggi
         button = [[NSPopUpButton alloc] init];
         NSMenuItem *item;
         {
-            item = [[NSMenuItem alloc] initWithTitle:@"Raw data" action:nil keyEquivalent:@""];
+            item = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Raw data", @"Menu") action:nil keyEquivalent:@""];
             item.tag = iTermLoggingStyleRaw;
             [button.menu addItem:item];
         }
         {
-            item = [[NSMenuItem alloc] initWithTitle:@"Plain text" action:nil keyEquivalent:@""];
+            item = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Plain text", @"Menu") action:nil keyEquivalent:@""];
             item.tag = iTermLoggingStylePlainText;
             [button.menu addItem:item];
         }
         {
-            item = [[NSMenuItem alloc] initWithTitle:@"HTML" action:nil keyEquivalent:@""];
+            item = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"HTML", @"Menu") action:nil keyEquivalent:@""];
             item.tag = iTermLoggingStyleHTML;
             [button.menu addItem:item];
         }
         {
-            item = [[NSMenuItem alloc] initWithTitle:@"ASCIInema" action:nil keyEquivalent:@""];
+            item = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"ASCIInema", @"Menu") action:nil keyEquivalent:@""];
             item.tag = iTermLoggingStyleAsciicast;
             [button.menu addItem:item];
         }

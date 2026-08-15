@@ -364,7 +364,7 @@ BOOL gShowRememberedAlerts = NO;
 
     // Add "Permanently Forget Saved Selection" button when in remembered alerts mode.
     if (_shownDueToRememberedAlertsMode && _identifier) {
-        [alert addButtonWithTitle:@"Permanently Forget Saved Selection"];
+        [alert addButtonWithTitle:NSLocalizedString(@"Permanently Forget Saved Selection", @"UI")];
     }
 
     int numNonCancelActions = [_warningActions count];
@@ -378,25 +378,25 @@ BOOL gShowRememberedAlerts = NO;
     if (_warningType == kiTermWarningTypeTemporarilySilenceable) {
         assert(_identifier);
         if (numNonCancelActions == 1) {
-            alert.suppressionButton.title = @"Suppress this message for ten minutes";
+            alert.suppressionButton.title = NSLocalizedString(@"Suppress this message for ten minutes", @"UI");
         } else if (numNonCancelActions > 1) {
-            alert.suppressionButton.title = @"Remember my choice for ten minutes";
+            alert.suppressionButton.title = NSLocalizedString(@"Remember my choice for ten minutes", @"UI");
         }
         alert.showsSuppressionButton = YES;
     } else if (_warningType == kiTermWarningTypeSilenceableForOneMonth) {
         assert(_identifier);
         if (numNonCancelActions == 1) {
-            alert.suppressionButton.title = @"Suppress this message for 30 days";
+            alert.suppressionButton.title = NSLocalizedString(@"Suppress this message for 30 days", @"UI");
         } else if (numNonCancelActions > 1) {
-            alert.suppressionButton.title = @"Remember my choice for 30 days";
+            alert.suppressionButton.title = NSLocalizedString(@"Remember my choice for 30 days", @"UI");
         }
         alert.showsSuppressionButton = YES;
     } else if (_warningType == kiTermWarningTypePermanentlySilenceable) {
         assert(_identifier);
         if (numNonCancelActions == 1) {
-            alert.suppressionButton.title = @"Suppress this message permanently";
+            alert.suppressionButton.title = NSLocalizedString(@"Suppress this message permanently", @"UI");
         } else if (numNonCancelActions > 1) {
-            alert.suppressionButton.title = @"Remember my choice";
+            alert.suppressionButton.title = NSLocalizedString(@"Remember my choice", @"UI");
         }
         alert.showsSuppressionButton = YES;
     }

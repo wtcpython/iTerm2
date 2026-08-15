@@ -454,7 +454,7 @@ static NSModalResponse iTermCompareRenderingRunModal(id self, SEL _cmd) {
         if (undoResponder) {
             return YES;
         } else {
-            menuItem.title = @"Undo Close Session";
+            menuItem.title = NSLocalizedString(@"Undo Close Session", @"UI");
             return [[iTermController sharedInstance] hasRestorableSession];
         }
     } else if ([menuItem action] == @selector(enableMarkAlertShowsModalAlert:)) {
@@ -539,7 +539,7 @@ static NSModalResponse iTermCompareRenderingRunModal(id self, SEL _cmd) {
         NSArray<iTermSuppressedAlert *> *suppressed = [[iTermSuppressedAlerts sharedInstance] currentlySuppressedAlerts];
         const NSInteger n = suppressed.count;
         if (n == 0) {
-            menuItem.title = @"Suppressed Alerts…";
+            menuItem.title = NSLocalizedString(@"Suppressed Alerts…", @"UI");
             return YES;
         }
         NSString *countPart = (n == 1) ? @"1 Alert Suppressed" : [NSString stringWithFormat:@"%@ Alerts Suppressed", @(n)];
@@ -713,13 +713,13 @@ static NSModalResponse iTermCompareRenderingRunModal(id self, SEL _cmd) {
 - (NSMenu *)downloadsMenu {
     if (!downloadsMenu_) {
         downloadsMenu_ = [[[NSMenuItem alloc] init] autorelease];
-        downloadsMenu_.title = @"Downloads";
+        downloadsMenu_.title = NSLocalizedString(@"Downloads", @"Menu");
         NSMenu *mainMenu = [[NSApplication sharedApplication] mainMenu];
         [mainMenu insertItem:downloadsMenu_
                      atIndex:mainMenu.itemArray.count - 1];
-        [downloadsMenu_ setSubmenu:[[[NSMenu alloc] initWithTitle:@"Downloads"] autorelease]];
+        [downloadsMenu_ setSubmenu:[[[NSMenu alloc] initWithTitle:NSLocalizedString(@"Downloads", @"Menu")] autorelease]];
 
-        NSMenuItem *clearAll = [[[NSMenuItem alloc] initWithTitle:@"Clear All" action:@selector(clearAllDownloads:) keyEquivalent:@""] autorelease];
+        NSMenuItem *clearAll = [[[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Clear All", @"Menu") action:@selector(clearAllDownloads:) keyEquivalent:@""] autorelease];
         [downloadsMenu_.submenu addItem:clearAll];
         [downloadsMenu_.submenu addItem:[NSMenuItem separatorItem]];
     }
@@ -729,13 +729,13 @@ static NSModalResponse iTermCompareRenderingRunModal(id self, SEL _cmd) {
 - (NSMenu *)uploadsMenu {
     if (!uploadsMenu_) {
         uploadsMenu_ = [[[NSMenuItem alloc] init] autorelease];
-        uploadsMenu_.title = @"Uploads";
+        uploadsMenu_.title = NSLocalizedString(@"Uploads", @"Menu");
         NSMenu *mainMenu = [[NSApplication sharedApplication] mainMenu];
         [mainMenu insertItem:uploadsMenu_
                      atIndex:mainMenu.itemArray.count - 1];
-        [uploadsMenu_ setSubmenu:[[[NSMenu alloc] initWithTitle:@"Uploads"] autorelease]];
+        [uploadsMenu_ setSubmenu:[[[NSMenu alloc] initWithTitle:NSLocalizedString(@"Uploads", @"Menu")] autorelease]];
 
-        NSMenuItem *clearAll = [[[NSMenuItem alloc] initWithTitle:@"Clear All" action:@selector(clearAllUploads:) keyEquivalent:@""] autorelease];
+        NSMenuItem *clearAll = [[[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Clear All", @"Menu") action:@selector(clearAllUploads:) keyEquivalent:@""] autorelease];
         [uploadsMenu_.submenu addItem:clearAll];
         [uploadsMenu_.submenu addItem:[NSMenuItem separatorItem]];
     }
@@ -1035,8 +1035,8 @@ static NSModalResponse iTermCompareRenderingRunModal(id self, SEL _cmd) {
         NSAlert *alert = [[[NSAlert alloc] init] autorelease];
         alert.messageText = @"Quit iTerm2?";
         alert.informativeText = message;
-        [alert addButtonWithTitle:@"OK"];
-        [alert addButtonWithTitle:@"Cancel"];
+        [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
+        [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
         iTermDisclosableView *accessory = [[iTermDisclosableView alloc] initWithFrame:NSZeroRect
                                                                                prompt:@"Why am I being prompted?"
                                                                               message:[NSString stringWithFormat:@"You are being prompted because:\n\n%@",
@@ -1749,10 +1749,10 @@ void TurnOnDebugLoggingAutomatically(void) {
     NSMenu *appMenu = [[[[NSApp mainMenu] itemArray] firstObject] submenu];
     [appMenu addItem:[NSMenuItem separatorItem]];
 
-    NSMenuItem *item = [[[NSMenuItem alloc] initWithTitle:@"Toggle Key Recording" action:@selector(toggleKeyRecording:) keyEquivalent:@""] autorelease];
+    NSMenuItem *item = [[[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Toggle Key Recording", @"Menu") action:@selector(toggleKeyRecording:) keyEquivalent:@""] autorelease];
     [appMenu addItem:item];
 
-    item = [[[NSMenuItem alloc] initWithTitle:@"Replay Recorded Keys" action:@selector(replayRecordedKeys:) keyEquivalent:@""] autorelease];
+    item = [[[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Replay Recorded Keys", @"Menu") action:@selector(replayRecordedKeys:) keyEquivalent:@""] autorelease];
     [appMenu addItem:item];
 #endif
 }
@@ -1766,7 +1766,7 @@ static iTermKeyEventReplayer *gReplayer;
 
 - (IBAction)replayRecordedKeys:(id)sender {
     NSOpenPanel *panel = [NSOpenPanel openPanel];
-    panel.title = @"Choose a JSON File";
+    panel.title = NSLocalizedString(@"Choose a JSON File", @"UI");
     panel.allowedContentTypes = @[ UTTypeJSON ];
     panel.canChooseFiles = YES;
     panel.canChooseDirectories = NO;
@@ -3147,7 +3147,7 @@ static iTermKeyEventReplayer *gReplayer;
         NSAlert *alert = [[NSAlert alloc] init];
         alert.messageText = @"No Retrospective Logs";
         alert.informativeText = @"No retrospective debug logs have been recorded yet.";
-        [alert addButtonWithTitle:@"OK"];
+        [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
         [alert runModal];
         return;
     }
@@ -3156,7 +3156,7 @@ static iTermKeyEventReplayer *gReplayer;
     NSString *log = [iTermDebugLogHeaderString() stringByAppendingString:ring];
     NSSavePanel *panel = [NSSavePanel savePanel];
     panel.nameFieldStringValue = @"retrospective-debuglog.txt";
-    panel.title = @"Save Retrospective Debug Logs";
+    panel.title = NSLocalizedString(@"Save Retrospective Debug Logs", @"UI");
     if ([panel runModal] != NSModalResponseOK || panel.URL == nil) {
         return;
     }
@@ -3165,7 +3165,7 @@ static iTermKeyEventReplayer *gReplayer;
         NSAlert *alert = [[NSAlert alloc] init];
         alert.messageText = @"Could Not Save";
         alert.informativeText = [NSString stringWithFormat:@"Failed to save retrospective debug logs: %@", error.localizedDescription];
-        [alert addButtonWithTitle:@"OK"];
+        [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
         [alert runModal];
     }
 }

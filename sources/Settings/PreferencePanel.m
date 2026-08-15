@@ -616,7 +616,7 @@ static iTermPreferencesSearchEngine *gSearchEngine;
 
     if (_editCurrentSessionMode) {
         [self layoutSubviewsForEditCurrentSessionMode];
-        self.window.title = @"Edit Session";
+        self.window.title = NSLocalizedString(@"Edit Session", @"UI");
     } else {
         [_toolbar setVisible:YES];
         [self resizeWindowForTabViewItem:_globalTabViewItem animated:NO];
@@ -624,7 +624,7 @@ static iTermPreferencesSearchEngine *gSearchEngine;
         if (suiteName.length > 0) {
             self.window.title = [NSString stringWithFormat:@"Settings: %@", suiteName];
         } else {
-            self.window.title = @"Settings";
+            self.window.title = NSLocalizedString(@"Settings", @"UI");
         }
     }
 
@@ -1018,7 +1018,7 @@ andEditComponentWithIdentifier:(NSString *)identifier
         }
 
         NSMenu *menu = [[NSMenu alloc] initWithTitle:@"Search Options"];
-        NSMenuItem *menuItem = [[NSMenuItem alloc] initWithTitle:@"Show indicators for non-default values"
+        NSMenuItem *menuItem = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Show indicators for non-default values", @"Menu")
                                                           action:@selector(toggleIndicateNonDefaultValues:)
                                                    keyEquivalent:@""];
         menuItem.target = self;

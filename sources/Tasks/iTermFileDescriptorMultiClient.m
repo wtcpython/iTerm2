@@ -852,7 +852,7 @@ static NSString *iTermMultiServerStringForMessageFromClient(iTermMultiServerClie
                 alert.messageText = @"Required File Missing";
                 alert.informativeText = @"The iTermServer executable is missing from the application bundle. This indicates iTerm2 is corrupted or incomplete. Please reinstall iTerm2 from the official website.";
                 alert.alertStyle = NSAlertStyleCritical;
-                [alert addButtonWithTitle:@"Quit"];
+                [alert addButtonWithTitle:NSLocalizedString(@"Quit", @"UI")];
                 [alert runModal];
 
                 // Terminate the application

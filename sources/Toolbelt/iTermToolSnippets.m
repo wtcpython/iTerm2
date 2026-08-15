@@ -594,7 +594,7 @@ static NSButton *iTermToolSnippetsNewButton(NSString *imageName, NSString *title
     iTermToolWrapper *wrapper = self.toolWrapper;
     switch (action) {
         case iTermToolSnippetsActionSend: {
-            iTermAction *action = [[iTermAction alloc] initWithTitle:@"Send Snippet"
+            iTermAction *action = [[iTermAction alloc] initWithTitle:NSLocalizedString(@"Send Snippet", @"Menu")
                                                               action:KEY_ACTION_SEND_SNIPPET
                                                            parameter:snippet.actionKey
                                                             escaping:snippet.escaping

@@ -525,8 +525,8 @@ static const NSTimeInterval iTermStatusBarGitComponentDefaultCadence = 2;
                              @(-[_maker.gitPoller lastPollTime].timeIntervalSinceNow),
                              [_maker.gitPoller.state prettyDescription],
                              [[iTermGitPollWorker sharedInstance] debugInfoForDirectory:_maker.gitPoller.currentDirectory]];
-    [alert addButtonWithTitle:@"OK"];
-    [alert addButtonWithTitle:@"Copy"];
+    [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
+    [alert addButtonWithTitle:NSLocalizedString(@"Copy", @"UI")];
     if ([alert runModal] == NSAlertSecondButtonReturn) {
         NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
         [pasteboard clearContents];

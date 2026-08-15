@@ -2109,8 +2109,8 @@ ITERM_WEAKLY_REFERENCEABLE
     NSAlert *alert = [[[NSAlert alloc] init] autorelease];
     alert.messageText = [NSString stringWithFormat:@"Close %@?", genericName];
     alert.informativeText = message;
-    [alert addButtonWithTitle:@"OK"];
-    [alert addButtonWithTitle:@"Cancel"];
+    [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
+    [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
     return [alert runSheetModalForWindow:self.window] == NSAlertFirstButtonReturn;
 }
 
@@ -2617,7 +2617,7 @@ ITERM_WEAKLY_REFERENCEABLE
                                                  }];
         iTermWarning *warning = [[[iTermWarning alloc] init] autorelease];
         warning.heading = @"Restart session?";
-        warning.title = @"Running jobs will be killed.";
+        warning.title = NSLocalizedString(@"Running jobs will be killed.", @"UI");
         warning.warningActions = @[ ok, cancel ];
         warning.identifier = @"NoSyncSuppressRestartSessionConfirmationAlert";
         warning.warningType = kiTermWarningTypePermanentlySilenceable;
@@ -3555,8 +3555,8 @@ ITERM_WEAKLY_REFERENCEABLE
     titleTextField.selectable = YES;
     titleTextField.stringValue = [self.scope valueForVariableName:iTermVariableKeyWindowTitleOverrideFormat] ?: @"";
     alert.accessoryView = titleTextField;
-    [alert addButtonWithTitle:@"OK"];
-    [alert addButtonWithTitle:@"Cancel"];
+    [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
+    [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
     BOOL isDark;
     if ((iTermPreferencesTabStyle)[iTermPreferences intForKey:kPreferenceKeyTabStyle] == TAB_STYLE_MINIMAL) {
         isDark = self.minimalTabStyleBackgroundColor.isDark;
@@ -8272,8 +8272,8 @@ hidingToolbeltShouldResizeWindow:(BOOL)hidingToolbeltShouldResizeWindow
     titleTextField.selectable = YES;
     titleTextField.stringValue = self.currentTab.variablesScope.tabTitleOverrideFormat ?: @"";
     alert.accessoryView = titleTextField;
-    [alert addButtonWithTitle:@"OK"];
-    [alert addButtonWithTitle:@"Cancel"];
+    [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
+    [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
     BOOL isDark;
     if ((iTermPreferencesTabStyle)[iTermPreferences intForKey:kPreferenceKeyTabStyle] == TAB_STYLE_MINIMAL) {
         isDark = self.minimalTabStyleBackgroundColor.isDark;
@@ -8512,8 +8512,8 @@ hidingToolbeltShouldResizeWindow:(BOOL)hidingToolbeltShouldResizeWindow
     NSAlert *alert = [[[NSAlert alloc] init] autorelease];
     alert.messageText = title;
     alert.informativeText = @"Enter a name for this tab group.";
-    [alert addButtonWithTitle:@"OK"];
-    [alert addButtonWithTitle:@"Cancel"];
+    [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
+    [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
     NSTextField *field = [[[NSTextField alloc] initWithFrame:NSMakeRect(0, 0, 240, 24)] autorelease];
     // Tab labels come with a trailing newline; trim so it doesn't seed the field
     // (or the resulting group name) with stray whitespace.
@@ -13214,9 +13214,9 @@ typedef NS_ENUM(NSUInteger, iTermBroadcastCommand) {
     } else if (item.action == @selector(captureNextMetalFrame:)) {
         const BOOL enabled = self.currentSession.canProduceMetalFramecap;
         if (!self.isMetalCaptureEnabled) {
-            item.title = @"Enable GPU Frame Capture";
+            item.title = NSLocalizedString(@"Enable GPU Frame Capture", @"UI");
         } else {
-            item.title = @"Capture GPU Frame";
+            item.title = NSLocalizedString(@"Capture GPU Frame", @"UI");
         }
         return enabled;
     } else if (item.action == @selector(exportRecording:)) {

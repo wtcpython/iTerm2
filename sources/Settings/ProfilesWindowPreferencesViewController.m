@@ -526,13 +526,13 @@ typedef NS_ENUM(NSUInteger, iTermWindowUnitsTag) {
             _percentageHeightField.enabled = YES;
 
             _columnsUnitsButton.hidden = NO;
-            _columnsUnitsButton.menu.itemArray[0].title = @"Columns";
-            _columnsUnitsButton.menu.itemArray[1].title = @"% of screen width";
+            _columnsUnitsButton.menu.itemArray[0].title = NSLocalizedString(@"Columns", @"UI");
+            _columnsUnitsButton.menu.itemArray[1].title = NSLocalizedString(@"% of screen width", @"UI");
             [_columnsUnitsButton selectItemWithTag:columnsIsCells ? iTermWindowUnitsTagCells : iTermWindowUnitsTagScreenPercentage];
 
             _rowsUnitsButton.hidden = NO;
-            _rowsUnitsButton.menu.itemArray[0].title = @"Rows";
-            _rowsUnitsButton.menu.itemArray[1].title = @"% of screen height";
+            _rowsUnitsButton.menu.itemArray[0].title = NSLocalizedString(@"Rows", @"UI");
+            _rowsUnitsButton.menu.itemArray[1].title = NSLocalizedString(@"% of screen height", @"UI");
             [_rowsUnitsButton selectItemWithTag:rowsIsCells ? iTermWindowUnitsTagCells : iTermWindowUnitsTagScreenPercentage];
 
             _widthLabel.hidden = YES;
@@ -554,8 +554,8 @@ typedef NS_ENUM(NSUInteger, iTermWindowUnitsTag) {
             _widthLabel.hidden = NO;
             _heightLabel.hidden = NO;
 
-            _widthLabel.stringValue = @"columns by";
-            _heightLabel.stringValue = @"rows";
+            _widthLabel.stringValue = NSLocalizedString(@"columns by", @"UI");
+            _heightLabel.stringValue = NSLocalizedString(@"rows", @"UI");
 
             _byLabel.hidden = YES;
             break;
@@ -572,13 +572,13 @@ typedef NS_ENUM(NSUInteger, iTermWindowUnitsTag) {
             _percentageHeightField.hidden = YES;
 
             _columnsUnitsButton.hidden = NO;
-            _columnsUnitsButton.menu.itemArray[0].title = @"Columns";
-            _columnsUnitsButton.menu.itemArray[1].title = @"% of screen width";
+            _columnsUnitsButton.menu.itemArray[0].title = NSLocalizedString(@"Columns", @"UI");
+            _columnsUnitsButton.menu.itemArray[1].title = NSLocalizedString(@"% of screen width", @"UI");
             [_columnsUnitsButton selectItemWithTag:columnsIsCells ? 0 : 1];
 
             _rowsUnitsButton.hidden = NO;
-            _rowsUnitsButton.menu.itemArray[0].title = @"Rows";
-            _rowsUnitsButton.menu.itemArray[1].title = @"% of screen height";
+            _rowsUnitsButton.menu.itemArray[0].title = NSLocalizedString(@"Rows", @"UI");
+            _rowsUnitsButton.menu.itemArray[1].title = NSLocalizedString(@"% of screen height", @"UI");
             [_rowsUnitsButton selectItemWithTag:rowsIsCells ? iTermWindowUnitsTagCells : iTermWindowUnitsTagScreenPercentage];
 
             _widthLabel.hidden = YES;
@@ -599,13 +599,13 @@ typedef NS_ENUM(NSUInteger, iTermWindowUnitsTag) {
             _percentageHeightField.hidden = YES;
 
             _columnsUnitsButton.hidden = NO;
-            _columnsUnitsButton.menu.itemArray[0].title = @"Columns";
-            _columnsUnitsButton.menu.itemArray[1].title = @"% of screen width";
+            _columnsUnitsButton.menu.itemArray[0].title = NSLocalizedString(@"Columns", @"UI");
+            _columnsUnitsButton.menu.itemArray[1].title = NSLocalizedString(@"% of screen width", @"UI");
             [_columnsUnitsButton selectItemWithTag:columnsIsCells ? iTermWindowUnitsTagCells : iTermWindowUnitsTagScreenPercentage];
 
             _rowsUnitsButton.hidden = NO;
-            _rowsUnitsButton.menu.itemArray[0].title = @"Rows";
-            _rowsUnitsButton.menu.itemArray[1].title = @"% of screen height";
+            _rowsUnitsButton.menu.itemArray[0].title = NSLocalizedString(@"Rows", @"UI");
+            _rowsUnitsButton.menu.itemArray[1].title = NSLocalizedString(@"% of screen height", @"UI");
             [_rowsUnitsButton selectItemWithTag:rowsIsCells ? iTermWindowUnitsTagCells : iTermWindowUnitsTagScreenPercentage];
 
             _widthLabel.hidden = YES;
@@ -628,13 +628,13 @@ typedef NS_ENUM(NSUInteger, iTermWindowUnitsTag) {
             _percentageHeightField.enabled = YES;
 
             _columnsUnitsButton.hidden = NO;
-            _columnsUnitsButton.menu.itemArray[0].title = @"Columns";
-            _columnsUnitsButton.menu.itemArray[1].title = @"% of screen width";
+            _columnsUnitsButton.menu.itemArray[0].title = NSLocalizedString(@"Columns", @"UI");
+            _columnsUnitsButton.menu.itemArray[1].title = NSLocalizedString(@"% of screen width", @"UI");
             [_columnsUnitsButton selectItemWithTag:columnsIsCells ? iTermWindowUnitsTagCells : iTermWindowUnitsTagScreenPercentage];
 
             _rowsUnitsButton.hidden = NO;
-            _rowsUnitsButton.menu.itemArray[0].title = @"Rows";
-            _rowsUnitsButton.menu.itemArray[1].title = @"% of screen height";
+            _rowsUnitsButton.menu.itemArray[0].title = NSLocalizedString(@"Rows", @"UI");
+            _rowsUnitsButton.menu.itemArray[1].title = NSLocalizedString(@"% of screen height", @"UI");
             [_rowsUnitsButton selectItemWithTag:rowsIsCells ? iTermWindowUnitsTagCells : iTermWindowUnitsTagScreenPercentage];
 
             _widthLabel.hidden = YES;
@@ -656,13 +656,13 @@ typedef NS_ENUM(NSUInteger, iTermWindowUnitsTag) {
             _percentageHeightField.enabled = YES;
 
             _columnsUnitsButton.hidden = NO;
-            _columnsUnitsButton.menu.itemArray[0].title = @"Columns";
-            _columnsUnitsButton.menu.itemArray[1].title = @"% of screen width";
+            _columnsUnitsButton.menu.itemArray[0].title = NSLocalizedString(@"Columns", @"UI");
+            _columnsUnitsButton.menu.itemArray[1].title = NSLocalizedString(@"% of screen width", @"UI");
             [_columnsUnitsButton selectItemWithTag:columnsIsCells ? iTermWindowUnitsTagCells : iTermWindowUnitsTagScreenPercentage];
 
             _rowsUnitsButton.hidden = NO;
-            _rowsUnitsButton.menu.itemArray[0].title = @"Rows";
-            _rowsUnitsButton.menu.itemArray[1].title = @"% of screen height";
+            _rowsUnitsButton.menu.itemArray[0].title = NSLocalizedString(@"Rows", @"UI");
+            _rowsUnitsButton.menu.itemArray[1].title = NSLocalizedString(@"% of screen height", @"UI");
             [_rowsUnitsButton selectItemWithTag:rowsIsCells ? iTermWindowUnitsTagCells : iTermWindowUnitsTagScreenPercentage];
 
             _widthLabel.hidden = YES;
@@ -689,8 +689,8 @@ typedef NS_ENUM(NSUInteger, iTermWindowUnitsTag) {
             _widthLabel.hidden = NO;
             _heightLabel.hidden = NO;
 
-            _widthLabel.stringValue = @"columns by";
-            _heightLabel.stringValue = @"rows";
+            _widthLabel.stringValue = NSLocalizedString(@"columns by", @"UI");
+            _heightLabel.stringValue = NSLocalizedString(@"rows", @"UI");
 
             _byLabel.hidden = YES;
             break;
@@ -1038,9 +1038,9 @@ typedef NS_ENUM(NSUInteger, iTermWindowUnitsTag) {
     int selectedTag = [_screen selectedTag];
     [_screen removeAllItems];
     int i = 0;
-    [_screen addItemWithTitle:@"No Preference"];
+    [_screen addItemWithTitle:NSLocalizedString(@"No Preference", @"Menu")];
     [[_screen lastItem] setTag:-1];
-    [_screen addItemWithTitle:@"Screen with Cursor"];
+    [_screen addItemWithTitle:NSLocalizedString(@"Screen with Cursor", @"Menu")];
     [[_screen lastItem] setTag:-2];
     NSArray<NSScreen *> *screens = [NSScreen screens];
     [_screen.menu addItem:[NSMenuItem separatorItem]];

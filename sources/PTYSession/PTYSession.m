@@ -4121,8 +4121,8 @@ webViewConfiguration:(WKWebViewConfiguration *)webViewConfiguration
     } else if (unicode == 'C') {
         NSAlert *alert = [[[NSAlert alloc] init] autorelease];
         alert.messageText = @"Enter command to send tmux:";
-        [alert addButtonWithTitle:@"OK"];
-        [alert addButtonWithTitle:@"Cancel"];
+        [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
+        [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
         NSTextField *tmuxCommand = [[[NSTextField alloc] initWithFrame:NSMakeRect(0, 0, 200, 24)] autorelease];
         [tmuxCommand setEditable:YES];
         [tmuxCommand setSelectable:YES];
@@ -10456,7 +10456,7 @@ typedef NS_ENUM(NSUInteger, PTYSessionTmuxReport) {
     if (duringInitialization) {
         // "Reveal Setting" is a one-time navigation action and shouldn't be remembered.
         iTermWarning *warning = [[iTermWarning alloc] init];
-        warning.title = @"It's taking a long time for tmux to respond. If this is a old or funky system it might expect newline rather than carriage return to end commands. You can adjust the line terminator used by tmux integration in Settings.";
+        warning.title = NSLocalizedString(@"It's taking a long time for tmux to respond. If this is a old or funky system it might expect newline rather than carriage return to end commands. You can adjust the line terminator used by tmux integration in Settings.", @"UI");
         warning.actionLabels = @[ @"OK", @"Reveal Setting" ];
         warning.identifier = @"NoSyncTmuxHung";
         warning.warningType = kiTermWarningTypePermanentlySilenceable;
@@ -10471,8 +10471,8 @@ typedef NS_ENUM(NSUInteger, PTYSessionTmuxReport) {
     NSAlert *alert = [[[NSAlert alloc] init] autorelease];
     alert.messageText = @"Force Detach?";
     alert.informativeText = @"Tmux is not responding. Would you like to force detach?";
-    [alert addButtonWithTitle:@"Detach"];
-    [alert addButtonWithTitle:@"Cancel"];
+    [alert addButtonWithTitle:NSLocalizedString(@"Detach", @"UI")];
+    [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
     NSWindow *window = self.view.window;
     NSInteger button;
     if (window) {
@@ -10497,8 +10497,8 @@ typedef NS_ENUM(NSUInteger, PTYSessionTmuxReport) {
     NSAlert *alert = [[[NSAlert alloc] init] autorelease];
     alert.messageText = @"Force Detach?";
     alert.informativeText = @"A previous detach request has not yet been honored. Force detach?";
-    [alert addButtonWithTitle:@"OK"];
-    [alert addButtonWithTitle:@"Cancel"];
+    [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
+    [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
     NSWindow *window = self.view.window;
     NSInteger button;
     if (window) {
@@ -14455,10 +14455,10 @@ typedef NS_ENUM(NSUInteger, PTYSessionTmuxReport) {
     }
     [menu addItem:[NSMenuItem separatorItem]];
     if (_tmuxPaused) {
-        NSMenuItem *item = [menu addItemWithTitle:@"Unpause tmux Pane" action:@selector(toggleTmuxPaused) keyEquivalent:@""];
+        NSMenuItem *item = [menu addItemWithTitle:NSLocalizedString(@"Unpause tmux Pane", @"Menu") action:@selector(toggleTmuxPaused) keyEquivalent:@""];
         item.target = self;
     } else {
-        NSMenuItem *item = [menu addItemWithTitle:@"Pause tmux Pane" action:@selector(toggleTmuxPaused) keyEquivalent:@""];
+        NSMenuItem *item = [menu addItemWithTitle:NSLocalizedString(@"Pause tmux Pane", @"Menu") action:@selector(toggleTmuxPaused) keyEquivalent:@""];
         item.target = self;
     }
 }
@@ -16200,8 +16200,8 @@ typedef NS_ENUM(NSUInteger, PTYSessionTmuxReport) {
     NSAlert *alert = [[[NSAlert alloc] init] autorelease];
     alert.messageText = @"Alert";
     alert.informativeText = [NSString stringWithFormat:@"Mark set in session “%@.”", [self name]];
-    [alert addButtonWithTitle:@"Reveal"];
-    [alert addButtonWithTitle:@"OK"];
+    [alert addButtonWithTitle:NSLocalizedString(@"Reveal", @"UI")];
+    [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
     if ([alert runModal] == NSAlertFirstButtonReturn) {
         [self reveal];
     }
@@ -19974,7 +19974,7 @@ static const NSTimeInterval PTYSessionFocusReportBellSquelchTimeIntervalThreshol
         alert.messageText = @"Upload in Progress";
         alert.informativeText = @"Please wait for the current upload to complete or cancel it before starting another.";
         alert.alertStyle = NSAlertStyleWarning;
-        [alert addButtonWithTitle:@"OK"];
+        [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
         if (self.view.window) {
             [alert beginSheetModalForWindow:self.view.window completionHandler:nil];
         } else {
@@ -20377,9 +20377,9 @@ static const NSTimeInterval PTYSessionFocusReportBellSquelchTimeIntervalThreshol
         return;
     }
     NSAlert *alert = [[[NSAlert alloc] init] autorelease];
-    [alert setMessageText:@"Describe the command you want to run in plain English. Press ⇧⏎ to send."];
-    [alert addButtonWithTitle:@"OK"];
-    [alert addButtonWithTitle:@"Cancel"];
+    [alert setMessageText:NSLocalizedString(@"Describe the command you want to run in plain English. Press ⇧⏎ to send.", @"UI")];
+    [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
+    [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
 
     ShiftEnterTextView *input = [[[ShiftEnterTextView alloc] initWithFrame:NSMakeRect(0, 0, 400, 200)] autorelease];
     input.richText = NO;
@@ -20407,7 +20407,7 @@ static const NSTimeInterval PTYSessionFocusReportBellSquelchTimeIntervalThreshol
         if (bypassable) {
             disableButton = [[[NSButton alloc] init] autorelease];
             disableButton.buttonType = NSButtonTypeSwitch;
-            disableButton.title = @"Skip this dialog in the future and send the prompt immediately.";
+            disableButton.title = NSLocalizedString(@"Skip this dialog in the future and send the prompt immediately.", @"UI");
             [disableButton sizeToFit];
 
             [views addObject:disableButton];
@@ -23303,9 +23303,9 @@ static const NSTimeInterval PTYSessionFocusReportBellSquelchTimeIntervalThreshol
                                    guid:(NSString *)guid
                              completion:(void (^)(Profile *))completion {
     NSAlert *alert = [[NSAlert alloc] init];
-    [alert setMessageText:@"Select a profile to use for this session. Your selection will be saved back to the arrangement."];
-    [alert addButtonWithTitle:@"OK"];
-    [alert addButtonWithTitle:@"Cancel"];
+    [alert setMessageText:NSLocalizedString(@"Select a profile to use for this session. Your selection will be saved back to the arrangement.", @"UI")];
+    [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
+    [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
 
     ProfileListView *profiles = [[[ProfileListView alloc] initWithFrame:NSMakeRect(0, 0, 300, 300)
                                                                   model:[ProfileModel sharedInstance]
@@ -24369,9 +24369,9 @@ getOptionKeyBehaviorLeft:(iTermOptionKeyBehavior *)left
     [rateLimit performRateLimitedBlock:^{
         NSAlert *alert = [[[NSAlert alloc] init] autorelease];
         alert.messageText = message ?: @"";
-        [alert addButtonWithTitle:@"OK"];
-        [alert addButtonWithTitle:@"Show Session"];
-        [alert addButtonWithTitle:@"Disable This Alert"];
+        [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
+        [alert addButtonWithTitle:NSLocalizedString(@"Show Session", @"UI")];
+        [alert addButtonWithTitle:NSLocalizedString(@"Disable This Alert", @"UI")];
         switch ([alert runModal]) {
             case NSAlertFirstButtonReturn:
                 break;
@@ -24566,7 +24566,7 @@ getOptionKeyBehaviorLeft:(iTermOptionKeyBehavior *)left
     [iTermGCD assertMainQueueSafe];
     iTermBackgroundCommandRunner *runner = [pool requestBackgroundCommandRunnerWithTerminationBlock:nil];
     runner.command = command;
-    runner.title = @"Run Command Trigger";
+    runner.title = NSLocalizedString(@"Run Command Trigger", @"UI");
     runner.notificationTitle = @"Run Command Trigger Failed";
     runner.shell = self.userShell;
     [runner run];

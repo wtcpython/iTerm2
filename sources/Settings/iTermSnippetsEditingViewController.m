@@ -53,19 +53,19 @@ static NSString *const iTermSnippetsEditingPasteboardType = @"com.googlecode.ite
     [super awakeFromNib];
     NSMenu *menu = [[NSMenu alloc] init];
     menu.delegate = self;
-    [menu addItem:[[NSMenuItem alloc] initWithTitle:@"Duplicate"
+    [menu addItem:[[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Duplicate", @"Menu")
                                              action:@selector(duplicateSnippets:)
                                       keyEquivalent:@""]];
-    [menu addItem:[[NSMenuItem alloc] initWithTitle:@"Delete"
+    [menu addItem:[[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Delete", @"Menu")
                                              action:@selector(deleteSnippets:)
                                       keyEquivalent:@""]];
-    [menu addItem:[[NSMenuItem alloc] initWithTitle:@"Add Above"
+    [menu addItem:[[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Add Above", @"Menu")
                                              action:@selector(addSnippetAbove:)
                                       keyEquivalent:@""]];
-    [menu addItem:[[NSMenuItem alloc] initWithTitle:@"Add Below"
+    [menu addItem:[[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Add Below", @"Menu")
                                              action:@selector(addSnippetBelow:)
                                       keyEquivalent:@""]];
-    [menu addItem:[[NSMenuItem alloc] initWithTitle:@"Edit"
+    [menu addItem:[[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Edit", @"Menu")
                                              action:@selector(editClickedSnippet:)
                                       keyEquivalent:@""]];
     _tableView.menu = menu;

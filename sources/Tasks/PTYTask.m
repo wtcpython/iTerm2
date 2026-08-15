@@ -846,7 +846,7 @@ static void HandleSigChld(int n) {
     NSAlert *alert = [[NSAlert alloc] init];
     alert.messageText = @"Error";
     alert.informativeText = [NSString stringWithFormat:@"An error was encountered while creating a temporary file with mkstemps. Verify that %@ exists and is writable.", NSTemporaryDirectory()];
-    [alert addButtonWithTitle:@"OK"];
+    [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
     [alert runModal];
 }
 

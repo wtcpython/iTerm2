@@ -301,7 +301,7 @@ const CGFloat iTermGetStatusBarHeight(void) {
     if ([_component respondsToSelector:@selector(statusBarComponentCopyableString)]) {
         NSString *copyableString = [_component statusBarComponentCopyableString];
         if (copyableString.length > 0) {
-            [menu addItemWithTitle:@"Copy"
+            [menu addItemWithTitle:NSLocalizedString(@"Copy", @"Menu")
                             action:@selector(copyComponentValue:)
                      keyEquivalent:@""];
             [menu addItem:[NSMenuItem separatorItem]];
@@ -317,10 +317,10 @@ const CGFloat iTermGetStatusBarHeight(void) {
                         action:@selector(hideComponent:)
                  keyEquivalent:@""];
     }
-    [menu addItemWithTitle:@"Configure Status Bar"
+    [menu addItemWithTitle:NSLocalizedString(@"Configure Status Bar", @"Menu")
                     action:@selector(configureStatusBar:)
              keyEquivalent:@""];
-    [menu addItemWithTitle:@"Disable Status Bar"
+    [menu addItemWithTitle:NSLocalizedString(@"Disable Status Bar", @"Menu")
                     action:@selector(disableStatusBar:)
              keyEquivalent:@""];
     NSDictionary<NSString *, id> *values = [self.component statusBarComponentKnobValues];

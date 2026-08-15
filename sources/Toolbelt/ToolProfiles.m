@@ -59,7 +59,7 @@ static NSString *const iTermToolProfilesProfileListViewState = @"iTermToolProfil
             _openButton.imagePosition = NSImageOnly;
         } else {
             [_openButton setButtonType:NSButtonTypeMomentaryPushIn];
-            [_openButton setTitle:@"Open"];
+            [_openButton setTitle:NSLocalizedString(@"Open", @"Menu")];
             [_openButton setBezelStyle:NSBezelStyleSmallSquare];
         }
         [_openButton setTarget:self];

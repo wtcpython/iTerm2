@@ -577,9 +577,9 @@ NSString *const iTermPreferencesDidToggleIndicateNonDefaultValues = @"iTermPrefe
         message = @"A required file appears to be missing or corrupted, yet against all odds the code signature for iTerm2 is valid. Please file a bug at https://iterm2.com/bugs";
     }
     NSAlert *alert = [[NSAlert alloc] init];
-    [alert setMessageText:@"Application Corrupt"];
+    [alert setMessageText:NSLocalizedString(@"Application Corrupt", @"UI")];
     [alert setInformativeText:[NSString stringWithFormat:@"While trying to load the setting for “%@”: %@", key, message]];
-    [alert addButtonWithTitle:@"OK"];
+    [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
     [alert setAlertStyle:NSAlertStyleCritical];
     [alert runModal];
     exit(1);

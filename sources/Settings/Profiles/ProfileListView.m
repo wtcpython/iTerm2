@@ -188,7 +188,7 @@ const CGFloat kDefaultTagsWidth = 80;
 
         [tableView_ setDoubleAction:@selector(onDoubleClick:)];
 
-        tableColumn_.title = @"Profile Name";
+        tableColumn_.title = NSLocalizedString(@"Profile Name", @"UI");
 
         [tableView_ sizeLastColumnToFit];
 
@@ -406,7 +406,7 @@ const CGFloat kDefaultTagsWidth = 80;
                         autorelease];
     NSMenuItem *item;
 
-    item = [[[NSMenuItem alloc] initWithTitle:@"Tags"
+    item = [[[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Tags", @"Menu")
                                        action:nil
                                 keyEquivalent:@""] autorelease];
     [item setTarget:self];
@@ -424,7 +424,7 @@ const CGFloat kDefaultTagsWidth = 80;
     }
 
     [cellMenu insertItem:[NSMenuItem separatorItem] atIndex:cellMenu.numberOfItems];
-    [cellMenu addItemWithTitle:@"Search Syntax Help" action:@selector(openHowToSearchHelp:) keyEquivalent:@""];
+    [cellMenu addItemWithTitle:NSLocalizedString(@"Search Syntax Help", @"Menu") action:@selector(openHowToSearchHelp:) keyEquivalent:@""];
 
     id searchCell = [searchField cell];
     [searchCell setSearchMenuTemplate:cellMenu];
@@ -1026,8 +1026,8 @@ const CGFloat kDefaultTagsWidth = 80;
 
     [tableColumn_ setWidth:250];
 
-    shortcutColumn_.title = @"Shortcut";
-    commandColumn_.title = @"Command";
+    shortcutColumn_.title = NSLocalizedString(@"Shortcut", @"UI");
+    commandColumn_.title = NSLocalizedString(@"Command", @"UI");
     [tableView_ sizeLastColumnToFit];
 }
 

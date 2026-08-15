@@ -491,7 +491,7 @@ static uint64_t iTermInt64FromBytes(const unsigned char *bytes, BOOL bigEndian) 
         }
         if (decoded) {
             NSMenuItem *item = [[NSMenuItem alloc] init];
-            item.title = @"Copy Base64-Decoded";
+            item.title = NSLocalizedString(@"Copy Base64-Decoded", @"UI");
             item.action = selectorForData;
             item.target = target;
             item.representedObject = decoded;
@@ -500,7 +500,7 @@ static uint64_t iTermInt64FromBytes(const unsigned char *bytes, BOOL bigEndian) 
     }
     NSString *encoded = [[text dataUsingEncoding:NSUTF8StringEncoding] base64EncodedStringWithOptions:NSDataBase64Encoding76CharacterLineLength];
     NSMenuItem *item = [[NSMenuItem alloc] init];
-    item.title = @"Copy Base64-Encoded";
+    item.title = NSLocalizedString(@"Copy Base64-Encoded", @"UI");
     item.target = target;
     item.action = selectorForString;
     item.representedObject = encoded;

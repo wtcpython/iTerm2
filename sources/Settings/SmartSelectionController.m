@@ -238,11 +238,11 @@ const double SmartSelectionVeryHighPrecision = 1000000.0;
         [popover showRelativeToRect:button.bounds ofView:button preferredEdge:NSRectEdgeMaxX];
         _popover = popover;
 
-        _visualizationButton.title = @"Close Regular Expression Visualization";
+        _visualizationButton.title = NSLocalizedString(@"Close Regular Expression Visualization", @"UI");
     } else {
         [_popover close];
         _popover = nil;
-        _visualizationButton.title = @"Open Regular Expression Visualization";
+        _visualizationButton.title = NSLocalizedString(@"Open Regular Expression Visualization", @"UI");
     }
 }
 
@@ -431,9 +431,9 @@ const double SmartSelectionVeryHighPrecision = 1000000.0;
     _detailView.hidden = !self.hasSelection;
     _noRuleSelected.hidden = self.hasSelection;
     if (tableView_.numberOfSelectedRows > 1) {
-        _noRuleSelected.stringValue = @"Multiple rules selected";
+        _noRuleSelected.stringValue = NSLocalizedString(@"Multiple rules selected", @"UI");
     } else {
-        _noRuleSelected.stringValue = @"No rule selected";
+        _noRuleSelected.stringValue = NSLocalizedString(@"No rule selected", @"UI");
     }
     if (self.hasSelection) {
         const NSInteger row = [tableView_ selectedRow];
@@ -571,12 +571,12 @@ const double SmartSelectionVeryHighPrecision = 1000000.0;
 
 - (void)updatePlayground {
     if (_playgroundTextView.lastCoord.x < 0 || _playgroundTextView.lastCoord.y < 0) {
-        _playgroundResultLabel.stringValue = @"Click on text in playground to test rules";
+        _playgroundResultLabel.stringValue = NSLocalizedString(@"Click on text in playground to test rules", @"UI");
         return;
     }
     if (_playgroundTextView.lastCoord.y >= _playgroundTextView.textStorage.string.numberOfLines ||
         _playgroundTextView.lastCoord.x >= _playgroundTextView.textStorage.string.width) {
-        _playgroundResultLabel.stringValue = @"Click on text in playground to test rules";
+        _playgroundResultLabel.stringValue = NSLocalizedString(@"Click on text in playground to test rules", @"UI");
         return;
     }
     iTermTextExtractor *extractor = [[iTermTextExtractor alloc] initWithDataSource:_playgroundTextView.textStorage.string ?: @""];
@@ -587,7 +587,7 @@ const double SmartSelectionVeryHighPrecision = 1000000.0;
                                                range:&relativeRange
                                     ignoringNewlines:NO];
     if (!result) {
-        _playgroundResultLabel.stringValue = @"No match";
+        _playgroundResultLabel.stringValue = NSLocalizedString(@"No match", @"UI");
         return;
     }
     _playgroundResultLabel.stringValue = result.rule[kNotesKey];

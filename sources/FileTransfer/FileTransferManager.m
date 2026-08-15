@@ -265,7 +265,7 @@ static const NSTimeInterval kMaximumTimeToKeepFinishedDownload = 24 * 60 * 60;
     [item setAction:@selector(itemSelected:)];
 
     NSMenu *submenu = [[[NSMenu alloc] init] autorelease];
-    NSMenuItem *subItem = [[[NSMenuItem alloc] initWithTitle:@"Stop"
+    NSMenuItem *subItem = [[[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Stop", @"Menu")
                                                       action:@selector(stop:)
                                                keyEquivalent:@""] autorelease];
     [subItem setTarget:controller];
@@ -273,7 +273,7 @@ static const NSTimeInterval kMaximumTimeToKeepFinishedDownload = 24 * 60 * 60;
     controller.stopSubItem = subItem;
 
     if (transferrableFile.isDownloading) {
-        subItem = [[[NSMenuItem alloc] initWithTitle:@"Show in Finder"
+        subItem = [[[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Show in Finder", @"Menu")
                                               action:@selector(showInFinder:)
                                        keyEquivalent:@""] autorelease];
         [subItem setTarget:controller];
@@ -281,7 +281,7 @@ static const NSTimeInterval kMaximumTimeToKeepFinishedDownload = 24 * 60 * 60;
         controller.showInFinderSubItem = subItem;
     }
 
-    subItem = [[[NSMenuItem alloc] initWithTitle:@"Remove from List"
+    subItem = [[[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Remove from List", @"Menu")
                                           action:@selector(removeFromList:)
                                    keyEquivalent:@""] autorelease];
     [subItem setTarget:controller];
@@ -289,7 +289,7 @@ static const NSTimeInterval kMaximumTimeToKeepFinishedDownload = 24 * 60 * 60;
     controller.removeFromListSubItem = subItem;
 
     if (transferrableFile.isDownloading) {
-        subItem = [[[NSMenuItem alloc] initWithTitle:@"Open"
+        subItem = [[[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Open", @"Menu")
                                               action:@selector(open:)
                                        keyEquivalent:@""] autorelease];
         [subItem setTarget:controller];
@@ -297,7 +297,7 @@ static const NSTimeInterval kMaximumTimeToKeepFinishedDownload = 24 * 60 * 60;
         controller.openSubItem = subItem;
     }
 
-    subItem = [[[NSMenuItem alloc] initWithTitle:@"Get Info"
+    subItem = [[[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Get Info", @"Menu")
                                           action:@selector(getInfo:)
                                    keyEquivalent:@""] autorelease];
     [subItem setTarget:controller];
@@ -385,9 +385,9 @@ static const NSTimeInterval kMaximumTimeToKeepFinishedDownload = 24 * 60 * 60;
     alert.informativeText = [NSString stringWithFormat:@"Please enter the %@ for %@ to begin %@.",
                              prompt, transferrableFile.authRequestor,
                              transferrableFile.protocolName];
-    [alert addButtonWithTitle:@"OK"];
-    [alert addButtonWithTitle:@"Cancel"];
-    [alert addButtonWithTitle:@"Password Manager…"];
+    [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
+    [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
+    [alert addButtonWithTitle:NSLocalizedString(@"Password Manager…", @"UI")];
 
     NSSecureTextField *input =
         [[[NSSecureTextField alloc] initWithFrame:NSMakeRect(0, 0, 200, 24)] autorelease];
@@ -424,8 +424,8 @@ static const NSTimeInterval kMaximumTimeToKeepFinishedDownload = 24 * 60 * 60;
     NSAlert *alert = [[[NSAlert alloc] init] autorelease];
     alert.messageText = title;
     alert.informativeText = message;
-    [alert addButtonWithTitle:@"OK"];
-    [alert addButtonWithTitle:@"Cancel"];
+    [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
+    [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
 
     [alert layout];
     NSInteger button = [alert runModal];

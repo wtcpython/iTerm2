@@ -36,7 +36,7 @@ NSString *const kRebuildColorPresetsMenuNotification = @"kRebuildColorPresetsMen
         NSAlert *alert = [[NSAlert alloc] init];
         alert.messageText = @"Import Failed.";
         alert.informativeText = @"The selected file could not be read or did not contain a valid color scheme.";
-        [alert addButtonWithTitle:@"OK"];
+        [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
         [alert runModal];
         return NO;
     } else {
@@ -47,8 +47,8 @@ NSString *const kRebuildColorPresetsMenuNotification = @"kRebuildColorPresetsMen
             NSAlert *alert = [[NSAlert alloc] init];
             alert.messageText = @"Add duplicate color preset?";
             alert.informativeText = [NSString stringWithFormat:@"The color preset “%@” is the same as the preset you're trying to add. Really add it?", dup];
-            [alert addButtonWithTitle:@"Cancel"];
-            [alert addButtonWithTitle:@"Add it anyway"];
+            [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
+            [alert addButtonWithTitle:NSLocalizedString(@"Add it anyway", @"UI")];
             if ([alert runModal] == NSAlertFirstButtonReturn) {
                 DLog(@"User declined to install dup");
                 return NO;

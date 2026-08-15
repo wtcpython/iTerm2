@@ -191,7 +191,7 @@
         NSButton *button = [[NSButton alloc] init];
         button.buttonType = NSButtonTypeMomentaryPushIn;
         button.bezelStyle = NSBezelStyleRounded;
-        button.title = @"Reveal in Finder";
+        button.title = NSLocalizedString(@"Reveal in Finder", @"UI");
         [button setAction:@selector(reveal:)];
         [button setTarget:self];
         [button setIdentifier:file];

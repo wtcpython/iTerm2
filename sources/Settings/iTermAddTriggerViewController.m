@@ -429,7 +429,7 @@ static const CGFloat kLabelWidth = 124;
     // Create label
     NSTextField *performanceLabel = [[NSTextField alloc] init];
     performanceLabel.translatesAutoresizingMaskIntoConstraints = NO;
-    performanceLabel.stringValue = @"CPU Time:";
+    performanceLabel.stringValue = NSLocalizedString(@"CPU Time:", @"UI");
     performanceLabel.editable = NO;
     performanceLabel.bordered = NO;
     performanceLabel.backgroundColor = [NSColor clearColor];
@@ -781,7 +781,7 @@ static const CGFloat kLabelWidth = 124;
     // Create label
     NSTextField *label = [[NSTextField alloc] init];
     label.translatesAutoresizingMaskIntoConstraints = NO;
-    label.stringValue = @"Match Against:";
+    label.stringValue = NSLocalizedString(@"Match Against:", @"UI");
     label.editable = NO;
     label.bordered = NO;
     label.backgroundColor = [NSColor clearColor];
@@ -793,12 +793,12 @@ static const CGFloat kLabelWidth = 124;
     // Create popup button for match type
     _matchTypeButton = [[NSPopUpButton alloc] init];
     _matchTypeButton.translatesAutoresizingMaskIntoConstraints = NO;
-    [_matchTypeButton it_addItemWithTitle:@"Regular Expression" tag:iTermTriggerMatchTypeRegex];
+    [_matchTypeButton it_addItemWithTitle:NSLocalizedString(@"Regular Expression", @"Menu") tag:iTermTriggerMatchTypeRegex];
 
     if (_browserMode) {
         // Browser-specific match types
-        [_matchTypeButton it_addItemWithTitle:@"URL" tag:iTermTriggerMatchTypeURLRegex];
-        [_matchTypeButton it_addItemWithTitle:@"Page Content" tag:iTermTriggerMatchTypePageContentRegex];
+        [_matchTypeButton it_addItemWithTitle:NSLocalizedString(@"URL", @"Menu") tag:iTermTriggerMatchTypeURLRegex];
+        [_matchTypeButton it_addItemWithTitle:NSLocalizedString(@"Page Content", @"Menu") tag:iTermTriggerMatchTypePageContentRegex];
     } else {
         // Terminal-specific event types, sorted alphabetically by display name
         [[_matchTypeButton menu] addItem:[NSMenuItem separatorItem]];
@@ -881,7 +881,7 @@ static const CGFloat kLabelWidth = 124;
     // Create label
     NSTextField *label = [[NSTextField alloc] init];
     label.translatesAutoresizingMaskIntoConstraints = NO;
-    label.stringValue = @"Content Regex:";
+    label.stringValue = NSLocalizedString(@"Content Regex:", @"UI");
     label.editable = NO;
     label.bordered = NO;
     label.backgroundColor = [NSColor clearColor];
@@ -1010,7 +1010,7 @@ static const CGFloat kLabelWidth = 124;
     // Create label
     NSTextField *label = [[NSTextField alloc] init];
     label.translatesAutoresizingMaskIntoConstraints = NO;
-    label.stringValue = @"Parameters:";
+    label.stringValue = NSLocalizedString(@"Parameters:", @"UI");
     label.editable = NO;
     label.bordered = NO;
     label.backgroundColor = [NSColor clearColor];
@@ -1093,7 +1093,7 @@ static const CGFloat kLabelWidth = 124;
     _instantButton = [[NSButton alloc] init];
     _instantButton.translatesAutoresizingMaskIntoConstraints = NO;
     _instantButton.buttonType = NSButtonTypeSwitch;
-    _instantButton.title = @"Instant";
+    _instantButton.title = NSLocalizedString(@"Instant", @"UI");
     _instantButton.target = self;
     _instantButton.action = @selector(instantDidChange:);
     [row addSubview:_instantButton];
@@ -1101,7 +1101,7 @@ static const CGFloat kLabelWidth = 124;
     _enabledButton = [[NSButton alloc] init];
     _enabledButton.translatesAutoresizingMaskIntoConstraints = NO;
     _enabledButton.buttonType = NSButtonTypeSwitch;
-    _enabledButton.title = @"Enabled";
+    _enabledButton.title = NSLocalizedString(@"Enabled", @"UI");
     _enabledButton.target = self;
     _enabledButton.action = @selector(enabledDidChange:);
     [row addSubview:_enabledButton];
@@ -1109,7 +1109,7 @@ static const CGFloat kLabelWidth = 124;
     _updateProfileButton = [[NSButton alloc] init];
     _updateProfileButton.translatesAutoresizingMaskIntoConstraints = NO;
     _updateProfileButton.buttonType = NSButtonTypeSwitch;
-    _updateProfileButton.title = @"Update Profile";
+    _updateProfileButton.title = NSLocalizedString(@"Update Profile", @"UI");
     [row addSubview:_updateProfileButton];
     
     // Add leading spacer to align with text fields
@@ -1195,7 +1195,7 @@ static const CGFloat kLabelWidth = 124;
     _leaderOnlyButton = [[NSButton alloc] init];
     _leaderOnlyButton.translatesAutoresizingMaskIntoConstraints = NO;
     _leaderOnlyButton.buttonType = NSButtonTypeSwitch;
-    _leaderOnlyButton.title = @"Only on the workgroup leader";
+    _leaderOnlyButton.title = NSLocalizedString(@"Only on the workgroup leader", @"UI");
     _leaderOnlyButton.toolTip = @"When set, the trigger fires only for the workgroup leader (the session that originally entered the workgroup). Peers such as the Code Review and Diff sessions do not, so reloading or quitting one keeps the workgroup open.";
     _leaderOnlyButton.target = self;
     _leaderOnlyButton.action = @selector(leaderOnlyDidChange:);
@@ -1258,7 +1258,7 @@ static const CGFloat kLabelWidth = 124;
     // Create label
     NSTextField *label = [[NSTextField alloc] init];
     label.translatesAutoresizingMaskIntoConstraints = NO;
-    label.stringValue = @"Action:";
+    label.stringValue = NSLocalizedString(@"Action:", @"UI");
     label.editable = NO;
     label.bordered = NO;
     label.backgroundColor = [NSColor clearColor];
@@ -1337,7 +1337,7 @@ static const CGFloat kLabelWidth = 124;
     _cancelButton = [[NSButton alloc] init];
     _cancelButton.translatesAutoresizingMaskIntoConstraints = NO;
     _cancelButton.bezelStyle = NSBezelStyleRounded;
-    _cancelButton.title = @"Cancel";
+    _cancelButton.title = NSLocalizedString(@"Cancel", @"UI");
     _cancelButton.target = self;
     _cancelButton.action = @selector(cancel:);
     _cancelButton.keyEquivalent = @"\e"; // Escape key
@@ -1346,7 +1346,7 @@ static const CGFloat kLabelWidth = 124;
     _okButton = [[NSButton alloc] init];
     _okButton.translatesAutoresizingMaskIntoConstraints = NO;
     _okButton.bezelStyle = NSBezelStyleRounded;
-    _okButton.title = @"OK";
+    _okButton.title = NSLocalizedString(@"OK", @"UI");
     _okButton.target = self;
     _okButton.action = @selector(ok:);
     _okButton.keyEquivalent = @"\r"; // Return key
@@ -1618,7 +1618,7 @@ static const CGFloat kLabelWidth = 124;
     [_matchTypeButton removeAllItems];
 
     // Always add regex
-    [_matchTypeButton it_addItemWithTitle:@"Regular Expression" tag:iTermTriggerMatchTypeRegex];
+    [_matchTypeButton it_addItemWithTitle:NSLocalizedString(@"Regular Expression", @"Menu") tag:iTermTriggerMatchTypeRegex];
 
     // Add all event types, sorted alphabetically by display name
     NSArray<NSNumber *> *sortedEventTypes = [[iTermEventTriggerMatchTypeHelper allEventTypes] sortedArrayUsingComparator:^NSComparisonResult(NSNumber *a, NSNumber *b) {
@@ -1867,9 +1867,9 @@ static const CGFloat kLabelWidth = 124;
     // Update the regex label text based on match type
     if (_regexLabel) {
         if (_matchType == iTermTriggerMatchTypePageContentRegex) {
-            _regexLabel.stringValue = @"URL Regex:";
+            _regexLabel.stringValue = NSLocalizedString(@"URL Regex:", @"UI");
         } else {
-            _regexLabel.stringValue = @"Regular Expression:";
+            _regexLabel.stringValue = NSLocalizedString(@"Regular Expression:", @"UI");
         }
     }
 }

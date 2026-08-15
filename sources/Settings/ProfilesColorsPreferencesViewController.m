@@ -684,8 +684,8 @@ static NSString * const kColorGalleryURL = @"https://www.iterm2.com/colorgallery
 
     alert.accessoryView = comboBox;
 
-    [alert addButtonWithTitle:@"OK"];
-    [alert addButtonWithTitle:@"Cancel"];
+    [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
+    [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
 
     [alert beginSheetModalForWindow:self.view.window completionHandler:^(NSModalResponse response) {
         if (response == NSAlertFirstButtonReturn) {
@@ -718,15 +718,15 @@ static NSString * const kColorGalleryURL = @"https://www.iterm2.com/colorgallery
         NSAlert *alert = [[NSAlert alloc] init];
         alert.messageText = @"No deletable color presets.";
         alert.informativeText = @"You cannot erase the built-in presets and no custom presets have been imported.";
-        [alert addButtonWithTitle:@"OK"];
+        [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
         [alert runModal];
         return;
     }
 
     NSAlert *alert = [[NSAlert alloc] init];
     alert.messageText = @"Select a preset to delete:";
-    [alert addButtonWithTitle:@"OK"];
-    [alert addButtonWithTitle:@"Cancel"];
+    [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
+    [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
     NSPopUpButton *popUpButton = [[NSPopUpButton alloc] init];
     for (NSString *key in [[customPresets allKeys] sortedArrayUsingSelector:@selector(compare:)]) {
         [popUpButton addItemWithTitle:key];
@@ -771,7 +771,7 @@ static NSString * const kColorGalleryURL = @"https://www.iterm2.com/colorgallery
             NSAlert *alert = [[NSAlert alloc] init];
             alert.messageText = @"Save Failed.";
             alert.informativeText = [NSString stringWithFormat:@"Could not save to %@", item.displayName];
-            [alert addButtonWithTitle:@"OK"];
+            [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
             [alert runModal];
         } else {
             [item revealInFinderIfLocal];

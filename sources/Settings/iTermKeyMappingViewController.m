@@ -127,12 +127,12 @@ static NSString *const INTERCHANGE_TOUCH_BAR_ITEMS = @"Touch Bar Items";
         [_presetsPopup.menu addItem:[NSMenuItem separatorItem]];
     }
     NSMenuItem *item;
-    item = [[NSMenuItem alloc] initWithTitle:@"Import…"
+    item = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Import…", @"Menu")
                                       action:@selector(importMenuItem:)
                                keyEquivalent:@""];
     item.target = self;
     [_presetsPopup.menu addItem:item];
-    item = [[NSMenuItem alloc] initWithTitle:@"Export…"
+    item = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Export…", @"Menu")
                                       action:@selector(exportMenuItem:)
                                keyEquivalent:@""];
     item.target = self;

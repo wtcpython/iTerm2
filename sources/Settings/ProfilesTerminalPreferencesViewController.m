@@ -377,7 +377,7 @@
             iTermLocaleGuesser *guesser = [[iTermLocaleGuesser alloc] initWithEncoding:[self unsignedIntegerForKey:KEY_CHARACTER_ENCODING]];
             NSDictionary *env = guesser.dictionaryWithLC_CTYPE;
             if (!env) {
-                _localeName.stringValue = @"Invalid encoding: neither $LC_CTYPE nor $LANG set.";
+                _localeName.stringValue = NSLocalizedString(@"Invalid encoding: neither $LC_CTYPE nor $LANG set.", @"UI");
                 break;
             }
             NSString *ctype = [[guesser dictionaryWithLC_CTYPE] objectForKey:@"LC_CTYPE"];
@@ -385,7 +385,7 @@
                 _localeName.stringValue = [NSString stringWithFormat:@"LC_CTYPE=%@", ctype];
             } else {
                 RLog(@"enc=%@ %@", @([self unsignedIntegerForKey:KEY_CHARACTER_ENCODING]), [guesser dictionaryWithLC_CTYPE]);
-                _localeName.stringValue = @"Unexpectedly missing LC_CTYPE. Report a bug.";
+                _localeName.stringValue = NSLocalizedString(@"Unexpectedly missing LC_CTYPE. Report a bug.", @"UI");
             }
             break;
         }
@@ -394,7 +394,7 @@
             if ([self stringForKey:KEY_CUSTOM_LOCALE].length) {
                 _localeName.attributedStringValue = [self attributedStringForLocale:[self stringForKey:KEY_CUSTOM_LOCALE]];
             } else {
-                _localeName.stringValue = @"No locale selected.";
+                _localeName.stringValue = NSLocalizedString(@"No locale selected.", @"UI");
             }
             break;
         }
@@ -405,13 +405,13 @@
             if (lang.length) {
                 _localeName.attributedStringValue = [self attributedStringForLocale:lang];
             } else {
-                _localeName.stringValue = @"No valid locale exists for this machine’s language and country.";
+                _localeName.stringValue = NSLocalizedString(@"No valid locale exists for this machine’s language and country.", @"UI");
             }
             break;
         }
         case iTermSetLocalVarsModeDoNotSet:
             _changeLocale.hidden = YES;
-            _localeName.stringValue = @"$LANG will not be set.";
+            _localeName.stringValue = NSLocalizedString(@"$LANG will not be set.", @"UI");
             break;
     }
 }

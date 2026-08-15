@@ -28,9 +28,9 @@
     _value = value;
     _stepper.doubleValue = _value.doubleValue;
     if (_value.doubleValue == INFINITY) {
-        _textField.stringValue = @"∞";
+        _textField.stringValue = NSLocalizedString(@"∞", @"UI");
     } else if (_value.doubleValue == -INFINITY) {
-        _textField.stringValue = @"-∞";
+        _textField.stringValue = NSLocalizedString(@"-∞", @"UI");
     } else {
         _textField.doubleValue = _value.doubleValue;
     }

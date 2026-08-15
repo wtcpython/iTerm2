@@ -84,7 +84,7 @@ static const CGFloat kHelpMargin = 5;
             clear_.frame = NSMakeRect(0, 0, 22, 22);
         } else {
             [clear_ setButtonType:NSButtonTypeMomentaryPushIn];
-            [clear_ setTitle:@"Clear All"];
+            [clear_ setTitle:NSLocalizedString(@"Clear All", @"Menu")];
             [clear_ setBezelStyle:NSBezelStyleSmallSquare];
             [clear_ sizeToFit];
         }
@@ -106,7 +106,7 @@ static const CGFloat kHelpMargin = 5;
         _tableView.menu = [[NSMenu alloc] init];
         _tableView.menu.delegate = self;
         NSMenuItem *item;
-        item = [[NSMenuItem alloc] initWithTitle:@"Toggle Star"
+        item = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Toggle Star", @"Menu")
                                           action:@selector(toggleStar:)
                                    keyEquivalent:@""];
         [_tableView.menu addItem:item];
@@ -325,8 +325,8 @@ static const CGFloat kHelpMargin = 5;
 - (void)clear:(id)sender {
     NSAlert *alert = [[NSAlert alloc] init];
     alert.messageText = @"Erase Saved Directories?";
-    [alert addButtonWithTitle:@"OK"];
-    [alert addButtonWithTitle:@"Cancel"];
+    [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
+    [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
     if ([alert runModal] == NSAlertFirstButtonReturn) {
         [[iTermShellHistoryController sharedInstance] eraseCommandHistory:NO directories:YES];
     }

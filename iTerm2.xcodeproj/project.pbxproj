@@ -1395,7 +1395,7 @@
 		A6184F8D1BAB3EFB0088EF3C /* ColorPicker.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A6184F881BAB3ED70088EF3C /* ColorPicker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A6184F8E1BAB3F090088EF3C /* ColorPicker.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A6184F881BAB3ED70088EF3C /* ColorPicker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A6184F8F1BAB458B0088EF3C /* ColorPicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6184F881BAB3ED70088EF3C /* ColorPicker.framework */; };
-		A618692D2A0814C50052487D /* ImportingWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A618692C2A0814C40052487D /* ImportingWindowController.xib */; };
+		A618692D2A0814C50052487D /* ImportingWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7488ED09E4F34B2D89420AD9 /* ImportingWindowController.xib */; };
 		A618FFBD22409DF900B8FD88 /* iTermTheme.h in Headers */ = {isa = PBXBuildFile; fileRef = A618FFBB22409DF900B8FD88 /* iTermTheme.h */; };
 		A618FFBE22409DF900B8FD88 /* iTermTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = A618FFBC22409DF900B8FD88 /* iTermTheme.m */; };
 		A618FFC12243E91900B8FD88 /* iTermToolActions.h in Headers */ = {isa = PBXBuildFile; fileRef = A618FFBF2243E91900B8FD88 /* iTermToolActions.h */; };
@@ -1455,24 +1455,24 @@
 		A61E513B2F98971E00EB2B55 /* MiniPasteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 705DD5B6A3854B0EA7321B38 /* MiniPasteView.xib */; };
 		A61E513C2F98971E00EB2B55 /* MiniPasteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 705DD5B6A3854B0EA7321B38 /* MiniPasteView.xib */; };
 		A61E513D2F98971E00EB2B55 /* MiniPasteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 705DD5B6A3854B0EA7321B38 /* MiniPasteView.xib */; };
-		A61E51442F98978000EB2B55 /* iTermTriggersPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = A61E51422F98978000EB2B55 /* iTermTriggersPanel.xib */; };
-		A61E51452F98978000EB2B55 /* PreferencePanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = A61E51432F98978000EB2B55 /* PreferencePanel.xib */; };
-		A61E51462F98978000EB2B55 /* AdvancedWorkingDirectoryWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A61E513E2F98978000EB2B55 /* AdvancedWorkingDirectoryWindow.xib */; };
-		A61E51472F98978000EB2B55 /* BulkCopyProfilePreferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = A61E513F2F98978000EB2B55 /* BulkCopyProfilePreferences.xib */; };
-		A61E51482F98978000EB2B55 /* iTermEditKeyActionWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A61E51402F98978000EB2B55 /* iTermEditKeyActionWindowController.xib */; };
-		A61E51492F98978000EB2B55 /* iTermKeyMapping.xib in Resources */ = {isa = PBXBuildFile; fileRef = A61E51412F98978000EB2B55 /* iTermKeyMapping.xib */; };
-		A61E514A2F98978000EB2B55 /* iTermTriggersPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = A61E51422F98978000EB2B55 /* iTermTriggersPanel.xib */; };
-		A61E514B2F98978000EB2B55 /* PreferencePanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = A61E51432F98978000EB2B55 /* PreferencePanel.xib */; };
-		A61E514C2F98978000EB2B55 /* AdvancedWorkingDirectoryWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A61E513E2F98978000EB2B55 /* AdvancedWorkingDirectoryWindow.xib */; };
-		A61E514D2F98978000EB2B55 /* BulkCopyProfilePreferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = A61E513F2F98978000EB2B55 /* BulkCopyProfilePreferences.xib */; };
-		A61E514E2F98978000EB2B55 /* iTermEditKeyActionWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A61E51402F98978000EB2B55 /* iTermEditKeyActionWindowController.xib */; };
-		A61E514F2F98978000EB2B55 /* iTermKeyMapping.xib in Resources */ = {isa = PBXBuildFile; fileRef = A61E51412F98978000EB2B55 /* iTermKeyMapping.xib */; };
-		A61E51502F98978000EB2B55 /* iTermTriggersPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = A61E51422F98978000EB2B55 /* iTermTriggersPanel.xib */; };
-		A61E51512F98978000EB2B55 /* PreferencePanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = A61E51432F98978000EB2B55 /* PreferencePanel.xib */; };
-		A61E51522F98978000EB2B55 /* AdvancedWorkingDirectoryWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A61E513E2F98978000EB2B55 /* AdvancedWorkingDirectoryWindow.xib */; };
-		A61E51532F98978000EB2B55 /* BulkCopyProfilePreferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = A61E513F2F98978000EB2B55 /* BulkCopyProfilePreferences.xib */; };
-		A61E51542F98978000EB2B55 /* iTermEditKeyActionWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A61E51402F98978000EB2B55 /* iTermEditKeyActionWindowController.xib */; };
-		A61E51552F98978000EB2B55 /* iTermKeyMapping.xib in Resources */ = {isa = PBXBuildFile; fileRef = A61E51412F98978000EB2B55 /* iTermKeyMapping.xib */; };
+		A61E51442F98978000EB2B55 /* iTermTriggersPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = A92BCEE72E4B41C4B3F85B1C /* iTermTriggersPanel.xib */; };
+		A61E51452F98978000EB2B55 /* PreferencePanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 569F1E17131F412BA3D9D706 /* PreferencePanel.xib */; };
+		A61E51462F98978000EB2B55 /* AdvancedWorkingDirectoryWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3E482E76E0840FE8381B1F6 /* AdvancedWorkingDirectoryWindow.xib */; };
+		A61E51472F98978000EB2B55 /* BulkCopyProfilePreferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5EBCEEB1F114EB39268618C /* BulkCopyProfilePreferences.xib */; };
+		A61E51482F98978000EB2B55 /* iTermEditKeyActionWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6C1D0DE0FB8474C8AAF7CA2 /* iTermEditKeyActionWindowController.xib */; };
+		A61E51492F98978000EB2B55 /* iTermKeyMapping.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26DE2F2696CD4492901182B9 /* iTermKeyMapping.xib */; };
+		A61E514A2F98978000EB2B55 /* iTermTriggersPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = A92BCEE72E4B41C4B3F85B1C /* iTermTriggersPanel.xib */; };
+		A61E514B2F98978000EB2B55 /* PreferencePanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 569F1E17131F412BA3D9D706 /* PreferencePanel.xib */; };
+		A61E514C2F98978000EB2B55 /* AdvancedWorkingDirectoryWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3E482E76E0840FE8381B1F6 /* AdvancedWorkingDirectoryWindow.xib */; };
+		A61E514D2F98978000EB2B55 /* BulkCopyProfilePreferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5EBCEEB1F114EB39268618C /* BulkCopyProfilePreferences.xib */; };
+		A61E514E2F98978000EB2B55 /* iTermEditKeyActionWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6C1D0DE0FB8474C8AAF7CA2 /* iTermEditKeyActionWindowController.xib */; };
+		A61E514F2F98978000EB2B55 /* iTermKeyMapping.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26DE2F2696CD4492901182B9 /* iTermKeyMapping.xib */; };
+		A61E51502F98978000EB2B55 /* iTermTriggersPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = A92BCEE72E4B41C4B3F85B1C /* iTermTriggersPanel.xib */; };
+		A61E51512F98978000EB2B55 /* PreferencePanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 569F1E17131F412BA3D9D706 /* PreferencePanel.xib */; };
+		A61E51522F98978000EB2B55 /* AdvancedWorkingDirectoryWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3E482E76E0840FE8381B1F6 /* AdvancedWorkingDirectoryWindow.xib */; };
+		A61E51532F98978000EB2B55 /* BulkCopyProfilePreferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5EBCEEB1F114EB39268618C /* BulkCopyProfilePreferences.xib */; };
+		A61E51542F98978000EB2B55 /* iTermEditKeyActionWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6C1D0DE0FB8474C8AAF7CA2 /* iTermEditKeyActionWindowController.xib */; };
+		A61E51552F98978000EB2B55 /* iTermKeyMapping.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26DE2F2696CD4492901182B9 /* iTermKeyMapping.xib */; };
 		A61E51572F9897A800EB2B55 /* Autocomplete.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DA7D8962927416CADB498FD /* Autocomplete.xib */; };
 		A61E51582F9897A800EB2B55 /* Autocomplete.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DA7D8962927416CADB498FD /* Autocomplete.xib */; };
 		A61E51592F9897A800EB2B55 /* Autocomplete.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DA7D8962927416CADB498FD /* Autocomplete.xib */; };
@@ -1739,12 +1739,12 @@
 		A62A78D62F987F71007CAA0B /* iTermJobTreeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FD7C595BD1C4FE0A0D3F387 /* iTermJobTreeViewController.xib */; };
 		A62A78D72F987F71007CAA0B /* iTermJobTreeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FD7C595BD1C4FE0A0D3F387 /* iTermJobTreeViewController.xib */; };
 		A62A78D82F987F71007CAA0B /* iTermJobTreeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FD7C595BD1C4FE0A0D3F387 /* iTermJobTreeViewController.xib */; };
-		A62A78DA2F987FA7007CAA0B /* iTermBadgeConfigurationWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A62A78D92F987FA7007CAA0B /* iTermBadgeConfigurationWindowController.xib */; };
-		A62A78DB2F987FA7007CAA0B /* iTermBadgeConfigurationWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A62A78D92F987FA7007CAA0B /* iTermBadgeConfigurationWindowController.xib */; };
-		A62A78DC2F987FA7007CAA0B /* iTermBadgeConfigurationWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A62A78D92F987FA7007CAA0B /* iTermBadgeConfigurationWindowController.xib */; };
-		A62A78DE2F987FC6007CAA0B /* iTermPreferencesSearchEngineResultsWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A62A78DD2F987FC5007CAA0B /* iTermPreferencesSearchEngineResultsWindowController.xib */; };
-		A62A78DF2F987FC6007CAA0B /* iTermPreferencesSearchEngineResultsWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A62A78DD2F987FC5007CAA0B /* iTermPreferencesSearchEngineResultsWindowController.xib */; };
-		A62A78E02F987FC6007CAA0B /* iTermPreferencesSearchEngineResultsWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A62A78DD2F987FC5007CAA0B /* iTermPreferencesSearchEngineResultsWindowController.xib */; };
+		A62A78DA2F987FA7007CAA0B /* iTermBadgeConfigurationWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DC9C90A74074C5BA91EF818 /* iTermBadgeConfigurationWindowController.xib */; };
+		A62A78DB2F987FA7007CAA0B /* iTermBadgeConfigurationWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DC9C90A74074C5BA91EF818 /* iTermBadgeConfigurationWindowController.xib */; };
+		A62A78DC2F987FA7007CAA0B /* iTermBadgeConfigurationWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DC9C90A74074C5BA91EF818 /* iTermBadgeConfigurationWindowController.xib */; };
+		A62A78DE2F987FC6007CAA0B /* iTermPreferencesSearchEngineResultsWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC2A25D751244924A64BD516 /* iTermPreferencesSearchEngineResultsWindowController.xib */; };
+		A62A78DF2F987FC6007CAA0B /* iTermPreferencesSearchEngineResultsWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC2A25D751244924A64BD516 /* iTermPreferencesSearchEngineResultsWindowController.xib */; };
+		A62A78E02F987FC6007CAA0B /* iTermPreferencesSearchEngineResultsWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC2A25D751244924A64BD516 /* iTermPreferencesSearchEngineResultsWindowController.xib */; };
 		A62A78E32F988080007CAA0B /* CommandInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5547AAAAAD3644C0A573F9C7 /* CommandInfoViewController.xib */; };
 		A62A78E42F988080007CAA0B /* CommandInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5547AAAAAD3644C0A573F9C7 /* CommandInfoViewController.xib */; };
 		A62A78E52F988080007CAA0B /* CommandInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5547AAAAAD3644C0A573F9C7 /* CommandInfoViewController.xib */; };
@@ -2158,16 +2158,16 @@
 		A635F1DD25075E8D008C3038 /* iTermShortcutsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A635F1DB25075E8D008C3038 /* iTermShortcutsViewController.m */; };
 		A635F1E1250761F9008C3038 /* iTermActionsEditingViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A635F1DE250761F9008C3038 /* iTermActionsEditingViewController.h */; };
 		A635F1E2250761F9008C3038 /* iTermActionsEditingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A635F1DF250761F9008C3038 /* iTermActionsEditingViewController.m */; };
-		A635F1E325076201008C3038 /* iTermActionsEditingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A635F1E0250761F9008C3038 /* iTermActionsEditingViewController.xib */; };
-		A635F1E425076201008C3038 /* iTermActionsEditingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A635F1E0250761F9008C3038 /* iTermActionsEditingViewController.xib */; };
-		A635F1E525076203008C3038 /* iTermActionsEditingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A635F1E0250761F9008C3038 /* iTermActionsEditingViewController.xib */; };
+		A635F1E325076201008C3038 /* iTermActionsEditingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 126CBCD547AA4D8AB6208C7E /* iTermActionsEditingViewController.xib */; };
+		A635F1E425076201008C3038 /* iTermActionsEditingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 126CBCD547AA4D8AB6208C7E /* iTermActionsEditingViewController.xib */; };
+		A635F1E525076203008C3038 /* iTermActionsEditingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 126CBCD547AA4D8AB6208C7E /* iTermActionsEditingViewController.xib */; };
 		A635F1E92507621A008C3038 /* iTermSnippetsEditingViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A635F1E62507621A008C3038 /* iTermSnippetsEditingViewController.h */; };
 		A635F1EA2507621A008C3038 /* iTermSnippetsEditingViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A635F1E62507621A008C3038 /* iTermSnippetsEditingViewController.h */; };
 		A635F1EB2507621A008C3038 /* iTermSnippetsEditingViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A635F1E62507621A008C3038 /* iTermSnippetsEditingViewController.h */; };
 		A635F1EF2507621A008C3038 /* iTermSnippetsEditingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A635F1E72507621A008C3038 /* iTermSnippetsEditingViewController.m */; };
-		A635F1F02507621A008C3038 /* iTermSnippetsEditingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A635F1E82507621A008C3038 /* iTermSnippetsEditingViewController.xib */; };
-		A635F1F12507621A008C3038 /* iTermSnippetsEditingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A635F1E82507621A008C3038 /* iTermSnippetsEditingViewController.xib */; };
-		A635F1F22507621A008C3038 /* iTermSnippetsEditingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A635F1E82507621A008C3038 /* iTermSnippetsEditingViewController.xib */; };
+		A635F1F02507621A008C3038 /* iTermSnippetsEditingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1551E8E2B2A94803A29B889A /* iTermSnippetsEditingViewController.xib */; };
+		A635F1F12507621A008C3038 /* iTermSnippetsEditingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1551E8E2B2A94803A29B889A /* iTermSnippetsEditingViewController.xib */; };
+		A635F1F22507621A008C3038 /* iTermSnippetsEditingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1551E8E2B2A94803A29B889A /* iTermSnippetsEditingViewController.xib */; };
 		A636C3B12288887600A83E2F /* iTermResourceLimitsHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = A636C3AF2288887600A83E2F /* iTermResourceLimitsHelper.h */; };
 		A636C3B22288887600A83E2F /* iTermResourceLimitsHelper.c in Sources */ = {isa = PBXBuildFile; fileRef = A636C3B02288887600A83E2F /* iTermResourceLimitsHelper.c */; };
 		A636C3B522891BD900A83E2F /* StatusBarIconNoBattery.png in Resources */ = {isa = PBXBuildFile; fileRef = A636C3B322891BD800A83E2F /* StatusBarIconNoBattery.png */; };
@@ -2221,9 +2221,9 @@
 		A63F40A4183F3B78003A6A6D /* LineBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = A63F40A2183F3B78003A6A6D /* LineBlock.h */; };
 		A63F40A9183F3CED003A6A6D /* LineBufferHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = A63F40A7183F3CED003A6A6D /* LineBufferHelpers.h */; };
 		A64027B41031A0E687639A18 /* TUISafetyPrompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941E5905370297E8D4BD0408 /* TUISafetyPrompt.swift */; };
-		A640486E29BFCB6C0063C34A /* SpecialExceptionsWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A640486D29BFCB640063C34A /* SpecialExceptionsWindowController.xib */; };
-		A640486F29BFCB6D0063C34A /* SpecialExceptionsWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A640486D29BFCB640063C34A /* SpecialExceptionsWindowController.xib */; };
-		A640487029BFCB6D0063C34A /* SpecialExceptionsWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A640486D29BFCB640063C34A /* SpecialExceptionsWindowController.xib */; };
+		A640486E29BFCB6C0063C34A /* SpecialExceptionsWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B016BA97C714AD4B804AB57 /* SpecialExceptionsWindowController.xib */; };
+		A640486F29BFCB6D0063C34A /* SpecialExceptionsWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B016BA97C714AD4B804AB57 /* SpecialExceptionsWindowController.xib */; };
+		A640487029BFCB6D0063C34A /* SpecialExceptionsWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B016BA97C714AD4B804AB57 /* SpecialExceptionsWindowController.xib */; };
 		A640487229BFCBCB0063C34A /* SpecialExceptionsWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A640487129BFCBCB0063C34A /* SpecialExceptionsWindowController.swift */; };
 		A640487329C0F8AA0063C34A /* BetterFontPicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6661309225CFF5A00840E89 /* BetterFontPicker.framework */; };
 		A640487529C147A10063C34A /* CRUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = A640487429C147A10063C34A /* CRUD.swift */; };
@@ -3133,9 +3133,9 @@
 		A697101518DFA7FC007E901D /* closebutton.png in Resources */ = {isa = PBXBuildFile; fileRef = A697101118DFA7D5007E901D /* closebutton.png */; };
 		A6971F3320D8D3C30075CFD4 /* iTermAdvancedGPUSettingsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A6971F3020D8D3C30075CFD4 /* iTermAdvancedGPUSettingsViewController.h */; };
 		A6971F3420D8D3C30075CFD4 /* iTermAdvancedGPUSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6971F3120D8D3C30075CFD4 /* iTermAdvancedGPUSettingsViewController.m */; };
-		A6971F3520D8D3CB0075CFD4 /* iTermAdvancedGPUSettingsWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6971F3220D8D3C30075CFD4 /* iTermAdvancedGPUSettingsWindowController.xib */; };
-		A6971F3620D8D3CB0075CFD4 /* iTermAdvancedGPUSettingsWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6971F3220D8D3C30075CFD4 /* iTermAdvancedGPUSettingsWindowController.xib */; };
-		A6971F3720D8D3CE0075CFD4 /* iTermAdvancedGPUSettingsWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6971F3220D8D3C30075CFD4 /* iTermAdvancedGPUSettingsWindowController.xib */; };
+		A6971F3520D8D3CB0075CFD4 /* iTermAdvancedGPUSettingsWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2624CB4A6770424DA4BBC922 /* iTermAdvancedGPUSettingsWindowController.xib */; };
+		A6971F3620D8D3CB0075CFD4 /* iTermAdvancedGPUSettingsWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2624CB4A6770424DA4BBC922 /* iTermAdvancedGPUSettingsWindowController.xib */; };
+		A6971F3720D8D3CE0075CFD4 /* iTermAdvancedGPUSettingsWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2624CB4A6770424DA4BBC922 /* iTermAdvancedGPUSettingsWindowController.xib */; };
 		A6971F3820DA295A0075CFD4 /* ToolWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53AFFC911DD38F1500E6CEC6 /* ToolWebView.m */; };
 		A6976AEE2F47EFD3002875A1 /* SerpApi.png in Resources */ = {isa = PBXBuildFile; fileRef = A6976AED2F47EFD3002875A1 /* SerpApi.png */; };
 		A6976AEF2F47EFD3002875A1 /* SerpApi.png in Resources */ = {isa = PBXBuildFile; fileRef = A6976AED2F47EFD3002875A1 /* SerpApi.png */; };
@@ -4938,9 +4938,9 @@
 		A6EC8076281F7F7A00493544 /* PTYScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CF755F026DDA6303A80106 /* PTYScrollView.m */; };
 		A6EC80812828E9F600493544 /* Conductor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EC80802828E9F600493544 /* Conductor.swift */; };
 		A6EC8083282987FC00493544 /* VT100ConductorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EC8082282987FC00493544 /* VT100ConductorParser.swift */; };
-		A6EC8089282A28CD00493544 /* SSHConfigurationWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6EC8088282A28C600493544 /* SSHConfigurationWindow.xib */; };
-		A6EC808A282A28CE00493544 /* SSHConfigurationWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6EC8088282A28C600493544 /* SSHConfigurationWindow.xib */; };
-		A6EC808B282A28CE00493544 /* SSHConfigurationWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6EC8088282A28C600493544 /* SSHConfigurationWindow.xib */; };
+		A6EC8089282A28CD00493544 /* SSHConfigurationWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32A190983D4843B597FE0DA9 /* SSHConfigurationWindow.xib */; };
+		A6EC808A282A28CE00493544 /* SSHConfigurationWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32A190983D4843B597FE0DA9 /* SSHConfigurationWindow.xib */; };
+		A6EC808B282A28CE00493544 /* SSHConfigurationWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32A190983D4843B597FE0DA9 /* SSHConfigurationWindow.xib */; };
 		A6EC808D282A28F500493544 /* SSHConfigurationWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EC808C282A28F500493544 /* SSHConfigurationWindowController.swift */; };
 		A6EC8093282DE42800493544 /* ParsedSSHArguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EC8092282DE42800493544 /* ParsedSSHArguments.swift */; };
 		A6EC8097282EBFB000493544 /* TarJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EC8096282EBFB000493544 /* TarJob.swift */; };
@@ -4955,9 +4955,9 @@
 		A6EC937024E787BA00EEADEF /* iTermSnippetsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A6EC936E24E787BA00EEADEF /* iTermSnippetsModel.m */; };
 		A6EC937424E78A5100EEADEF /* iTermEditSnippetWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = A6EC937124E78A5100EEADEF /* iTermEditSnippetWindowController.h */; };
 		A6EC937524E78A5100EEADEF /* iTermEditSnippetWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6EC937224E78A5100EEADEF /* iTermEditSnippetWindowController.m */; };
-		A6EC937624E78A5900EEADEF /* iTermEditSnippetWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6EC937324E78A5100EEADEF /* iTermEditSnippetWindowController.xib */; };
-		A6EC937724E78A5900EEADEF /* iTermEditSnippetWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6EC937324E78A5100EEADEF /* iTermEditSnippetWindowController.xib */; };
-		A6EC937824E78A5B00EEADEF /* iTermEditSnippetWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6EC937324E78A5100EEADEF /* iTermEditSnippetWindowController.xib */; };
+		A6EC937624E78A5900EEADEF /* iTermEditSnippetWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF15834733AB43248291081B /* iTermEditSnippetWindowController.xib */; };
+		A6EC937724E78A5900EEADEF /* iTermEditSnippetWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF15834733AB43248291081B /* iTermEditSnippetWindowController.xib */; };
+		A6EC937824E78A5B00EEADEF /* iTermEditSnippetWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF15834733AB43248291081B /* iTermEditSnippetWindowController.xib */; };
 		A6EC937A24E8545500EEADEF /* iTermPasteHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B5134918E779BB00D249A5 /* iTermPasteHelper.m */; };
 		A6EC937B24E8565000EEADEF /* iTermShortcut.m in Sources */ = {isa = PBXBuildFile; fileRef = A6EFF23E1D21949D00806EEF /* iTermShortcut.m */; };
 		A6EC937C24E8568D00EEADEF /* iTermBuriedSessions.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C120791E39C3A4004021BB /* iTermBuriedSessions.m */; };
@@ -5168,9 +5168,9 @@
 		A6F6AF852F98997300F9F8F3 /* PasteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7A43D4E43194C86ACD9E802 /* PasteView.xib */; };
 		A6F6AF862F98997300F9F8F3 /* PasteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7A43D4E43194C86ACD9E802 /* PasteView.xib */; };
 		A6F6AF872F98997300F9F8F3 /* PasteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7A43D4E43194C86ACD9E802 /* PasteView.xib */; };
-		A6F6AF892F98999200F9F8F3 /* ProfilesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6F6AF882F98999200F9F8F3 /* ProfilesWindow.xib */; };
-		A6F6AF8A2F98999200F9F8F3 /* ProfilesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6F6AF882F98999200F9F8F3 /* ProfilesWindow.xib */; };
-		A6F6AF8B2F98999200F9F8F3 /* ProfilesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6F6AF882F98999200F9F8F3 /* ProfilesWindow.xib */; };
+		A6F6AF892F98999200F9F8F3 /* ProfilesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6982F2CE8E2B47FBA6006FD7 /* ProfilesWindow.xib */; };
+		A6F6AF8A2F98999200F9F8F3 /* ProfilesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6982F2CE8E2B47FBA6006FD7 /* ProfilesWindow.xib */; };
+		A6F6AF8B2F98999200F9F8F3 /* ProfilesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6982F2CE8E2B47FBA6006FD7 /* ProfilesWindow.xib */; };
 		A6F6AF8D2F9899AF00F9F8F3 /* PseudoTerminal.xib in Resources */ = {isa = PBXBuildFile; fileRef = D15A67F0DEA24B75832C35E3 /* PseudoTerminal.xib */; };
 		A6F6AF8E2F9899AF00F9F8F3 /* PseudoTerminal.xib in Resources */ = {isa = PBXBuildFile; fileRef = D15A67F0DEA24B75832C35E3 /* PseudoTerminal.xib */; };
 		A6F6AF8F2F9899AF00F9F8F3 /* PseudoTerminal.xib in Resources */ = {isa = PBXBuildFile; fileRef = D15A67F0DEA24B75832C35E3 /* PseudoTerminal.xib */; };
@@ -7112,7 +7112,6 @@
 		A6180D7621A883860073F219 /* iTermBroadcastPasswordHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iTermBroadcastPasswordHelper.h; sourceTree = "<group>"; };
 		A6180D7721A883860073F219 /* iTermBroadcastPasswordHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iTermBroadcastPasswordHelper.m; sourceTree = "<group>"; };
 		A6184F881BAB3ED70088EF3C /* ColorPicker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ColorPicker.framework; path = ColorPicker/ColorPicker.framework; sourceTree = "<group>"; };
-		A618692C2A0814C40052487D /* ImportingWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImportingWindowController.xib; sourceTree = "<group>"; };
 		A618FFBB22409DF900B8FD88 /* iTermTheme.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iTermTheme.h; sourceTree = "<group>"; };
 		A618FFBC22409DF900B8FD88 /* iTermTheme.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iTermTheme.m; sourceTree = "<group>"; };
 		A618FFBF2243E91900B8FD88 /* iTermToolActions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iTermToolActions.h; sourceTree = "<group>"; };
@@ -7162,12 +7161,6 @@
 		A61E0C4A2D5AA78000D4633A /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		A61E0C4D2D5ACBCC00D4633A /* ChatWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatWindowController.swift; sourceTree = "<group>"; };
 		A61E0C4F2D5ACD4C00D4633A /* PTYSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTYSession.swift; sourceTree = "<group>"; };
-		A61E513E2F98978000EB2B55 /* AdvancedWorkingDirectoryWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdvancedWorkingDirectoryWindow.xib; sourceTree = "<group>"; };
-		A61E513F2F98978000EB2B55 /* BulkCopyProfilePreferences.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BulkCopyProfilePreferences.xib; sourceTree = "<group>"; };
-		A61E51402F98978000EB2B55 /* iTermEditKeyActionWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = iTermEditKeyActionWindowController.xib; sourceTree = "<group>"; };
-		A61E51412F98978000EB2B55 /* iTermKeyMapping.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = iTermKeyMapping.xib; sourceTree = "<group>"; };
-		A61E51422F98978000EB2B55 /* iTermTriggersPanel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = iTermTriggersPanel.xib; sourceTree = "<group>"; };
-		A61E51432F98978000EB2B55 /* PreferencePanel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreferencePanel.xib; sourceTree = "<group>"; };
 		A61ED2A320E99DCD0035BECD /* iTermStatusBarClockComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iTermStatusBarClockComponent.h; sourceTree = "<group>"; };
 		A61ED2A420E99DCD0035BECD /* iTermStatusBarClockComponent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iTermStatusBarClockComponent.m; sourceTree = "<group>"; };
 		A61ED2A720E9E92E0035BECD /* iTermStatusBarVariableBaseComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iTermStatusBarVariableBaseComponent.h; sourceTree = "<group>"; };
@@ -7366,8 +7359,6 @@
 		A62A78882F987E11007CAA0B /* iTermTruncatedQuotedRecognizer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iTermTruncatedQuotedRecognizer.m; sourceTree = "<group>"; };
 		A62A78892F987E11007CAA0B /* iTermVariablesOutlineDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iTermVariablesOutlineDelegate.h; sourceTree = "<group>"; };
 		A62A788A2F987E11007CAA0B /* iTermVariablesOutlineDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iTermVariablesOutlineDelegate.m; sourceTree = "<group>"; };
-		A62A78D92F987FA7007CAA0B /* iTermBadgeConfigurationWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = iTermBadgeConfigurationWindowController.xib; sourceTree = "<group>"; };
-		A62A78DD2F987FC5007CAA0B /* iTermPreferencesSearchEngineResultsWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = iTermPreferencesSearchEngineResultsWindowController.xib; sourceTree = "<group>"; };
 		A62A78E82F9882BC007CAA0B /* iTermBackgroundColorRLETestHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iTermBackgroundColorRLETestHelper.h; sourceTree = "<group>"; };
 		A62A78E92F9882BC007CAA0B /* iTermBackgroundColorRLETestHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iTermBackgroundColorRLETestHelper.m; sourceTree = "<group>"; };
 		A62A78EA2F9882BC007CAA0B /* iTermMetalDriver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iTermMetalDriver.h; sourceTree = "<group>"; };
@@ -7638,10 +7629,8 @@
 		A635F1DB25075E8D008C3038 /* iTermShortcutsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iTermShortcutsViewController.m; sourceTree = "<group>"; };
 		A635F1DE250761F9008C3038 /* iTermActionsEditingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iTermActionsEditingViewController.h; sourceTree = "<group>"; };
 		A635F1DF250761F9008C3038 /* iTermActionsEditingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iTermActionsEditingViewController.m; sourceTree = "<group>"; };
-		A635F1E0250761F9008C3038 /* iTermActionsEditingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = iTermActionsEditingViewController.xib; sourceTree = "<group>"; };
 		A635F1E62507621A008C3038 /* iTermSnippetsEditingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iTermSnippetsEditingViewController.h; sourceTree = "<group>"; };
 		A635F1E72507621A008C3038 /* iTermSnippetsEditingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iTermSnippetsEditingViewController.m; sourceTree = "<group>"; };
-		A635F1E82507621A008C3038 /* iTermSnippetsEditingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = iTermSnippetsEditingViewController.xib; sourceTree = "<group>"; };
 		A636C3AF2288887600A83E2F /* iTermResourceLimitsHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iTermResourceLimitsHelper.h; sourceTree = "<group>"; };
 		A636C3B02288887600A83E2F /* iTermResourceLimitsHelper.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = iTermResourceLimitsHelper.c; sourceTree = "<group>"; };
 		A636C3B322891BD800A83E2F /* StatusBarIconNoBattery.png */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = StatusBarIconNoBattery.png; path = images/StatusBarIcons/StatusBarIconNoBattery.png; sourceTree = "<group>"; };
@@ -7722,7 +7711,6 @@
 		A63F40A3183F3B78003A6A6D /* LineBlock.mm */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LineBlock.mm; sourceTree = "<group>"; tabWidth = 4; };
 		A63F40A7183F3CED003A6A6D /* LineBufferHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = LineBufferHelpers.h; sourceTree = "<group>"; tabWidth = 4; };
 		A63F40A8183F3CED003A6A6D /* LineBufferHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = LineBufferHelpers.m; sourceTree = "<group>"; tabWidth = 4; };
-		A640486D29BFCB640063C34A /* SpecialExceptionsWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpecialExceptionsWindowController.xib; sourceTree = "<group>"; };
 		A640487129BFCBCB0063C34A /* SpecialExceptionsWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialExceptionsWindowController.swift; sourceTree = "<group>"; };
 		A640487429C147A10063C34A /* CRUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUD.swift; sourceTree = "<group>"; };
 		A6405C0A2D7F64CA007A6A39 /* JSONPrettyPrinter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONPrettyPrinter.swift; sourceTree = "<group>"; };
@@ -8424,7 +8412,6 @@
 		A697101118DFA7D5007E901D /* closebutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = closebutton.png; path = images/closebutton.png; sourceTree = "<group>"; };
 		A6971F3020D8D3C30075CFD4 /* iTermAdvancedGPUSettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iTermAdvancedGPUSettingsViewController.h; sourceTree = "<group>"; };
 		A6971F3120D8D3C30075CFD4 /* iTermAdvancedGPUSettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iTermAdvancedGPUSettingsViewController.m; sourceTree = "<group>"; };
-		A6971F3220D8D3C30075CFD4 /* iTermAdvancedGPUSettingsWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = iTermAdvancedGPUSettingsWindowController.xib; sourceTree = "<group>"; };
 		A6976AED2F47EFD3002875A1 /* SerpApi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SerpApi.png; path = images/sponsors/SerpApi.png; sourceTree = "<group>"; };
 		A697CD702D973E370031583F /* iTermApplicationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTermApplicationDelegate.swift; sourceTree = "<group>"; };
 		A697CEB62D987C5A0031583F /* OpenQuicklyNamedMark.png */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = OpenQuicklyNamedMark.png; path = images/icons/OpenQuicklyNamedMark.png; sourceTree = "<group>"; };
@@ -8601,8 +8588,41 @@
 		A6A5BDF92A070C3C00F5FD44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6A5BDFB2A070C3D00F5FD44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A6A5BDFE2A070C3D00F5FD44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		F75042C1A2E64985ACB3907C /* mul */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = mul; path = mul.lproj/MainMenu.xcstrings; sourceTree = "<group>"; };
+		7CF54F74E57146BDBB3D67E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ImportingWindowController.xib; sourceTree = "<group>"; };
+		02FD2C74C0AB46889958F56D /* mul */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = mul; path = mul.lproj/ImportingWindowController.xcstrings; sourceTree = "<group>"; };
 		A781FEB07D41405F804D6C0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		7249C41B9AF84762BDDFE76A /* mul */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = mul; path = mul.lproj/MainMenu.xcstrings; sourceTree = "<group>"; };
+		6CFA8F6BB54D458B8D2A60AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AdvancedWorkingDirectoryWindow.xib; sourceTree = "<group>"; };
+		40C46151258F44D98C973EB4 /* mul */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = mul; path = mul.lproj/AdvancedWorkingDirectoryWindow.xcstrings; sourceTree = "<group>"; };
+		1A5D36C398BC4FB9BC51F4ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/BulkCopyProfilePreferences.xib; sourceTree = "<group>"; };
+		1AA4E79FBCEF415E82F88D59 /* mul */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = mul; path = mul.lproj/BulkCopyProfilePreferences.xcstrings; sourceTree = "<group>"; };
+		1B080E40E5BE4A10B50A15EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/PreferencePanel.xib; sourceTree = "<group>"; };
+		024DDDAFEA4640E4B298E925 /* mul */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = mul; path = mul.lproj/PreferencePanel.xcstrings; sourceTree = "<group>"; };
+		380DF97F4C6C4EFF99C149AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ProfilesWindow.xib; sourceTree = "<group>"; };
+		E8B0F4C9FCE14B19B43DD13D /* mul */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = mul; path = mul.lproj/ProfilesWindow.xcstrings; sourceTree = "<group>"; };
+		BB46B665F47A4CFBB06993D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SSHConfigurationWindow.xib; sourceTree = "<group>"; };
+		B26B9DA0657F489BBB2B552D /* mul */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = mul; path = mul.lproj/SSHConfigurationWindow.xcstrings; sourceTree = "<group>"; };
+		0E3EB9100E7349F09F845881 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SpecialExceptionsWindowController.xib; sourceTree = "<group>"; };
+		A223412F16E342B69B8CEB5B /* mul */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = mul; path = mul.lproj/SpecialExceptionsWindowController.xcstrings; sourceTree = "<group>"; };
+		97F0093AFD4047BEA386C6BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/iTermActionsEditingViewController.xib; sourceTree = "<group>"; };
+		A34B169A3A0F4EF7AA96143A /* mul */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = mul; path = mul.lproj/iTermActionsEditingViewController.xcstrings; sourceTree = "<group>"; };
+		550B843502C5454584426CF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/iTermAdvancedGPUSettingsWindowController.xib; sourceTree = "<group>"; };
+		C5DE747B32E242EC90AEEF50 /* mul */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = mul; path = mul.lproj/iTermAdvancedGPUSettingsWindowController.xcstrings; sourceTree = "<group>"; };
+		9088BE010E46434F811D723E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/iTermBadgeConfigurationWindowController.xib; sourceTree = "<group>"; };
+		3107F07F4B41435FA1D3BA46 /* mul */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = mul; path = mul.lproj/iTermBadgeConfigurationWindowController.xcstrings; sourceTree = "<group>"; };
+		45B7813444144F4EA7C12EBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/iTermEditKeyActionWindowController.xib; sourceTree = "<group>"; };
+		1E7B8F4316D54D7792D38877 /* mul */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = mul; path = mul.lproj/iTermEditKeyActionWindowController.xcstrings; sourceTree = "<group>"; };
+		0AD20DB7607643FFBCA0B2BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/iTermEditSnippetWindowController.xib; sourceTree = "<group>"; };
+		79D3FA97BB2942C39F9C0F6B /* mul */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = mul; path = mul.lproj/iTermEditSnippetWindowController.xcstrings; sourceTree = "<group>"; };
+		B6E3121C4CB74017B132CD9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/iTermKeyMapping.xib; sourceTree = "<group>"; };
+		A0AFF6BB185F42F89FCF5ABA /* mul */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = mul; path = mul.lproj/iTermKeyMapping.xcstrings; sourceTree = "<group>"; };
+		D871B57F576F4BD1A4B4BE96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/iTermPreferencesSearchEngineResultsWindowController.xib; sourceTree = "<group>"; };
+		07D41660EAFB4F4A98009ECA /* mul */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = mul; path = mul.lproj/iTermPreferencesSearchEngineResultsWindowController.xcstrings; sourceTree = "<group>"; };
+		D8E208D0EA9446F7913DB1D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/iTermSnippetsEditingViewController.xib; sourceTree = "<group>"; };
+		2F2001FA0C1B4ECD9421AC92 /* mul */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = mul; path = mul.lproj/iTermSnippetsEditingViewController.xcstrings; sourceTree = "<group>"; };
+		77E23FB6CDFD4A58A7A8AADA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/iTermTriggersPanel.xib; sourceTree = "<group>"; };
+		F74A725864554C359770E2CB /* mul */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = mul; path = mul.lproj/iTermTriggersPanel.xcstrings; sourceTree = "<group>"; };
 		9F5D226144944395AA20436F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AITerm.xib; sourceTree = "<group>"; };
 		6F6AD8136D2E4D2EB86E9ABC /* mul */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = mul; path = mul.lproj/AITerm.xcstrings; sourceTree = "<group>"; };
 		E962A1A6D4A74DC29F9DD08D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AboutWindow.xib; sourceTree = "<group>"; };
@@ -9559,7 +9579,6 @@
 		A6EC8072281F2C2900493544 /* ExternalSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalSearchResult.swift; sourceTree = "<group>"; };
 		A6EC80802828E9F600493544 /* Conductor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conductor.swift; sourceTree = "<group>"; };
 		A6EC8082282987FC00493544 /* VT100ConductorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VT100ConductorParser.swift; sourceTree = "<group>"; };
-		A6EC8088282A28C600493544 /* SSHConfigurationWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SSHConfigurationWindow.xib; sourceTree = "<group>"; };
 		A6EC808C282A28F500493544 /* SSHConfigurationWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSHConfigurationWindowController.swift; sourceTree = "<group>"; };
 		A6EC8092282DE42800493544 /* ParsedSSHArguments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsedSSHArguments.swift; sourceTree = "<group>"; };
 		A6EC8094282DE46700493544 /* SSHIdentity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSHIdentity.swift; sourceTree = "<group>"; };
@@ -9574,7 +9593,6 @@
 		A6EC936E24E787BA00EEADEF /* iTermSnippetsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iTermSnippetsModel.m; sourceTree = "<group>"; };
 		A6EC937124E78A5100EEADEF /* iTermEditSnippetWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iTermEditSnippetWindowController.h; sourceTree = "<group>"; };
 		A6EC937224E78A5100EEADEF /* iTermEditSnippetWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iTermEditSnippetWindowController.m; sourceTree = "<group>"; };
-		A6EC937324E78A5100EEADEF /* iTermEditSnippetWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = iTermEditSnippetWindowController.xib; sourceTree = "<group>"; };
 		A6ED047927A5B5FA00E41D13 /* VT100ScreenStateSanitizingAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VT100ScreenStateSanitizingAdapter.h; sourceTree = "<group>"; };
 		A6ED047A27A5B5FA00E41D13 /* VT100ScreenStateSanitizingAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VT100ScreenStateSanitizingAdapter.m; sourceTree = "<group>"; };
 		A6EE7F31234082BE00D0F724 /* iTermMalloc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iTermMalloc.h; sourceTree = "<group>"; };
@@ -9675,7 +9693,6 @@
 		A6F66B7D2C2E2B7200DC3569 /* BTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BTree.swift; path = BTree/BTree.swift; sourceTree = "<group>"; };
 		A6F66B7E2C2E2B7200DC3569 /* Compatibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Compatibility.swift; path = BTree/Compatibility.swift; sourceTree = "<group>"; };
 		A6F699092728C45800C4A3A6 /* Mux.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mux.swift; sourceTree = "<group>"; };
-		A6F6AF882F98999200F9F8F3 /* ProfilesWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfilesWindow.xib; sourceTree = "<group>"; };
 		A6F6AF942F989A8300F9F8F3 /* askpass.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = askpass.sh; sourceTree = "<group>"; };
 		A6F6AF982F989B2C00F9F8F3 /* iTermMinimalComposerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iTermMinimalComposerViewController.h; sourceTree = "<group>"; };
 		A6F6AF992F989B2C00F9F8F3 /* iTermMinimalComposerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iTermMinimalComposerViewController.m; sourceTree = "<group>"; };
@@ -13796,7 +13813,7 @@
 		A6A5BDF82A070C3C00F5FD44 /* iTerm2ImportStatus */ = {
 			isa = PBXGroup;
 			children = (
-				A618692C2A0814C40052487D /* ImportingWindowController.xib */,
+				7488ED09E4F34B2D89420AD9 /* ImportingWindowController.xib */,
 				A6A5BDF92A070C3C00F5FD44 /* AppDelegate.swift */,
 				A6A5BDFB2A070C3D00F5FD44 /* Assets.xcassets */,
 				A6A5BDFD2A070C3D00F5FD44 /* MainMenu.xib */,
@@ -14038,8 +14055,8 @@
 		A6B14FF42F9852CB006C7417 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				A6F6AF882F98999200F9F8F3 /* ProfilesWindow.xib */,
-				A61E513E2F98978000EB2B55 /* AdvancedWorkingDirectoryWindow.xib */,
+				6982F2CE8E2B47FBA6006FD7 /* ProfilesWindow.xib */,
+				E3E482E76E0840FE8381B1F6 /* AdvancedWorkingDirectoryWindow.xib */,
 				A6E713B018FCB559008D94DD /* AdvancedWorkingDirectoryWindowController.h */,
 				A6E713B118FCB559008D94DD /* AdvancedWorkingDirectoryWindowController.m */,
 				A6D90D5F2E2F5F3B00BA9F4F /* ai-prompt-help.md */,
@@ -14047,7 +14064,7 @@
 				A6E7138D18F26A91008D94DD /* AppearancePreferencesViewController.m */,
 				1D2560A813EE60E4006B35CD /* ArrangementPreviewView.h */,
 				1D2560A913EE60E4006B35CD /* ArrangementPreviewView.m */,
-				A61E513F2F98978000EB2B55 /* BulkCopyProfilePreferences.xib */,
+				F5EBCEEB1F114EB39268618C /* BulkCopyProfilePreferences.xib */,
 				A6E7139918F7B199008D94DD /* BulkCopyProfilePreferencesWindowController.h */,
 				A6E7139A18F7B199008D94DD /* BulkCopyProfilePreferencesWindowController.m */,
 				1D21EE39147711300066E04A /* ContextMenuActionPrefsController.h */,
@@ -14066,29 +14083,29 @@
 				A6121D2E2A04875C005D469C /* ImportExport.swift */,
 				A635F1DE250761F9008C3038 /* iTermActionsEditingViewController.h */,
 				A635F1DF250761F9008C3038 /* iTermActionsEditingViewController.m */,
-				A635F1E0250761F9008C3038 /* iTermActionsEditingViewController.xib */,
+				126CBCD547AA4D8AB6208C7E /* iTermActionsEditingViewController.xib */,
 				A6024B7E254CE2000036D6CF /* iTermAddTriggerViewController.h */,
 				A6024B7F254CE2000036D6CF /* iTermAddTriggerViewController.m */,
 				A6971F3020D8D3C30075CFD4 /* iTermAdvancedGPUSettingsViewController.h */,
 				A6971F3120D8D3C30075CFD4 /* iTermAdvancedGPUSettingsViewController.m */,
-				A6971F3220D8D3C30075CFD4 /* iTermAdvancedGPUSettingsWindowController.xib */,
+				2624CB4A6770424DA4BBC922 /* iTermAdvancedGPUSettingsWindowController.xib */,
 				A697100918D94CDA007E901D /* iTermAdvancedSettingsModel.h */,
 				A697100A18D94CDA007E901D /* iTermAdvancedSettingsModel.m */,
 				A697100418D82E79007E901D /* iTermAdvancedSettingsViewController.h */,
 				A697100518D82E79007E901D /* iTermAdvancedSettingsViewController.m */,
 				53B93DFA21F640B0001EC59C /* iTermBadgeConfigurationWindowController.h */,
 				53B93DFB21F640B0001EC59C /* iTermBadgeConfigurationWindowController.m */,
-				A62A78D92F987FA7007CAA0B /* iTermBadgeConfigurationWindowController.xib */,
+				8DC9C90A74074C5BA91EF818 /* iTermBadgeConfigurationWindowController.xib */,
 				A6AE58E42E84936000762C1D /* iTermBrowserPluginFinder.swift */,
 				1D027C0F1CD1867000B0FBFF /* iTermColorPresets.h */,
 				1D027C101CD1867000B0FBFF /* iTermColorPresets.m */,
 				1DFA9D6118F37160008ADC98 /* iTermEditKeyActionWindowController.h */,
 				1DFA9D6218F37160008ADC98 /* iTermEditKeyActionWindowController.m */,
-				A61E51402F98978000EB2B55 /* iTermEditKeyActionWindowController.xib */,
+				B6C1D0DE0FB8474C8AAF7CA2 /* iTermEditKeyActionWindowController.xib */,
 				A6EC937124E78A5100EEADEF /* iTermEditSnippetWindowController.h */,
 				A6EC937224E78A5100EEADEF /* iTermEditSnippetWindowController.m */,
-				A6EC937324E78A5100EEADEF /* iTermEditSnippetWindowController.xib */,
-				A61E51412F98978000EB2B55 /* iTermKeyMapping.xib */,
+				AF15834733AB43248291081B /* iTermEditSnippetWindowController.xib */,
+				26DE2F2696CD4492901182B9 /* iTermKeyMapping.xib */,
 				A6E5A9272F2DD832002331AE /* iTermKeyMappingRepair.swift */,
 				1DFA9D5C18F36DC3008ADC98 /* iTermKeyMappingViewController.h */,
 				1DFA9D5D18F36DC3008ADC98 /* iTermKeyMappingViewController.m */,
@@ -14101,7 +14118,7 @@
 				5378FA3F224DAE4700CA2B2D /* iTermPreferencesSearch.m */,
 				535D0911224DD13F00A79581 /* iTermPreferencesSearchEngineResultsWindowController.h */,
 				535D0912224DD13F00A79581 /* iTermPreferencesSearchEngineResultsWindowController.m */,
-				A62A78DD2F987FC5007CAA0B /* iTermPreferencesSearchEngineResultsWindowController.xib */,
+				DC2A25D751244924A64BD516 /* iTermPreferencesSearchEngineResultsWindowController.xib */,
 				A6A4B2B92426C02800184EAC /* iTermPresetKeyMappings.h */,
 				A6A4B2BA2426C02800184EAC /* iTermPresetKeyMappings.m */,
 				A6AA2F662E28B257002998B3 /* iTermProfilePreferenceMutator.swift */,
@@ -14129,8 +14146,8 @@
 				A6C20CB725F6CA8C0086B09C /* iTermSlider.m */,
 				A635F1E62507621A008C3038 /* iTermSnippetsEditingViewController.h */,
 				A635F1E72507621A008C3038 /* iTermSnippetsEditingViewController.m */,
-				A635F1E82507621A008C3038 /* iTermSnippetsEditingViewController.xib */,
-				A61E51422F98978000EB2B55 /* iTermTriggersPanel.xib */,
+				1551E8E2B2A94803A29B889A /* iTermSnippetsEditingViewController.xib */,
+				A92BCEE72E4B41C4B3F85B1C /* iTermTriggersPanel.xib */,
 				A6F718CC2266E71E0053488E /* iTermUserDefaults.h */,
 				A6F718CD2266E71E0053488E /* iTermUserDefaults.m */,
 				A6EF57CF21994DDC00C76698 /* iTermUserDefaultsObserver.h */,
@@ -14151,7 +14168,7 @@
 				A6E7138318F263BC008D94DD /* PreferenceInfo.m */,
 				1D407A2A14BABE8700BD5035 /* PreferencePanel.h */,
 				FB019DE103670C6501F955DB /* PreferencePanel.m */,
-				A61E51432F98978000EB2B55 /* PreferencePanel.xib */,
+				569F1E17131F412BA3D9D706 /* PreferencePanel.xib */,
 				A6E7139118F50762008D94DD /* ProfilePreferencesViewController.h */,
 				A6E7139218F50762008D94DD /* ProfilePreferencesViewController.m */,
 				A6B14FF52F98532E006C7417 /* Profiles */,
@@ -14178,8 +14195,8 @@
 				1D24C2C3142FEACF006B246F /* SmartSelectionController.h */,
 				1D24C2C4142FEACF006B246F /* SmartSelectionController.m */,
 				A640487129BFCBCB0063C34A /* SpecialExceptionsWindowController.swift */,
-				A640486D29BFCB640063C34A /* SpecialExceptionsWindowController.xib */,
-				A6EC8088282A28C600493544 /* SSHConfigurationWindow.xib */,
+				0B016BA97C714AD4B804AB57 /* SpecialExceptionsWindowController.xib */,
+				32A190983D4843B597FE0DA9 /* SSHConfigurationWindow.xib */,
 				A6EC808C282A28F500493544 /* SSHConfigurationWindowController.swift */,
 				1D31BC63142D33CA001F7ECB /* TriggerController.h */,
 				1D31BC64142D33CA001F7ECB /* TriggerController.m */,
@@ -22737,8 +22754,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				A6A5BDFE2A070C3D00F5FD44 /* Base */,
+				F75042C1A2E64985ACB3907C /* mul */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		7488ED09E4F34B2D89420AD9 /* ImportingWindowController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7CF54F74E57146BDBB3D67E8 /* Base */,
+				02FD2C74C0AB46889958F56D /* mul */,
+			);
+			name = ImportingWindowController.xib;
 			sourceTree = "<group>";
 		};
 		3A0DF269D7DC43B489234B8E /* MainMenu.xib */ = {
@@ -22748,6 +22775,141 @@
 				7249C41B9AF84762BDDFE76A /* mul */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		E3E482E76E0840FE8381B1F6 /* AdvancedWorkingDirectoryWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6CFA8F6BB54D458B8D2A60AA /* Base */,
+				40C46151258F44D98C973EB4 /* mul */,
+			);
+			name = AdvancedWorkingDirectoryWindow.xib;
+			sourceTree = "<group>";
+		};
+		F5EBCEEB1F114EB39268618C /* BulkCopyProfilePreferences.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1A5D36C398BC4FB9BC51F4ED /* Base */,
+				1AA4E79FBCEF415E82F88D59 /* mul */,
+			);
+			name = BulkCopyProfilePreferences.xib;
+			sourceTree = "<group>";
+		};
+		569F1E17131F412BA3D9D706 /* PreferencePanel.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1B080E40E5BE4A10B50A15EF /* Base */,
+				024DDDAFEA4640E4B298E925 /* mul */,
+			);
+			name = PreferencePanel.xib;
+			sourceTree = "<group>";
+		};
+		6982F2CE8E2B47FBA6006FD7 /* ProfilesWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				380DF97F4C6C4EFF99C149AB /* Base */,
+				E8B0F4C9FCE14B19B43DD13D /* mul */,
+			);
+			name = ProfilesWindow.xib;
+			sourceTree = "<group>";
+		};
+		32A190983D4843B597FE0DA9 /* SSHConfigurationWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB46B665F47A4CFBB06993D3 /* Base */,
+				B26B9DA0657F489BBB2B552D /* mul */,
+			);
+			name = SSHConfigurationWindow.xib;
+			sourceTree = "<group>";
+		};
+		0B016BA97C714AD4B804AB57 /* SpecialExceptionsWindowController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0E3EB9100E7349F09F845881 /* Base */,
+				A223412F16E342B69B8CEB5B /* mul */,
+			);
+			name = SpecialExceptionsWindowController.xib;
+			sourceTree = "<group>";
+		};
+		126CBCD547AA4D8AB6208C7E /* iTermActionsEditingViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				97F0093AFD4047BEA386C6BF /* Base */,
+				A34B169A3A0F4EF7AA96143A /* mul */,
+			);
+			name = iTermActionsEditingViewController.xib;
+			sourceTree = "<group>";
+		};
+		2624CB4A6770424DA4BBC922 /* iTermAdvancedGPUSettingsWindowController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				550B843502C5454584426CF3 /* Base */,
+				C5DE747B32E242EC90AEEF50 /* mul */,
+			);
+			name = iTermAdvancedGPUSettingsWindowController.xib;
+			sourceTree = "<group>";
+		};
+		8DC9C90A74074C5BA91EF818 /* iTermBadgeConfigurationWindowController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9088BE010E46434F811D723E /* Base */,
+				3107F07F4B41435FA1D3BA46 /* mul */,
+			);
+			name = iTermBadgeConfigurationWindowController.xib;
+			sourceTree = "<group>";
+		};
+		B6C1D0DE0FB8474C8AAF7CA2 /* iTermEditKeyActionWindowController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				45B7813444144F4EA7C12EBC /* Base */,
+				1E7B8F4316D54D7792D38877 /* mul */,
+			);
+			name = iTermEditKeyActionWindowController.xib;
+			sourceTree = "<group>";
+		};
+		AF15834733AB43248291081B /* iTermEditSnippetWindowController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0AD20DB7607643FFBCA0B2BC /* Base */,
+				79D3FA97BB2942C39F9C0F6B /* mul */,
+			);
+			name = iTermEditSnippetWindowController.xib;
+			sourceTree = "<group>";
+		};
+		26DE2F2696CD4492901182B9 /* iTermKeyMapping.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B6E3121C4CB74017B132CD9F /* Base */,
+				A0AFF6BB185F42F89FCF5ABA /* mul */,
+			);
+			name = iTermKeyMapping.xib;
+			sourceTree = "<group>";
+		};
+		DC2A25D751244924A64BD516 /* iTermPreferencesSearchEngineResultsWindowController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D871B57F576F4BD1A4B4BE96 /* Base */,
+				07D41660EAFB4F4A98009ECA /* mul */,
+			);
+			name = iTermPreferencesSearchEngineResultsWindowController.xib;
+			sourceTree = "<group>";
+		};
+		1551E8E2B2A94803A29B889A /* iTermSnippetsEditingViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8E208D0EA9446F7913DB1D6 /* Base */,
+				2F2001FA0C1B4ECD9421AC92 /* mul */,
+			);
+			name = iTermSnippetsEditingViewController.xib;
+			sourceTree = "<group>";
+		};
+		A92BCEE72E4B41C4B3F85B1C /* iTermTriggersPanel.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				77E23FB6CDFD4A58A7A8AADA /* Base */,
+				F74A725864554C359770E2CB /* mul */,
+			);
+			name = iTermTriggersPanel.xib;
 			sourceTree = "<group>";
 		};
 		0D7FD3B6962B4A5A9C45753D /* AITerm.xib */ = {

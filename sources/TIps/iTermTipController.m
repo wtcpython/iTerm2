@@ -123,8 +123,8 @@ static NSString *const kPermissionToShowTip = @"NoSyncPermissionToShowTip";
     NSAlert *alert = [[NSAlert alloc] init];
     alert.messageText = @"See Tips of the Day?";
     alert.informativeText = @"iTerm2 can show you a Tip of the Day message to help you learn about its many features. Are you interested?";
-    [alert addButtonWithTitle:@"Yes"];
-    [alert addButtonWithTitle:@"No"];
+    [alert addButtonWithTitle:NSLocalizedString(@"Yes", @"UI")];
+    [alert addButtonWithTitle:NSLocalizedString(@"No", @"UI")];
     BOOL havePermission = ([alert runModal] == NSAlertFirstButtonReturn);
     [[iTermUserDefaults userDefaults] setBool:havePermission forKey:kPermissionToShowTip];
 }

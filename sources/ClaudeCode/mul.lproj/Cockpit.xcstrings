@@ -1,6 +1,42 @@
 {
   "sourceLanguage": "en",
   "strings": {
+    "GMI-tb-001.label": {
+      "comment": "Class = \"NSToolbarItem\"; label = \"Group\"; ObjectID = \"GMI-tb-001\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Group"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Group"
+          }
+        }
+      }
+    },
+    "NTI-tb-001.label": {
+      "comment": "Class = \"NSToolbarItem\"; label = \"Notify\"; ObjectID = \"NTI-tb-001\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Notify"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Notify"
+          }
+        }
+      }
+    },
     "QvC-M9-y7g.title": {
       "comment": "Class = \"NSWindow\"; title = \"Cockpit\"; ObjectID = \"QvC-M9-y7g\";",
       "extractionState": "extracted_with_value",
@@ -15,6 +51,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "Cockpit"
+          }
+        }
+      }
+    },
+    "eAE-pE-PO4.label": {
+      "comment": "Class = \"NSToolbarItem\"; label = \"Settings\"; ObjectID = \"eAE-pE-PO4\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Settings"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设置"
           }
         }
       }
@@ -51,6 +105,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "Table View Cell"
+          }
+        }
+      }
+    },
+    "uxK-ys-Pfe.label": {
+      "comment": "Class = \"NSSearchToolbarItem\"; label = \"Search\"; ObjectID = \"uxK-ys-Pfe\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Search"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Search"
           }
         }
       }

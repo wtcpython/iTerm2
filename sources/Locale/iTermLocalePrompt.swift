@@ -105,7 +105,7 @@ extension NSPopUpButton {
             }
         }
         menu?.addItem(.separator())
-        menu?.addItem(withTitle: "Locales with wrong encoding", action: #selector(Placeholder.placeholder(_:)), keyEquivalent: "")
+        menu?.addItem(withTitle: NSLocalizedString("Locales with wrong encoding", comment: "UI"), action: #selector(Placeholder.placeholder(_:)), keyEquivalent: "")
         menu?.items.last?.target = Placeholder.instance
         for components in bad {
             if let quality = index[components.languageCode], quality < defaultIndexQuality {

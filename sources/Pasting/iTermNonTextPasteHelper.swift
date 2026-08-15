@@ -224,7 +224,7 @@ class iTermNonTextPasteHelper: NSObject {
 
     private func showError(_ message: String) {
         let alert = NSAlert()
-        alert.messageText = "Paste Failed"
+        alert.messageText = NSLocalizedString("Paste Failed", comment: "UI")
         alert.informativeText = message
         alert.alertStyle = .warning
         alert.addButton(withTitle: NSLocalizedString("OK", comment: "UI"))

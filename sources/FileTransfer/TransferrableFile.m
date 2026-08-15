@@ -213,7 +213,7 @@ static NSMutableSet<NSString *> *iTermTransferrableFileLockedFileNames(void) {
 }
 
 - (void)failedToRemoveUnquarantinedFileAt:(NSString *)path {
-    [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"The file at “%@” could not be quarantined or deleted! It is dangerous and should be removed.", path]
+    [iTermWarning showWarningWithTitle:[NSString stringWithFormat:NSLocalizedString(@"The file at “%@” could not be quarantined or deleted! It is dangerous and should be removed.", @"UI"), path]
                                actions:@[ NSLocalizedString(@"OK", @"UI") ]
                              accessory:nil
                             identifier:nil

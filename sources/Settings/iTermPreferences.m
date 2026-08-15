@@ -641,7 +641,7 @@ static void iTermPreferencesRefreshFastCachesForKey(NSString *key);
         return;
     }
     const iTermWarningSelection selection =
-    [iTermWarning showWarningWithTitle:@"Load settings from Gitlab settings-like URL on pasteboard?"
+    [iTermWarning showWarningWithTitle:NSLocalizedString(@"Load settings from Gitlab settings-like URL on pasteboard?", @"UI")
                                actions:@[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI") ]
                              accessory:nil
                             identifier:nil

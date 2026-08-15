@@ -365,7 +365,7 @@ fileprivate class SSHCopyDestinationView: NSView {
 
         textField = NSTextField()
         textField.stringValue = "~"
-        label = NSTextField(labelWithString: "Destination folder on remote host:")
+        label = NSTextField(labelWithString: NSLocalizedString("Destination folder on remote host:", comment: "UI"))
         label.translatesAutoresizingMaskIntoConstraints = false
         label.sizeToFit()
 

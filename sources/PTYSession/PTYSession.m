@@ -3204,7 +3204,7 @@ ITERM_WEAKLY_REFERENCEABLE
 - (BOOL)checkForSusLocale:(NSString *)lang guid:(NSString *)guid {
     if (lang && self.encoding == NSUTF8StringEncoding && ![lang containsString:@"UTF-8"]) {
         const iTermWarningSelection selection =
-        [iTermWarning showWarningWithTitle:@"Warning! This profile uses a custom locale that doesn't use UTF-8 as its character encoding, but your profile *is* using UTF-8. This can cause error messages and non-ASCII text to appear wrong."
+        [iTermWarning showWarningWithTitle:NSLocalizedString(@"Warning! This profile uses a custom locale that doesn't use UTF-8 as its character encoding, but your profile *is* using UTF-8. This can cause error messages and non-ASCII text to appear wrong.", @"UI")
                                    actions:@[ @"Change Locale", @"Keep This Locale"]
                                  accessory:nil
                                 identifier:[@"NoSyncUTF8Mismatch_" stringByAppendingString:guid ?: @""]
@@ -3359,7 +3359,7 @@ webViewConfiguration:(WKWebViewConfiguration *)webViewConfiguration
                 if (count > 0) {
                     return;
                 }
-                const iTermWarningSelection selection = [iTermWarning showWarningWithTitle:@"A browser session failed to start because the iTerm2 Browser Plugin couldn’t be found."
+                const iTermWarningSelection selection = [iTermWarning showWarningWithTitle:NSLocalizedString(@"A browser session failed to start because the iTerm2 Browser Plugin couldn’t be found.", @"UI")
                                            actions:@[ @"Download", NSLocalizedString(@"Cancel", @"UI") ]
                                          accessory:nil
                                         identifier:nil
@@ -4913,7 +4913,7 @@ webViewConfiguration:(WKWebViewConfiguration *)webViewConfiguration
     }
     showing = YES;
     const iTermWarningSelection selection =
-        [iTermWarning showWarningWithTitle:@"A keyboard shortcut didn’t run because this physical key now produces a different character than it did when the shortcut was created, usually after switching keyboard layout or input method. Matching key bindings by physical key makes shortcuts work regardless of the character a key produces. This affects all key bindings; you can change it later in Settings > Keys."
+        [iTermWarning showWarningWithTitle:NSLocalizedString(@"A keyboard shortcut didn’t run because this physical key now produces a different character than it did when the shortcut was created, usually after switching keyboard layout or input method. Matching key bindings by physical key makes shortcuts work regardless of the character a key produces. This affects all key bindings; you can change it later in Settings > Keys.", @"UI")
                                    actions:@[ @"Use Physical Key", @"Not Now", @"Don’t Ask Again" ]
                                  accessory:nil
                                 identifier:nil
@@ -10804,7 +10804,7 @@ typedef NS_ENUM(NSUInteger, PTYSessionTmuxReport) {
         actions = @[ NSLocalizedString(@"OK", @"UI") ];
     }
     const iTermWarningSelection selection =
-    [iTermWarning showWarningWithTitle:@"This instance of iTerm2 is already attached to this session"
+    [iTermWarning showWarningWithTitle:NSLocalizedString(@"This instance of iTerm2 is already attached to this session", @"UI")
                                actions:actions
                              accessory:nil
                             identifier:@"AlreadyAttachedToTmuxSession"
@@ -11888,7 +11888,7 @@ typedef NS_ENUM(NSUInteger, PTYSessionTmuxReport) {
                         sideEffectsAllowed:YES
                                 completion:^(iTermExpressionEvaluator *evaluator) {
                 if (evaluator.error) {
-                    [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"The key-binding action Copy Interpolated String “%@” failed:\n\n%@",
+                    [iTermWarning showWarningWithTitle:[NSString stringWithFormat:NSLocalizedString(@"The key-binding action Copy Interpolated String “%@” failed:\n\n%@", @"UI"),
                                                         parameter, evaluator.error.localizedDescription]
                                                actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                              accessory:nil
@@ -16385,7 +16385,7 @@ typedef NS_ENUM(NSUInteger, PTYSessionTmuxReport) {
 - (void)maybeStealFocus {
     NSString *const identifier = @"NoSyncAllowDenyStealFocus";
     const iTermWarningSelection selection =
-    [iTermWarning showWarningWithTitle:@"A control sequence attempted to activate a session. Allow it?"
+    [iTermWarning showWarningWithTitle:NSLocalizedString(@"A control sequence attempted to activate a session. Allow it?", @"UI")
                                actions:@[ NSLocalizedString(@"Allow", @"UI"), @"Deny" ]
                              accessory:nil
                             identifier:identifier
@@ -18731,7 +18731,7 @@ static const NSTimeInterval PTYSessionFocusReportBellSquelchTimeIntervalThreshol
         [_textview installShellIntegration:nil];
     } else {
         iTermWarningSelection selection =
-        [iTermWarning showWarningWithTitle:@"It looks like you're not at a command prompt."
+        [iTermWarning showWarningWithTitle:NSLocalizedString(@"It looks like you're not at a command prompt.", @"UI")
                                    actions:@[ @"Run Installer Anyway", NSLocalizedString(@"Cancel", @"UI") ]
                                 identifier:nil
                                silenceable:kiTermWarningTypePersistent
@@ -19114,7 +19114,7 @@ static const NSTimeInterval PTYSessionFocusReportBellSquelchTimeIntervalThreshol
 - (BOOL)screenConfirmDownloadNamed:(NSString *)name canExceedSize:(NSInteger)limit {
     NSString *identifier = @"NoSyncAllowBigDownload";
     const iTermWarningSelection selection =
-    [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"The download “%@” is larger than %@. Continue?", name, [NSString it_formatBytes:limit]]
+    [iTermWarning showWarningWithTitle:[NSString stringWithFormat:NSLocalizedString(@"The download “%@” is larger than %@. Continue?", @"UI"), name, [NSString it_formatBytes:limit]]
                                actions:@[ NSLocalizedString(@"Allow", @"UI"), @"Deny" ]
                              accessory:nil
                             identifier:identifier
@@ -22106,9 +22106,7 @@ static const NSTimeInterval PTYSessionFocusReportBellSquelchTimeIntervalThreshol
 }
 
 - (void)sendPasswordAfterGettingPermission {
-    BOOL ok = ([iTermWarning showWarningWithTitle:@"Are you really at a password prompt? It looks "
-                @"like what you're typing is echoed to the screen."
-                                          actions:@[ NSLocalizedString(@"Cancel", @"UI"), @"Enter Password" ]
+    BOOL ok = ([iTermWarning showWarningWithTitle:NSLocalizedString(@"Are you really at a password prompt? It looks like what you're typing is echoed to the screen.", @"UI")actions:@[ NSLocalizedString(@"Cancel", @"UI"), @"Enter Password" ]
                                        identifier:nil
                                       silenceable:kiTermWarningTypePersistent
                                            window:self.view.window] == kiTermWarningSelection1);
@@ -23163,7 +23161,7 @@ static const NSTimeInterval PTYSessionFocusReportBellSquelchTimeIntervalThreshol
     }];
     if (replacement) {
         [self.textview replaceSelectionWith:replacement];
-        [iTermWarning showWarningWithTitle:@"You can find this feature under Edit > Replace Selection > Replace with Pretty-Printed JSON if you want to use it again."
+        [iTermWarning showWarningWithTitle:NSLocalizedString(@"You can find this feature under Edit > Replace Selection > Replace with Pretty-Printed JSON if you want to use it again.", @"UI")
                                    actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                  accessory:nil
                                 identifier:nil
@@ -23171,7 +23169,7 @@ static const NSTimeInterval PTYSessionFocusReportBellSquelchTimeIntervalThreshol
                                    heading:@"Done!"
                                     window:self.view.window];
     } else {
-        [iTermWarning showWarningWithTitle:@"Looks like the selection changed and is no longer a valid JSON object.\nYou can find this feature under Edit > Replace Selection > Replace with Pretty-Printed JSON if you want to try again."
+        [iTermWarning showWarningWithTitle:NSLocalizedString(@"Looks like the selection changed and is no longer a valid JSON object.\nYou can find this feature under Edit > Replace Selection > Replace with Pretty-Printed JSON if you want to try again.", @"UI")
                                    actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                 identifier:nil
                                silenceable:kiTermWarningTypePersistent

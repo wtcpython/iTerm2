@@ -47,7 +47,7 @@
 
     NSData *data = [gzipped gunzippedData];
     if (!data) {
-        [iTermWarning showWarningWithTitle:@"Could not read the file: decompression failed."
+        [iTermWarning showWarningWithTitle:NSLocalizedString(@"Could not read the file: decompression failed.", @"UI")
                                    actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                 identifier:@"RecordingMalformed"
                                silenceable:kiTermWarningTypePersistent
@@ -59,7 +59,7 @@
     // a bug like this, but I can't come up with a better explanation :(
     NSDictionary *dict = [data it_unarchivedObjectOfClasses:@[ [NSDictionary class], [NSArray class] ]];
     if (![dict isKindOfClass:[NSDictionary class]]) {
-        [iTermWarning showWarningWithTitle:@"Could not read the file: unarchiving decompressed data failed."
+        [iTermWarning showWarningWithTitle:NSLocalizedString(@"Could not read the file: unarchiving decompressed data failed.", @"UI")
                                    actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                 identifier:@"RecordingMalformed"
                                silenceable:kiTermWarningTypePersistent
@@ -70,7 +70,7 @@
     // This is the outer version. It is set in [-iTermRecordingCodec exportRecording:from:to:window:].
     NSArray<NSNumber *> *supportedVersions = @[ @1, @2, @3, @4 ];
     if (![supportedVersions containsObject:dict[@"version"]]) {
-        [iTermWarning showWarningWithTitle:@"This recording is from a newer version of iTerm2 and cannot be replayed in this version."
+        [iTermWarning showWarningWithTitle:NSLocalizedString(@"This recording is from a newer version of iTerm2 and cannot be replayed in this version.", @"UI")
                                    actions:@[ NSLocalizedString(@"OK", @"UI") ]
                              actionMapping:nil
                                  accessory:nil
@@ -84,7 +84,7 @@
     NSDictionary *dvrDict = dict[@"dvr"];
     Profile *dictProfile = dict[@"profile"];
     if (!dvrDict || !dictProfile) {
-        [iTermWarning showWarningWithTitle:@"This recording could not be loaded because it is missing critical information."
+        [iTermWarning showWarningWithTitle:NSLocalizedString(@"This recording could not be loaded because it is missing critical information.", @"UI")
                                    actions:@[ NSLocalizedString(@"OK", @"UI") ]
                              actionMapping:nil
                                  accessory:nil
@@ -113,7 +113,7 @@
         PTYSession *newSession = [[PTYSession alloc] initSynthetic:YES];
         newSession.profile = profile;
         if (![newSession.screen.dvr loadDictionary:dvrDict]) {
-            [iTermWarning showWarningWithTitle:@"The recording could not be loaded. It might be corrupted."
+            [iTermWarning showWarningWithTitle:NSLocalizedString(@"The recording could not be loaded. It might be corrupted.", @"UI")
                                        actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                      accessory:nil
                                     identifier:@"NoSyncCouldNotLoadRecording"
@@ -197,7 +197,7 @@
                     });
                 }];
             } else {
-                [iTermWarning showWarningWithTitle:@"Error encoding recording."
+                [iTermWarning showWarningWithTitle:NSLocalizedString(@"Error encoding recording.", @"UI")
                                            actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                         identifier:@"ErrorSavingRecording"
                                        silenceable:kiTermWarningTypePersistent

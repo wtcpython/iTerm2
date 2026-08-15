@@ -274,7 +274,7 @@ typedef NS_ENUM(NSUInteger, iTermLaunchExperienceChoice) {
 }
 
 - (void)warnAboutChangeToDefaultPasteBehavior {
-    [iTermWarning showWarningWithTitle:@"iTerm2 no longer warns before a multi-line paste, unless you are at the shell prompt."
+    [iTermWarning showWarningWithTitle:NSLocalizedString(@"iTerm2 no longer warns before a multi-line paste, unless you are at the shell prompt.", @"UI")
                                actions:@[ NSLocalizedString(@"OK", @"UI") ]
                              accessory:nil
                             identifier:nil

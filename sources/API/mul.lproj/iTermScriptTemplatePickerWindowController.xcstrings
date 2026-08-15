@@ -14,7 +14,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "A simple script that doesn't have any dependencies besides the iterm2 library."
+            "value": "一个除了 iterm2 库外不依赖任何其他内容的简单脚本。"
           }
         }
       }
@@ -230,7 +230,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "A script that depends on PyPI packages other than the iterm2 library. A private pyenv will be created for this script."
+            "value": "一个依赖 iterm2 库之外的其他 PyPI 软件包的脚本。将为此脚本创建专用的 pyenv。"
           }
         }
       }

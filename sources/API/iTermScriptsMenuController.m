@@ -376,7 +376,7 @@ NS_ASSUME_NONNULL_BEGIN
 
     for (NSString *file in directoryEnumerator) {
         if (clockWatcher.reachedMaxTime) {
-            iTermWarningSelection selection = [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"It is taking a long time to locate all scripts under %@. Avoid storing many files or using network mounts for the scripts folder.\n\nContinue?", originalRoot]
+            iTermWarningSelection selection = [iTermWarning showWarningWithTitle:[NSString stringWithFormat:NSLocalizedString(@"It is taking a long time to locate all scripts under %@. Avoid storing many files or using network mounts for the scripts folder.\n\nContinue?", @"UI"), originalRoot]
                                                                          actions:@[ @"Stop", NSLocalizedString(@"Continue", @"UI")]
                                                                        accessory:nil
                                                                       identifier:@"TakingTooLongToEnumerateScripts"
@@ -385,7 +385,7 @@ NS_ASSUME_NONNULL_BEGIN
                                                                           window:nil];
             if (selection == kiTermWarningSelection0) {
                 _disableEnumeration = YES;
-                [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"Some scripts will not be available until the app has restarted or you change the scripts folder."]
+                [iTermWarning showWarningWithTitle:[NSString stringWithFormat:NSLocalizedString(@"Some scripts will not be available until the app has restarted or you change the scripts folder.", @"UI")]
                                                                              actions:@[ NSLocalizedString(@"OK", @"UI")]
                                                                            accessory:nil
                                                                           identifier:@"TakingTooLongToEnumerateScripts2"
@@ -883,7 +883,7 @@ NS_ASSUME_NONNULL_BEGIN
                 explicitUserAction:(BOOL)explicitUserAction {
     NSString *name = container.lastPathComponent;
     const iTermWarningSelection selection =
-    [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"The Python environment for “%@” is missing (the shared runtime may have been deleted). Rebuild it from its saved requirements now?", name]
+    [iTermWarning showWarningWithTitle:[NSString stringWithFormat:NSLocalizedString(@"The Python environment for “%@” is missing (the shared runtime may have been deleted). Rebuild it from its saved requirements now?", @"UI"), name]
                                actions:@[ @"Rebuild", NSLocalizedString(@"Cancel", @"UI") ]
                              accessory:nil
                             identifier:@"NoSyncRebuildMissingUvEnv"
@@ -1213,7 +1213,7 @@ NS_ASSUME_NONNULL_BEGIN
                                     pythonVersionPopup:(NSPopUpButton *)pythonVersionPopup {
     NSTextField *label = [[NSTextField alloc] initWithFrame:NSMakeRect(0, 5, 60, 22)];
     [label setEditable:NO];
-    [label setStringValue:@"PyPI Dependencies:"];
+    [label setStringValue:NSLocalizedString(@"PyPI Dependencies:", @"UI")];
     label.font = [NSFont systemFontOfSize:13];
     [label setBordered:NO];
     [label setBezeled:NO];
@@ -1222,7 +1222,7 @@ NS_ASSUME_NONNULL_BEGIN
 
     NSTextField *pythonVersionLabel = [[NSTextField alloc] initWithFrame:NSMakeRect(0, 5, 60, 22)];
     [pythonVersionLabel setEditable:NO];
-    [pythonVersionLabel setStringValue:@"Python Version:"];
+    [pythonVersionLabel setStringValue:NSLocalizedString(@"Python Version:", @"UI")];
     pythonVersionLabel.font = [NSFont systemFontOfSize:13];
     [pythonVersionLabel setBordered:NO];
     [pythonVersionLabel setBezeled:NO];
@@ -1451,7 +1451,7 @@ NS_ASSUME_NONNULL_BEGIN
     scriptItem.identifier = path;
     [scriptMenu addItem:scriptItem];
 
-    NSMenuItem *altItem = [[NSMenuItem alloc] initWithTitle:[NSString stringWithFormat:@"Reveal %@", file]
+    NSMenuItem *altItem = [[NSMenuItem alloc] initWithTitle:[NSString stringWithFormat:NSLocalizedString(@"Reveal %@", @"UI"), file]
                                                         action:@selector(revealScript:)
                                                  keyEquivalent:@""];
 

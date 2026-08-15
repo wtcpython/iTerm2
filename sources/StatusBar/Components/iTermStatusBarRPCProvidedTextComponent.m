@@ -399,7 +399,7 @@ static NSString *const iTermStatusBarRPCRegistrationRequestV2Key = @"registratio
         return;
     }
 
-    if ([iTermWarning showWarningWithTitle:@"This will move the script into the AutoLaunch folder."
+    if ([iTermWarning showWarningWithTitle:NSLocalizedString(@"This will move the script into the AutoLaunch folder.", @"UI")
                                    actions:@[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI") ]
                                  accessory:nil
                                 identifier:[NSString stringWithFormat:@"NoSyncAutoLaunchScript_%@", _fullPath]

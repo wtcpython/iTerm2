@@ -181,7 +181,7 @@ class iTermClippingsView: NSView {
         closeButton.imagePosition = .imageOnly
         closeButton.target = self
         closeButton.action = #selector(closeClicked(_:))
-        closeButton.toolTip = "Hide clippings"
+        closeButton.toolTip = NSLocalizedString("Hide clippings", comment: "UI")
         closeButton.autoresizingMask = [.minXMargin, .maxYMargin]
         addSubview(closeButton)
 
@@ -278,7 +278,7 @@ class iTermClippingsView: NSView {
 
         if !viewingLive {
             historyStatusLabel.stringValue = "\(historyIndex + 1)/\(total)"
-            historyStatusLabel.toolTip = "Viewing archived clippings (\(historyIndex + 1) of \(total))"
+            historyStatusLabel.toolTip = NSLocalizedString("Viewing archived clippings (\(historyIndex + 1) of \(total))", comment: "UI")
             historyStatusLabel.isHidden = false
         } else {
             historyStatusLabel.stringValue = ""
@@ -615,7 +615,7 @@ private class ClippingsCellView: NSTableCellView {
         previewButton.isBordered = false
         previewButton.imagePosition = .imageOnly
         previewButton.contentTintColor = .secondaryLabelColor
-        previewButton.toolTip = "Preview (Space)"
+        previewButton.toolTip = NSLocalizedString("Preview (Space)", comment: "UI")
         previewButton.target = self
         previewButton.action = #selector(previewButtonClicked(_:))
         previewButton.autoresizingMask = [.minXMargin, .minYMargin]

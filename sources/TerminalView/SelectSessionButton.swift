@@ -5,7 +5,7 @@ class SelectSessionButton: NSView {
 
     // New title label (using NSTextField configured for display only)
     private let titleLabel: NSTextField = {
-        let label = NSTextField(labelWithString: "Title")
+        let label = NSTextField(labelWithString: NSLocalizedString("Title", comment: "UI"))
         label.alignment = .center
         label.font = NSFont.boldSystemFont(ofSize: 14)
         return label

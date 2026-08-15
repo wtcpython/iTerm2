@@ -834,7 +834,7 @@ static NSModalResponse iTermCompareRenderingRunModal(id self, SEL _cmd) {
                 }
 
                 const iTermWarningSelection selection =
-                    [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"OK to run “%@”?", filename]
+                    [iTermWarning showWarningWithTitle:[NSString stringWithFormat:NSLocalizedString(@"OK to run “%@”?", @"UI"), filename]
                                                actions:@[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI") ]
                                             identifier:@"NoSyncConfirmRunOpenFile"
                                            silenceable:kiTermWarningTypePermanentlySilenceable
@@ -1508,7 +1508,7 @@ void TurnOnDebugLoggingAutomatically(void) {
     if (@available(macOS 12, *)) {
         // ok
     } else {
-        [iTermWarning showWarningWithTitle:@"This is the last nightly build that will support macOS 11 and older. Sorry for the inconvenience!"
+        [iTermWarning showWarningWithTitle:NSLocalizedString(@"This is the last nightly build that will support macOS 11 and older. Sorry for the inconvenience!", @"UI")
                                    actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                  accessory:nil
                                 identifier:@"NoSyncMacOS11Deprecation"
@@ -2346,7 +2346,7 @@ static iTermKeyEventReplayer *gReplayer;
     NSTimeInterval age = -[[NSBundle it_buildDate] timeIntervalSinceNow];
     if (age > 30 * 24 * 60 * 60) {
         iTermWarningSelection selection =
-        [iTermWarning showWarningWithTitle:@"This nightly build is over 30 days old. Consider updating soon: you may be suffering from awful bugs in blissful ignorance."
+        [iTermWarning showWarningWithTitle:NSLocalizedString(@"This nightly build is over 30 days old. Consider updating soon: you may be suffering from awful bugs in blissful ignorance.", @"UI")
                                    actions:@[ @"I’ll Take My Chances", @"Update Now" ]
                                 identifier:@"NoSyncVeryOldNightlyBuildWarning"
                                silenceable:kiTermWarningTypeSilenceableForOneMonth
@@ -3222,7 +3222,7 @@ static iTermKeyEventReplayer *gReplayer;
                                                                                        withCompletion:
      ^(iTermPythonRuntimeDownloaderStatus status) {
          if (status == iTermPythonRuntimeDownloaderStatusNotNeeded) {
-             [iTermWarning showWarningWithTitle:@"You’re up to date!"
+             [iTermWarning showWarningWithTitle:NSLocalizedString(@"You’re up to date!", @"UI")
                                         actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                       accessory:nil
                                      identifier:nil
@@ -3278,7 +3278,7 @@ static iTermKeyEventReplayer *gReplayer;
             [[iTermPythonRuntimeDownloader sharedInstance] installPythonEnvironmentFromZip:panel.URL.path
                                                                                 completion:^(NSError *error) {
                 if (!error) {
-                    [iTermWarning showWarningWithTitle:@"Installed successfully!"
+                    [iTermWarning showWarningWithTitle:NSLocalizedString(@"Installed successfully!", @"UI")
                                                actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                              accessory:nil
                                             identifier:nil

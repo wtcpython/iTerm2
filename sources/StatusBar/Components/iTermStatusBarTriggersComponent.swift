@@ -102,8 +102,8 @@ class StatusBarTriggersComponent: iTermStatusBarTextComponent {
             menu.addItem(item)
         }
         menu.addItem(NSMenuItem.separator())
-        menu.addItem(NSMenuItem(title: "Add Trigger…", action: #selector(addTrigger(_:)), keyEquivalent: ""))
-        menu.addItem(NSMenuItem(title: "Edit Triggers…", action: #selector(editTriggers(_:)), keyEquivalent: ""))
+        menu.addItem(NSMenuItem(title: NSLocalizedString("Add Trigger…", comment: "UI"), action: #selector(addTrigger(_:)), keyEquivalent: ""))
+        menu.addItem(NSMenuItem(title: NSLocalizedString("Edit Triggers…", comment: "UI"), action: #selector(editTriggers(_:)), keyEquivalent: ""))
 
         menu.popUp(positioning: menu.items.first!, at: NSPoint.zero, in: containingView)
     }

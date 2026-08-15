@@ -619,7 +619,7 @@ extension SSHFilePanel {
         container.translatesAutoresizingMaskIntoConstraints = false
         
         // Create "Save As:" label
-        saveAsLabel = NSTextField(labelWithString: "Save As:")
+        saveAsLabel = NSTextField(labelWithString: NSLocalizedString("Save As:", comment: "UI"))
         saveAsLabel.translatesAutoresizingMaskIntoConstraints = false
         saveAsLabel.alignment = .right
         saveAsLabel.font = NSFont.systemFont(ofSize: NSFont.smallSystemFontSize)
@@ -1145,8 +1145,8 @@ extension SSHFilePanel {
     private func presentFileExistsAlert(for descriptor: SSHFileDescriptor) async -> NSApplication.ModalResponse {
         let alert = NSAlert()
         alert.alertStyle = .warning
-        alert.messageText = "A file with the name “\(descriptor.absolutePath.lastPathComponent)” on \(descriptor.sshIdentity.displayName) already exists in this location. Do you want to replace it?"
-        alert.informativeText = "Replacing it will overwrite its current contents."
+        alert.messageText = NSLocalizedString("A file with the name “\(descriptor.absolutePath.lastPathComponent)” on \(descriptor.sshIdentity.displayName) already exists in this location. Do you want to replace it?", comment: "UI")
+        alert.informativeText = NSLocalizedString("Replacing it will overwrite its current contents.", comment: "UI")
 
         let replaceButton = alert.addButton(withTitle: NSLocalizedString("Replace", comment: "UI"))
         replaceButton.hasDestructiveAction = true
@@ -1240,21 +1240,21 @@ extension SSHFilePanel {
         let menu = NSMenu()
 
         // Go to Folder (Cmd+Shift+G)
-        let goToFolderItem = NSMenuItem(title: "Go to Folder…",
+        let goToFolderItem = NSMenuItem(title: NSLocalizedString("Go to Folder…", comment: "UI"),
                                        action: #selector(goToFolder),
                                        keyEquivalent: "g")
         goToFolderItem.keyEquivalentModifierMask = [.command, .shift]
         menu.addItem(goToFolderItem)
 
         // Go to Home (Cmd+Shift+H)
-        let goToHomeItem = NSMenuItem(title: "Go to Home",
+        let goToHomeItem = NSMenuItem(title: NSLocalizedString("Go to Home", comment: "UI"),
                                      action: #selector(goToHome),
                                      keyEquivalent: "h")
         goToHomeItem.keyEquivalentModifierMask = [.command, .shift]
         menu.addItem(goToHomeItem)
 
         // Go Up (Cmd+Up Arrow)
-        let goUpItem = NSMenuItem(title: "Go Up",
+        let goUpItem = NSMenuItem(title: NSLocalizedString("Go Up", comment: "UI"),
                                  action: #selector(goUp),
                                  keyEquivalent: String(Character(UnicodeScalar(NSUpArrowFunctionKey)!)))
         goUpItem.keyEquivalentModifierMask = [.command]
@@ -1268,21 +1268,21 @@ extension SSHFilePanel {
         menu.addItem(backItem)
 
         // Navigate Forward (Cmd+Right Arrow)
-        let forwardItem = NSMenuItem(title: "Forward",
+        let forwardItem = NSMenuItem(title: NSLocalizedString("Forward", comment: "UI"),
                                     action: #selector(forwardButtonClicked),
                                     keyEquivalent: String(Character(UnicodeScalar(NSRightArrowFunctionKey)!)))
         forwardItem.keyEquivalentModifierMask = [.command]
         menu.addItem(forwardItem)
 
         // Refresh (Cmd+R)
-        let refreshItem = NSMenuItem(title: "Refresh",
+        let refreshItem = NSMenuItem(title: NSLocalizedString("Refresh", comment: "UI"),
                                     action: #selector(refresh),
                                     keyEquivalent: "r")
         refreshItem.keyEquivalentModifierMask = [.command]
         menu.addItem(refreshItem)
 
         // Toggle show hidden (Cmd+Shift+.)
-        let toggleShowHiddenFilesItem = NSMenuItem(title: "Show Hidden Files",
+        let toggleShowHiddenFilesItem = NSMenuItem(title: NSLocalizedString("Show Hidden Files", comment: "UI"),
                                     action: #selector(toggleShowHidenFiles),
                                     keyEquivalent: ".")
         toggleShowHiddenFilesItem.keyEquivalentModifierMask = [.command, .shift]
@@ -1486,7 +1486,7 @@ extension SSHFilePanel {
         mainTitle.alignment = .left
         
         // Create subtitle
-        let subtitleLabel = NSTextField(labelWithString: "Name of new folder inside “\(currentPath.absolutePath.lastPathComponent)”:")
+        let subtitleLabel = NSTextField(labelWithString: NSLocalizedString("Name of new folder inside “\(currentPath.absolutePath.lastPathComponent)”:", comment: "UI"))
         subtitleLabel.translatesAutoresizingMaskIntoConstraints = false
         subtitleLabel.font = NSFont.systemFont(ofSize: NSFont.smallSystemFontSize)
         subtitleLabel.textColor = NSColor.secondaryLabelColor
@@ -1594,7 +1594,7 @@ extension SSHFilePanel {
             } catch {
                 // Show error alert
                 let alert = NSAlert()
-                alert.messageText = "Unable to create folder"
+                alert.messageText = NSLocalizedString("Unable to create folder", comment: "UI")
                 alert.informativeText = error.localizedDescription
                 alert.alertStyle = .warning
                 alert.addButton(withTitle: NSLocalizedString("OK", comment: "UI"))

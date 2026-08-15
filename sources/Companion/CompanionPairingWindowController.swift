@@ -43,7 +43,7 @@ final class CompanionPairingWindowController: NSWindowController, NSWindowDelega
     // Shown in the paired state: a caption and the pairing's relay room name in
     // lowercase hex, selectable so it can be copied for support. Both hidden
     // outside the paired state (hideTopContent).
-    private let roomNameCaptionLabel = NSTextField(labelWithString: "Relay room name")
+    private let roomNameCaptionLabel = NSTextField(labelWithString: NSLocalizedString("Relay room name", comment: "UI"))
     private let roomNameLabel = NSTextField(wrappingLabelWithString: "")
     // A remedy for the AI/admin prerequisites (e.g. "Reveal in Settings"). The
     // companion plugin and consent have their own controls in the bottom
@@ -811,7 +811,7 @@ final class CompanionPairingWindowController: NSWindowController, NSWindowDelega
         recheckButton.image = NSImage(systemSymbolName: SFSymbol.arrowClockwise.rawValue,
                                       accessibilityDescription: "Check again")?
             .withSymbolConfiguration(NSImage.SymbolConfiguration(pointSize: 12, weight: .regular))
-        recheckButton.toolTip = "Check again for the plugin"
+        recheckButton.toolTip = NSLocalizedString("Check again for the plugin", comment: "UI")
         content.addSubview(recheckButton)
 
         pluginActionButton.target = self

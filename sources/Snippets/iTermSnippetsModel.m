@@ -330,7 +330,7 @@ static NSString *const kSnippetsDiscardedFallbackBackupKey = @"NoSyncSnippetsDis
         } else {
             [[iTermUserDefaults userDefaults] removeObjectForKey:kSnippetsFallbackPredecessorDigestKey];
         }
-        [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"There was a problem saving snippets to “%@”.\n\nThe error was:\n%@", path, error.localizedDescription]
+        [iTermWarning showWarningWithTitle:[NSString stringWithFormat:NSLocalizedString(@"There was a problem saving snippets to “%@”.\n\nThe error was:\n%@", @"UI"), path, error.localizedDescription]
                                    actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                  accessory:nil
                                 identifier:@"NoSyncWriteSnippetsFailed"

@@ -1433,8 +1433,8 @@ final class iTermUvWindowControllerFetcher: iTermUvTarballFetcher {
         // Ask before downloading, like the legacy runtime download did.
         let megabytes = max(1, (declaredSize + 512 * 1024) / (1024 * 1024))
         let alert = NSAlert()
-        alert.messageText = "Download Python Support?"
-        alert.informativeText = "To run Python scripts, iTerm2 needs to download uv "
+        alert.messageText = NSLocalizedString("Download Python Support?", comment: "UI")
+        alert.informativeText = NSLocalizedString("To run Python scripts, iTerm2 needs to download uv ", comment: "UI")
             + "(about \(megabytes) MB) and a Python interpreter. Additional Python "
             + "versions are downloaded automatically later if a script needs them. "
             + "OK to download it now?"

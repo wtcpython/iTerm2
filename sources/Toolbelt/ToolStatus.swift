@@ -1073,7 +1073,7 @@ extension ToolStatus: NSMenuDelegate {
         // A merged row stands for a whole workgroup, so its checkmark reflects
         // (and its toggle affects) every member, not just the representative.
         let members = groupMemberSessionIDs(forRepresentative: sessionID)
-        let item = NSMenuItem(title: "Snooze",
+        let item = NSMenuItem(title: NSLocalizedString("Snooze", comment: "UI"),
                               action: #selector(toggleSnooze(_:)),
                               keyEquivalent: "")
         item.target = self

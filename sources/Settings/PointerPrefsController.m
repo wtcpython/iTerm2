@@ -915,7 +915,7 @@ typedef enum {
             [editArgumentField_ setEnabled:YES];
             [editArgumentButton_ setHidden:YES];
             _menuItemPopupView.hidden = YES;
-            [editArgumentLabel_ setStringValue:@"Esc +"];
+            [editArgumentLabel_ setStringValue:NSLocalizedString(@"Esc +", @"UI")];
             [[editArgumentField_ cell] setPlaceholderString:@"characters to send"];
             [editArgumentField_ setStringValue:currentArg];
             [editArgumentField_ setRefusesFirstResponder:NO];
@@ -930,7 +930,7 @@ typedef enum {
             [editArgumentField_ setEnabled:YES];
             [editArgumentButton_ setHidden:YES];
             _menuItemPopupView.hidden = YES;
-            [editArgumentLabel_ setStringValue:@"Hex codes:"];
+            [editArgumentLabel_ setStringValue:NSLocalizedString(@"Hex codes:", @"UI")];
             [[editArgumentField_ cell] setPlaceholderString:@"ex: 0x7f 0x20"];
             [editArgumentField_ setStringValue:currentArg];
             _pasteSpecialViewContainer.hidden = YES;
@@ -943,7 +943,7 @@ typedef enum {
             [editArgumentField_ setEnabled:YES];
             [editArgumentButton_ setHidden:YES];
             _menuItemPopupView.hidden = YES;
-            [editArgumentLabel_ setStringValue:@"Text:"];
+            [editArgumentLabel_ setStringValue:NSLocalizedString(@"Text:", @"UI")];
             [[editArgumentField_ cell] setPlaceholderString:@"Enter value to send"];
             [editArgumentField_ setStringValue:currentArg];
             _pasteSpecialViewContainer.hidden = YES;
@@ -956,7 +956,7 @@ typedef enum {
             [editArgumentField_ setEnabled:YES];
             [editArgumentButton_ setHidden:YES];
             _menuItemPopupView.hidden = YES;
-            [editArgumentLabel_ setStringValue:@"Text:"];
+            [editArgumentLabel_ setStringValue:NSLocalizedString(@"Text:", @"UI")];
             [[editArgumentField_ cell] setPlaceholderString:@"Enter function invocation"];
             [editArgumentField_ setStringValue:currentArg];
             _pasteSpecialViewContainer.hidden = YES;
@@ -971,7 +971,7 @@ typedef enum {
             [editArgumentField_ setHidden:YES];
             [editArgumentButton_ setHidden:NO];
             _menuItemPopupView.hidden = YES;
-            [editArgumentLabel_ setStringValue:@"Profile:"];
+            [editArgumentLabel_ setStringValue:NSLocalizedString(@"Profile:", @"UI")];
             [editArgumentButton_ populateWithProfilesSelectingGuid:currentArg
                                                       profileTypes:ProfileTypeAll];
             _pasteSpecialViewContainer.hidden = YES;

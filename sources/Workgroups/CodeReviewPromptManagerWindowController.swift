@@ -160,7 +160,7 @@ final class CodeReviewPromptManagerWindowController: NSWindowController {
         let rightX = margin + leftWidth + margin
         let rightWidth = container.bounds.width - rightX - margin
 
-        let nameLabel = NSTextField(labelWithString: "Name:")
+        let nameLabel = NSTextField(labelWithString: NSLocalizedString("Name:", comment: "UI"))
         nameLabel.font = .systemFont(ofSize: NSFont.smallSystemFontSize)
         nameLabel.textColor = .secondaryLabelColor
         nameLabel.frame = NSRect(x: rightX,
@@ -181,7 +181,7 @@ final class CodeReviewPromptManagerWindowController: NSWindowController {
         container.addSubview(nameInput)
         nameField = nameInput
 
-        let bodyLabel = NSTextField(labelWithString: "Prompt:")
+        let bodyLabel = NSTextField(labelWithString: NSLocalizedString("Prompt:", comment: "UI"))
         bodyLabel.font = .systemFont(ofSize: NSFont.smallSystemFontSize)
         bodyLabel.textColor = .secondaryLabelColor
         bodyLabel.frame = NSRect(x: rightX,

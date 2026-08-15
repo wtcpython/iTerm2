@@ -64,7 +64,7 @@ class CodeReviewPromptView: iTermLayerBackedSolidColorView {
         textView = ShiftReturnSubmittingTextView(frame: .zero)
         startButton = NSButton(frame: .zero)
         promptMenuButton = NSPopUpButton(frame: .zero, pullsDown: true)
-        titleLabel = NSTextField(labelWithString: "Code review prompt:")
+        titleLabel = NSTextField(labelWithString: NSLocalizedString("Code review prompt:", comment: "UI"))
 
         super.init(frame: frameRect)
 
@@ -262,7 +262,7 @@ class CodeReviewPromptView: iTermLayerBackedSolidColorView {
     // saved prompt is currently loaded.
     private func rebuildPromptMenu() {
         let menu = NSMenu()
-        menu.addItem(withTitle: "Prompts", action: nil, keyEquivalent: "")
+        menu.addItem(withTitle: NSLocalizedString("Prompts", comment: "UI"), action: nil, keyEquivalent: "")
 
         let store = CodeReviewPromptStore.shared
         if !store.prompts.isEmpty {
@@ -277,14 +277,14 @@ class CodeReviewPromptView: iTermLayerBackedSolidColorView {
             menu.addItem(.separator())
         }
 
-        let saveItem = NSMenuItem(title: "Save Current as New…",
+        let saveItem = NSMenuItem(title: NSLocalizedString("Save Current as New…", comment: "UI"),
                                    action: #selector(saveAsNewMenuItem(_:)),
                                    keyEquivalent: "")
         saveItem.target = self
         saveItem.identifier = Self.saveItemIdentifier
         menu.addItem(saveItem)
 
-        let manageItem = NSMenuItem(title: "Manage Prompts…",
+        let manageItem = NSMenuItem(title: NSLocalizedString("Manage Prompts…", comment: "UI"),
                                      action: #selector(manageMenuItem(_:)),
                                      keyEquivalent: "")
         manageItem.target = self
@@ -309,7 +309,7 @@ class CodeReviewPromptView: iTermLayerBackedSolidColorView {
     @objc private func saveAsNewMenuItem(_ sender: Any) {
         guard let host = window else { return }
         let alert = NSAlert()
-        alert.messageText = "Name this prompt"
+        alert.messageText = NSLocalizedString("Name this prompt", comment: "UI")
         alert.informativeText =
             "Saved prompts can be re-loaded from the Prompts pulldown."
         alert.addButton(withTitle: NSLocalizedString("Save", comment: "UI"))

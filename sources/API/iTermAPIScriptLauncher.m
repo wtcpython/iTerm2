@@ -481,7 +481,7 @@ static NSString *const iTermAPIScriptLauncherScriptDidFailUserNotificationCallba
 
 + (BOOL)userConsentsToInstallingRosetta {
     const iTermWarningSelection selection =
-    [iTermWarning showWarningWithTitle:@"You must install Rosetta 2 in order to use the Python API. Install it now?"
+    [iTermWarning showWarningWithTitle:NSLocalizedString(@"You must install Rosetta 2 in order to use the Python API. Install it now?", @"UI")
                                actions:@[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI") ]
                              accessory:nil
                             identifier:@"NoSyncInstallRosetta"
@@ -559,7 +559,7 @@ static NSString *const iTermAPIScriptLauncherScriptDidFailUserNotificationCallba
 + (void)refetchArm64StandardRuntimeForPythonVersion:(NSString *)pythonVersion
                                          completion:(void (^)(iTermPythonRuntimeDownloaderStatus status))completion {
     const iTermWarningSelection selection =
-    [iTermWarning showWarningWithTitle:@"The shared Python runtime is Intel-only and cannot run on this version of macOS. Download the Apple Silicon version now?"
+    [iTermWarning showWarningWithTitle:NSLocalizedString(@"The shared Python runtime is Intel-only and cannot run on this version of macOS. Download the Apple Silicon version now?", @"UI")
                                actions:@[ @"Download", NSLocalizedString(@"Cancel", @"UI") ]
                              accessory:nil
                             identifier:@"NoSyncRefetchArm64Runtime"

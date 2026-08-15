@@ -48,7 +48,7 @@ class PeerSessionSettingsViewController: NSViewController {
         helpLabel.preferredMaxLayoutWidth = width - 2 * margin
         helpLabel.frame.size = helpLabel.fittingSize
 
-        let commandHeaderLabel = NSTextField(labelWithString: "Command:")
+        let commandHeaderLabel = NSTextField(labelWithString: NSLocalizedString("Command:", comment: "UI"))
         commandHeaderLabel.sizeToFit()
 
         let field = NSTextField(string: command)

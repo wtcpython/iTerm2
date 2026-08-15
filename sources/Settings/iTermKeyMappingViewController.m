@@ -529,7 +529,7 @@ static NSString *const INTERCHANGE_TOUCH_BAR_ITEMS = @"Touch Bar Items";
 
 - (NSNumber *)removeBeforeLoading:(NSString *)thing {
     const iTermWarningSelection selection =
-    [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"Remove all key mappings before %@?", thing]
+    [iTermWarning showWarningWithTitle:[NSString stringWithFormat:NSLocalizedString(@"Remove all key mappings before %@?", @"UI"), thing]
                                actions:@[ @"Keep", @"Remove", NSLocalizedString(@"Cancel", @"UI") ]
                              accessory:nil
                             identifier:@"RemoveExistingGlobalKeyMappingsBeforeLoading"

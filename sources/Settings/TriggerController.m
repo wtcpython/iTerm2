@@ -582,7 +582,7 @@ NSString *const kStatusTextComboBoxIdentifier = @"kStatusTextComboBoxIdentifier"
                                                  encoding:NSUTF8StringEncoding
                                                     error:&error];
     if (!content || error) {
-        [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"While loading %@: %@",
+        [iTermWarning showWarningWithTitle:[NSString stringWithFormat:NSLocalizedString(@"While loading %@: %@", @"UI"),
                                             filename, error.localizedDescription]
                                    actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                  accessory:nil
@@ -595,7 +595,7 @@ NSString *const kStatusTextComboBoxIdentifier = @"kStatusTextComboBoxIdentifier"
 
     id root = [NSJSONSerialization it_objectForJsonString:content error:&error];
     if (!root) {
-        [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"While parsing %@: %@",
+        [iTermWarning showWarningWithTitle:[NSString stringWithFormat:NSLocalizedString(@"While parsing %@: %@", @"UI"),
                                             filename, error.localizedDescription]
                                    actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                  accessory:nil
@@ -615,7 +615,7 @@ NSString *const kStatusTextComboBoxIdentifier = @"kStatusTextComboBoxIdentifier"
         array = [NSArray castFrom:root];
     }
     if (!array) {
-        [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"Malformed file at %@", filename]
+        [iTermWarning showWarningWithTitle:[NSString stringWithFormat:NSLocalizedString(@"Malformed file at %@", @"UI"), filename]
                                    actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                  accessory:nil
                                 identifier:@"NoSyncTriggerEncodingError"
@@ -629,7 +629,7 @@ NSString *const kStatusTextComboBoxIdentifier = @"kStatusTextComboBoxIdentifier"
     for (id element in array) {
         NSDictionary *dict = [NSDictionary castFrom:element];
         if (!dict) {
-            [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"Malformed file at %@", filename]
+            [iTermWarning showWarningWithTitle:[NSString stringWithFormat:NSLocalizedString(@"Malformed file at %@", @"UI"), filename]
                                        actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                      accessory:nil
                                     identifier:@"NoSyncTriggerEncodingError"
@@ -640,7 +640,7 @@ NSString *const kStatusTextComboBoxIdentifier = @"kStatusTextComboBoxIdentifier"
         }
         Trigger *trigger = [Trigger triggerFromUntrustedDict:dict];
         if (!trigger) {
-            [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"Malformed file at %@", filename]
+            [iTermWarning showWarningWithTitle:[NSString stringWithFormat:NSLocalizedString(@"Malformed file at %@", @"UI"), filename]
                                        actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                      accessory:nil
                                     identifier:@"NoSyncTriggerEncodingError"
@@ -1137,7 +1137,7 @@ NSString *const kStatusTextComboBoxIdentifier = @"kStatusTextComboBoxIdentifier"
         NSString *json = [NSJSONSerialization it_jsonStringForObject:array];
         [json writeToSaveItem:item completionHandler:^(NSError *error) {
             if (error) {
-                [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"Error saving to %@: %@",
+                [iTermWarning showWarningWithTitle:[NSString stringWithFormat:NSLocalizedString(@"Error saving to %@: %@", @"UI"),
                                                     item.displayName, error.localizedDescription]
                                            actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                          accessory:nil

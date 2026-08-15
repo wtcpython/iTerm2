@@ -7594,7 +7594,7 @@ static NSString *iTermStringFromRange(NSRange range) {
 #pragma mark - PTYNoteViewControllerDelegate
 
 - (void)noteDidRequestRemoval:(PTYNoteViewController *)note {
-    const iTermWarningSelection selection = [iTermWarning showWarningWithTitle:@"Really remove annotation?"
+    const iTermWarningSelection selection = [iTermWarning showWarningWithTitle:NSLocalizedString(@"Really remove annotation?", @"UI")
                                                                        actions:@[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI") ]
                                                                      accessory:nil
                                                                     identifier:@"NoSyncConfirmRemoveAnnotation"

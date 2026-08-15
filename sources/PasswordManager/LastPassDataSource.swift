@@ -302,8 +302,8 @@ class LastPassDataSource: CommandLinePasswordDataSource {
         return AnyRecipe(CatchRecipe(recipe, errorHandler: { (inputs, error) in
             if error as? LPError == LPError.timedOut {
                 let alert = NSAlert()
-                alert.messageText = "Timeout"
-                alert.informativeText = "The LastPass service took too long to respond. \(message)"
+                alert.messageText = NSLocalizedString("Timeout", comment: "UI")
+                alert.informativeText = NSLocalizedString("The LastPass service took too long to respond. \(message)", comment: "UI")
                 alert.addButton(withTitle: NSLocalizedString("OK", comment: "UI"))
                 alert.runModal()
                 return
@@ -517,8 +517,8 @@ class LastPassUtils {
     static func showNotLoggedInMessage() {
         let alert = NSAlert()
         let email = iTermUserDefaults.userDefaults().string(forKey: usernameUserDefaultsKey) ?? "your@email.address"
-        alert.messageText = "Authentication Failed"
-        alert.informativeText = "You can also try opening a terminal window and running `lpass login \(email)`."
+        alert.messageText = NSLocalizedString("Authentication Failed", comment: "UI")
+        alert.informativeText = NSLocalizedString("You can also try opening a terminal window and running `lpass login \(email)`.", comment: "UI")
         alert.addButton(withTitle: NSLocalizedString("Open Terminal Window", comment: "UI"))
         alert.addButton(withTitle: NSLocalizedString("Copy Command", comment: "UI"))
         alert.addButton(withTitle: NSLocalizedString("Cancel", comment: "UI"))
@@ -530,8 +530,8 @@ class LastPassUtils {
                                         deadline: nil,
                                         willExpect: nil) { _ in
                     let alert = NSAlert()
-                    alert.messageText = "Login Successful"
-                    alert.informativeText = "Please retry your action in the password manager."
+                    alert.messageText = NSLocalizedString("Login Successful", comment: "UI")
+                    alert.informativeText = NSLocalizedString("Please retry your action in the password manager.", comment: "UI")
                     alert.addButton(withTitle: NSLocalizedString("OK", comment: "UI"))
                     alert.runModal()
                     session?.close()
@@ -551,8 +551,8 @@ class LastPassUtils {
     // Returns true to show an open panel to locate it.
     private static func showCannotFindCLIMessage() -> Bool {
         let alert = NSAlert()
-        alert.messageText = "Can’t Find LastPass CLI"
-        alert.informativeText = "In order to use the LastPass integration, iTerm2 needs to know where to find the CLI app named “lpass”. Select Locate to provide its location."
+        alert.messageText = NSLocalizedString("Can’t Find LastPass CLI", comment: "UI")
+        alert.informativeText = NSLocalizedString("In order to use the LastPass integration, iTerm2 needs to know where to find the CLI app named “lpass”. Select Locate to provide its location.", comment: "UI")
         alert.addButton(withTitle: NSLocalizedString("Locate", comment: "UI"))
         alert.addButton(withTitle: NSLocalizedString("Cancel", comment: "UI"))
         alert.addButton(withTitle: NSLocalizedString("Help", comment: "UI"))

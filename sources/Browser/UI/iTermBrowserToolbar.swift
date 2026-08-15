@@ -334,7 +334,7 @@ class iTermBrowserToolbar: NSView {
 
                 menu.addItem(NSMenuItem.separator())
 
-                let askAIItem = NSMenuItem(title: "Ask AI…", action: #selector(askAIMenuItemSelected), keyEquivalent: "")
+                let askAIItem = NSMenuItem(title: NSLocalizedString("Ask AI…", comment: "UI"), action: #selector(askAIMenuItemSelected), keyEquivalent: "")
                 askAIItem.target = self
                 askAIItem.image = NSImage(systemSymbolName: SFSymbol.sparkles.rawValue, accessibilityDescription: nil)
                 menu.addItem(askAIItem)
@@ -353,13 +353,13 @@ class iTermBrowserToolbar: NSView {
                 menu.addItem(NSMenuItem.separator())
 
                 // Manage Bookmarks menu item
-                let manageBookmarksItem = NSMenuItem(title: "Manage Bookmarks", action: #selector(manageBookmarksMenuItemSelected), keyEquivalent: "")
+                let manageBookmarksItem = NSMenuItem(title: NSLocalizedString("Manage Bookmarks", comment: "UI"), action: #selector(manageBookmarksMenuItemSelected), keyEquivalent: "")
                 manageBookmarksItem.target = self
                 manageBookmarksItem.image = NSImage(systemSymbolName: SFSymbol.book.rawValue, accessibilityDescription: nil)
                 menu.addItem(manageBookmarksItem)
 
                 // History menu item
-                let historyItem = NSMenuItem(title: "History", action: #selector(historyMenuItemSelected), keyEquivalent: "")
+                let historyItem = NSMenuItem(title: NSLocalizedString("History", comment: "UI"), action: #selector(historyMenuItemSelected), keyEquivalent: "")
                 historyItem.target = self
                 historyItem.image = NSImage(systemSymbolName: SFSymbol.clock.rawValue, accessibilityDescription: nil)
                 menu.addItem(historyItem)
@@ -369,7 +369,7 @@ class iTermBrowserToolbar: NSView {
 
 #if DEBUG
             // Debug Autofill menu item (debug builds only)
-            let debugAutofillItem = NSMenuItem(title: "Debug Autofill Fields", action: #selector(debugAutofillMenuItemSelected), keyEquivalent: "")
+            let debugAutofillItem = NSMenuItem(title: NSLocalizedString("Debug Autofill Fields", comment: "UI"), action: #selector(debugAutofillMenuItemSelected), keyEquivalent: "")
             debugAutofillItem.target = self
             debugAutofillItem.image = NSImage(systemSymbolName: SFSymbol.magnifyingglassCircle.rawValue, accessibilityDescription: nil)
             menu.addItem(debugAutofillItem)
@@ -383,7 +383,7 @@ class iTermBrowserToolbar: NSView {
                 let sortedPermissionTypes = permissions.keys.sorted { $0.displayName < $1.displayName }
                 for key in sortedPermissionTypes {
                     let value = permissions[key]!
-                    let item = NSMenuItem(title: "Reset " + key.displayName +  " Permission (" + value.displayName + ")",
+                    let item = NSMenuItem(title: NSLocalizedString("Reset ", comment: "UI") + key.displayName +  " Permission (" + value.displayName + ")",
                                           action: #selector(resetPermission(_:)),
                                           keyEquivalent: "")
                     item.image = NSImage(systemSymbolName: SFSymbol.handRaised.rawValue, accessibilityDescription: nil)
@@ -395,7 +395,7 @@ class iTermBrowserToolbar: NSView {
             }
 
             if delegate?.browserToolbarIsCurrentPageMuted() == true {
-                let item = NSMenuItem(title: "Unmute Current Page",
+                let item = NSMenuItem(title: NSLocalizedString("Unmute Current Page", comment: "UI"),
                                       action: #selector(unmute(_:)),
                                       keyEquivalent: "")
                 item.image = NSImage(systemSymbolName: SFSymbol.speakerSlash.rawValue, accessibilityDescription: nil)
@@ -406,7 +406,7 @@ class iTermBrowserToolbar: NSView {
             }
 
             // Settings menu item
-            let settingsItem = NSMenuItem(title: "Settings", action: #selector(settingsMenuItemSelected), keyEquivalent: "")
+            let settingsItem = NSMenuItem(title: NSLocalizedString("Settings", comment: "UI"), action: #selector(settingsMenuItemSelected), keyEquivalent: "")
             settingsItem.target = self
             settingsItem.image = NSImage(systemSymbolName: SFSymbol.gearshape.rawValue, accessibilityDescription: nil)
             menu.addItem(settingsItem)

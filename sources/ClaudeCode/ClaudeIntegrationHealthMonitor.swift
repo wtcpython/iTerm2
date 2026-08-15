@@ -142,12 +142,8 @@ final class ClaudeIntegrationHealthMonitor: NSObject {
         }
         RLog("Health: integration completed but hook is missing on disk — prompting")
         let warning = iTermWarning()
-        warning.heading = "Claude Code Integration Looks Broken"
-        warning.title = "iTerm2\u{2019}s cc-status hook is no longer in "
-            + "~/.claude/settings.json. This usually means Claude Code "
-            + "rewrote that file. Reinstall the hook so per-tab status "
-            + "indicators (\u{201C}Working\u{2026},\u{201D} "
-            + "\u{201C}Waiting\u{2026}\u{201D}) work again?"
+        warning.heading = NSLocalizedString("Claude Code Integration Looks Broken", comment: "UI")
+        warning.title = NSLocalizedString("iTerm2\u{2019}s cc-status hook is no longer in ~/.claude/settings.json. This usually means Claude Code rewrote that file. Reinstall the hook so per-tab status indicators (\u{201C}Working\u{2026},\u{201D} \u{201C}Waiting\u{2026}\u{201D}) work again?", comment: "UI")
         warning.warningType = .kiTermWarningTypePermanentlySilenceable
         warning.identifier = Self.warningIdentifier
         warning.actionLabels = ["Reinstall", "Not Now"]

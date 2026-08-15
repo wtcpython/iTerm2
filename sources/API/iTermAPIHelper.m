@@ -455,7 +455,7 @@ static BOOL iTermAPIHelperLastApplescriptAuthRequiredSetting;
 
 + (BOOL)createNoAuthFile:(NSWindow *)window {
     const iTermWarningSelection selection =
-    [iTermWarning showWarningWithTitle:@"Do you want to allow all apps running on this machine to use the Python API?\n\nThis will disable the check for Automation permission. If you agree, you’ll be prompted for administrator access to make the change."
+    [iTermWarning showWarningWithTitle:NSLocalizedString(@"Do you want to allow all apps running on this machine to use the Python API?\n\nThis will disable the check for Automation permission. If you agree, you’ll be prompted for administrator access to make the change.", @"UI")
                                actions:@[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI"), @"More Info" ]
                              accessory:nil
                             identifier:@"NoSyncRequireApplescriptAuth"
@@ -490,7 +490,7 @@ static BOOL iTermAPIHelperLastApplescriptAuthRequiredSetting;
 
     [self setEnabled:NO];
     const iTermWarningSelection selection =
-    [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"Failed to remove the file “%@”: %@\n\nPlease remove this file manually to require Automation permission for the Python API.\n\nThe Python API has been disabled for your security.", path, error.localizedDescription]
+    [iTermWarning showWarningWithTitle:[NSString stringWithFormat:NSLocalizedString(@"Failed to remove the file “%@”: %@\n\nPlease remove this file manually to require Automation permission for the Python API.\n\nThe Python API has been disabled for your security.", @"UI"), path, error.localizedDescription]
                                actions:@[ NSLocalizedString(@"OK", @"UI"), @"Reveal In Finder" ]
                              accessory:nil
                             identifier:@"NoSyncFailedToRemoveNoAuth"
@@ -543,7 +543,7 @@ static BOOL iTermAPIHelperLastApplescriptAuthRequiredSetting;
     if (!dict) {
         return YES;
     }
-    [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"The setting could not be changed: %@", dict[NSAppleScriptErrorBriefMessage]]
+    [iTermWarning showWarningWithTitle:[NSString stringWithFormat:NSLocalizedString(@"The setting could not be changed: %@", @"UI"), dict[NSAppleScriptErrorBriefMessage]]
                                actions:@[ NSLocalizedString(@"OK", @"UI") ]
                              accessory:nil
                             identifier:@"NoSyncFailedToCreateNoAuth"
@@ -1584,7 +1584,7 @@ static BOOL iTermAPIHelperLastApplescriptAuthRequiredSetting;
                                                window:nil];
             return NO;
         case kiTermWarningSelection3:
-            if ([iTermWarning showWarningWithTitle:@"New sessions will contain an environment variable that allows scripts to run without confirmation. Are you sure you want to enable this?"
+            if ([iTermWarning showWarningWithTitle:NSLocalizedString(@"New sessions will contain an environment variable that allows scripts to run without confirmation. Are you sure you want to enable this?", @"UI")
                                            actions:@[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI") ]
                                          accessory:nil
                                         identifier:@"NoSyncConfirmAlways"

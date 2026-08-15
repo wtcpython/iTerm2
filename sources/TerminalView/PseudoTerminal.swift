@@ -230,7 +230,7 @@ extension PseudoTerminal: ColorsMenuItemViewDelegate {
             }
 
             // Label above swatches
-            let label = NSTextField(labelWithString: "Recent Tab Colors")
+            let label = NSTextField(labelWithString: NSLocalizedString("Recent Tab Colors", comment: "UI"))
             label.font = NSFont.systemFont(ofSize: 10, weight: .medium)
             label.textColor = .secondaryLabelColor
             label.sizeToFit()

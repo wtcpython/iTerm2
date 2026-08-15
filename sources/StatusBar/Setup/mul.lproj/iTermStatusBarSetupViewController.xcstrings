@@ -14,7 +14,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Drag a component from the menu to Active Components to add it to your status bar."
+            "value": "将组件从菜单拖到“活动组件”，即可将其添加到你的状态栏。"
           }
         }
       }

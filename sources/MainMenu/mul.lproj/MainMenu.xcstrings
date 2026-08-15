@@ -2102,7 +2102,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "保存所选文本…"
+            "value": "存储所选文本…"
           }
         }
       }
@@ -4532,7 +4532,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "保存回顾性调试日志"
+            "value": "存储回顾性调试日志"
           }
         }
       }
@@ -5450,7 +5450,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "保存内容…"
+            "value": "存储内容…"
           }
         }
       }
@@ -5900,7 +5900,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "保存当前会话的归档…"
+            "value": "存储当前会话的归档…"
           }
         }
       }

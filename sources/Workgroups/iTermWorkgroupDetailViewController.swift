@@ -44,8 +44,7 @@ class iTermWorkgroupDetailViewController: NSViewController {
     override func loadView() {
         let root = NSView(frame: NSRect(x: 0, y: 0, width: 640, height: 420))
 
-        emptyLabel = NSTextField(labelWithString:
-            "Select a workgroup on the left or click + to create one.")
+        emptyLabel = NSTextField(labelWithString: NSLocalizedString("Select a workgroup on the left or click + to create one.", comment: "UI"))
         emptyLabel.textColor = .secondaryLabelColor
         emptyLabel.alignment = .center
         root.addSubview(emptyLabel)
@@ -319,18 +318,18 @@ class iTermWorkgroupDetailViewController: NSViewController {
         // Disable AppKit's target-based auto-enable so our own
         // isEnabled flags aren't overridden right before display.
         menu.autoenablesItems = false
-        let peer = menu.addItem(withTitle: "Add Peer",
+        let peer = menu.addItem(withTitle: NSLocalizedString("Add Peer", comment: "UI"),
                                 action: #selector(addPeer),
                                 keyEquivalent: "")
         peer.target = self
-        let split = menu.addItem(withTitle: "Add Split",
+        let split = menu.addItem(withTitle: NSLocalizedString("Add Split", comment: "UI"),
                                  action: #selector(addSplit),
                                  keyEquivalent: "")
         split.target = self
         // No split from anywhere inside a peer group — that includes
         // both the host (ambiguous target) and the peers themselves.
         split.isEnabled = !sessionIsInPeerGroup(selID: selID)
-        let tab = menu.addItem(withTitle: "Add Tab",
+        let tab = menu.addItem(withTitle: NSLocalizedString("Add Tab", comment: "UI"),
                                action: #selector(addTab),
                                keyEquivalent: "")
         tab.target = self

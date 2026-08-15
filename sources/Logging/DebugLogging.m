@@ -184,7 +184,7 @@ static void FlushDebugLog(void) {
         // nil file handle leaves it nil; fall back to a concrete message so the
         // user gets an actionable reason instead of "(null)".
         NSString *reason = error.localizedDescription ?: [NSString stringWithFormat:@"could not open %@ for writing", kDebugLogFilename];
-        [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"Failed to save debug log: %@", reason] actions:@[ NSLocalizedString(@"OK", @"UI") ] accessory:nil identifier:nil silenceable:kiTermWarningTypePersistent heading:@"Problem Saving Debug Log" window:nil];
+        [iTermWarning showWarningWithTitle:[NSString stringWithFormat:NSLocalizedString(@"Failed to save debug log: %@", @"UI"), reason] actions:@[ NSLocalizedString(@"OK", @"UI") ] accessory:nil identifier:nil silenceable:kiTermWarningTypePersistent heading:@"Problem Saving Debug Log" window:nil];
     }
 
     [gDebugLogStr setString:@""];

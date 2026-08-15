@@ -441,7 +441,7 @@ static NSString *const iTermSnippetsEditingPasteboardType = @"com.googlecode.ite
                                                   encoding:NSUTF8StringEncoding
                                                      error:&error];
     if (!content || error) {
-        [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"While loading %@: %@", url.path, error.localizedDescription]
+        [iTermWarning showWarningWithTitle:[NSString stringWithFormat:NSLocalizedString(@"While loading %@: %@", @"UI"), url.path, error.localizedDescription]
                                    actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                  accessory:nil
                                 identifier:@"NoSyncImportSnippetsFailed"
@@ -453,7 +453,7 @@ static NSString *const iTermSnippetsEditingPasteboardType = @"com.googlecode.ite
 
     id root = [NSJSONSerialization it_objectForJsonString:content error:&error];
     if (!root) {
-        [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"While parsing %@: %@", url.path, error.localizedDescription]
+        [iTermWarning showWarningWithTitle:[NSString stringWithFormat:NSLocalizedString(@"While parsing %@: %@", @"UI"), url.path, error.localizedDescription]
                                    actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                  accessory:nil
                                 identifier:@"NoSyncImportSnippetsFailed"
@@ -486,7 +486,7 @@ static NSString *const iTermSnippetsEditingPasteboardType = @"com.googlecode.ite
 }
 
 - (void)showEncodingErrorForURL:(NSURL *)url {
-    [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"Malformed file at %@", url.path]
+    [iTermWarning showWarningWithTitle:[NSString stringWithFormat:NSLocalizedString(@"Malformed file at %@", @"UI"), url.path]
                                actions:@[ NSLocalizedString(@"OK", @"UI") ]
                              accessory:nil
                             identifier:@"NoSyncSnippetEncodingError"
@@ -507,7 +507,7 @@ static NSString *const iTermSnippetsEditingPasteboardType = @"com.googlecode.ite
     NSString *json = [NSJSONSerialization it_jsonStringForObject:array];
     [json writeToSaveItem:item completionHandler:^(NSError *error) {
         if (error) {
-            [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"Error saving to %@: %@",
+            [iTermWarning showWarningWithTitle:[NSString stringWithFormat:NSLocalizedString(@"Error saving to %@: %@", @"UI"),
                                                 item.displayName, error.localizedDescription]
                                        actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                      accessory:nil

@@ -325,7 +325,7 @@ class iTermScreenshotPanel: NSPanel {
         encodingProgressContainer.isHidden = true
         contentView.addSubview(encodingProgressContainer)
 
-        encodingProgressLabel = NSTextField(labelWithString: "Encoding…")
+        encodingProgressLabel = NSTextField(labelWithString: NSLocalizedString("Encoding…", comment: "UI"))
         encodingProgressLabel.translatesAutoresizingMaskIntoConstraints = false
         encodingProgressLabel.font = NSFont.systemFont(ofSize: 12)
         encodingProgressLabel.textColor = .labelColor
@@ -348,7 +348,7 @@ class iTermScreenshotPanel: NSPanel {
         encodingProgressContainer.addSubview(encodingCancelButton)
 
         // Line range numerical controls
-        let lineRangeLabel = NSTextField(labelWithString: "Line range:")
+        let lineRangeLabel = NSTextField(labelWithString: NSLocalizedString("Line range:", comment: "UI"))
         lineRangeLabel.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(lineRangeLabel)
 
@@ -369,7 +369,7 @@ class iTermScreenshotPanel: NSPanel {
         startLineStepper.action = #selector(startLineStepperChanged(_:))
         contentView.addSubview(startLineStepper)
 
-        let toLabel = NSTextField(labelWithString: "to")
+        let toLabel = NSTextField(labelWithString: NSLocalizedString("to", comment: "UI"))
         toLabel.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(toLabel)
 
@@ -391,11 +391,11 @@ class iTermScreenshotPanel: NSPanel {
         contentView.addSubview(endLineStepper)
 
         // Annotations section
-        let annotationsLabel = NSTextField(labelWithString: "Annotations:")
+        let annotationsLabel = NSTextField(labelWithString: NSLocalizedString("Annotations:", comment: "UI"))
         annotationsLabel.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(annotationsLabel)
 
-        let instructionLabel = NSTextField(labelWithString: "Select text in the terminal, then click a button below.")
+        let instructionLabel = NSTextField(labelWithString: NSLocalizedString("Select text in the terminal, then click a button below.", comment: "UI"))
         instructionLabel.translatesAutoresizingMaskIntoConstraints = false
         instructionLabel.font = NSFont.systemFont(ofSize: 11)
         instructionLabel.textColor = .secondaryLabelColor
@@ -447,7 +447,7 @@ class iTermScreenshotPanel: NSPanel {
         annotationsScrollView.documentView = annotationsTableView
 
         // Empty state label
-        emptyStateLabel = NSTextField(labelWithString: "No annotations. Select text and click a button above.")
+        emptyStateLabel = NSTextField(labelWithString: NSLocalizedString("No annotations. Select text and click a button above.", comment: "UI"))
         emptyStateLabel.translatesAutoresizingMaskIntoConstraints = false
         emptyStateLabel.font = NSFont.systemFont(ofSize: 11)
         emptyStateLabel.textColor = .tertiaryLabelColor
@@ -455,7 +455,7 @@ class iTermScreenshotPanel: NSPanel {
         contentView.addSubview(emptyStateLabel)
 
         // Method selection
-        let methodLabel = NSTextField(labelWithString: "Redaction method:")
+        let methodLabel = NSTextField(labelWithString: NSLocalizedString("Redaction method:", comment: "UI"))
         methodLabel.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(methodLabel)
 
@@ -472,7 +472,7 @@ class iTermScreenshotPanel: NSPanel {
         blurControlsContainer.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(blurControlsContainer)
 
-        let blurLabel = NSTextField(labelWithString: "Blur radius:")
+        let blurLabel = NSTextField(labelWithString: NSLocalizedString("Blur radius:", comment: "UI"))
         blurLabel.translatesAutoresizingMaskIntoConstraints = false
         blurControlsContainer.addSubview(blurLabel)
 
@@ -492,7 +492,7 @@ class iTermScreenshotPanel: NSPanel {
         colorControlsContainer.isHidden = true
         contentView.addSubview(colorControlsContainer)
 
-        let colorLabel = NSTextField(labelWithString: "Fill color:")
+        let colorLabel = NSTextField(labelWithString: NSLocalizedString("Fill color:", comment: "UI"))
         colorLabel.translatesAutoresizingMaskIntoConstraints = false
         colorControlsContainer.addSubview(colorLabel)
 

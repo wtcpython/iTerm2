@@ -78,11 +78,11 @@ class OnePasswordUtils {
 
     static func showUnavailableMessage(_ path: String? = nil) {
         let alert = NSAlert()
-        alert.messageText = "OnePassword Unavailable"
+        alert.messageText = NSLocalizedString("OnePassword Unavailable", comment: "UI")
         if let path = path {
-            alert.informativeText = "The existing installation of the OnePassword CLI at \(path) is an incompatible. The iTerm2 integration requires version 2."
+            alert.informativeText = NSLocalizedString("The existing installation of the OnePassword CLI at \(path) is an incompatible. The iTerm2 integration requires version 2.", comment: "UI")
         } else {
-            alert.informativeText = "Version 2 of the OnePassword CLI could not be found. Check that \(OnePasswordUtils.pathToCLI) is installed and has version 2.x."
+            alert.informativeText = NSLocalizedString("Version 2 of the OnePassword CLI could not be found. Check that \(OnePasswordUtils.pathToCLI) is installed and has version 2.x.", comment: "UI")
         }
         alert.addButton(withTitle: NSLocalizedString("OK", comment: "UI"))
         alert.runModal()
@@ -91,8 +91,8 @@ class OnePasswordUtils {
     // Returns true to show an open panel to locate it.
     private static func showCannotFindCLIMessage() -> Bool {
         let alert = NSAlert()
-        alert.messageText = "Can’t Find 1Password CLI"
-        alert.informativeText = "In order to use the 1Password integration, iTerm2 needs to know where to find the CLI app named “op”. It’s normally in /usr/local/bin. If you have installed it elsewhere, please select Locate to provide its location."
+        alert.messageText = NSLocalizedString("Can’t Find 1Password CLI", comment: "UI")
+        alert.informativeText = NSLocalizedString("In order to use the 1Password integration, iTerm2 needs to know where to find the CLI app named “op”. It’s normally in /usr/local/bin. If you have installed it elsewhere, please select Locate to provide its location.", comment: "UI")
         alert.addButton(withTitle: NSLocalizedString("Locate", comment: "UI"))
         alert.addButton(withTitle: NSLocalizedString("Cancel", comment: "UI"))
         return alert.runModal() == .alertFirstButtonReturn
@@ -332,7 +332,7 @@ class OnePasswordTokenRequester {
 
     private func showErrorMessage(_ reason: String) {
         let alert = NSAlert()
-        alert.messageText = "Authentication Error"
+        alert.messageText = NSLocalizedString("Authentication Error", comment: "UI")
         alert.informativeText = reason
         alert.addButton(withTitle: NSLocalizedString("OK", comment: "UI"))
         alert.runModal()

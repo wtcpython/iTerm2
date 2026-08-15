@@ -141,7 +141,7 @@ class ChatInputView: NSView, NSTextFieldDelegate {
         addAttachmentButton.bezelStyle = .regularSquare
         addAttachmentButton.isBordered = false
         addAttachmentButton.setButtonType(.momentaryPushIn)
-        addAttachmentButton.toolTip = "Attach files"
+        addAttachmentButton.toolTip = NSLocalizedString("Attach files", comment: "UI")
 
         attachmentsView.onItemsWillBeDeleted = { _ in true }
         attachmentsView.onDidDeleteItems = { [weak self] in
@@ -149,7 +149,7 @@ class ChatInputView: NSView, NSTextFieldDelegate {
             self?.updateSendButtonEnabled()
         }
 
-        hintLabel = NSTextField(labelWithString: "↩ to submit")
+        hintLabel = NSTextField(labelWithString: NSLocalizedString("↩ to submit", comment: "UI"))
         hintLabel.font = NSFont.systemFont(ofSize: NSFont.smallSystemFontSize - 1)
         hintLabel.textColor = .tertiaryLabelColor
         hintLabel.alignment = .right
@@ -587,7 +587,7 @@ class ChatInputView: NSView, NSTextFieldDelegate {
         alert.messageText = urls.count == 1
             ? "Attachment not supported"
             : "Attachments not supported"
-        alert.informativeText = "\(providerName) doesn’t accept this file type as a chat attachment: \(names)."
+        alert.informativeText = NSLocalizedString("\(providerName) doesn’t accept this file type as a chat attachment: \(names).", comment: "UI")
         alert.alertStyle = .informational
         alert.addButton(withTitle: NSLocalizedString("OK", comment: "UI"))
         alert.beginSheetModal(for: window)

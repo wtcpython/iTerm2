@@ -430,7 +430,7 @@ static int gSignalsToList[] = {
     }
 
     const iTermWarningSelection selection =
-    [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"Are you sure? This may terminate %@.", description]
+    [iTermWarning showWarningWithTitle:[NSString stringWithFormat:NSLocalizedString(@"Are you sure? This may terminate %@.", @"UI"), description]
                                actions:@[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI")]
                              accessory:nil
                             identifier:@"NoSyncSuppressSendSignal"

@@ -334,8 +334,8 @@ class PasswordManagerDataSourceProvider: NSObject {
         @unknown default:
             reason = error.localizedDescription
         }
-        alert.messageText = "Authentication Failed"
-        alert.informativeText = "Authentication failed because \(reason)"
+        alert.messageText = NSLocalizedString("Authentication Failed", comment: "UI")
+        alert.informativeText = NSLocalizedString("Authentication failed because \(reason)", comment: "UI")
         alert.addButton(withTitle: NSLocalizedString("OK", comment: "UI"))
         alert.runModal()
     }

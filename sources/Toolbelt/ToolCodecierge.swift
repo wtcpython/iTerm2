@@ -764,7 +764,7 @@ class CodeciergeGoalView: NSView, NSTextViewDelegate, NSControlTextEditingDelega
 
     init(startCallback: @escaping (String, Bool) -> ()) {
         self.startCallback = startCallback
-        label = NSTextField(labelWithString: "What are you trying to do? I'll suggest commands and explain their output.")
+        label = NSTextField(labelWithString: NSLocalizedString("What are you trying to do? I'll suggest commands and explain their output.", comment: "UI"))
         label.lineBreakMode = .byWordWrapping
         label.usesSingleLineMode = false
 

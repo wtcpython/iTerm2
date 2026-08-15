@@ -3112,7 +3112,7 @@ static NSDictionary *iTermTmuxControllerDefaultFontOverridesFromProfile(Profile 
     }
     if (haveRed) {
         const iTermWarningSelection selection =
-        [iTermWarning showWarningWithTitle:@"While attaching to tmux, some tabs were found whose color is pure red. This may be due to a bug in early versions of iTerm2 3.6.x. Would you like to reset those tabs’ colors?"
+        [iTermWarning showWarningWithTitle:NSLocalizedString(@"While attaching to tmux, some tabs were found whose color is pure red. This may be due to a bug in early versions of iTerm2 3.6.x. Would you like to reset those tabs’ colors?", @"UI")
                                    actions:@[ @"Reset", @"Keep Red" ]
                                  accessory:nil
                                 identifier:@"NoSyncResetRedTmuxTabs"

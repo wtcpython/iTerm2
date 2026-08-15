@@ -233,7 +233,7 @@
                                                      leaderAllowed:_leaderAllowed];
         if (self.purpose && shortcut.smellsAccidental) {
             const iTermWarningSelection selection =
-            [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"Are you sure you want to use “%@” %@? This looks like a commonly used keystroke.", shortcut.stringValue, self.purpose]
+            [iTermWarning showWarningWithTitle:[NSString stringWithFormat:NSLocalizedString(@"Are you sure you want to use “%@” %@? This looks like a commonly used keystroke.", @"UI"), shortcut.stringValue, self.purpose]
                                        actions:@[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI") ]
                                      accessory:nil
                                     identifier:nil

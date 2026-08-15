@@ -2234,9 +2234,7 @@ ITERM_WEAKLY_REFERENCEABLE
 
 - (void)killOrHideTmuxTab:(PTYTab *)aTab {
     iTermWarningSelection selection =
-        [iTermWarning showWarningWithTitle:@"Kill tmux window, terminating its jobs, or hide it? "
-                                           @"Hidden windows may be restored from the tmux dashboard."
-                                   actions:@[ @"Hide", NSLocalizedString(@"Cancel", @"UI"), @"Kill" ]
+        [iTermWarning showWarningWithTitle:NSLocalizedString(@"Kill tmux window, terminating its jobs, or hide it? Hidden windows may be restored from the tmux dashboard.", @"UI")actions:@[ @"Hide", NSLocalizedString(@"Cancel", @"UI"), @"Kill" ]
                              actionMapping:@[ @(kiTermWarningSelection0), @(kiTermWarningSelection2), @(kiTermWarningSelection1)]
                                  accessory:nil
                                 identifier:@"ClosingTmuxTabKillsTmuxWindows"
@@ -6900,7 +6898,7 @@ hidingToolbeltShouldResizeWindow:(BOOL)hidingToolbeltShouldResizeWindow
         int i;
 
         for (i = 0; i < [_contentView.tabView numberOfTabViewItems]; ++i) {
-            aMenuItem = [[NSMenuItem alloc] initWithTitle:[NSString stringWithFormat:@"%@ #%d",
+            aMenuItem = [[NSMenuItem alloc] initWithTitle:[NSString stringWithFormat:NSLocalizedString(@"%@ #%d", @"UI"),
                                                            [[_contentView.tabView tabViewItemAtIndex: i] label],
                                                            i+1]
                                                    action:@selector(selectTab:)
@@ -9053,7 +9051,7 @@ hidingToolbeltShouldResizeWindow:(BOOL)hidingToolbeltShouldResizeWindow
     NSString *count = (closable.count == 1) ? @"1 tab"
                                             : [NSString stringWithFormat:@"%lu tabs", (unsigned long)closable.count];
     const iTermWarningSelection selection =
-        [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"%@ (%@)", question, count]
+        [iTermWarning showWarningWithTitle:[NSString stringWithFormat:NSLocalizedString(@"%@ (%@)", @"UI"), question, count]
                                    actions:@[ NSLocalizedString(@"Close", @"UI"), NSLocalizedString(@"Cancel", @"UI") ]
                                  accessory:nil
                                 identifier:@"NoSyncCloseTabGroup"
@@ -9757,7 +9755,7 @@ static CGFloat iTermDimmingAmount(PSMTabBarControl *tabView) {
 
 - (void)turnOnMetalCaptureInInfoPlist {
     const iTermWarningSelection selection =
-    [iTermWarning showWarningWithTitle:@"You must restart iTerm2 to turn on this feature."
+    [iTermWarning showWarningWithTitle:NSLocalizedString(@"You must restart iTerm2 to turn on this feature.", @"UI")
                                actions:@[ @"Restart Now", NSLocalizedString(@"Cancel", @"UI")]
                             identifier:@"RestartAfterMetalCaptureEnabled"
                            silenceable:kiTermWarningTypePersistent

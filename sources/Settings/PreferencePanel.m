@@ -338,7 +338,7 @@ static PreferencePanel *gSessionsPreferencePanel;
     if (!repr.length) {
         repr = @"Empty Default";
     }
-    NSMenuItem *item = [[NSMenuItem alloc] initWithTitle:[NSString stringWithFormat:@"Reset to %@", repr]
+    NSMenuItem *item = [[NSMenuItem alloc] initWithTitle:[NSString stringWithFormat:NSLocalizedString(@"Reset to %@", @"UI"), repr]
                                                   action:@selector(resetPrefToDefaultValue:)
                                            keyEquivalent:@""];
     item.target = self;

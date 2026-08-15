@@ -67,7 +67,7 @@
 
         _headerView = [[NSTableHeaderView alloc] init];
         _tableView.headerView = _headerView;
-        [_tagsColumn.headerCell setStringValue:@"Tag Name"];
+        [_tagsColumn.headerCell setStringValue:NSLocalizedString(@"Tag Name", @"UI")];
         _tagsColumn.width = [_tagsColumn.headerCell cellSize].width;
 
         [_tableView sizeLastColumnToFit];

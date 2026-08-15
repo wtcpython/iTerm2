@@ -422,7 +422,7 @@ static NSError *SCPFileError(NSString *description) {
             [[FileTransferManager sharedInstance] transferrableFile:self
                                      didFinishTransmissionWithError:theError];
             iTermWarningSelection selection =
-                [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"Failed to connect to %@:%d. Double-check that the host name is correct.", self.hostname, effectivePort]
+                [iTermWarning showWarningWithTitle:[NSString stringWithFormat:NSLocalizedString(@"Failed to connect to %@:%d. Double-check that the host name is correct.", @"UI"), self.hostname, effectivePort]
                                            actions:@[ @"Ok", NSLocalizedString(@"Help", @"UI") ]
                                      actionMapping:nil
                                          accessory:nil
@@ -810,7 +810,7 @@ static NSString *const SCPFileKnownHostsUserDefaultsKey = @"NoSyncKnownHosts";
 
 - (BOOL)shouldConnectToNewHostname {
     const iTermWarningSelection selection =
-    [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"Connect to %@?", self.userHostPort]
+    [iTermWarning showWarningWithTitle:[NSString stringWithFormat:NSLocalizedString(@"Connect to %@?", @"UI"), self.userHostPort]
                                actions:@[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI") ]
                              accessory:nil
                             identifier:[@"NoSyncConnectTo_" stringByAppendingString:self.userHostPort]

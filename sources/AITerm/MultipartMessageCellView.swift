@@ -379,7 +379,7 @@ class MultipartMessageCellView: MessageCellView {
         header.wantsLayer = true
         updateCodeBlockHeaderColors(header)
 
-        let titleLabel = NSTextField(labelWithString: "Code Interpreter")
+        let titleLabel = NSTextField(labelWithString: NSLocalizedString("Code Interpreter", comment: "UI"))
         titleLabel.font = NSFont.systemFont(ofSize: NSFont.smallSystemFontSize, weight: .medium)
         titleLabel.textColor = effectiveAppearance.it_isDark ? .white : .black
         titleLabel.identifier = NSUserInterfaceItemIdentifier("codeBlockTitle")

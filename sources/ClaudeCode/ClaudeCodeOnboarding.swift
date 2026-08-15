@@ -843,7 +843,7 @@ class ClaudeCodeOnboarding: NSObject {
         let sheetPadding: CGFloat = 24
         let textWidth = sheetWidth - sheetPadding * 2
 
-        let titleLabel = NSTextField(labelWithString: "Before You Start")
+        let titleLabel = NSTextField(labelWithString: NSLocalizedString("Before You Start", comment: "UI"))
         titleLabel.font = NSFont.boldSystemFont(ofSize: 16)
         titleLabel.frame.size.width = textWidth
         titleLabel.sizeToFit()
@@ -872,7 +872,7 @@ class ClaudeCodeOnboarding: NSObject {
         disclosure.sizeToFit()
         introDisclosureButton = disclosure
 
-        let disclosureLabel = NSTextField(labelWithString: "What gets changed")
+        let disclosureLabel = NSTextField(labelWithString: NSLocalizedString("What gets changed", comment: "UI"))
         disclosureLabel.font = NSFont.systemFont(ofSize: 13)
         disclosureLabel.textColor = .labelColor
         disclosureLabel.isSelectable = false
@@ -1386,8 +1386,8 @@ class ClaudeCodeOnboarding: NSObject {
         } catch {
             RLog("Onboarding: failed to write settings.json: \(error)")
             let alert = NSAlert()
-            alert.messageText = "Failed to install hook"
-            alert.informativeText = "Could not write to \(settingsURL.path): \(error.localizedDescription)"
+            alert.messageText = NSLocalizedString("Failed to install hook", comment: "UI")
+            alert.informativeText = NSLocalizedString("Could not write to \(settingsURL.path): \(error.localizedDescription)", comment: "UI")
             alert.runModal()
             return false
         }
@@ -1538,7 +1538,7 @@ class ClaudeCodeOnboarding: NSObject {
                 checkboxWithTitle: title,
                 target: nil,
                 action: nil)
-            checkbox.toolTip = "Includes running sessions that were created from a profile that has since been deleted."
+            checkbox.toolTip = NSLocalizedString("Includes running sessions that were created from a profile that has since been deleted.", comment: "UI")
             checkbox.state = .on
             checkbox.translatesAutoresizingMaskIntoConstraints = true
             checkbox.sizeToFit()
@@ -1569,8 +1569,8 @@ class ClaudeCodeOnboarding: NSObject {
         }
 
         let alert = NSAlert()
-        alert.messageText = "Install Auto-Enter Triggers"
-        alert.informativeText = "Pick the profiles you\u{2019}ll run claude in. "
+        alert.messageText = NSLocalizedString("Install Auto-Enter Triggers", comment: "UI")
+        alert.informativeText = NSLocalizedString("Pick the profiles you\u{2019}ll run claude in. ", comment: "UI")
             + "We\u{2019}ll add Enter/Exit Workgroup triggers to each one so the "
             + "Claude Code workgroup is entered automatically."
         alert.addButton(withTitle: NSLocalizedString("Install", comment: "UI"))

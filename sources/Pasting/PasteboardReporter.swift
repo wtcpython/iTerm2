@@ -90,8 +90,8 @@ class PasteboardReporter: NSObject {
             return
         }
         let alert = NSAlert()
-        alert.messageText = "Error Updating Settings"
-        alert.informativeText = "An error occurred while removing the file that authorizes clipboard reporting: \(error.localizedDescription).\nAs long as this file exists, clipboard reporting could be enabled by programs running on this computer."
+        alert.messageText = NSLocalizedString("Error Updating Settings", comment: "UI")
+        alert.informativeText = NSLocalizedString("An error occurred while removing the file that authorizes clipboard reporting: \(error.localizedDescription).\nAs long as this file exists, clipboard reporting could be enabled by programs running on this computer.", comment: "UI")
         alert.alertStyle = .warning
         alert.addButton(withTitle: NSLocalizedString("Reveal in Finder", comment: "UI"))
         alert.runModal()
@@ -100,8 +100,8 @@ class PasteboardReporter: NSObject {
 
     private static func doubleCheck() -> Bool {
         let alert = NSAlert()
-        alert.messageText = "Really Enable Clipboard Reporting?"
-        alert.informativeText = "Reporting the content of the clipboard to apps running inside iTerm2 may expose sensitive information such as passwords. Think carefully before enabling this."
+        alert.messageText = NSLocalizedString("Really Enable Clipboard Reporting?", comment: "UI")
+        alert.informativeText = NSLocalizedString("Reporting the content of the clipboard to apps running inside iTerm2 may expose sensitive information such as passwords. Think carefully before enabling this.", comment: "UI")
         alert.alertStyle = .warning
         let button = alert.addButton(withTitle: NSLocalizedString("OK", comment: "UI"))
         if #available(macOS 11.0, *) {

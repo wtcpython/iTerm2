@@ -14,7 +14,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Downloads the latest version. Runs curl | bash"
+            "value": "下载最新版本。运行 curl | bash"
           }
         }
       }
@@ -302,7 +302,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Utilities include scripts to download files, display images inline, and more. "
+            "value": "实用工具包括用于下载文件、内联显示图像等的脚本。"
           }
         }
       }
@@ -392,7 +392,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Guided manual installation. No download required."
+            "value": "引导式手动安装。无需下载。"
           }
         }
       }
@@ -536,7 +536,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Shell Integration consists of scripts that help your shell communicate with iTerm2 so it can track the commands you’re running, your current directory, and other state. "
+            "value": "Shell 集成包含帮助你的 Shell 与 iTerm2 通信的脚本，使其能够跟踪你正在运行的命令、当前目录以及其他状态。"
           }
         }
       }

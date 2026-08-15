@@ -717,7 +717,7 @@ const NSInteger iTermQuickPasteBytesPerCallDefaultValue = 768;
             NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
             numberFormatter.numberStyle = NSNumberFormatterDecimalStyle;
             const iTermWarningSelection selection =
-            [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"OK to paste %@ characters?", [numberFormatter stringFromNumber:@(pasteEvent.string.length)]]
+            [iTermWarning showWarningWithTitle:[NSString stringWithFormat:NSLocalizedString(@"OK to paste %@ characters?", @"UI"), [numberFormatter stringFromNumber:@(pasteEvent.string.length)]]
                                        actions:@[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI"), @"Advanced…" ]
                                      accessory:nil
                                     identifier:@"NoSyncPasteOverCharacterLimitWarning"
@@ -871,7 +871,7 @@ const NSInteger iTermQuickPasteBytesPerCallDefaultValue = 768;
             [[iTermNumberOfSpacesAccessoryViewController alloc] init];
 
         iTermWarningSelection selection =
-            [iTermWarning showWarningWithTitle:@"You're about to paste a string with tabs."
+            [iTermWarning showWarningWithTitle:NSLocalizedString(@"You're about to paste a string with tabs.", @"UI")
                                        actions:@[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI"), @"Convert tabs to spaces", @"Advanced…" ]
                                      accessory:accessoryController.view
                                     identifier:@"AboutToPasteTabsWithCancel"

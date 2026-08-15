@@ -64,7 +64,7 @@ class iTermBookmarkTagEditorWindowController: NSWindowController {
         guard let contentView = window?.contentView else { return }
 
         // Create and configure UI elements
-        titleLabel = NSTextField(labelWithString: "Title:")
+        titleLabel = NSTextField(labelWithString: NSLocalizedString("Title:", comment: "UI"))
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
 
         let titleValueLabel = NSTextField(labelWithString: bookmarkTitle)
@@ -73,7 +73,7 @@ class iTermBookmarkTagEditorWindowController: NSWindowController {
         titleValueLabel.textColor = .secondaryLabelColor
         titleValueLabel.lineBreakMode = .byTruncatingTail
 
-        urlLabel = NSTextField(labelWithString: "URL:")
+        urlLabel = NSTextField(labelWithString: NSLocalizedString("URL:", comment: "UI"))
         urlLabel.translatesAutoresizingMaskIntoConstraints = false
 
         let urlValueLabel = NSTextField(labelWithString: bookmarkURL)
@@ -82,7 +82,7 @@ class iTermBookmarkTagEditorWindowController: NSWindowController {
         urlValueLabel.textColor = .secondaryLabelColor
         urlValueLabel.lineBreakMode = .byTruncatingTail
 
-        let tagsLabel = NSTextField(labelWithString: "Tags:")
+        let tagsLabel = NSTextField(labelWithString: NSLocalizedString("Tags:", comment: "UI"))
         tagsLabel.translatesAutoresizingMaskIntoConstraints = false
 
         tagsTokenField = NSTokenField()
@@ -222,7 +222,7 @@ class iTermBookmarkTagEditorWindowController: NSWindowController {
     @objc private func deleteBookmark() {
         let alert = NSAlert()
         alert.messageText = NSLocalizedString("Delete Bookmark", comment: "UI")
-        alert.informativeText = "Are you sure you want to delete this bookmark?"
+        alert.informativeText = NSLocalizedString("Are you sure you want to delete this bookmark?", comment: "UI")
         alert.addButton(withTitle: NSLocalizedString("Delete", comment: "UI"))
         alert.addButton(withTitle: NSLocalizedString("Cancel", comment: "UI"))
         alert.alertStyle = .warning

@@ -63,7 +63,7 @@ final class WorkgroupAutoRequestReviewToolbarItem: SessionToolbarControl {
                                accessibilityDescription: "Auto-request review when idle")
         if !enabled {
             button.contentTintColor = .tertiaryLabelColor
-            button.toolTip = "Auto-request a review when idle (needs exactly one code review session)"
+            button.toolTip = NSLocalizedString("Auto-request a review when idle (needs exactly one code review session)", comment: "UI")
             return
         }
         button.contentTintColor = isOn ? .controlAccentColor : .secondaryLabelColor

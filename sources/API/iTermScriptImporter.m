@@ -342,7 +342,7 @@ static NSString *const iTermInstallStagingPrefix = @".installing-";
         DLog(@"Already have a script named %@", archive.name);
         iTermWarningSelection selection = kiTermWarningSelection0;
         if (!avoidUI) {
-            selection = [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"A script named “%@” is already installed", archive.name]
+            selection = [iTermWarning showWarningWithTitle:[NSString stringWithFormat:NSLocalizedString(@"A script named “%@” is already installed", @"UI"), archive.name]
                                                    actions:@[ @"Replace Script", NSLocalizedString(@"Cancel", @"UI") ]
                                                  accessory:nil
                                                 identifier:nil

@@ -14,7 +14,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hang tight! Installing a new Python environment…"
+            "value": "请稍候！正在安装新的 Python 环境…"
           }
         }
       }

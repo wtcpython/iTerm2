@@ -78,7 +78,7 @@ class iTermWorkgroupsEditingViewController: NSViewController {
         presetPopup = NSPopUpButton(frame: .zero, pullsDown: true)
         presetPopup.bezelStyle = .rounded
         presetPopup.controlSize = .regular
-        let titleItem = NSMenuItem(title: "Add Preset",
+        let titleItem = NSMenuItem(title: NSLocalizedString("Add Preset", comment: "UI"),
                                    action: nil, keyEquivalent: "")
         presetPopup.menu?.addItem(titleItem)
         for preset in WorkgroupPresets.all {

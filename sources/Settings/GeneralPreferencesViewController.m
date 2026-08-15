@@ -1384,7 +1384,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
         [[NSNotificationCenter defaultCenter] postNotificationName:iTermMetalSettingsDidChangeNotification object:nil];
     };
     info.onChange = ^{
-        [iTermWarning showWarningWithTitle:@"You must restart iTerm2 for this change to take effect."
+        [iTermWarning showWarningWithTitle:NSLocalizedString(@"You must restart iTerm2 for this change to take effect.", @"UI")
                                    actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                 identifier:nil
                                silenceable:kiTermWarningTypePersistent

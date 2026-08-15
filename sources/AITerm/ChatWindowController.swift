@@ -441,7 +441,7 @@ extension ChatWindowController: NSToolbarDelegate {
             let item = NSToolbarItem(itemIdentifier: itemIdentifier)
             item.label = "Toggle Chat List"
             item.paletteLabel = "Toggle Chat List"
-            item.toolTip = "Show or hide the chat list"
+            item.toolTip = NSLocalizedString("Show or hide the chat list", comment: "UI")
             item.image = NSImage(systemSymbolName: SFSymbol.sidebarLeft.rawValue,
                                  accessibilityDescription: "Toggle Chat List")
             item.target = self
@@ -460,7 +460,7 @@ extension ChatWindowController: NSToolbarDelegate {
                 let item = NSToolbarItem(itemIdentifier: itemIdentifier)
                 item.label = "Provider"
                 item.paletteLabel = "AI Provider"
-                item.toolTip = "Select AI provider for new chats"
+                item.toolTip = NSLocalizedString("Select AI provider for new chats", comment: "UI")
                 item.view = providerSelector
                 return item
             }
@@ -472,7 +472,7 @@ extension ChatWindowController: NSToolbarDelegate {
                 let item = NSToolbarItem(itemIdentifier: itemIdentifier)
                 item.label = "Model"
                 item.paletteLabel = "AI Model"
-                item.toolTip = "Select AI model"
+                item.toolTip = NSLocalizedString("Select AI model", comment: "UI")
                 item.view = modelSelector
                 return item
             }
@@ -483,7 +483,7 @@ extension ChatWindowController: NSToolbarDelegate {
                 let item = NSToolbarItem(itemIdentifier: itemIdentifier)
                 item.label = "Thinking"
                 item.paletteLabel = "Toggle Thinking"
-                item.toolTip = "Enable or disable thinking/reasoning mode"
+                item.toolTip = NSLocalizedString("Enable or disable thinking/reasoning mode", comment: "UI")
                 item.view = button
                 return item
             }
@@ -495,7 +495,7 @@ extension ChatWindowController: NSToolbarDelegate {
                 let item = NSToolbarItem(itemIdentifier: itemIdentifier)
                 item.label = "Effort"
                 item.paletteLabel = "Reasoning Effort"
-                item.toolTip = "Select reasoning effort"
+                item.toolTip = NSLocalizedString("Select reasoning effort", comment: "UI")
                 item.view = selector
                 return item
             }
@@ -507,7 +507,7 @@ extension ChatWindowController: NSToolbarDelegate {
                 let item = NSToolbarItem(itemIdentifier: itemIdentifier)
                 item.label = "Speed"
                 item.paletteLabel = "AI Speed"
-                item.toolTip = "Select AI service tier"
+                item.toolTip = NSLocalizedString("Select AI service tier", comment: "UI")
                 item.view = selector
                 return item
             }
@@ -518,7 +518,7 @@ extension ChatWindowController: NSToolbarDelegate {
                 let item = NSToolbarItem(itemIdentifier: itemIdentifier)
                 item.label = "Web Search"
                 item.paletteLabel = "Toggle Web Search"
-                item.toolTip = "Enable or disable web search"
+                item.toolTip = NSLocalizedString("Enable or disable web search", comment: "UI")
                 item.view = button
                 return item
             }
@@ -529,7 +529,7 @@ extension ChatWindowController: NSToolbarDelegate {
                 let item = NSToolbarItem(itemIdentifier: itemIdentifier)
                 item.label = "Session"
                 item.paletteLabel = "Link Session"
-                item.toolTip = "Link or unlink terminal/browser session"
+                item.toolTip = NSLocalizedString("Link or unlink terminal/browser session", comment: "UI")
                 item.view = button
                 return item
             }
@@ -692,8 +692,8 @@ extension ChatWindowController: ChatListViewControllerDelegate {
             return
         }
         let alert = NSAlert()
-        alert.messageText = "Rename Chat"
-        alert.informativeText = "Choose a new name for this chat."
+        alert.messageText = NSLocalizedString("Rename Chat", comment: "UI")
+        alert.informativeText = NSLocalizedString("Choose a new name for this chat.", comment: "UI")
         alert.addButton(withTitle: NSLocalizedString("Rename", comment: "UI"))
         alert.addButton(withTitle: NSLocalizedString("Cancel", comment: "UI"))
 

@@ -241,8 +241,8 @@ class NotifyOnStatusChangeController: NSObject {
         // being dispatched.
         DispatchQueue.main.async {
             let alert = NSAlert()
-            alert.messageText = "Session status changed"
-            alert.informativeText = "\(name) changed from “\(fromText)” to “\(toText)”."
+            alert.messageText = NSLocalizedString("Session status changed", comment: "UI")
+            alert.informativeText = NSLocalizedString("\(name) changed from “\(fromText)” to “\(toText)”.", comment: "UI")
             alert.addButton(withTitle: NSLocalizedString("OK", comment: "UI"))
             // Offer Reveal only when the session can still be resolved; it may
             // have gone away between the change and the alert being shown.

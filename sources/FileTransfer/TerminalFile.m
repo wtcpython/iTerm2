@@ -81,7 +81,7 @@ NSString *const kTerminalFileShouldStopNotification = @"kTerminalFileShouldStopN
 // attached to `window` so it matches the terminal-initiated download confirmation.
 - (BOOL)shouldPromptForDownloadLocationInWindow:(NSWindow *)window {
     const iTermWarningSelection selection =
-        [iTermWarning showWarningWithTitle:@"Where would you like to save this download?"
+        [iTermWarning showWarningWithTitle:NSLocalizedString(@"Where would you like to save this download?", @"UI")
                                    actions:@[ @"Save to Downloads", @"Choose…" ]
                                  accessory:nil
                                 identifier:@"NoSyncPromptForDownloadLocation"

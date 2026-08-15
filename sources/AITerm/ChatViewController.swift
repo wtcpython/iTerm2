@@ -2928,7 +2928,7 @@ extension ChatViewController: ChatToolbarDataSource {
         // disabled (see ChatListModel.setOrchestrationEnabled).
         let orchestrationOn = listModel.chat(id: chatID)?.orchestrationEnabled ?? false
         if orchestrationOn {
-            menu.addItem(withTitle: "Disable Orchestration",
+            menu.addItem(withTitle: NSLocalizedString("Disable Orchestration", comment: "UI"),
                          action: #selector(disableOrchestration(_:)),
                          target: self)
         } else {
@@ -2950,12 +2950,12 @@ extension ChatViewController: ChatToolbarDataSource {
             if let guid = model?.terminalSessionGuid,
                iTermController.sharedInstance().anySession(forReference: guid) != nil {
 
-                menu.addItem(withTitle: "Reveal Linked Terminal Session", action: #selector(revealLinkedTerminalSession(_:)), target: self)
-                menu.addItem(withTitle: "Unlink Terminal Session", action: #selector(unlinkTerminalSession(_:)), target: self)
+                menu.addItem(withTitle: NSLocalizedString("Reveal Linked Terminal Session", comment: "UI"), action: #selector(revealLinkedTerminalSession(_:)), target: self)
+                menu.addItem(withTitle: NSLocalizedString("Unlink Terminal Session", comment: "UI"), action: #selector(unlinkTerminalSession(_:)), target: self)
                 // Inline-panel CVCs are already hosted in their session — no
                 // need to offer to put themselves there.
                 if !isInlinePanel {
-                    menu.addItem(withTitle: "Put Chat in Linked Terminal Session",
+                    menu.addItem(withTitle: NSLocalizedString("Put Chat in Linked Terminal Session", comment: "UI"),
                                  action: #selector(putChatInLinkedTerminalSession(_:)),
                                  target: self)
                 }
@@ -2978,7 +2978,7 @@ extension ChatViewController: ChatToolbarDataSource {
                 menu.addItem(NSMenuItem.separator())
 
                 if haveLinkedTerminalSession {
-                    menu.addItem(withTitle: "Send Commands & Output to AI Automatically",
+                    menu.addItem(withTitle: NSLocalizedString("Send Commands & Output to AI Automatically", comment: "UI"),
                                  action: #selector(toggleStream(_:)),
                                  target: self,
                                  state: streaming ? .on : .off,
@@ -2986,7 +2986,7 @@ extension ChatViewController: ChatToolbarDataSource {
                     menu.addItem(NSMenuItem.separator())
                 }
             } else {
-                menu.addItem(withTitle: "Link Terminal Session", action: #selector(objcLinkTerminalSession(_:)), target: self)
+                menu.addItem(withTitle: NSLocalizedString("Link Terminal Session", comment: "UI"), action: #selector(objcLinkTerminalSession(_:)), target: self)
                 menu.addItem(NSMenuItem.separator())
             }
 
@@ -2994,10 +2994,10 @@ extension ChatViewController: ChatToolbarDataSource {
             if let guid = model?.browserSessionGuid,
                iTermController.sharedInstance().anySession(forReference: guid) != nil {
 
-                menu.addItem(withTitle: "Reveal Linked Web Browser Session", action: #selector(revealLinkedBrowserSession(_:)), target: self)
-                menu.addItem(withTitle: "Unlink Web Browser Session", action: #selector(unlinkBrowserSession(_:)), target: self)
+                menu.addItem(withTitle: NSLocalizedString("Reveal Linked Web Browser Session", comment: "UI"), action: #selector(revealLinkedBrowserSession(_:)), target: self)
+                menu.addItem(withTitle: NSLocalizedString("Unlink Web Browser Session", comment: "UI"), action: #selector(unlinkBrowserSession(_:)), target: self)
                 if !isInlinePanel {
-                    menu.addItem(withTitle: "Put Chat in Linked Browser Session",
+                    menu.addItem(withTitle: NSLocalizedString("Put Chat in Linked Browser Session", comment: "UI"),
                                  action: #selector(putChatInLinkedBrowserSession(_:)),
                                  target: self)
                 }
@@ -3019,7 +3019,7 @@ extension ChatViewController: ChatToolbarDataSource {
                 }
                 menu.addItem(NSMenuItem.separator())
             } else {
-                menu.addItem(withTitle: "Link Browser Session", action: #selector(objcLinkBrowserSession(_:)), target: self)
+                menu.addItem(withTitle: NSLocalizedString("Link Browser Session", comment: "UI"), action: #selector(objcLinkBrowserSession(_:)), target: self)
                 menu.addItem(NSMenuItem.separator())
             }
         }
@@ -3307,7 +3307,7 @@ extension ChatViewController: InlineChatToolbarViewDelegate {
             menu.addItem(item)
         }
         if menu.items.isEmpty {
-            let item = NSMenuItem(title: "No Chats", action: nil, keyEquivalent: "")
+            let item = NSMenuItem(title: NSLocalizedString("No Chats", comment: "UI"), action: nil, keyEquivalent: "")
             item.isEnabled = false
             menu.addItem(item)
         }
@@ -3563,7 +3563,7 @@ extension ChatViewController {
         // stick for the rest of the chat. Users coming from the
         // menu-driven toggle won't know that without being told.
         let alert = NSAlert()
-        alert.messageText = "Enable orchestration mode?"
+        alert.messageText = NSLocalizedString("Enable orchestration mode?", comment: "UI")
         alert.informativeText = """
             Orchestration mode lets the agent coordinate across any iTerm2 sessions. \
             It can read screen contents from any session, but to type into a session requires \

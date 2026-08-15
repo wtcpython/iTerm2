@@ -68,7 +68,7 @@ class MessageCellView: NSView {
             DLog("menu \(self)")
             let menu = NSMenu(title: "Context Menu")
             if editable {
-                let editItem = NSMenuItem(title: "Edit", action: #selector(editMenuItemClicked(_:)), keyEquivalent: "")
+                let editItem = NSMenuItem(title: NSLocalizedString("Edit", comment: "UI"), action: #selector(editMenuItemClicked(_:)), keyEquivalent: "")
                 editItem.target = self
                 menu.addItem(editItem)
             }
@@ -78,7 +78,7 @@ class MessageCellView: NSView {
             menu.addItem(copyItem)
 
             if editable {
-                let forkItem = NSMenuItem(title: "Fork", action: #selector(forkMenuItemClicked(_:)), keyEquivalent: "")
+                let forkItem = NSMenuItem(title: NSLocalizedString("Fork", comment: "UI"), action: #selector(forkMenuItemClicked(_:)), keyEquivalent: "")
                 forkItem.target = self
                 menu.addItem(forkItem)
             }

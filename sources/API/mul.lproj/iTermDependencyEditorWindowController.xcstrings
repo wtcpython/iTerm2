@@ -32,7 +32,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "This script must be upgraded to a “full environment“ to add dependencies. Doing so makes a copy of the Python runtime but will not use any additional disk space."
+            "value": "此脚本必须升级为“完整环境”才能添加依赖。升级会复制一份 Python 运行时，但不会占用额外磁盘空间。"
           }
         }
       }

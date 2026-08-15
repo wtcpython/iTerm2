@@ -210,7 +210,7 @@ final class CompanionWizardWindowController: NSWindowController, NSWindowDelegat
 
         var nextY = Self.contentHeight - 250
         if full {
-            let keyLabel = NSTextField(labelWithString: "API key:")
+            let keyLabel = NSTextField(labelWithString: NSLocalizedString("API key:", comment: "UI"))
             keyLabel.alignment = .right
             keyLabel.frame = NSRect(x: 20, y: nextY - 5, width: 90, height: 22)
             view.addSubview(keyLabel)
@@ -225,7 +225,7 @@ final class CompanionWizardWindowController: NSWindowController, NSWindowDelegat
             apiKeyField = keyField
 
             nextY -= 38
-            let providerLabel = NSTextField(labelWithString: "Provider:")
+            let providerLabel = NSTextField(labelWithString: NSLocalizedString("Provider:", comment: "UI"))
             providerLabel.alignment = .right
             providerLabel.frame = NSRect(x: 20, y: nextY - 5, width: 90, height: 22)
             view.addSubview(providerLabel)
@@ -395,7 +395,7 @@ final class CompanionWizardWindowController: NSWindowController, NSWindowDelegat
     private func failAndFallBackToPlainWindow(_ error: Error) {
         let alert = NSAlert()
         alert.alertStyle = .warning
-        alert.messageText = "Setup Could Not Be Completed"
+        alert.messageText = NSLocalizedString("Setup Could Not Be Completed", comment: "UI")
         alert.informativeText = error.localizedDescription
             + "\n\nYou can finish setting up in Companion Device Settings."
         alert.addButton(withTitle: NSLocalizedString("OK", comment: "UI"))

@@ -856,7 +856,7 @@ typedef NS_ENUM(NSUInteger, iTermWindowUnitsTag) {
             return;
         }
         if ([iTermBackgroundImageRotationManager firstImagePathInFolder:path] == nil) {
-            [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"The folder “%@” contains no images, so no background image will be shown.", path.lastPathComponent]
+            [iTermWarning showWarningWithTitle:[NSString stringWithFormat:NSLocalizedString(@"The folder “%@” contains no images, so no background image will be shown.", @"UI"), path.lastPathComponent]
                                        actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                      accessory:nil
                                     identifier:@"BackgroundFolderEmpty"
@@ -975,7 +975,7 @@ typedef NS_ENUM(NSUInteger, iTermWindowUnitsTag) {
         return NO;
     }
     if (data.length == 0) {
-        [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"The image “%@” could not be loaded because the file is empty.", filename.lastPathComponent]
+        [iTermWarning showWarningWithTitle:[NSString stringWithFormat:NSLocalizedString(@"The image “%@” could not be loaded because the file is empty.", @"UI"), filename.lastPathComponent]
                                    actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                  accessory:nil
                                 identifier:@"BackgroundImageUnreadable"
@@ -985,7 +985,7 @@ typedef NS_ENUM(NSUInteger, iTermWindowUnitsTag) {
         return NO;
     }
     if (![[NSImage alloc] initWithData:data]) {
-        [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"The image “%@” could not be loaded because it is corrupt or not a supported format.", filename.lastPathComponent]
+        [iTermWarning showWarningWithTitle:[NSString stringWithFormat:NSLocalizedString(@"The image “%@” could not be loaded because it is corrupt or not a supported format.", @"UI"), filename.lastPathComponent]
                                    actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                  accessory:nil
                                 identifier:@"BackgroundImageUnreadable"
@@ -1000,7 +1000,7 @@ typedef NS_ENUM(NSUInteger, iTermWindowUnitsTag) {
 - (BOOL)checkFolder:(NSString *)filename {
     BOOL isDirectory = NO;
     if (![[NSFileManager defaultManager] fileExistsAtPath:filename isDirectory:&isDirectory] || !isDirectory) {
-        [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"The folder “%@” could not be used because it does not exist or is not a directory.", filename.lastPathComponent]
+        [iTermWarning showWarningWithTitle:[NSString stringWithFormat:NSLocalizedString(@"The folder “%@” could not be used because it does not exist or is not a directory.", @"UI"), filename.lastPathComponent]
                                    actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                  accessory:nil
                                 identifier:@"BackgroundFolderUnreadable"
@@ -1014,7 +1014,7 @@ typedef NS_ENUM(NSUInteger, iTermWindowUnitsTag) {
                                                                                   options:NSDirectoryEnumerationSkipsHiddenFiles
                                                                                     error:nil];
     if (!contents) {
-        [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"The folder “%@” could not be read.", filename.lastPathComponent]
+        [iTermWarning showWarningWithTitle:[NSString stringWithFormat:NSLocalizedString(@"The folder “%@” could not be read.", @"UI"), filename.lastPathComponent]
                                    actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                  accessory:nil
                                 identifier:@"BackgroundFolderUnreadable"
@@ -1073,10 +1073,7 @@ typedef NS_ENUM(NSUInteger, iTermWindowUnitsTag) {
 
 - (void)maybeWarnAboutSpaces
 {
-    [iTermWarning showWarningWithTitle:@"To have a new window open in a specific space, "
-                                       @"make sure that Spaces is enabled in System "
-                                       @"Preferences and that it is configured to switch directly "
-                                       @"to a space with ^ Number Keys."
+    [iTermWarning showWarningWithTitle:NSLocalizedString(@"To have a new window open in a specific space, make sure that Spaces is enabled in System Preferences and that it is configured to switch directly to a space with ^ Number Keys.", @"UI")
                                actions:@[ NSLocalizedString(@"OK", @"UI") ]
                             identifier:@"NeverWarnAboutSpaces"
                            silenceable:kiTermWarningTypePermanentlySilenceable

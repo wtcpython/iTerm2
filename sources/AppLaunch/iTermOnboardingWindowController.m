@@ -28,7 +28,7 @@ static NSString *const iTermOnboardingWindowControllerHasBeenShown = @"NoSyncOnb
 static void iTermOpenWhatsNewURL(NSString *path, NSWindow *window) {
     if ([path isEqualToString:@"companion"]) {
         if (![iTermAdvancedSettingsModel generativeAIAllowed]) {
-            [iTermWarning showWarningWithTitle:@"Generative AI features have been disabled. Talk to your enterprise system administrator."
+            [iTermWarning showWarningWithTitle:NSLocalizedString(@"Generative AI features have been disabled. Talk to your enterprise system administrator.", @"UI")
                                        actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                      accessory:nil
                                     identifier:nil
@@ -38,7 +38,7 @@ static void iTermOpenWhatsNewURL(NSString *path, NSWindow *window) {
             return;
         }
         if (![iTermAdvancedSettingsModel companionPairingAllowed]) {
-            [iTermWarning showWarningWithTitle:@"Companion device pairing has been disabled. Talk to your enterprise system administrator."
+            [iTermWarning showWarningWithTitle:NSLocalizedString(@"Companion device pairing has been disabled. Talk to your enterprise system administrator.", @"UI")
                                        actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                      accessory:nil
                                     identifier:nil
@@ -60,7 +60,7 @@ static void iTermOpenWhatsNewURL(NSString *path, NSWindow *window) {
     }
     if ([path isEqualToString:@"screenshot"]) {
         if (![iTermController sharedInstance].currentTerminal) {
-            [iTermWarning showWarningWithTitle:@"You need an open terminal window to make a screenshot."
+            [iTermWarning showWarningWithTitle:NSLocalizedString(@"You need an open terminal window to make a screenshot.", @"UI")
                                        actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                      accessory:nil
                                     identifier:nil

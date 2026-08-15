@@ -399,7 +399,7 @@ class ChatListViewController: NSViewController {
         let menu = NSMenu()
         let count = max(1, selectedChatIDs().count)
         if count == 1 {
-            menu.addItem(withTitle: "Rename Chat",
+            menu.addItem(withTitle: NSLocalizedString("Rename Chat", comment: "UI"),
                          action: #selector(renameSelectedChat(_:)),
                          target: self)
             menu.addItem(.separator())

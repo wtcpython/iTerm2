@@ -445,7 +445,7 @@ enum {
     BOOL hideCaveat = caveat_.isHidden;
     switch ([[action_ selectedItem] tag]) {
         case 1:
-            [caveat_ setStringValue:@"When you activate Semantic History on a filename, the associated app loads the file."];
+            [caveat_ setStringValue:NSLocalizedString(@"When you activate Semantic History on a filename, the associated app loads the file.", @"UI")];
             hideCaveat = NO;
             break;
 
@@ -462,7 +462,7 @@ enum {
 
         case 3:
             hideEditors = NO;
-            [caveat_ setStringValue:@"When you activate Semantic History on a text file, the specified editor opens it.\nOther kinds of files will be opened with their default apps."];
+            [caveat_ setStringValue:NSLocalizedString(@"When you activate Semantic History on a text file, the specified editor opens it.\nOther kinds of files will be opened with their default apps.", @"UI")];
             hideCaveat = NO;
             break;
 

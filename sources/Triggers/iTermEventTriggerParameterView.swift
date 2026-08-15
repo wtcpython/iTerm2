@@ -194,7 +194,7 @@ class EventTriggerParameterView: NSView, NSTextFieldDelegate {
         row.addArrangedSubview(textField)
         stackView.addArrangedSubview(row)
 
-        let helpLabel = NSTextField(labelWithString: "Process name to match in the foreground-job ancestry chain (case-insensitive)")
+        let helpLabel = NSTextField(labelWithString: NSLocalizedString("Process name to match in the foreground-job ancestry chain (case-insensitive)", comment: "UI"))
         helpLabel.translatesAutoresizingMaskIntoConstraints = false
         helpLabel.font = NSFont.systemFont(ofSize: NSFont.smallSystemFontSize)
         helpLabel.textColor = .secondaryLabelColor
@@ -215,7 +215,7 @@ class EventTriggerParameterView: NSView, NSTextFieldDelegate {
         nameRow.addArrangedSubview(nameField)
         stackView.addArrangedSubview(nameRow)
 
-        let nameHelp = NSTextField(labelWithString: "Name of the session variable to watch")
+        let nameHelp = NSTextField(labelWithString: NSLocalizedString("Name of the session variable to watch", comment: "UI"))
         nameHelp.translatesAutoresizingMaskIntoConstraints = false
         nameHelp.font = NSFont.systemFont(ofSize: NSFont.smallSystemFontSize)
         nameHelp.textColor = .secondaryLabelColor
@@ -234,7 +234,7 @@ class EventTriggerParameterView: NSView, NSTextFieldDelegate {
         valueRow.addArrangedSubview(valueField)
         stackView.addArrangedSubview(valueRow)
 
-        let valueHelp = NSTextField(labelWithString: "Regular expression the new value must match (leave blank to match any change)")
+        let valueHelp = NSTextField(labelWithString: NSLocalizedString("Regular expression the new value must match (leave blank to match any change)", comment: "UI"))
         valueHelp.translatesAutoresizingMaskIntoConstraints = false
         valueHelp.font = NSFont.systemFont(ofSize: NSFont.smallSystemFontSize)
         valueHelp.textColor = .secondaryLabelColor
@@ -254,7 +254,7 @@ class EventTriggerParameterView: NSView, NSTextFieldDelegate {
         row.addArrangedSubview(textField)
         stackView.addArrangedSubview(row)
 
-        let helpLabel = NSTextField(labelWithString: "Regular expression to match the directory path")
+        let helpLabel = NSTextField(labelWithString: NSLocalizedString("Regular expression to match the directory path", comment: "UI"))
         helpLabel.translatesAutoresizingMaskIntoConstraints = false
         helpLabel.font = NSFont.systemFont(ofSize: NSFont.smallSystemFontSize)
         helpLabel.textColor = .secondaryLabelColor
@@ -272,7 +272,7 @@ class EventTriggerParameterView: NSView, NSTextFieldDelegate {
         textField.formatter = iTermSaneNumberFormatter()
         timeoutTextField = textField
 
-        let unitsLabel = NSTextField(labelWithString: "seconds")
+        let unitsLabel = NSTextField(labelWithString: NSLocalizedString("seconds", comment: "UI"))
         unitsLabel.translatesAutoresizingMaskIntoConstraints = false
 
         row.addArrangedSubview(textField)
@@ -293,7 +293,7 @@ class EventTriggerParameterView: NSView, NSTextFieldDelegate {
         row.addArrangedSubview(textField)
         stackView.addArrangedSubview(row)
 
-        let helpLabel = NSTextField(labelWithString: "Regular expression to match the sequence identifier")
+        let helpLabel = NSTextField(labelWithString: NSLocalizedString("Regular expression to match the sequence identifier", comment: "UI"))
         helpLabel.translatesAutoresizingMaskIntoConstraints = false
         helpLabel.font = NSFont.systemFont(ofSize: NSFont.smallSystemFontSize)
         helpLabel.textColor = .secondaryLabelColor
@@ -313,7 +313,7 @@ class EventTriggerParameterView: NSView, NSTextFieldDelegate {
         row.addArrangedSubview(textField)
         stackView.addArrangedSubview(row)
 
-        let helpLabel = NSTextField(labelWithString: "Regular expression to match the notification message")
+        let helpLabel = NSTextField(labelWithString: NSLocalizedString("Regular expression to match the notification message", comment: "UI"))
         helpLabel.translatesAutoresizingMaskIntoConstraints = false
         helpLabel.font = NSFont.systemFont(ofSize: NSFont.smallSystemFontSize)
         helpLabel.textColor = .secondaryLabelColor
@@ -333,7 +333,7 @@ class EventTriggerParameterView: NSView, NSTextFieldDelegate {
         row.addArrangedSubview(textField)
         stackView.addArrangedSubview(row)
 
-        let helpLabel = NSTextField(labelWithString: "Regular expression to match the hostname")
+        let helpLabel = NSTextField(labelWithString: NSLocalizedString("Regular expression to match the hostname", comment: "UI"))
         helpLabel.translatesAutoresizingMaskIntoConstraints = false
         helpLabel.font = NSFont.systemFont(ofSize: NSFont.smallSystemFontSize)
         helpLabel.textColor = .secondaryLabelColor
@@ -353,7 +353,7 @@ class EventTriggerParameterView: NSView, NSTextFieldDelegate {
         row.addArrangedSubview(textField)
         stackView.addArrangedSubview(row)
 
-        let helpLabel = NSTextField(labelWithString: "Regular expression to match the username")
+        let helpLabel = NSTextField(labelWithString: NSLocalizedString("Regular expression to match the username", comment: "UI"))
         helpLabel.translatesAutoresizingMaskIntoConstraints = false
         helpLabel.font = NSFont.systemFont(ofSize: NSFont.smallSystemFontSize)
         helpLabel.textColor = .secondaryLabelColor
@@ -372,7 +372,7 @@ class EventTriggerParameterView: NSView, NSTextFieldDelegate {
         thresholdField.formatter = iTermSaneNumberFormatter()
         thresholdTextField = thresholdField
 
-        let unitsLabel = NSTextField(labelWithString: "seconds")
+        let unitsLabel = NSTextField(labelWithString: NSLocalizedString("seconds", comment: "UI"))
         unitsLabel.translatesAutoresizingMaskIntoConstraints = false
 
         thresholdRow.addArrangedSubview(thresholdField)
@@ -392,7 +392,7 @@ class EventTriggerParameterView: NSView, NSTextFieldDelegate {
         commandRow.addArrangedSubview(commandField)
         stackView.addArrangedSubview(commandRow)
 
-        let helpLabel = NSTextField(labelWithString: "Regular expression to match the command line")
+        let helpLabel = NSTextField(labelWithString: NSLocalizedString("Regular expression to match the command line", comment: "UI"))
         helpLabel.translatesAutoresizingMaskIntoConstraints = false
         helpLabel.font = NSFont.systemFont(ofSize: NSFont.smallSystemFontSize)
         helpLabel.textColor = .secondaryLabelColor
@@ -414,7 +414,7 @@ class EventTriggerParameterView: NSView, NSTextFieldDelegate {
     }
 
     private func addNoParametersLabel() {
-        let label = NSTextField(labelWithString: "No additional parameters required.")
+        let label = NSTextField(labelWithString: NSLocalizedString("No additional parameters required.", comment: "UI"))
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .secondaryLabelColor
         stackView.addArrangedSubview(label)

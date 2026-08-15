@@ -204,7 +204,7 @@ class iTermSuppressedAlertsWindowController: NSWindowController {
         checkFrame.origin.y = margin + buttonHeight + checkboxGap
         checkbox.frame = checkFrame
         checkbox.autoresizingMask = [.maxXMargin, .maxYMargin]
-        checkbox.toolTip = "When you check “Remember my choice” or “Suppress this message " +
+        checkbox.toolTip = NSLocalizedString("When you check “Remember my choice” or “Suppress this message ", comment: "UI") +
                            "permanently” in an alert, iTerm2 stops showing it and reuses your " +
                            "saved response. Turn this on to show those alerts again so you can " +
                            "see them or choose differently. It stays on until you turn it off."

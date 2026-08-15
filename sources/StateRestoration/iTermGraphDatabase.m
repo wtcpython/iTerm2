@@ -550,7 +550,7 @@
         if (![state.db executeUpdate:@"ALTER TABLE Node ADD COLUMN generation INTEGER DEFAULT 0"]) {
             NSString *error = [state.db.lastError localizedDescription] ?: @"Unknown error";
             dispatch_async(dispatch_get_main_queue(), ^{
-                [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"Failed to migrate session database (adding generation column): %@", error]
+                [iTermWarning showWarningWithTitle:[NSString stringWithFormat:NSLocalizedString(@"Failed to migrate session database (adding generation column): %@", @"UI"), error]
                                            actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                         identifier:@"NoSyncGraphDatabaseMigrationFailed"
                                        silenceable:kiTermWarningTypePersistent
@@ -561,7 +561,7 @@
         if (![state.db executeUpdate:@"ALTER TABLE Node ADD COLUMN large_data BLOB"]) {
             NSString *error = [state.db.lastError localizedDescription] ?: @"Unknown error";
             dispatch_async(dispatch_get_main_queue(), ^{
-                [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"Failed to migrate session database (adding large_data column): %@", error]
+                [iTermWarning showWarningWithTitle:[NSString stringWithFormat:NSLocalizedString(@"Failed to migrate session database (adding large_data column): %@", @"UI"), error]
                                            actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                         identifier:@"NoSyncGraphDatabaseMigrationFailed"
                                        silenceable:kiTermWarningTypePersistent

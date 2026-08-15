@@ -257,10 +257,7 @@ static NSString *const ProfilesSessionPreferencesViewControllerPhonyShortLivedSe
             // Host *
             //   ServerAliveInterval 60
             iTermWarningSelection selection =
-                [iTermWarning showWarningWithTitle:@"You probably don’t want to turn this on. "
-                                                   @"It's not suitable for keeping ssh sessions alive, "
-                                                   @"even with a code of “0”. Are you sure you want this?"
-                                           actions:@[ @"Enable Send Code", NSLocalizedString(@"Cancel", @"UI") ]
+                [iTermWarning showWarningWithTitle:NSLocalizedString(@"You probably don’t want to turn this on. It's not suitable for keeping ssh sessions alive, even with a code of “0”. Are you sure you want this?", @"UI")actions:@[ @"Enable Send Code", NSLocalizedString(@"Cancel", @"UI") ]
                                         identifier:kWarnAboutSendCodeWhenIdle
                                        silenceable:kiTermWarningTypePermanentlySilenceable
                                             window:weakSelf.view.window];

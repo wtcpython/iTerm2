@@ -1605,7 +1605,7 @@ extension iTermBrowserManager: WKUIDelegate {
     func webView(_ webView: WKWebView, runJavaScriptAlertPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping () -> Void) {
         // Handle JavaScript alerts
         let alert = NSAlert()
-        alert.messageText = "Web Page Alert"
+        alert.messageText = NSLocalizedString("Web Page Alert", comment: "UI")
         alert.informativeText = message
         alert.addButton(withTitle: NSLocalizedString("OK", comment: "UI"))
         alert.runModal()
@@ -1615,7 +1615,7 @@ extension iTermBrowserManager: WKUIDelegate {
     func webView(_ webView: WKWebView, runJavaScriptConfirmPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping (Bool) -> Void) {
         // Handle JavaScript confirmations
         let alert = NSAlert()
-        alert.messageText = "Web Page Confirmation"
+        alert.messageText = NSLocalizedString("Web Page Confirmation", comment: "UI")
         alert.informativeText = message
         alert.addButton(withTitle: NSLocalizedString("OK", comment: "UI"))
         alert.addButton(withTitle: NSLocalizedString("Cancel", comment: "UI"))

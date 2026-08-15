@@ -31,6 +31,36 @@
         }
       }
     },
+    "%@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@"
+          }
+        }
+      }
+    },
+    "%@ #%d": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ #%d"
+          }
+        }
+      }
+    },
+    "%@ (%@)": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ (%@)"
+          }
+        }
+      }
+    },
     "%@ — New Tab": {
       "localizations": {
         "zh-Hans": {
@@ -57,6 +87,26 @@
           "stringUnit": {
             "state": "translated",
             "value": "-∞"
+          }
+        }
+      }
+    },
+    "1Password took too long to respond.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Password 响应超时。"
+          }
+        }
+      }
+    },
+    "A browser session failed to start because the iTerm2 Browser Plugin couldn’t be found.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "浏览器会话启动失败，因为找不到 iTerm2 浏览器插件。"
           }
         }
       }
@@ -91,6 +141,46 @@
         }
       }
     },
+    "A control sequence attempted to activate a session. Allow it?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "控制序列试图激活会话。允许吗？"
+          }
+        }
+      }
+    },
+    "A file with the name “\\(descriptor.absolutePath.lastPathComponent)” on \\(descriptor.sshIdentity.displayName) already exists in this location. Do you want to replace it?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\\(descriptor.sshIdentity.displayName) 上名为“\\(descriptor.absolutePath.lastPathComponent)”的文件已存在于该位置。要替换它吗？"
+          }
+        }
+      }
+    },
+    "A keyboard shortcut didn’t run because this physical key now produces a different character than it did when the shortcut was created, usually after switching keyboard layout or input method. Matching key bindings by physical key makes shortcuts work regardless of the character a key produces. This affects all key bindings; you can change it later in Settings > Keys.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "键盘快捷键未执行，因为此物理按键现在产生的字符与创建快捷键时不同，通常发生在切换键盘布局或输入法之后。按物理按键匹配按键绑定可使快捷键不依赖按键产生的字符而正常工作。这会影响所有按键绑定；你可以在“设置 > 键盘”中稍后更改。"
+          }
+        }
+      }
+    },
+    "A script named “%@” is already installed": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已安装名为“%@”的脚本"
+          }
+        }
+      }
+    },
     "AI Chat": {
       "localizations": {
         "zh-Hans": {
@@ -107,6 +197,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "AI 可以\\(category.rawValue)"
+          }
+        }
+      }
+    },
+    "API key:": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "API 密钥："
           }
         }
       }
@@ -161,6 +261,56 @@
         }
       }
     },
+    "Add Named Mark…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "添加命名标记…"
+          }
+        }
+      }
+    },
+    "Add Peer": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "添加对等端"
+          }
+        }
+      }
+    },
+    "Add Preset": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "添加预设"
+          }
+        }
+      }
+    },
+    "Add Split": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "添加分屏"
+          }
+        }
+      }
+    },
+    "Add Tab": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "添加标签页"
+          }
+        }
+      }
+    },
     "Add Tab to Group": {
       "localizations": {
         "zh-Hans": {
@@ -211,6 +361,26 @@
         }
       }
     },
+    "Allow AI to perform web search?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "允许 AI 执行网页搜索？"
+          }
+        }
+      }
+    },
+    "Allow \\(permissionType.displayName)": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "允许\\(permissionType.displayName)"
+          }
+        }
+      }
+    },
     "Alternate Screen": {
       "localizations": {
         "zh-Hans": {
@@ -221,12 +391,32 @@
         }
       }
     },
+    "An error occurred while removing the file that authorizes clipboard reporting: \\(error.localizedDescription).\\nAs long as this file exists, clipboard reporting could be enabled by programs running on this computer.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "移除授权剪贴板报告的文件时出错：\\(error.localizedDescription)。\\n只要此文件存在，此计算机上运行的程序就可能启用剪贴板报告。"
+          }
+        }
+      }
+    },
     "Annotate Selection": {
       "localizations": {
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "注释所选内容"
+          }
+        }
+      }
+    },
+    "Annotations:": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "注释："
           }
         }
       }
@@ -321,6 +511,36 @@
         }
       }
     },
+    "Are you really at a password prompt? It looks ": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你确定在密码提示符处吗？看起来 "
+          }
+        }
+      }
+    },
+    "Are you really at a password prompt? It looks like what you're typing is echoed to the screen.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你确定在密码提示符处吗？看起来你输入的内容会回显到屏幕上。"
+          }
+        }
+      }
+    },
+    "Are you sure you want to delete this bookmark?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "确定要删除此书签吗？"
+          }
+        }
+      }
+    },
     "Are you sure you want to delete this chat? This action cannot be undone.": {
       "localizations": {
         "zh-Hans": {
@@ -331,12 +551,92 @@
         }
       }
     },
+    "Are you sure you want to use “%@” %@? This looks like a commonly used keystroke.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "确定要使用“%@” %@ 吗？这看起来像常用按键。"
+          }
+        }
+      }
+    },
+    "Are you sure? This may terminate %@.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "确定吗？这可能会终止 %@。"
+          }
+        }
+      }
+    },
     "Arguments to ssh": {
       "localizations": {
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "ssh 的参数"
+          }
+        }
+      }
+    },
+    "Ask AI…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "询问 AI…"
+          }
+        }
+      }
+    },
+    "Attach files": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "附加文件"
+          }
+        }
+      }
+    },
+    "Authentication Error": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "认证错误"
+          }
+        }
+      }
+    },
+    "Authentication Failed": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "认证失败"
+          }
+        }
+      }
+    },
+    "Authentication failed because \\(reason)": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "认证失败，因为 \\(reason)"
+          }
+        }
+      }
+    },
+    "Auto-request a review when idle (needs exactly one code review session)": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "空闲时自动请求审查（需要恰好一个代码审查会话）"
           }
         }
       }
@@ -371,12 +671,52 @@
         }
       }
     },
+    "Back:": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "后退："
+          }
+        }
+      }
+    },
+    "Before You Start": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "开始之前"
+          }
+        }
+      }
+    },
+    "Bind Expression to Setting": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "将表达式绑定到设置"
+          }
+        }
+      }
+    },
     "Block": {
       "localizations": {
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "阻止"
+          }
+        }
+      }
+    },
+    "Blur radius:": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "模糊半径："
           }
         }
       }
@@ -451,6 +791,16 @@
         }
       }
     },
+    "Cancel %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "取消 %@"
+          }
+        }
+      }
+    },
     "Cancel Pairing": {
       "localizations": {
         "zh-Hans": {
@@ -467,6 +817,36 @@
           "stringUnit": {
             "state": "translated",
             "value": "已取消"
+          }
+        }
+      }
+    },
+    "Cannot Notify on Termination": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法在终止时通知"
+          }
+        }
+      }
+    },
+    "Can’t Find 1Password CLI": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "找不到 1Password CLI"
+          }
+        }
+      }
+    },
+    "Can’t Find LastPass CLI": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "找不到 LastPass CLI"
           }
         }
       }
@@ -501,6 +881,26 @@
         }
       }
     },
+    "Check again for the plugin": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "再次检查插件"
+          }
+        }
+      }
+    },
+    "Check the pip output for errors.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "检查 pip 输出中的错误。"
+          }
+        }
+      }
+    },
     "Checking plugin status…": {
       "localizations": {
         "zh-Hans": {
@@ -527,6 +927,26 @@
           "stringUnit": {
             "state": "translated",
             "value": "选择 JSON 文件"
+          }
+        }
+      }
+    },
+    "Choose a new name for this chat.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "为此聊天选择新名称。"
+          }
+        }
+      }
+    },
+    "Claude Code Integration Looks Broken": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Claude Code 集成似乎已损坏"
           }
         }
       }
@@ -661,6 +1081,16 @@
         }
       }
     },
+    "Code Interpreter": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "代码解释器"
+          }
+        }
+      }
+    },
     "Code Review": {
       "localizations": {
         "zh-Hans": {
@@ -677,6 +1107,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "代码审查提示"
+          }
+        }
+      }
+    },
+    "Code review prompt:": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "代码审查提示："
           }
         }
       }
@@ -731,12 +1171,42 @@
         }
       }
     },
+    "Companion Device Needs an Update": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Companion 设备需要更新"
+          }
+        }
+      }
+    },
     "Companion Device Settings": {
       "localizations": {
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "Companion 设备设置"
+          }
+        }
+      }
+    },
+    "Companion Device Settings…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Companion 设备设置…"
+          }
+        }
+      }
+    },
+    "Companion device pairing has been disabled. Talk to your enterprise system administrator.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Companion 设备配对已被停用。请联系你的企业系统管理员。"
           }
         }
       }
@@ -767,6 +1237,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "配置状态栏"
+          }
+        }
+      }
+    },
+    "Connect to %@?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "连接到 %@？"
           }
         }
       }
@@ -911,6 +1391,16 @@
         }
       }
     },
+    "Copy Page Title": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拷贝页面标题"
+          }
+        }
+      }
+    },
     "Copy Path": {
       "localizations": {
         "zh-Hans": {
@@ -961,6 +1451,66 @@
         }
       }
     },
+    "Could not read the file: decompression failed.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法读取文件：解压失败。"
+          }
+        }
+      }
+    },
+    "Could not read the file: unarchiving decompressed data failed.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法读取文件：解压数据解档失败。"
+          }
+        }
+      }
+    },
+    "Could not save the page: \\(error.localizedDescription)": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法存储页面：\\(error.localizedDescription)"
+          }
+        }
+      }
+    },
+    "Could not write to \\(settingsURL.path): \\(error.localizedDescription)": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法写入 \\(settingsURL.path)：\\(error.localizedDescription)"
+          }
+        }
+      }
+    },
+    "Couldn\\u{2019}t Remove Hooks": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法移除钩子"
+          }
+        }
+      }
+    },
+    "Couldn’t find the specified font “%@” or the fallback standard fixed-pitch font, Menlo. Please ensure at least one of these is installed.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "找不到指定的字体“%@”或回退的标准等宽字体 Menlo。请确保至少安装了其中一种。"
+          }
+        }
+      }
+    },
     "Create": {
       "localizations": {
         "zh-Hans": {
@@ -977,6 +1527,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "自定义"
+          }
+        }
+      }
+    },
+    "Debug Autofill Fields": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "调试自动填充字段"
           }
         }
       }
@@ -1031,6 +1591,16 @@
         }
       }
     },
+    "Destination folder on remote host:": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "远程主机上的目标文件夹："
+          }
+        }
+      }
+    },
     "Detach": {
       "localizations": {
         "zh-Hans": {
@@ -1081,6 +1651,16 @@
         }
       }
     },
+    "Disable Orchestration": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "停用 Orchestration"
+          }
+        }
+      }
+    },
     "Disable Relative Timestamps": {
       "localizations": {
         "zh-Hans": {
@@ -1107,6 +1687,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "停用此提醒"
+          }
+        }
+      }
+    },
+    "Disable the Python API?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "停用 Python API？"
           }
         }
       }
@@ -1161,6 +1751,16 @@
         }
       }
     },
+    "Do you want to allow all apps running on this machine to use the Python API?\\n\\nThis will disable the check for Automation permission. If you agree, you’ll be prompted for administrator access to make the change.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "要允许此机器上运行的所有应用使用 Python API 吗？\\n\\n这将停用对“自动化”权限的检查。如果你同意，系统将提示你提供管理员访问权限以进行更改。"
+          }
+        }
+      }
+    },
     "Done": {
       "localizations": {
         "zh-Hans": {
@@ -1207,6 +1807,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "下载失败"
+          }
+        }
+      }
+    },
+    "Download Python Support?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "下载 Python 支持？"
           }
         }
       }
@@ -1361,6 +1971,16 @@
         }
       }
     },
+    "Edit Triggers…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "编辑触发器…"
+          }
+        }
+      }
+    },
     "Emulation Level": {
       "localizations": {
         "zh-Hans": {
@@ -1391,6 +2011,46 @@
         }
       }
     },
+    "Enable high-effort reasoning? Slower but may produce better results.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "启用高强度推理？较慢，但可能产生更好的结果。"
+          }
+        }
+      }
+    },
+    "Enable or disable thinking/reasoning mode": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "启用或停用思考/推理模式"
+          }
+        }
+      }
+    },
+    "Enable or disable web search": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "启用或停用网页搜索"
+          }
+        }
+      }
+    },
+    "Enable orchestration mode?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "启用 Orchestration 模式？"
+          }
+        }
+      }
+    },
     "Enabled": {
       "localizations": {
         "zh-Hans": {
@@ -1401,12 +2061,32 @@
         }
       }
     },
+    "Encoding…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "编码…"
+          }
+        }
+      }
+    },
     "End Task": {
       "localizations": {
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "结束任务"
+          }
+        }
+      }
+    },
+    "Enter Mark Name": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "输入标记名称"
           }
         }
       }
@@ -1441,12 +2121,32 @@
         }
       }
     },
+    "Enter a substring to match against status text (case-insensitive).": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "输入要与状态文本匹配的子字符串（不区分大小写）。"
+          }
+        }
+      }
+    },
     "Enter command to run when a new session is created": {
       "localizations": {
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "输入新建会话时要运行的命令"
+          }
+        }
+      }
+    },
+    "Enter expression to bind to this setting, or leave empty to clear the binding.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "输入要绑定到此设置的表达式，或留空以清除绑定。"
           }
         }
       }
@@ -1487,6 +2187,46 @@
           "stringUnit": {
             "state": "translated",
             "value": "输入标签..."
+          }
+        }
+      }
+    },
+    "Error Updating Settings": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "更新设置时出错"
+          }
+        }
+      }
+    },
+    "Error encoding recording.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "录制编码错误。"
+          }
+        }
+      }
+    },
+    "Error saving to %@: %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "存储到 %@ 时出错：%@"
+          }
+        }
+      }
+    },
+    "Esc +": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esc +"
           }
         }
       }
@@ -1541,6 +2281,66 @@
         }
       }
     },
+    "Failed to connect to %@:%d. Double-check that the host name is correct.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "连接到 %@:%d 失败。请再次确认主机名正确。"
+          }
+        }
+      }
+    },
+    "Failed to install hook": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "安装钩子失败"
+          }
+        }
+      }
+    },
+    "Failed to migrate session database (adding generation column): %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "迁移会话数据库失败（添加 generation 列）：%@"
+          }
+        }
+      }
+    },
+    "Failed to migrate session database (adding large_data column): %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "迁移会话数据库失败（添加 large_data 列）：%@"
+          }
+        }
+      }
+    },
+    "Failed to remove the file “%@”: %@\\n\\nPlease remove this file manually to require Automation permission for the Python API.\\n\\nThe Python API has been disabled for your security.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "移除文件“%@”失败：%@\\n\\n请手动移除此文件，以便为 Python API 要求“自动化”权限。\\n\\n为安全起见，Python API 已停用。"
+          }
+        }
+      }
+    },
+    "Failed to save debug log: %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "存储调试日志失败：%@"
+          }
+        }
+      }
+    },
     "Favicon": {
       "localizations": {
         "zh-Hans": {
@@ -1557,6 +2357,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "文件："
+          }
+        }
+      }
+    },
+    "Fill color:": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "填充颜色："
           }
         }
       }
@@ -1601,6 +2411,36 @@
         }
       }
     },
+    "Fork": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "派生"
+          }
+        }
+      }
+    },
+    "Forward": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "前进"
+          }
+        }
+      }
+    },
+    "Forward:": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "前进："
+          }
+        }
+      }
+    },
     "Function Call Result": {
       "localizations": {
         "zh-Hans": {
@@ -1617,6 +2457,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "生成"
+          }
+        }
+      }
+    },
+    "Generative AI features have been disabled. Talk to your enterprise system administrator.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "生成式 AI 功能已被停用。请联系你的企业系统管理员。"
           }
         }
       }
@@ -1681,6 +2531,46 @@
         }
       }
     },
+    "Go Up": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "向上"
+          }
+        }
+      }
+    },
+    "Go to Folder…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "前往文件夹…"
+          }
+        }
+      }
+    },
+    "Go to Home": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "前往主目录"
+          }
+        }
+      }
+    },
+    "Go to the folder:": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "前往文件夹："
+          }
+        }
+      }
+    },
     "Goal: ": {
       "localizations": {
         "zh-Hans": {
@@ -1721,12 +2611,42 @@
         }
       }
     },
+    "Hex codes:": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "十六进制代码："
+          }
+        }
+      }
+    },
+    "Hide clippings": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "隐藏剪贴"
+          }
+        }
+      }
+    },
     "Highlight Selection": {
       "localizations": {
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "高亮所选内容"
+          }
+        }
+      }
+    },
+    "History": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "历史记录"
           }
         }
       }
@@ -1761,12 +2681,42 @@
         }
       }
     },
+    "Import from %@ failed: %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "从 %@ 导入失败：%@"
+          }
+        }
+      }
+    },
     "Import…": {
       "localizations": {
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "导入…"
+          }
+        }
+      }
+    },
+    "In order to use the 1Password integration, iTerm2 needs to know where to find the CLI app named “op”. It’s normally in /usr/local/bin. If you have installed it elsewhere, please select Locate to provide its location.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "要使用 1Password 集成，iTerm2 需要知道名为“op”的 CLI 应用的位置。它通常在 /usr/local/bin。如果你安装在别处，请选择“定位”以提供其位置。"
+          }
+        }
+      }
+    },
+    "In order to use the LastPass integration, iTerm2 needs to know where to find the CLI app named “lpass”. Select Locate to provide its location.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "要使用 LastPass 集成，iTerm2 需要知道名为“lpass”的 CLI 应用的位置。选择“定位”以提供其位置。"
           }
         }
       }
@@ -1787,6 +2737,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "包含时间戳"
+          }
+        }
+      }
+    },
+    "Includes running sessions that were created from a profile that has since been deleted.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "包括由已删除的配置文件创建的正在运行的会话。"
           }
         }
       }
@@ -1841,6 +2801,16 @@
         }
       }
     },
+    "Install Auto-Enter Triggers": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "安装自动回车触发器"
+          }
+        }
+      }
+    },
     "Install Companion App on your iPhone": {
       "localizations": {
         "zh-Hans": {
@@ -1867,6 +2837,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "安装 TestFlight"
+          }
+        }
+      }
+    },
+    "Installed successfully!": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "安装成功！"
           }
         }
       }
@@ -1911,12 +2891,52 @@
         }
       }
     },
+    "It is taking a long time to locate all scripts under %@. Avoid storing many files or using network mounts for the scripts folder.\\n\\nContinue?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "定位 %@ 下的所有脚本耗时较长。避免在脚本文件夹中存储大量文件或使用网络挂载。\\n\\n继续？"
+          }
+        }
+      }
+    },
+    "It looks like you're not at a command prompt.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "看起来你不在命令提示符处。"
+          }
+        }
+      }
+    },
     "It's taking a long time for tmux to respond. If this is a old or funky system it might expect newline rather than carriage return to end commands. You can adjust the line terminator used by tmux integration in Settings.": {
       "localizations": {
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "tmux 响应时间过长。如果这是较旧或异常的系统，它可能期望用换行符而非回车符结束命令。你可以在设置中调整 tmux 集成使用的行终止符。"
+          }
+        }
+      }
+    },
+    "Job Terminated": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "任务已终止"
+          }
+        }
+      }
+    },
+    "Jobs Terminated": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "任务已终止"
           }
         }
       }
@@ -1947,6 +2967,36 @@
           "stringUnit": {
             "state": "translated",
             "value": "键盘快捷键："
+          }
+        }
+      }
+    },
+    "Keyboard input will be sent to %@.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "键盘输入将发送到 %@。"
+          }
+        }
+      }
+    },
+    "Kill tmux window, terminating its jobs, or hide it? ": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "终止 tmux 窗口及其任务，还是隐藏它？"
+          }
+        }
+      }
+    },
+    "Kill tmux window, terminating its jobs, or hide it? Hidden windows may be restored from the tmux dashboard.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "终止 tmux 窗口及其任务，还是隐藏它？隐藏的窗口可以从 tmux 仪表盘中恢复。"
           }
         }
       }
@@ -2041,6 +3091,46 @@
         }
       }
     },
+    "Line range:": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "行范围："
+          }
+        }
+      }
+    },
+    "Link Browser Session": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "链接浏览器会话"
+          }
+        }
+      }
+    },
+    "Link Terminal Session": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "链接终端会话"
+          }
+        }
+      }
+    },
+    "Link or unlink terminal/browser session": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "链接或取消链接终端/浏览器会话"
+          }
+        }
+      }
+    },
     "Literal Controls": {
       "localizations": {
         "zh-Hans": {
@@ -2051,12 +3141,52 @@
         }
       }
     },
+    "Live View": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "实时视图"
+          }
+        }
+      }
+    },
+    "Load settings from Gitlab settings-like URL on pasteboard?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "从剪贴板上的类 GitLab 设置 URL 载入设置？"
+          }
+        }
+      }
+    },
+    "Locales with wrong encoding": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "编码错误的语言环境"
+          }
+        }
+      }
+    },
     "Locate": {
       "localizations": {
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "定位"
+          }
+        }
+      }
+    },
+    "Location:": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "位置："
           }
         }
       }
@@ -2081,12 +3211,42 @@
         }
       }
     },
+    "Login Successful": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "登录成功"
+          }
+        }
+      }
+    },
     "Look Up in Dictionary": {
       "localizations": {
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "在字典中查询"
+          }
+        }
+      }
+    },
+    "Looks like the selection changed and is no longer a valid JSON object.\\nYou can find this feature under Edit > Replace Selection > Replace with Pretty-Printed JSON if you want to try again.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "所选内容似乎已更改，不再是有效的 JSON 对象。\\n如果你想重试，可以在“编辑 > 替换所选内容 > 替换为格式化 JSON”下找到此功能。"
+          }
+        }
+      }
+    },
+    "Looks like you're sshed somewhere. OK to send the command “%@”?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "看起来你已 ssh 到某处。发送命令“%@”？"
           }
         }
       }
@@ -2121,6 +3281,36 @@
         }
       }
     },
+    "Malformed file at %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "文件格式错误：%@"
+          }
+        }
+      }
+    },
+    "Manage Bookmarks": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "管理书签"
+          }
+        }
+      }
+    },
+    "Manage Prompts…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "管理提示…"
+          }
+        }
+      }
+    },
     "Manual AI Models": {
       "localizations": {
         "zh-Hans": {
@@ -2141,12 +3331,32 @@
         }
       }
     },
+    "Max width:": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "最大宽度："
+          }
+        }
+      }
+    },
     "Maximum Width:": {
       "localizations": {
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "最大宽度："
+          }
+        }
+      }
+    },
+    "Min width:": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "最小宽度："
           }
         }
       }
@@ -2187,6 +3397,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "将分组移到新窗口"
+          }
+        }
+      }
+    },
+    "Move OpenAI API key into the keychain? It is currently stored in User Defaults, which is not as secure.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "将 OpenAI API 密钥移入钥匙串？它当前存储在“用户默认设置”中，不够安全。"
           }
         }
       }
@@ -2251,6 +3471,46 @@
         }
       }
     },
+    "Name of new folder inside “\\(currentPath.absolutePath.lastPathComponent)”:": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "位于“\\(currentPath.absolutePath.lastPathComponent)”内的新文件夹名称："
+          }
+        }
+      }
+    },
+    "Name of the session variable to watch": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "要监视的会话变量名称"
+          }
+        }
+      }
+    },
+    "Name this prompt": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "为此提示命名"
+          }
+        }
+      }
+    },
+    "Name:": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "名称："
+          }
+        }
+      }
+    },
     "New Clipping": {
       "localizations": {
         "zh-Hans": {
@@ -2297,6 +3557,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "新输出"
+          }
+        }
+      }
+    },
+    "New Priority Pattern": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新优先级模式"
           }
         }
       }
@@ -2441,6 +3711,16 @@
         }
       }
     },
+    "New sessions will contain an environment variable that allows scripts to run without confirmation. Are you sure you want to enable this?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新会话将包含一个允许脚本无需确认即可运行的环境变量。确定要启用吗？"
+          }
+        }
+      }
+    },
     "Next": {
       "localizations": {
         "zh-Hans": {
@@ -2457,6 +3737,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "否"
+          }
+        }
+      }
+    },
+    "No Chats": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "暂无聊天"
           }
         }
       }
@@ -2491,6 +3781,26 @@
         }
       }
     },
+    "No additional parameters required.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无需其他参数。"
+          }
+        }
+      }
+    },
+    "No annotations. Select text and click a button above.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "没有注释。选择文本并点击上方的按钮。"
+          }
+        }
+      }
+    },
     "No locale selected.": {
       "localizations": {
         "zh-Hans": {
@@ -2517,6 +3827,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "未选择规则"
+          }
+        }
+      }
+    },
+    "No session selected.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未选择会话。"
           }
         }
       }
@@ -2571,12 +3891,32 @@
         }
       }
     },
+    "Now": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "现在"
+          }
+        }
+      }
+    },
     "OK": {
       "localizations": {
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "好"
+          }
+        }
+      }
+    },
+    "OK to paste %@ characters?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "粘贴 %@ 个字符？"
           }
         }
       }
@@ -2591,6 +3931,16 @@
         }
       }
     },
+    "OK to run “%@”?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "运行“%@”？"
+          }
+        }
+      }
+    },
     "Offer to launch automatically during installation": {
       "localizations": {
         "zh-Hans": {
@@ -2601,12 +3951,32 @@
         }
       }
     },
+    "OnePassword Unavailable": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Password 不可用"
+          }
+        }
+      }
+    },
     "Only on the workgroup leader": {
       "localizations": {
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "仅在工作组主导者上"
+          }
+        }
+      }
+    },
+    "Only one model is available for this chat.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此聊天只有一个可用模型。"
           }
         }
       }
@@ -2737,6 +4107,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "打开 URL…"
+          }
+        }
+      }
+    },
+    "Open in %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在 %@ 中打开"
           }
         }
       }
@@ -2901,6 +4281,16 @@
         }
       }
     },
+    "Paste Failed": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "粘贴失败"
+          }
+        }
+      }
+    },
     "Paste your API key": {
       "localizations": {
         "zh-Hans": {
@@ -2941,6 +4331,16 @@
         }
       }
     },
+    "Pick the profiles you\\u{2019}ll run claude in. ": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选择你要在其中运行 claude 的配置文件。"
+          }
+        }
+      }
+    },
     "Pin Tab": {
       "localizations": {
         "zh-Hans": {
@@ -2957,6 +4357,26 @@
           "stringUnit": {
             "state": "translated",
             "value": "纯文本"
+          }
+        }
+      }
+    },
+    "Please choose an account:": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请选择一个账户："
+          }
+        }
+      }
+    },
+    "Please retry your action in the password manager.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请在密码管理器中重试你的操作。"
           }
         }
       }
@@ -2981,12 +4401,42 @@
         }
       }
     },
+    "Preview (Space)": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "预览（空格）"
+          }
+        }
+      }
+    },
     "Preview Command": {
       "localizations": {
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "预览命令"
+          }
+        }
+      }
+    },
+    "Print…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "打印…"
+          }
+        }
+      }
+    },
+    "Process name to match in the foreground-job ancestry chain (case-insensitive)": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在前台任务祖先链中要匹配的进程名称（不区分大小写）"
           }
         }
       }
@@ -3001,12 +4451,92 @@
         }
       }
     },
+    "Profile:": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "配置文件："
+          }
+        }
+      }
+    },
     "Prompt name": {
       "localizations": {
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "提示名称"
+          }
+        }
+      }
+    },
+    "Prompt:": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "提示："
+          }
+        }
+      }
+    },
+    "Prompts": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "提示"
+          }
+        }
+      }
+    },
+    "Provider:": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "提供商："
+          }
+        }
+      }
+    },
+    "Put Chat in Linked Browser Session": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "将聊天放入链接的浏览器会话"
+          }
+        }
+      }
+    },
+    "Put Chat in Linked Terminal Session": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "将聊天放入链接的终端会话"
+          }
+        }
+      }
+    },
+    "PyPI Dependencies:": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PyPI 依赖项："
+          }
+        }
+      }
+    },
+    "Python Version:": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Python 版本："
           }
         }
       }
@@ -3071,6 +4601,16 @@
         }
       }
     },
+    "Re-pair Your Companion Device": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重新配对你的 Companion 设备"
+          }
+        }
+      }
+    },
     "Re-pair…": {
       "localizations": {
         "zh-Hans": {
@@ -3091,12 +4631,62 @@
         }
       }
     },
+    "Really Enable Clipboard Reporting?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "确定启用剪贴板报告？"
+          }
+        }
+      }
+    },
+    "Really remove annotation?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "确定移除注释？"
+          }
+        }
+      }
+    },
+    "Recent Tab Colors": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "最近标签页颜色"
+          }
+        }
+      }
+    },
     "Redact Selection": {
       "localizations": {
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "涂抹所选内容"
+          }
+        }
+      }
+    },
+    "Redaction method:": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "涂抹方式："
+          }
+        }
+      }
+    },
+    "Refresh": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "刷新"
           }
         }
       }
@@ -3127,6 +4717,96 @@
           "stringUnit": {
             "state": "translated",
             "value": "正则表达式："
+          }
+        }
+      }
+    },
+    "Regular expression the new value must match (leave blank to match any change)": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新值必须匹配的正则表达式（留空以匹配任何更改）"
+          }
+        }
+      }
+    },
+    "Regular expression to match the command line": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "匹配命令行的正则表达式"
+          }
+        }
+      }
+    },
+    "Regular expression to match the directory path": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "匹配目录路径的正则表达式"
+          }
+        }
+      }
+    },
+    "Regular expression to match the hostname": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "匹配主机名的正则表达式"
+          }
+        }
+      }
+    },
+    "Regular expression to match the notification message": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "匹配通知消息的正则表达式"
+          }
+        }
+      }
+    },
+    "Regular expression to match the sequence identifier": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "匹配序列标识符的正则表达式"
+          }
+        }
+      }
+    },
+    "Regular expression to match the username": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "匹配用户名的正则表达式"
+          }
+        }
+      }
+    },
+    "Relay room name": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "中继房间名称"
+          }
+        }
+      }
+    },
+    "Reload:": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重新加载："
           }
         }
       }
@@ -3171,6 +4851,26 @@
         }
       }
     },
+    "Remove Element": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "移除元素"
+          }
+        }
+      }
+    },
+    "Remove Expression Binding": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "移除表达式绑定"
+          }
+        }
+      }
+    },
     "Remove Named Mark": {
       "localizations": {
         "zh-Hans": {
@@ -3191,6 +4891,26 @@
         }
       }
     },
+    "Remove all key mappings before %@?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在 %@ 前移除所有按键映射？"
+          }
+        }
+      }
+    },
+    "Remove all key mappings before loading %@?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "载入 %@ 前移除所有按键映射？"
+          }
+        }
+      }
+    },
     "Remove from List": {
       "localizations": {
         "zh-Hans": {
@@ -3207,6 +4927,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "重命名"
+          }
+        }
+      }
+    },
+    "Rename Chat": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重命名聊天"
           }
         }
       }
@@ -3261,6 +4991,16 @@
         }
       }
     },
+    "Replacing it will overwrite its current contents.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "替换将覆盖其当前内容。"
+          }
+        }
+      }
+    },
     "Replay Recorded Keys": {
       "localizations": {
         "zh-Hans": {
@@ -3311,12 +5051,42 @@
         }
       }
     },
+    "Reporting the content of the clipboard to apps running inside iTerm2 may expose sensitive information such as passwords. Think carefully before enabling this.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "将剪贴板内容报告给在 iTerm2 内运行的应用可能会暴露密码等敏感信息。启用前请慎重考虑。"
+          }
+        }
+      }
+    },
+    "Reset ": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重置 "
+          }
+        }
+      }
+    },
     "Reset Integration Configuration": {
       "localizations": {
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "重置集成配置"
+          }
+        }
+      }
+    },
+    "Reset to %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重置为 %@"
           }
         }
       }
@@ -3391,12 +5161,42 @@
         }
       }
     },
+    "Reveal %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "显示 %@"
+          }
+        }
+      }
+    },
     "Reveal Annotation": {
       "localizations": {
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "显示注释"
+          }
+        }
+      }
+    },
+    "Reveal Linked Terminal Session": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "显示链接的终端会话"
+          }
+        }
+      }
+    },
+    "Reveal Linked Web Browser Session": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "显示链接的网页浏览器会话"
           }
         }
       }
@@ -3576,7 +5376,17 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "保存"
+            "value": "存储"
+          }
+        }
+      }
+    },
+    "Save As:": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "存储为："
           }
         }
       }
@@ -3587,6 +5397,26 @@
           "stringUnit": {
             "state": "translated",
             "value": "存储为…"
+          }
+        }
+      }
+    },
+    "Save Current as New…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "另存为…"
+          }
+        }
+      }
+    },
+    "Save Failed": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "存储失败"
           }
         }
       }
@@ -3621,12 +5451,22 @@
         }
       }
     },
+    "Save Page As…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "将页面存储为…"
+          }
+        }
+      }
+    },
     "Save Retrospective Debug Logs": {
       "localizations": {
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "保存回顾性调试日志"
+            "value": "存储回顾性调试日志"
           }
         }
       }
@@ -3731,12 +5571,62 @@
         }
       }
     },
+    "Search with \\(searchEngineName)": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用 \\(searchEngineName) 搜索"
+          }
+        }
+      }
+    },
+    "Secure keyboard entry is enabled.\\n\\nIn macOS 12 and later, enabling Secure Keyboard Entry prevents other programs from being activated. This affects the `open` command as well as the panel shown when using Touch ID for sudo.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已启用安全键盘输入。\\n\\n在 macOS 12 及更高版本中，启用安全键盘输入会阻止其他程序被激活。这会影响 `open` 命令以及使用 Touch ID 进行 sudo 时显示的面板。"
+          }
+        }
+      }
+    },
     "Select": {
       "localizations": {
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "选择"
+          }
+        }
+      }
+    },
+    "Select AI model": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选择 AI 模型"
+          }
+        }
+      }
+    },
+    "Select AI provider for new chats": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "为新聊天选择 AI 提供商"
+          }
+        }
+      }
+    },
+    "Select AI service tier": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选择 AI 服务层级"
           }
         }
       }
@@ -3757,6 +5647,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "选择命令输出"
+          }
+        }
+      }
+    },
+    "Select OpenAI service tier. Priority is faster; Flex is lower-cost and slower.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选择 OpenAI 服务层级。Priority 更快；Flex 成本更低但更慢。"
           }
         }
       }
@@ -3791,12 +5691,82 @@
         }
       }
     },
+    "Select a model for this chat.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "为此聊天选择模型。"
+          }
+        }
+      }
+    },
+    "Select a model for this chat. The provider is fixed after the chat is created.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "为此聊天选择模型。聊天创建后提供商将固定。"
+          }
+        }
+      }
+    },
     "Select a profile to use for this session. Your selection will be saved back to the arrangement.": {
       "localizations": {
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "选择此会话要使用的配置文件。你的选择将保存回窗口布局。"
+          }
+        }
+      }
+    },
+    "Select a workgroup on the left or click + to create one.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在左侧选择工作组，或点击 + 创建一个。"
+          }
+        }
+      }
+    },
+    "Select an Account": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选择账户"
+          }
+        }
+      }
+    },
+    "Select reasoning effort": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选择推理强度"
+          }
+        }
+      }
+    },
+    "Select reasoning effort for models that support it": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "为支持它的模型选择推理强度"
+          }
+        }
+      }
+    },
+    "Select text in the terminal, then click a button below.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在终端中选择文本，然后点击下方的按钮。"
           }
         }
       }
@@ -3827,6 +5797,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "重新发送"
+          }
+        }
+      }
+    },
+    "Send Commands & Output to AI Automatically": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自动将命令和输出发送给 AI"
           }
         }
       }
@@ -3887,6 +5867,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "会话笔记"
+          }
+        }
+      }
+    },
+    "Session status changed": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "会话状态已更改"
           }
         }
       }
@@ -3961,6 +5951,16 @@
         }
       }
     },
+    "Setup Could Not Be Completed": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法完成设置"
+          }
+        }
+      }
+    },
     "Shortcut": {
       "localizations": {
         "zh-Hans": {
@@ -3977,6 +5977,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "显示调试信息"
+          }
+        }
+      }
+    },
+    "Show Hidden Files": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "显示隐藏文件"
           }
         }
       }
@@ -4021,6 +6031,16 @@
         }
       }
     },
+    "Show or hide the chat list": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "显示或隐藏聊天列表"
+          }
+        }
+      }
+    },
     "Size Multiple:": {
       "localizations": {
         "zh-Hans": {
@@ -4051,6 +6071,36 @@
         }
       }
     },
+    "Snooze": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "稍后提醒"
+          }
+        }
+      }
+    },
+    "Some scripts will not be available until the app has restarted or you change the scripts folder.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在应用重启或你更改脚本文件夹之前，某些脚本将不可用。"
+          }
+        }
+      }
+    },
+    "Some windows had trouble restoring last time iTerm2 launched. Try again?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "上次 iTerm2 启动时某些窗口恢复出现问题。重试？"
+          }
+        }
+      }
+    },
     "Split Pane Horizontally": {
       "localizations": {
         "zh-Hans": {
@@ -4067,6 +6117,36 @@
           "stringUnit": {
             "state": "translated",
             "value": "垂直拆分窗格"
+          }
+        }
+      }
+    },
+    "Split current pane horizontally with profile:": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "使用配置文件水平拆分当前窗格："
+          }
+        }
+      }
+    },
+    "Split current pane vertically with profile:": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "使用配置文件垂直拆分当前窗格："
+          }
+        }
+      }
+    },
+    "Split:": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拆分："
           }
         }
       }
@@ -4231,12 +6311,32 @@
         }
       }
     },
+    "Tag Name": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "标签名称"
+          }
+        }
+      }
+    },
     "Tags": {
       "localizations": {
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "标签"
+          }
+        }
+      }
+    },
+    "Tags:": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "标签："
           }
         }
       }
@@ -4281,12 +6381,32 @@
         }
       }
     },
+    "The LastPass service took too long to respond. \\(message)": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LastPass 服务响应超时。\\(message)"
+          }
+        }
+      }
+    },
     "The Python API allows scripts you run to control iTerm2 and access all its data.": {
       "localizations": {
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "Python API 允许你运行的脚本控制 iTerm2 并访问其所有数据。"
+          }
+        }
+      }
+    },
+    "The Python environment for “%@” is missing (the shared runtime may have been deleted). Rebuild it from its saved requirements now?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "“%@”的 Python 环境缺失（共享运行时可能已被删除）。立即从其存储的依赖中重建？"
           }
         }
       }
@@ -4301,12 +6421,252 @@
         }
       }
     },
+    "The download “%@” is larger than %@. Continue?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "下载“%@”大于 %@。继续？"
+          }
+        }
+      }
+    },
+    "The existing installation of the OnePassword CLI at \\(path) is an incompatible. The iTerm2 integration requires version 2.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\\(path) 处已安装的 1Password CLI 不兼容。iTerm2 集成需要版本 2。"
+          }
+        }
+      }
+    },
+    "The file at “%@” could not be quarantined or deleted! It is dangerous and should be removed.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "“%@”处的文件无法隔离或删除！它很危险，应被移除。"
+          }
+        }
+      }
+    },
+    "The folder “%@” contains no images, so no background image will be shown.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "文件夹“%@”不包含图像，因此不会显示背景图像。"
+          }
+        }
+      }
+    },
+    "The folder “%@” could not be read.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "文件夹“%@”无法读取。"
+          }
+        }
+      }
+    },
+    "The folder “%@” could not be used because it does not exist or is not a directory.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "文件夹“%@”无法使用，因为它不存在或不是目录。"
+          }
+        }
+      }
+    },
+    "The global keyboard shortcut you have set is overridden by at least one profile. ": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你设置的全局键盘快捷键被至少一个配置文件覆盖。"
+          }
+        }
+      }
+    },
+    "The global keyboard shortcut you have set is overridden by at least one profile. Check your profiles’ keyboard settings if it doesn't work as expected.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你设置的全局键盘快捷键被至少一个配置文件覆盖。如果它没有按预期工作，请检查配置文件的键盘设置。"
+          }
+        }
+      }
+    },
+    "The iTerm2 Buddy app on your phone is too old to connect to ": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你手机上的 iTerm2 Buddy 应用版本太旧，无法连接到 "
+          }
+        }
+      }
+    },
+    "The image “%@” could not be loaded because it is corrupt or not a supported format.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "图像“%@”无法载入，因为它已损坏或不是受支持的格式。"
+          }
+        }
+      }
+    },
+    "The image “%@” could not be loaded because the file is empty.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "图像“%@”无法载入，因为文件为空。"
+          }
+        }
+      }
+    },
+    "The installer enabled iTerm2\\u{2019}s ": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "安装程序已启用 iTerm2 的 "
+          }
+        }
+      }
+    },
+    "The key-binding action Copy Interpolated String “%@” failed:\\n\\n%@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "按键绑定操作“拷贝内插字符串”“%@”失败：\\n\\n%@"
+          }
+        }
+      }
+    },
+    "The keyboard shortcut you have set for this profile ": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你为此配置文件设置的键盘快捷键 "
+          }
+        }
+      }
+    },
+    "The keyboard shortcut you have set for this profile will take precedence over an existing shortcut for the same key combination in a global shortcut.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你为此配置文件设置的键盘快捷键将优先于全局快捷键中的同一按键组合的现有快捷键。"
+          }
+        }
+      }
+    },
     "The location of your Application Support directory appears to have moved or its contents have changed unexpectedly. As a precaution, the authentication mechanism for Python API scripts for iTerm2 has been reverted to always require Automation permission.": {
       "localizations": {
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "你的 Application Support 目录位置似乎已移动或其内容发生意外更改。为以防万一，iTerm2 的 Python API 脚本认证机制已恢复为始终要求“自动化”权限。"
+          }
+        }
+      }
+    },
+    "The model is fixed after the chat starts.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "聊天开始后模型将固定。"
+          }
+        }
+      }
+    },
+    "The recording could not be loaded. It might be corrupted.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "录制无法载入。它可能已损坏。"
+          }
+        }
+      }
+    },
+    "The setting could not be changed: %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法更改设置：%@"
+          }
+        }
+      }
+    },
+    "The shared Python runtime is Intel-only and cannot run on this version of macOS. Download the Apple Silicon version now?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "共享 Python 运行时仅支持 Intel，无法在此版本的 macOS 上运行。立即下载 Apple Silicon 版本？"
+          }
+        }
+      }
+    },
+    "The website \\(origin) wants to access \\(permissionType.displayName.lowercased()).": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "网站 \\(origin) 想要访问\\(permissionType.displayName.lowercased())。"
+          }
+        }
+      }
+    },
+    "There was a problem finding or creating the config directory. You can set “Settings > Advanced > Folder for config files“ to set a custom location for this directory. Until this is fixed, some features will be disabled.\\n%@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "查找或创建配置目录时出现问题。你可以设置“设置 > 高级 > 配置文件文件夹”为此目录指定自定义位置。在此问题修复前，某些功能将被停用。\\n%@"
+          }
+        }
+      }
+    },
+    "There was a problem finding or creating your application support directory. iTerm2 won't work very well until this problem is fixed.\\n\\nIt should be at ~/Library/Application Support/iTerm2.\\n\\nThe error was:\\n%@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "查找或创建应用支持目录时出现问题。在此问题修复前，iTerm2 将无法正常工作。\\n\\n它应位于 ~/Library/Application Support/iTerm2。\\n\\n错误为：\\n%@"
+          }
+        }
+      }
+    },
+    "There was a problem saving snippets to “%@”.\\n\\nThe error was:\\n%@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "将代码片段存储到“%@”时出现问题。\\n\\n错误为：\\n%@"
+          }
+        }
+      }
+    },
+    "There's a lot of printing going on. Want to keep allowing it?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在大量打印。要继续允许吗？"
           }
         }
       }
@@ -4321,12 +6681,172 @@
         }
       }
     },
+    "This instance of iTerm2 is already attached to this session": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此 iTerm2 实例已附加到此会话"
+          }
+        }
+      }
+    },
+    "This is the last nightly build that will support macOS 11 and older. Sorry for the inconvenience!": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这是支持 macOS 11 及更早版本的最后一个 nightly 构建。造成不便，敬请谅解！"
+          }
+        }
+      }
+    },
+    "This nightly build is over 30 days old. Consider updating soon: you may be suffering from awful bugs in blissful ignorance.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此 nightly 构建已超过 30 天。建议尽快更新：你可能在不知不觉中深受严重 bug 之苦。"
+          }
+        }
+      }
+    },
+    "This preset does not have separate colors for light mode and dark mode.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此预设没有为浅色模式和深色模式提供独立的颜色。"
+          }
+        }
+      }
+    },
+    "This preset has colors for both light mode and dark mode.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此预设同时包含浅色模式和深色模式的颜色。"
+          }
+        }
+      }
+    },
+    "This recording could not be loaded because it is missing critical information.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此录制无法载入，因为它缺少关键信息。"
+          }
+        }
+      }
+    },
+    "This recording is from a newer version of iTerm2 and cannot be replayed in this version.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此录制来自较新版本的 iTerm2，无法在此版本中回放。"
+          }
+        }
+      }
+    },
+    "This removes the cc-status hook from ": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这将从以下位置移除 cc-status 钩子："
+          }
+        }
+      }
+    },
+    "This version of iTerm2 is too old to connect to the iTerm2 ": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此版本的 iTerm2 太旧，无法连接到 iTerm2 "
+          }
+        }
+      }
+    },
+    "This will erase iTerm2’s configuration settings for this password manager. The actual passwords will remain unaffected. You’ll have to go through some setup steps to use it again. This action cannot be undone.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这将清除 iTerm2 对此密码管理器的配置设置。实际密码不受影响。要再次使用它，你需要重新完成一些设置步骤。此操作无法撤销。"
+          }
+        }
+      }
+    },
+    "This will move the script into the AutoLaunch folder.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这会将脚本移入 AutoLaunch 文件夹。"
+          }
+        }
+      }
+    },
+    "Timeout": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "超时"
+          }
+        }
+      }
+    },
     "Title": {
       "localizations": {
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "标题"
+          }
+        }
+      }
+    },
+    "Title:": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "标题："
+          }
+        }
+      }
+    },
+    "To have a new window open in a specific space, ": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "要让新窗口在特定空间中打开，"
+          }
+        }
+      }
+    },
+    "To have a new window open in a specific space, make sure that Spaces is enabled in System Preferences and that it is configured to switch directly to a space with ^ Number Keys.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "要让新窗口在特定空间中打开，请确保“系统设置”中启用了“空间”，并且配置为使用 ^ 数字键直接切换空间。"
+          }
+        }
+      }
+    },
+    "To run Python scripts, iTerm2 needs to download uv ": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "要运行 Python 脚本，iTerm2 需要下载 uv "
           }
         }
       }
@@ -4371,6 +6891,16 @@
         }
       }
     },
+    "Toolbar Items:": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "工具栏项目："
+          }
+        }
+      }
+    },
     "Touch Bar Label": {
       "localizations": {
         "zh-Hans": {
@@ -4407,6 +6937,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "无超时重试"
+          }
+        }
+      }
+    },
+    "Type a pathname or select from the pop-up menu": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "输入路径名或从弹出菜单中选择"
           }
         }
       }
@@ -4471,6 +7011,16 @@
         }
       }
     },
+    "Unable to create folder": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法创建文件夹"
+          }
+        }
+      }
+    },
     "Undo Close Session": {
       "localizations": {
         "zh-Hans": {
@@ -4521,6 +7071,26 @@
         }
       }
     },
+    "Uninstall Claude Code Integration?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "卸载 Claude Code 集成？"
+          }
+        }
+      }
+    },
+    "Uninstall of %@ failed. Check the pip output for errors.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "卸载 %@ 失败。请检查 pip 输出中的错误。"
+          }
+        }
+      }
+    },
     "Unknown": {
       "localizations": {
         "zh-Hans": {
@@ -4531,12 +7101,42 @@
         }
       }
     },
+    "Unlink Terminal Session": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "取消链接终端会话"
+          }
+        }
+      }
+    },
+    "Unlink Web Browser Session": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "取消链接网页浏览器会话"
+          }
+        }
+      }
+    },
     "Unlock All Panes in Tab": {
       "localizations": {
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "解锁标签页中的所有窗格"
+          }
+        }
+      }
+    },
+    "Unmute Current Page": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "取消静音当前页面"
           }
         }
       }
@@ -4597,6 +7197,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "更新配置文件"
+          }
+        }
+      }
+    },
+    "Update iTerm2 Buddy on your iPhone": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在你的 iPhone 上更新 iTerm2 Buddy"
           }
         }
       }
@@ -4671,12 +7281,92 @@
         }
       }
     },
+    "Version 2 of the OnePassword CLI could not be found. Check that \\(OnePasswordUtils.pathToCLI) is installed and has version 2.x.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "找不到 1Password CLI 版本 2。请检查 \\(OnePasswordUtils.pathToCLI) 已安装且为 2.x 版本。"
+          }
+        }
+      }
+    },
+    "View Source": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "查看源代码"
+          }
+        }
+      }
+    },
+    "Viewing archived clippings (\\(historyIndex + 1) of \\(total))": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在查看已归档的剪贴（\\(historyIndex + 1) / \\(total)）"
+          }
+        }
+      }
+    },
+    "Warning! This profile uses a custom locale that doesn't use UTF-8 as its character encoding, but your profile *is* using UTF-8. This can cause error messages and non-ASCII text to appear wrong.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "警告！此配置文件使用的自定义语言环境不使用 UTF-8 作为字符编码，但你的配置文件*确实*使用 UTF-8。这可能导致错误消息和非 ASCII 文本显示异常。"
+          }
+        }
+      }
+    },
+    "Web Page Alert": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "网页提醒"
+          }
+        }
+      }
+    },
+    "Web Page Confirmation": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "网页确认"
+          }
+        }
+      }
+    },
+    "What are you trying to do? I'll suggest commands and explain their output.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你想做什么？我会建议命令并解释其输出。"
+          }
+        }
+      }
+    },
     "What dependency would you like to add?": {
       "localizations": {
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "你想添加哪个依赖项？"
+          }
+        }
+      }
+    },
+    "What gets changed": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "将更改什么"
           }
         }
       }
@@ -4691,12 +7381,112 @@
         }
       }
     },
+    "When enabled, only the most recent status from each workgroup is shown.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "启用后，仅显示每个工作组的最新状态。"
+          }
+        }
+      }
+    },
+    "When iTerm2 is excluded from the dock, you can ": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "当 iTerm2 从 Dock 中排除时，你可以 "
+          }
+        }
+      }
+    },
+    "When iTerm2 is excluded from the dock, you can always get back to Preferences using the status bar item. Look for an iTerm2 icon on the right side of your menu bar.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "当 iTerm2 从 Dock 中排除时，你始终可以通过状态栏项目回到“设置”。请查看菜单栏右侧的 iTerm2 图标。"
+          }
+        }
+      }
+    },
     "When set, the trigger fires only for the workgroup leader (the session that originally entered the workgroup). Peers such as the Code Review and Diff sessions do not, so reloading or quitting one keeps the workgroup open.": {
       "localizations": {
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "设置后，触发器仅在工作组主导者（最初进入工作组的会话）上触发。代码审查和差异等对等会话不会触发，因此重新载入或退出其中一个会话不会关闭工作组。"
+          }
+        }
+      }
+    },
+    "When you activate Semantic History on a filename, the associated app loads the file.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "当你在文件名上启用语义历史记录时，关联的应用会载入该文件。"
+          }
+        }
+      }
+    },
+    "When you activate Semantic History on a text file, the specified editor opens it.\\nOther kinds of files will be opened with their default apps.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "当你在文本文件上启用语义历史记录时，指定的编辑器会打开它。\\n其他类型的文件将用默认应用打开。"
+          }
+        }
+      }
+    },
+    "When you check “Remember my choice” or “Suppress this message ": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "当你勾选“记住我的选择”或“抑制此消息"
+          }
+        }
+      }
+    },
+    "Where would you like to save this download?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你想将此下载存储到哪里？"
+          }
+        }
+      }
+    },
+    "While attaching to tmux, some tabs were found whose color is pure red. This may be due to a bug in early versions of iTerm2 3.6.x. Would you like to reset those tabs’ colors?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "附加到 tmux 时，发现某些标签页的颜色为纯红色。这可能是 iTerm2 3.6.x 早期版本中的 bug 所致。要重置这些标签页的颜色吗？"
+          }
+        }
+      }
+    },
+    "While loading %@: %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "载入 %@ 时：%@"
+          }
+        }
+      }
+    },
+    "While parsing %@: %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解析 %@ 时：%@"
           }
         }
       }
@@ -4721,12 +7511,52 @@
         }
       }
     },
+    "You can also try opening a terminal window and running `lpass login \\(email)`.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你也可以尝试打开终端窗口并运行 `lpass login \\(email)`。"
+          }
+        }
+      }
+    },
+    "You can choose to use both, so that your file name ends in “.%@.%@”.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你可以选择同时使用两者，这样文件名将以“.%@.%@”结尾。"
+          }
+        }
+      }
+    },
+    "You can find this feature under Edit > Replace Selection > Replace with Pretty-Printed JSON if you want to use it again.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "如果你想再次使用此功能，可以在“编辑 > 替换所选内容 > 替换为格式化 JSON”下找到它。"
+          }
+        }
+      }
+    },
     "You can use captured strings from the Smart Selection's regular expression in the parameter. Use \\\\0 for match, \\\\1…\\\\9 for match groups, \\\\d for directory, \\\\u for user, \\\\h for host.": {
       "localizations": {
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "你可以在参数中使用智能选择正则表达式捕获的字符串。使用 \\\\0 表示匹配项，\\\\1…\\\\9 表示匹配组，\\\\d 表示目录，\\\\u 表示用户，\\\\h 表示主机。"
+          }
+        }
+      }
+    },
+    "You can't customize that button": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你不能自定义该按钮"
           }
         }
       }
@@ -4751,12 +7581,112 @@
         }
       }
     },
+    "You have chosen to have an option key act as Meta. ": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你已选择让选项键充当 Meta。"
+          }
+        }
+      }
+    },
+    "You have chosen to have an option key act as Meta. This option is useful for backward compatibility with older systems. The \\": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你已选择让选项键充当 Meta。此选项有助于与较旧系统的向后兼容。\\"
+          }
+        }
+      }
+    },
     "You must enable AI features to use Codecierge.": {
       "localizations": {
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "你必须启用 AI 功能才能使用 Codecierge。"
+          }
+        }
+      }
+    },
+    "You must install Rosetta 2 in order to use the Python API. Install it now?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "要使用 Python API，你必须安装 Rosetta 2。立即安装？"
+          }
+        }
+      }
+    },
+    "You must restart iTerm2 for this change to take effect.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你必须重启 iTerm2 才能使此更改生效。"
+          }
+        }
+      }
+    },
+    "You must restart iTerm2 to turn on this feature.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你必须重启 iTerm2 才能开启此功能。"
+          }
+        }
+      }
+    },
+    "You need an open terminal window to make a screenshot.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你需要一个打开的终端窗口才能截屏。"
+          }
+        }
+      }
+    },
+    "You probably don’t want to turn this on. ": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你可能不想开启这个。"
+          }
+        }
+      }
+    },
+    "You probably don’t want to turn this on. It will confuse interactive programs. You might want it if you work mostly with East Asian text combined with legacy or mathematical character sets. Are you sure you want this?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你可能不想开启这个。它会混淆交互式程序。如果你主要处理结合了传统或数学字符集的东亚文本，你可能会需要它。确定要这样吗？"
+          }
+        }
+      }
+    },
+    "You probably don’t want to turn this on. It's not suitable for keeping ssh sessions alive, even with a code of “0”. Are you sure you want this?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你可能不想开启这个。它不适合保持 ssh 会话存活，即使使用代码“0”也是如此。确定要这样吗？"
+          }
+        }
+      }
+    },
+    "You're about to paste a string with tabs.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你即将粘贴包含制表符的字符串。"
           }
         }
       }
@@ -4791,6 +7721,56 @@
         }
       }
     },
+    "You’re up to date!": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你已是最新版本！"
+          }
+        }
+      }
+    },
+    "[%d profiles not shown]": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "[未显示 %d 个配置文件]"
+          }
+        }
+      }
+    },
+    "\\(detail) Continue removing the ": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\\(detail) 继续移除 "
+          }
+        }
+      }
+    },
+    "\\(name) changed from “\\(fromText)” to “\\(toText)”.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\\(name) 已从“\\(fromText)”更改为“\\(toText)”。"
+          }
+        }
+      }
+    },
+    "\\(providerName) doesn’t accept this file type as a chat attachment: \\(names).": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\\(providerName) 不接受此文件类型作为聊天附件：\\(names)。"
+          }
+        }
+      }
+    },
     "columns by": {
       "localizations": {
         "zh-Hans": {
@@ -4821,12 +7801,82 @@
         }
       }
     },
+    "iTerm2 Needs an Update": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iTerm2 需要更新"
+          }
+        }
+      }
+    },
+    "iTerm2 can display files like this in its built-in web browser! Would you like to open this link in iTerm2?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iTerm2 可以在其内置网页浏览器中显示此类文件！要在 iTerm2 中打开此链接吗？"
+          }
+        }
+      }
+    },
     "iTerm2 can display web pages! But first you must download the Browser Plugin.": {
       "localizations": {
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "iTerm2 可以显示网页！但首先你必须下载浏览器插件。"
+          }
+        }
+      }
+    },
+    "iTerm2 can display web pages! Would you like to open this link in iTerm2?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iTerm2 可以显示网页！要在 iTerm2 中打开此链接吗？"
+          }
+        }
+      }
+    },
+    "iTerm2 cannot watch the job \\(displayName) with process ID \\(pid) because it has already terminated.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iTerm2 无法监视进程 ID 为 \\(pid) 的任务 \\(displayName)，因为它已经终止。"
+          }
+        }
+      }
+    },
+    "iTerm2 has moved to the new relay. For your Mac and iPhone to keep connecting, ": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iTerm2 已迁移到新中继。为了让你的 Mac 和 iPhone 保持连接，"
+          }
+        }
+      }
+    },
+    "iTerm2 no longer warns before a multi-line paste, unless you are at the shell prompt.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iTerm2 不再在粘贴多行前发出警告，除非你位于 Shell 提示符处。"
+          }
+        }
+      }
+    },
+    "iTerm2’s cc-status hook is no longer in ~/.claude/settings.json. This usually means Claude Code rewrote that file. Reinstall the hook so per-tab status indicators (“Working…,” “Waiting…”) work again?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iTerm2 的 cc-status 钩子已不在 ~/.claude/settings.json 中。这通常意味着 Claude Code 重写了该文件。重新安装钩子，以便每个标签页的状态指示器（“正在处理…”、“正在等待…”）重新工作？"
           }
         }
       }
@@ -4861,12 +7911,42 @@
         }
       }
     },
+    "seconds": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "秒"
+          }
+        }
+      }
+    },
+    "to": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "到"
+          }
+        }
+      }
+    },
     "untitled folder": {
       "localizations": {
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "未命名文件夹"
+          }
+        }
+      }
+    },
+    "↩ to submit": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "↩ 提交"
           }
         }
       }

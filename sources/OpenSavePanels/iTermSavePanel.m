@@ -404,7 +404,7 @@ typedef NS_ENUM(NSUInteger, iTermSavePanelAction) {
     if ([proposedExtension isEqualToString:self.requiredExtension]) {
         return YES;
     }
-    iTermWarningSelection selection = [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"You can choose to use both, so that your file name ends in “.%@.%@”.", proposedExtension, _requiredExtension]
+    iTermWarningSelection selection = [iTermWarning showWarningWithTitle:[NSString stringWithFormat:NSLocalizedString(@"You can choose to use both, so that your file name ends in “.%@.%@”.", @"UI"), proposedExtension, _requiredExtension]
                                                                  actions:@[ [NSString stringWithFormat:@"Use .%@", _requiredExtension],
                                                                             NSLocalizedString(@"Cancel", @"UI"),
                                                                             @"Use both" ]

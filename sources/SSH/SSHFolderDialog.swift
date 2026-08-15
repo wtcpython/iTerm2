@@ -36,8 +36,8 @@ class SSHFolderDialog: NSObject {
 
         // Initialize alert
         self.alert = NSAlert()
-        alert.messageText = "Go to the folder:"
-        alert.informativeText = "Type a pathname or select from the pop-up menu"
+        alert.messageText = NSLocalizedString("Go to the folder:", comment: "UI")
+        alert.informativeText = NSLocalizedString("Type a pathname or select from the pop-up menu", comment: "UI")
         alert.addButton(withTitle: NSLocalizedString("Go", comment: "UI"))
         alert.addButton(withTitle: NSLocalizedString("Cancel", comment: "UI"))
 

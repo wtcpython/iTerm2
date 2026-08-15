@@ -34,7 +34,7 @@ extension ExpressionBindableView where Self: NSView, Self: NSAlertDelegate {
             menu.addItem(item)
         }
         if hasExpression {
-            let item = NSMenuItem(title: "Remove Expression Binding",
+            let item = NSMenuItem(title: NSLocalizedString("Remove Expression Binding", comment: "UI"),
                                   action: #selector(removeBinding(_:)),
                                   keyEquivalent: "")
             item.target = self
@@ -74,8 +74,8 @@ extension ExpressionBindableView where Self: NSView, Self: NSAlertDelegate {
         textField.delegate = textFieldDelegate
 
         let alert = NSAlert()
-        alert.messageText = "Bind Expression to Setting"
-        alert.informativeText = "Enter expression to bind to this setting, or leave empty to clear the binding."
+        alert.messageText = NSLocalizedString("Bind Expression to Setting", comment: "UI")
+        alert.informativeText = NSLocalizedString("Enter expression to bind to this setting, or leave empty to clear the binding.", comment: "UI")
         alert.accessoryView = textField
         alert.layout()
         DispatchQueue.main.async {

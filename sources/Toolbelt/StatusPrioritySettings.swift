@@ -189,8 +189,8 @@ private class PriorityDataProvider: CRUDDataProvider {
             return
         }
         let alert = NSAlert()
-        alert.messageText = "New Priority Pattern"
-        alert.informativeText = "Enter a substring to match against status text (case-insensitive)."
+        alert.messageText = NSLocalizedString("New Priority Pattern", comment: "UI")
+        alert.informativeText = NSLocalizedString("Enter a substring to match against status text (case-insensitive).", comment: "UI")
         alert.addButton(withTitle: NSLocalizedString("OK", comment: "UI"))
         alert.addButton(withTitle: NSLocalizedString("Cancel", comment: "UI"))
 
@@ -298,7 +298,7 @@ private final class StatusPriorityViewController: NSViewController, CRUDTableVie
                                    target: self,
                                    action: #selector(mergeWorkgroupsToggleChanged(_:)))
         mergeToggle.state = StatusPrioritySettings.shared.mergeWorkgroups ? .on : .off
-        mergeToggle.toolTip = "When enabled, only the most recent status from each workgroup is shown."
+        mergeToggle.toolTip = NSLocalizedString("When enabled, only the most recent status from each workgroup is shown.", comment: "UI")
         mergeToggle.frame = NSRect(x: margin,
                                    y: mergeToggleY,
                                    width: width - 2 * margin,

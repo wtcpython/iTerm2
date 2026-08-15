@@ -319,7 +319,7 @@ static const NSTimeInterval iTermStatusBarGitComponentDefaultCadence = 2;
     if (_session) {
         NSMenu *menu = [[NSMenu alloc] init];
         NSString *actionName = [_maker.status stringByReplacingOccurrencesOfString:@"…" withString:@""];
-        NSMenuItem *item = [[NSMenuItem alloc] initWithTitle:[NSString stringWithFormat:@"Cancel %@", actionName] action:@selector(killSession:) keyEquivalent:@""];
+        NSMenuItem *item = [[NSMenuItem alloc] initWithTitle:[NSString stringWithFormat:NSLocalizedString(@"Cancel %@", @"UI"), actionName] action:@selector(killSession:) keyEquivalent:@""];
         item.target = self;
         [menu addItem:item];
 
@@ -579,7 +579,7 @@ static const NSTimeInterval iTermStatusBarGitComponentDefaultCadence = 2;
     }];
     NSString *command = [NSString stringWithFormat:@"git %@", [quotedArgs componentsJoinedByString:@" "]];
     const iTermWarningSelection selection =
-    [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"Looks like you're sshed somewhere. OK to send the command “%@”?", command]
+    [iTermWarning showWarningWithTitle:[NSString stringWithFormat:NSLocalizedString(@"Looks like you're sshed somewhere. OK to send the command “%@”?", @"UI"), command]
                                actions:@[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI") ]
                              accessory:nil
                             identifier:@"GitPollerSshWarning"

@@ -128,7 +128,7 @@ final class CompanionPresenceController: NSObject {
         header.isEnabled = false
         menu.addItem(header)
         menu.addItem(.separator())
-        let settings = NSMenuItem(title: "Companion Device Settings…",
+        let settings = NSMenuItem(title: NSLocalizedString("Companion Device Settings…", comment: "UI"),
                                   action: #selector(openSettings),
                                   keyEquivalent: "")
         settings.target = self

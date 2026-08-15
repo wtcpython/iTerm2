@@ -140,7 +140,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "热键窗口偏好设置"
+            "value": "热键窗口设置"
           }
         }
       }
@@ -176,7 +176,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Floating windows overlap other windows and the dock, and other apps’ Full Screen windows (if the Hotkey Window’s Space is set to All Spaces)."
+            "value": "浮动窗口会与其他窗口和 Dock 以及其他应用的“全屏幕”窗口重叠（如果热键窗口的空间设置为“所有空间”）。"
           }
         }
       }
@@ -302,7 +302,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "When you press the hotkey bound to this profile a dedicated window will show or hide. Each profile with a hotkey controls its own Hotkey Window."
+            "value": "按下此配置文件绑定的热键时，专用窗口将显示或隐藏。每个带热键的配置文件都控制自己的热键窗口。"
           }
         }
       }

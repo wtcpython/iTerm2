@@ -142,7 +142,7 @@ class ChatToolbar {
             webSearchButton.target = self
             webSearchButton.action = #selector(toggleWebSearch(_:))
             webSearchButton.sizeToFit()
-            webSearchButton.toolTip = "Allow AI to perform web search?"
+            webSearchButton.toolTip = NSLocalizedString("Allow AI to perform web search?", comment: "UI")
             self.webSearchButton = webSearchButton
             webSearchButton.isEnabled = (dataSource.provider?.supportsHostedWebSearch == true)
         }
@@ -165,7 +165,7 @@ class ChatToolbar {
             thinkingButton.target = self
             thinkingButton.action = #selector(toggleThinking(_:))
             thinkingButton.sizeToFit()
-            thinkingButton.toolTip = "Enable high-effort reasoning? Slower but may produce better results."
+            thinkingButton.toolTip = NSLocalizedString("Enable high-effort reasoning? Slower but may produce better results.", comment: "UI")
             self.thinkingButton = thinkingButton
             thinkingButton.isEnabled = (dataSource.provider?.model.features.contains(.configurableThinking) == true)
         }
@@ -429,7 +429,7 @@ extension ChatToolbar {
         modelSelectorButton = modelSelector
         modelSelector.target = self
         modelSelector.action = #selector(selectModel(_:))
-        modelSelector.toolTip = "Select a model for this chat. The provider is fixed after the chat is created."
+        modelSelector.toolTip = NSLocalizedString("Select a model for this chat. The provider is fixed after the chat is created.", comment: "UI")
 
         modelSelector.isBordered = false
         modelSelector.bezelStyle = .inline
@@ -446,11 +446,11 @@ extension ChatToolbar {
         // popup would just show a fixed, grayed-out title, so hide it entirely.
         modelSelector.isHidden = availableModels.count <= 1
         if !canChangeModel {
-            modelSelector.toolTip = "The model is fixed after the chat starts."
+            modelSelector.toolTip = NSLocalizedString("The model is fixed after the chat starts.", comment: "UI")
         } else if availableModels.count > 1 {
-            modelSelector.toolTip = "Select a model for this chat."
+            modelSelector.toolTip = NSLocalizedString("Select a model for this chat.", comment: "UI")
         } else {
-            modelSelector.toolTip = "Only one model is available for this chat."
+            modelSelector.toolTip = NSLocalizedString("Only one model is available for this chat.", comment: "UI")
         }
         if let selectedModel = dataSource?.effectiveModel {
             modelSelector.selectItem(withTitle: selectedModel)
@@ -468,7 +468,7 @@ extension ChatToolbar {
         selector.isBordered = false
         selector.bezelStyle = .inline
         selector.font = NSFont.systemFont(ofSize: 13)
-        selector.toolTip = "Select reasoning effort for models that support it"
+        selector.toolTip = NSLocalizedString("Select reasoning effort for models that support it", comment: "UI")
 
         let efforts = dataSource?.provider?.model.reasoningEfforts ?? []
         for effort in efforts {
@@ -494,7 +494,7 @@ extension ChatToolbar {
         selector.isBordered = false
         selector.bezelStyle = .inline
         selector.font = NSFont.systemFont(ofSize: 13)
-        selector.toolTip = "Select OpenAI service tier. Priority is faster; Flex is lower-cost and slower."
+        selector.toolTip = NSLocalizedString("Select OpenAI service tier. Priority is faster; Flex is lower-cost and slower.", comment: "UI")
 
         let tiers = dataSource?.provider?.model.serviceTiers ?? []
         for tier in tiers {

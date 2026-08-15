@@ -65,7 +65,7 @@ final class InlineChatToolbarView: NSView {
         // Same info-circle control the chat window toolbar uses.
         sessionInfoButton = ChatToolbar.makeSessionInfoButton()
         sessionInfoButton.imageScaling = .scaleProportionallyDown
-        sessionInfoButton.toolTip = "Link or unlink terminal/browser session"
+        sessionInfoButton.toolTip = NSLocalizedString("Link or unlink terminal/browser session", comment: "UI")
         // makeSessionInfoButton builds the image with a nil accessibility
         // description, so give VoiceOver an explicit label (the tooltip only
         // maps to accessibility help, not the element's label).

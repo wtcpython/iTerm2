@@ -317,11 +317,11 @@ typedef NS_ENUM(NSUInteger, iTermInstantReplayState) {
     } else {
         // Live view
         [_slider setFloatValue:1.0];
-        [_currentTimeLabel setStringValue:@"Live View"];
+        [_currentTimeLabel setStringValue:NSLocalizedString(@"Live View", @"UI")];
         [_currentTimeLabel sizeToFit];
     }
     [_earliestTimeLabel setStringValue:[self stringForTimestamp:firstTimestamp]];
-    [_latestTimeLabel setStringValue:@"Now"];
+    [_latestTimeLabel setStringValue:NSLocalizedString(@"Now", @"UI")];
 
     // Adjust the width of the "earliest time" label, and keep the margin between it and the
     // slider the same.

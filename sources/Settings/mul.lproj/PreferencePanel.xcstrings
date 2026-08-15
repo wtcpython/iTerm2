@@ -4802,7 +4802,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "每会话 MB"
+            "value": " MB"
           }
         }
       }

@@ -423,7 +423,7 @@ static NSError *SCPFileError(NSString *description) {
                                      didFinishTransmissionWithError:theError];
             iTermWarningSelection selection =
                 [iTermWarning showWarningWithTitle:[NSString stringWithFormat:NSLocalizedString(@"Failed to connect to %@:%d. Double-check that the host name is correct.", @"UI"), self.hostname, effectivePort]
-                                           actions:@[ @"Ok", NSLocalizedString(@"Help", @"UI") ]
+                                           actions:@[ NSLocalizedString(@"Ok", @"UI"), NSLocalizedString(@"Help", @"UI") ]
                                      actionMapping:nil
                                          accessory:nil
                                         identifier:kSecureCopyConnectionFailedWarning

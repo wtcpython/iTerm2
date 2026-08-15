@@ -377,7 +377,7 @@ NS_ASSUME_NONNULL_BEGIN
     for (NSString *file in directoryEnumerator) {
         if (clockWatcher.reachedMaxTime) {
             iTermWarningSelection selection = [iTermWarning showWarningWithTitle:[NSString stringWithFormat:NSLocalizedString(@"It is taking a long time to locate all scripts under %@. Avoid storing many files or using network mounts for the scripts folder.\n\nContinue?", @"UI"), originalRoot]
-                                                                         actions:@[ @"Stop", NSLocalizedString(@"Continue", @"UI")]
+                                                                         actions:@[ NSLocalizedString(@"Stop", @"UI"), NSLocalizedString(@"Continue", @"UI")]
                                                                        accessory:nil
                                                                       identifier:@"TakingTooLongToEnumerateScripts"
                                                                      silenceable:kiTermWarningTypePersistent
@@ -884,7 +884,7 @@ NS_ASSUME_NONNULL_BEGIN
     NSString *name = container.lastPathComponent;
     const iTermWarningSelection selection =
     [iTermWarning showWarningWithTitle:[NSString stringWithFormat:NSLocalizedString(@"The Python environment for “%@” is missing (the shared runtime may have been deleted). Rebuild it from its saved requirements now?", @"UI"), name]
-                               actions:@[ @"Rebuild", NSLocalizedString(@"Cancel", @"UI") ]
+                               actions:@[ NSLocalizedString(@"Rebuild", @"UI"), NSLocalizedString(@"Cancel", @"UI") ]
                              accessory:nil
                             identifier:@"NoSyncRebuildMissingUvEnv"
                            silenceable:kiTermWarningTypePersistent

@@ -57,7 +57,7 @@ static NSString *const kReusableCookieAnnouncementIdentifier = @"ReusableCookieA
                                                    withActions:@[ @"_24 Hours",
                                                                   @"Forever",
                                                                   @"Always Allow All Apps",
-                                                                  @"Deny" ]
+                                                                  NSLocalizedString(@"Deny", @"UI") ]
                                                     completion:^(int selection) {
             [weakSelf handleReusableCookieSelection:selection];
         }];

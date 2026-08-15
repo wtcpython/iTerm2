@@ -3380,7 +3380,7 @@ class InlinePanelCoordinator: NSObject, ChatViewControllerDelegate {
         guard let chatID = controller.chatID else { return }
         let warning = iTermWarning()
         warning.title = NSLocalizedString("Are you sure you want to delete this chat? This action cannot be undone.", comment: "UI")
-        warning.heading = "Delete Chat?"
+        warning.heading = NSLocalizedString("Delete Chat?", comment: "UI")
         let action = iTermWarningAction(label: NSLocalizedString("Delete", comment: "UI")) { [weak self] _ in
             // Runs from iTermWarning.runModal() on the main thread.
             MainActor.assumeIsolated {

@@ -132,7 +132,7 @@ static NSMutableSet<NSString *> *iTermTransferrableFileLockedFileNames(void) {
     }
     NSString *message = [NSString stringWithFormat:@"A file named %@ already exists. Keep both files or replace the existing file?", baseName];
     const iTermWarningSelection selection = [iTermWarning showWarningWithTitle:message
-                                                                       actions:@[ @"Keep Both", NSLocalizedString(@"Replace", @"UI") ]
+                                                                       actions:@[ NSLocalizedString(@"Keep Both", @"UI"), NSLocalizedString(@"Replace", @"UI") ]
                                                                      accessory:nil
                                                                     identifier:@"NoSyncOverwriteOrReplaceFile"
                                                                    silenceable:kiTermWarningTypePermanentlySilenceable
@@ -190,13 +190,13 @@ static NSMutableSet<NSString *> *iTermTransferrableFileLockedFileNames(void) {
                 case kTransferrableFileStatusFinishedSuccessfully:
                     [[iTermNotificationController sharedInstance] notify:
                         [NSString stringWithFormat:@"%@ finished for “%@”.",
-                            self.isDownloading ? @"Download" : @"Upload", [self shortName]]];
+                            self.isDownloading ? NSLocalizedString(@"Download", @"UI") : @"Upload", [self shortName]]];
                     break;
 
                 case kTransferrableFileStatusFinishedWithError:
                     [[iTermNotificationController sharedInstance] notify:
                      [NSString stringWithFormat:@"%@ failed for “%@”.",
-                      self.isDownloading ? @"Download" : @"Upload", [self shortName]]];
+                      self.isDownloading ? NSLocalizedString(@"Download", @"UI") : @"Upload", [self shortName]]];
             }
         }
     }

@@ -50,7 +50,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "当运行中的应用发送转义码开启“括号粘贴模式”时启用。粘贴的字符串将被转义码“括起来”，表示其中的文本来自粘贴操作。"
+            "value": "当运行中的应用发送转义码开启“括号粘贴模式”时，此选项可用。粘贴的文本前后会添加转义码，让应用知道这段内容来自粘贴操作。"
           }
         }
       }
@@ -482,7 +482,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Escape shell characters with \\\\"
+            "value": "使用 \\\\ 对 shell 字符进行转义"
           }
         }
       }

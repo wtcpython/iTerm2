@@ -142,7 +142,7 @@ NSString *const iTermScriptMetadataName = @"metadata.json";
 - (BOOL)userAcceptsTrustedScriptAutoLaunchInstall {
     NSString *body = [NSString stringWithFormat:@"“%@” would like to launch automatically when iTerm2 starts. Would you like to allow that?", self.name];
     const iTermWarningSelection selection = [iTermWarning showWarningWithTitle:body
-                                                                       actions:@[ @"Launch Automatically", @"Lauch Manually" ]
+                                                                       actions:@[ NSLocalizedString(@"Launch Automatically", @"UI"), NSLocalizedString(@"Lauch Manually", @"UI") ]
                                                                      accessory:nil
                                                                     identifier:nil
                                                                    silenceable:kiTermWarningTypePersistent
@@ -154,7 +154,7 @@ NSString *const iTermScriptMetadataName = @"metadata.json";
 - (BOOL)userAcceptsExplicitAutoLaunchInstall {
     NSString *body = [NSString stringWithFormat:@"“%@” can launch automatically when iTerm2 starts. Would you like to allow that?", self.name];
     const iTermWarningSelection selection = [iTermWarning showWarningWithTitle:body
-                                                                       actions:@[ @"Launch Automatically", @"Lauch Manually" ]
+                                                                       actions:@[ NSLocalizedString(@"Launch Automatically", @"UI"), NSLocalizedString(@"Lauch Manually", @"UI") ]
                                                                      accessory:nil
                                                                     identifier:nil
                                                                    silenceable:kiTermWarningTypePersistent

@@ -247,9 +247,9 @@ respectingTimeoutSetting:(BOOL)respectingTimeoutSetting
                                   @"Load settings from URL? Some changes were made to the local copy that will be lost."];
             const iTermWarningSelection selection =
             [iTermWarning showWarningWithTitle:theTitle
-                                       actions:@[ @"Keep Local Changes",
-                                                  @"Disable Loading from URL",
-                                                  @"Discard Local Changes" ]
+                                       actions:@[ NSLocalizedString(@"Keep Local Changes", @"UI"),
+                                                  NSLocalizedString(@"Disable Loading from URL", @"UI"),
+                                                  NSLocalizedString(@"Discard Local Changes", @"UI") ]
                                     identifier:@"NoSyncPromptBeforeLoadingPrefsFromURL"
                                    silenceable:kiTermWarningTypePersistent
                                         window:nil];
@@ -340,8 +340,8 @@ respectingTimeoutSetting:(BOOL)respectingTimeoutSetting
             [NSString stringWithFormat:@"Settings at %@ changed since iTerm2 started. "
                                        @"Overwrite it?",
                                        [self customFolderOrURL]];
-        if ([iTermWarning showWarningWithTitle:theTitle actions:@[ @"Overwrite",
-                                                                   @"Discard Local Changes" ]
+        if ([iTermWarning showWarningWithTitle:theTitle actions:@[ NSLocalizedString(@"Overwrite", @"UI"),
+                                                                   NSLocalizedString(@"Discard Local Changes", @"UI") ]
                                     identifier:nil
                                    silenceable:kiTermWarningTypePersistent
                                         window:nil] == kiTermWarningSelection1) {
@@ -802,7 +802,7 @@ static NSDictionary *iTermRemotePreferencesSave(NSDictionary *myDict, NSString *
                                    [self customFolderOrURL]];
     const iTermWarningSelection selection =
         [iTermWarning showWarningWithTitle:title
-                                   actions:@[ @"Sync These Too", @"Just Settings" ]
+                                   actions:@[ NSLocalizedString(@"Sync These Too", @"UI"), NSLocalizedString(@"Just Settings", @"UI") ]
                                 identifier:nil
                                silenceable:kiTermWarningTypePersistent
                                     window:nil];
@@ -1371,7 +1371,7 @@ static NSDictionary *iTermRemotePreferencesSave(NSDictionary *myDict, NSString *
                                    [self customFolderOrURL]];
     const iTermWarningSelection selection =
         [iTermWarning showWarningWithTitle:title
-                                   actions:@[ @"Use This Mac’s", @"Use Settings Folder’s" ]
+                                   actions:@[ NSLocalizedString(@"Use This Mac’s", @"UI"), NSLocalizedString(@"Use Settings Folder’s", @"UI") ]
                                 identifier:nil
                                silenceable:kiTermWarningTypePersistent
                                     window:nil];

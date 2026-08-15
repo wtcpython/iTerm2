@@ -2030,7 +2030,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Right​"
+            "value": "右"
           }
         }
       }
@@ -2156,7 +2156,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "启用后，你可以点击命令或其输出，将查找和筛选限制在其输出范围内。选中的命令会高亮，其他命令会变暗。这需要安装 Shell 集成。"
+            "value": "启用后，你可以点按命令或其输出，将查找和筛选限制在其输出范围内。选中的命令会高亮，其他命令会变暗。这需要安装 Shell 集成。"
           }
         }
       }
@@ -2750,7 +2750,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "右键或中键点击后聚焦窗口"
+            "value": "右键或中键点按后聚焦窗口"
           }
         }
       }
@@ -6692,7 +6692,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "右键点击"
+            "value": "右键点按"
           }
         }
       }
@@ -6764,7 +6764,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "⌘-点击打开文件名/URL（语义历史记录）"
+            "value": "⌘-点按打开文件名/URL（语义历史记录）"
           }
         }
       }
@@ -6782,7 +6782,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "对于使用鼠标报告的终端应用，开启此选项后，控制点击会被报告给应用，而不是打开上下文菜单。"
+            "value": "对于使用鼠标报告的终端应用，开启此选项后，控制点按会被报告给应用，而不是打开上下文菜单。"
           }
         }
       }
@@ -6800,7 +6800,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "^-点击报告给应用，不打开菜单"
+            "value": "^-点按报告给应用，不打开菜单"
           }
         }
       }
@@ -7142,7 +7142,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "点击类型："
+            "value": "点按类型："
           }
         }
       }
@@ -7196,7 +7196,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "双击"
+            "value": "连按"
           }
         }
       }
@@ -7214,7 +7214,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "三击"
+            "value": "三连按"
           }
         }
       }
@@ -7322,7 +7322,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "三指轻点模拟中键点击"
+            "value": "三指轻点模拟中键点按"
           }
         }
       }
@@ -7340,7 +7340,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "点击此处设置输入字段"
+            "value": "点按此处设置输入字段"
           }
         }
       }
@@ -7484,7 +7484,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "当你在匹配此智能选择的文本上右键点击时，项目会添加到上下文菜单。"
+            "value": "当你在匹配此智能选择的文本上右键点按时，项目会添加到上下文菜单。"
           }
         }
       }
@@ -7736,7 +7736,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "在不受信任的环境中这可能有安全风险，尤其是终端可以设置标题时。"
+            "value": "这在不受信任的环境中可能存在安全风险，尤其是终端可以设置标题时。"
           }
         }
       }
@@ -7826,7 +7826,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "启用后，Option-点击会发送方向键来移动光标位置。如果安装了 Shell 集成，则在命令行中不生效。"
+            "value": "启用后，Option-点按会发送方向键来移动光标位置。如果安装了 Shell 集成，则在命令行中不生效。"
           }
         }
       }
@@ -7844,7 +7844,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "⌥-点击移动光标"
+            "value": "⌥-点按移动光标"
           }
         }
       }
@@ -8240,7 +8240,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "双击执行智能选择"
+            "value": "连按执行智能选择"
           }
         }
       }
@@ -10364,7 +10364,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "关闭后，三击选择屏幕上显示的一行。"
+            "value": "关闭后，三连按选择屏幕上显示的一行。"
           }
         }
       }
@@ -10436,7 +10436,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "在交互式应用外，Page Up、Page Down、Home 和 End 进行滚动"
+            "value": "在交互式应用外，Page Up、Page Down、Home 和 End 滚动"
           }
         }
       }
@@ -13424,7 +13424,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "点击命令可选中它，以限制查找和筛选"
+            "value": "点按命令可选中它，以限制查找和筛选"
           }
         }
       }
@@ -13982,7 +13982,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "三击选择整个换行行"
+            "value": "三连按选择整个换行行"
           }
         }
       }
@@ -14396,7 +14396,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "对于使用鼠标报告的终端应用，开启此选项后，右键点击（或触控板双指轻点）会被报告给应用，而不是打开上下文菜单。"
+            "value": "对于使用鼠标报告的终端应用，开启此选项后，右键点按（或触控板双指轻点）会被报告给应用，而不是打开上下文菜单。"
           }
         }
       }
@@ -14540,7 +14540,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "启用后，你可以点击命令或其输出，将查找和筛选限制在其输出范围内。选中的命令会高亮，其他命令会变暗。这需要安装 Shell 集成。"
+            "value": "启用后，你可以点按命令或其输出，将查找和筛选限制在其输出范围内。选中的命令会高亮，其他命令会变暗。这需要安装 Shell 集成。"
           }
         }
       }
@@ -14810,7 +14810,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "点击："
+            "value": "点按："
           }
         }
       }
@@ -16322,7 +16322,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "被指针设置中的“⌘-点击打开文件名/URL”设置停用"
+            "value": "指针设置中的“⌘-点按打开文件名/URL”设置停用"
           }
         }
       }
@@ -17042,7 +17042,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "右键点击报告给应用，不打开菜单"
+            "value": "右键点按报告给应用，不打开菜单"
           }
         }
       }
@@ -17726,7 +17726,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "在演练场中点击文本以测试规则"
+            "value": "在演练场中点按文本以测试规则"
           }
         }
       }
@@ -17960,7 +17960,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "点击 Shell 提示符中的路径以打开导航器"
+            "value": "点按 Shell 提示符中的路径以打开导航器"
           }
         }
       }
@@ -18410,7 +18410,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "报告鼠标点击和拖拽"
+            "value": "报告鼠标点按和拖拽"
           }
         }
       }
@@ -20372,7 +20372,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "关闭此选项时，双击选择“通用”标签页中“视为选区单词一部分的字符”所定义的单词。开启时，双击使用智能选择，通过“配置文件 > 高级 > 智能选择”中定义的正则表达式选择文件名、URL 等。"
+            "value": "关闭此选项时，连按选择“通用”标签页中“视为选区单词一部分的字符”所定义的单词。开启时，连按使用智能选择，通过“配置文件 > 高级 > 智能选择”中定义的正则表达式选择文件名、URL 等。"
           }
         }
       }

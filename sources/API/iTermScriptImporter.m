@@ -267,7 +267,7 @@ static NSString *const iTermInstallStagingPrefix = @".installing-";
                       reader.url.lastPathComponent,
                       ((cert.name ?: cert.longDescription) ?: NSLocalizedString(@"Unknown", @"UI"))];
     iTermWarningSelection selection = [iTermWarning showWarningWithTitle:body
-                                                                 actions:@[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI"), @"Reveal Contents" ]
+                                                                 actions:@[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI"), NSLocalizedString(@"Reveal Contents", @"UI") ]
                                                                accessory:nil
                                                               identifier:nil
                                                              silenceable:kiTermWarningTypePersistent
@@ -343,7 +343,7 @@ static NSString *const iTermInstallStagingPrefix = @".installing-";
         iTermWarningSelection selection = kiTermWarningSelection0;
         if (!avoidUI) {
             selection = [iTermWarning showWarningWithTitle:[NSString stringWithFormat:NSLocalizedString(@"A script named “%@” is already installed", @"UI"), archive.name]
-                                                   actions:@[ @"Replace Script", NSLocalizedString(@"Cancel", @"UI") ]
+                                                   actions:@[ NSLocalizedString(@"Replace Script", @"UI"), NSLocalizedString(@"Cancel", @"UI") ]
                                                  accessory:nil
                                                 identifier:nil
                                                silenceable:kiTermWarningTypePersistent

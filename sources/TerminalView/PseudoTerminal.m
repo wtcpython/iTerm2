@@ -2234,7 +2234,7 @@ ITERM_WEAKLY_REFERENCEABLE
 
 - (void)killOrHideTmuxTab:(PTYTab *)aTab {
     iTermWarningSelection selection =
-        [iTermWarning showWarningWithTitle:NSLocalizedString(@"Kill tmux window, terminating its jobs, or hide it? Hidden windows may be restored from the tmux dashboard.", @"UI")actions:@[ @"Hide", NSLocalizedString(@"Cancel", @"UI"), @"Kill" ]
+        [iTermWarning showWarningWithTitle:NSLocalizedString(@"Kill tmux window, terminating its jobs, or hide it? Hidden windows may be restored from the tmux dashboard.", @"UI") actions:@[ NSLocalizedString(@"Hide", @"UI"), NSLocalizedString(@"Cancel", @"UI"), NSLocalizedString(@"Kill", @"UI") ]
                              actionMapping:@[ @(kiTermWarningSelection0), @(kiTermWarningSelection2), @(kiTermWarningSelection1)]
                                  accessory:nil
                                 identifier:@"ClosingTmuxTabKillsTmuxWindows"
@@ -4505,7 +4505,7 @@ hidingToolbeltShouldResizeWindow:(BOOL)hidingToolbeltShouldResizeWindow
     if (title) {
         iTermWarningSelection selection =
             [iTermWarning showWarningWithTitle:title
-                                       actions:@[ @"Hide", @"Detach tmux Session", @"Kill", NSLocalizedString(@"Cancel", @"UI") ]
+                                       actions:@[ NSLocalizedString(@"Hide", @"UI"), NSLocalizedString(@"Detach tmux Session", @"UI"), NSLocalizedString(@"Kill", @"UI"), NSLocalizedString(@"Cancel", @"UI") ]
                                     identifier:@"ClosingTmuxWindowKillsTmuxWindows"
                                    silenceable:kiTermWarningTypePermanentlySilenceable
                                         window:self.window];
@@ -9756,7 +9756,7 @@ static CGFloat iTermDimmingAmount(PSMTabBarControl *tabView) {
 - (void)turnOnMetalCaptureInInfoPlist {
     const iTermWarningSelection selection =
     [iTermWarning showWarningWithTitle:NSLocalizedString(@"You must restart iTerm2 to turn on this feature.", @"UI")
-                               actions:@[ @"Restart Now", NSLocalizedString(@"Cancel", @"UI")]
+                               actions:@[ NSLocalizedString(@"Restart Now", @"UI"), NSLocalizedString(@"Cancel", @"UI")]
                             identifier:@"RestartAfterMetalCaptureEnabled"
                            silenceable:kiTermWarningTypePersistent
                                 window:self.window];
@@ -12836,7 +12836,7 @@ typedef NS_ENUM(NSUInteger, iTermBroadcastCommand) {
         action = @"Clear";
         break;
     case iTermBroadcastCommandReset:
-            action = @"Reset";
+            action = NSLocalizedString(@"Reset", @"UI");
         break;
     }
     NSString *title = [NSString stringWithFormat:@"%@ all sessions to which input is broadcast? This will affect %@ sessions.",
@@ -12844,7 +12844,7 @@ typedef NS_ENUM(NSUInteger, iTermBroadcastCommand) {
                        @(broadcast.count)];
     const iTermWarningSelection selection =
     [iTermWarning showWarningWithTitle:title
-                               actions:@[ [NSString stringWithFormat:@"%@ All", action],
+                               actions:@[ [NSString stringWithFormat:NSLocalizedString(@"%@ All", @"UI"), action],
                                           [NSString stringWithFormat:@"%@ Current Session Only", action],
                                           NSLocalizedString(@"Cancel", @"UI") ]
                              accessory:nil

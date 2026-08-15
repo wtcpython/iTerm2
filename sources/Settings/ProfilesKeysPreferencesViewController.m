@@ -373,7 +373,7 @@ static NSString *const kDeleteKeyString = @"0x7f-0x0";
                                  accessory.intrinsicContentSize.width,
                                  accessory.intrinsicContentSize.height);
     warning.heading = @"Remove Incompatible Key Bindings?";
-    NSArray *actions = @[ [iTermWarningAction warningActionWithLabel:@"Remove" block:^(iTermWarningSelection selection) {
+    NSArray *actions = @[ [iTermWarningAction warningActionWithLabel:NSLocalizedString(@"Remove", @"UI") block:^(iTermWarningSelection selection) {
         [self removeKeystrokeBindings:incompatibles];
     }],
                           [iTermWarningAction warningActionWithLabel:NSLocalizedString(@"Cancel", @"UI") block:^(iTermWarningSelection selection) {}] ];
@@ -710,7 +710,7 @@ static NSString *const kDeleteKeyString = @"0x7f-0x0";
 #pragma mark - Warnings
 
 - (BOOL)warnAboutOverride {
-    switch ([iTermWarning showWarningWithTitle:NSLocalizedString(@"The keyboard shortcut you have set for this profile will take precedence over an existing shortcut for the same key combination in a global shortcut.", @"UI")actions:@[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI") ]
+    switch ([iTermWarning showWarningWithTitle:NSLocalizedString(@"The keyboard shortcut you have set for this profile will take precedence over an existing shortcut for the same key combination in a global shortcut.", @"UI") actions:@[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI") ]
                                     identifier:@"NeverWarnAboutOverrides"
                                    silenceable:kiTermWarningTypePermanentlySilenceable
                                         window:self.view.window]) {
@@ -722,7 +722,7 @@ static NSString *const kDeleteKeyString = @"0x7f-0x0";
 }
 
 - (void)maybeWarnAboutMeta {
-    [iTermWarning showWarningWithTitle:NSLocalizedString(@"You have chosen to have an option key act as Meta. This option is useful for backward compatibility with older systems. The \"Esc+\" option is recommended for most users.", @"UI")actions:@[ NSLocalizedString(@"OK", @"UI") ]
+    [iTermWarning showWarningWithTitle:NSLocalizedString(@"You have chosen to have an option key act as Meta. This option is useful for backward compatibility with older systems. The \"Esc+\" option is recommended for most users.", @"UI") actions:@[ NSLocalizedString(@"OK", @"UI") ]
                             identifier:@"NeverWarnAboutMeta"
                            silenceable:kiTermWarningTypePermanentlySilenceable
                                 window:self.view.window];

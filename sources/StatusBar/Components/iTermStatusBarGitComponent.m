@@ -521,7 +521,7 @@ static const NSTimeInterval iTermStatusBarGitComponentDefaultCadence = 2;
                              @"%@",
                              _maker.gitPoller.currentDirectory,
                              @(_maker.gitPoller.cadence),
-                             _maker.gitPoller.enabled ? @"Yes" : @"No",
+                             _maker.gitPoller.enabled ? NSLocalizedString(@"Yes", @"UI") : NSLocalizedString(@"No", @"UI"),
                              @(-[_maker.gitPoller lastPollTime].timeIntervalSinceNow),
                              [_maker.gitPoller.state prettyDescription],
                              [[iTermGitPollWorker sharedInstance] debugInfoForDirectory:_maker.gitPoller.currentDirectory]];

@@ -12,7 +12,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "iTerm2 中的应用想要使用 AppleScript。"
+            "value": "iTerm2 想要访问 AppleScript。"
           }
         }
       }
@@ -28,7 +28,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "iTerm2 中的应用想要使用蓝牙。"
+            "value": "iTerm2 想要访问蓝牙。"
           }
         }
       }
@@ -44,7 +44,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "iTerm2 中的应用想要使用日历数据。"
+            "value": "iTerm2 想要访问日历数据。"
           }
         }
       }
@@ -60,7 +60,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "iTerm2 中的应用想要使用相机。"
+            "value": "iTerm2 想要访问相机。"
           }
         }
       }
@@ -76,7 +76,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "iTerm2 中的应用想要使用通讯录。"
+            "value": "iTerm2 想要访问通讯录。"
           }
         }
       }
@@ -92,7 +92,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "iTerm2 中的应用想要访问本地网络。"
+            "value": "iTerm2 想要访问本地网络。"
           }
         }
       }
@@ -108,7 +108,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "iTerm2 中的应用想要使用你的位置信息，即使在后台。"
+            "value": "iTerm2 想要访问你的位置信息，即使在后台。"
           }
         }
       }
@@ -124,7 +124,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "iTerm2 中的应用想要使用你的位置信息。"
+            "value": "iTerm2 想要访问你的位置信息。"
           }
         }
       }
@@ -140,7 +140,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "iTerm2 中的应用在活动时想要使用你的位置信息。"
+            "value": "iTerm2 想要在活动时访问你的位置信息。"
           }
         }
       }
@@ -156,7 +156,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "iTerm2 中的应用想要使用麦克风。"
+            "value": "iTerm2 想要访问麦克风。"
           }
         }
       }
@@ -172,7 +172,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "iTerm2 中的应用想要使用照片图库。"
+            "value": "iTerm2 想要访问照片图库。"
           }
         }
       }
@@ -188,7 +188,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "iTerm2 中的应用想要使用提醒事项。"
+            "value": "iTerm2 想要访问提醒事项。"
           }
         }
       }
@@ -204,7 +204,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "iTerm2 中的应用想要使用语音识别。"
+            "value": "iTerm2 想要访问语音识别。"
           }
         }
       }

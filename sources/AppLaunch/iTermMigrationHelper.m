@@ -61,7 +61,7 @@
     }
     const iTermWarningSelection selection =
     [iTermWarning showWarningWithTitle:NSLocalizedString(@"Move OpenAI API key into the keychain? It is currently stored in User Defaults, which is not as secure.", @"UI")
-                               actions:@[ NSLocalizedString(@"OK", @"UI"), @"Erase from Settings" ]
+                               actions:@[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Erase from Settings", @"UI") ]
                              accessory:nil
                             identifier:@"NoSyncMoveOpenAIAPIKeyIntoKeychain"
                            silenceable:kiTermWarningTypePersistent
@@ -296,7 +296,7 @@ static NSString *const iTermMigrationHelperRemoveDeprecatedKeyMappingsUserDefaul
 
     const iTermWarningSelection selection =
     [iTermWarning showWarningWithTitle:message
-                               actions:@[ NSLocalizedString(@"OK", @"UI"), @"Learn More", NSLocalizedString(@"Cancel", @"UI") ]
+                               actions:@[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Learn More", @"UI"), NSLocalizedString(@"Cancel", @"UI") ]
                              accessory:nil
                             identifier:nil
                            silenceable:kiTermWarningTypePersistent

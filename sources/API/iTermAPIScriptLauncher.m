@@ -72,7 +72,7 @@ static NSString *const iTermAPIScriptLauncherScriptDidFailUserNotificationCallba
     NSString *message = [NSString stringWithFormat:@"The Python API script “%@” needs a newer version of the runtime environment for security reasons. You must upgrade it before this version of iTerm2 can launch the script.", fullPath.lastPathComponent];
     const iTermWarningSelection selection =
     [iTermWarning showWarningWithTitle:message
-                               actions:@[ @"Upgrade", NSLocalizedString(@"Cancel", @"UI") ]
+                               actions:@[ NSLocalizedString(@"Upgrade", @"UI"), NSLocalizedString(@"Cancel", @"UI") ]
                              accessory:nil
                             identifier:@"UpgradeFullEnvironmentScript"
                            silenceable:kiTermWarningTypePersistent
@@ -560,7 +560,7 @@ static NSString *const iTermAPIScriptLauncherScriptDidFailUserNotificationCallba
                                          completion:(void (^)(iTermPythonRuntimeDownloaderStatus status))completion {
     const iTermWarningSelection selection =
     [iTermWarning showWarningWithTitle:NSLocalizedString(@"The shared Python runtime is Intel-only and cannot run on this version of macOS. Download the Apple Silicon version now?", @"UI")
-                               actions:@[ @"Download", NSLocalizedString(@"Cancel", @"UI") ]
+                               actions:@[ NSLocalizedString(@"Download", @"UI"), NSLocalizedString(@"Cancel", @"UI") ]
                              accessory:nil
                             identifier:@"NoSyncRefetchArm64Runtime"
                            silenceable:kiTermWarningTypePersistent

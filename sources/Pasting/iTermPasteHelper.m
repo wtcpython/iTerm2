@@ -718,7 +718,7 @@ const NSInteger iTermQuickPasteBytesPerCallDefaultValue = 768;
             numberFormatter.numberStyle = NSNumberFormatterDecimalStyle;
             const iTermWarningSelection selection =
             [iTermWarning showWarningWithTitle:[NSString stringWithFormat:NSLocalizedString(@"OK to paste %@ characters?", @"UI"), [numberFormatter stringFromNumber:@(pasteEvent.string.length)]]
-                                       actions:@[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI"), @"Advanced…" ]
+                                       actions:@[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI"), NSLocalizedString(@"Advanced…", @"UI") ]
                                      accessory:nil
                                     identifier:@"NoSyncPasteOverCharacterLimitWarning"
                                    silenceable:kiTermWarningTypePersistent
@@ -815,7 +815,7 @@ const NSInteger iTermQuickPasteBytesPerCallDefaultValue = 768;
     }
     // Issue 5115
     [iTermWarning unsilenceIdentifier:identifier ifSelectionEquals:[actions indexOfObjectIdenticalTo:cancel]];
-    [actions addObject:[iTermWarningAction warningActionWithLabel:@"Advanced…" block:^(iTermWarningSelection selection) {
+    [actions addObject:[iTermWarningAction warningActionWithLabel:NSLocalizedString(@"Advanced…", @"UI") block:^(iTermWarningSelection selection) {
         PTYSessionPasteFlags flags = 0;
         if (pasteEvent.slow) {
             flags |= kPTYSessionPasteSlowly;
@@ -872,7 +872,7 @@ const NSInteger iTermQuickPasteBytesPerCallDefaultValue = 768;
 
         iTermWarningSelection selection =
             [iTermWarning showWarningWithTitle:NSLocalizedString(@"You're about to paste a string with tabs.", @"UI")
-                                       actions:@[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI"), @"Convert tabs to spaces", @"Advanced…" ]
+                                       actions:@[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI"), NSLocalizedString(@"Convert tabs to spaces", @"UI"), NSLocalizedString(@"Advanced…", @"UI") ]
                                      accessory:accessoryController.view
                                     identifier:@"AboutToPasteTabsWithCancel"
                                    silenceable:kiTermWarningTypePermanentlySilenceable

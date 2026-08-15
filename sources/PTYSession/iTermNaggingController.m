@@ -115,7 +115,7 @@ static NSString *const iTermNaggingControllerRestoreIconAndWindowNameChoiceAlway
                                      isQuestion:NO
                                       important:YES
                                      identifier:@"ArrangementMissingProfile"
-                                        options:@[ @"Assign Profile" ]
+                                        options:@[ NSLocalizedString(@"Assign Profile", @"UI") ]
                                      completion:^(int selection) {
         if (selection == 0) {
             [self.delegate naggingControllerAssignProfileToSession:arrangementName
@@ -166,7 +166,7 @@ static NSString *const iTermNaggingControllerRestoreIconAndWindowNameChoiceAlway
                                              isQuestion:YES
                                               important:NO
                                              identifier:iTermNaggingControllerArrangementSetProfileProperty
-                                                options:@[ @"_Allow Once", @"Allow Always", @"Deny Always" ]
+                                                options:@[ NSLocalizedString(@"_Allow Once", @"UI"), NSLocalizedString(@"Allow Always", @"UI"), NSLocalizedString(@"Deny Always", @"UI") ]
                                              completion:^(int selection) {
         if (selection == 0 || selection == 1) {
             [weakSelf.delegate naggingControllerSetProfileProperties:dict];
@@ -208,7 +208,7 @@ static NSString *const iTermNaggingControllerRestoreIconAndWindowNameChoiceAlway
                                      isQuestion:YES
                                       important:NO
                                      identifier:iTermNaggingControllerArrangementTextReplacements
-                                        options:@[ @"_Yes", @"_No" ]
+                                        options:@[ NSLocalizedString(@"_Yes", @"UI"), NSLocalizedString(@"_No", @"UI") ]
                                      completion:^(int selection) {
         if (selection == 0 || selection == 1) {
             [[iTermUserDefaults userDefaults] setBool:selection == 0 forKey:userDefaultsKey];
@@ -236,7 +236,7 @@ static NSString *const iTermNaggingControllerRestoreIconAndWindowNameChoiceAlway
         return;
     }
     NSString *notice;
-    NSArray<NSString *> *actions = @[ @"Don’t Warn Again" ];
+    NSArray<NSString *> *actions = @[ NSLocalizedString(@"Don’t Warn Again", @"UI") ];
     if ([[ProfileModel sharedInstance] bookmarkWithName:missingProfileName]) {
         notice = [NSString stringWithFormat:@"This session’s profile, “%@”, no longer exists. A profile with that name happens to exist.", missingProfileName];
         if (savedArrangementName) {
@@ -272,7 +272,7 @@ static NSString *const iTermNaggingControllerRestoreIconAndWindowNameChoiceAlway
                                      isQuestion:NO
                                       important:NO
                                      identifier:iTermNaggingControllerArrangementProfileMissingIdentifier
-                                        options:@[ @"Don’t Warn Again", @"Repair" ]
+                                        options:@[ NSLocalizedString(@"Don’t Warn Again", @"UI"), NSLocalizedString(@"Repair", @"UI") ]
                                      completion:^(int selection) {
         [self handleCompletionForInvalidPWDInArrangementWithName:arrangementName
                                                             guid:sessionGUID
@@ -298,7 +298,7 @@ static NSString *const iTermNaggingControllerRestoreIconAndWindowNameChoiceAlway
                                      isQuestion:YES
                                       important:NO
                                      identifier:iTermNaggingControllerOrphanIdentifier
-                                        options:@[ @"Why?" ]
+                                        options:@[ NSLocalizedString(@"Why?", @"UI") ]
                                      completion:^(int selection) {
         if (selection == 0) {
             // Why?
@@ -316,7 +316,7 @@ static NSString *const iTermNaggingControllerRestoreIconAndWindowNameChoiceAlway
                                      isQuestion:!execDidFail
                                       important:YES
                                      identifier:iTermNaggingControllerReopenSessionAfterBrokenPipeIdentifier
-                                        options:@[ @"_Restart", @"Don’t Ask Again" ]
+                                        options:@[ NSLocalizedString(@"_Restart", @"UI"), NSLocalizedString(@"Don’t Ask Again", @"UI") ]
                                      completion:^(int selection) {
         [self handleCompletionForBrokenPipe:selection];
     }];
@@ -373,7 +373,7 @@ static NSString *const iTermNaggingControllerRestoreIconAndWindowNameChoiceAlway
                                      isQuestion:NO
                                       important:NO
                                      identifier:iTermNaggingControllerTmuxSupplementaryPlaneErrorIdentifier
-                                        options:@[ @"Why?" ]
+                                        options:@[ NSLocalizedString(@"Why?", @"UI") ]
                                      completion:^(int selection) {
         if (selection == 0) {
             [self showTmuxSupplementaryPlaneBugHelpPage];
@@ -401,7 +401,7 @@ static NSString *const iTermNaggingControllerRestoreIconAndWindowNameChoiceAlway
                                      isQuestion:YES
                                       important:YES
                                      identifier:iTermNaggingControllerAskAboutAlternateMouseScrollIdentifier
-                                        options:@[ @"Yes", @"Don‘t Ask Again" ]
+                                        options:@[ NSLocalizedString(@"Yes", @"UI"), NSLocalizedString(@"Don’t Ask Again", @"UI") ]
                                      completion:^(int selection) {
         [self handleTryingToSendArrowKeysWithScrollWheel:selection];
     }];
@@ -445,7 +445,7 @@ static NSString *const iTermNaggingControllerRestoreIconAndWindowNameChoiceAlway
                                      isQuestion:YES
                                       important:NO
                                      identifier:iTermNaggingControllerSetBackgroundImageFileIdentifier
-                                        options:@[ @"Yes", @"Always", @"Never" ]
+                                        options:@[ NSLocalizedString(@"Yes", @"UI"), NSLocalizedString(@"Always", @"UI"), NSLocalizedString(@"Never", @"UI") ]
                                      completion:^(int selection) {
         [self handleSetBackgroundImageToFileWithName:filename selection:selection];
     }];
@@ -498,7 +498,7 @@ static NSString *const iTermNaggingControllerRestoreIconAndWindowNameChoiceAlway
                                      isQuestion:YES
                                       important:YES
                                      identifier:iTermNaggingControllerAskAboutMouseReportingFrustrationIdentifier
-                                        options:@[ @"_Temporarily", @"Permanently", @"Stop Asking" ]
+                                        options:@[ NSLocalizedString(@"_Temporarily", @"UI"), NSLocalizedString(@"Permanently", @"UI"), NSLocalizedString(@"Stop Asking", @"UI") ]
                                      completion:^(int selection) {
         [self handleMouseReportingFrustration:selection];
     }];
@@ -529,7 +529,7 @@ static NSString *const iTermNaggingControllerRestoreIconAndWindowNameChoiceAlway
                                      isQuestion:YES
                                       important:YES
                                      identifier:kTurnOffBracketedPasteOnHostChangeAnnouncementIdentifier
-                                        options:@[ @"_Yes", @"Always", @"Never", NSLocalizedString(@"Help", @"UI") ]
+                                        options:@[ NSLocalizedString(@"_Yes", @"UI"), NSLocalizedString(@"Always", @"UI"), NSLocalizedString(@"Never", @"UI"), NSLocalizedString(@"Help", @"UI") ]
                                      completion:^(int selection) {
         switch (selection) {
             case -2:  // Dismiss programmatically
@@ -580,7 +580,7 @@ static NSString *const iTermNaggingControllerRestoreIconAndWindowNameChoiceAlway
                                      isQuestion:YES
                                       important:YES
                                      identifier:kResetKeyReportingModeAnnouncementIdentifier
-                                        options:@[ @"_Yes", @"Always", @"Never" ]
+                                        options:@[ NSLocalizedString(@"_Yes", @"UI"), NSLocalizedString(@"Always", @"UI"), NSLocalizedString(@"Never", @"UI") ]
                                      completion:^(int selection) {
         switch (selection) {
             case -2:  // Dismiss programmatically
@@ -996,7 +996,7 @@ static NSString *const iTermNaggingControllerTouchIDForSudoUserDefaultsKey = @"N
                                      isQuestion:YES
                                       important:YES
                                      identifier:iTermNaggingControllerTouchIDForSudoIdentifier
-                                        options:@[ @"_Run In New Window", NSLocalizedString(@"Copy Command", @"UI"), @"Don’t Ask Again" ]
+                                        options:@[ @"_Run In New Window", NSLocalizedString(@"Copy Command", @"UI"), NSLocalizedString(@"Don’t Ask Again", @"UI") ]
                                      completion:^(int selection) {
         // Any explicit user action — including closing with the X (selection -1)
         // — should suppress further offers for this sudo invocation.

@@ -61,6 +61,16 @@
         }
       }
     },
+    "%@ All": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "全部 %@"
+          }
+        }
+      }
+    },
     "%@ — New Tab": {
       "localizations": {
         "zh-Hans": {
@@ -341,6 +351,16 @@
         }
       }
     },
+    "Advanced…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "高级…"
+          }
+        }
+      }
+    },
     "Alert": {
       "localizations": {
         "zh-Hans": {
@@ -371,6 +391,16 @@
         }
       }
     },
+    "Allow Always": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "始终允许"
+          }
+        }
+      }
+    },
     "Allow \\(permissionType.displayName)": {
       "localizations": {
         "zh-Hans": {
@@ -387,6 +417,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "备用屏幕"
+          }
+        }
+      }
+    },
+    "Always": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "始终"
           }
         }
       }
@@ -417,6 +457,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "注释："
+          }
+        }
+      }
+    },
+    "Append": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "追加"
           }
         }
       }
@@ -511,16 +561,6 @@
         }
       }
     },
-    "Are you really at a password prompt? It looks ": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "你确定在密码提示符处吗？看起来 "
-          }
-        }
-      }
-    },
     "Are you really at a password prompt? It looks like what you're typing is echoed to the screen.": {
       "localizations": {
         "zh-Hans": {
@@ -587,6 +627,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "询问 AI…"
+          }
+        }
+      }
+    },
+    "Assign Profile": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "指定配置文件"
           }
         }
       }
@@ -677,6 +727,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "后退："
+          }
+        }
+      }
+    },
+    "Badge": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "角标"
           }
         }
       }
@@ -861,6 +921,16 @@
         }
       }
     },
+    "Change Locale": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "更改语言环境"
+          }
+        }
+      }
+    },
     "Change Name": {
       "localizations": {
         "zh-Hans": {
@@ -941,6 +1011,16 @@
         }
       }
     },
+    "Choose…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选取…"
+          }
+        }
+      }
+    },
     "Claude Code Integration Looks Broken": {
       "localizations": {
         "zh-Hans": {
@@ -996,7 +1076,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "在演练场中点击文本以测试规则"
+            "value": "在演练场中点按文本以测试规则"
           }
         }
       }
@@ -1006,7 +1086,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "点击更改"
+            "value": "点按更改"
           }
         }
       }
@@ -1277,6 +1357,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "继续"
+          }
+        }
+      }
+    },
+    "Convert tabs to spaces": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "将制表符转换为空格"
           }
         }
       }
@@ -1581,6 +1671,36 @@
         }
       }
     },
+    "Delete Chat?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "删除聊天？"
+          }
+        }
+      }
+    },
+    "Deny": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拒绝"
+          }
+        }
+      }
+    },
+    "Deny Always": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "始终拒绝"
+          }
+        }
+      }
+    },
     "Describe the command you want to run in plain English. Press ⇧⏎ to send.": {
       "localizations": {
         "zh-Hans": {
@@ -1607,6 +1727,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "分离"
+          }
+        }
+      }
+    },
+    "Detach tmux Session": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "分离 tmux 会话"
           }
         }
       }
@@ -1651,12 +1781,32 @@
         }
       }
     },
+    "Disable Loading from URL": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "停用从 URL 载入"
+          }
+        }
+      }
+    },
     "Disable Orchestration": {
       "localizations": {
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "停用 Orchestration"
+          }
+        }
+      }
+    },
+    "Disable Permanently": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "永久停用"
           }
         }
       }
@@ -1677,6 +1827,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "停用状态栏"
+          }
+        }
+      }
+    },
+    "Disable Temporarily": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "暂时停用"
           }
         }
       }
@@ -1717,6 +1877,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "区分转义"
+          }
+        }
+      }
+    },
+    "Discard Local Changes": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "放弃本地更改"
           }
         }
       }
@@ -1771,6 +1941,16 @@
         }
       }
     },
+    "Don’t Ask Again": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "不再询问"
+          }
+        }
+      }
+    },
     "Don’t Copy": {
       "localizations": {
         "zh-Hans": {
@@ -1787,6 +1967,26 @@
           "stringUnit": {
             "state": "translated",
             "value": "不载入远程设置"
+          }
+        }
+      }
+    },
+    "Don’t Warn Again": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "不再警告"
+          }
+        }
+      }
+    },
+    "Download": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "下载"
           }
         }
       }
@@ -1827,6 +2027,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "下载 \\(path.path.lastPathComponent) 或在浏览器中查看？"
+          }
+        }
+      }
+    },
+    "Download or View File?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "下载或查看文件？"
           }
         }
       }
@@ -1891,6 +2101,16 @@
         }
       }
     },
+    "Dynamic Profiles Selected": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已选择动态配置文件"
+          }
+        }
+      }
+    },
     "Edit": {
       "localizations": {
         "zh-Hans": {
@@ -1926,7 +2146,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "编辑配置文件..."
+            "value": "编辑配置文件…"
           }
         }
       }
@@ -1946,7 +2166,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "编辑会话..."
+            "value": "编辑会话…"
           }
         }
       }
@@ -1991,6 +2211,16 @@
         }
       }
     },
+    "Enable": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "启用"
+          }
+        }
+      }
+    },
     "Enable GPU Frame Capture": {
       "localizations": {
         "zh-Hans": {
@@ -2007,6 +2237,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "启用 Orchestration"
+          }
+        }
+      }
+    },
+    "Enable Send Code": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "启用发送代码"
           }
         }
       }
@@ -2141,6 +2381,16 @@
         }
       }
     },
+    "Enter command to send tmux:": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "输入要发送给 tmux 的命令："
+          }
+        }
+      }
+    },
     "Enter expression to bind to this setting, or leave empty to clear the binding.": {
       "localizations": {
         "zh-Hans": {
@@ -2186,7 +2436,17 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "输入标签..."
+            "value": "输入标签…"
+          }
+        }
+      }
+    },
+    "Erase from Settings": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "从设置中抹掉"
           }
         }
       }
@@ -2227,6 +2487,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Esc +"
+          }
+        }
+      }
+    },
+    "Exclude From Dock and App Switcher": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "从 Dock 和应用切换器中排除"
           }
         }
       }
@@ -2621,6 +2891,16 @@
         }
       }
     },
+    "Hide": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "隐藏"
+          }
+        }
+      }
+    },
     "Hide clippings": {
       "localizations": {
         "zh-Hans": {
@@ -2651,6 +2931,16 @@
         }
       }
     },
+    "Host": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "主机"
+          }
+        }
+      }
+    },
     "How would you like to paste \\(fileDescription)?": {
       "localizations": {
         "zh-Hans": {
@@ -2677,6 +2967,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "我想要…"
+          }
+        }
+      }
+    },
+    "Ignore": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "忽略"
           }
         }
       }
@@ -2921,6 +3221,16 @@
         }
       }
     },
+    "I’ll Take My Chances": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "我愿承担风险"
+          }
+        }
+      }
+    },
     "Job Terminated": {
       "localizations": {
         "zh-Hans": {
@@ -2951,12 +3261,82 @@
         }
       }
     },
+    "Just Settings": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "仅设置"
+          }
+        }
+      }
+    },
+    "Keep": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "保留"
+          }
+        }
+      }
+    },
+    "Keep Both": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "全部保留"
+          }
+        }
+      }
+    },
+    "Keep Local Changes": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "保留本地更改"
+          }
+        }
+      }
+    },
+    "Keep Red": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "保留红色"
+          }
+        }
+      }
+    },
+    "Keep This Locale": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "保留此语言环境"
+          }
+        }
+      }
+    },
     "Keep Waiting": {
       "localizations": {
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "继续等待"
+          }
+        }
+      }
+    },
+    "Keyboard Shortcut Changed": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "键盘快捷键已更改"
           }
         }
       }
@@ -2981,12 +3361,12 @@
         }
       }
     },
-    "Kill tmux window, terminating its jobs, or hide it? ": {
+    "Kill": {
       "localizations": {
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "终止 tmux 窗口及其任务，还是隐藏它？"
+            "value": "终止"
           }
         }
       }
@@ -3021,6 +3401,16 @@
         }
       }
     },
+    "Large Paste": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "大量粘贴"
+          }
+        }
+      }
+    },
     "Last Suppressed": {
       "localizations": {
         "zh-Hans": {
@@ -3041,6 +3431,16 @@
         }
       }
     },
+    "Lauch Manually": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "手动启动"
+          }
+        }
+      }
+    },
     "Launch": {
       "localizations": {
         "zh-Hans": {
@@ -3051,12 +3451,32 @@
         }
       }
     },
+    "Launch Automatically": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自动启动"
+          }
+        }
+      }
+    },
     "Learn About the Companion App": {
       "localizations": {
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "了解 Companion 应用"
+          }
+        }
+      }
+    },
+    "Learn More": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "了解更多"
           }
         }
       }
@@ -3381,6 +3801,16 @@
         }
       }
     },
+    "More Info": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "更多信息"
+          }
+        }
+      }
+    },
     "Mouse Reporting": {
       "localizations": {
         "zh-Hans": {
@@ -3507,6 +3937,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "名称："
+          }
+        }
+      }
+    },
+    "Never": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "从不"
           }
         }
       }
@@ -3756,7 +4196,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "未选择图像 — 点击设置"
+            "value": "未选择图像 — 点按设置"
           }
         }
       }
@@ -3796,7 +4236,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "没有注释。选择文本并点击上方的按钮。"
+            "value": "没有注释。选择文本并点按上方的按钮。"
           }
         }
       }
@@ -3947,6 +4387,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "安装期间提供自动启动选项"
+          }
+        }
+      }
+    },
+    "Ok": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "好"
           }
         }
       }
@@ -4201,12 +4651,32 @@
         }
       }
     },
+    "Open in iTerm2": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在 iTerm2 中打开"
+          }
+        }
+      }
+    },
     "OpenAI": {
       "localizations": {
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "OpenAI"
+          }
+        }
+      }
+    },
+    "Overwrite": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "覆盖"
           }
         }
       }
@@ -4291,6 +4761,16 @@
         }
       }
     },
+    "Paste Image": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "粘贴图像"
+          }
+        }
+      }
+    },
     "Paste your API key": {
       "localizations": {
         "zh-Hans": {
@@ -4317,6 +4797,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "暂停 tmux 窗格"
+          }
+        }
+      }
+    },
+    "Permanently": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "永久"
           }
         }
       }
@@ -4377,6 +4867,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "请在密码管理器中重试你的操作。"
+          }
+        }
+      }
+    },
+    "Plugin Required": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "需要插件"
           }
         }
       }
@@ -4651,6 +5151,16 @@
         }
       }
     },
+    "Rebuild": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重建"
+          }
+        }
+      }
+    },
     "Recent Tab Colors": {
       "localizations": {
         "zh-Hans": {
@@ -4841,6 +5351,26 @@
         }
       }
     },
+    "Remind me Later": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "稍后提醒我"
+          }
+        }
+      }
+    },
+    "Remove": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "移除"
+          }
+        }
+      }
+    },
     "Remove All Tabs from Group": {
       "localizations": {
         "zh-Hans": {
@@ -4921,6 +5451,16 @@
         }
       }
     },
+    "Remove from This Profile": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "从此配置文件移除"
+          }
+        }
+      }
+    },
     "Rename": {
       "localizations": {
         "zh-Hans": {
@@ -4951,12 +5491,32 @@
         }
       }
     },
+    "Repair": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "修复"
+          }
+        }
+      }
+    },
     "Replace": {
       "localizations": {
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "替换"
+          }
+        }
+      }
+    },
+    "Replace Script": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "替换脚本"
           }
         }
       }
@@ -5061,6 +5621,16 @@
         }
       }
     },
+    "Reset": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重置"
+          }
+        }
+      }
+    },
     "Reset ": {
       "localizations": {
         "zh-Hans": {
@@ -5121,6 +5691,16 @@
         }
       }
     },
+    "Restart Now": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "立即重启"
+          }
+        }
+      }
+    },
     "Restore Arrangement": {
       "localizations": {
         "zh-Hans": {
@@ -5177,6 +5757,26 @@
           "stringUnit": {
             "state": "translated",
             "value": "显示注释"
+          }
+        }
+      }
+    },
+    "Reveal Contents": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "显示内容"
+          }
+        }
+      }
+    },
+    "Reveal In Finder": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在访达中显示"
           }
         }
       }
@@ -5297,6 +5897,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "运行协同进程…"
+          }
+        }
+      }
+    },
+    "Run Installer Anyway": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "仍然运行安装程序"
           }
         }
       }
@@ -5507,6 +6117,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "将选择存储到配置文件 \\(profileName)"
+          }
+        }
+      }
+    },
+    "Save to Downloads": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "存储到下载"
           }
         }
       }
@@ -5726,7 +6346,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "在左侧选择工作组，或点击 + 创建一个。"
+            "value": "在左侧选择工作组，或点按 + 创建一个。"
           }
         }
       }
@@ -5766,7 +6386,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "在终端中选择文本，然后点击下方的按钮。"
+            "value": "在终端中选择文本，然后点按下方的按钮。"
           }
         }
       }
@@ -6061,12 +6681,22 @@
         }
       }
     },
+    "Slow tmux Response": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "tmux 响应缓慢"
+          }
+        }
+      }
+    },
     "Smart Selection Playground\\nEnter text here, then click to see which rule matches at that location.": {
       "localizations": {
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "智能选择演练场\\n在此输入文本，然后点击查看该位置匹配的规则。"
+            "value": "智能选择演练场\\n在此输入文本，然后点按查看该位置匹配的规则。"
           }
         }
       }
@@ -6221,6 +6851,16 @@
         }
       }
     },
+    "Stop Asking": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "停止询问"
+          }
+        }
+      }
+    },
     "Stop Coprocess": {
       "localizations": {
         "zh-Hans": {
@@ -6287,6 +6927,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "与其他会话交换…"
+          }
+        }
+      }
+    },
+    "Sync These Too": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "也同步这些"
           }
         }
       }
@@ -6481,16 +7131,6 @@
         }
       }
     },
-    "The global keyboard shortcut you have set is overridden by at least one profile. ": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "你设置的全局键盘快捷键被至少一个配置文件覆盖。"
-          }
-        }
-      }
-    },
     "The global keyboard shortcut you have set is overridden by at least one profile. Check your profiles’ keyboard settings if it doesn't work as expected.": {
       "localizations": {
         "zh-Hans": {
@@ -6547,16 +7187,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "按键绑定操作“拷贝内插字符串”“%@”失败：\\n\\n%@"
-          }
-        }
-      }
-    },
-    "The keyboard shortcut you have set for this profile ": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "你为此配置文件设置的键盘快捷键 "
           }
         }
       }
@@ -6817,16 +7447,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "标题："
-          }
-        }
-      }
-    },
-    "To have a new window open in a specific space, ": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "要让新窗口在特定空间中打开，"
           }
         }
       }
@@ -7191,6 +7811,36 @@
         }
       }
     },
+    "Update %@ Only": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "仅更新 %@"
+          }
+        }
+      }
+    },
+    "Update Both Modes": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "更新两种模式"
+          }
+        }
+      }
+    },
+    "Update Now": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "立即更新"
+          }
+        }
+      }
+    },
     "Update Profile": {
       "localizations": {
         "zh-Hans": {
@@ -7207,6 +7857,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "在你的 iPhone 上更新 iTerm2 Buddy"
+          }
+        }
+      }
+    },
+    "Upgrade": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "升级"
           }
         }
       }
@@ -7231,12 +7891,82 @@
         }
       }
     },
+    "Use .%@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "使用 .%@"
+          }
+        }
+      }
+    },
+    "Use Default App": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "使用默认应用"
+          }
+        }
+      }
+    },
+    "Use Default Browser": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "使用默认浏览器"
+          }
+        }
+      }
+    },
+    "Use Default Profile": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "使用默认配置文件"
+          }
+        }
+      }
+    },
+    "Use Physical Key": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "使用物理按键"
+          }
+        }
+      }
+    },
+    "Use Settings Folder’s": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "使用设置文件夹的"
+          }
+        }
+      }
+    },
     "Use System Panel…": {
       "localizations": {
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "使用系统面板…"
+          }
+        }
+      }
+    },
+    "Use This Mac’s": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "使用这台 Mac 的"
           }
         }
       }
@@ -7341,6 +8071,16 @@
         }
       }
     },
+    "Web Site": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "网站"
+          }
+        }
+      }
+    },
     "What are you trying to do? I'll suggest commands and explain their output.": {
       "localizations": {
         "zh-Hans": {
@@ -7387,16 +8127,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "启用后，仅显示每个工作组的最新状态。"
-          }
-        }
-      }
-    },
-    "When iTerm2 is excluded from the dock, you can ": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "当 iTerm2 从 Dock 中排除时，你可以 "
           }
         }
       }
@@ -7491,6 +8221,16 @@
         }
       }
     },
+    "Why?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "为什么？"
+          }
+        }
+      }
+    },
     "Workgroup name": {
       "localizations": {
         "zh-Hans": {
@@ -7581,16 +8321,6 @@
         }
       }
     },
-    "You have chosen to have an option key act as Meta. ": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "你已选择让选项键充当 Meta。"
-          }
-        }
-      }
-    },
     "You have chosen to have an option key act as Meta. This option is useful for backward compatibility with older systems. The \\": {
       "localizations": {
         "zh-Hans": {
@@ -7647,16 +8377,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "你需要一个打开的终端窗口才能截屏。"
-          }
-        }
-      }
-    },
-    "You probably don’t want to turn this on. ": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "你可能不想开启这个。"
           }
         }
       }
@@ -7771,6 +8491,56 @@
         }
       }
     },
+    "_Allow Once": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "_允许一次"
+          }
+        }
+      }
+    },
+    "_No": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "_否"
+          }
+        }
+      }
+    },
+    "_Restart": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "_重启"
+          }
+        }
+      }
+    },
+    "_Temporarily": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "_暂时"
+          }
+        }
+      }
+    },
+    "_Yes": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "_是"
+          }
+        }
+      }
+    },
     "columns by": {
       "localizations": {
         "zh-Hans": {
@@ -7871,7 +8641,7 @@
         }
       }
     },
-    "iTerm2’s cc-status hook is no longer in ~/.claude/settings.json. This usually means Claude Code rewrote that file. Reinstall the hook so per-tab status indicators (“Working…,” “Waiting…”) work again?": {
+    "iTerm2\\u{2019}s cc-status hook is no longer in ~/.claude/settings.json. This usually means Claude Code rewrote that file. Reinstall the hook so per-tab status indicators (\\u{201C}Working\\u{2026},\\u{201D} \\u{201C}Waiting\\u{2026}\\u{201D}) work again?": {
       "localizations": {
         "zh-Hans": {
           "stringUnit": {

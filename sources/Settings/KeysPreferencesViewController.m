@@ -701,7 +701,7 @@ static NSString *const kKeyCode0MitigationSuffixGlobal = @"Global";
 }
 
 - (BOOL)warnAboutPossibleOverride {
-    switch ([iTermWarning showWarningWithTitle:NSLocalizedString(@"The global keyboard shortcut you have set is overridden by at least one profile. Check your profiles’ keyboard settings if it doesn't work as expected.", @"UI")actions:@[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI") ]
+    switch ([iTermWarning showWarningWithTitle:NSLocalizedString(@"The global keyboard shortcut you have set is overridden by at least one profile. Check your profiles’ keyboard settings if it doesn't work as expected.", @"UI") actions:@[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI") ]
                                     identifier:@"NeverWarnAboutPossibleOverrides"
                                    silenceable:kiTermWarningTypePermanentlySilenceable
                                         window:self.view.window]) {
@@ -849,7 +849,7 @@ static NSString *const kKeyCode0MitigationSuffixGlobal = @"Global";
 - (NSNumber *)removeBeforeLoading:(NSString *)thing {
     const iTermWarningSelection selection =
     [iTermWarning showWarningWithTitle:[NSString stringWithFormat:NSLocalizedString(@"Remove all key mappings before loading %@?", @"UI"), thing]
-                               actions:@[ @"Keep", @"Remove", NSLocalizedString(@"Cancel", @"UI") ]
+                               actions:@[ NSLocalizedString(@"Keep", @"UI"), NSLocalizedString(@"Remove", @"UI"), NSLocalizedString(@"Cancel", @"UI") ]
                              accessory:nil
                             identifier:@"RemoveExistingGlobalKeyMappingsBeforeLoading"
                            silenceable:kiTermWarningTypePersistent

@@ -416,7 +416,7 @@ withApplicationAtURL:appURL
         case iTermOpenStyleTab:
             if (isFileURL) {
                 selection = [iTermWarning showWarningWithTitle:NSLocalizedString(@"iTerm2 can display files like this in its built-in web browser! Would you like to open this link in iTerm2?", @"UI")
-                                                      actions:@[ @"Use Default App", @"Open in iTerm2", NSLocalizedString(@"Cancel", @"UI")]
+                                                      actions:@[ NSLocalizedString(@"Use Default App", @"UI"), NSLocalizedString(@"Open in iTerm2", @"UI"), NSLocalizedString(@"Cancel", @"UI")]
                                                     accessory:nil
                                                    identifier:identifier
                                                   silenceable:kiTermWarningTypePermanentlySilenceable
@@ -424,7 +424,7 @@ withApplicationAtURL:appURL
                                                        window:window];
             } else {
                 selection = [iTermWarning showWarningWithTitle:NSLocalizedString(@"iTerm2 can display web pages! Would you like to open this link in iTerm2?", @"UI")
-                                                      actions:@[ @"Use Default Browser", @"Open in iTerm2", NSLocalizedString(@"Cancel", @"UI")]
+                                                      actions:@[ NSLocalizedString(@"Use Default Browser", @"UI"), NSLocalizedString(@"Open in iTerm2", @"UI"), NSLocalizedString(@"Cancel", @"UI")]
                                                     accessory:nil
                                                    identifier:identifier
                                                   silenceable:kiTermWarningTypePermanentlySilenceable

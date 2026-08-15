@@ -489,7 +489,7 @@ static NSInteger CompareEncodingByLocalizedName(id a, id b, void *unused) {
         NSString *guid = [self stringForKey:KEY_GUID] ?: @"";
         const iTermWarningSelection selection =
         [iTermWarning showWarningWithTitle:NSLocalizedString(@"Warning! This profile uses a custom locale that doesn't use UTF-8 as its character encoding, but your profile *is* using UTF-8. This can cause error messages and non-ASCII text to appear wrong.", @"UI")
-                                   actions:@[ @"Change Locale", @"Keep This Locale"]
+                                   actions:@[ NSLocalizedString(@"Change Locale", @"UI"), NSLocalizedString(@"Keep This Locale", @"UI")]
                                  accessory:nil
                                 identifier:[@"NoSyncUTF8Mismatch_" stringByAppendingString:guid]
                                silenceable:kiTermWarningTypePermanentlySilenceable

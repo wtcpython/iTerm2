@@ -2347,7 +2347,7 @@ static iTermKeyEventReplayer *gReplayer;
     if (age > 30 * 24 * 60 * 60) {
         iTermWarningSelection selection =
         [iTermWarning showWarningWithTitle:NSLocalizedString(@"This nightly build is over 30 days old. Consider updating soon: you may be suffering from awful bugs in blissful ignorance.", @"UI")
-                                   actions:@[ @"I’ll Take My Chances", @"Update Now" ]
+                                   actions:@[ NSLocalizedString(@"I’ll Take My Chances", @"UI"), NSLocalizedString(@"Update Now", @"UI") ]
                                 identifier:@"NoSyncVeryOldNightlyBuildWarning"
                                silenceable:kiTermWarningTypeSilenceableForOneMonth
                                     window:nil];
@@ -3585,7 +3585,7 @@ static iTermKeyEventReplayer *gReplayer;
                                        isWindow ? @"window" : @"tab"];
         NSString *tmuxAction = isWindow ? @"New tmux Window" : @"New tmux Tab";
         iTermWarningSelection selection = [iTermWarning showWarningWithTitle:title
-                                                                     actions:@[ tmuxAction, @"Use Default Profile", NSLocalizedString(@"Cancel", @"UI") ]
+                                                                     actions:@[ tmuxAction, NSLocalizedString(@"Use Default Profile", @"UI"), NSLocalizedString(@"Cancel", @"UI") ]
                                                                    accessory:nil
                                                                   identifier:key
                                                                  silenceable:kiTermWarningTypePermanentlySilenceable

@@ -223,7 +223,7 @@ typedef NS_ENUM(NSUInteger, iTermLaunchExperienceChoice) {
             NSString *message = [NSString stringWithFormat:@"The system Python's iterm2 module is out of date and won't work with this version of iTerm2. Run `%@` to fix it.", command];
             const iTermWarningSelection selection =
             [iTermWarning showWarningWithTitle:message
-                                       actions:@[ NSLocalizedString(@"Copy Command", @"UI"), @"Ignore", @"Remind me Later"]
+                                       actions:@[ NSLocalizedString(@"Copy Command", @"UI"), NSLocalizedString(@"Ignore", @"UI"), NSLocalizedString(@"Remind me Later", @"UI")]
                                      accessory:nil
                                     identifier:@"SystemPythonModuleOutdated"
                                    silenceable:kiTermWarningTypePersistent

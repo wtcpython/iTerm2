@@ -142,7 +142,7 @@ class iTermBrowserGateway: NSObject {
         warning.actionLabels = ["Download", "Use System Browser", NSLocalizedString("Cancel", comment: "UI")]
         warning.identifier = upsellWarningIdentifier
         warning.warningType = .kiTermWarningTypePermanentlySilenceable
-        warning.heading = "Plugin Required"
+        warning.heading = NSLocalizedString("Plugin Required", comment: "UI")
         warning.doNotRememberLabels = ["Download", NSLocalizedString("Cancel", comment: "UI")]
         let selection = warning.runModal()
         switch selection {

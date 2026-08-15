@@ -1651,7 +1651,7 @@ extension Conductor {
             warning.actionLabels = ["Download", "View", NSLocalizedString("Cancel", comment: "UI")]
             warning.identifier = "DownloadOrViewInBrowser_" + mimeType + " " + path.usernameHostnameString
             warning.warningType = .kiTermWarningTypePermanentlySilenceable
-            warning.heading = "Download or View File?"
+            warning.heading = NSLocalizedString("Download or View File?", comment: "UI")
             warning.window = window
             warning.doNotRememberLabels = ["Download", NSLocalizedString("Cancel", comment: "UI")]
             switch warning.runModal() {

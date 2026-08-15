@@ -14,7 +14,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Group"
+            "value": "分组"
           }
         }
       }
@@ -50,7 +50,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Notify"
+            "value": "通知"
           }
         }
       }
@@ -176,7 +176,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Search"
+            "value": "搜索"
           }
         }
       }

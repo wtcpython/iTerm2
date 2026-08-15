@@ -3205,7 +3205,7 @@ ITERM_WEAKLY_REFERENCEABLE
     if (lang && self.encoding == NSUTF8StringEncoding && ![lang containsString:@"UTF-8"]) {
         const iTermWarningSelection selection =
         [iTermWarning showWarningWithTitle:NSLocalizedString(@"Warning! This profile uses a custom locale that doesn't use UTF-8 as its character encoding, but your profile *is* using UTF-8. This can cause error messages and non-ASCII text to appear wrong.", @"UI")
-                                   actions:@[ @"Change Locale", @"Keep This Locale"]
+                                   actions:@[ NSLocalizedString(@"Change Locale", @"UI"), NSLocalizedString(@"Keep This Locale", @"UI")]
                                  accessory:nil
                                 identifier:[@"NoSyncUTF8Mismatch_" stringByAppendingString:guid ?: @""]
                                silenceable:kiTermWarningTypePermanentlySilenceable
@@ -3360,7 +3360,7 @@ webViewConfiguration:(WKWebViewConfiguration *)webViewConfiguration
                     return;
                 }
                 const iTermWarningSelection selection = [iTermWarning showWarningWithTitle:NSLocalizedString(@"A browser session failed to start because the iTerm2 Browser Plugin couldn’t be found.", @"UI")
-                                           actions:@[ @"Download", NSLocalizedString(@"Cancel", @"UI") ]
+                                           actions:@[ NSLocalizedString(@"Download", @"UI"), NSLocalizedString(@"Cancel", @"UI") ]
                                          accessory:nil
                                         identifier:nil
                                        silenceable:kiTermWarningTypePersistent
@@ -4120,7 +4120,7 @@ webViewConfiguration:(WKWebViewConfiguration *)webViewConfiguration
         [self printTmuxMessage:[NSString stringWithFormat:@"tmux logging %@", (_tmuxGateway.tmuxLogging ? @"on" : @"off")]];
     } else if (unicode == 'C') {
         NSAlert *alert = [[[NSAlert alloc] init] autorelease];
-        alert.messageText = @"Enter command to send tmux:";
+        alert.messageText = NSLocalizedString(@"Enter command to send tmux:", @"UI");
         [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
         [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
         NSTextField *tmuxCommand = [[[NSTextField alloc] initWithFrame:NSMakeRect(0, 0, 200, 24)] autorelease];
@@ -4914,7 +4914,7 @@ webViewConfiguration:(WKWebViewConfiguration *)webViewConfiguration
     showing = YES;
     const iTermWarningSelection selection =
         [iTermWarning showWarningWithTitle:NSLocalizedString(@"A keyboard shortcut didn’t run because this physical key now produces a different character than it did when the shortcut was created, usually after switching keyboard layout or input method. Matching key bindings by physical key makes shortcuts work regardless of the character a key produces. This affects all key bindings; you can change it later in Settings > Keys.", @"UI")
-                                   actions:@[ @"Use Physical Key", @"Not Now", @"Don’t Ask Again" ]
+                                   actions:@[ NSLocalizedString(@"Use Physical Key", @"UI"), NSLocalizedString(@"Not Now", @"UI"), NSLocalizedString(@"Don’t Ask Again", @"UI") ]
                                  accessory:nil
                                 identifier:nil
                                silenceable:kiTermWarningTypePersistent
@@ -10454,13 +10454,13 @@ typedef NS_ENUM(NSUInteger, PTYSessionTmuxReport) {
 
 - (void)tmuxGatewayDidTimeOutDuringInitialization:(BOOL)duringInitialization {
     if (duringInitialization) {
-        // @"Reveal Setting" is a one-time navigation action and shouldn't be remembered.
+        // "Reveal Setting" is a one-time navigation action and shouldn't be remembered.
         iTermWarning *warning = [[iTermWarning alloc] init];
         warning.title = NSLocalizedString(@"It's taking a long time for tmux to respond. If this is a old or funky system it might expect newline rather than carriage return to end commands. You can adjust the line terminator used by tmux integration in Settings.", @"UI");
         warning.actionLabels = @[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Reveal Setting", @"UI") ];
         warning.identifier = @"NoSyncTmuxHung";
         warning.warningType = kiTermWarningTypePermanentlySilenceable;
-        warning.heading = @"Slow tmux Response";
+        warning.heading = NSLocalizedString(@"Slow tmux Response", @"UI");
         warning.doNotRememberLabels = @[ NSLocalizedString(@"Reveal Setting", @"UI") ];
         const iTermWarningSelection selection = [warning runModal];
         if (selection == 1) {
@@ -12444,7 +12444,7 @@ typedef NS_ENUM(NSUInteger, PTYSessionTmuxReport) {
     iTermAnnouncementViewController *announcement =
         [iTermAnnouncementViewController announcementWithTitle:@"This key now types a different character. Match key bindings by physical key?"
                                                          style:kiTermAnnouncementViewStyleQuestion
-                                                   withActions:@[ @"Use Physical Key", @"Learn More", @"Don’t Ask Again" ]
+                                                   withActions:@[ NSLocalizedString(@"Use Physical Key", @"UI"), NSLocalizedString(@"Learn More", @"UI"), NSLocalizedString(@"Don’t Ask Again", @"UI") ]
                                                     completion:^(int selection) {
         switch (selection) {
             case 0:
@@ -16386,7 +16386,7 @@ typedef NS_ENUM(NSUInteger, PTYSessionTmuxReport) {
     NSString *const identifier = @"NoSyncAllowDenyStealFocus";
     const iTermWarningSelection selection =
     [iTermWarning showWarningWithTitle:NSLocalizedString(@"A control sequence attempted to activate a session. Allow it?", @"UI")
-                               actions:@[ NSLocalizedString(@"Allow", @"UI"), @"Deny" ]
+                               actions:@[ NSLocalizedString(@"Allow", @"UI"), NSLocalizedString(@"Deny", @"UI") ]
                              accessory:nil
                             identifier:identifier
                            silenceable:kiTermWarningTypePermanentlySilenceable
@@ -16717,7 +16717,7 @@ typedef NS_ENUM(NSUInteger, PTYSessionTmuxReport) {
     iTermAnnouncementViewController *announcement =
     [iTermAnnouncementViewController announcementWithTitle:@"An app tried to read screen contents with DECRQCRA. Enable this feature?"
                                                      style:kiTermAnnouncementViewStyleQuestion
-                                               withActions:@[ @"Yes", @"No" ]
+                                               withActions:@[ NSLocalizedString(@"Yes", @"UI"), NSLocalizedString(@"No", @"UI") ]
                                                 completion:^(int selection) {
         switch (selection) {
             case -2:  // Dismiss programmatically
@@ -18732,7 +18732,7 @@ static const NSTimeInterval PTYSessionFocusReportBellSquelchTimeIntervalThreshol
     } else {
         iTermWarningSelection selection =
         [iTermWarning showWarningWithTitle:NSLocalizedString(@"It looks like you're not at a command prompt.", @"UI")
-                                   actions:@[ @"Run Installer Anyway", NSLocalizedString(@"Cancel", @"UI") ]
+                                   actions:@[ NSLocalizedString(@"Run Installer Anyway", @"UI"), NSLocalizedString(@"Cancel", @"UI") ]
                                 identifier:nil
                                silenceable:kiTermWarningTypePersistent
                                     window:self.view.window];
@@ -18792,7 +18792,7 @@ static const NSTimeInterval PTYSessionFocusReportBellSquelchTimeIntervalThreshol
     iTermAnnouncementViewController *announcement =
     [iTermAnnouncementViewController announcementWithTitle:@"This account’s Shell Integration scripts are out of date."
                                                      style:kiTermAnnouncementViewStyleWarning
-                                               withActions:@[ @"Upgrade", @"Silence Warning" ]
+                                               withActions:@[ NSLocalizedString(@"Upgrade", @"UI"), @"Silence Warning" ]
                                                 completion:^(int selection) {
         switch (selection) {
             case -2:  // Dismiss programmatically
@@ -19115,7 +19115,7 @@ static const NSTimeInterval PTYSessionFocusReportBellSquelchTimeIntervalThreshol
     NSString *identifier = @"NoSyncAllowBigDownload";
     const iTermWarningSelection selection =
     [iTermWarning showWarningWithTitle:[NSString stringWithFormat:NSLocalizedString(@"The download “%@” is larger than %@. Continue?", @"UI"), name, [NSString it_formatBytes:limit]]
-                               actions:@[ NSLocalizedString(@"Allow", @"UI"), @"Deny" ]
+                               actions:@[ NSLocalizedString(@"Allow", @"UI"), NSLocalizedString(@"Deny", @"UI") ]
                              accessory:nil
                             identifier:identifier
                            silenceable:kiTermWarningTypePermanentlySilenceable
@@ -19144,7 +19144,7 @@ static const NSTimeInterval PTYSessionFocusReportBellSquelchTimeIntervalThreshol
     }
     const iTermWarningSelection selection =
     [iTermWarning showWarningWithTitle:title
-                               actions:@[ @"Yes", @"No" ]
+                               actions:@[ NSLocalizedString(@"Yes", @"UI"), NSLocalizedString(@"No", @"UI") ]
                              accessory:nil
                             identifier:identifier
                            silenceable:kiTermWarningTypePermanentlySilenceable
@@ -22106,7 +22106,7 @@ static const NSTimeInterval PTYSessionFocusReportBellSquelchTimeIntervalThreshol
 }
 
 - (void)sendPasswordAfterGettingPermission {
-    BOOL ok = ([iTermWarning showWarningWithTitle:NSLocalizedString(@"Are you really at a password prompt? It looks like what you're typing is echoed to the screen.", @"UI")actions:@[ NSLocalizedString(@"Cancel", @"UI"), @"Enter Password" ]
+    BOOL ok = ([iTermWarning showWarningWithTitle:NSLocalizedString(@"Are you really at a password prompt? It looks like what you're typing is echoed to the screen.", @"UI") actions:@[ NSLocalizedString(@"Cancel", @"UI"), NSLocalizedString(@"Enter Password", @"UI") ]
                                        identifier:nil
                                       silenceable:kiTermWarningTypePersistent
                                            window:self.view.window] == kiTermWarningSelection1);
@@ -22462,7 +22462,7 @@ static const NSTimeInterval PTYSessionFocusReportBellSquelchTimeIntervalThreshol
     NSInteger thisProfile = 0;
     NSInteger allProfiles = -1;
     if ([[[ProfileModel sharedInstance] bookmarks] count] == 1) {
-        actions = @[ @"Yes", @"Stop Asking" ];
+        actions = @[ NSLocalizedString(@"Yes", @"UI"), NSLocalizedString(@"Stop Asking", @"UI") ];
     } else {
         actions = @[ @"Change This Profile", @"Change All Profiles", @"Stop Asking" ];
         allProfiles = 1;
@@ -24766,7 +24766,7 @@ static NSString *IT2AuthorizationAnnouncementIdentifier(NSString *guid) {
     iTermAnnouncementViewController *announcement =
         [iTermAnnouncementViewController announcementWithTitle:title
                                                          style:kiTermAnnouncementViewStyleWarning
-                                                   withActions:@[ NSLocalizedString(@"Allow", @"UI"), @"Deny" ]
+                                                   withActions:@[ NSLocalizedString(@"Allow", @"UI"), NSLocalizedString(@"Deny", @"UI") ]
                                                     completion:^(int selection) {
             // 0 = Allow, 1 = Deny: explicit choices we remember for the connection.
             // Closing (-1) or dismissing (-2) is not a choice, so deny just this request

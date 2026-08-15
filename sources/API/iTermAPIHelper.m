@@ -456,7 +456,7 @@ static BOOL iTermAPIHelperLastApplescriptAuthRequiredSetting;
 + (BOOL)createNoAuthFile:(NSWindow *)window {
     const iTermWarningSelection selection =
     [iTermWarning showWarningWithTitle:NSLocalizedString(@"Do you want to allow all apps running on this machine to use the Python API?\n\nThis will disable the check for Automation permission. If you agree, you’ll be prompted for administrator access to make the change.", @"UI")
-                               actions:@[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI"), @"More Info" ]
+                               actions:@[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI"), NSLocalizedString(@"More Info", @"UI") ]
                              accessory:nil
                             identifier:@"NoSyncRequireApplescriptAuth"
                            silenceable:kiTermWarningTypePersistent
@@ -491,7 +491,7 @@ static BOOL iTermAPIHelperLastApplescriptAuthRequiredSetting;
     [self setEnabled:NO];
     const iTermWarningSelection selection =
     [iTermWarning showWarningWithTitle:[NSString stringWithFormat:NSLocalizedString(@"Failed to remove the file “%@”: %@\n\nPlease remove this file manually to require Automation permission for the Python API.\n\nThe Python API has been disabled for your security.", @"UI"), path, error.localizedDescription]
-                               actions:@[ NSLocalizedString(@"OK", @"UI"), @"Reveal In Finder" ]
+                               actions:@[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Reveal In Finder", @"UI") ]
                              accessory:nil
                             identifier:@"NoSyncFailedToRemoveNoAuth"
                            silenceable:kiTermWarningTypePersistent
@@ -1557,7 +1557,7 @@ static BOOL iTermAPIHelperLastApplescriptAuthRequiredSetting;
         message = [NSString stringWithFormat:@"%@\n\nAlthough you have chosen to allow connections automatically, this script has not presented a valid cookie.", message];
     }
 
-    NSArray<NSString *> *actions = @[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI"), @"More Info" ];
+    NSArray<NSString *> *actions = @[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI"), NSLocalizedString(@"More Info", @"UI") ];
     if (![iTermAdvancedSettingsModel setCookie]) {
         actions = [actions arrayByAddingObject:@"Always"];
     }

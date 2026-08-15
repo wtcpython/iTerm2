@@ -105,7 +105,7 @@ class iTermUndoCloseShortcutChangeWarning: NSObject {
         }
 
         let warning = iTermWarning()
-        warning.heading = "Keyboard Shortcut Changed"
+        warning.heading = NSLocalizedString("Keyboard Shortcut Changed", comment: "UI")
         warning.title = """
             ⌘⇧T now restores recently closed tabs (Undo Close). The Show Tabs in \
             Fullscreen shortcut has moved to ⌘⇧U.

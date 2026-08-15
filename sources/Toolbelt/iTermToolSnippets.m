@@ -133,7 +133,7 @@ static NSButton *iTermToolSnippetsNewButton(NSString *imageName, NSString *title
         if (@available(macOS 10.16, *)) {
             _applyButton = iTermToolSnippetsNewButton(@"play", NSLocalizedString(@"Send", @"UI"), self, @selector(apply:), frame);
             _addButton = iTermToolSnippetsNewButton(@"plus", NSLocalizedString(@"Add", @"UI"), self, @selector(add:), frame);
-            _removeButton = iTermToolSnippetsNewButton(@"minus", @"Remove", self, @selector(remove:), frame);
+            _removeButton = iTermToolSnippetsNewButton(@"minus", NSLocalizedString(@"Remove", @"UI"), self, @selector(remove:), frame);
             _editButton = iTermToolSnippetsNewButton(@"square.and.pencil", @"Edit", self, @selector(edit:), frame);
             _advancedPasteButton = iTermToolSnippetsNewButton(@"rectangle.and.pencil.and.ellipsis", @"Open in Advanced Paste", self, @selector(openInAdvancedPaste:), frame);
             [self addSubview:_advancedPasteButton];

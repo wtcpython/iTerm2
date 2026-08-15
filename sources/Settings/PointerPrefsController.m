@@ -406,7 +406,7 @@ typedef enum {
 + (NSDictionary *)localizedActionMap
 {
     NSDictionary *names = [NSDictionary dictionaryWithObjectsAndKeys:
-                           @"Ignore", kIgnoreAction,
+                           NSLocalizedString(@"Ignore", @"UI"), kIgnoreAction,
                            @"Invoke Script Function…", kInvokeScriptFunction,
                            @"Paste from Clipboard…", kPasteFromClipboardPointerAction,
                            @"Paste from Selection…", kPasteFromSelectionPointerAction,

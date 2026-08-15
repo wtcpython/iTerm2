@@ -140,7 +140,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Calls"
+            "value": "调用"
           }
         }
       }
@@ -212,7 +212,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Logs"
+            "value": "日志"
           }
         }
       }

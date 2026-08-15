@@ -363,7 +363,7 @@
         NSString *removeFromOtherAction = [NSString stringWithFormat:@"Remove from “%@”", dupProfile[KEY_NAME]];
         switch ([iTermWarning showWarningWithTitle:theTitle
                                            actions:@[ removeFromOtherAction,
-                                                      @"Remove from This Profile" ]
+                                                      NSLocalizedString(@"Remove from This Profile", @"UI") ]
                                         identifier:nil
                                        silenceable:kiTermWarningTypePersistent
                                             window:self.view.window]) {

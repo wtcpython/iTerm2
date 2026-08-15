@@ -82,7 +82,7 @@ NSString *const kTerminalFileShouldStopNotification = @"kTerminalFileShouldStopN
 - (BOOL)shouldPromptForDownloadLocationInWindow:(NSWindow *)window {
     const iTermWarningSelection selection =
         [iTermWarning showWarningWithTitle:NSLocalizedString(@"Where would you like to save this download?", @"UI")
-                                   actions:@[ @"Save to Downloads", @"Choose…" ]
+                                   actions:@[ NSLocalizedString(@"Save to Downloads", @"UI"), NSLocalizedString(@"Choose…", @"UI") ]
                                  accessory:nil
                                 identifier:@"NoSyncPromptForDownloadLocation"
                                silenceable:kiTermWarningTypePermanentlySilenceable

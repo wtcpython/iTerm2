@@ -188,22 +188,22 @@ static const double kProfileNameMultiplierForWindowItem = 0.08;
                                    object:@(session.variablesScope.path.length > 0)];
     };
     iTermTriple<NSString *, NSString *, NSNumber *> *(^command)(PTYSession *) = ^id(PTYSession *session) {
-        return [iTermTriple tripleWithObject:@"Command"
+        return [iTermTriple tripleWithObject:NSLocalizedString(@"Command", @"UI")
                                    andObject:session.commands.lastObject
                                    object:@(session.commands.lastObject.length > 0)];
     };
     iTermTriple<NSString *, NSString *, NSNumber *> *(^hostname)(PTYSession *) = ^id(PTYSession *session) {
-        return [iTermTriple tripleWithObject:@"Host"
+        return [iTermTriple tripleWithObject:NSLocalizedString(@"Host", @"UI")
                                    andObject:session.currentHost.usernameAndHostname
                                    object:@(session.currentHost != nil)];
     };
     iTermTriple<NSString *, NSString *, NSNumber *> *(^badge)(PTYSession *) = ^id(PTYSession *session) {
-        return [iTermTriple tripleWithObject:@"Badge"
+        return [iTermTriple tripleWithObject:NSLocalizedString(@"Badge", @"UI")
                                    andObject:session.badgeLabel
                                    object:@(session.badgeLabel.length > 0)];
     };
     iTermTriple<NSString *, NSString *, NSNumber *> *(^webSite)(PTYSession *) = ^id(PTYSession *session) {
-        return [iTermTriple tripleWithObject:@"Web Site"
+        return [iTermTriple tripleWithObject:NSLocalizedString(@"Web Site", @"UI")
                                    andObject:session.webSiteTitle ?: @""
                                       object:@(session.webSiteTitle.length > 0)];
     };

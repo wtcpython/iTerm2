@@ -271,7 +271,7 @@ class iTermNonTextPasteHelper: NSObject {
         warning.actionLabels = actions.map { $0.rawValue }
         warning.identifier = canUpload ? "NoSyncPasteImageDataRemote" : "NoSyncPasteImageData"
         warning.warningType = .kiTermWarningTypePermanentlySilenceable
-        warning.heading = "Paste Image"
+        warning.heading = NSLocalizedString("Paste Image", comment: "UI")
         warning.cancelLabel = ImagePasteAction.cancel.rawValue
         warning.window = delegate?.nonTextPasteHelperWindow(self)
 
@@ -412,7 +412,7 @@ class iTermNonTextPasteHelper: NSObject {
         warning.actionLabels = [NSLocalizedString("OK", comment: "UI"), NSLocalizedString("Cancel", comment: "UI")]
         warning.identifier = "NoSyncPasteLargeBase64"
         warning.warningType = .kiTermWarningTypePermanentlySilenceable
-        warning.heading = "Large Paste"
+        warning.heading = NSLocalizedString("Large Paste", comment: "UI")
         warning.cancelLabel = NSLocalizedString("Cancel", comment: "UI")
         warning.window = delegate?.nonTextPasteHelperWindow(self)
 

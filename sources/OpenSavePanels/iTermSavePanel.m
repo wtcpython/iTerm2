@@ -335,7 +335,7 @@ typedef NS_ENUM(NSUInteger, iTermSavePanelAction) {
                       @"Replacing it will overwrite its current contents.",
                       location];
     iTermWarningSelection selection = [iTermWarning showWarningWithTitle:body
-                                                                 actions:@[ NSLocalizedString(@"Cancel", @"UI"), NSLocalizedString(@"Replace", @"UI"), @"Append" ]
+                                                                 actions:@[ NSLocalizedString(@"Cancel", @"UI"), NSLocalizedString(@"Replace", @"UI"), NSLocalizedString(@"Append", @"UI") ]
                                                                accessory:nil
                                                               identifier:nil
                                                              silenceable:kiTermWarningTypePersistent
@@ -405,7 +405,7 @@ typedef NS_ENUM(NSUInteger, iTermSavePanelAction) {
         return YES;
     }
     iTermWarningSelection selection = [iTermWarning showWarningWithTitle:[NSString stringWithFormat:NSLocalizedString(@"You can choose to use both, so that your file name ends in “.%@.%@”.", @"UI"), proposedExtension, _requiredExtension]
-                                                                 actions:@[ [NSString stringWithFormat:@"Use .%@", _requiredExtension],
+                                                                 actions:@[ [NSString stringWithFormat:NSLocalizedString(@"Use .%@", @"UI"), _requiredExtension],
                                                                             NSLocalizedString(@"Cancel", @"UI"),
                                                                             @"Use both" ]
                                                                accessory:nil

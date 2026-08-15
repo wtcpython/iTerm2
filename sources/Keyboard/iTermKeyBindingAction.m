@@ -348,7 +348,7 @@ static NSString *GetProfileName(NSString *guid) {
             actionString = @"Send ^? Backspace";
             break;
         case KEY_ACTION_IGNORE:
-            actionString = @"Ignore";
+            actionString = NSLocalizedString(@"Ignore", @"UI");
             break;
         case KEY_ACTION_BYPASS:
             actionString = @"Bypass Terminal";

@@ -791,8 +791,8 @@ static NSString * const kColorGalleryURL = @"https://www.iterm2.com/colorgallery
         NSString *currentMode = currentModeIsDark ? @"Dark Mode" : @"Light Mode";
         const iTermWarningSelection selection =
         [iTermWarning showWarningWithTitle:NSLocalizedString(@"This preset has colors for both light mode and dark mode.", @"UI")
-                                   actions:@[ @"Update Both Modes",
-                                              [NSString stringWithFormat:@"Update %@ Only", currentMode]]
+                                   actions:@[ NSLocalizedString(@"Update Both Modes", @"UI"),
+                                              [NSString stringWithFormat:NSLocalizedString(@"Update %@ Only", @"UI"), currentMode]]
                              actionMapping:nil
                                  accessory:nil
                                 identifier:@"NoSyncUpdateWhichModes_PresetHasModes"
@@ -807,8 +807,8 @@ static NSString * const kColorGalleryURL = @"https://www.iterm2.com/colorgallery
     NSString *currentMode = currentModeIsDark ? @"Dark Mode" : @"Light Mode";
     const iTermWarningSelection selection =
     [iTermWarning showWarningWithTitle:NSLocalizedString(@"This preset does not have separate colors for light mode and dark mode.", @"UI")
-                               actions:@[ @"Update Both Modes",
-                                          [NSString stringWithFormat:@"Update %@ Only", currentMode]]
+                               actions:@[ NSLocalizedString(@"Update Both Modes", @"UI"),
+                                          [NSString stringWithFormat:NSLocalizedString(@"Update %@ Only", @"UI"), currentMode]]
                          actionMapping:nil
                              accessory:nil
                             identifier:@"NoSyncUpdateWhichModes_PresetLacksModes"

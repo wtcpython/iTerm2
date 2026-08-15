@@ -75,7 +75,7 @@ static NSButton *iTermToolActionsNewButton(NSString *imageName, NSString *title,
         if (@available(macOS 10.16, *)) {
             _applyButton = iTermToolActionsNewButton(@"play", @"Apply", self, @selector(apply:), frame);
             _addButton = iTermToolActionsNewButton(@"plus", NSLocalizedString(@"Add", @"UI"), self, @selector(add:), frame);
-            _removeButton = iTermToolActionsNewButton(@"minus", @"Remove", self, @selector(remove:), frame);
+            _removeButton = iTermToolActionsNewButton(@"minus", NSLocalizedString(@"Remove", @"UI"), self, @selector(remove:), frame);
             _editButton = iTermToolActionsNewButton(@"pencil", @"Edit", self, @selector(edit:), frame);
         } else {
             _applyButton = iTermToolActionsNewButton(nil, @"Apply", self, @selector(apply:), frame);

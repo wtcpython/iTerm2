@@ -1771,7 +1771,7 @@ class ClaudeCodeOnboarding: NSObject {
             profiles: [(guid: String, name: String)]) -> DynamicProfileChoice {
         let listed = profiles.map { "\u{2022} \($0.name)" }.joined(separator: "\n")
         let warning = iTermWarning()
-        warning.heading = "Dynamic Profiles Selected"
+        warning.heading = NSLocalizedString("Dynamic Profiles Selected", comment: "UI")
         warning.title = NSLocalizedString("These profiles are dynamic and not marked ", comment: "UI")
             + "\u{201C}rewritable,\u{201D} so iTerm2 normally regenerates them "
             + "from disk and any change here would be lost:\n\n\(listed)\n\n"

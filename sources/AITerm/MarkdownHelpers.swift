@@ -157,7 +157,7 @@ private func AttributedStringForMessage(_ md: SwiftyMarkdown,
                                         didCopy: (() -> ())?) -> NSAttributedString {
     let attributedString = md.attributedString()
     if #available(macOS 11.0, *) {
-        let image = NSImage(systemSymbolName: SFSymbol.docOnDoc.rawValue, accessibilityDescription: "Copy")!
+        let image = NSImage(systemSymbolName: SFSymbol.docOnDoc.rawValue, accessibilityDescription: NSLocalizedString("Copy", comment: "UI"))!
         let modified = attributedString.mutableCopy() as! NSMutableAttributedString
         var ranges = [NSRange]()
         let utf16String = attributedString.string.utf16

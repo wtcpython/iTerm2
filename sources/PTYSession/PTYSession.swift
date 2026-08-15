@@ -300,7 +300,7 @@ extension PTYSession {
                                             baseOffset: screen.totalScrollbackOverflow()))
         guard let client = ChatClient.instance else {
             iTermWarning.show(withTitle: "AI Chat could not be opened. Verify you only have one instance of iTerm2 running.",
-                              actions: ["OK"],
+                              actions: [NSLocalizedString("OK", comment: "UI")],
                               accessory: nil,
                               identifier: nil,
                               silenceable: .kiTermWarningTypePersistent,
@@ -763,7 +763,7 @@ extension PTYSession {
 
     func getRemoteHostnameRemoteCommand(getRemoteHostname: RemoteCommand.GetRemoteHostname,
                                         completion: @escaping (String, String) throws -> ()) rethrows {
-        try completion(screen.lastRemoteHost()?.hostname ?? "Unknown",
+        try completion(screen.lastRemoteHost()?.hostname ?? NSLocalizedString("Unknown", comment: "UI"),
                    "Hostname provided to AI")
     }
 
@@ -818,7 +818,7 @@ extension PTYSession {
     func deleteCurrentLineRemoteCommand(deleteCurrentLine: RemoteCommand.DeleteCurrentLine,
                                         completion: @escaping (String, String) throws -> ()) rethrows {
         writeTaskNoBroadcast("\u{15}")
-        try completion("Done", "Current line deleted by AI.")
+        try completion(NSLocalizedString("Done", comment: "UI"), "Current line deleted by AI.")
     }
 
     func restartSessionRemoteCommand(restartSession: RemoteCommand.RestartSession,
@@ -875,7 +875,7 @@ extension PTYSession {
                 try? completion("Error creating \(createFile.filename): " + error.localizedDescription,
                            "Failed to create \(createFile) on remote host: \(error.localizedDescription)")
             } else {
-                try? completion("Done", "AI created \(createFile.filename) on remote host.")
+                try? completion(NSLocalizedString("Done", comment: "UI"), "AI created \(createFile.filename) on remote host.")
             }
         }
     }

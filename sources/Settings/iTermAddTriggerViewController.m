@@ -604,7 +604,7 @@ static const CGFloat kLabelWidth = 124;
         _nameTextField = textField;
     } else if ([labelText isEqualToString:@"Job:"]) {
         _jobTextField = textField;
-        _jobTextField.placeholderString = @"Trigger enabled only for this job (e.g., emacs)";
+        _jobTextField.placeholderString = NSLocalizedString(@"Trigger enabled only for this job (e.g., emacs)", @"UI");
     }
     
     // Add visualization button if needed
@@ -1196,7 +1196,7 @@ static const CGFloat kLabelWidth = 124;
     _leaderOnlyButton.translatesAutoresizingMaskIntoConstraints = NO;
     _leaderOnlyButton.buttonType = NSButtonTypeSwitch;
     _leaderOnlyButton.title = NSLocalizedString(@"Only on the workgroup leader", @"UI");
-    _leaderOnlyButton.toolTip = @"When set, the trigger fires only for the workgroup leader (the session that originally entered the workgroup). Peers such as the Code Review and Diff sessions do not, so reloading or quitting one keeps the workgroup open.";
+    _leaderOnlyButton.toolTip = NSLocalizedString(@"When set, the trigger fires only for the workgroup leader (the session that originally entered the workgroup). Peers such as the Code Review and Diff sessions do not, so reloading or quitting one keeps the workgroup open.", @"UI");
     _leaderOnlyButton.target = self;
     _leaderOnlyButton.action = @selector(leaderOnlyDidChange:);
     [row addSubview:_leaderOnlyButton];
@@ -1596,7 +1596,7 @@ static const CGFloat kLabelWidth = 124;
                               _matchType == iTermTriggerMatchTypeEventJobEnded);
     _jobTextField.enabled = !jobFieldRedundant;
     if (jobFieldRedundant) {
-        _jobTextField.placeholderString = @"Set job above";
+        _jobTextField.placeholderString = NSLocalizedString(@"Set job above", @"UI");
         // Clear so we don't serialize a stale trigger.job from a
         // previously-selected match type. The job-started/ended
         // evaluator ignores trigger.job entirely (it reads from
@@ -1604,7 +1604,7 @@ static const CGFloat kLabelWidth = 124;
         // would confuse future callers.
         _jobTextField.stringValue = @"";
     } else {
-        _jobTextField.placeholderString = @"Trigger enabled only for this job (e.g., emacs)";
+        _jobTextField.placeholderString = NSLocalizedString(@"Trigger enabled only for this job (e.g., emacs)", @"UI");
     }
 }
 

@@ -119,7 +119,7 @@ final class CompanionPairingController: NSObject {
         case .compatible:
             return
         }
-        alert.addButton(withTitle: "OK")
+        alert.addButton(withTitle: NSLocalizedString("OK", comment: "UI"))
         alert.runModal()
     }
 
@@ -186,8 +186,8 @@ final class CompanionPairingController: NSObject {
                 + "iPhone is still registered with the old server. The old "
                 + "server will go away soon. You should re-pair to avoid "
                 + "problems when that happens."
-            alert.addButton(withTitle: "OK")
-            alert.addButton(withTitle: "Later")
+            alert.addButton(withTitle: NSLocalizedString("OK", comment: "UI"))
+            alert.addButton(withTitle: NSLocalizedString("Later", comment: "UI"))
             if alert.runModal() == .alertFirstButtonReturn {
                 CompanionOnboardingRouter.openSettingsOrWizard()
             }
@@ -252,8 +252,8 @@ final class CompanionPairingController: NSObject {
                 + "stored on this Mac is missing (\(missing.joined(separator: ", "))). "
                 + "This can happen after reinstalling or rebuilding iTerm2, or after a "
                 + "keychain reset. Re-pair to fix it."
-            alert.addButton(withTitle: "Re-pair…")
-            alert.addButton(withTitle: "Later")
+            alert.addButton(withTitle: NSLocalizedString("Re-pair…", comment: "UI"))
+            alert.addButton(withTitle: NSLocalizedString("Later", comment: "UI"))
             if alert.runModal() == .alertFirstButtonReturn {
                 CompanionOnboardingRouter.openSettingsOrWizard()
             }
@@ -655,7 +655,7 @@ final class CompanionPairingController: NSObject {
             alert.messageText = "Update iTerm2 Buddy on your iPhone"
             alert.informativeText = "iTerm2 has moved to the new relay. For your Mac and iPhone to keep connecting, "
                 + "update the iTerm2 Buddy app on your iPhone to the latest version."
-            alert.addButton(withTitle: "OK")
+            alert.addButton(withTitle: NSLocalizedString("OK", comment: "UI"))
             alert.runModal()
         }
     }

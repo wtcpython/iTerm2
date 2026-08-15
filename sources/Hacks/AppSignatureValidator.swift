@@ -59,7 +59,7 @@ class AppSignatureValidator: NSObject {
         let alert = NSAlert()
         alert.messageText = "Application Corrupt"
         alert.informativeText = reason + ": " + message
-        alert.addButton(withTitle: "OK")
+        alert.addButton(withTitle: NSLocalizedString("OK", comment: "UI"))
         alert.alertStyle = .critical
         alert.runModal()
     }

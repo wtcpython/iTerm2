@@ -136,7 +136,7 @@ class AITermController {
             case .pluginError(let error): return "pluginError(\(error.reason))"
             case .webResponse: return "webResponse"
             case .word(let word): return "<stream \(word)>"
-            case .cancel: return "Cancel"
+            case .cancel: return NSLocalizedString("Cancel", comment: "UI")
             }
         }
         case begin

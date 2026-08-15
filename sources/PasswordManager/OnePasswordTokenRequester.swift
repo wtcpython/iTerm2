@@ -84,7 +84,7 @@ class OnePasswordUtils {
         } else {
             alert.informativeText = "Version 2 of the OnePassword CLI could not be found. Check that \(OnePasswordUtils.pathToCLI) is installed and has version 2.x."
         }
-        alert.addButton(withTitle: "OK")
+        alert.addButton(withTitle: NSLocalizedString("OK", comment: "UI"))
         alert.runModal()
     }
 
@@ -93,8 +93,8 @@ class OnePasswordUtils {
         let alert = NSAlert()
         alert.messageText = "Can’t Find 1Password CLI"
         alert.informativeText = "In order to use the 1Password integration, iTerm2 needs to know where to find the CLI app named “op”. It’s normally in /usr/local/bin. If you have installed it elsewhere, please select Locate to provide its location."
-        alert.addButton(withTitle: "Locate")
-        alert.addButton(withTitle: "Cancel")
+        alert.addButton(withTitle: NSLocalizedString("Locate", comment: "UI"))
+        alert.addButton(withTitle: NSLocalizedString("Cancel", comment: "UI"))
         return alert.runModal() == .alertFirstButtonReturn
     }
 
@@ -334,7 +334,7 @@ class OnePasswordTokenRequester {
         let alert = NSAlert()
         alert.messageText = "Authentication Error"
         alert.informativeText = reason
-        alert.addButton(withTitle: "OK")
+        alert.addButton(withTitle: NSLocalizedString("OK", comment: "UI"))
         alert.runModal()
     }
 

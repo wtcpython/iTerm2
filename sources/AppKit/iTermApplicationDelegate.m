@@ -835,7 +835,7 @@ static NSModalResponse iTermCompareRenderingRunModal(id self, SEL _cmd) {
 
                 const iTermWarningSelection selection =
                     [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"OK to run “%@”?", filename]
-                                               actions:@[ @"OK", @"Cancel" ]
+                                               actions:@[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI") ]
                                             identifier:@"NoSyncConfirmRunOpenFile"
                                            silenceable:kiTermWarningTypePermanentlySilenceable
                                                 window:nil];
@@ -1304,7 +1304,7 @@ void TurnOnDebugLoggingAutomatically(void) {
                                                                        detail:@"You may notice worse performance while debug logging is on."
                                                      callbackNotificationName:iTermDisableDebugLoggingNotificationName
                                                  callbackNotificationUserInfo:@{}
-                                                            actionButtonTitle:@"Disable"];
+                                                            actionButtonTitle:NSLocalizedString(@"Disable", @"UI")];
       TurnOnDebugLoggingSilently();
   });
 }
@@ -1509,7 +1509,7 @@ void TurnOnDebugLoggingAutomatically(void) {
         // ok
     } else {
         [iTermWarning showWarningWithTitle:@"This is the last nightly build that will support macOS 11 and older. Sorry for the inconvenience!"
-                                   actions:@[ @"OK" ]
+                                   actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                  accessory:nil
                                 identifier:@"NoSyncMacOS11Deprecation"
                                silenceable:kiTermWarningTypePermanentlySilenceable
@@ -2526,7 +2526,7 @@ static iTermKeyEventReplayer *gReplayer;
     NSMenuItem *companionItem = [self menuItemWithAction:@selector(pairCompanionDevice:)
                                                  inMenu:[NSApp mainMenu]];
     companionItem.image = [NSImage imageWithSystemSymbolName:SFSymbolGetString(SFSymbolLaptopcomputerAndIphone)
-                                  accessibilityDescription:@"Companion Device Settings"];
+                                  accessibilityDescription:NSLocalizedString(@"Companion Device Settings", @"UI")];
     companionItem.hidden = ![iTermAdvancedSettingsModel companionPairingAllowed];
 }
 
@@ -3223,7 +3223,7 @@ static iTermKeyEventReplayer *gReplayer;
      ^(iTermPythonRuntimeDownloaderStatus status) {
          if (status == iTermPythonRuntimeDownloaderStatusNotNeeded) {
              [iTermWarning showWarningWithTitle:@"You’re up to date!"
-                                        actions:@[ @"OK" ]
+                                        actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                       accessory:nil
                                      identifier:nil
                                     silenceable:kiTermWarningTypePersistent
@@ -3279,7 +3279,7 @@ static iTermKeyEventReplayer *gReplayer;
                                                                                 completion:^(NSError *error) {
                 if (!error) {
                     [iTermWarning showWarningWithTitle:@"Installed successfully!"
-                                               actions:@[ @"OK" ]
+                                               actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                              accessory:nil
                                             identifier:nil
                                            silenceable:kiTermWarningTypePersistent
@@ -3287,7 +3287,7 @@ static iTermKeyEventReplayer *gReplayer;
                                                 window:nil];
                 } else {
                     [iTermWarning showWarningWithTitle:error.localizedDescription ?: @"Unknown error"
-                                               actions:@[ @"OK" ]
+                                               actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                              accessory:nil
                                             identifier:nil
                                            silenceable:kiTermWarningTypePersistent
@@ -3585,7 +3585,7 @@ static iTermKeyEventReplayer *gReplayer;
                                        isWindow ? @"window" : @"tab"];
         NSString *tmuxAction = isWindow ? @"New tmux Window" : @"New tmux Tab";
         iTermWarningSelection selection = [iTermWarning showWarningWithTitle:title
-                                                                     actions:@[ tmuxAction, @"Use Default Profile", @"Cancel" ]
+                                                                     actions:@[ tmuxAction, @"Use Default Profile", NSLocalizedString(@"Cancel", @"UI") ]
                                                                    accessory:nil
                                                                   identifier:key
                                                                  silenceable:kiTermWarningTypePermanentlySilenceable

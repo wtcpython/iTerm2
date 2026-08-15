@@ -28,7 +28,7 @@ class iTermMacOS13RequirementNotice: NSObject {
         }
         iTermWarning.show(
             withTitle: "Future versions of iTerm2 will require macOS 13 (Ventura) or later. This is the last version that supports macOS 12. Sorry for the inconvenience!",
-            actions: ["OK"],
+            actions: [NSLocalizedString("OK", comment: "UI")],
             accessory: nil,
             // No identifier: this is a persistent (non-silenceable) warning, so
             // iTermWarning writes no user-defaults key. Once-only is enforced by the

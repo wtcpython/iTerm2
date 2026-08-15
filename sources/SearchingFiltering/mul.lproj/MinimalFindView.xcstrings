@@ -19,6 +19,24 @@
         }
       }
     },
+    "3rb-hW-qnO.placeholderString": {
+      "comment": "Class = \"NSSearchFieldCell\"; placeholderString = \"Filter\"; ObjectID = \"3rb-hW-qnO\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Filter"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "筛选"
+          }
+        }
+      }
+    },
     "6Px-6a-JTm.title": {
       "comment": "Class = \"NSMenuItem\"; title = \"Case-Insensitive Substring\"; ObjectID = \"6Px-6a-JTm\";",
       "extractionState": "extracted_with_value",

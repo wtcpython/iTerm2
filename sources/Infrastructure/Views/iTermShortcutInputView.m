@@ -234,7 +234,7 @@
         if (self.purpose && shortcut.smellsAccidental) {
             const iTermWarningSelection selection =
             [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"Are you sure you want to use “%@” %@? This looks like a commonly used keystroke.", shortcut.stringValue, self.purpose]
-                                       actions:@[ @"OK", @"Cancel" ]
+                                       actions:@[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI") ]
                                      accessory:nil
                                     identifier:nil
                                    silenceable:kiTermWarningTypePersistent

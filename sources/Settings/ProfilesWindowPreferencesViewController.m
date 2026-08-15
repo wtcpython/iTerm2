@@ -857,7 +857,7 @@ typedef NS_ENUM(NSUInteger, iTermWindowUnitsTag) {
         }
         if ([iTermBackgroundImageRotationManager firstImagePathInFolder:path] == nil) {
             [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"The folder “%@” contains no images, so no background image will be shown.", path.lastPathComponent]
-                                       actions:@[ @"OK" ]
+                                       actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                      accessory:nil
                                     identifier:@"BackgroundFolderEmpty"
                                    silenceable:kiTermWarningTypePersistent
@@ -966,7 +966,7 @@ typedef NS_ENUM(NSUInteger, iTermWindowUnitsTag) {
     NSData *data = [NSData dataWithContentsOfFile:filename options:0 error:&error];
     if (!data) {
         [iTermWarning showWarningWithTitle:error.localizedDescription
-                                   actions:@[ @"OK" ]
+                                   actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                  accessory:nil
                                 identifier:@"BackgroundImageUnreadable"
                                silenceable:kiTermWarningTypePersistent
@@ -976,7 +976,7 @@ typedef NS_ENUM(NSUInteger, iTermWindowUnitsTag) {
     }
     if (data.length == 0) {
         [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"The image “%@” could not be loaded because the file is empty.", filename.lastPathComponent]
-                                   actions:@[ @"OK" ]
+                                   actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                  accessory:nil
                                 identifier:@"BackgroundImageUnreadable"
                                silenceable:kiTermWarningTypePersistent
@@ -986,7 +986,7 @@ typedef NS_ENUM(NSUInteger, iTermWindowUnitsTag) {
     }
     if (![[NSImage alloc] initWithData:data]) {
         [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"The image “%@” could not be loaded because it is corrupt or not a supported format.", filename.lastPathComponent]
-                                   actions:@[ @"OK" ]
+                                   actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                  accessory:nil
                                 identifier:@"BackgroundImageUnreadable"
                                silenceable:kiTermWarningTypePersistent
@@ -1001,7 +1001,7 @@ typedef NS_ENUM(NSUInteger, iTermWindowUnitsTag) {
     BOOL isDirectory = NO;
     if (![[NSFileManager defaultManager] fileExistsAtPath:filename isDirectory:&isDirectory] || !isDirectory) {
         [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"The folder “%@” could not be used because it does not exist or is not a directory.", filename.lastPathComponent]
-                                   actions:@[ @"OK" ]
+                                   actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                  accessory:nil
                                 identifier:@"BackgroundFolderUnreadable"
                                silenceable:kiTermWarningTypePersistent
@@ -1015,7 +1015,7 @@ typedef NS_ENUM(NSUInteger, iTermWindowUnitsTag) {
                                                                                     error:nil];
     if (!contents) {
         [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"The folder “%@” could not be read.", filename.lastPathComponent]
-                                   actions:@[ @"OK" ]
+                                   actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                  accessory:nil
                                 identifier:@"BackgroundFolderUnreadable"
                                silenceable:kiTermWarningTypePersistent
@@ -1077,7 +1077,7 @@ typedef NS_ENUM(NSUInteger, iTermWindowUnitsTag) {
                                        @"make sure that Spaces is enabled in System "
                                        @"Preferences and that it is configured to switch directly "
                                        @"to a space with ^ Number Keys."
-                               actions:@[ @"OK" ]
+                               actions:@[ NSLocalizedString(@"OK", @"UI") ]
                             identifier:@"NeverWarnAboutSpaces"
                            silenceable:kiTermWarningTypePermanentlySilenceable
                                 window:self.view.window];

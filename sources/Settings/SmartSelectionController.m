@@ -110,7 +110,7 @@ const double SmartSelectionVeryHighPrecision = 1000000.0;
     _regexTextView.richText = NO;
 
     _playgroundTextView.font = [NSFont userFixedPitchFontOfSize:[NSFont systemFontSize]];
-    _playgroundTextView.it_placeholderString = @"Smart Selection Playground\nEnter text here, then click to see which rule matches at that location.";
+    _playgroundTextView.it_placeholderString = NSLocalizedString(@"Smart Selection Playground\nEnter text here, then click to see which rule matches at that location.", @"UI");
     _playgroundTextView.playgroundDelegate = self;
     _playgroundTextView.automaticSpellingCorrectionEnabled = NO;
     _playgroundTextView.automaticDashSubstitutionEnabled = NO;

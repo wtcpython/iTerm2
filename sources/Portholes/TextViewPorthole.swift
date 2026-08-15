@@ -476,7 +476,7 @@ extension TextViewPorthole: NSTextViewDelegate {
         }
         if url.scheme == "file" {
             if iTermWarning.show(withTitle: "Open file at \(url.path)?",
-                                 actions: ["OK", "Cancel"],
+                                 actions: [NSLocalizedString("OK", comment: "UI"), NSLocalizedString("Cancel", comment: "UI")],
                                  accessory: nil,
                                  identifier: "NoSyncOpenFileFromMarkdownLink",
                                  silenceable: .kiTermWarningTypePermanentlySilenceable,
@@ -486,7 +486,7 @@ extension TextViewPorthole: NSTextViewDelegate {
             }
         } else {
             if iTermWarning.show(withTitle: "Open URL \(url.absoluteString)?",
-                                 actions: ["OK", "Cancel"],
+                                 actions: [NSLocalizedString("OK", comment: "UI"), NSLocalizedString("Cancel", comment: "UI")],
                                  accessory: nil,
                                  identifier: "NoSyncOpenURLFromMarkdownLink",
                                  silenceable: .kiTermWarningTypePermanentlySilenceable,

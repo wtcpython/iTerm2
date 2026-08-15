@@ -21,7 +21,7 @@ class ImportExport: NSObject {
         let savePanel = NSSavePanel()
         savePanel.allowedContentTypes = ["itermexport"].compactMap { UTType(filenameExtension: $0) }
         savePanel.nameFieldStringValue = "iTerm2 State.itermexport"
-        savePanel.title = "Export iTerm2 Settings and Data"
+        savePanel.title = NSLocalizedString("Export iTerm2 Settings and Data", comment: "UI")
 
         let response = savePanel.runModal()
         guard response == NSApplication.ModalResponse.OK else {
@@ -92,7 +92,7 @@ class ImportExport: NSObject {
         do {
             let selection = iTermWarning.show(
                 withTitle: "Any needed Python runtimes will be installed and secure settings will be updated, which may require you to enter your password. Then iTerm2 will restart and finish importing. This can take several minutes.",
-                actions: ["OK", "Cancel"],
+                actions: [NSLocalizedString("OK", comment: "UI"), NSLocalizedString("Cancel", comment: "UI")],
                 accessory: nil,
                 identifier: nil,
                 silenceable: .kiTermWarningTypePersistent,
@@ -126,7 +126,7 @@ class ImportExport: NSObject {
     static func eraseAll(window: NSWindow?) -> String? {
         let exportSelection = iTermWarning.show(
             withTitle: "Would you like to export your settings and data first? You will be able to re-import the exported file later if you change your mind.",
-            actions: ["Export First", "Skip Export", "Cancel"],
+            actions: ["Export First", "Skip Export", NSLocalizedString("Cancel", comment: "UI")],
             accessory: nil,
             identifier: nil,
             silenceable: .kiTermWarningTypePersistent,
@@ -150,7 +150,7 @@ class ImportExport: NSObject {
                 // export, not erase, and the erase has not happened.
                 _ = iTermWarning.show(
                     withTitle: message,
-                    actions: ["OK"],
+                    actions: [NSLocalizedString("OK", comment: "UI")],
                     accessory: nil,
                     identifier: nil,
                     silenceable: .kiTermWarningTypePersistent,
@@ -197,7 +197,7 @@ class ImportExport: NSObject {
         warning.heading = confirmHeading
         let eraseAction = iTermWarningAction(label: actionLabel, block: nil)
         eraseAction.destructive = !dryRun
-        warning.warningActions = [iTermWarningAction(label: "Cancel"), eraseAction]
+        warning.warningActions = [iTermWarningAction(label: NSLocalizedString("Cancel", comment: "UI")), eraseAction]
         warning.warningType = .kiTermWarningTypePersistent
         warning.window = window
         let confirm = warning.runModal()
@@ -211,7 +211,7 @@ class ImportExport: NSObject {
         }
         _ = iTermWarning.show(
             withTitle: "iTerm2 logged what it would have erased to Console.app. Nothing was actually deleted because the “Dry-run Erase All Settings and Data” advanced setting is enabled.",
-            actions: ["OK"],
+            actions: [NSLocalizedString("OK", comment: "UI")],
             accessory: nil,
             identifier: nil,
             silenceable: .kiTermWarningTypePersistent,

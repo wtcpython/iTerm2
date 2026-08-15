@@ -105,7 +105,7 @@ final class iTermWorkgroupInstance: NSObject {
     // Human-readable workgroup name for user-facing messages, with the
     // same empty-name fallback the Workgroups menu uses.
     @objc var workgroupDisplayName: String {
-        return workgroup.name.isEmpty ? "Untitled" : workgroup.name
+        return workgroup.name.isEmpty ? NSLocalizedString("Untitled", comment: "UI") : workgroup.name
     }
 
     // Every live session teardown would terminate: the main session,

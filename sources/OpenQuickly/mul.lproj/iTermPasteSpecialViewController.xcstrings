@@ -37,6 +37,24 @@
         }
       }
     },
+    "6tG-RX-FWF.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"This is enabled when the running app has sent an escape code to turn on “bracketed paste mode.” The pasted string will be “bracketed” by escape codes indicating the text within is from a paste operation.\"; ObjectID = \"6tG-RX-FWF\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "This is enabled when the running app has sent an escape code to turn on “bracketed paste mode.” The pasted string will be “bracketed” by escape codes indicating the text within is from a paste operation."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "当运行中的应用发送转义码开启“括号粘贴模式”时启用。粘贴的字符串将被转义码“括起来”，表示其中的文本来自粘贴操作。"
+          }
+        }
+      }
+    },
     "8UF-96-NRu.title": {
       "comment": "Class = \"NSButtonCell\"; title = \"Escape tabs with ^V\"; ObjectID = \"8UF-96-NRu\";",
       "extractionState": "extracted_with_value",
@@ -91,6 +109,24 @@
         }
       }
     },
+    "C2O-DY-y76.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"Converts various forms of quotation marks and dashes to their ASCII equivalents.\"; ObjectID = \"C2O-DY-y76\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Converts various forms of quotation marks and dashes to their ASCII equivalents."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "将各种形式的引号和破折号转换为 ASCII 等价形式。"
+          }
+        }
+      }
+    },
     "EeN-We-9AA.title": {
       "comment": "Class = \"NSButtonCell\"; title = \"Convert tabs to spaces:\"; ObjectID = \"EeN-We-9AA\";",
       "extractionState": "extracted_with_value",
@@ -105,6 +141,60 @@
           "stringUnit": {
             "state": "translated",
             "value": "将制表符转换为空格："
+          }
+        }
+      }
+    },
+    "FKu-pE-gGN.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"Both DOS and UNIX newlines are generally not used as input. CR is standard.\"; ObjectID = \"FKu-pE-gGN\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Both DOS and UNIX newlines are generally not used as input. CR is standard."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "DOS 和 UNIX 换行符通常不用于输入。CR 是标准。"
+          }
+        }
+      }
+    },
+    "I7q-KH-dfd.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"Both DOS and UNIX newlines are generally not used as input. CR is standard.\"; ObjectID = \"I7q-KH-dfd\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Both DOS and UNIX newlines are generally not used as input. CR is standard."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "DOS 和 UNIX 换行符通常不用于输入。CR 是标准。"
+          }
+        }
+      }
+    },
+    "ILq-w8-PQn.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"Tab, line feed, form feed, and carriage return are the only “safe” control codes.\"; ObjectID = \"ILq-w8-PQn\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Tab, line feed, form feed, and carriage return are the only “safe” control codes."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "制表符、换行符、换页符和回车符是仅有的“安全”控制码。"
           }
         }
       }
@@ -195,6 +285,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "移除不安全控制码"
+          }
+        }
+      }
+    },
+    "Qmg-L3-fKu.placeholderString": {
+      "comment": "Class = \"NSTextFieldCell\"; placeholderString = \"Regular Expression\"; ObjectID = \"Qmg-L3-fKu\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Regular Expression"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正则表达式"
           }
         }
       }
@@ -393,6 +501,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "块大小："
+          }
+        }
+      }
+    },
+    "hpt-tW-eP7.placeholderString": {
+      "comment": "Class = \"NSTextFieldCell\"; placeholderString = \"Substitution\"; ObjectID = \"hpt-tW-eP7\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Substitution"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "替换"
           }
         }
       }

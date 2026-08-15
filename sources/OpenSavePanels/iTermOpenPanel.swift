@@ -334,7 +334,7 @@ private extension iTermOpenPanel {
         
         // Create SSH panel button
         let sshButton = SSHOpenPanelButton()
-        sshButton.title = "Open SSH Panel..."
+        sshButton.title = NSLocalizedString("Open SSH Panel...", comment: "UI")
         sshButton.target = self
         sshButton.action = #selector(openSSHPanelButtonClicked(_:))
         sshButton.bezelStyle = .rounded

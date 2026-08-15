@@ -231,7 +231,7 @@ class iTermScreenshotPanel: NSPanel {
         self.isFloatingPanel = true
         self.becomesKeyOnlyIfNeeded = true
         self.hidesOnDeactivate = true  // Hide when iTerm2 is not active
-        self.title = "Make Screenshot"
+        self.title = NSLocalizedString("Make Screenshot", comment: "UI")
         self.isReleasedWhenClosed = false
         self.delegate = self
         setupUI()
@@ -341,7 +341,7 @@ class iTermScreenshotPanel: NSPanel {
         encodingProgressBar.translatesAutoresizingMaskIntoConstraints = false
         encodingProgressContainer.addSubview(encodingProgressBar)
 
-        encodingCancelButton = NSButton(title: "Cancel", target: self, action: #selector(cancelEncodingClicked(_:)))
+        encodingCancelButton = NSButton(title: NSLocalizedString("Cancel", comment: "UI"), target: self, action: #selector(cancelEncodingClicked(_:)))
         encodingCancelButton.bezelStyle = .rounded
         encodingCancelButton.controlSize = .small
         encodingCancelButton.translatesAutoresizingMaskIntoConstraints = false
@@ -401,13 +401,13 @@ class iTermScreenshotPanel: NSPanel {
         instructionLabel.textColor = .secondaryLabelColor
         contentView.addSubview(instructionLabel)
 
-        addRedactionButton = NSButton(title: "Redact Selection", target: self, action: #selector(addRedactionClicked(_:)))
+        addRedactionButton = NSButton(title: NSLocalizedString("Redact Selection", comment: "UI"), target: self, action: #selector(addRedactionClicked(_:)))
         addRedactionButton.translatesAutoresizingMaskIntoConstraints = false
         addRedactionButton.bezelStyle = .rounded
         addRedactionButton.isEnabled = false
         contentView.addSubview(addRedactionButton)
 
-        addHighlightButton = NSButton(title: "Highlight Selection", target: self, action: #selector(addHighlightClicked(_:)))
+        addHighlightButton = NSButton(title: NSLocalizedString("Highlight Selection", comment: "UI"), target: self, action: #selector(addHighlightClicked(_:)))
         addHighlightButton.translatesAutoresizingMaskIntoConstraints = false
         addHighlightButton.bezelStyle = .rounded
         addHighlightButton.isEnabled = false
@@ -440,7 +440,7 @@ class iTermScreenshotPanel: NSPanel {
         annotationsTableView.usesAlternatingRowBackgroundColors = true
 
         let labelColumn = NSTableColumn(identifier: NSUserInterfaceItemIdentifier("label"))
-        labelColumn.title = "Label"
+        labelColumn.title = NSLocalizedString("Label", comment: "UI")
         labelColumn.minWidth = 200
         annotationsTableView.addTableColumn(labelColumn)
 
@@ -513,11 +513,11 @@ class iTermScreenshotPanel: NSPanel {
         colorControlsContainer.addSubview(colorWell)
 
         // Buttons
-        let cancelButton = NSButton(title: "Cancel", target: self, action: #selector(cancelClicked(_:)))
+        let cancelButton = NSButton(title: NSLocalizedString("Cancel", comment: "UI"), target: self, action: #selector(cancelClicked(_:)))
         cancelButton.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(cancelButton)
 
-        copyButton = NSButton(title: "Copy to Clipboard", target: self, action: #selector(copyClicked(_:)))
+        copyButton = NSButton(title: NSLocalizedString("Copy to Clipboard", comment: "UI"), target: self, action: #selector(copyClicked(_:)))
         copyButton.bezelStyle = .rounded
         copyButton.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(copyButton)
@@ -530,13 +530,13 @@ class iTermScreenshotPanel: NSPanel {
         largeScreenshotWarningLabel.isHidden = true
         contentView.addSubview(largeScreenshotWarningLabel)
 
-        let saveButton = NSButton(title: "Save", target: self, action: #selector(saveClicked(_:)))
+        let saveButton = NSButton(title: NSLocalizedString("Save", comment: "UI"), target: self, action: #selector(saveClicked(_:)))
         saveButton.keyEquivalent = "\r" // Return
         saveButton.bezelStyle = .rounded
         saveButton.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(saveButton)
 
-        let saveAsButton = NSButton(title: "Save As…", target: self, action: #selector(saveAsClicked(_:)))
+        let saveAsButton = NSButton(title: NSLocalizedString("Save As…", comment: "UI"), target: self, action: #selector(saveAsClicked(_:)))
         saveAsButton.bezelStyle = .rounded
         saveAsButton.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(saveAsButton)
@@ -920,7 +920,7 @@ class iTermScreenshotPanel: NSPanel {
         NSLog("updateLargeScreenshotUI: lineRange=\(lineRange), maxLinesPerPart=\(cachedMaxLinesPerPart), numberOfParts=\(cachedNumberOfParts)")
 
         if cachedNumberOfParts > 1 {
-            largeScreenshotWarningLabel.stringValue = "⚠️ Large screenshot will be saved as \(cachedNumberOfParts) files."
+            largeScreenshotWarningLabel.stringValue = NSLocalizedString("⚠️ Large screenshot will be saved as \(cachedNumberOfParts) files.", comment: "UI")
             largeScreenshotWarningLabel.isHidden = false
             copyButton.isEnabled = false
         } else {
@@ -1331,14 +1331,14 @@ class iTermScreenshotPanel: NSPanel {
                                    accessibilityDescription: "Copied")
         copyButton.imagePosition = .imageLeading
         copyButton.contentTintColor = .systemGreen
-        copyButton.title = "Copied!"
+        copyButton.title = NSLocalizedString("Copied!", comment: "UI")
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) { [weak self] in
             guard let self, self.copyFeedbackGeneration == generation else { return }
             self.copyButton.image = nil
             self.copyButton.imagePosition = .noImage
             self.copyButton.contentTintColor = nil
-            self.copyButton.title = "Copy to Clipboard"
+            self.copyButton.title = NSLocalizedString("Copy to Clipboard", comment: "UI")
         }
     }
 

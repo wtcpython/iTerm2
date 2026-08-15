@@ -51,7 +51,7 @@ final class InlineChatToolbarView: NSView {
                                           alignment: .center)
 
     override init(frame frameRect: NSRect) {
-        let label = InlineChatToolbarTitleLabel(labelWithString: "AI Chat")
+        let label = InlineChatToolbarTitleLabel(labelWithString: NSLocalizedString("AI Chat", comment: "UI"))
         label.font = NSFont.systemFont(ofSize: 13, weight: .semibold)
         label.textColor = .labelColor
         label.alignment = .center

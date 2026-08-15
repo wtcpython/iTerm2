@@ -569,7 +569,7 @@ static NSString * const kColorGalleryURL = @"https://www.iterm2.com/colorgallery
 
     [self addPresetItemWithTitle:@"Import…" action:@selector(importColorPreset:)];
     [self addPresetItemWithTitle:@"Export…" action:@selector(exportColorPreset:)];
-    [self addPresetItemWithTitle:@"Save As…" action:@selector(saveColorPreset:)];
+    [self addPresetItemWithTitle:NSLocalizedString(@"Save As…", @"UI") action:@selector(saveColorPreset:)];
     [self addPresetItemWithTitle:@"Delete Preset…" action:@selector(deleteColorPreset:)];
     [self addPresetItemWithTitle:@"Visit Online Gallery" action:@selector(visitGallery:)];
     _presetsMenu.delegate = self;

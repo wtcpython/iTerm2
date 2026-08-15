@@ -1607,7 +1607,7 @@ extension iTermBrowserManager: WKUIDelegate {
         let alert = NSAlert()
         alert.messageText = "Web Page Alert"
         alert.informativeText = message
-        alert.addButton(withTitle: "OK")
+        alert.addButton(withTitle: NSLocalizedString("OK", comment: "UI"))
         alert.runModal()
         completionHandler()
     }
@@ -1617,8 +1617,8 @@ extension iTermBrowserManager: WKUIDelegate {
         let alert = NSAlert()
         alert.messageText = "Web Page Confirmation"
         alert.informativeText = message
-        alert.addButton(withTitle: "OK")
-        alert.addButton(withTitle: "Cancel")
+        alert.addButton(withTitle: NSLocalizedString("OK", comment: "UI"))
+        alert.addButton(withTitle: NSLocalizedString("Cancel", comment: "UI"))
         let response = alert.runModal()
         completionHandler(response == .alertFirstButtonReturn)
     }

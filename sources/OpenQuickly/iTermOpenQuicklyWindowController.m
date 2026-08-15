@@ -578,7 +578,7 @@
     result.imageView.image = item.icon;
 
     result.textField.attributedStringValue =
-        item.title ?: [[NSAttributedString alloc] initWithString:@"Untitled" attributes:@{}];
+        item.title ?: [[NSAttributedString alloc] initWithString:NSLocalizedString(@"Untitled", @"UI") attributes:@{}];
     [result.textField.cell setLineBreakMode:NSLineBreakByTruncatingTail];
     if (item.detail) {
         result.detailTextField.attributedStringValue = item.detail;

@@ -521,7 +521,7 @@ final class SpecialExceptionsWindowController: NSWindowController {
 
     private func showError(_ message: String) {
         iTermWarning.show(withTitle: message,
-                          actions: ["OK"],
+                          actions: [NSLocalizedString("OK", comment: "UI")],
                           accessory: nil,
                           identifier: "SpecialExceptionsImportError",
                           silenceable: .kiTermWarningTypePersistent,
@@ -541,7 +541,7 @@ final class SpecialExceptionsWindowController: NSWindowController {
     @IBAction func installNerdFontBundle(_ sender: Any) {
         if !config.entries.isEmpty {
             let selection = iTermWarning.show(withTitle: "This will replace existing special exceptions. Continue?",
-                                              actions: ["OK", "Cancel"],
+                                              actions: [NSLocalizedString("OK", comment: "UI"), NSLocalizedString("Cancel", comment: "UI")],
                                               accessory: nil,
                                               identifier: "SpecialExceptionsInstallNerdBundleConfirmation",
                                               silenceable: .kiTermWarningTypePersistent,

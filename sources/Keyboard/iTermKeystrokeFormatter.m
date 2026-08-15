@@ -175,7 +175,7 @@ exit:
             aString = [NSString stringWithFormat: @"F%d", (character - NSF1FunctionKey + 1)];
             break;
         case NSHelpFunctionKey:
-            aString = NSLocalizedStringFromTableInBundle(@"Help",
+            aString = NSLocalizedStringFromTableInBundle(NSLocalizedString(@"Help", @"UI"),
                                                          @"iTerm",
                                                          [NSBundle bundleForClass:[self class]],
                                                          @"Key Names");

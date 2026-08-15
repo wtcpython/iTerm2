@@ -3360,7 +3360,7 @@ webViewConfiguration:(WKWebViewConfiguration *)webViewConfiguration
                     return;
                 }
                 const iTermWarningSelection selection = [iTermWarning showWarningWithTitle:@"A browser session failed to start because the iTerm2 Browser Plugin couldn’t be found."
-                                           actions:@[ @"Download", @"Cancel" ]
+                                           actions:@[ @"Download", NSLocalizedString(@"Cancel", @"UI") ]
                                          accessory:nil
                                         identifier:nil
                                        silenceable:kiTermWarningTypePersistent
@@ -3616,7 +3616,7 @@ webViewConfiguration:(WKWebViewConfiguration *)webViewConfiguration
                                       shell];
                 const iTermWarningSelection selection =
                 [iTermWarning showWarningWithTitle:theTitle
-                                           actions:@[ @"OK", @"Cancel" ]
+                                           actions:@[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI") ]
                                         identifier:theKey
                                        silenceable:kiTermWarningTypePermanentlySilenceable
                                             window:self.view.window];
@@ -3640,7 +3640,7 @@ webViewConfiguration:(WKWebViewConfiguration *)webViewConfiguration
                               @"in profile \"%@\" is correct.",
                               theName];
         [iTermWarning showWarningWithTitle:theTitle
-                                   actions:@[ @"OK" ]
+                                   actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                 identifier:theKey
                                silenceable:kiTermWarningTypePermanentlySilenceable
                                     window:self.view.window];
@@ -6288,7 +6288,7 @@ webViewConfiguration:(WKWebViewConfiguration *)webViewConfiguration
 }
 
 - (NSString *)name {
-    return [self.variablesScope valueForVariableName:iTermVariableKeySessionName] ?: [self.variablesScope valueForVariableName:iTermVariableKeySessionProfileName] ?: @"Untitled";
+    return [self.variablesScope valueForVariableName:iTermVariableKeySessionName] ?: [self.variablesScope valueForVariableName:iTermVariableKeySessionProfileName] ?: NSLocalizedString(@"Untitled", @"UI");
 }
 
 - (void)setIconName:(NSString *)theName {
@@ -10097,7 +10097,7 @@ typedef NS_ENUM(NSUInteger, PTYSessionTmuxReport) {
     if (!_conductor.framing) {
         NSString *title = [NSString stringWithFormat:@"Advanced SSH features are unavailable because Python %@ or later was not found on %@", [iTermConductor minimumPythonVersionForFramer], _conductor.sshIdentity.hostname ?: @"remote host"];
         [iTermWarning showWarningWithTitle:title
-                                   actions:@[ @"OK" ]
+                                   actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                  accessory:nil
                                 identifier:nil
                                silenceable:kiTermWarningTypePersistent
@@ -10454,14 +10454,14 @@ typedef NS_ENUM(NSUInteger, PTYSessionTmuxReport) {
 
 - (void)tmuxGatewayDidTimeOutDuringInitialization:(BOOL)duringInitialization {
     if (duringInitialization) {
-        // "Reveal Setting" is a one-time navigation action and shouldn't be remembered.
+        // @"Reveal Setting" is a one-time navigation action and shouldn't be remembered.
         iTermWarning *warning = [[iTermWarning alloc] init];
         warning.title = NSLocalizedString(@"It's taking a long time for tmux to respond. If this is a old or funky system it might expect newline rather than carriage return to end commands. You can adjust the line terminator used by tmux integration in Settings.", @"UI");
-        warning.actionLabels = @[ @"OK", @"Reveal Setting" ];
+        warning.actionLabels = @[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Reveal Setting", @"UI") ];
         warning.identifier = @"NoSyncTmuxHung";
         warning.warningType = kiTermWarningTypePermanentlySilenceable;
         warning.heading = @"Slow tmux Response";
-        warning.doNotRememberLabels = @[ @"Reveal Setting" ];
+        warning.doNotRememberLabels = @[ NSLocalizedString(@"Reveal Setting", @"UI") ];
         const iTermWarningSelection selection = [warning runModal];
         if (selection == 1) {
             [self revealProfileSettingWithKey:KEY_TMUX_NEWLINE];
@@ -10798,10 +10798,10 @@ typedef NS_ENUM(NSUInteger, PTYSessionTmuxReport) {
 }
 
 - (void)tmuxDoubleAttachForSessionGUID:(NSString *)sessionGUID {
-    NSArray<NSString *> *actions = @[ @"OK", @"Reveal", @"Force Detach Other" ];
+    NSArray<NSString *> *actions = @[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Reveal", @"UI"), @"Force Detach Other" ];
     TmuxController *controller = [[TmuxControllerRegistry sharedInstance] tmuxControllerWithSessionGUID:sessionGUID];
     if (!controller) {
-        actions = @[ @"OK" ];
+        actions = @[ NSLocalizedString(@"OK", @"UI") ];
     }
     const iTermWarningSelection selection =
     [iTermWarning showWarningWithTitle:@"This instance of iTerm2 is already attached to this session"
@@ -11890,7 +11890,7 @@ typedef NS_ENUM(NSUInteger, PTYSessionTmuxReport) {
                 if (evaluator.error) {
                     [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"The key-binding action Copy Interpolated String “%@” failed:\n\n%@",
                                                         parameter, evaluator.error.localizedDescription]
-                                               actions:@[ @"OK" ]
+                                               actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                              accessory:nil
                                             identifier:nil
                                            silenceable:kiTermWarningTypePersistent
@@ -16198,7 +16198,7 @@ typedef NS_ENUM(NSUInteger, PTYSessionTmuxReport) {
 
 - (void)showMarkSetAlert {
     NSAlert *alert = [[[NSAlert alloc] init] autorelease];
-    alert.messageText = @"Alert";
+    alert.messageText = NSLocalizedString(@"Alert", @"UI");
     alert.informativeText = [NSString stringWithFormat:@"Mark set in session “%@.”", [self name]];
     [alert addButtonWithTitle:NSLocalizedString(@"Reveal", @"UI")];
     [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
@@ -16386,7 +16386,7 @@ typedef NS_ENUM(NSUInteger, PTYSessionTmuxReport) {
     NSString *const identifier = @"NoSyncAllowDenyStealFocus";
     const iTermWarningSelection selection =
     [iTermWarning showWarningWithTitle:@"A control sequence attempted to activate a session. Allow it?"
-                               actions:@[ @"Allow", @"Deny" ]
+                               actions:@[ NSLocalizedString(@"Allow", @"UI"), @"Deny" ]
                              accessory:nil
                             identifier:identifier
                            silenceable:kiTermWarningTypePermanentlySilenceable
@@ -17415,7 +17415,7 @@ typedef NS_ENUM(NSUInteger, PTYSessionTmuxReport) {
     iTermAnnouncementViewController *announcement =
     [iTermAnnouncementViewController announcementWithTitle:message
                                                      style:kiTermAnnouncementViewStyleWarning
-                                               withActions:@[ @"OK" ]
+                                               withActions:@[ NSLocalizedString(@"OK", @"UI") ]
                                                 completion:^(int selection) {}];
     [self queueAnnouncement:announcement identifier:identifier];
 }
@@ -18732,7 +18732,7 @@ static const NSTimeInterval PTYSessionFocusReportBellSquelchTimeIntervalThreshol
     } else {
         iTermWarningSelection selection =
         [iTermWarning showWarningWithTitle:@"It looks like you're not at a command prompt."
-                                   actions:@[ @"Run Installer Anyway", @"Cancel" ]
+                                   actions:@[ @"Run Installer Anyway", NSLocalizedString(@"Cancel", @"UI") ]
                                 identifier:nil
                                silenceable:kiTermWarningTypePersistent
                                     window:self.view.window];
@@ -19115,7 +19115,7 @@ static const NSTimeInterval PTYSessionFocusReportBellSquelchTimeIntervalThreshol
     NSString *identifier = @"NoSyncAllowBigDownload";
     const iTermWarningSelection selection =
     [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"The download “%@” is larger than %@. Continue?", name, [NSString it_formatBytes:limit]]
-                               actions:@[ @"Allow", @"Deny" ]
+                               actions:@[ NSLocalizedString(@"Allow", @"UI"), @"Deny" ]
                              accessory:nil
                             identifier:identifier
                            silenceable:kiTermWarningTypePermanentlySilenceable
@@ -19403,7 +19403,7 @@ static const NSTimeInterval PTYSessionFocusReportBellSquelchTimeIntervalThreshol
                                      [_delegate tabNumber],
                                      message];
         }
-        [controller notify:@"Alert"
+        [controller notify:NSLocalizedString(@"Alert", @"UI")
            withDescription:description
                windowIndex:[self screenWindowIndex]
                   tabIndex:[self screenTabIndex]
@@ -20638,7 +20638,7 @@ static const NSTimeInterval PTYSessionFocusReportBellSquelchTimeIntervalThreshol
         [self makeComposerFirstResponderIfAllowed];
     } second:^(NSError *error) {
         [iTermWarning showWarningWithTitle:error.localizedDescription
-                                   actions:@[ @"OK" ]
+                                   actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                  accessory:nil
                                 identifier:nil
                                silenceable:kiTermWarningTypePersistent
@@ -22108,7 +22108,7 @@ static const NSTimeInterval PTYSessionFocusReportBellSquelchTimeIntervalThreshol
 - (void)sendPasswordAfterGettingPermission {
     BOOL ok = ([iTermWarning showWarningWithTitle:@"Are you really at a password prompt? It looks "
                 @"like what you're typing is echoed to the screen."
-                                          actions:@[ @"Cancel", @"Enter Password" ]
+                                          actions:@[ NSLocalizedString(@"Cancel", @"UI"), @"Enter Password" ]
                                        identifier:nil
                                       silenceable:kiTermWarningTypePersistent
                                            window:self.view.window] == kiTermWarningSelection1);
@@ -22903,7 +22903,7 @@ static const NSTimeInterval PTYSessionFocusReportBellSquelchTimeIntervalThreshol
     NSString *identifier = [@"NoSyncLoadURLAllowed_" stringByAppendingString:domain];
 
     [iTermWarning asyncShowWarningWithTitle:title
-                                    actions:@[ @"OK", @"Cancel" ]
+                                    actions:@[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI") ]
                               actionMapping:nil
                                   accessory:nil
                                  identifier:identifier
@@ -23164,7 +23164,7 @@ static const NSTimeInterval PTYSessionFocusReportBellSquelchTimeIntervalThreshol
     if (replacement) {
         [self.textview replaceSelectionWith:replacement];
         [iTermWarning showWarningWithTitle:@"You can find this feature under Edit > Replace Selection > Replace with Pretty-Printed JSON if you want to use it again."
-                                   actions:@[ @"OK" ]
+                                   actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                  accessory:nil
                                 identifier:nil
                                silenceable:kiTermWarningTypePersistent
@@ -23172,7 +23172,7 @@ static const NSTimeInterval PTYSessionFocusReportBellSquelchTimeIntervalThreshol
                                     window:self.view.window];
     } else {
         [iTermWarning showWarningWithTitle:@"Looks like the selection changed and is no longer a valid JSON object.\nYou can find this feature under Edit > Replace Selection > Replace with Pretty-Printed JSON if you want to try again."
-                                   actions:@[ @"OK" ]
+                                   actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                 identifier:nil
                                silenceable:kiTermWarningTypePersistent
                                     window:self.view.window];
@@ -24459,7 +24459,7 @@ getOptionKeyBehaviorLeft:(iTermOptionKeyBehavior *)left
     iTermAnnouncementViewController *announcement =
         [iTermAnnouncementViewController announcementWithTitle:theTitle
                                                          style:kiTermAnnouncementViewStyleWarning
-                                                   withActions:@[ @"Install", @"Silence Warning" ]
+                                                   withActions:@[ NSLocalizedString(@"Install", @"UI"), @"Silence Warning" ]
                                                     completion:completion];
     [self queueAnnouncement:announcement
                  identifier:kTwoCoprocessesCanNotRunAtOnceAnnouncementIdentifier];
@@ -24768,7 +24768,7 @@ static NSString *IT2AuthorizationAnnouncementIdentifier(NSString *guid) {
     iTermAnnouncementViewController *announcement =
         [iTermAnnouncementViewController announcementWithTitle:title
                                                          style:kiTermAnnouncementViewStyleWarning
-                                                   withActions:@[ @"Allow", @"Deny" ]
+                                                   withActions:@[ NSLocalizedString(@"Allow", @"UI"), @"Deny" ]
                                                     completion:^(int selection) {
             // 0 = Allow, 1 = Deny: explicit choices we remember for the connection.
             // Closing (-1) or dismissing (-2) is not a choice, so deny just this request

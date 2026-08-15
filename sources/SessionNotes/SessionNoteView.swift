@@ -118,7 +118,7 @@ class SessionNoteView: NSView, NSTextViewDelegate {
         titleBar.wantsLayer = true
         titleBar.autoresizingMask = []
 
-        titleLabel = NSTextField(labelWithString: "Session Note")
+        titleLabel = NSTextField(labelWithString: NSLocalizedString("Session Note", comment: "UI"))
         titleLabel.font = NSFont.systemFont(ofSize: NSFont.smallSystemFontSize)
         titleLabel.textColor = .secondaryLabelColor
         titleLabel.lineBreakMode = .byTruncatingTail
@@ -319,7 +319,7 @@ class SessionNoteView: NSView, NSTextViewDelegate {
         if model.isCollapsed, let firstLine = model.text.components(separatedBy: .newlines).first, !firstLine.isEmpty {
             titleLabel.stringValue = firstLine
         } else {
-            titleLabel.stringValue = "Session Note"
+            titleLabel.stringValue = NSLocalizedString("Session Note", comment: "UI")
         }
     }
 

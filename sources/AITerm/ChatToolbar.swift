@@ -112,7 +112,7 @@ class ChatToolbar {
     init(dataSource: ChatToolbarDataSource) {
         self.dataSource = dataSource
 
-        let label = NSTextField(labelWithString: "AI Chat")
+        let label = NSTextField(labelWithString: NSLocalizedString("AI Chat", comment: "UI"))
         label.font = NSFont.systemFont(ofSize: 20, weight: .semibold)
         label.textColor = NSColor.labelColor
         label.alignment = .center

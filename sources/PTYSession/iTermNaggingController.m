@@ -327,7 +327,7 @@ static NSString *const iTermNaggingControllerRestoreIconAndWindowNameChoiceAlway
                                      isQuestion:YES
                                       important:YES
                                      identifier:iTermNaggingControllerAbortDownloadIdentifier
-                                        options:@[ @"OK", @"Cancel" ]
+                                        options:@[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI") ]
                                      completion:^(int selection) {
         if (selection == 0) {
             [self.delegate naggingControllerAbortDownload];
@@ -340,7 +340,7 @@ static NSString *const iTermNaggingControllerRestoreIconAndWindowNameChoiceAlway
                                      isQuestion:YES
                                       important:YES
                                      identifier:iTermNaggingControllerAbortUploadOnKeyPressAnnouncementIdentifier
-                                        options:@[ @"OK", @"Cancel" ]
+                                        options:@[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI") ]
                                      completion:^(int selection) {
         if (selection == 0) {
             [self.delegate naggingControllerAbortUpload];
@@ -529,7 +529,7 @@ static NSString *const iTermNaggingControllerRestoreIconAndWindowNameChoiceAlway
                                      isQuestion:YES
                                       important:YES
                                      identifier:kTurnOffBracketedPasteOnHostChangeAnnouncementIdentifier
-                                        options:@[ @"_Yes", @"Always", @"Never", @"Help" ]
+                                        options:@[ @"_Yes", @"Always", @"Never", NSLocalizedString(@"Help", @"UI") ]
                                      completion:^(int selection) {
         switch (selection) {
             case -2:  // Dismiss programmatically
@@ -697,7 +697,7 @@ static NSString *const iTermNaggingControllerRestoreIconAndWindowNameChoiceAlway
                                      isQuestion:YES
                                       important:YES
                                      identifier:kTurnOffSlowTriggersOfferUserDefaultsKey
-                                        options:@[ @"_Yes", @"Stop Asking", @"View Stats", @"Help" ]
+                                        options:@[ @"_Yes", @"Stop Asking", @"View Stats", NSLocalizedString(@"Help", @"UI") ]
                                      completion:^(int selection) {
         switch (selection) {
             case -2:  // Dismiss programmatically
@@ -933,7 +933,7 @@ static NSString *const iTermNaggingControllerRestoreIconAndWindowNameChoiceAlway
                                  isQuestion:YES
                                   important:YES
                                  identifier:allowHostKey
-                                    options:@[ @"Allow", @"Always allow for this host", @"Never allow" ]
+                                    options:@[ NSLocalizedString(@"Allow", @"UI"), @"Always allow for this host", @"Never allow" ]
                                  completion:^(int selection) {
         switch (selection) {
             case -2:  // Dismiss programmatically
@@ -996,7 +996,7 @@ static NSString *const iTermNaggingControllerTouchIDForSudoUserDefaultsKey = @"N
                                      isQuestion:YES
                                       important:YES
                                      identifier:iTermNaggingControllerTouchIDForSudoIdentifier
-                                        options:@[ @"_Run In New Window", @"Copy Command", @"Don’t Ask Again" ]
+                                        options:@[ @"_Run In New Window", NSLocalizedString(@"Copy Command", @"UI"), @"Don’t Ask Again" ]
                                      completion:^(int selection) {
         // Any explicit user action — including closing with the X (selection -1)
         // — should suppress further offers for this sudo invocation.

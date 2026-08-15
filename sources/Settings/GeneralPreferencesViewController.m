@@ -274,8 +274,8 @@ static NSString *iTermManualAIModelHost(NSDictionary *configuration) {
 
     // Add / remove on the left, then edit / duplicate / default.
     _addDeleteControl = [self makeSegmentedControlWithSegments:@[
-        @{ @"symbol": SFSymbolGetString(SFSymbolPlus), @"tip": @"Add" },
-        @{ @"symbol": SFSymbolGetString(SFSymbolMinus), @"tip": @"Delete" }
+        @{ @"symbol": SFSymbolGetString(SFSymbolPlus), @"tip": NSLocalizedString(@"Add", @"UI") },
+        @{ @"symbol": SFSymbolGetString(SFSymbolMinus), @"tip": NSLocalizedString(@"Delete", @"UI") }
     ] action:@selector(addDeleteClicked:)];
     _editControl = [self makeSegmentedControlWithSegments:@[
         @{ @"symbol": SFSymbolGetString(SFSymbolPencil), @"tip": @"Edit" },
@@ -298,7 +298,7 @@ static NSString *iTermManualAIModelHost(NSDictionary *configuration) {
     [content addSubview:_editControl];
 
     // OK: its right edge aligns with the table's right edge.
-    NSButton *ok = [NSButton buttonWithTitle:@"OK" target:self action:@selector(okClicked:)];
+    NSButton *ok = [NSButton buttonWithTitle:NSLocalizedString(@"OK", @"UI") target:self action:@selector(okClicked:)];
     ok.bezelStyle = NSBezelStyleRounded;
     ok.keyEquivalent = @"\r";
     ok.frame = NSMakeRect(margin + tableWidth - okWidth, bottomRowY, okWidth, okHeight);
@@ -706,7 +706,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
                                   width:fieldWidth
                                 content:content];
 
-    NSButton *save = [NSButton buttonWithTitle:(_isEditing ? @"Save" : @"Add")
+    NSButton *save = [NSButton buttonWithTitle:(_isEditing ? NSLocalizedString(@"Save", @"UI") : NSLocalizedString(@"Add", @"UI"))
                                         target:self
                                         action:@selector(saveClicked:)];
     save.bezelStyle = NSBezelStyleRounded;
@@ -714,7 +714,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
     save.frame = NSMakeRect(width - margin - 100, 16, 100, 30);
     [content addSubview:save];
 
-    NSButton *cancel = [NSButton buttonWithTitle:@"Cancel"
+    NSButton *cancel = [NSButton buttonWithTitle:NSLocalizedString(@"Cancel", @"UI")
                                           target:self
                                           action:@selector(cancelClicked:)];
     cancel.bezelStyle = NSBezelStyleRounded;
@@ -1385,7 +1385,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
     };
     info.onChange = ^{
         [iTermWarning showWarningWithTitle:@"You must restart iTerm2 for this change to take effect."
-                                   actions:@[ @"OK" ]
+                                   actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                 identifier:nil
                                silenceable:kiTermWarningTypePersistent
                                     window:nil];
@@ -3302,7 +3302,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
         return;
     }
     [iTermWarning showWarningWithTitle:message
-                               actions:@[ @"OK" ]
+                               actions:@[ NSLocalizedString(@"OK", @"UI") ]
                              accessory:nil
                             identifier:nil
                            silenceable:kiTermWarningTypePersistent
@@ -3325,7 +3325,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
     }
     const iTermWarningSelection selection =
     [iTermWarning showWarningWithTitle:message
-                               actions:@[ action, @"OK" ]
+                               actions:@[ action, NSLocalizedString(@"OK", @"UI") ]
                              accessory:nil
                             identifier:@"NoSyncWindowRestorationDisabled"
                            silenceable:kiTermWarningTypePersistent

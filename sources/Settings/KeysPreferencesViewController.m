@@ -389,14 +389,14 @@ static NSString *const kKeyCode0MitigationSuffixGlobal = @"Global";
         }];
         NSString *joinedNames = [names componentsJoinedWithOxfordComma];
         NSString *namesSentence = nil;
-        NSArray *actions = @[ @"OK", @"Cancel"];
+        NSArray *actions = @[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI")];
 
         iTermWarningSelection cancel = kiTermWarningSelection1;
         iTermWarningSelection edit = kItermWarningSelectionError;
 
         if (profileHotKeys.count == 1) {
             namesSentence = [NSString stringWithFormat:@"You already have a Profile with a Hotkey Window named %@", joinedNames];
-            actions = @[ @"OK", @"Configure Existing Profile", @"Cancel"];
+            actions = @[ NSLocalizedString(@"OK", @"UI"), @"Configure Existing Profile", NSLocalizedString(@"Cancel", @"UI")];
             edit = kiTermWarningSelection1;
             cancel = kiTermWarningSelection2;
         } else {
@@ -703,7 +703,7 @@ static NSString *const kKeyCode0MitigationSuffixGlobal = @"Global";
 - (BOOL)warnAboutPossibleOverride {
     switch ([iTermWarning showWarningWithTitle:@"The global keyboard shortcut you have set is overridden by at least one profile. "
                                                @"Check your profiles’ keyboard settings if it doesn't work as expected."
-                                       actions:@[ @"OK", @"Cancel" ]
+                                       actions:@[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI") ]
                                     identifier:@"NeverWarnAboutPossibleOverrides"
                                    silenceable:kiTermWarningTypePermanentlySilenceable
                                         window:self.view.window]) {
@@ -851,7 +851,7 @@ static NSString *const kKeyCode0MitigationSuffixGlobal = @"Global";
 - (NSNumber *)removeBeforeLoading:(NSString *)thing {
     const iTermWarningSelection selection =
     [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"Remove all key mappings before loading %@?", thing]
-                               actions:@[ @"Keep", @"Remove", @"Cancel" ]
+                               actions:@[ @"Keep", @"Remove", NSLocalizedString(@"Cancel", @"UI") ]
                              accessory:nil
                             identifier:@"RemoveExistingGlobalKeyMappingsBeforeLoading"
                            silenceable:kiTermWarningTypePersistent

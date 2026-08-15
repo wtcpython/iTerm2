@@ -253,6 +253,24 @@
         }
       }
     },
+    "ZqX-2h-twi.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"Draws a thin line between the status bar and the terminal content.\"; ObjectID = \"ZqX-2h-twi\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Draws a thin line between the status bar and the terminal content."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在状态栏和终端内容之间绘制一条细线。"
+          }
+        }
+      }
+    },
     "dl4-IN-dSo.title": {
       "comment": "Class = \"NSMenuItem\"; title = \"Disabled\"; ObjectID = \"dl4-IN-dSo\";",
       "extractionState": "extracted_with_value",
@@ -303,6 +321,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "高级…"
+          }
+        }
+      }
+    },
+    "h3F-Ct-TxA.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"The tight packing algorithm allows more status bar components to be visible at a time but they tend to jump around more.\"; ObjectID = \"h3F-Ct-TxA\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "The tight packing algorithm allows more status bar components to be visible at a time but they tend to jump around more."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "紧凑排列算法可以同时显示更多状态栏组件，但它们更容易跳动。"
           }
         }
       }
@@ -375,6 +411,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "默认文本颜色："
+          }
+        }
+      }
+    },
+    "kXu-5A-6d1.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"The tight packing algorithm allows more status bar components to be visible at a time but they tend to jump around more.\"; ObjectID = \"kXu-5A-6d1\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "The tight packing algorithm allows more status bar components to be visible at a time but they tend to jump around more."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "紧凑排列算法可以同时显示更多状态栏组件，但它们更容易跳动。"
           }
         }
       }

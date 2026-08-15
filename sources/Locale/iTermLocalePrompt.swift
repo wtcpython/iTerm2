@@ -145,8 +145,8 @@ class iTermLocalePromptAlert {
     func run(window: NSWindow?, cancelUsesC: Bool) -> (String?, Bool, String?) {
         let alert = NSAlert()
         alert.messageText = message
-        alert.addButton(withTitle: "OK")
-        alert.addButton(withTitle: cancelUsesC ? "Use Minimal POSIX Locale" : "Cancel")
+        alert.addButton(withTitle: NSLocalizedString("OK", comment: "UI"))
+        alert.addButton(withTitle: cancelUsesC ? "Use Minimal POSIX Locale" : NSLocalizedString("Cancel", comment: "UI"))
 
         let wrapper = NSStackView()
         wrapper.orientation = .vertical
@@ -166,9 +166,9 @@ class iTermLocalePromptAlert {
         alert.showsSuppressionButton = allowRemember
         if allowRemember, let profileName {
             if let arrangementName {
-                alert.suppressionButton?.title = "Save selection to arrangement \(arrangementName)"
+                alert.suppressionButton?.title = NSLocalizedString("Save selection to arrangement \(arrangementName)", comment: "UI")
             } else {
-                alert.suppressionButton?.title = "Save selection to profile \(profileName)"
+                alert.suppressionButton?.title = NSLocalizedString("Save selection to profile \(profileName)", comment: "UI")
             }
         }
         let popup = self.popup

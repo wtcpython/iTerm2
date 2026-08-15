@@ -52,7 +52,7 @@ final class CodeReviewPromptManagerWindowController: NSWindowController {
             styleMask: [.titled, .closable, .resizable, .miniaturizable],
             backing: .buffered,
             defer: false)
-        window.title = "Code Review Prompts"
+        window.title = NSLocalizedString("Code Review Prompts", comment: "UI")
         window.setFrameAutosaveName("CodeReviewPromptManager")
         window.minSize = NSSize(width: 560, height: 320)
         super.init(window: window)
@@ -135,7 +135,7 @@ final class CodeReviewPromptManagerWindowController: NSWindowController {
             using: .systemFont(ofSize: NSFont.systemFontSize))
 
         let nameColumn = NSTableColumn(identifier: NSUserInterfaceItemIdentifier("Name"))
-        nameColumn.title = "Name"
+        nameColumn.title = NSLocalizedString("Name", comment: "UI")
         nameColumn.isEditable = true
         nameColumn.width = leftWidth - 4
         table.addTableColumn(nameColumn)
@@ -146,7 +146,7 @@ final class CodeReviewPromptManagerWindowController: NSWindowController {
 
         let segmented = NSSegmentedControl(images: [
             NSImage(systemSymbolName: "plus",
-                     accessibilityDescription: "Add")!,
+                     accessibilityDescription: NSLocalizedString("Add", comment: "UI"))!,
             NSImage(systemSymbolName: "minus",
                      accessibilityDescription: "Remove")!
         ], trackingMode: .momentary, target: nil, action: nil)
@@ -175,7 +175,7 @@ final class CodeReviewPromptManagerWindowController: NSWindowController {
             y: nameLabel.frame.minY - 24,
             width: rightWidth,
             height: 22))
-        nameInput.placeholderString = "Untitled"
+        nameInput.placeholderString = NSLocalizedString("Untitled", comment: "UI")
         nameInput.autoresizingMask = [.width, .minYMargin]
         nameInput.delegate = self
         container.addSubview(nameInput)

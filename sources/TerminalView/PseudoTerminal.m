@@ -2236,7 +2236,7 @@ ITERM_WEAKLY_REFERENCEABLE
     iTermWarningSelection selection =
         [iTermWarning showWarningWithTitle:@"Kill tmux window, terminating its jobs, or hide it? "
                                            @"Hidden windows may be restored from the tmux dashboard."
-                                   actions:@[ @"Hide", @"Cancel", @"Kill" ]
+                                   actions:@[ @"Hide", NSLocalizedString(@"Cancel", @"UI"), @"Kill" ]
                              actionMapping:@[ @(kiTermWarningSelection0), @(kiTermWarningSelection2), @(kiTermWarningSelection1)]
                                  accessory:nil
                                 identifier:@"ClosingTmuxTabKillsTmuxWindows"
@@ -2607,9 +2607,9 @@ ITERM_WEAKLY_REFERENCEABLE
     if (aSession.exited) {
         [aSession restartSession];
     } else {
-        iTermWarningAction *cancel = [iTermWarningAction warningActionWithLabel:@"Cancel" block:nil];
+        iTermWarningAction *cancel = [iTermWarningAction warningActionWithLabel:NSLocalizedString(@"Cancel", @"UI") block:nil];
         iTermWarningAction *ok =
-            [iTermWarningAction warningActionWithLabel:@"OK"
+            [iTermWarningAction warningActionWithLabel:NSLocalizedString(@"OK", @"UI")
                                                  block:^(iTermWarningSelection selection) {
                                                      if (selection == kiTermWarningSelection0) {
                                                          [aSession restartSession];
@@ -4507,7 +4507,7 @@ hidingToolbeltShouldResizeWindow:(BOOL)hidingToolbeltShouldResizeWindow
     if (title) {
         iTermWarningSelection selection =
             [iTermWarning showWarningWithTitle:title
-                                       actions:@[ @"Hide", @"Detach tmux Session", @"Kill", @"Cancel" ]
+                                       actions:@[ @"Hide", @"Detach tmux Session", @"Kill", NSLocalizedString(@"Cancel", @"UI") ]
                                     identifier:@"ClosingTmuxWindowKillsTmuxWindows"
                                    silenceable:kiTermWarningTypePermanentlySilenceable
                                         window:self.window];
@@ -9054,7 +9054,7 @@ hidingToolbeltShouldResizeWindow:(BOOL)hidingToolbeltShouldResizeWindow
                                             : [NSString stringWithFormat:@"%lu tabs", (unsigned long)closable.count];
     const iTermWarningSelection selection =
         [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"%@ (%@)", question, count]
-                                   actions:@[ @"Close", @"Cancel" ]
+                                   actions:@[ NSLocalizedString(@"Close", @"UI"), NSLocalizedString(@"Cancel", @"UI") ]
                                  accessory:nil
                                 identifier:@"NoSyncCloseTabGroup"
                                silenceable:kiTermWarningTypePersistent
@@ -9758,7 +9758,7 @@ static CGFloat iTermDimmingAmount(PSMTabBarControl *tabView) {
 - (void)turnOnMetalCaptureInInfoPlist {
     const iTermWarningSelection selection =
     [iTermWarning showWarningWithTitle:@"You must restart iTerm2 to turn on this feature."
-                               actions:@[ @"Restart Now", @"Cancel"]
+                               actions:@[ @"Restart Now", NSLocalizedString(@"Cancel", @"UI")]
                             identifier:@"RestartAfterMetalCaptureEnabled"
                            silenceable:kiTermWarningTypePersistent
                                 window:self.window];
@@ -12799,9 +12799,9 @@ static BOOL iTermApproximatelyEqualRects(NSRect lhs, NSRect rhs, double epsilon)
         return self.scope.windowTitleOverride;
     }
     if (![self tabBarShouldBeVisible] && ![iTermAdvancedSettingsModel showWindowTitleWhenTabBarInvisible]) {
-        return self.currentSession.nameController.presentationSessionTitle ?: @"Untitled";
+        return self.currentSession.nameController.presentationSessionTitle ?: NSLocalizedString(@"Untitled", @"UI");
     }
-    return self.currentSession.nameController.presentationWindowTitle ?: @"Untitled";
+    return self.currentSession.nameController.presentationWindowTitle ?: NSLocalizedString(@"Untitled", @"UI");
 }
 
 - (void)setName:(NSString *)theSessionName forSession:(PTYSession *)aSession {
@@ -12848,7 +12848,7 @@ typedef NS_ENUM(NSUInteger, iTermBroadcastCommand) {
     [iTermWarning showWarningWithTitle:title
                                actions:@[ [NSString stringWithFormat:@"%@ All", action],
                                           [NSString stringWithFormat:@"%@ Current Session Only", action],
-                                          @"Cancel" ]
+                                          NSLocalizedString(@"Cancel", @"UI") ]
                              accessory:nil
                             identifier:[NSString stringWithFormat:@"NoSync%@AllBroadcast", action]
                            silenceable:kiTermWarningTypePermanentlySilenceable
@@ -14430,9 +14430,9 @@ typedef NS_ENUM(NSUInteger, iTermBroadcastCommand) {
          }
          NSArray *actions;
          if (okSessions.count > 0) {
-             actions = @[ @"Cancel", @"Enter Password in Sessions at Prompt" ];
+             actions = @[ NSLocalizedString(@"Cancel", @"UI"), @"Enter Password in Sessions at Prompt" ];
          } else {
-             actions = @[ @"OK" ];
+             actions = @[ NSLocalizedString(@"OK", @"UI") ];
          }
          iTermWarningSelection selection = [iTermWarning showWarningWithTitle:message
                                                                       actions:actions

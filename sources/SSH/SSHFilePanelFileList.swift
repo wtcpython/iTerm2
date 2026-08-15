@@ -73,7 +73,7 @@ class SSHFilePanelFileList: NSScrollView {
 
         var title: String {
             switch self {
-            case .name: return "Name"
+            case .name: return NSLocalizedString("Name", comment: "UI")
             case .dateModified: return "Date Created"
             case .size: return "Size"
             case .kind: return "Kind"

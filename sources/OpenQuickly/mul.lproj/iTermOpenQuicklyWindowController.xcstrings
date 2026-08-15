@@ -72,6 +72,24 @@
           }
         }
       }
+    },
+    "ulN-O0-L4B.placeholderString": {
+      "comment": "Class = \"NSTextFieldCell\"; placeholderString = \"Search for sessions, profiles, or arrangements\"; ObjectID = \"ulN-O0-L4B\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Search for sessions, profiles, or arrangements"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "搜索会话、配置文件或窗口布局"
+          }
+        }
+      }
     }
   },
   "version": "1.0"

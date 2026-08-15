@@ -132,7 +132,7 @@ static NSMutableSet<NSString *> *iTermTransferrableFileLockedFileNames(void) {
     }
     NSString *message = [NSString stringWithFormat:@"A file named %@ already exists. Keep both files or replace the existing file?", baseName];
     const iTermWarningSelection selection = [iTermWarning showWarningWithTitle:message
-                                                                       actions:@[ @"Keep Both", @"Replace" ]
+                                                                       actions:@[ @"Keep Both", NSLocalizedString(@"Replace", @"UI") ]
                                                                      accessory:nil
                                                                     identifier:@"NoSyncOverwriteOrReplaceFile"
                                                                    silenceable:kiTermWarningTypePermanentlySilenceable
@@ -214,7 +214,7 @@ static NSMutableSet<NSString *> *iTermTransferrableFileLockedFileNames(void) {
 
 - (void)failedToRemoveUnquarantinedFileAt:(NSString *)path {
     [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"The file at “%@” could not be quarantined or deleted! It is dangerous and should be removed.", path]
-                               actions:@[ @"OK" ]
+                               actions:@[ NSLocalizedString(@"OK", @"UI") ]
                              accessory:nil
                             identifier:nil
                            silenceable:kiTermWarningTypePersistent

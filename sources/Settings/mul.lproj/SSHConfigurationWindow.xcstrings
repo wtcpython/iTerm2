@@ -73,6 +73,24 @@
         }
       }
     },
+    "IPF-xv-FWE.placeholderString": {
+      "comment": "Class = \"NSTextFieldCell\"; placeholderString = \"/usr/bin/ssh\"; ObjectID = \"IPF-xv-FWE\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "/usr/bin/ssh"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "/usr/bin/ssh"
+          }
+        }
+      }
+    },
     "N76-mg-r19.headerCell.title": {
       "comment": "Class = \"NSTableColumn\"; headerCell.title = \"File or Folder\"; ObjectID = \"N76-mg-r19\";",
       "extractionState": "extracted_with_value",

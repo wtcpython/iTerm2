@@ -344,7 +344,7 @@ NSString *const iTermPythonRuntimeDownloaderDidInstallRuntimeNotification = @"iT
             } else {
                 alert.informativeText = [NSString stringWithFormat:@"The Python Runtime is used by Python scripts that work with iTerm2. The download is about %@. OK to download it now?", [NSString it_formatBytes:info.size]];
             }
-            [alert addButtonWithTitle:silent ? @"Download" : @"OK"];
+            [alert addButtonWithTitle:silent ? @"Download" : NSLocalizedString(@"OK", @"UI")];
             [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"UI")];
             if ([alert runModal] == NSAlertSecondButtonReturn) {
                 RLog(@"Canceled by user");

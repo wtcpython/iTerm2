@@ -130,7 +130,7 @@
 }
 
 - (NSString *)displayName {
-    return @"Buried Sessions";
+    return NSLocalizedString(@"Buried Sessions", @"UI");
 }
 
 - (iTermVariableScope *)scope {

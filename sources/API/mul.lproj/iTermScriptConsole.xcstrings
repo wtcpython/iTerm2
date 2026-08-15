@@ -1,6 +1,42 @@
 {
   "sourceLanguage": "en",
   "strings": {
+    "0bO-7H-4vq.ibShadowedLabels[0]": {
+      "comment": "Class = \"NSSegmentedCell\"; 0bO-7H-4vq.ibShadowedLabels[0] = \"All\"; ObjectID = \"0bO-7H-4vq\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "All"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "全部"
+          }
+        }
+      }
+    },
+    "0bO-7H-4vq.ibShadowedLabels[1]": {
+      "comment": "Class = \"NSSegmentedCell\"; 0bO-7H-4vq.ibShadowedLabels[1] = \"Running\"; ObjectID = \"0bO-7H-4vq\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Running"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在运行"
+          }
+        }
+      }
+    },
     "Dad-6X-vZQ.title": {
       "comment": "Class = \"NSButtonCell\"; title = \"Scroll to bottom on update\"; ObjectID = \"Dad-6X-vZQ\";",
       "extractionState": "extracted_with_value",
@@ -123,6 +159,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "Table View Cell"
+          }
+        }
+      }
+    },
+    "hqr-c6-ohx.placeholderString": {
+      "comment": "Class = \"NSTextFieldCell\"; placeholderString = \"Filter\"; ObjectID = \"hqr-c6-ohx\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Filter"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "筛选"
           }
         }
       }

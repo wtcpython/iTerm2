@@ -72,7 +72,7 @@
         }
         id connectionKey = subs[signature].firstObject;
         iTermScriptHistoryEntry *entry =  [[iTermAPIHelper sharedInstance] scriptHistoryEntryForConnectionKey:connectionKey];
-        NSString *script = entry.name ?: @"Unknown";
+        NSString *script = entry.name ?: NSLocalizedString(@"Unknown", @"UI");
         return [[iTermRegisteredFunctionProxy alloc] initWithSignature:signature role:role script:script];
     }];
 }

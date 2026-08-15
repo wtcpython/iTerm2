@@ -476,7 +476,7 @@ NSString * const kTriggerVariableValueRegexKey = @"variableValueRegex";
      _evaluator.expression,
      error.localizedDescription];
     [iTermWarning showWarningWithTitle:title
-                               actions:@[ @"OK" ]
+                               actions:@[ NSLocalizedString(@"OK", @"UI") ]
                              accessory:nil
                             identifier:@"NoSyncErrorInTriggerParameter"
                            silenceable:kiTermWarningTypeTemporarilySilenceable

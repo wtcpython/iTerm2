@@ -30,7 +30,7 @@ class iTermSuppressedAlertsWindowController: NSWindowController {
                             styleMask: [.titled, .closable, .resizable, .utilityWindow],
                             backing: .buffered,
                             defer: true)
-        panel.title = "Suppressed Alerts"
+        panel.title = NSLocalizedString("Suppressed Alerts", comment: "UI")
         panel.hidesOnDeactivate = false
         panel.minSize = NSSize(width: 480, height: 260)
         // This is a reused singleton window; without this, a programmatic NSWindow
@@ -105,17 +105,17 @@ class iTermSuppressedAlertsWindowController: NSWindowController {
         table.columnAutoresizingStyle = .noColumnAutoresizing
 
         let whenColumn = NSTableColumn(identifier: Column.when)
-        whenColumn.title = "Last Suppressed"
+        whenColumn.title = NSLocalizedString("Last Suppressed", comment: "UI")
         whenColumn.width = 130
         whenColumn.minWidth = 100
 
         let responseColumn = NSTableColumn(identifier: Column.response)
-        responseColumn.title = "Automatic Response"
+        responseColumn.title = NSLocalizedString("Automatic Response", comment: "UI")
         responseColumn.width = 150
         responseColumn.minWidth = 100
 
         let alertColumn = NSTableColumn(identifier: Column.alert)
-        alertColumn.title = "Alert"
+        alertColumn.title = NSLocalizedString("Alert", comment: "UI")
         alertColumn.width = 260
         // Kept small enough that alertMin + the two fixed columns + intercell gaps
         // fit within the panel's minimum content width, so no column is ever clipped.
@@ -151,7 +151,7 @@ class iTermSuppressedAlertsWindowController: NSWindowController {
         emptyLabel = empty
 
         // Bottom buttons.
-        let doneButton = NSButton(title: "Done", target: self, action: #selector(done(_:)))
+        let doneButton = NSButton(title: NSLocalizedString("Done", comment: "UI"), target: self, action: #selector(done(_:)))
         doneButton.bezelStyle = .rounded
         doneButton.keyEquivalent = "\r"
         doneButton.sizeToFit()
@@ -164,7 +164,7 @@ class iTermSuppressedAlertsWindowController: NSWindowController {
         doneButton.autoresizingMask = [.minXMargin, .maxYMargin]
         content.addSubview(doneButton)
 
-        let unsuppress = NSButton(title: "Un-suppress", target: self, action: #selector(unsuppress(_:)))
+        let unsuppress = NSButton(title: NSLocalizedString("Un-suppress", comment: "UI"), target: self, action: #selector(unsuppress(_:)))
         unsuppress.bezelStyle = .rounded
         unsuppress.sizeToFit()
         var unsuppressFrame = unsuppress.frame
@@ -177,7 +177,7 @@ class iTermSuppressedAlertsWindowController: NSWindowController {
         content.addSubview(unsuppress)
         unsuppressButton = unsuppress
 
-        let unsuppressAll = NSButton(title: "Un-suppress All", target: self, action: #selector(unsuppressAll(_:)))
+        let unsuppressAll = NSButton(title: NSLocalizedString("Un-suppress All", comment: "UI"), target: self, action: #selector(unsuppressAll(_:)))
         unsuppressAll.bezelStyle = .rounded
         unsuppressAll.sizeToFit()
         var allFrame = unsuppressAll.frame

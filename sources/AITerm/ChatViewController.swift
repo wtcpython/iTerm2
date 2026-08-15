@@ -747,7 +747,7 @@ extension ChatViewController {
            let chat = listModel.chat(id: chatID) {
             return chat.title
         }
-        return "AI Chat"
+        return NSLocalizedString("AI Chat", comment: "UI")
     }
 
     func offerLink(to guid: String, terminal: Bool, name: String?) {
@@ -830,12 +830,12 @@ extension ChatViewController {
         // window, and clobbering its title with the chat title would be
         // wrong.
         if let windowController = view.window?.windowController as? ChatWindowController {
-            windowController.updateTitle(chat?.title ?? "AI Chat")
+            windowController.updateTitle(chat?.title ?? NSLocalizedString("AI Chat", comment: "UI"))
         } else if isInlinePanel {
             updateInlineToolbarTitle()
         } else {
             // Fallback for compatibility
-            view.window?.title = chat?.title ?? "AI Chat"
+            view.window?.title = chat?.title ?? NSLocalizedString("AI Chat", comment: "UI")
         }
         tableView.reloadData()
         brokerSubscription?.unsubscribe()
@@ -1251,7 +1251,7 @@ extension ChatViewController {
             return
         }
         let selection = iTermWarning.show(withTitle: "All terminal content will be sent to AI, which may go to a third party. Ensure this is safe to do before proceeding.",
-                                          actions: ["OK", "Cancel"],
+                                          actions: [NSLocalizedString("OK", comment: "UI"), NSLocalizedString("Cancel", comment: "UI")],
                                           accessory: nil,
                                           identifier: nil,
                                           silenceable: .kiTermWarningTypePersistent,
@@ -2642,7 +2642,7 @@ extension Message {
         case .clientLocal(let clientLocal):
             switch clientLocal.action {
             case .pickingSession, .executingCommand:
-                return [.init(title: "Cancel", destructive: true, identifier: "")]
+                return [.init(title: NSLocalizedString("Cancel", comment: "UI"), destructive: true, identifier: "")]
             case .notice: return []
             case .streamingChanged(let state):
                 switch state {
@@ -2657,11 +2657,11 @@ extension Message {
                 // empty-string ids would conflict with the
                 // single-button cases above.
                 return [.init(title: "Link", destructive: false, identifier: "link"),
-                        .init(title: "Enable Orchestration", destructive: false, identifier: "orchestrate")]
+                        .init(title: NSLocalizedString("Enable Orchestration", comment: "UI"), destructive: false, identifier: "orchestrate")]
             case .offerOrchestration:
                 // Identifier matches the offerOrchestration buttonClicked
                 // handler in configure(cell:RegularMessageCellView,...).
-                return [.init(title: "Enable Orchestration", destructive: false, identifier: "orchestrate")]
+                return [.init(title: NSLocalizedString("Enable Orchestration", comment: "UI"), destructive: false, identifier: "orchestrate")]
             case let .permissions(terminal: terminal, guid: guid):
                 let rce = RemoteCommandExecutor.instance
                 var buttons = [MessageRendition.Regular.Button]()
@@ -2704,7 +2704,7 @@ extension Message {
                 ]
             case let .enableOrchestrationRequest(requestID):
                 return [
-                    .init(title: "Enable Orchestration",
+                    .init(title: NSLocalizedString("Enable Orchestration", comment: "UI"),
                           destructive: false,
                           identifier: "enableOrchestration:\(ApprovalChoice.approve.rawValue):\(requestID)"),
                     .init(title: "Not Now",
@@ -2724,7 +2724,7 @@ extension Message {
             }
         case .selectSessionRequest:
             return [.init(title: "Select a Session", destructive: false, identifier: PickSessionButtonIdentifier.pickSession.rawValue),
-                    .init(title: "Cancel", destructive: true, identifier: PickSessionButtonIdentifier.cancel.rawValue)]
+                    .init(title: NSLocalizedString("Cancel", comment: "UI"), destructive: true, identifier: PickSessionButtonIdentifier.cancel.rawValue)]
         case .remoteCommandRequest(let payload, safe: _):
             switch payload {
             case .classic:
@@ -2754,7 +2754,7 @@ extension ChatViewController: NSMenuItemValidation {
             if menuItem.state == .on {
                 menuItem.title = autoTitle
             } else {
-                menuItem.title = "AI can \(category.rawValue)"
+                menuItem.title = NSLocalizedString("AI can \(category.rawValue)", comment: "UI")
             }
         }
         return true
@@ -2932,7 +2932,7 @@ extension ChatViewController: ChatToolbarDataSource {
                          action: #selector(disableOrchestration(_:)),
                          target: self)
         } else {
-            menu.addItem(withTitle: "Enable Orchestration",
+            menu.addItem(withTitle: NSLocalizedString("Enable Orchestration", comment: "UI"),
                          action: #selector(enableOrchestration(_:)),
                          target: self)
         }
@@ -3008,7 +3008,7 @@ extension ChatViewController: ChatToolbarDataSource {
                     if !category.isBrowserSpecific {
                         continue
                     }
-                    menu.addItem(withTitle: "AI can \(category.rawValue)",
+                    menu.addItem(withTitle: NSLocalizedString("AI can \(category.rawValue)", comment: "UI"),
                                  action: #selector(toggleAlwaysAllow(_:)),
                                  target: self,
                                  state: rce.controlState(chatID: chatID,
@@ -3025,7 +3025,7 @@ extension ChatViewController: ChatToolbarDataSource {
         }
 
 
-        menu.addItem(withTitle: "Help", action: #selector(showLinkedSessionHelp(_:)), target: self)
+        menu.addItem(withTitle: NSLocalizedString("Help", comment: "UI"), action: #selector(showLinkedSessionHelp(_:)), target: self)
 
         // Position the menu just below the button
         let location = NSPoint(x: 0, y: sender.bounds.height)
@@ -3379,9 +3379,9 @@ class InlinePanelCoordinator: NSObject, ChatViewControllerDelegate {
     func chatViewControllerDeleteSession(_ controller: ChatViewController) {
         guard let chatID = controller.chatID else { return }
         let warning = iTermWarning()
-        warning.title = "Are you sure you want to delete this chat? This action cannot be undone."
+        warning.title = NSLocalizedString("Are you sure you want to delete this chat? This action cannot be undone.", comment: "UI")
         warning.heading = "Delete Chat?"
-        let action = iTermWarningAction(label: "Delete") { [weak self] _ in
+        let action = iTermWarningAction(label: NSLocalizedString("Delete", comment: "UI")) { [weak self] _ in
             // Runs from iTermWarning.runModal() on the main thread.
             MainActor.assumeIsolated {
                 do {
@@ -3400,7 +3400,7 @@ class InlinePanelCoordinator: NSObject, ChatViewControllerDelegate {
             }
         }
         action.destructive = true
-        warning.warningActions = [iTermWarningAction(label: "Cancel"), action]
+        warning.warningActions = [iTermWarningAction(label: NSLocalizedString("Cancel", comment: "UI")), action]
         warning.warningType = .kiTermWarningTypePersistent
         warning.runModal()
     }
@@ -3574,8 +3574,8 @@ extension ChatViewController {
             the chat to Orchestration mode.
             """
         alert.alertStyle = .warning
-        alert.addButton(withTitle: "Enable Orchestration")
-        alert.addButton(withTitle: "Cancel")
+        alert.addButton(withTitle: NSLocalizedString("Enable Orchestration", comment: "UI"))
+        alert.addButton(withTitle: NSLocalizedString("Cancel", comment: "UI"))
         guard alert.runModal() == .alertFirstButtonReturn else { return }
         setOrchestrationEnabled(true)
     }

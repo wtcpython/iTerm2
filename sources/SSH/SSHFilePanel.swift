@@ -382,7 +382,7 @@ extension SSHFilePanel {
     }
 
     private func setupWindow() {
-        window?.title = "Open"
+        window?.title = NSLocalizedString("Open", comment: "UI")
         window?.center()
         window?.isRestorable = false
         window?.delegate = self
@@ -632,7 +632,7 @@ extension SSHFilePanel {
         saveAsTextField.isBezeled = true
         saveAsTextField.bezelStyle = .roundedBezel
         saveAsTextField.focusRingType = .default
-        saveAsTextField.placeholderString = "Enter filename"
+        saveAsTextField.placeholderString = NSLocalizedString("Enter filename", comment: "UI")
         saveAsTextField.delegate = self
 
         // Pre-fill with default filename if provided
@@ -667,7 +667,7 @@ extension SSHFilePanel {
         backButton.translatesAutoresizingMaskIntoConstraints = false
         backButton.bezelStyle = .texturedRounded
         backButton.image = NSImage.it_image(forSymbolName: SFSymbol.chevronLeft.rawValue,
-                                            accessibilityDescription: "Back",
+                                            accessibilityDescription: NSLocalizedString("Back", comment: "UI"),
                                             fallbackImageName: "chevron.left",
                                             for: SSHFilePanel.self)
         backButton.isEnabled = false
@@ -695,7 +695,7 @@ extension SSHFilePanel {
         // Search field
         searchField = NSSearchField()
         searchField.translatesAutoresizingMaskIntoConstraints = false
-        searchField.placeholderString = "Search"
+        searchField.placeholderString = NSLocalizedString("Search", comment: "UI")
         searchField.target = self
         searchField.action = #selector(searchFieldChanged)
 
@@ -790,7 +790,7 @@ extension SSHFilePanel {
     private func setupButtons() {
         cancelButton = NSButton()
         cancelButton.translatesAutoresizingMaskIntoConstraints = false
-        cancelButton.title = "Cancel"
+        cancelButton.title = NSLocalizedString("Cancel", comment: "UI")
         cancelButton.bezelStyle = .rounded
         cancelButton.keyEquivalent = "\u{1b}" // Escape
         cancelButton.keyEquivalentModifierMask = []
@@ -799,7 +799,7 @@ extension SSHFilePanel {
 
         openButton = NSButton()
         openButton.translatesAutoresizingMaskIntoConstraints = false
-        openButton.title = isSavePanel ? "Save" : "Open"
+        openButton.title = isSavePanel ? NSLocalizedString("Save", comment: "UI") : NSLocalizedString("Open", comment: "UI")
         openButton.bezelStyle = .rounded
         openButton.keyEquivalent = "\r" // Return
         openButton.isEnabled = false
@@ -810,7 +810,7 @@ extension SSHFilePanel {
         if canCreateDirectories {
             newFolderButton = NSButton()
             newFolderButton.translatesAutoresizingMaskIntoConstraints = false
-            newFolderButton.title = "New Folder"
+            newFolderButton.title = NSLocalizedString("New Folder", comment: "UI")
             newFolderButton.bezelStyle = .rounded
             newFolderButton.target = self
             newFolderButton.action = #selector(newFolderButtonClicked)
@@ -819,7 +819,7 @@ extension SSHFilePanel {
         // Create Use System Panel button
         systemPanelButton = NSButton()
         systemPanelButton.translatesAutoresizingMaskIntoConstraints = false
-        systemPanelButton.title = "Use System Panel…"
+        systemPanelButton.title = NSLocalizedString("Use System Panel…", comment: "UI")
         systemPanelButton.bezelStyle = .rounded
         systemPanelButton.target = self
         systemPanelButton.action = #selector(systemPanelButtonClicked)
@@ -1125,7 +1125,7 @@ extension SSHFilePanel {
             return
         }
         _ = iTermWarning.show(withTitle: e.localizedDescription,
-                              actions: [ "OK" ],
+                              actions: [ NSLocalizedString("OK", comment: "UI") ],
                               accessory: nil,
                               identifier: nil,
                               silenceable: .kiTermWarningTypePersistent,
@@ -1148,10 +1148,10 @@ extension SSHFilePanel {
         alert.messageText = "A file with the name “\(descriptor.absolutePath.lastPathComponent)” on \(descriptor.sshIdentity.displayName) already exists in this location. Do you want to replace it?"
         alert.informativeText = "Replacing it will overwrite its current contents."
 
-        let replaceButton = alert.addButton(withTitle: "Replace")
+        let replaceButton = alert.addButton(withTitle: NSLocalizedString("Replace", comment: "UI"))
         replaceButton.hasDestructiveAction = true
 
-        alert.addButton(withTitle: "Cancel")
+        alert.addButton(withTitle: NSLocalizedString("Cancel", comment: "UI"))
 
         if let window {
             return await alert.beginSheetModal(for: window)
@@ -1261,7 +1261,7 @@ extension SSHFilePanel {
         menu.addItem(goUpItem)
 
         // Navigate Back (Cmd+Left Arrow)
-        let backItem = NSMenuItem(title: "Back",
+        let backItem = NSMenuItem(title: NSLocalizedString("Back", comment: "UI"),
                                  action: #selector(backButtonClicked),
                                  keyEquivalent: String(Character(UnicodeScalar(NSLeftArrowFunctionKey)!)))
         backItem.keyEquivalentModifierMask = [.command]
@@ -1479,7 +1479,7 @@ extension SSHFilePanel {
         newFolderSheet.contentView = contentView
         
         // Create main title
-        let mainTitle = NSTextField(labelWithString: "New Folder")
+        let mainTitle = NSTextField(labelWithString: NSLocalizedString("New Folder", comment: "UI"))
         mainTitle.translatesAutoresizingMaskIntoConstraints = false
         mainTitle.font = NSFont.boldSystemFont(ofSize: NSFont.systemFontSize)
         mainTitle.textColor = NSColor.labelColor
@@ -1494,7 +1494,7 @@ extension SSHFilePanel {
         // Create text field
         newFolderNameTextField = NSTextField()
         newFolderNameTextField.translatesAutoresizingMaskIntoConstraints = false
-        newFolderNameTextField.stringValue = "untitled folder"
+        newFolderNameTextField.stringValue = NSLocalizedString("untitled folder", comment: "UI")
         newFolderNameTextField.isEditable = true
         newFolderNameTextField.isBezeled = true
         newFolderNameTextField.bezelStyle = .roundedBezel
@@ -1503,13 +1503,13 @@ extension SSHFilePanel {
         // Create buttons
         let cancelSheetButton = NSButton()
         cancelSheetButton.translatesAutoresizingMaskIntoConstraints = false
-        cancelSheetButton.title = "Cancel"
+        cancelSheetButton.title = NSLocalizedString("Cancel", comment: "UI")
         cancelSheetButton.bezelStyle = .rounded
         cancelSheetButton.keyEquivalent = "\u{1b}" // Escape
         
         let createButton = NSButton()
         createButton.translatesAutoresizingMaskIntoConstraints = false
-        createButton.title = "Create"
+        createButton.title = NSLocalizedString("Create", comment: "UI")
         createButton.bezelStyle = .rounded
         createButton.keyEquivalent = "\r" // Return
         
@@ -1597,7 +1597,7 @@ extension SSHFilePanel {
                 alert.messageText = "Unable to create folder"
                 alert.informativeText = error.localizedDescription
                 alert.alertStyle = .warning
-                alert.addButton(withTitle: "OK")
+                alert.addButton(withTitle: NSLocalizedString("OK", comment: "UI"))
                 alert.beginSheetModal(for: sheet) { _ in }
             }
         }

@@ -144,7 +144,7 @@ struct iTermHistogramBarChart: View {
     private var chartContent: some ChartContent {
         ForEach(buckets, id: \.x) { bucket in
             RectangleMark(
-                xStart: .value("Start", bucket.range.lowerBound),
+                xStart: .value(NSLocalizedString("Start", comment: "UI"), bucket.range.lowerBound),
                 xEnd: .value("End", bucket.range.upperBound),
                 yStart: .value("Count", 0),
                 yEnd: .value("Count", bucket.y)

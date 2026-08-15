@@ -55,6 +55,24 @@
         }
       }
     },
+    "KgY-y0-6XN.placeholderString": {
+      "comment": "Class = \"NSSearchFieldCell\"; placeholderString = \"Filter\"; ObjectID = \"KgY-y0-6XN\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Filter"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "筛选"
+          }
+        }
+      }
+    },
     "a2M-Nc-Alm.title": {
       "comment": "Class = \"NSMenuItem\"; title = \"Case-Sensitive Regex\"; ObjectID = \"a2M-Nc-Alm\";",
       "extractionState": "extracted_with_value",

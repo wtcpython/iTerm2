@@ -266,7 +266,7 @@ NS_ASSUME_NONNULL_BEGIN
         return;
     }
     [iTermWarning showWarningWithTitle:text
-                               actions:@[ @"OK" ]
+                               actions:@[ NSLocalizedString(@"OK", @"UI") ]
                              accessory:nil
                             identifier:@"NoSyncUvVersionBumpWarning"
                            silenceable:kiTermWarningTypePermanentlySilenceable
@@ -377,7 +377,7 @@ NS_ASSUME_NONNULL_BEGIN
     for (NSString *file in directoryEnumerator) {
         if (clockWatcher.reachedMaxTime) {
             iTermWarningSelection selection = [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"It is taking a long time to locate all scripts under %@. Avoid storing many files or using network mounts for the scripts folder.\n\nContinue?", originalRoot]
-                                                                         actions:@[ @"Stop", @"Continue"]
+                                                                         actions:@[ @"Stop", NSLocalizedString(@"Continue", @"UI")]
                                                                        accessory:nil
                                                                       identifier:@"TakingTooLongToEnumerateScripts"
                                                                      silenceable:kiTermWarningTypePersistent
@@ -386,7 +386,7 @@ NS_ASSUME_NONNULL_BEGIN
             if (selection == kiTermWarningSelection0) {
                 _disableEnumeration = YES;
                 [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"Some scripts will not be available until the app has restarted or you change the scripts folder."]
-                                                                             actions:@[ @"OK"]
+                                                                             actions:@[ NSLocalizedString(@"OK", @"UI")]
                                                                            accessory:nil
                                                                           identifier:@"TakingTooLongToEnumerateScripts2"
                                                                          silenceable:kiTermWarningTypePersistent
@@ -449,11 +449,11 @@ NS_ASSUME_NONNULL_BEGIN
     // script archives without prompting would be surprising.
     iTermWarning *warning = [[iTermWarning alloc] init];
     warning.title = [NSString stringWithFormat:@"A script archive named “%@” was found in the Scripts directory. Would you like to install it?", file.lastPathComponent];
-    warning.actionLabels = @[ @"OK", @"Cancel", @"Move to Trash" ];
+    warning.actionLabels = @[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI"), @"Move to Trash" ];
     warning.identifier = @"NoSyncInstallScriptArchive";
     warning.warningType = kiTermWarningTypeTemporarilySilenceable;
     warning.heading = @"Install Script Archive?";
-    warning.doNotRememberLabels = @[ @"Move to Trash", @"Cancel" ];
+    warning.doNotRememberLabels = @[ @"Move to Trash", NSLocalizedString(@"Cancel", @"UI") ];
     const iTermWarningSelection selection = [warning runModal];
     NSURL *url = [NSURL fileURLWithPath:file];
     switch (selection) {
@@ -843,14 +843,14 @@ NS_ASSUME_NONNULL_BEGIN
         return;
     }
     if ([[NSFileManager defaultManager] itemIsDirectory:fullPath]) {
-        // "Reveal" is a one-time Finder action and shouldn't be remembered.
+        // @"Reveal" is a one-time Finder action and shouldn't be remembered.
         iTermWarning *warning = [[iTermWarning alloc] init];
         warning.title = [NSString stringWithFormat:@"The script “%@” is malformed.", fullPath.lastPathComponent];
-        warning.actionLabels = @[ @"OK", @"Reveal" ];
+        warning.actionLabels = @[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Reveal", @"UI") ];
         warning.identifier = @"NoSyncScriptMalformed";
         warning.warningType = kiTermWarningTypeTemporarilySilenceable;
         warning.heading = @"Cannot Run Script";
-        warning.doNotRememberLabels = @[ @"Reveal" ];
+        warning.doNotRememberLabels = @[ NSLocalizedString(@"Reveal", @"UI") ];
         iTermWarningSelection selection = [warning runModal];
         if (selection == kiTermWarningSelection1) {
             [[NSWorkspace sharedWorkspace] activateFileViewerSelectingURLs:@[ [NSURL fileURLWithPath:fullPath] ]];
@@ -884,7 +884,7 @@ NS_ASSUME_NONNULL_BEGIN
     NSString *name = container.lastPathComponent;
     const iTermWarningSelection selection =
     [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"The Python environment for “%@” is missing (the shared runtime may have been deleted). Rebuild it from its saved requirements now?", name]
-                               actions:@[ @"Rebuild", @"Cancel" ]
+                               actions:@[ @"Rebuild", NSLocalizedString(@"Cancel", @"UI") ]
                              accessory:nil
                             identifier:@"NoSyncRebuildMissingUvEnv"
                            silenceable:kiTermWarningTypePersistent
@@ -1136,7 +1136,7 @@ NS_ASSUME_NONNULL_BEGIN
         // "Show in Finder" is a one-time navigation action and shouldn't be remembered.
         iTermWarning *warning = [[iTermWarning alloc] init];
         warning.title = [NSString stringWithFormat:@"Open new script in %@?", app];
-        warning.actionLabels = @[ @"OK", @"Show in Finder" ];
+        warning.actionLabels = @[ NSLocalizedString(@"OK", @"UI"), @"Show in Finder" ];
         warning.identifier = @"NoSyncOpenNewPythonScriptInDefaultEditor";
         warning.warningType = kiTermWarningTypePermanentlySilenceable;
         warning.doNotRememberLabels = @[ @"Show in Finder" ];
@@ -1204,7 +1204,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSTokenField *)newTokenFieldForDependencies {
     NSTokenField *tokenField = [[NSTokenField alloc] initWithFrame:NSMakeRect(0, 0, 100, 22)];
     tokenField.tokenizingCharacterSet = [NSCharacterSet whitespaceCharacterSet];
-    tokenField.placeholderString = @"Package names";
+    tokenField.placeholderString = NSLocalizedString(@"Package names", @"UI");
     tokenField.font = [NSFont systemFontOfSize:13];
     return tokenField;
 }
@@ -1587,7 +1587,7 @@ NS_ASSUME_NONNULL_BEGIN
     }
     NSString *message = [NSString stringWithFormat:@"Full-environment scripts must be located under in your Application Support/iTerm2/Scripts directory:\n%@", [[NSFileManager defaultManager] scriptsPath]];
     [iTermWarning showWarningWithTitle:message
-                               actions:@[ @"OK" ]
+                               actions:@[ NSLocalizedString(@"OK", @"UI") ]
                              accessory:nil
                             identifier:@"FullEnvironmentScriptsLocationRestricted"
                            silenceable:kiTermWarningTypePersistent

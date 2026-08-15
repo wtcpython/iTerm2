@@ -38,13 +38,13 @@ class SSHFolderDialog: NSObject {
         self.alert = NSAlert()
         alert.messageText = "Go to the folder:"
         alert.informativeText = "Type a pathname or select from the pop-up menu"
-        alert.addButton(withTitle: "Go")
-        alert.addButton(withTitle: "Cancel")
+        alert.addButton(withTitle: NSLocalizedString("Go", comment: "UI"))
+        alert.addButton(withTitle: NSLocalizedString("Cancel", comment: "UI"))
 
         // Initialize text field
         self.textField = SSHFolderDialogTextField(frame: NSRect(x: 0, y: 0, width: 300, height: 24))
         textField.stringValue = currentPath ?? ""
-        textField.placeholderString = "Enter path (e.g., /usr/local/bin)"
+        textField.placeholderString = NSLocalizedString("Enter path (e.g., /usr/local/bin)", comment: "UI")
 
         super.init()
 

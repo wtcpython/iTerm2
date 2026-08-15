@@ -191,8 +191,8 @@ private class PriorityDataProvider: CRUDDataProvider {
         let alert = NSAlert()
         alert.messageText = "New Priority Pattern"
         alert.informativeText = "Enter a substring to match against status text (case-insensitive)."
-        alert.addButton(withTitle: "OK")
-        alert.addButton(withTitle: "Cancel")
+        alert.addButton(withTitle: NSLocalizedString("OK", comment: "UI"))
+        alert.addButton(withTitle: NSLocalizedString("Cancel", comment: "UI"))
 
         let textField = NSTextField(frame: NSRect(x: 0, y: 0, width: 200, height: 24))
         alert.accessoryView = textField
@@ -309,7 +309,7 @@ private final class StatusPriorityViewController: NSViewController, CRUDTableVie
         // +/- segmented control, above the checkboxes and below the table.
         let segmentY = mergeToggleY + toggleHeight + toggleGap
         let addRemove = NSSegmentedControl(images: [
-            NSImage(systemSymbolName: "plus", accessibilityDescription: "Add")!,
+            NSImage(systemSymbolName: "plus", accessibilityDescription: NSLocalizedString("Add", comment: "UI"))!,
             NSImage(systemSymbolName: "minus", accessibilityDescription: "Remove")!
         ], trackingMode: .momentary, target: nil, action: nil)
         addRemove.frame = NSRect(x: margin, y: segmentY, width: 60, height: segmentHeight)
@@ -330,12 +330,12 @@ private final class StatusPriorityViewController: NSViewController, CRUDTableVie
         tv.columnAutoresizingStyle = .noColumnAutoresizing
 
         let patternColumn = NSTableColumn(identifier: NSUserInterfaceItemIdentifier("Pattern"))
-        patternColumn.title = "Pattern"
+        patternColumn.title = NSLocalizedString("Pattern", comment: "UI")
         patternColumn.isEditable = true
         tv.addTableColumn(patternColumn)
 
         let notifyColumn = NSTableColumn(identifier: NSUserInterfaceItemIdentifier("Notify"))
-        notifyColumn.title = "Notify"
+        notifyColumn.title = NSLocalizedString("Notify", comment: "UI")
         notifyColumn.width = StatusPriorityViewController.notifyColumnWidth
         notifyColumn.minWidth = StatusPriorityViewController.notifyColumnWidth
         notifyColumn.maxWidth = StatusPriorityViewController.notifyColumnWidth

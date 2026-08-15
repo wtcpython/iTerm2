@@ -440,7 +440,7 @@ static BOOL iTermAPIHelperLastApplescriptAuthRequiredSetting;
     // "Reveal Preference" is a one-time navigation action and shouldn't be remembered.
     iTermWarning *warning = [[iTermWarning alloc] init];
     warning.title = NSLocalizedString(@"The location of your Application Support directory appears to have moved or its contents have changed unexpectedly. As a precaution, the authentication mechanism for Python API scripts for iTerm2 has been reverted to always require Automation permission.", @"UI");
-    warning.actionLabels = @[ @"OK", @"Reveal Preference" ];
+    warning.actionLabels = @[ NSLocalizedString(@"OK", @"UI"), @"Reveal Preference" ];
     warning.identifier = @"NoSyncAppSupportMoved";
     warning.warningType = kiTermWarningTypePermanentlySilenceable;
     warning.heading = @"Python API Permissions Reset";
@@ -456,7 +456,7 @@ static BOOL iTermAPIHelperLastApplescriptAuthRequiredSetting;
 + (BOOL)createNoAuthFile:(NSWindow *)window {
     const iTermWarningSelection selection =
     [iTermWarning showWarningWithTitle:@"Do you want to allow all apps running on this machine to use the Python API?\n\nThis will disable the check for Automation permission. If you agree, you’ll be prompted for administrator access to make the change."
-                               actions:@[ @"OK", @"Cancel", @"More Info" ]
+                               actions:@[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI"), @"More Info" ]
                              accessory:nil
                             identifier:@"NoSyncRequireApplescriptAuth"
                            silenceable:kiTermWarningTypePersistent
@@ -491,7 +491,7 @@ static BOOL iTermAPIHelperLastApplescriptAuthRequiredSetting;
     [self setEnabled:NO];
     const iTermWarningSelection selection =
     [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"Failed to remove the file “%@”: %@\n\nPlease remove this file manually to require Automation permission for the Python API.\n\nThe Python API has been disabled for your security.", path, error.localizedDescription]
-                               actions:@[ @"OK", @"Reveal In Finder" ]
+                               actions:@[ NSLocalizedString(@"OK", @"UI"), @"Reveal In Finder" ]
                              accessory:nil
                             identifier:@"NoSyncFailedToRemoveNoAuth"
                            silenceable:kiTermWarningTypePersistent
@@ -544,7 +544,7 @@ static BOOL iTermAPIHelperLastApplescriptAuthRequiredSetting;
         return YES;
     }
     [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"The setting could not be changed: %@", dict[NSAppleScriptErrorBriefMessage]]
-                               actions:@[ @"OK" ]
+                               actions:@[ NSLocalizedString(@"OK", @"UI") ]
                              accessory:nil
                             identifier:@"NoSyncFailedToCreateNoAuth"
                            silenceable:kiTermWarningTypePersistent
@@ -557,7 +557,7 @@ static BOOL iTermAPIHelperLastApplescriptAuthRequiredSetting;
     NSString *message = [NSString stringWithFormat:@"Error running “%@”:\n%@",
                          invocation, error.localizedDescription];
     NSString *traceback = error.localizedFailureReason;
-    NSArray *actions = @[ @"OK" ];
+    NSArray *actions = @[ NSLocalizedString(@"OK", @"UI") ];
     if (traceback) {
         actions = [actions arrayByAddingObject:@"Reveal in Script Console"];
     }
@@ -621,7 +621,7 @@ static BOOL iTermAPIHelperLastApplescriptAuthRequiredSetting;
     // they'll need to go into prefs to enable it.
     iTermWarning *warning = [[iTermWarning alloc] init];
     warning.heading = @"Enable Python API?";
-    warning.actionLabels = @[ @"OK", @"Cancel" ];
+    warning.actionLabels = @[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI") ];
     warning.identifier = iTermAPIHelperEnablePythonAPIWarningIdentifier;
     warning.warningType = forced ? kiTermWarningTypePersistent : kiTermWarningTypePermanentlySilenceable;
     warning.title = NSLocalizedString(@"The Python API allows scripts you run to control iTerm2 and access all its data.", @"UI");
@@ -1535,7 +1535,7 @@ static BOOL iTermAPIHelperLastApplescriptAuthRequiredSetting;
                        advisoryName:(NSString *)advisoryName
                              reason:(out NSString *__autoreleasing *)reason
                         displayName:(out NSString *__autoreleasing *)displayName {
-    *displayName = advisoryName ? [@"≈" stringByAppendingString:advisoryName] : @"Unknown";
+    *displayName = advisoryName ? [@"≈" stringByAppendingString:advisoryName] : NSLocalizedString(@"Unknown", @"UI");
 
     if (preauthorized) {
         *reason = @"Script launched by user action";
@@ -1557,7 +1557,7 @@ static BOOL iTermAPIHelperLastApplescriptAuthRequiredSetting;
         message = [NSString stringWithFormat:@"%@\n\nAlthough you have chosen to allow connections automatically, this script has not presented a valid cookie.", message];
     }
 
-    NSArray<NSString *> *actions = @[ @"OK", @"Cancel", @"More Info" ];
+    NSArray<NSString *> *actions = @[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI"), @"More Info" ];
     if (![iTermAdvancedSettingsModel setCookie]) {
         actions = [actions arrayByAddingObject:@"Always"];
     }
@@ -1585,7 +1585,7 @@ static BOOL iTermAPIHelperLastApplescriptAuthRequiredSetting;
             return NO;
         case kiTermWarningSelection3:
             if ([iTermWarning showWarningWithTitle:@"New sessions will contain an environment variable that allows scripts to run without confirmation. Are you sure you want to enable this?"
-                                           actions:@[ @"OK", @"Cancel" ]
+                                           actions:@[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI") ]
                                          accessory:nil
                                         identifier:@"NoSyncConfirmAlways"
                                        silenceable:kiTermWarningTypePersistent

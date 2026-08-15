@@ -96,7 +96,7 @@ class ChatInputView: NSView, NSTextFieldDelegate {
         } else {
             sendConfig = nil
         }
-        let rawSendImage = NSImage(systemSymbolName: SFSymbol.paperplaneFill.rawValue, accessibilityDescription: "Send")!
+        let rawSendImage = NSImage(systemSymbolName: SFSymbol.paperplaneFill.rawValue, accessibilityDescription: NSLocalizedString("Send", comment: "UI"))!
         let rawStopImage = NSImage(systemSymbolName: SFSymbol.stopCircleFill.rawValue, accessibilityDescription: "Stop")!
         if #available(macOS 11.0, *), let sendConfig {
             sendImage = rawSendImage.withSymbolConfiguration(sendConfig) ?? rawSendImage
@@ -589,7 +589,7 @@ class ChatInputView: NSView, NSTextFieldDelegate {
             : "Attachments not supported"
         alert.informativeText = "\(providerName) doesn’t accept this file type as a chat attachment: \(names)."
         alert.alertStyle = .informational
-        alert.addButton(withTitle: "OK")
+        alert.addButton(withTitle: NSLocalizedString("OK", comment: "UI"))
         alert.beginSheetModal(for: window)
     }
 

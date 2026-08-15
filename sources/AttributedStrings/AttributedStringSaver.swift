@@ -71,7 +71,7 @@ class AttributedStringSaver: NSObject {
             }
         } catch {
             _ = iTermWarning.show(withTitle: "There was a problem saving the file: \(error.localizedDescription)",
-                                  actions: ["OK"],
+                                  actions: [NSLocalizedString("OK", comment: "UI")],
                                   accessory: nil,
                                   identifier: nil,
                                   silenceable: .kiTermWarningTypePersistent,

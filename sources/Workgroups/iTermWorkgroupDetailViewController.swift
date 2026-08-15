@@ -50,7 +50,7 @@ class iTermWorkgroupDetailViewController: NSViewController {
         emptyLabel.alignment = .center
         root.addSubview(emptyLabel)
 
-        whatIsButton = NSButton(title: "What is a Workgroup?",
+        whatIsButton = NSButton(title: NSLocalizedString("What is a Workgroup?", comment: "UI"),
                                 target: self,
                                 action: #selector(whatIsAWorkgroupClicked(_:)))
         whatIsButton.bezelStyle = .rounded
@@ -59,7 +59,7 @@ class iTermWorkgroupDetailViewController: NSViewController {
         root.addSubview(whatIsButton)
 
         nameField = NSTextField(frame: .zero)
-        nameField.placeholderString = "Workgroup name"
+        nameField.placeholderString = NSLocalizedString("Workgroup name", comment: "UI")
         nameField.delegate = self
         root.addSubview(nameField)
 

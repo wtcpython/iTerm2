@@ -187,7 +187,7 @@ fileprivate class CommandOptionsView: NSView {
             usernameStackView.spacing = 10
             usernameStackView.translatesAutoresizingMaskIntoConstraints = false
 
-            usernameTextField.placeholderString = "Username"
+            usernameTextField.placeholderString = NSLocalizedString("Username", comment: "UI")
             usernameTextField.font = NSFont.systemFont(ofSize: NSFont.systemFontSize, weight: .regular)
             usernameTextField.translatesAutoresizingMaskIntoConstraints = false
             usernameStackView.addArrangedSubview(createHorizontalStackView(label: "Username:",
@@ -197,7 +197,7 @@ fileprivate class CommandOptionsView: NSView {
         }
 
         directoryTextField = NSTextField()
-        directoryTextField.placeholderString = "Directory"
+        directoryTextField.placeholderString = NSLocalizedString("Directory", comment: "UI")
         directoryTextField.font = NSFont.systemFont(ofSize: NSFont.systemFontSize, weight: .regular)
         directoryTextField.translatesAutoresizingMaskIntoConstraints = false
         addHorizontalStackView(createHorizontalStackView(label: "Directory:",
@@ -208,23 +208,23 @@ fileprivate class CommandOptionsView: NSView {
         buttonsStackView.spacing = 10
         buttonsStackView.translatesAutoresizingMaskIntoConstraints = false
 
-        cancelButton = NSButton(title: "Cancel", target: self, action: #selector(cancelButtonClicked))
+        cancelButton = NSButton(title: NSLocalizedString("Cancel", comment: "UI"), target: self, action: #selector(cancelButtonClicked))
         cancelButton.translatesAutoresizingMaskIntoConstraints = false
         cancelButton.keyEquivalent = "\01b"
         buttonsStackView.addArrangedSubview(cancelButton)
 
-        newWindowButton = NSButton(title: "Run in New Window", target: self, action: #selector(newWindowButtonClicked))
+        newWindowButton = NSButton(title: NSLocalizedString("Run in New Window", comment: "UI"), target: self, action: #selector(newWindowButtonClicked))
         newWindowButton.translatesAutoresizingMaskIntoConstraints = false
         buttonsStackView.addArrangedSubview(newWindowButton)
 
         if offerTab {
-            newTabButton = NSButton(title: "Run in New Tab", target: self, action: #selector(newTabButtonClicked))
+            newTabButton = NSButton(title: NSLocalizedString("Run in New Tab", comment: "UI"), target: self, action: #selector(newTabButtonClicked))
             newTabButton.translatesAutoresizingMaskIntoConstraints = false
             buttonsStackView.addArrangedSubview(newTabButton)
         }
 
         if offerCurrent {
-            newTabButton = NSButton(title: "Run in Current Session", target: self, action: #selector(currentSessionButtonClicked))
+            newTabButton = NSButton(title: NSLocalizedString("Run in Current Session", comment: "UI"), target: self, action: #selector(currentSessionButtonClicked))
             newTabButton.translatesAutoresizingMaskIntoConstraints = false
             buttonsStackView.addArrangedSubview(newTabButton)
         }
@@ -417,7 +417,7 @@ class CommandURLHandler: NSObject {
                 parts.append("in \(directory)")
             }
             let selection = iTermWarning.show(withTitle: parts.joined(separator: " ") + "?\nIt will run silently in the background.",
-                                              actions: [ "OK", "Cancel"],
+                                              actions: [ NSLocalizedString("OK", comment: "UI"), NSLocalizedString("Cancel", comment: "UI")],
                                               accessory: nil,
                                               identifier: "NoSyncRunCommand_\(self.command)",
                                               silenceable: .kiTermWarningTypePermanentlySilenceable,
@@ -451,7 +451,7 @@ class CommandURLHandler: NSObject {
             defer: false
         )
         window.contentView = contentView
-        window.title = "Run Command from URL"
+        window.title = NSLocalizedString("Run Command from URL", comment: "UI")
         window.setContentSize(contentView.fittingSize)
 
         window.center()

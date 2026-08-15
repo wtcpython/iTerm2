@@ -423,13 +423,13 @@ static NSError *SCPFileError(NSString *description) {
                                      didFinishTransmissionWithError:theError];
             iTermWarningSelection selection =
                 [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"Failed to connect to %@:%d. Double-check that the host name is correct.", self.hostname, effectivePort]
-                                           actions:@[ @"Ok", @"Help" ]
+                                           actions:@[ @"Ok", NSLocalizedString(@"Help", @"UI") ]
                                      actionMapping:nil
                                          accessory:nil
                                         identifier:kSecureCopyConnectionFailedWarning
                                        silenceable:kiTermWarningTypePermanentlySilenceable
                                            heading:@"Connection Failed"
-                                       cancelLabel:@"Help"
+                                       cancelLabel:NSLocalizedString(@"Help", @"UI")
                                             window:nil];
             if (selection == kiTermWarningSelection1) {
                 [[NSWorkspace sharedWorkspace] it_openURL:[NSURL URLWithString:@"https://iterm2.com/troubleshoot-hostname"]
@@ -811,7 +811,7 @@ static NSString *const SCPFileKnownHostsUserDefaultsKey = @"NoSyncKnownHosts";
 - (BOOL)shouldConnectToNewHostname {
     const iTermWarningSelection selection =
     [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"Connect to %@?", self.userHostPort]
-                               actions:@[ @"OK", @"Cancel" ]
+                               actions:@[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI") ]
                              accessory:nil
                             identifier:[@"NoSyncConnectTo_" stringByAppendingString:self.userHostPort]
                            silenceable:kiTermWarningTypePermanentlySilenceable

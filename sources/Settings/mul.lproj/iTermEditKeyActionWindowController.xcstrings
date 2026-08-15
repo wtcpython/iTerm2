@@ -109,6 +109,24 @@
         }
       }
     },
+    "QTL-FQ-Diu.placeholderString": {
+      "comment": "Class = \"NSTextFieldCell\"; placeholderString = \"ex: 0x7f\"; ObjectID = \"QTL-FQ-Diu\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "ex: 0x7f"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "例如：0x7f"
+          }
+        }
+      }
+    },
     "S7J-2N-AsL.title": {
       "comment": "Class = \"NSMenu\"; title = \"OtherViews\"; ObjectID = \"S7J-2N-AsL\";",
       "extractionState": "extracted_with_value",
@@ -267,6 +285,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "颜色预设："
+          }
+        }
+      }
+    },
+    "mYT-YJ-w7Z.placeholderString": {
+      "comment": "Class = \"NSTextFieldCell\"; placeholderString = \"Label to show in Touch Bar\"; ObjectID = \"mYT-YJ-w7Z\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Label to show in Touch Bar"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "要在触控栏中显示的标签"
           }
         }
       }

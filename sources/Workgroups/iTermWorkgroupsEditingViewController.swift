@@ -53,7 +53,7 @@ class iTermWorkgroupsEditingViewController: NSViewController {
         tableView.allowsMultipleSelection = false
         tableView.rowSizeStyle = .default
         let column = NSTableColumn(identifier: NSUserInterfaceItemIdentifier("name"))
-        column.title = "Name"
+        column.title = NSLocalizedString("Name", comment: "UI")
         column.resizingMask = .autoresizingMask
         tableView.addTableColumn(column)
         tableView.dataSource = self

@@ -505,7 +505,7 @@ andEditComponentWithIdentifier:(NSString *)identifier
     NSMutableString *question = [NSMutableString stringWithFormat:@"Delete profile %@?",
                                  profile[KEY_NAME]];
     if ([iTermWarning showWarningWithTitle:question
-                                   actions:@[ @"Delete", @"Cancel" ]
+                                   actions:@[ NSLocalizedString(@"Delete", @"UI"), NSLocalizedString(@"Cancel", @"UI") ]
                                 identifier:@"DeleteProfile"
                                silenceable:kiTermWarningTypeTemporarilySilenceable
                                     window:self.view.window] == kiTermWarningSelection0) {
@@ -773,7 +773,7 @@ andEditComponentWithIdentifier:(NSString *)identifier
         [NSString stringWithFormat:@"Replace profile “%@” with the current session's settings?",
             [iTermProfilePreferences stringForKey:KEY_NAME inProfile:destination]];
     if ([iTermWarning showWarningWithTitle:title
-                                   actions:@[ @"Replace", @"Cancel" ]
+                                   actions:@[ NSLocalizedString(@"Replace", @"UI"), NSLocalizedString(@"Cancel", @"UI") ]
                                  identifier:@"NoSyncReplaceProfileWarning"
                                silenceable:kiTermWarningTypePermanentlySilenceable
                                     window:self.view.window] == kiTermWarningSelection1) {
@@ -930,7 +930,7 @@ andEditComponentWithIdentifier:(NSString *)identifier
             for (NSURL *url in urls) {
                 NSError *error = nil;
                 if (![self tryToImportJSONProfileFromURL:url error:&error]) {
-                    NSArray<NSString *> *actions = @[ @"OK" ];
+                    NSArray<NSString *> *actions = @[ NSLocalizedString(@"OK", @"UI") ];
                     if (![url isEqual:urls.lastObject]) {
                         actions = [actions arrayByAddingObject:@"Abort"];
                     }
@@ -1216,15 +1216,15 @@ andEditComponentWithIdentifier:(NSString *)identifier
     }
     NSString *profileName = [profile objectForKey:KEY_NAME] ?: @"(unknown name)";
     NSString *message = [NSString stringWithFormat:@"The selected profile, “%@”, is a dynamic profile. These are generally only edited by hand.\n\niTerm2 is now able to write changes back to dynamic profiles when they are marked as “rewritable“. Rewriting can cause the order of values to change.", profileName];
-    // "Reveal in Finder" is a one-time navigation action and shouldn't be remembered.
+    // @"Reveal in Finder" is a one-time navigation action and shouldn't be remembered.
     iTermWarning *warning = [[iTermWarning alloc] init];
     warning.title = message;
-    warning.actionLabels = @[ @"Mark as Rewritable", @"Reveal in Finder", @"Cancel" ];
+    warning.actionLabels = @[ @"Mark as Rewritable", NSLocalizedString(@"Reveal in Finder", @"UI"), NSLocalizedString(@"Cancel", @"UI") ];
     warning.identifier = @"NoSyncDynamicProfileChangeWillBeLost";
     warning.warningType = kiTermWarningTypeTemporarilySilenceable;
     warning.heading = @"Changes Will Be Lost";
     warning.window = self.view.window;
-    warning.doNotRememberLabels = @[ @"Reveal in Finder" ];
+    warning.doNotRememberLabels = @[ NSLocalizedString(@"Reveal in Finder", @"UI") ];
     const iTermWarningSelection selection = [warning runModal];
     switch (selection) {
         case kiTermWarningSelection0:

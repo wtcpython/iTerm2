@@ -40,7 +40,7 @@ extension RemoteCommand {
                         !iTermUserDefaults.userDefaults().bool(forKey: nagKey) {
                         let selection = iTermWarning.show(
                             withTitle: "iTerm2 can use AI to check the safety of commands suggested by your AI agent. Would you like to enable safety checking?\n\nWhen enabled, each proposed command will be sent to your configured AI provider for a safety check.",
-                            actions: ["OK", "Cancel"],
+                            actions: [NSLocalizedString("OK", comment: "UI"), NSLocalizedString("Cancel", comment: "UI")],
                             accessory: nil,
                             identifier: nil,
                             silenceable: .kiTermWarningTypePersistent,

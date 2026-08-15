@@ -74,7 +74,7 @@ static NSButton *iTermToolActionsNewButton(NSString *imageName, NSString *title,
     if (self) {
         if (@available(macOS 10.16, *)) {
             _applyButton = iTermToolActionsNewButton(@"play", @"Apply", self, @selector(apply:), frame);
-            _addButton = iTermToolActionsNewButton(@"plus", @"Add", self, @selector(add:), frame);
+            _addButton = iTermToolActionsNewButton(@"plus", NSLocalizedString(@"Add", @"UI"), self, @selector(add:), frame);
             _removeButton = iTermToolActionsNewButton(@"minus", @"Remove", self, @selector(remove:), frame);
             _editButton = iTermToolActionsNewButton(@"pencil", @"Edit", self, @selector(edit:), frame);
         } else {
@@ -314,7 +314,7 @@ static NSButton *iTermToolActionsNewButton(NSString *imageName, NSString *title,
     if (title.length) {
         return title;
     }
-    return @"Untitled";
+    return NSLocalizedString(@"Untitled", @"UI");
 }
 
 - (void)update {

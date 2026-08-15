@@ -73,7 +73,7 @@ class CommandExplainer: NSObject {
             return
         }
         let selection = iTermWarning.show(withTitle: "This will open \(url.absoluteString) in \(browserName).",
-                                          actions: ["OK", "Cancel"],
+                                          actions: [NSLocalizedString("OK", comment: "UI"), NSLocalizedString("Cancel", comment: "UI")],
                                           accessory: nil,
                                           identifier: "NoSyncExplainShell",
                                           silenceable: .kiTermWarningTypePermanentlySilenceable,

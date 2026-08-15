@@ -63,7 +63,7 @@ class iTermTouchIDHelper: NSObject {
     @objc static func runInstallInNewWindow() {
         guard let path = scriptPath else {
             iTermWarning.show(withTitle: "The Touch ID install script is missing from the iTerm2 application bundle.",
-                              actions: ["OK"],
+                              actions: [NSLocalizedString("OK", comment: "UI")],
                               accessory: nil,
                               identifier: nil,
                               silenceable: .kiTermWarningTypePersistent,

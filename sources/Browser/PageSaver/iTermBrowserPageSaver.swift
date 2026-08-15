@@ -386,7 +386,7 @@ extension iTermBrowserPageSaver {
         alert.messageText = "Save Failed"
         alert.informativeText = "Could not save the page: \(error.localizedDescription)"
         alert.alertStyle = .warning
-        alert.addButton(withTitle: "OK")
+        alert.addButton(withTitle: NSLocalizedString("OK", comment: "UI"))
         alert.beginSheetModal(for: window, completionHandler: nil)
     }
 

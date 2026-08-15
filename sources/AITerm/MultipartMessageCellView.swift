@@ -389,15 +389,15 @@ class MultipartMessageCellView: MessageCellView {
         // Same reason as in RegularMessageCellView: prevent NSScrollView's
         // focus-tracking auto-scroll on click.
         copyButton.refusesFirstResponder = true
-        copyButton.title = "Copy"
+        copyButton.title = NSLocalizedString("Copy", comment: "UI")
         if #available(macOS 15, *) {
             copyButton.image = NSImage.it_image(forSymbolName: SFSymbol.documentOnDocument.rawValue,
-                                                accessibilityDescription: "Copy",
+                                                accessibilityDescription: NSLocalizedString("Copy", comment: "UI"),
                                                 fallbackImageName: "document.on.document",
                                                 for: MultipartMessageCellView.self)
         } else {
             copyButton.image = NSImage.it_image(forSymbolName: SFSymbol.docOnDoc.rawValue,
-                                                accessibilityDescription: "Copy",
+                                                accessibilityDescription: NSLocalizedString("Copy", comment: "UI"),
                                                 fallbackImageName: "document.on.document",
                                                 for: MultipartMessageCellView.self)
         }

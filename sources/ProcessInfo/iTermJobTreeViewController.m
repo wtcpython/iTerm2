@@ -354,7 +354,7 @@ static int gSignalsToList[] = {
     _inspectButton = [NSButton buttonWithImage:magnifyingGlass target:self action:@selector(inspect:)];
     _inspectButton.bordered = NO;
     _inspectButton.imageScaling = NSImageScaleProportionallyDown;
-    _inspectButton.toolTip = @"Inspect the selected process";
+    _inspectButton.toolTip = NSLocalizedString(@"Inspect the selected process", @"UI");
     _inspectButton.refusesFirstResponder = YES;
     [self.view addSubview:_inspectButton];
     [self updateKillButtonEnabled];
@@ -431,7 +431,7 @@ static int gSignalsToList[] = {
 
     const iTermWarningSelection selection =
     [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"Are you sure? This may terminate %@.", description]
-                               actions:@[ @"OK", @"Cancel"]
+                               actions:@[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI")]
                              accessory:nil
                             identifier:@"NoSyncSuppressSendSignal"
                            silenceable:kiTermWarningTypePermanentlySilenceable

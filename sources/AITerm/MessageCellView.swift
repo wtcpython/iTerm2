@@ -73,7 +73,7 @@ class MessageCellView: NSView {
                 menu.addItem(editItem)
             }
 
-            let copyItem = NSMenuItem(title: "Copy", action: #selector(copyMenuItemClicked(_:)), keyEquivalent: "")
+            let copyItem = NSMenuItem(title: NSLocalizedString("Copy", comment: "UI"), action: #selector(copyMenuItemClicked(_:)), keyEquivalent: "")
             copyItem.target = self
             menu.addItem(copyItem)
 

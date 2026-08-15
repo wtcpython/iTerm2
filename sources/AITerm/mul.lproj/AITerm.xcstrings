@@ -37,6 +37,24 @@
         }
       }
     },
+    "jnn-BI-0e8.placeholderString": {
+      "comment": "Class = \"NSTextFieldCell\"; placeholderString = \"Enter API Key Here\"; ObjectID = \"jnn-BI-0e8\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Enter API Key Here"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在此输入 API 密钥"
+          }
+        }
+      }
+    },
     "v5X-g1-1qy.title": {
       "comment": "Class = \"NSWindow\"; title = \"Window\"; ObjectID = \"v5X-g1-1qy\";",
       "extractionState": "extracted_with_value",

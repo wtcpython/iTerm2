@@ -24,7 +24,7 @@ final class iTermArrangementTrustGate: NSObject {
         let body = buildBody(summary: summary)
 
         let selection = iTermWarning.show(withTitle: body,
-                                          actions: ["Cancel", "Open"],
+                                          actions: [NSLocalizedString("Cancel", comment: "UI"), NSLocalizedString("Open", comment: "UI")],
                                           accessory: nil,
                                           identifier: nil,
                                           silenceable: .kiTermWarningTypePersistent,

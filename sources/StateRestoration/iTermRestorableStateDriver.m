@@ -89,7 +89,7 @@ static NSString *const iTermRestorableStateControllerUserDefaultsKeyCount = @"No
     if (count > 1) {
         const iTermWarningSelection selection =
         [iTermWarning showWarningWithTitle:@"Some windows had trouble restoring last time iTerm2 launched. Try again?"
-                                   actions:@[ @"OK", @"Cancel" ]
+                                   actions:@[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI") ]
                                  accessory:nil
                                 identifier:@"RestoreWindows"
                                silenceable:kiTermWarningTypePersistent

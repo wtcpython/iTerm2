@@ -78,7 +78,7 @@ class iTermBrowserToolbar: NSView {
 
     private func setupButtons() {
         backButton = HoverButton(symbolName: SFSymbol.chevronLeft.rawValue,
-                                 accessibilityDescription: "Back")
+                                 accessibilityDescription: NSLocalizedString("Back", comment: "UI"))
         backButton.target = self
         backButton.action = #selector(backTapped)
         setupLongPressForButton(backButton, action: #selector(showBackHistory))

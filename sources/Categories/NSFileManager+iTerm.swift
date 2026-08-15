@@ -18,7 +18,7 @@ extension FileManager {
             return true
         }
         let selection = iTermWarning.show(withTitle: "Would you like to create the directory at \(directoryPath)?",
-                                          actions: ["OK", "Cancel"],
+                                          actions: [NSLocalizedString("OK", comment: "UI"), NSLocalizedString("Cancel", comment: "UI")],
                                           accessory: nil,
                                           identifier: "CreateDirectory_" + identifier,
                                           silenceable: .kiTermWarningTypePermanentlySilenceable,
@@ -33,7 +33,7 @@ extension FileManager {
                 return true
             } catch {
                 let selection = iTermWarning.show(withTitle: "Failed to create \(directoryPath):\n\n\(error.localizedDescription)",
-                                                  actions: ["Try Again", "Cancel"],
+                                                  actions: ["Try Again", NSLocalizedString("Cancel", comment: "UI")],
                                                   accessory: nil,
                                                   identifier: nil,
                                                   silenceable: .kiTermWarningTypePersistent,

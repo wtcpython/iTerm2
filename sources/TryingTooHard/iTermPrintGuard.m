@@ -37,7 +37,7 @@
     if (willPrint && [self haveTriedToPrintRecently]) {
         iTermWarningSelection selection =
         [iTermWarning showWarningWithTitle:@"There's a lot of printing going on. Want to keep allowing it?"
-                                   actions:@[ @"Allow", @"Disable Temporarily", @"Disable Permanently" ]
+                                   actions:@[ NSLocalizedString(@"Allow", @"UI"), @"Disable Temporarily", @"Disable Permanently" ]
                                  accessory:nil
                                 identifier:@"NoSyncAllowPrinting"
                                silenceable:kiTermWarningTypePersistent

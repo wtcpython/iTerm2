@@ -247,7 +247,7 @@ class iTermURLBarGuts: NSView {
     private func setupTextField() {
         textField = iTermURLTextField(frame: .zero)
         textField.urlTextFieldDelegate = self
-        textField.placeholderString = "Search or enter website name"
+        textField.placeholderString = NSLocalizedString("Search or enter website name", comment: "UI")
         textField.font = NSFont.systemFont(ofSize: 13)
         
         textFieldBackground.addSubview(textField)

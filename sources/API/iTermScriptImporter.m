@@ -265,9 +265,9 @@ static NSString *const iTermInstallStagingPrefix = @".installing-";
     DLog(@"Confirming");
     NSString *body = [NSString stringWithFormat:@"The signature of ”%@” has been verified. The author is:\n\n%@\n\nWould you like to install it?",
                       reader.url.lastPathComponent,
-                      ((cert.name ?: cert.longDescription) ?: @"Unknown")];
+                      ((cert.name ?: cert.longDescription) ?: NSLocalizedString(@"Unknown", @"UI"))];
     iTermWarningSelection selection = [iTermWarning showWarningWithTitle:body
-                                                                 actions:@[ @"OK", @"Cancel", @"Reveal Contents" ]
+                                                                 actions:@[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI"), @"Reveal Contents" ]
                                                                accessory:nil
                                                               identifier:nil
                                                              silenceable:kiTermWarningTypePersistent
@@ -343,7 +343,7 @@ static NSString *const iTermInstallStagingPrefix = @".installing-";
         iTermWarningSelection selection = kiTermWarningSelection0;
         if (!avoidUI) {
             selection = [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"A script named “%@” is already installed", archive.name]
-                                                   actions:@[ @"Replace Script", @"Cancel" ]
+                                                   actions:@[ @"Replace Script", NSLocalizedString(@"Cancel", @"UI") ]
                                                  accessory:nil
                                                 identifier:nil
                                                silenceable:kiTermWarningTypePersistent

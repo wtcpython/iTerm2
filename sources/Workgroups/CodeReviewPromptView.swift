@@ -99,7 +99,7 @@ class CodeReviewPromptView: iTermLayerBackedSolidColorView {
         scrollView.autoresizingMask = [.width, .height]
         addSubview(scrollView)
 
-        startButton.title = "Start"
+        startButton.title = NSLocalizedString("Start", comment: "UI")
         startButton.bezelStyle = .rounded
         // Shift-Return submits via the text view's keyDown override
         // (set above); plain Return inserts a newline. The button
@@ -312,11 +312,11 @@ class CodeReviewPromptView: iTermLayerBackedSolidColorView {
         alert.messageText = "Name this prompt"
         alert.informativeText =
             "Saved prompts can be re-loaded from the Prompts pulldown."
-        alert.addButton(withTitle: "Save")
-        alert.addButton(withTitle: "Cancel")
+        alert.addButton(withTitle: NSLocalizedString("Save", comment: "UI"))
+        alert.addButton(withTitle: NSLocalizedString("Cancel", comment: "UI"))
 
         let field = NSTextField(frame: NSRect(x: 0, y: 0, width: 240, height: 22))
-        field.placeholderString = "Prompt name"
+        field.placeholderString = NSLocalizedString("Prompt name", comment: "UI")
         alert.accessoryView = field
 
         alert.beginSheetModal(for: host) { [weak self] response in

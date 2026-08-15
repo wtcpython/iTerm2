@@ -1438,8 +1438,8 @@ final class iTermUvWindowControllerFetcher: iTermUvTarballFetcher {
             + "(about \(megabytes) MB) and a Python interpreter. Additional Python "
             + "versions are downloaded automatically later if a script needs them. "
             + "OK to download it now?"
-        alert.addButton(withTitle: "OK")
-        alert.addButton(withTitle: "Cancel")
+        alert.addButton(withTitle: NSLocalizedString("OK", comment: "UI"))
+        alert.addButton(withTitle: NSLocalizedString("Cancel", comment: "UI"))
         guard alert.runModal() == .alertFirstButtonReturn else {
             completion(.failure(iTermUvProvisioner.cancelError()))
             return

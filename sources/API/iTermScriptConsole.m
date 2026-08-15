@@ -568,7 +568,7 @@ typedef NS_ENUM(NSInteger, iTermScriptFilterControlTag) {
         }
         if (!name) {
             // Shouldn't happen as there ought to always be a PID
-            name = @"Unknown";
+            name = NSLocalizedString(@"Unknown", @"UI");
         }
         entry = [[iTermScriptHistoryEntry alloc] initWithName:name
                                                      fullPath:nil
@@ -597,7 +597,7 @@ typedef NS_ENUM(NSInteger, iTermScriptFilterControlTag) {
         }
         if (!name) {
             // Shouldn't happen as there ought to always be a PID
-            name = @"Unknown";
+            name = NSLocalizedString(@"Unknown", @"UI");
         }
         entry = [[iTermScriptHistoryEntry alloc] initWithName:name
                                                      fullPath:nil

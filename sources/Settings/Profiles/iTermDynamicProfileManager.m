@@ -202,7 +202,7 @@
     // "View Log" is a one-time navigation action and shouldn't be remembered.
     iTermWarning *warning = [[iTermWarning alloc] init];
     warning.title = message;
-    warning.actionLabels = @[ @"OK", @"View Log" ];
+    warning.actionLabels = @[ NSLocalizedString(@"OK", @"UI"), @"View Log" ];
     warning.accessory = container;
     warning.identifier = @"NoSyncDynamicProfilesWarning";
     warning.warningType = kiTermWarningTypeTemporarilySilenceable;

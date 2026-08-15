@@ -219,8 +219,8 @@ extension iTermBrowserPermissionManager {
         let alert = NSAlert()
         alert.messageText = "Allow \(permissionType.displayName)"
         alert.informativeText = "The website \(origin) wants to access \(permissionType.displayName.lowercased())."
-        alert.addButton(withTitle: "Allow")
-        alert.addButton(withTitle: "Block")
+        alert.addButton(withTitle: NSLocalizedString("Allow", comment: "UI"))
+        alert.addButton(withTitle: NSLocalizedString("Block", comment: "UI"))
         alert.alertStyle = .informational
         
         let response = alert.runModal()

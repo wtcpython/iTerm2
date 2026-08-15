@@ -36,7 +36,7 @@
     NSData *gzipped = [NSData dataWithContentsOfURL:url options:0 error:&error];
     if (!gzipped) {
         [iTermWarning showWarningWithTitle:error.localizedDescription ?: @"Unknown error"
-                                   actions:@[ @"OK" ]
+                                   actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                  accessory:nil
                                 identifier:@"RecordingMalformed"
                                silenceable:kiTermWarningTypePersistent
@@ -48,7 +48,7 @@
     NSData *data = [gzipped gunzippedData];
     if (!data) {
         [iTermWarning showWarningWithTitle:@"Could not read the file: decompression failed."
-                                   actions:@[ @"OK" ]
+                                   actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                 identifier:@"RecordingMalformed"
                                silenceable:kiTermWarningTypePersistent
                                     window:nil];
@@ -60,7 +60,7 @@
     NSDictionary *dict = [data it_unarchivedObjectOfClasses:@[ [NSDictionary class], [NSArray class] ]];
     if (![dict isKindOfClass:[NSDictionary class]]) {
         [iTermWarning showWarningWithTitle:@"Could not read the file: unarchiving decompressed data failed."
-                                   actions:@[ @"OK" ]
+                                   actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                 identifier:@"RecordingMalformed"
                                silenceable:kiTermWarningTypePersistent
                                     window:nil];
@@ -71,7 +71,7 @@
     NSArray<NSNumber *> *supportedVersions = @[ @1, @2, @3, @4 ];
     if (![supportedVersions containsObject:dict[@"version"]]) {
         [iTermWarning showWarningWithTitle:@"This recording is from a newer version of iTerm2 and cannot be replayed in this version."
-                                   actions:@[ @"OK" ]
+                                   actions:@[ NSLocalizedString(@"OK", @"UI") ]
                              actionMapping:nil
                                  accessory:nil
                                 identifier:@"RecordingMalformed"
@@ -85,7 +85,7 @@
     Profile *dictProfile = dict[@"profile"];
     if (!dvrDict || !dictProfile) {
         [iTermWarning showWarningWithTitle:@"This recording could not be loaded because it is missing critical information."
-                                   actions:@[ @"OK" ]
+                                   actions:@[ NSLocalizedString(@"OK", @"UI") ]
                              actionMapping:nil
                                  accessory:nil
                                 identifier:@"RecordingMalformed"
@@ -114,7 +114,7 @@
         newSession.profile = profile;
         if (![newSession.screen.dvr loadDictionary:dvrDict]) {
             [iTermWarning showWarningWithTitle:@"The recording could not be loaded. It might be corrupted."
-                                       actions:@[ @"OK" ]
+                                       actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                      accessory:nil
                                     identifier:@"NoSyncCouldNotLoadRecording"
                                    silenceable:kiTermWarningTypePersistent
@@ -187,7 +187,7 @@
                     dispatch_async(dispatch_get_main_queue(), ^{
                         if (error) {
                             [iTermWarning showWarningWithTitle:error.localizedDescription
-                                                       actions:@[ @"OK" ]
+                                                       actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                                      accessory:nil
                                                     identifier:@"ErrorSavingRecording"
                                                    silenceable:kiTermWarningTypePersistent
@@ -198,7 +198,7 @@
                 }];
             } else {
                 [iTermWarning showWarningWithTitle:@"Error encoding recording."
-                                           actions:@[ @"OK" ]
+                                           actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                         identifier:@"ErrorSavingRecording"
                                        silenceable:kiTermWarningTypePersistent
                                             window:nil];

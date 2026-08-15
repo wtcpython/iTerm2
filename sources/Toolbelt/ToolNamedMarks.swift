@@ -61,7 +61,7 @@ class ToolNamedMarks: NSView, ToolbeltTool, NSTableViewDelegate, NSTableViewData
         _tableView!.backgroundColor = .clear
 
         addButton = makeToolbeltButton(imageName: SFSymbol.plus.rawValue,
-                                       title: "Add",
+                                       title: NSLocalizedString("Add", comment: "UI"),
                                        target: self,
                                        selector: #selector(add(_:)),
                                        frame: frameRect)

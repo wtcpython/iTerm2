@@ -183,7 +183,7 @@ static const double kProfileNameMultiplierForWindowItem = 0.08;
 // Returns a function PTYSession -> (Feature name, Feature value) that gives the value which most distinguishes sessions from one another.
 - (iTermTuple<NSString *, NSString *> *(^)(PTYSession *))detailFunctionForSessions:(NSArray<PTYSession *> *)sessions {
     iTermTriple<NSString *, NSString *, NSNumber *> *(^pwd)(PTYSession *) = ^id(PTYSession *session) {
-        return [iTermTriple tripleWithObject:@"Directory"
+        return [iTermTriple tripleWithObject:NSLocalizedString(@"Directory", @"UI")
                                    andObject:session.variablesScope.path
                                    object:@(session.variablesScope.path.length > 0)];
     };
@@ -1301,7 +1301,7 @@ static const double kProfileNameMultiplierForWindowItem = 0.08;
     score += [self scoreUsingMatcher:matcher
                            documents:session.directories
                           multiplier:kDirectoryMultiplier
-                                name:@"Directory"
+                                name:NSLocalizedString(@"Directory", @"UI")
                             features:features
                                limit:maxScorePerFeature];
 

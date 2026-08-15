@@ -216,7 +216,7 @@ NSString *const iTermBroadcastDomainsDidChangeNotification = @"iTermBroadcastDom
             NSWindow *window = [self.delegate broadcastInputHelperWindowForWarnings:self];
             DLog(@"Warn…");
             if ([iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"Keyboard input will be sent to %@.", [self formatDestinationsForMode:mode]]
-                                           actions:@[ @"OK", @"Cancel" ]
+                                           actions:@[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI") ]
                                         identifier:@"NoSyncSuppressBroadcastInputWarning"
                                        silenceable:kiTermWarningTypePermanentlySilenceable
                                             window:window] == kiTermWarningSelection1) {

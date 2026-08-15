@@ -1061,8 +1061,8 @@ extension CockpitWindowController {
             let buriedRow = rowCache[identity]
                 ?? CockpitRow(identity: identity,
                               kind: .buriedRoot,
-                              title: "Buried Sessions")
-            buriedRow.title = "Buried Sessions"
+                              title: NSLocalizedString("Buried Sessions", comment: "UI"))
+            buriedRow.title = NSLocalizedString("Buried Sessions", comment: "UI")
             buriedRow.armed = false
             freshCache[identity] = buriedRow
             buriedRow.children = bucketSessionsByState(
@@ -1129,8 +1129,8 @@ extension CockpitWindowController {
             let buriedRow = rowCache[identity]
                 ?? CockpitRow(identity: identity,
                               kind: .buriedRoot,
-                              title: "Buried Sessions")
-            buriedRow.title = "Buried Sessions"
+                              title: NSLocalizedString("Buried Sessions", comment: "UI"))
+            buriedRow.title = NSLocalizedString("Buried Sessions", comment: "UI")
             buriedRow.armed = false
             freshCache[identity] = buriedRow
             buriedRow.children = sessionRows(for: buriedExpanded,

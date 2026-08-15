@@ -256,7 +256,7 @@ NSString *const iTermProcessTypeDidChangeNotification = @"iTermProcessTypeDidCha
                                                    @"always get back to Preferences using the status "
                                                    @"bar item. Look for an iTerm2 icon on the right "
                                                    @"side of your menu bar."
-                                           actions:@[ @"Exclude From Dock and App Switcher", @"Cancel" ]
+                                           actions:@[ @"Exclude From Dock and App Switcher", NSLocalizedString(@"Cancel", @"UI") ]
                                         identifier:nil
                                        silenceable:kiTermWarningTypePersistent
                                             window:weakSelf.view.window];

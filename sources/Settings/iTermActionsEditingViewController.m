@@ -251,7 +251,7 @@ static NSString *const iTermActionsEditingPasteboardType = @"com.googlecode.iter
                                                      error:&error];
     if (!content || error) {
         [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"While loading %@: %@", url.path, error.localizedDescription]
-                                   actions:@[ @"OK" ]
+                                   actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                  accessory:nil
                                 identifier:@"NoSyncImportActionsFailed"
                                silenceable:kiTermWarningTypePersistent
@@ -263,7 +263,7 @@ static NSString *const iTermActionsEditingPasteboardType = @"com.googlecode.iter
     id root = [NSJSONSerialization it_objectForJsonString:content error:&error];
     if (!root) {
         [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"While parsing %@: %@", url.path, error.localizedDescription]
-                                   actions:@[ @"OK" ]
+                                   actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                  accessory:nil
                                 identifier:@"NoSyncImportActionsFailed"
                                silenceable:kiTermWarningTypePersistent
@@ -296,7 +296,7 @@ static NSString *const iTermActionsEditingPasteboardType = @"com.googlecode.iter
 
 - (void)showEncodingErrorForURL:(NSURL *)url {
     [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"Malformed file at %@", url.path]
-                               actions:@[ @"OK" ]
+                               actions:@[ NSLocalizedString(@"OK", @"UI") ]
                              accessory:nil
                             identifier:@"NoSyncActionEncodingError"
                            silenceable:kiTermWarningTypePersistent
@@ -318,7 +318,7 @@ static NSString *const iTermActionsEditingPasteboardType = @"com.googlecode.iter
         if (error) {
             [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"Error saving to %@: %@",
                                                 item.displayName, error.localizedDescription]
-                                       actions:@[ @"OK" ]
+                                       actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                      accessory:nil
                                     identifier:@"NoSyncActionWritingError"
                                    silenceable:kiTermWarningTypePersistent

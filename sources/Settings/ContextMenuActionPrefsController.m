@@ -41,7 +41,7 @@ static ContextMenuActionDeclaration gContextMenuActionDeclarations[] = {
     { @"Run Coprocess…",           @"Enter coprocess command",  @"Coprocess:", kRunCoprocessContextMenuAction,         NO  },
     { @"Send text…",               @"Enter text",               @"Text:",      kSendTextContextMenuAction,             NO  },
     { @"Run Command in Window…",   @"Enter command",            @"Command:",   kRunCommandInWindowContextMenuAction,   YES },
-    { @"Copy",                     @"Enter text",               @"Text:",      kCopyContextMenuAction,                 YES },
+    { @"Copy",                           @"Enter text",               @"Text:",      kCopyContextMenuAction,                 YES },
 };
 
 static ContextMenuActionDeclaration ContextMenuActionDeclarationForTag(ContextMenuActions tag) {
@@ -381,7 +381,7 @@ static ContextMenuActionDeclaration ContextMenuActionDeclarationForTag(ContextMe
         if (_browser && !gContextMenuActionDeclarations[i].browser) {
             continue;
         }
-        NSMenuItem *item = [[NSMenuItem alloc] initWithTitle:gContextMenuActionDeclarations[i].title
+        NSMenuItem *item = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(gContextMenuActionDeclarations[i].title, @"UI")
                                                       action:nil
                                                keyEquivalent:@""];
         item.tag = gContextMenuActionDeclarations[i].tag;
@@ -416,7 +416,7 @@ static ContextMenuActionDeclaration ContextMenuActionDeclarationForTag(ContextMe
     }
     NSAttributedString *nameAttributedString = [[NSAttributedString alloc] initWithString:title
                                                                                attributes:self.nameAttributes];
-    NSAttributedString *actionAttributedString = [[NSAttributedString alloc] initWithString:decl.title
+    NSAttributedString *actionAttributedString = [[NSAttributedString alloc] initWithString:NSLocalizedString(decl.title, @"UI")
                                                                                  attributes:self.regularAttributes];
     id parameterAttributedString = nil;
     NSString *parameter = action[kParameterKey];
@@ -507,12 +507,12 @@ static ContextMenuActionDeclaration ContextMenuActionDeclarationForTag(ContextMe
     _parameter.stringValue = item[kParameterKey] ?: @"";
     NSNumber *action = [NSNumber castFrom:item[kActionKey]] ?: @0;
     [_action selectItemWithTag:action.integerValue];
-    _parameterLabel.stringValue = ContextMenuActionDeclarationForTag(action.integerValue).parameterLabel;
+    _parameterLabel.stringValue = NSLocalizedString(ContextMenuActionDeclarationForTag(action.integerValue).parameterLabel, @"UI");
     _parameterLabel.hidden = NO;
     _parameter.hidden = NO;
     _parameterInfoTextField.hidden = NO;
     if (action.integerValue == kCopyContextMenuAction) {
-        _parameter.placeholderString = @"Leave empty to copy matching text";
+        _parameter.placeholderString = NSLocalizedString(@"Leave empty to copy matching text", @"UI");
     } else {
         _parameter.placeholderString = @"";
     }

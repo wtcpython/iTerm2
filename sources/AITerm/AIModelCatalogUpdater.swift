@@ -150,7 +150,7 @@ class AIModelCatalogUpdater: NSObject {
         defer { askingConsent = false }
         let selection = iTermWarning.show(
             withTitle: "iTerm2 can keep its built-in list of AI models current by periodically downloading a cryptographically signed list from iterm2.com. No terminal content or personal data is sent. Allow this?",
-            actions: ["Allow", "Don’t Allow"],
+            actions: [NSLocalizedString("Allow", comment: "UI"), "Don’t Allow"],
             accessory: nil,
             identifier: nil,
             silenceable: .kiTermWarningTypePersistent,

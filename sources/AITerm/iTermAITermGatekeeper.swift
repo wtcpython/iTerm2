@@ -25,7 +25,7 @@ class iTermAITermGatekeeper: NSObject {
         if !iTermAdvancedSettingsModel.generativeAIAllowed() {
             if !silent {
                 iTermWarning.show(withTitle: "Generative AI features have been disabled. Check with your system administrator.",
-                                  actions: ["OK"],
+                                  actions: [NSLocalizedString("OK", comment: "UI")],
                                   accessory: nil,
                                   identifier: nil,
                                   silenceable: .kiTermWarningTypePersistent,
@@ -37,7 +37,7 @@ class iTermAITermGatekeeper: NSObject {
         if !iTermAITermGatekeeper.pluginInstalled() {
             if !silent {
                 let selection = iTermWarning.show(withTitle: "You must install the AI plugin before you can use this feature.",
-                                                  actions: ["Reveal in Settings", "Cancel"],
+                                                  actions: ["Reveal in Settings", NSLocalizedString("Cancel", comment: "UI")],
                                                   accessory: nil,
                                                   identifier: nil,
                                                   silenceable: .kiTermWarningTypePersistent,
@@ -52,7 +52,7 @@ class iTermAITermGatekeeper: NSObject {
         if !SecureUserDefaults.instance.enableAI.value {
             if !silent {
                 let selection = iTermWarning.show(withTitle: "You must enable AI features in settings before you can use this feature.",
-                                                  actions: ["Reveal", "Cancel"],
+                                                  actions: [NSLocalizedString("Reveal", comment: "UI"), NSLocalizedString("Cancel", comment: "UI")],
                                                   accessory: nil,
                                                   identifier: nil,
                                                   silenceable: .kiTermWarningTypePersistent,
@@ -70,7 +70,7 @@ class iTermAITermGatekeeper: NSObject {
             RLog("\(error.reason)")
             if !silent {
                 iTermWarning.show(withTitle: error.reason,
-                                  actions: ["OK"],
+                                  actions: [NSLocalizedString("OK", comment: "UI")],
                                   accessory: nil,
                                   identifier: nil,
                                   silenceable: .kiTermWarningTypePersistent,
@@ -81,7 +81,7 @@ class iTermAITermGatekeeper: NSObject {
         } catch {
             if !silent {
                 iTermWarning.show(withTitle: error.localizedDescription,
-                                  actions: ["OK"],
+                                  actions: [NSLocalizedString("OK", comment: "UI")],
                                   accessory: nil,
                                   identifier: nil,
                                   silenceable: .kiTermWarningTypePersistent,

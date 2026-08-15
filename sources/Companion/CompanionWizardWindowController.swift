@@ -68,7 +68,7 @@ final class CompanionWizardWindowController: NSWindowController, NSWindowDelegat
                             backing: .buffered,
                             defer: false)
         panel.isFloatingPanel = true
-        panel.title = "Set Up a Companion Device"
+        panel.title = NSLocalizedString("Set Up a Companion Device", comment: "UI")
         super.init(window: panel)
         panel.delegate = self
     }
@@ -204,7 +204,7 @@ final class CompanionWizardWindowController: NSWindowController, NSWindowDelegat
 
         // Learn-more link sits right under the introductory paragraph, above the
         // API key controls.
-        let learnMore = makeButton("Learn About the Companion App", action: #selector(openDocs))
+        let learnMore = makeButton(NSLocalizedString("Learn About the Companion App", comment: "UI"), action: #selector(openDocs))
         place(learnMore, centeredAtY: Self.contentHeight - 200)
         view.addSubview(learnMore)
 
@@ -216,7 +216,7 @@ final class CompanionWizardWindowController: NSWindowController, NSWindowDelegat
             view.addSubview(keyLabel)
 
             let keyField = NSSecureTextField(frame: NSRect(x: 118, y: nextY - 2, width: Self.contentWidth - 138, height: 24))
-            keyField.placeholderString = "Paste your API key"
+            keyField.placeholderString = NSLocalizedString("Paste your API key", comment: "UI")
             // Pre-fill an existing key so a user who already configured AI doesn't
             // have to find it again; Install stays gated on the field being non-empty.
             keyField.stringValue = AITermControllerObjC.apiKey ?? ""
@@ -259,7 +259,7 @@ final class CompanionWizardWindowController: NSWindowController, NSWindowDelegat
             providerPopup = popup
 
             nextY -= 36
-            let getKey = makeButton("Get an API Key", action: #selector(openGetAPIKey))
+            let getKey = makeButton(NSLocalizedString("Get an API Key", comment: "UI"), action: #selector(openGetAPIKey))
             getKey.frame = NSRect(x: 114, y: nextY, width: getKey.frame.width + 24, height: 28)
             view.addSubview(getKey)
             apiKeyHelpButton = getKey
@@ -276,7 +276,7 @@ final class CompanionWizardWindowController: NSWindowController, NSWindowDelegat
         view.addSubview(spinner)
         installSpinner = spinner
 
-        let install = makeButton("Install", action: #selector(installPressed), isDefault: true)
+        let install = makeButton(NSLocalizedString("Install", comment: "UI"), action: #selector(installPressed), isDefault: true)
         place(install, centeredAtY: 40, minWidth: 160)
         view.addSubview(install)
         installButton = install
@@ -398,7 +398,7 @@ final class CompanionWizardWindowController: NSWindowController, NSWindowDelegat
         alert.messageText = "Setup Could Not Be Completed"
         alert.informativeText = error.localizedDescription
             + "\n\nYou can finish setting up in Companion Device Settings."
-        alert.addButton(withTitle: "OK")
+        alert.addButton(withTitle: NSLocalizedString("OK", comment: "UI"))
         let finish = { [weak self] in
             self?.close()
             CompanionPairingWindowController.shared.showAndBeginPairing()
@@ -421,20 +421,20 @@ final class CompanionWizardWindowController: NSWindowController, NSWindowDelegat
         if Bundle.it_isEarlyAdopter() || Bundle.it_isNightlyBuild() {
             addBodyLabel("This is a beta build, so iTerm2 Buddy is distributed through TestFlight. Install TestFlight, then join the beta.",
                          to: view, y: Self.contentHeight - 260, height: 60)
-            let testFlight = makeButton("Install TestFlight", action: #selector(openTestFlightApp))
+            let testFlight = makeButton(NSLocalizedString("Install TestFlight", comment: "UI"), action: #selector(openTestFlightApp))
             place(testFlight, centeredAtY: Self.contentHeight - 300, minWidth: 220)
             view.addSubview(testFlight)
 
-            let join = makeButton("Join the iTerm2 Buddy Beta", action: #selector(openJoinBeta))
+            let join = makeButton(NSLocalizedString("Join the iTerm2 Buddy Beta", comment: "UI"), action: #selector(openJoinBeta))
             place(join, centeredAtY: Self.contentHeight - 342, minWidth: 220)
             view.addSubview(join)
         } else {
-            let appStore = makeButton("Get iTerm2 Buddy", action: #selector(openReleaseApp))
+            let appStore = makeButton(NSLocalizedString("Get iTerm2 Buddy", comment: "UI"), action: #selector(openReleaseApp))
             place(appStore, centeredAtY: Self.contentHeight - 280, minWidth: 220)
             view.addSubview(appStore)
         }
 
-        let next = makeButton("Next", action: #selector(phoneAppNextPressed), isDefault: true)
+        let next = makeButton(NSLocalizedString("Next", comment: "UI"), action: #selector(phoneAppNextPressed), isDefault: true)
         place(next, centeredAtY: 40, minWidth: 160)
         view.addSubview(next)
     }
@@ -458,7 +458,7 @@ final class CompanionWizardWindowController: NSWindowController, NSWindowDelegat
         view.addSubview(qr)
         qrImageView = qr
 
-        let showButton = NSButton(title: "Show Pairing Code", target: self, action: #selector(showPairingCodePressed))
+        let showButton = NSButton(title: NSLocalizedString("Show Pairing Code", comment: "UI"), target: self, action: #selector(showPairingCodePressed))
         showButton.bezelStyle = .rounded
         showButton.controlSize = .large
         showButton.sizeToFit()
@@ -471,7 +471,7 @@ final class CompanionWizardWindowController: NSWindowController, NSWindowDelegat
         view.addSubview(status)
         activeStatusLabel = status
 
-        let back = makeButton("Back", action: #selector(backToPhoneAppPressed))
+        let back = makeButton(NSLocalizedString("Back", comment: "UI"), action: #selector(backToPhoneAppPressed))
         back.frame = NSRect(x: 20, y: 40, width: 90, height: 32)
         view.addSubview(back)
     }
@@ -510,7 +510,7 @@ final class CompanionWizardWindowController: NSWindowController, NSWindowDelegat
 
     private func buildSASScreen(in view: NSView) {
         addTitle("Confirm the Code", to: view)
-        addBodyLabel("Type the 6-digit code shown on your iPhone. This confirms you’re pairing with your own phone.",
+        addBodyLabel(NSLocalizedString("Type the 6-digit code shown on your iPhone. This confirms you’re pairing with your own phone.", comment: "UI"),
                      to: view, y: Self.contentHeight - 170, height: 70)
 
         let field = NSTextField(string: "")
@@ -524,7 +524,7 @@ final class CompanionWizardWindowController: NSWindowController, NSWindowDelegat
         view.addSubview(field)
         sasField = field
 
-        let verify = makeButton("Verify", action: #selector(sasVerifyPressed), isDefault: true)
+        let verify = makeButton(NSLocalizedString("Verify", comment: "UI"), action: #selector(sasVerifyPressed), isDefault: true)
         place(verify, centeredAtY: 250, minWidth: 120)
         verify.isEnabled = false
         view.addSubview(verify)
@@ -534,7 +534,7 @@ final class CompanionWizardWindowController: NSWindowController, NSWindowDelegat
         view.addSubview(status)
         activeStatusLabel = status
 
-        let back = makeButton("Back", action: #selector(backFromSASPressed))
+        let back = makeButton(NSLocalizedString("Back", comment: "UI"), action: #selector(backFromSASPressed))
         back.frame = NSRect(x: 20, y: 40, width: 90, height: 32)
         view.addSubview(back)
     }
@@ -594,7 +594,7 @@ final class CompanionWizardWindowController: NSWindowController, NSWindowDelegat
         view.addSubview(status)
         activeStatusLabel = status
 
-        let close = makeButton("Close", action: #selector(closePressed), isDefault: true)
+        let close = makeButton(NSLocalizedString("Close", comment: "UI"), action: #selector(closePressed), isDefault: true)
         place(close, centeredAtY: 40, minWidth: 160)
         view.addSubview(close)
 
@@ -609,15 +609,15 @@ final class CompanionWizardWindowController: NSWindowController, NSWindowDelegat
     private func updatePairedConnectionText() {
         guard currentScreen == .paired else { return }
         if controller.isConnected {
-            pairedInstructionsLabel?.stringValue = "Your companion device is paired and connected."
+            pairedInstructionsLabel?.stringValue = NSLocalizedString("Your companion device is paired and connected.", comment: "UI")
             checkmarkImageView?.contentTintColor = .systemGreen
             setStatus("", color: .secondaryLabelColor)
         } else if controller.isListening {
-            pairedInstructionsLabel?.stringValue = "Your companion device is paired. Waiting for it to connect."
+            pairedInstructionsLabel?.stringValue = NSLocalizedString("Your companion device is paired. Waiting for it to connect.", comment: "UI")
             checkmarkImageView?.contentTintColor = .tertiaryLabelColor
             setStatus("", color: .secondaryLabelColor)
         } else {
-            pairedInstructionsLabel?.stringValue = "Your companion device is paired but iTerm2 isn’t listening for it yet. Reconnecting…"
+            pairedInstructionsLabel?.stringValue = NSLocalizedString("Your companion device is paired but iTerm2 isn’t listening for it yet. Reconnecting…", comment: "UI")
             checkmarkImageView?.contentTintColor = .systemYellow
             setStatus("", color: .systemYellow)
         }

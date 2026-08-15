@@ -451,6 +451,24 @@
         }
       }
     },
+    "1l0-rC-jJI.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"Locked panes cannot be moved by dragging and require confirmation to close.\"; ObjectID = \"1l0-rC-jJI\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Locked panes cannot be moved by dragging and require confirmation to close."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "锁定的窗格不能通过拖拽移动，关闭时需要确认。"
+          }
+        }
+      }
+    },
     "1s0-io-ddv.title": {
       "comment": "Class = \"NSTextFieldCell\"; title = \"sec\"; ObjectID = \"1s0-io-ddv\";",
       "extractionState": "extracted_with_value",
@@ -645,6 +663,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "命令："
+          }
+        }
+      }
+    },
+    "2138.placeholderString": {
+      "comment": "Class = \"NSTextFieldCell\"; placeholderString = \"Command for new sessions (interpolated string)\"; ObjectID = \"2138\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Command for new sessions (interpolated string)"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新建会话的命令（内插字符串）"
           }
         }
       }
@@ -1405,6 +1441,24 @@
         }
       }
     },
+    "2194.placeholderString": {
+      "comment": "Class = \"NSTextFieldCell\"; placeholderString = \"Enter initial directory (interpolated string)\"; ObjectID = \"2194\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Enter initial directory (interpolated string)"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "输入初始目录（内插字符串）"
+          }
+        }
+      }
+    },
     "2317.title": {
       "comment": "Class = \"NSTextFieldCell\"; title = \"Cursor:\"; ObjectID = \"2317\";",
       "extractionState": "extracted_with_value",
@@ -1653,6 +1707,132 @@
           "stringUnit": {
             "state": "translated",
             "value": "明亮"
+          }
+        }
+      }
+    },
+    "2412.ibShadowedObjectValues[0]": {
+      "comment": "Class = \"NSComboBoxCell\"; 2412.ibShadowedObjectValues[0] = \"vt100\"; ObjectID = \"2412\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "vt100"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "vt100"
+          }
+        }
+      }
+    },
+    "2412.ibShadowedObjectValues[1]": {
+      "comment": "Class = \"NSComboBoxCell\"; 2412.ibShadowedObjectValues[1] = \"xterm\"; ObjectID = \"2412\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "xterm"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "xterm"
+          }
+        }
+      }
+    },
+    "2412.ibShadowedObjectValues[2]": {
+      "comment": "Class = \"NSComboBoxCell\"; 2412.ibShadowedObjectValues[2] = \"xterm-new\"; ObjectID = \"2412\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "xterm-new"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "xterm-new"
+          }
+        }
+      }
+    },
+    "2412.ibShadowedObjectValues[3]": {
+      "comment": "Class = \"NSComboBoxCell\"; 2412.ibShadowedObjectValues[3] = \"xterm-256color\"; ObjectID = \"2412\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "xterm-256color"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "xterm-256color"
+          }
+        }
+      }
+    },
+    "2412.ibShadowedObjectValues[4]": {
+      "comment": "Class = \"NSComboBoxCell\"; 2412.ibShadowedObjectValues[4] = \"ansi\"; ObjectID = \"2412\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "ansi"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ansi"
+          }
+        }
+      }
+    },
+    "2412.ibShadowedObjectValues[5]": {
+      "comment": "Class = \"NSComboBoxCell\"; 2412.ibShadowedObjectValues[5] = \"rxvt\"; ObjectID = \"2412\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "rxvt"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "rxvt"
+          }
+        }
+      }
+    },
+    "2412.ibShadowedObjectValues[6]": {
+      "comment": "Class = \"NSComboBoxCell\"; 2412.ibShadowedObjectValues[6] = \"linux\"; ObjectID = \"2412\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "linux"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "linux"
           }
         }
       }
@@ -1963,6 +2143,24 @@
         }
       }
     },
+    "2Pt-rH-WYj.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"When this is enabled, you can click on a command or its output to restrict Find and Filter to its output. The selected command gets highlighted and other commands get dimmed. This requires shell integration to be installed.\"; ObjectID = \"2Pt-rH-WYj\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "When this is enabled, you can click on a command or its output to restrict Find and Filter to its output. The selected command gets highlighted and other commands get dimmed. This requires shell integration to be installed."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "启用后，你可以点击命令或其输出，将查找和筛选限制在其输出范围内。选中的命令会高亮，其他命令会变暗。这需要安装 Shell 集成。"
+          }
+        }
+      }
+    },
     "2Sk-3h-LFn.title": {
       "comment": "Class = \"NSMenuItem\"; title = \"DeepSeek\"; ObjectID = \"2Sk-3h-LFn\";",
       "extractionState": "extracted_with_value",
@@ -2089,6 +2287,24 @@
         }
       }
     },
+    "2qz-zW-laA.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"When checked, removes items from the list whose value equals the default value.\"; ObjectID = \"2qz-zW-laA\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "When checked, removes items from the list whose value equals the default value."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选中后，会从列表中移除值等于默认值的项目。"
+          }
+        }
+      }
+    },
     "3215.title": {
       "comment": "Class = \"NSMenu\"; title = \"OtherViews\"; ObjectID = \"3215\";",
       "extractionState": "extracted_with_value",
@@ -2193,6 +2409,42 @@
           "stringUnit": {
             "state": "translated",
             "value": "标签："
+          }
+        }
+      }
+    },
+    "3245.ibShadowedToolTip": {
+      "comment": "Class = \"NSTokenField\"; ibShadowedToolTip = \"Tags with slashes create a hierarchy which you can navigate in the Profiles menu or in the tags list adjacent to lists of profiles.\"; ObjectID = \"3245\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Tags with slashes create a hierarchy which you can navigate in the Profiles menu or in the tags list adjacent to lists of profiles."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "带斜杠的标签可创建层级结构，你可以在配置文件菜单或配置文件列表旁的标签列表中导航。"
+          }
+        }
+      }
+    },
+    "3246.placeholderString": {
+      "comment": "Class = \"NSTokenFieldCell\"; placeholderString = \"Example: linux, dark bg, tag/subtag/subsubtag\"; ObjectID = \"3246\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Example: linux, dark bg, tag/subtag/subsubtag"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "例如：linux、深色背景、标签/子标签/子子标签"
           }
         }
       }
@@ -2463,6 +2715,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "选区"
+          }
+        }
+      }
+    },
+    "3PU-hM-DSB.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"Alternate Mouse Scroll is a feature that sends arrow keys in response to scroll wheel/scroll gestures. It is toggled by a control sequence.\"; ObjectID = \"3PU-hM-DSB\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Alternate Mouse Scroll is a feature that sends arrow keys in response to scroll wheel/scroll gestures. It is toggled by a control sequence."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "备用鼠标滚动是一项响应滚轮/滚动手势发送方向键的功能，由控制序列切换。"
           }
         }
       }
@@ -3367,6 +3637,24 @@
         }
       }
     },
+    "4540.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"\\\"Zoom\\\" is the green button, except on OS 10.10 where you must hold Option while pressing the green button.\"; ObjectID = \"4540\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "\\\"Zoom\\\" is the green button, except on OS 10.10 where you must hold Option while pressing the green button."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "“缩放”是绿色按钮，但在 OS 10.10 上，你必须按住 Option 再点按绿色按钮。"
+          }
+        }
+      }
+    },
     "4541.title": {
       "comment": "Class = \"NSButtonCell\"; title = \"Zoom maximizes vertically only\"; ObjectID = \"4541\";",
       "extractionState": "extracted_with_value",
@@ -3421,6 +3709,24 @@
         }
       }
     },
+    "4570.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"Smart window placement puts new windows where the most free space is available.\"; ObjectID = \"4570\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Smart window placement puts new windows where the most free space is available."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "智能窗口放置会将新窗口放在可用空间最多的地方。"
+          }
+        }
+      }
+    },
     "4571.title": {
       "comment": "Class = \"NSButtonCell\"; title = \"Smart Window Placement\"; ObjectID = \"4571\";",
       "extractionState": "extracted_with_value",
@@ -3471,6 +3777,42 @@
           "stringUnit": {
             "state": "translated",
             "value": "文本"
+          }
+        }
+      }
+    },
+    "4782.ibExternalAccessibilityDescription": {
+      "comment": "Class = \"NSButton\"; ibExternalAccessibilityDescription = \"Anti-alias ASCII text\"; ObjectID = \"4782\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Anti-alias ASCII text"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "对 ASCII 文本抗锯齿"
+          }
+        }
+      }
+    },
+    "4783.ibExternalAccessibilityDescription": {
+      "comment": "Class = \"NSButton\"; ibExternalAccessibilityDescription = \"Anti-alias non-ASCII text\"; ObjectID = \"4783\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Anti-alias non-ASCII text"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "对非 ASCII 文本抗锯齿"
           }
         }
       }
@@ -3597,6 +3939,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "上下文感知的光标颜色（仅影响方框光标）"
+          }
+        }
+      }
+    },
+    "4896.ibShadowedToolTip": {
+      "comment": "Class = \"NSSlider\"; ibShadowedToolTip = \"This boosts the contrast of text when its color is close to that of the background color by moving the text color towards black or white.\"; ObjectID = \"4896\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "This boosts the contrast of text when its color is close to that of the background color by moving the text color towards black or white."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "当文本颜色接近背景颜色时，通过将文本颜色移向黑色或白色来提高对比度。"
           }
         }
       }
@@ -4177,6 +4537,24 @@
         }
       }
     },
+    "4Ha-Ub-4AS.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"Paste bracketing tells compatible apps that text was inserted by a paste operation rather than typing. Some programs use this to treat pastes specially, such as by not auto-indenting it.\"; ObjectID = \"4Ha-Ub-4AS\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Paste bracketing tells compatible apps that text was inserted by a paste operation rather than typing. Some programs use this to treat pastes specially, such as by not auto-indenting it."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "粘贴括号告知兼容的应用，文本是通过粘贴操作而非键入插入的。某些程序会借此特殊处理粘贴内容，例如不自动缩进。"
+          }
+        }
+      }
+    },
     "4On-7u-dfy.title": {
       "comment": "Class = \"NSMenuItem\"; title = \"Allow Without Asking\"; ObjectID = \"4On-7u-dfy\";",
       "extractionState": "extracted_with_value",
@@ -4209,6 +4587,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "缩放填充"
+          }
+        }
+      }
+    },
+    "4WY-Xs-GJn.ibExternalAccessibilityDescription": {
+      "comment": "Class = \"NSButton\"; ibExternalAccessibilityDescription = \"Triggers are enabled in interactive apps\"; ObjectID = \"4WY-Xs-GJn\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Triggers are enabled in interactive apps"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "触发器在交互式应用中启用"
           }
         }
       }
@@ -4353,6 +4749,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "OtherViews"
+          }
+        }
+      }
+    },
+    "5049.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"Selects whether to install the beta or release build when updating.\"; ObjectID = \"5049\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Selects whether to install the beta or release build when updating."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选择更新时安装 beta 还是 release 构建。"
           }
         }
       }
@@ -4519,6 +4933,24 @@
         }
       }
     },
+    "5126.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"If you work mostly in East Asian languages this can be helpful. For most users, it causes misalignment.\"; ObjectID = \"5126\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "If you work mostly in East Asian languages this can be helpful. For most users, it causes misalignment."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "如果你主要使用东亚语言，这可能有所帮助。对大多数用户而言，它会导致错位。"
+          }
+        }
+      }
+    },
     "5127.title": {
       "comment": "Class = \"NSButtonCell\"; title = \"Ambiguous characters are double-width\"; ObjectID = \"5127\";",
       "extractionState": "extracted_with_value",
@@ -4533,6 +4965,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "模糊字符按双宽度处理"
+          }
+        }
+      }
+    },
+    "5144.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"Draws a border around the window when the OS otherwise would not. This is effective in light mode or when the window contains a transparent pane.\"; ObjectID = \"5144\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Draws a border around the window when the OS otherwise would not. This is effective in light mode or when the window contains a transparent pane."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在操作系统不绘制边框时为窗口绘制边框。在浅色模式或窗口包含透明窗格时有效。"
           }
         }
       }
@@ -4573,6 +5023,24 @@
         }
       }
     },
+    "5154.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"When using a program like tmux, which shows a status bar at the bottom of the screen, history is not normally saved. This allows such history to be saved but with a performance penalty.\"; ObjectID = \"5154\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "When using a program like tmux, which shows a status bar at the bottom of the screen, history is not normally saved. This allows such history to be saved but with a performance penalty."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "使用 tmux 等屏幕底部显示状态栏的程序时，通常不保存历史。此选项允许保存此类历史，但会有性能损失。"
+          }
+        }
+      }
+    },
     "5155.title": {
       "comment": "Class = \"NSButtonCell\"; title = \"Save lines to scrollback when an app status bar is present\"; ObjectID = \"5155\";",
       "extractionState": "extracted_with_value",
@@ -4605,6 +5073,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "在 Retina 显示屏上"
+          }
+        }
+      }
+    },
+    "5319.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"Native full screen windows animate into their own desktop. Non-native full screen windows quickly expand to fill the window's screen.\"; ObjectID = \"5319\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Native full screen windows animate into their own desktop. Non-native full screen windows quickly expand to fill the window's screen."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "原生全屏幕窗口会动画进入自己的桌面。非原生全屏幕窗口会快速扩展以填满窗口所在的屏幕。"
           }
         }
       }
@@ -4659,6 +5145,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "调暗仅影响文本，不影响背景。"
+          }
+        }
+      }
+    },
+    "5337.ibShadowedToolTip": {
+      "comment": "Class = \"NSSlider\"; ibShadowedToolTip = \"Inactive sessions get dimmed to help find the active session.\"; ObjectID = \"5337\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Inactive sessions get dimmed to help find the active session."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "非活动会话会变暗，以帮助找到活动会话。"
           }
         }
       }
@@ -4749,6 +5253,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "开始时发送文本："
+          }
+        }
+      }
+    },
+    "5411.placeholderString": {
+      "comment": "Class = \"NSTextFieldCell\"; placeholderString = \"Enter text to send at start (interpolated string)\"; ObjectID = \"5411\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Enter text to send at start (interpolated string)"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "输入开始时发送的文本（内插字符串）"
           }
         }
       }
@@ -4933,6 +5455,24 @@
         }
       }
     },
+    "5617.placeholderString": {
+      "comment": "Class = \"NSTextFieldCell\"; placeholderString = \"Enter path to folder with settings\"; ObjectID = \"5617\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Enter path to folder with settings"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "输入设置所在文件夹的路径"
+          }
+        }
+      }
+    },
     "5619.title": {
       "comment": "Class = \"NSButtonCell\"; title = \"Browse\"; ObjectID = \"5619\";",
       "extractionState": "extracted_with_value",
@@ -5041,6 +5581,24 @@
         }
       }
     },
+    "5691.placeholderString": {
+      "comment": "Class = \"NSTextFieldCell\"; placeholderString = \"Interpolated String\"; ObjectID = \"5691\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Interpolated String"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "内插字符串"
+          }
+        }
+      }
+    },
     "5692.title": {
       "comment": "Class = \"NSButtonCell\"; title = \"Enable automatic session logging\"; ObjectID = \"5692\";",
       "extractionState": "extracted_with_value",
@@ -5055,6 +5613,42 @@
           "stringUnit": {
             "state": "translated",
             "value": "启用自动会话日志"
+          }
+        }
+      }
+    },
+    "5697.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"Only use this if you really know what you’re doing!\"; ObjectID = \"5697\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Only use this if you really know what you’re doing!"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "只有当你确实知道自己在做什么时才使用此选项！"
+          }
+        }
+      }
+    },
+    "5699.placeholderString": {
+      "comment": "Class = \"NSTextFieldCell\"; placeholderString = \"ASCII Code\"; ObjectID = \"5699\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "ASCII Code"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ASCII 码"
           }
         }
       }
@@ -5127,6 +5721,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "拷贝的文本包含末尾换行符"
+          }
+        }
+      }
+    },
+    "5753.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"If this is on then transparency can be toggled window-by-window under View>Use Transparency. Note that this doesn't apply to native fullscreen windows (those that are managed by macOS and go in their own Desktop) because there is nothing to see behind them. Use `Settings > General > Window > Native full screen windows` to control which type of full screen windows you use. Hotkey windows, when full screen, can only be non-native fullscreen windows.\"; ObjectID = \"5753\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "If this is on then transparency can be toggled window-by-window under View>Use Transparency. Note that this doesn't apply to native fullscreen windows (those that are managed by macOS and go in their own Desktop) because there is nothing to see behind them. Use `Settings > General > Window > Native full screen windows` to control which type of full screen windows you use. Hotkey windows, when full screen, can only be non-native fullscreen windows."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "开启后，可以在“显示 > 使用透明度”下按窗口切换透明度。请注意，这不适用于原生全屏幕窗口（由 macOS 管理并进入自己桌面的窗口），因为它们后面没有内容可看。使用“设置 > 通用 > 窗口 > 原生全屏幕窗口”来控制使用哪种类型的全屏幕窗口。热键窗口在全屏幕时只能是原生全屏幕窗口。"
           }
         }
       }
@@ -5257,8 +5869,44 @@
         }
       }
     },
+    "5886.paletteLabel": {
+      "comment": "Class = \"NSToolbarItem\"; paletteLabel = \"Profiles\"; ObjectID = \"5886\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Profiles"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "配置文件"
+          }
+        }
+      }
+    },
     "5887.label": {
       "comment": "Class = \"NSToolbarItem\"; label = \"General\"; ObjectID = \"5887\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "General"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "通用"
+          }
+        }
+      }
+    },
+    "5887.paletteLabel": {
+      "comment": "Class = \"NSToolbarItem\"; paletteLabel = \"General\"; ObjectID = \"5887\";",
       "extractionState": "extracted_with_value",
       "localizations": {
         "en": {
@@ -5293,6 +5941,24 @@
         }
       }
     },
+    "5888.paletteLabel": {
+      "comment": "Class = \"NSToolbarItem\"; paletteLabel = \"Keys\"; ObjectID = \"5888\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Keys"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "键盘"
+          }
+        }
+      }
+    },
     "5889.label": {
       "comment": "Class = \"NSToolbarItem\"; label = \"Appearance\"; ObjectID = \"5889\";",
       "extractionState": "extracted_with_value",
@@ -5311,8 +5977,44 @@
         }
       }
     },
+    "5889.paletteLabel": {
+      "comment": "Class = \"NSToolbarItem\"; paletteLabel = \"Appearance\"; ObjectID = \"5889\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Appearance"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "外观"
+          }
+        }
+      }
+    },
     "5890.label": {
       "comment": "Class = \"NSToolbarItem\"; label = \"Arrangements\"; ObjectID = \"5890\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Arrangements"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "窗口布局"
+          }
+        }
+      }
+    },
+    "5890.paletteLabel": {
+      "comment": "Class = \"NSToolbarItem\"; paletteLabel = \"Arrangements\"; ObjectID = \"5890\";",
       "extractionState": "extracted_with_value",
       "localizations": {
         "en": {
@@ -5689,6 +6391,24 @@
         }
       }
     },
+    "5HY-Ax-GKL.placeholderString": {
+      "comment": "Class = \"NSTextFieldCell\"; placeholderString = \"Interpolated string. If empty, use tab title.\"; ObjectID = \"5HY-Ax-GKL\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Interpolated string. If empty, use tab title."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "内插字符串。留空则使用标签页标题。"
+          }
+        }
+      }
+    },
     "5OR-eB-vkq.title": {
       "comment": "Class = \"NSButtonCell\"; title = \"Send “Idle” alert\"; ObjectID = \"5OR-eB-vkq\";",
       "extractionState": "extracted_with_value",
@@ -5721,6 +6441,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "自定义请求头："
+          }
+        }
+      }
+    },
+    "5Xl-Cr-LpL.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"Some crusty old systems expect newline rather than carraige return in in raw mode. The symptom is that tmux -CC just hangs. Most people should leave this off.\"; ObjectID = \"5Xl-Cr-LpL\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Some crusty old systems expect newline rather than carraige return in in raw mode. The symptom is that tmux -CC just hangs. Most people should leave this off."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "某些老旧系统在原始模式下期望换行符而非回车符。症状是 tmux -CC 卡住。大多数人应保持关闭。"
           }
         }
       }
@@ -5815,6 +6553,24 @@
         }
       }
     },
+    "5zv-42-e9U.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"When enabled, large cursor movements get an animation to help your eye follow the cursor. They are enabled only in interactive application (i.e., in alternate screen mode).\"; ObjectID = \"5zv-42-e9U\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "When enabled, large cursor movements get an animation to help your eye follow the cursor. They are enabled only in interactive application (i.e., in alternate screen mode)."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "启用后，大幅光标移动会带有动画，帮助你的视线跟随光标。它们仅在交互式应用中启用（即备用屏幕模式）。"
+          }
+        }
+      }
+    },
     "6052.title": {
       "comment": "Class = \"NSButtonCell\"; title = \"Show per-pane title bars\"; ObjectID = \"6052\";",
       "extractionState": "extracted_with_value",
@@ -5853,6 +6609,24 @@
     },
     "6056.label": {
       "comment": "Class = \"NSToolbarItem\"; label = \"Pointer\"; ObjectID = \"6056\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Pointer"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "鼠标"
+          }
+        }
+      }
+    },
+    "6056.paletteLabel": {
+      "comment": "Class = \"NSToolbarItem\"; paletteLabel = \"Pointer\"; ObjectID = \"6056\";",
       "extractionState": "extracted_with_value",
       "localizations": {
         "en": {
@@ -5991,6 +6765,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "⌘-点击打开文件名/URL（语义历史记录）"
+          }
+        }
+      }
+    },
+    "6111.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"For terminal applications that use mouse reporting, turning this on allows control-click to be reported instead of opening the context menu.\"; ObjectID = \"6111\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "For terminal applications that use mouse reporting, turning this on allows control-click to be reported instead of opening the context menu."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "对于使用鼠标报告的终端应用，开启此选项后，控制点击会被报告给应用，而不是打开上下文菜单。"
           }
         }
       }
@@ -6715,6 +7507,24 @@
         }
       }
     },
+    "6288.placeholderString": {
+      "comment": "Class = \"NSTextFieldCell\"; placeholderString = \"Enter Item Title\"; ObjectID = \"6288\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Enter Item Title"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "输入项目标题"
+          }
+        }
+      }
+    },
     "6298.title": {
       "comment": "Class = \"NSButtonCell\"; title = \"OK\"; ObjectID = \"6298\";",
       "extractionState": "extracted_with_value",
@@ -6729,6 +7539,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "好"
+          }
+        }
+      }
+    },
+    "6320.ibShadowedToolTip": {
+      "comment": "Class = \"NSSlider\"; ibShadowedToolTip = \"How much of the background image is visible through the background color.\"; ObjectID = \"6320\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "How much of the background image is visible through the background color."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "背景颜色下背景图像的可见程度。"
           }
         }
       }
@@ -6769,6 +7597,24 @@
         }
       }
     },
+    "6366.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"Buried sessions appear under Session > Buried Sessions. When this setting is enabled, window sizes are restored when attaching to an existing tmux session.\"; ObjectID = \"6366\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Buried sessions appear under Session > Buried Sessions. When this setting is enabled, window sizes are restored when attaching to an existing tmux session."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "隐藏的会话显示在“会话 > 隐藏的会话”下。启用此设置后，附加到现有 tmux 会话时会恢复窗口大小。"
+          }
+        }
+      }
+    },
     "6367.title": {
       "comment": "Class = \"NSButtonCell\"; title = \"Automatically bury the tmux client session after connecting\"; ObjectID = \"6367\";",
       "extractionState": "extracted_with_value",
@@ -6805,6 +7651,24 @@
         }
       }
     },
+    "6377.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"If enabled, changes to font size will try to preserve session dimensions.\"; ObjectID = \"6377\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "If enabled, changes to font size will try to preserve session dimensions."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "启用后，更改字体大小时将尝试保持会话尺寸。"
+          }
+        }
+      }
+    },
     "6378.title": {
       "comment": "Class = \"NSButtonCell\"; title = \"Adjust window when changing font size\"; ObjectID = \"6378\";",
       "extractionState": "extracted_with_value",
@@ -6823,6 +7687,24 @@
         }
       }
     },
+    "6383.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"Clipboard access via an escape code poses a security risk if running untrusted applications.\"; ObjectID = \"6383\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Clipboard access via an escape code poses a security risk if running untrusted applications."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "如果运行不受信任的应用，通过转义码访问剪贴板会带来安全风险。"
+          }
+        }
+      }
+    },
     "6384.title": {
       "comment": "Class = \"NSButtonCell\"; title = \"Applications in terminal may access clipboard\"; ObjectID = \"6384\";",
       "extractionState": "extracted_with_value",
@@ -6837,6 +7719,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "终端中的应用可以访问剪贴板"
+          }
+        }
+      }
+    },
+    "6387.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"This may be a security risk in an untrusted environment, especially if the terminal can set the title.\"; ObjectID = \"6387\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "This may be a security risk in an untrusted environment, especially if the terminal can set the title."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在不受信任的环境中这可能有安全风险，尤其是终端可以设置标题时。"
           }
         }
       }
@@ -6913,6 +7813,24 @@
         }
       }
     },
+    "6407.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"If enabled, option-click sends arrow keys to move the cursor's position. If Shell Integration is installed then it does not take effect at the command line.\"; ObjectID = \"6407\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "If enabled, option-click sends arrow keys to move the cursor's position. If Shell Integration is installed then it does not take effect at the command line."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "启用后，Option-点击会发送方向键来移动光标位置。如果安装了 Shell 集成，则在命令行中不生效。"
+          }
+        }
+      }
+    },
     "6408.title": {
       "comment": "Class = \"NSButtonCell\"; title = \"⌥-Click moves cursor\"; ObjectID = \"6408\";",
       "extractionState": "extracted_with_value",
@@ -6985,6 +7903,42 @@
         }
       }
     },
+    "6Fq-pl-5nd.ibExternalAccessibilityDescription": {
+      "comment": "Class = \"NSButton\"; ibExternalAccessibilityDescription = \"Use ligatures for non-ASCII text\"; ObjectID = \"6Fq-pl-5nd\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Use ligatures for non-ASCII text"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "为非 ASCII 文本使用连字"
+          }
+        }
+      }
+    },
+    "6Fq-pl-5nd.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"If you turn this on, optional ligatures in this font will be enabled. It forces iTerm2 to use a slower text rendering algorithm.\"; ObjectID = \"6Fq-pl-5nd\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "If you turn this on, optional ligatures in this font will be enabled. It forces iTerm2 to use a slower text rendering algorithm."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "开启后，将启用此字体的可选连字。它会强制 iTerm2 使用较慢的文本渲染算法。"
+          }
+        }
+      }
+    },
     "6KX-JG-Yon.title": {
       "comment": "Class = \"NSTextFieldCell\"; title = \"Profile Type:\"; ObjectID = \"6KX-JG-Yon\";",
       "extractionState": "extracted_with_value",
@@ -7017,6 +7971,42 @@
           "stringUnit": {
             "state": "translated",
             "value": "上下文"
+          }
+        }
+      }
+    },
+    "6Pr-69-fM1.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"Enables an icon in the window title bar that represents the current working directory.\"; ObjectID = \"6Pr-69-fM1\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Enables an icon in the window title bar that represents the current working directory."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在窗口标题栏中启用表示当前工作目录的图标。"
+          }
+        }
+      }
+    },
+    "6Qn-Rd-R1m.ibShadowedToolTip": {
+      "comment": "Class = \"NSPopUpButton\"; ibShadowedToolTip = \"This sets the color of the indeterminate progress bar.\"; ObjectID = \"6Qn-Rd-R1m\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "This sets the color of the indeterminate progress bar."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设置不确定进度条的颜色。"
           }
         }
       }
@@ -7107,6 +8097,60 @@
           "stringUnit": {
             "state": "translated",
             "value": "顶部"
+          }
+        }
+      }
+    },
+    "7EK-nW-yMU.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"When the appearance of the tab bar causes a window to grow, part of it may move outside the main area of the screen (for example, under the Dock). When this setting is enabled, the window’s size will remain the same if growing it to accommodate a tab bar would cause that to occur.\"; ObjectID = \"7EK-nW-yMU\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "When the appearance of the tab bar causes a window to grow, part of it may move outside the main area of the screen (for example, under the Dock). When this setting is enabled, the window’s size will remain the same if growing it to accommodate a tab bar would cause that to occur."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "当标签栏的外观导致窗口变大时，窗口的一部分可能会移出屏幕主区域（例如 Dock 下方）。启用此设置后，如果为容纳标签栏而扩大窗口会导致这种情况，则窗口大小保持不变。"
+          }
+        }
+      }
+    },
+    "7G9-14-8aW.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"When a password prompt appears, automatically open the password manager?\"; ObjectID = \"7G9-14-8aW\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "When a password prompt appears, automatically open the password manager?"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "出现密码提示时，自动打开密码管理器？"
+          }
+        }
+      }
+    },
+    "7KN-d8-slG.ibExternalAccessibilityDescription": {
+      "comment": "Class = \"NSButton\"; ibExternalAccessibilityDescription = \"Show per-pane title bars even if there is only one pane\"; ObjectID = \"7KN-d8-slG\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Show per-pane title bars even if there is only one pane"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "即使只有一个窗格也显示每窗格标题栏"
           }
         }
       }
@@ -7327,6 +8371,24 @@
         }
       }
     },
+    "7pa-hD-WIi.ibExternalAccessibilityDescription": {
+      "comment": "Class = \"NSButton\"; ibExternalAccessibilityDescription = \"Confirm \\\"Quit iTerm2 (⌘)\\\" even if there are no windows\"; ObjectID = \"7pa-hD-WIi\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Confirm \\\"Quit iTerm2 (⌘)\\\" even if there are no windows"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "即使没有窗口也确认“退出 iTerm2 (⌘)”"
+          }
+        }
+      }
+    },
     "7q9-th-Jzw.title": {
       "comment": "Class = \"NSMenuItem\"; title = \"Google Gemini\"; ObjectID = \"7q9-th-Jzw\";",
       "extractionState": "extracted_with_value",
@@ -7417,6 +8479,24 @@
         }
       }
     },
+    "8RE-RE-YOM.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"When the command that produced output is partially invisible, this option shows the  last line of the prompt and the command that produced the output at the top of the screen.\"; ObjectID = \"8RE-RE-YOM\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "When the command that produced output is partially invisible, this option shows the  last line of the prompt and the command that produced the output at the top of the screen."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "当产生输出的命令部分不可见时，此选项会在屏幕顶部显示提示符的最后一行和产生输出的命令。"
+          }
+        }
+      }
+    },
     "8VU-Ld-Ffp.title": {
       "comment": "Class = \"NSMenuItem\"; title = \"OpenAI-Hosted File Upload & Vector Store\"; ObjectID = \"8VU-Ld-Ffp\";",
       "extractionState": "extracted_with_value",
@@ -7449,6 +8529,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "鼠标报告："
+          }
+        }
+      }
+    },
+    "8jj-nE-deG.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"For this setting to take effect you must disable \\\"Native full screen windows\\\" in Settings > General. If this setting is enabled, the menu bar will remain visible. This is useful for multi-monitor systems.\"; ObjectID = \"8jj-nE-deG\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "For this setting to take effect you must disable \\\"Native full screen windows\\\" in Settings > General. If this setting is enabled, the menu bar will remain visible. This is useful for multi-monitor systems."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "要使此设置生效，你必须停用“设置 > 通用”中的“原生全屏幕窗口”。启用此设置后，菜单栏将保持可见。这对多显示器系统很有用。"
           }
         }
       }
@@ -7525,6 +8623,24 @@
         }
       }
     },
+    "97f-06-acT.paletteLabel": {
+      "comment": "Class = \"NSToolbarItem\"; paletteLabel = \"Shortcuts\"; ObjectID = \"97f-06-acT\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Shortcuts"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "快捷键"
+          }
+        }
+      }
+    },
     "9CY-ML-bMd.title": {
       "comment": "Class = \"NSTextFieldCell\"; title = \"Notifications:\"; ObjectID = \"9CY-ML-bMd\";",
       "extractionState": "extracted_with_value",
@@ -7539,6 +8655,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "通知："
+          }
+        }
+      }
+    },
+    "9Ds-KM-wpJ.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"Alternate Mouse Scroll is a feature that sends arrow keys in response to scroll wheel/scroll gestures. It is toggled by a control sequence.\"; ObjectID = \"9Ds-KM-wpJ\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Alternate Mouse Scroll is a feature that sends arrow keys in response to scroll wheel/scroll gestures. It is toggled by a control sequence."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "备用鼠标滚动是一项响应滚轮/滚动手势发送方向键的功能，由控制序列切换。"
           }
         }
       }
@@ -8353,6 +9487,42 @@
         }
       }
     },
+    "COX-EQ-0ar.placeholderString": {
+      "comment": "Class = \"NSTextFieldCell\"; placeholderString = \"Path (Interpolated String)\"; ObjectID = \"COX-EQ-0ar\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Path (Interpolated String)"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "路径（内插字符串）"
+          }
+        }
+      }
+    },
+    "CRE-cb-4lA.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"If a session ends immediately after starting and this setting is enabled, keep it open so you can see what went wrong.\"; ObjectID = \"CRE-cb-4lA\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "If a session ends immediately after starting and this setting is enabled, keep it open so you can see what went wrong."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "如果会话在启动后立即结束且此设置已启用，则保持其打开，以便你查看出了什么问题。"
+          }
+        }
+      }
+    },
     "CTV-C2-y5j.title": {
       "comment": "Class = \"NSMenuItem\"; title = \"⌥ Left Option\"; ObjectID = \"CTV-C2-y5j\";",
       "extractionState": "extracted_with_value",
@@ -8641,6 +9811,42 @@
         }
       }
     },
+    "Dt4-v9-hNo.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"Buried sessions appear under Session > Buried Sessions. When this setting is enabled, window sizes are restored when attaching to an existing tmux session.\"; ObjectID = \"Dt4-v9-hNo\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Buried sessions appear under Session > Buried Sessions. When this setting is enabled, window sizes are restored when attaching to an existing tmux session."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "隐藏的会话显示在“会话 > 隐藏的会话”下。启用此设置后，附加到现有 tmux 会话时会恢复窗口大小。"
+          }
+        }
+      }
+    },
+    "DxZ-e9-1wU.placeholderString": {
+      "comment": "Class = \"NSTextFieldCell\"; placeholderString = \"Enter Badge Text\"; ObjectID = \"DxZ-e9-1wU\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Enter Badge Text"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "输入角标文本"
+          }
+        }
+      }
+    },
     "EBU-J4-gvU.title": {
       "comment": "Class = \"NSButtonCell\"; title = \"OK\"; ObjectID = \"EBU-J4-gvU\";",
       "extractionState": "extracted_with_value",
@@ -8763,6 +9969,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "每次询问"
+          }
+        }
+      }
+    },
+    "EkI-wa-K9H.ibShadowedToolTip": {
+      "comment": "Class = \"NSTextField\"; ibShadowedToolTip = \"The progress bar goes at the top of the session. It cannot exceed the top margin height to avoid overlapping terminal contents.\"; ObjectID = \"EkI-wa-K9H\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "The progress bar goes at the top of the session. It cannot exceed the top margin height to avoid overlapping terminal contents."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "进度条位于会话顶部。它不能超过上边距高度，以避免与终端内容重叠。"
           }
         }
       }
@@ -9037,6 +10261,24 @@
         }
       }
     },
+    "Flt-We-Y3i.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"This is not recommended.\"; ObjectID = \"Flt-We-Y3i\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "This is not recommended."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "不建议这样做。"
+          }
+        }
+      }
+    },
     "FwV-18-qsE.title": {
       "comment": "Class = \"NSMenuItem\"; title = \"fn Function\"; ObjectID = \"FwV-18-qsE\";",
       "extractionState": "extracted_with_value",
@@ -9109,6 +10351,24 @@
         }
       }
     },
+    "GD3-XJ-mYL.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"If disabled, then triple click selects one line as it appears onscreen.\"; ObjectID = \"GD3-XJ-mYL\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "If disabled, then triple click selects one line as it appears onscreen."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "关闭后，三击选择屏幕上显示的一行。"
+          }
+        }
+      }
+    },
     "GHh-Uz-aT9.title": {
       "comment": "Class = \"NSTextFieldCell\"; title = \"Act in Web Browser\"; ObjectID = \"GHh-Uz-aT9\";",
       "extractionState": "extracted_with_value",
@@ -9177,6 +10437,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "在交互式应用外，Page Up、Page Down、Home 和 End 进行滚动"
+          }
+        }
+      }
+    },
+    "GVg-ue-xgc.ibShadowedToolTip": {
+      "comment": "Class = \"NSView\"; ibShadowedToolTip = \"This visualization shows the hue and chroma of the ANSI colors, excluding black and white. Hue is given by the angle and Chroma by the distance from center.\"; ObjectID = \"GVg-ue-xgc\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "This visualization shows the hue and chroma of the ANSI colors, excluding black and white. Hue is given by the angle and Chroma by the distance from center."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此可视化显示 ANSI 颜色的色相和色度（不包括黑色和白色）。色相由角度表示，色度由与中心的距离表示。"
           }
         }
       }
@@ -9397,6 +10675,24 @@
         }
       }
     },
+    "HqN-xF-ITg.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"Alternate Mouse Scroll is a feature that sends arrow keys in response to scroll wheel/scroll gestures. Enable this if you prefer not to use it for horizontal scrolling. Alternate mouse scroll takes priority over swipe to switch tabs.\"; ObjectID = \"HqN-xF-ITg\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Alternate Mouse Scroll is a feature that sends arrow keys in response to scroll wheel/scroll gestures. Enable this if you prefer not to use it for horizontal scrolling. Alternate mouse scroll takes priority over swipe to switch tabs."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "备用鼠标滚动是一项响应滚轮/滚动手势发送方向键的功能。如果你不希望它用于水平滚动，请启用此选项。备用鼠标滚动优先于滑动切换标签页。"
+          }
+        }
+      }
+    },
     "I7W-YQ-zKh.title": {
       "comment": "Class = \"NSTextFieldCell\"; title = \"Privacy:\"; ObjectID = \"I7W-YQ-zKh\";",
       "extractionState": "extracted_with_value",
@@ -9523,6 +10819,24 @@
         }
       }
     },
+    "Ids-PU-lco.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"The following tags are recognized: <u>, <i>, and <b>. You can also use &lt; and &amp;.\"; ObjectID = \"Ids-PU-lco\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "The following tags are recognized: <u>, <i>, and <b>. You can also use &lt; and &amp;."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "支持以下标签：<u>、<i> 和 <b>。你也可以使用 &lt; 和 &amp;。"
+          }
+        }
+      }
+    },
     "Isn-uv-Qku.title": {
       "comment": "Class = \"NSTextFieldCell\"; title = \"Features:\"; ObjectID = \"Isn-uv-Qku\";",
       "extractionState": "extracted_with_value",
@@ -9613,6 +10927,24 @@
         }
       }
     },
+    "JI4-WQ-gMX.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"Some programs (such as vim and emacs) want to put the numeric keypad in \\\"application\\\" mode. Turn this off if you always want it to act as a numeric keypad.\"; ObjectID = \"JI4-WQ-gMX\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Some programs (such as vim and emacs) want to put the numeric keypad in \\\"application\\\" mode. Turn this off if you always want it to act as a numeric keypad."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "某些程序（如 vim 和 emacs）希望将数字小键盘置于“应用”模式。如果你希望它始终作为数字小键盘使用，请关闭此选项。"
+          }
+        }
+      }
+    },
     "JJU-nE-9XN.title": {
       "comment": "Class = \"NSMenuItem\"; title = \"Allow all apps to connect\"; ObjectID = \"JJU-nE-9XN\";",
       "extractionState": "extracted_with_value",
@@ -9685,6 +11017,24 @@
         }
       }
     },
+    "JXG-G1-APa.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"When enabled, large cursor movements get an animation to help your eye follow the cursor.\"; ObjectID = \"JXG-G1-APa\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "When enabled, large cursor movements get an animation to help your eye follow the cursor."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "启用后，大幅光标移动会带有动画，帮助你的视线跟随光标。"
+          }
+        }
+      }
+    },
     "JZI-O3-ddQ.title": {
       "comment": "Class = \"NSMenuItem\"; title = \"Presets\"; ObjectID = \"JZI-O3-ddQ\";",
       "extractionState": "extracted_with_value",
@@ -9753,6 +11103,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "细笔画："
+          }
+        }
+      }
+    },
+    "K0H-ZR-UrB.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"Some programs (such as vim and emacs) want to put the numeric keypad in \\\"application\\\" mode. Turn this off if you always want it to act as a numeric keypad. NOTE: This setting affects the older xterm control sequence (CSI > Pp m), not the Kitty control sequence related to CSI > flags u.\"; ObjectID = \"K0H-ZR-UrB\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Some programs (such as vim and emacs) want to put the numeric keypad in \\\"application\\\" mode. Turn this off if you always want it to act as a numeric keypad. NOTE: This setting affects the older xterm control sequence (CSI > Pp m), not the Kitty control sequence related to CSI > flags u."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "某些程序（如 vim 和 emacs）希望将数字小键盘置于“应用”模式。如果你希望它始终作为数字小键盘使用，请关闭此选项。注意：此设置影响较旧的 xterm 控制序列（CSI > Pp m），而非与 CSI > flags u 相关的 Kitty 控制序列。"
           }
         }
       }
@@ -9861,6 +11229,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "左"
+          }
+        }
+      }
+    },
+    "KWy-PJ-O0E.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"Brightens text for \\\"normal\\\" ANSI colors. Does not affect \\\"bright\\\" ANSI colors, 8-bit colors, 24-bit colors, or the default foreground color.\"; ObjectID = \"KWy-PJ-O0E\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Brightens text for \\\"normal\\\" ANSI colors. Does not affect \\\"bright\\\" ANSI colors, 8-bit colors, 24-bit colors, or the default foreground color."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "提亮“标准”ANSI 颜色的文本。不影响“亮色”ANSI 颜色、8 位颜色、24 位颜色或默认前景颜色。"
           }
         }
       }
@@ -10153,6 +11539,24 @@
         }
       }
     },
+    "LsQ-19-iaj.ibShadowedToolTip": {
+      "comment": "Class = \"NSImageView\"; ibShadowedToolTip = \"The prompt must contain the substring \\\\(ai.prompt). The query you enter will replace it when speaking to the AI. For example: “Write a unix command to \\\\(ai.prompt).\"; ObjectID = \"LsQ-19-iaj\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "The prompt must contain the substring \\\\(ai.prompt). The query you enter will replace it when speaking to the AI. For example: “Write a unix command to \\\\(ai.prompt)."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "提示符必须包含子字符串 \\\\(ai.prompt)。你输入的查询将在与 AI 对话时替换它。例如：“写一条 unix 命令 \\\\(ai.prompt)。"
+          }
+        }
+      }
+    },
     "M1T-M4-4jC.title": {
       "comment": "Class = \"NSTextFieldCell\"; title = \"Tab:\"; ObjectID = \"M1T-M4-4jC\";",
       "extractionState": "extracted_with_value",
@@ -10167,6 +11571,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "标签页："
+          }
+        }
+      }
+    },
+    "M2Y-uM-p2q.placeholderString": {
+      "comment": "Class = \"NSTextFieldCell\"; placeholderString = \"Enter badge text (interpolated string)\"; ObjectID = \"M2Y-uM-p2q\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Enter badge text (interpolated string)"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "输入角标文本（内插字符串）"
           }
         }
       }
@@ -10441,6 +11863,60 @@
         }
       }
     },
+    "Nhj-1F-dbm.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"When this is enabled, shift+arrow key will extend an existing selection. If there is no selection, this has no effect.\"; ObjectID = \"Nhj-1F-dbm\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "When this is enabled, shift+arrow key will extend an existing selection. If there is no selection, this has no effect."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "启用后，Shift+方向键将扩展现有选区。如果没有选区，则无效果。"
+          }
+        }
+      }
+    },
+    "Njg-LZ-sIb.placeholderString": {
+      "comment": "Class = \"NSTextFieldCell\"; placeholderString = \"interval\"; ObjectID = \"Njg-LZ-sIb\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "interval"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "间隔"
+          }
+        }
+      }
+    },
+    "NtK-Fc-1Kb.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"When “Force keyboard” is on, iTerm2 continuously forces the selected layout while it is active, so you cannot switch to another layout within a session. Turn this on to force the layout only once, the first time a newly created terminal receives keyboard focus, leaving you free to change it afterward.\"; ObjectID = \"NtK-Fc-1Kb\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "When “Force keyboard” is on, iTerm2 continuously forces the selected layout while it is active, so you cannot switch to another layout within a session. Turn this on to force the layout only once, the first time a newly created terminal receives keyboard focus, leaving you free to change it afterward."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "开启“强制键盘”后，iTerm2 在其活动期间持续强制所选布局，因此你无法在会话内切换到其他布局。开启此项可仅在新建终端首次获得键盘焦点时强制一次布局，之后你可以自由更改。"
+          }
+        }
+      }
+    },
     "NtK-Fc-1Kc.title": {
       "comment": "Class = \"NSButtonCell\"; title = \"Only force once per session when it first receives keyboard focus\"; ObjectID = \"NtK-Fc-1Kc\";",
       "extractionState": "extracted_with_value",
@@ -10581,6 +12057,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "OtherViews"
+          }
+        }
+      }
+    },
+    "OWt-qh-bb4.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"When you have selected “Use System Window Restoration Policy”, iTerm2 will not open a new window on launch if there are auto-launch scripts, a hotkey window is defined, or there are any buried sessions. Enable this to force a new window to be opened regardless.\"; ObjectID = \"OWt-qh-bb4\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "When you have selected “Use System Window Restoration Policy”, iTerm2 will not open a new window on launch if there are auto-launch scripts, a hotkey window is defined, or there are any buried sessions. Enable this to force a new window to be opened regardless."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选择“使用系统窗口恢复策略”后，如果存在自动启动脚本、定义了热键窗口或存在隐藏的会话，iTerm2 将不会在启动时打开新窗口。启用此项可强制无论如何都打开新窗口。"
           }
         }
       }
@@ -11053,6 +12547,24 @@
         }
       }
     },
+    "QeQ-es-j2p.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"When enabled, the locations of terminal windows are recorded when windows are closed. Later, when creating a new window, the window is placed in the same location (using the top left coordinate). The size is not saved; whatever rows and columns are specified in the window's originating profile are used to compute the size.\"; ObjectID = \"QeQ-es-j2p\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "When enabled, the locations of terminal windows are recorded when windows are closed. Later, when creating a new window, the window is placed in the same location (using the top left coordinate). The size is not saved; whatever rows and columns are specified in the window's originating profile are used to compute the size."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "启用后，关闭窗口时会记录终端窗口的位置。之后创建新窗口时，窗口会放置在相同的位置（使用左上角坐标）。大小不会保存；窗口来源配置文件中指定的行列数将用于计算大小。"
+          }
+        }
+      }
+    },
     "Qhl-XG-H9e.title": {
       "comment": "Class = \"NSButtonCell\"; title = \"Use custom window title for new windows using this profile\"; ObjectID = \"Qhl-XG-H9e\";",
       "extractionState": "extracted_with_value",
@@ -11125,6 +12637,24 @@
         }
       }
     },
+    "Qz5-Ow-iQt.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"If Shell Integration is enabled, this prevents command prompts from starting in the middle of a line when the previous command did not end with a newline.\"; ObjectID = \"Qz5-Ow-iQt\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "If Shell Integration is enabled, this prevents command prompts from starting in the middle of a line when the previous command did not end with a newline."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "如果启用了 Shell 集成，此选项可防止在上一条命令未以换行结束时，命令提示符从行中间开始。"
+          }
+        }
+      }
+    },
     "R2j-BP-pqT.title": {
       "comment": "Class = \"NSTextFieldCell\"; title = \"Snippets Filter:\"; ObjectID = \"R2j-BP-pqT\";",
       "extractionState": "extracted_with_value",
@@ -11157,6 +12687,42 @@
           "stringUnit": {
             "state": "translated",
             "value": "重新启动"
+          }
+        }
+      }
+    },
+    "RBx-qn-HNB.ibExternalAccessibilityDescription": {
+      "comment": "Class = \"NSButton\"; ibExternalAccessibilityDescription = \"Animate cursor only in interactive apps\"; ObjectID = \"RBx-qn-HNB\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Animate cursor only in interactive apps"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "仅在交互式应用中为光标使用动画"
+          }
+        }
+      }
+    },
+    "RBx-qn-HNB.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"When enabled, cursor animation only occurs in alternate screen mode. When disabled, cursor movements are always animated.\"; ObjectID = \"RBx-qn-HNB\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "When enabled, cursor animation only occurs in alternate screen mode. When disabled, cursor movements are always animated."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "启用后，光标动画仅在备用屏幕模式下发生。关闭后，光标移动始终带有动画。"
           }
         }
       }
@@ -11355,6 +12921,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "在标签页标题中支持基本 HTML 标签"
+          }
+        }
+      }
+    },
+    "Rug-jx-jJP.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"When selected, macOS positions windows according to its whims. The window size comes from the rows and columns specified in the window’s originating profile.\"; ObjectID = \"Rug-jx-jJP\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "When selected, macOS positions windows according to its whims. The window size comes from the rows and columns specified in the window’s originating profile."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选中后，macOS 会按自己的意愿放置窗口。窗口大小来自窗口来源配置文件中指定的行列数。"
           }
         }
       }
@@ -11683,6 +13267,42 @@
         }
       }
     },
+    "Tbo-Nq-0gg.ibShadowedLabels[0]": {
+      "comment": "Class = \"NSSegmentedCell\"; Tbo-Nq-0gg.ibShadowedLabels[0] = \"🖥️ Terminal\"; ObjectID = \"Tbo-Nq-0gg\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "🖥️ Terminal"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "🖥️ 终端"
+          }
+        }
+      }
+    },
+    "Tbo-Nq-0gg.ibShadowedLabels[1]": {
+      "comment": "Class = \"NSSegmentedCell\"; Tbo-Nq-0gg.ibShadowedLabels[1] = \"🌎 Web Browser\"; ObjectID = \"Tbo-Nq-0gg\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "🌎 Web Browser"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "🌎 网页浏览器"
+          }
+        }
+      }
+    },
     "Tt3-3r-Gt8.title": {
       "comment": "Class = \"NSTextFieldCell\"; title = \"Links:\"; ObjectID = \"Tt3-3r-Gt8\";",
       "extractionState": "extracted_with_value",
@@ -11715,6 +13335,60 @@
           "stringUnit": {
             "state": "translated",
             "value": "⌥ 左选项"
+          }
+        }
+      }
+    },
+    "U1x-Zh-t2k.placeholderString": {
+      "comment": "Class = \"NSTextFieldCell\"; placeholderString = \"Folder path\"; ObjectID = \"U1x-Zh-t2k\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Folder path"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "文件夹路径"
+          }
+        }
+      }
+    },
+    "U4H-3c-nZg.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"Some programs (such as vim and emacs) want to put the numeric keypad in \\\"application\\\" mode. Turn this off if you always want it to act as a numeric keypad.\"; ObjectID = \"U4H-3c-nZg\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Some programs (such as vim and emacs) want to put the numeric keypad in \\\"application\\\" mode. Turn this off if you always want it to act as a numeric keypad."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "某些程序（如 vim 和 emacs）希望将数字小键盘置于“应用”模式。如果你希望它始终作为数字小键盘使用，请关闭此选项。"
+          }
+        }
+      }
+    },
+    "U5a-PY-hD8.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"When enabled, ANSI red, yellow, and blue colors are used by mark indicators. Otherwise, the hardcoded default colors are used.\"; ObjectID = \"U5a-PY-hD8\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "When enabled, ANSI red, yellow, and blue colors are used by mark indicators. Otherwise, the hardcoded default colors are used."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "启用后，标记指示器使用 ANSI 红色、黄色和蓝色。否则使用硬编码的默认颜色。"
           }
         }
       }
@@ -11791,6 +13465,42 @@
         }
       }
     },
+    "UGZ-Vx-hCx.ibExternalAccessibilityDescription": {
+      "comment": "Class = \"NSButton\"; ibExternalAccessibilityDescription = \"Apps can change right option key\"; ObjectID = \"UGZ-Vx-hCx\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Apps can change right option key"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "应用可以更改右选项键"
+          }
+        }
+      }
+    },
+    "UGZ-Vx-hCx.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"When enabled, apps can cause this option key to send Esc+ using DECSET 1036. Note that on some external keyboards left and right option keys are swapped.\"; ObjectID = \"UGZ-Vx-hCx\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "When enabled, apps can cause this option key to send Esc+ using DECSET 1036. Note that on some external keyboards left and right option keys are swapped."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "启用后，应用可以通过 DECSET 1036 让此选项键发送 Esc+。请注意，在某些外接键盘上左右选项键是互换的。"
+          }
+        }
+      }
+    },
     "UI6-As-YT2.title": {
       "comment": "Class = \"NSButtonCell\"; title = \"Show tab bar in fullscreen\"; ObjectID = \"UI6-As-YT2\";",
       "extractionState": "extracted_with_value",
@@ -11859,6 +13569,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "正则表达式"
+          }
+        }
+      }
+    },
+    "UWv-op-rJa.ibShadowedToolTip": {
+      "comment": "Class = \"NSTextField\"; ibShadowedToolTip = \"In the Minimal theme, tabs can show a subtitle as a second line of text.\"; ObjectID = \"UWv-op-rJa\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "In the Minimal theme, tabs can show a subtitle as a second line of text."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在极简主题中，标签页可以在第二行显示副标题。"
           }
         }
       }
@@ -11971,6 +13699,24 @@
         }
       }
     },
+    "VXt-Ga-Uvg.ibShadowedToolTip": {
+      "comment": "Class = \"NSSlider\"; ibShadowedToolTip = \"How much of the background image is visible through the background color.\"; ObjectID = \"VXt-Ga-Uvg\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "How much of the background image is visible through the background color."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "背景颜色下背景图像的可见程度。"
+          }
+        }
+      }
+    },
     "VYn-BL-8S3.title": {
       "comment": "Class = \"NSTextFieldCell\"; title = \"Bonjour:\"; ObjectID = \"VYn-BL-8S3\";",
       "extractionState": "extracted_with_value",
@@ -12061,6 +13807,24 @@
         }
       }
     },
+    "WVK-xs-N2h.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"When enabled, small horizontal cursor movements are animated. Not available for block cursors.\"; ObjectID = \"WVK-xs-N2h\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "When enabled, small horizontal cursor movements are animated. Not available for block cursors."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "启用后，小幅水平光标移动会带有动画。方块光标不可用。"
+          }
+        }
+      }
+    },
     "Wci-fV-mFZ.title": {
       "comment": "Class = \"NSMenuItem\"; title = \"Ask Each Time\"; ObjectID = \"Wci-fV-mFZ\";",
       "extractionState": "extracted_with_value",
@@ -12111,6 +13875,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "窗口布局"
+          }
+        }
+      }
+    },
+    "X0w-pC-g9j.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"Enables the specified color for bold text. Also has the side-effect of using the bright version of ANSI colors for bold text in a ”normal“ ANSI color.\"; ObjectID = \"X0w-pC-g9j\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Enables the specified color for bold text. Also has the side-effect of using the bright version of ANSI colors for bold text in a ”normal“ ANSI color."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "为粗体文本启用指定颜色。还有一个副作用：在“标准”ANSI 颜色中使用亮色版 ANSI 颜色显示粗体文本。"
           }
         }
       }
@@ -12529,6 +14311,24 @@
         }
       }
     },
+    "YoO-mR-uX5.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"When enabled, terminals are rendered using the GPU. This improves performance.\"; ObjectID = \"YoO-mR-uX5\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "When enabled, terminals are rendered using the GPU. This improves performance."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "启用后，终端使用 GPU 渲染。这可以提高性能。"
+          }
+        }
+      }
+    },
     "YpV-Mh-UE0.title": {
       "comment": "Class = \"NSTextFieldCell\"; title = \"Filename:\"; ObjectID = \"YpV-Mh-UE0\";",
       "extractionState": "extracted_with_value",
@@ -12579,6 +14379,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "为浅色和深色模式使用独立的颜色"
+          }
+        }
+      }
+    },
+    "ZG1-dm-1gD.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"For terminal applications that use mouse reporting, turning this on allows right click (or two finger tap on a trackpad) to be reported instead of opening the context menu.\"; ObjectID = \"ZG1-dm-1gD\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "For terminal applications that use mouse reporting, turning this on allows right click (or two finger tap on a trackpad) to be reported instead of opening the context menu."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "对于使用鼠标报告的终端应用，开启此选项后，右键点击（或触控板双指轻点）会被报告给应用，而不是打开上下文菜单。"
           }
         }
       }
@@ -12705,6 +14523,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "提示符"
+          }
+        }
+      }
+    },
+    "ZlO-15-adn.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"When this is enabled, you can click on a command or its output to restrict Find and Filter to its output. The selected command gets highlighted and other commands get dimmed. This requires shell integration to be installed.\"; ObjectID = \"ZlO-15-adn\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "When this is enabled, you can click on a command or its output to restrict Find and Filter to its output. The selected command gets highlighted and other commands get dimmed. This requires shell integration to be installed."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "启用后，你可以点击命令或其输出，将查找和筛选限制在其输出范围内。选中的命令会高亮，其他命令会变暗。这需要安装 Shell 集成。"
           }
         }
       }
@@ -12925,6 +14761,24 @@
         }
       }
     },
+    "awA-hH-ziY.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"For this setting to take effect you must disable \\\"Native full screen windows\\\" in Settings > General. If this setting is enabled, the menu bar will remain visible. This is useful for multi-monitor systems.\"; ObjectID = \"awA-hH-ziY\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "For this setting to take effect you must disable \\\"Native full screen windows\\\" in Settings > General. If this setting is enabled, the menu bar will remain visible. This is useful for multi-monitor systems."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "要使此设置生效，你必须停用“设置 > 通用”中的“原生全屏幕窗口”。启用此设置后，菜单栏将保持可见。这对多显示器系统很有用。"
+          }
+        }
+      }
+    },
     "ax2-RO-lUC.title": {
       "comment": "Class = \"NSButtonCell\"; title = \"Enable support for right-to-left scripts\"; ObjectID = \"ax2-RO-lUC\";",
       "extractionState": "extracted_with_value",
@@ -13011,6 +14865,42 @@
           "stringUnit": {
             "state": "translated",
             "value": "缩放适应"
+          }
+        }
+      }
+    },
+    "bAl-3O-ik0.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"When the command that produced output is partially invisible, this option shows the  last line of the prompt and the command that produced the output at the top of the screen.\"; ObjectID = \"bAl-3O-ik0\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "When the command that produced output is partially invisible, this option shows the  last line of the prompt and the command that produced the output at the top of the screen."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "当产生输出的命令部分不可见时，此选项会在屏幕顶部显示提示符的最后一行和产生输出的命令。"
+          }
+        }
+      }
+    },
+    "bEQ-f0-BMG.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"When relaunching, restore windows on to the same Space that they were on before. If disabled, windows will be restored into the current Space.\"; ObjectID = \"bEQ-f0-BMG\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "When relaunching, restore windows on to the same Space that they were on before. If disabled, windows will be restored into the current Space."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重新启动时，将窗口恢复到它们之前的同一空间。关闭后，窗口将恢复到当前空间。"
           }
         }
       }
@@ -13249,6 +15139,24 @@
         }
       }
     },
+    "cO8-6s-51k.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"Shows a configurable status bar at the top of each session.\"; ObjectID = \"cO8-6s-51k\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Shows a configurable status bar at the top of each session."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在每个会话顶部显示可配置的状态栏。"
+          }
+        }
+      }
+    },
     "cOx-GU-wfM.title": {
       "comment": "Class = \"NSMenu\"; title = \"OtherViews\"; ObjectID = \"cOx-GU-wfM\";",
       "extractionState": "extracted_with_value",
@@ -13371,6 +15279,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "高"
+          }
+        }
+      }
+    },
+    "cgK-BO-rKa.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"When enabled, mouse reporting takes priority over swipe to switch tabs. Disable this if swiping to switch tabs sometimes doesn’t work.\"; ObjectID = \"cgK-BO-rKa\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "When enabled, mouse reporting takes priority over swipe to switch tabs. Disable this if swiping to switch tabs sometimes doesn’t work."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "启用后，鼠标报告优先于滑动切换标签页。如果滑动切换标签页有时不生效，请关闭此选项。"
           }
         }
       }
@@ -13659,6 +15585,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "文件夹："
+          }
+        }
+      }
+    },
+    "dMl-Zb-Sed.placeholderString": {
+      "comment": "Class = \"NSTextFieldCell\"; placeholderString = \"Interpolated string\"; ObjectID = \"dMl-Zb-Sed\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Interpolated string"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "内插字符串"
           }
         }
       }
@@ -14077,6 +16021,42 @@
         }
       }
     },
+    "ehw-7A-A75.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"Use this button to manually locate the browser plugin. If it can’t be found automatically, or if something is wrong with the plugin that prevents automatic identification from working, use this to fix the problem or learn why it is failing.\"; ObjectID = \"ehw-7A-A75\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Use this button to manually locate the browser plugin. If it can’t be found automatically, or if something is wrong with the plugin that prevents automatic identification from working, use this to fix the problem or learn why it is failing."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "使用此按钮手动定位浏览器插件。如果无法自动找到它，或插件出现问题导致无法自动识别，请使用此选项修复问题或了解失败原因。"
+          }
+        }
+      }
+    },
+    "eid-kp-DfH.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"Underline and vertical bar cursors can cast a soft drop shadow onto the character beneath the cursor, giving it a sense of depth.\"; ObjectID = \"eid-kp-DfH\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Underline and vertical bar cursors can cast a soft drop shadow onto the character beneath the cursor, giving it a sense of depth."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "下划线光标和竖线光标可以给光标下方的字符投射柔和的阴影，使其具有立体感。"
+          }
+        }
+      }
+    },
     "elQ-vX-kkH.title": {
       "comment": "Class = \"NSButtonCell\"; title = \"Avoid repainting while cursor is hidden to reduce flicker while scrolling\"; ObjectID = \"elQ-vX-kkH\";",
       "extractionState": "extracted_with_value",
@@ -14127,6 +16107,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "网页"
+          }
+        }
+      }
+    },
+    "evF-qt-9wo.ibShadowedToolTip": {
+      "comment": "Class = \"NSSlider\"; ibShadowedToolTip = \"This dims all colors except that of the cursor. A pure white cursor with Smart Cursor Color off is recommended when using cursor boost.\"; ObjectID = \"evF-qt-9wo\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "This dims all colors except that of the cursor. A pure white cursor with Smart Cursor Color off is recommended when using cursor boost."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这会调暗除光标颜色外的所有颜色。使用光标增强时，建议使用纯白光标并关闭智能光标颜色。"
           }
         }
       }
@@ -14275,6 +16273,24 @@
         }
       }
     },
+    "fRb-hJ-joB.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"You probably don't want this; most systems use ^? (ASCII 127) for backspace. Changing this setting affects the key mappings in the table above.\"; ObjectID = \"fRb-hJ-joB\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "You probably don't want this; most systems use ^? (ASCII 127) for backspace. Changing this setting affects the key mappings in the table above."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你可能不需要这个；大多数系统使用 ^?（ASCII 127）作为退格键。更改此设置会影响上表中的按键映射。"
+          }
+        }
+      }
+    },
     "fXR-fI-xdt.title": {
       "comment": "Class = \"NSButtonCell\"; title = \"Automatically enter copy mode on Shift+Arrow key with selection\"; ObjectID = \"fXR-fI-xdt\";",
       "extractionState": "extracted_with_value",
@@ -14307,6 +16323,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "被指针设置中的“⌘-点击打开文件名/URL”设置停用"
+          }
+        }
+      }
+    },
+    "fYP-lq-POn.placeholderString": {
+      "comment": "Class = \"NSTextFieldCell\"; placeholderString = \"Tab Title (Interpolated String)\"; ObjectID = \"fYP-lq-POn\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Tab Title (Interpolated String)"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "标签页标题（内插字符串）"
           }
         }
       }
@@ -14365,6 +16399,24 @@
         }
       }
     },
+    "fwC-LQ-VKF.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"Allow control sequences to enable or disable cursor blink?\"; ObjectID = \"fwC-LQ-VKF\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Allow control sequences to enable or disable cursor blink?"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "允许控制序列启用或停用光标闪烁？"
+          }
+        }
+      }
+    },
     "fwE-Hx-zKG.title": {
       "comment": "Class = \"NSTextFieldCell\"; title = \"Hotkey window:\"; ObjectID = \"fwE-Hx-zKG\";",
       "extractionState": "extracted_with_value",
@@ -14379,6 +16431,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "热键窗口："
+          }
+        }
+      }
+    },
+    "fwj-4Y-nja.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"Enable this to make non-default background colors always opaque. This is useful when using Powerline in a translucent window.\"; ObjectID = \"fwj-4Y-nja\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Enable this to make non-default background colors always opaque. This is useful when using Powerline in a translucent window."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "启用此选项可使非默认背景颜色始终不透明。在透明窗口中使用 Powerline 时很有用。"
           }
         }
       }
@@ -14601,6 +16671,24 @@
     },
     "gtg-rw-6h8.label": {
       "comment": "Class = \"NSToolbarItem\"; label = \"Advanced\"; ObjectID = \"gtg-rw-6h8\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Advanced"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "高级"
+          }
+        }
+      }
+    },
+    "gtg-rw-6h8.paletteLabel": {
+      "comment": "Class = \"NSToolbarItem\"; paletteLabel = \"Advanced\"; ObjectID = \"gtg-rw-6h8\";",
       "extractionState": "extracted_with_value",
       "localizations": {
         "en": {
@@ -15013,6 +17101,24 @@
         }
       }
     },
+    "iWk-HJ-EKg.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"Available for bash, fish, tcsh, xonsh and zsh. This is an alternative to installing shell integration via other methods (such as the iTerm2 > Install Shell Integration menu item).\"; ObjectID = \"iWk-HJ-EKg\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Available for bash, fish, tcsh, xonsh and zsh. This is an alternative to installing shell integration via other methods (such as the iTerm2 > Install Shell Integration menu item)."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "适用于 bash、fish、tcsh、xonsh 和 zsh。这是通过其他方式（如“iTerm2 > 安装 Shell 集成”菜单项）安装 Shell 集成的替代方法。"
+          }
+        }
+      }
+    },
     "iZE-xA-Mxl.title": {
       "comment": "Class = \"NSTextFieldCell\"; title = \"Prompt before closing?\"; ObjectID = \"iZE-xA-Mxl\";",
       "extractionState": "extracted_with_value",
@@ -15045,6 +17151,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "Text Cell"
+          }
+        }
+      }
+    },
+    "imM-Ma-mjV.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"When locked, the terminal cannot change the title with a control sequence. This prevents changes you make in Session Name from being overridden.\"; ObjectID = \"imM-Ma-mjV\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "When locked, the terminal cannot change the title with a control sequence. This prevents changes you make in Session Name from being overridden."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "锁定时，终端不能通过控制序列更改标题。这可以防止你在“会话名称”中做的更改被覆盖。"
           }
         }
       }
@@ -15099,6 +17223,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "Table View Cell"
+          }
+        }
+      }
+    },
+    "iuq-9l-xMR.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"When enabled the 256-color mode colors (aside from the 16 ANSI colors) will be selected to visually match well with the 8 \\\"normal\\\" ANSI colors. Otherwise, the standard RGB cube is used. Changes to this setting take effect when new sessions are created or existing sessions are reset.\"; ObjectID = \"iuq-9l-xMR\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "When enabled the 256-color mode colors (aside from the 16 ANSI colors) will be selected to visually match well with the 8 \\\"normal\\\" ANSI colors. Otherwise, the standard RGB cube is used. Changes to this setting take effect when new sessions are created or existing sessions are reset."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "启用后，256 色模式的颜色（16 种 ANSI 颜色之外）将被选择为与 8 种“标准”ANSI 颜色视觉上匹配。否则使用标准 RGB 立方体。此设置的更改在创建新会话或重置现有会话时生效。"
           }
         }
       }
@@ -15351,6 +17493,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "Chat Completions"
+          }
+        }
+      }
+    },
+    "jlZ-SF-XtE.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"Apps (such as your shell or your editor) expect each character to have a particular “width,” between 0 and 2 cells. If the app and the terminal emulator have different width tables, rendering problems ensue. Notably, Unicode 8 defines most Emoji to be 1 cell wide. Most fonts render them as two cells wide. Unicode 9 fixes this. If your apps have been updated for Unicode 9, you should enable this.\"; ObjectID = \"jlZ-SF-XtE\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Apps (such as your shell or your editor) expect each character to have a particular “width,” between 0 and 2 cells. If the app and the terminal emulator have different width tables, rendering problems ensue. Notably, Unicode 8 defines most Emoji to be 1 cell wide. Most fonts render them as two cells wide. Unicode 9 fixes this. If your apps have been updated for Unicode 9, you should enable this."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "应用（如你的 Shell 或编辑器）期望每个字符具有特定的“宽度”，介于 0 到 2 个单元格之间。如果应用与终端仿真器的宽度表不同，就会出现渲染问题。值得注意的是，Unicode 8 将大多数 Emoji 定义为 1 个单元格宽，而大多数字体将其渲染为 2 个单元格宽。Unicode 9 修复了这个问题。如果你的应用已针对 Unicode 9 更新，应启用此选项。"
           }
         }
       }
@@ -15895,6 +18055,24 @@
         }
       }
     },
+    "la8-b2-QoV.placeholderString": {
+      "comment": "Class = \"NSTextFieldCell\"; placeholderString = \"AI Server URL\"; ObjectID = \"la8-b2-QoV\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "AI Server URL"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI 服务器 URL"
+          }
+        }
+      }
+    },
     "lb0-FE-0Pi.title": {
       "comment": "Class = \"NSTextFieldCell\"; title = \"⚠️ This may reduce performance\"; ObjectID = \"lb0-FE-0Pi\";",
       "extractionState": "extracted_with_value",
@@ -16021,6 +18199,24 @@
         }
       }
     },
+    "mOt-Fp-WpW.ibShadowedToolTip": {
+      "comment": "Class = \"NSSlider\"; ibShadowedToolTip = \"Controls the opacity of faint (dim) text produced by SGR 2. Lower values make faint text fade further toward the background; at 1, it has no effect.\"; ObjectID = \"mOt-Fp-WpW\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Controls the opacity of faint (dim) text produced by SGR 2. Lower values make faint text fade further toward the background; at 1, it has no effect."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "控制 SGR 2 产生的暗淡文本的不透明度。值越低，暗淡文本越向背景淡出；为 1 时无效果。"
+          }
+        }
+      }
+    },
     "maq-kg-hPh.title": {
       "comment": "Class = \"NSButtonCell\"; title = \"Browse\"; ObjectID = \"maq-kg-hPh\";",
       "extractionState": "extracted_with_value",
@@ -16075,6 +18271,42 @@
         }
       }
     },
+    "mlk-a6-xcL.ibExternalAccessibilityDescription": {
+      "comment": "Class = \"NSButton\"; ibExternalAccessibilityDescription = \"Use ligatures for ASCII text\"; ObjectID = \"mlk-a6-xcL\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Use ligatures for ASCII text"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "为 ASCII 文本使用连字"
+          }
+        }
+      }
+    },
+    "mlk-a6-xcL.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"If you turn this on, optional ligatures in this font will be enabled. It forces iTerm2 to use a slower text rendering algorithm.\"; ObjectID = \"mlk-a6-xcL\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "If you turn this on, optional ligatures in this font will be enabled. It forces iTerm2 to use a slower text rendering algorithm."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "开启后，将启用此字体的可选连字。它会强制 iTerm2 使用较慢的文本渲染算法。"
+          }
+        }
+      }
+    },
     "mn5-8g-SbV.title": {
       "comment": "Class = \"NSTextFieldCell\"; title = \"Table View Cell\"; ObjectID = \"mn5-8g-SbV\";",
       "extractionState": "extracted_with_value",
@@ -16125,6 +18357,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "打开默认窗口布局"
+          }
+        }
+      }
+    },
+    "nN3-pV-Hlq.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"Alternate Mouse Scroll is a feature that sends arrow keys in response to scroll wheel/scroll gestures. Enable this if you always want it on in alternate screen mode.\"; ObjectID = \"nN3-pV-Hlq\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Alternate Mouse Scroll is a feature that sends arrow keys in response to scroll wheel/scroll gestures. Enable this if you always want it on in alternate screen mode."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "备用鼠标滚动是一项响应滚轮/滚动手势发送方向键的功能。如果你希望在备用屏幕模式下始终开启，请启用此选项。"
           }
         }
       }
@@ -16341,6 +18591,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "Item 2"
+          }
+        }
+      }
+    },
+    "oZc-l2-yBR.placeholderString": {
+      "comment": "Class = \"NSTextFieldCell\"; placeholderString = \"Interpolated string. If empty, use session title.\"; ObjectID = \"oZc-l2-yBR\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Interpolated string. If empty, use session title."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "内插字符串。留空则使用会话标题。"
           }
         }
       }
@@ -16615,6 +18883,24 @@
         }
       }
     },
+    "q57-nJ-Jbz.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"Can the session title be changed by control sequence? Note that this is only enabled if Session or Profile & Session are selected in the title menu above.\"; ObjectID = \"q57-nJ-Jbz\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Can the session title be changed by control sequence? Note that this is only enabled if Session or Profile & Session are selected in the title menu above."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "会话标题可以被控制序列更改吗？请注意，只有在上面标题菜单中选择了“会话”或“配置文件与会话”时才启用。"
+          }
+        }
+      }
+    },
     "qE5-4Z-I6F.title": {
       "comment": "Class = \"NSTextFieldCell\"; title = \"URL:\"; ObjectID = \"qE5-4Z-I6F\";",
       "extractionState": "extracted_with_value",
@@ -16867,6 +19153,24 @@
         }
       }
     },
+    "rcS-Ls-100.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"Wraps the command in your login shell so dotfiles run first and your command sees the same $PATH and exported variables you’d have in an interactive terminal.\"; ObjectID = \"rcS-Ls-100\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Wraps the command in your login shell so dotfiles run first and your command sees the same $PATH and exported variables you’d have in an interactive terminal."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "将命令包装在登录 Shell 中，以便先运行 dotfiles，让你的命令看到与交互式终端中相同的 $PATH 和导出变量。"
+          }
+        }
+      }
+    },
     "rcS-Ls-101.title": {
       "comment": "Class = \"NSButtonCell\"; title = \"Run command through your shell\"; ObjectID = \"rcS-Ls-101\";",
       "extractionState": "extracted_with_value",
@@ -16881,6 +19185,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "通过 Shell 运行命令"
+          }
+        }
+      }
+    },
+    "rgM-zZ-fDd.placeholderString": {
+      "comment": "Class = \"NSTextFieldCell\"; placeholderString = \"Window Title (Interpolated String)\"; ObjectID = \"rgM-zZ-fDd\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Window Title (Interpolated String)"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "窗口标题（内插字符串）"
           }
         }
       }
@@ -17061,6 +19383,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "启用高标签栏"
+          }
+        }
+      }
+    },
+    "sa9-oD-SMc.ibShadowedToolTip": {
+      "comment": "Class = \"NSTextField\"; ibShadowedToolTip = \"The badge is text that appears in the top right of a session.\"; ObjectID = \"sa9-oD-SMc\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "The badge is text that appears in the top right of a session."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "角标是显示在会话右上角的文本。"
           }
         }
       }
@@ -17299,6 +19639,24 @@
         }
       }
     },
+    "tVY-OD-hsd.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"The OSC 0 and OSC 2 control sequences set the window title. This setting controls whether such a control sequence changes the window title associated with all sessions in the window, or only with the one in which it was received. The window title is derived from the window title associated with the currently active session in that window.\"; ObjectID = \"tVY-OD-hsd\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "The OSC 0 and OSC 2 control sequences set the window title. This setting controls whether such a control sequence changes the window title associated with all sessions in the window, or only with the one in which it was received. The window title is derived from the window title associated with the currently active session in that window."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OSC 0 和 OSC 2 控制序列设置窗口标题。此设置控制此类控制序列是更改窗口内所有会话关联的窗口标题，还是仅更改收到该序列的会话。窗口标题源自该窗口当前活动会话关联的窗口标题。"
+          }
+        }
+      }
+    },
     "tav-Hu-1g6.title": {
       "comment": "Class = \"NSButtonCell\"; title = \"Border around active pane\"; ObjectID = \"tav-Hu-1g6\";",
       "extractionState": "extracted_with_value",
@@ -17353,6 +19711,42 @@
         }
       }
     },
+    "ttF-JA-0vc.ibExternalAccessibilityDescription": {
+      "comment": "Class = \"NSButton\"; ibExternalAccessibilityDescription = \"Apps can change left option key\"; ObjectID = \"ttF-JA-0vc\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Apps can change left option key"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "应用可以更改左选项键"
+          }
+        }
+      }
+    },
+    "ttF-JA-0vc.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"When enabled, apps can cause this option key to send Esc+ using DECSET 1036. Note that on some external keyboards left and right option keys are swapped.\"; ObjectID = \"ttF-JA-0vc\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "When enabled, apps can cause this option key to send Esc+ using DECSET 1036. Note that on some external keyboards left and right option keys are swapped."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "启用后，应用可以通过 DECSET 1036 让此选项键发送 Esc+。请注意，在某些外接键盘上左右选项键是互换的。"
+          }
+        }
+      }
+    },
     "twu-ZL-q1e.title": {
       "comment": "Class = \"NSTextFieldCell\"; title = \"Access:\"; ObjectID = \"twu-ZL-q1e\";",
       "extractionState": "extracted_with_value",
@@ -17367,6 +19761,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "访问权限："
+          }
+        }
+      }
+    },
+    "tyx-QN-l9J.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"If this is on then transparency can be toggled window-by-window under View>Use Transparency\"; ObjectID = \"tyx-QN-l9J\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "If this is on then transparency can be toggled window-by-window under View>Use Transparency"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "开启后，可以在“显示 > 使用透明度”下按窗口切换透明度"
           }
         }
       }
@@ -17551,6 +19963,24 @@
         }
       }
     },
+    "upX-YT-gci.ibExternalAccessibilityDescription": {
+      "comment": "Class = \"NSButton\"; ibExternalAccessibilityDescription = \"A session may cause the window to resize even if it is in an unselected tab/pane\"; ObjectID = \"upX-YT-gci\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "A session may cause the window to resize even if it is in an unselected tab/pane"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "即使会话位于未选中的标签页/窗格中，也可能导致窗口调整大小"
+          }
+        }
+      }
+    },
     "usB-uD-pmw.title": {
       "comment": "Class = \"NSButtonCell\"; title = \"Use Unicode version 9+ widths\"; ObjectID = \"usB-uD-pmw\";",
       "extractionState": "extracted_with_value",
@@ -17695,6 +20125,24 @@
         }
       }
     },
+    "vNf-D5-cU4.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"The non-ASCII font affects all characters above code point 127.\"; ObjectID = \"vNf-D5-cU4\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "The non-ASCII font affects all characters above code point 127."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "非 ASCII 字体影响所有高于码点 127 的字符。"
+          }
+        }
+      }
+    },
     "vTm-IT-1wG.title": {
       "comment": "Class = \"NSButtonCell\"; title = \"Restrict alternate mouse scroll to vertical scrolling\"; ObjectID = \"vTm-IT-1wG\";",
       "extractionState": "extracted_with_value",
@@ -17745,6 +20193,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "允许，无需询问"
+          }
+        }
+      }
+    },
+    "vhk-ek-NHd.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"When enabled, the size and location of terminal windows are recorded when windows are closed. Later, when creating a new window, the recorded geometry is used instead of the size specified in the profile.\"; ObjectID = \"vhk-ek-NHd\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "When enabled, the size and location of terminal windows are recorded when windows are closed. Later, when creating a new window, the recorded geometry is used instead of the size specified in the profile."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "启用后，关闭窗口时会记录终端窗口的大小和位置。之后创建新窗口时，使用记录的几何信息而不是配置文件中指定的大小。"
           }
         }
       }
@@ -17893,6 +20359,24 @@
         }
       }
     },
+    "wgv-Ah-fFr.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"When this option is off, double click selects a word as defined by “characters considered part of word for selection” in the General tab. When this option is on, double click uses smart selection to select file names, URLs, etc., using regular expressions defined in Profiles>Advanced>Smart Selection.\"; ObjectID = \"wgv-Ah-fFr\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "When this option is off, double click selects a word as defined by “characters considered part of word for selection” in the General tab. When this option is on, double click uses smart selection to select file names, URLs, etc., using regular expressions defined in Profiles>Advanced>Smart Selection."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "关闭此选项时，双击选择“通用”标签页中“视为选区单词一部分的字符”所定义的单词。开启时，双击使用智能选择，通过“配置文件 > 高级 > 智能选择”中定义的正则表达式选择文件名、URL 等。"
+          }
+        }
+      }
+    },
     "wh0-TX-q91.title": {
       "comment": "Class = \"NSButtonCell\"; title = \"Reset to Defaults\"; ObjectID = \"wh0-TX-q91\";",
       "extractionState": "extracted_with_value",
@@ -17925,6 +20409,42 @@
           "stringUnit": {
             "state": "translated",
             "value": "精确"
+          }
+        }
+      }
+    },
+    "wjs-vG-qf2.ibExternalAccessibilityDescription": {
+      "comment": "Class = \"NSButton\"; ibExternalAccessibilityDescription = \"Exclude from Dock only if all windows are hotkey windows\"; ObjectID = \"wjs-vG-qf2\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Exclude from Dock only if all windows are hotkey windows"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "仅当所有窗口都是热键窗口时才从 Dock 中排除"
+          }
+        }
+      }
+    },
+    "wjs-vG-qf2.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"This is useful if you only use iTerm2 with a hotkey window. The preference is disabled if no dedicated hotkey window is defined since it would be impossible to get to iTerm2 when it has no windows and no hotkey is defined.\"; ObjectID = \"wjs-vG-qf2\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "This is useful if you only use iTerm2 with a hotkey window. The preference is disabled if no dedicated hotkey window is defined since it would be impossible to get to iTerm2 when it has no windows and no hotkey is defined."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "如果你只通过热键窗口使用 iTerm2，这会很有用。如果未定义专用的热键窗口，此偏好设置将被停用，因为当 iTerm2 没有窗口且未定义热键时无法访问它。"
           }
         }
       }
@@ -18037,6 +20557,24 @@
         }
       }
     },
+    "xLu-6A-YiV.ibExternalAccessibilityDescription": {
+      "comment": "Class = \"NSButtonCell\"; ibExternalAccessibilityDescription = \"A session may cause the window to resize even if it is in an unselected tab or split pane\"; ObjectID = \"xLu-6A-YiV\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "A session may cause the window to resize even if it is in an unselected tab or split pane"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "即使会话位于未选中的标签页或拆分窗格中，也可能导致窗口调整大小"
+          }
+        }
+      }
+    },
     "xLu-6A-YiV.title": {
       "comment": "Class = \"NSButtonCell\"; title = \"…even if it is in an unselected tab or split pane\"; ObjectID = \"xLu-6A-YiV\";",
       "extractionState": "extracted_with_value",
@@ -18145,6 +20683,24 @@
         }
       }
     },
+    "xxq-Mn-NRG.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"Paste bracketing tells compatible apps that text was inserted by a paste operation rather than typing. Some programs use this to treat pastes specially, such as by not auto-indenting it.\"; ObjectID = \"xxq-Mn-NRG\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Paste bracketing tells compatible apps that text was inserted by a paste operation rather than typing. Some programs use this to treat pastes specially, such as by not auto-indenting it."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "粘贴括号告知兼容的应用，文本是通过粘贴操作而非键入插入的。某些程序会借此特殊处理粘贴内容，例如不自动缩进。"
+          }
+        }
+      }
+    },
     "yFQ-IJ-IID.title": {
       "comment": "Class = \"NSButtonCell\"; title = \"Applications in terminal may change the title\"; ObjectID = \"yFQ-IJ-IID\";",
       "extractionState": "extracted_with_value",
@@ -18213,6 +20769,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "参数："
+          }
+        }
+      }
+    },
+    "yTV-fG-vVx.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"Shows a configurable status bar at the top of each session.\"; ObjectID = \"yTV-fG-vVx\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Shows a configurable status bar at the top of each session."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在每个会话顶部显示可配置的状态栏。"
           }
         }
       }
@@ -18415,6 +20989,24 @@
         }
       }
     },
+    "zde-kb-c7t.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"This is useful if you only use iTerm2 with a hotkey window. The preference is disabled if no dedicated hotkey window is defined since it would be impossible to get to iTerm2 when it has no windows and no hotkey is defined.\"; ObjectID = \"zde-kb-c7t\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "This is useful if you only use iTerm2 with a hotkey window. The preference is disabled if no dedicated hotkey window is defined since it would be impossible to get to iTerm2 when it has no windows and no hotkey is defined."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "如果你只通过热键窗口使用 iTerm2，这会很有用。如果未定义专用的热键窗口，此偏好设置将被停用，因为当 iTerm2 没有窗口且未定义热键时无法访问它。"
+          }
+        }
+      }
+    },
     "ze0-tu-jEN.title": {
       "comment": "Class = \"NSMenuItem\"; title = \"Ease In-Out\"; ObjectID = \"ze0-tu-jEN\";",
       "extractionState": "extracted_with_value",
@@ -18483,6 +21075,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "新标签页在标签栏末尾打开"
+          }
+        }
+      }
+    },
+    "zrh-qF-3Iv.placeholderString": {
+      "comment": "Class = \"NSTextFieldCell\"; placeholderString = \"Interpolated String\"; ObjectID = \"zrh-qF-3Iv\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Interpolated String"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "内插字符串"
           }
         }
       }

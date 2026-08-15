@@ -43,10 +43,10 @@ class ClaudeCodeOnboarding: NSObject {
         var buttonTitle: String {
             switch self {
             case .enablePythonAPI: return "Enable"
-            case .installHook: return "Install"
+            case .installHook: return NSLocalizedString("Install", comment: "UI")
             case .showToolbelt: return "Show"
-            case .installWorkgroup: return "Install"
-            case .installTriggers: return "Install"
+            case .installWorkgroup: return NSLocalizedString("Install", comment: "UI")
+            case .installTriggers: return NSLocalizedString("Install", comment: "UI")
             }
         }
 
@@ -762,7 +762,7 @@ class ClaudeCodeOnboarding: NSObject {
             styleMask: [.titled, .closable],
             backing: .buffered,
             defer: false)
-        panel.title = "Claude Code Integration Setup"
+        panel.title = NSLocalizedString("Claude Code Integration Setup", comment: "UI")
         panel.isFloatingPanel = true
         panel.hidesOnDeactivate = true
         panel.delegate = self
@@ -807,7 +807,7 @@ class ClaudeCodeOnboarding: NSObject {
         // Button bar at the bottom
         let buttonY: CGFloat = 15
 
-        nextButton = NSButton(title: "Next", target: self, action: #selector(nextPressed(_:)))
+        nextButton = NSButton(title: NSLocalizedString("Next", comment: "UI"), target: self, action: #selector(nextPressed(_:)))
         nextButton.bezelStyle = .rounded
         nextButton.frame = NSRect(x: contentView.bounds.width - margin - 80,
                                   y: buttonY,
@@ -816,7 +816,7 @@ class ClaudeCodeOnboarding: NSObject {
         nextButton.autoresizingMask = [.minXMargin, .maxYMargin]
         contentView.addSubview(nextButton)
 
-        doItButton = NSButton(title: "Do It", target: self, action: #selector(doItPressed(_:)))
+        doItButton = NSButton(title: NSLocalizedString("Do It", comment: "UI"), target: self, action: #selector(doItPressed(_:)))
         doItButton.bezelStyle = .rounded
         doItButton.keyEquivalent = "\r"
         doItButton.frame = NSRect(x: nextButton.frame.minX - 90,
@@ -826,7 +826,7 @@ class ClaudeCodeOnboarding: NSObject {
         doItButton.autoresizingMask = [.minXMargin, .maxYMargin]
         contentView.addSubview(doItButton)
 
-        backButton = NSButton(title: "Back", target: self, action: #selector(backPressed(_:)))
+        backButton = NSButton(title: NSLocalizedString("Back", comment: "UI"), target: self, action: #selector(backPressed(_:)))
         backButton.bezelStyle = .rounded
         backButton.frame = NSRect(x: margin,
                                   y: buttonY,
@@ -903,7 +903,7 @@ class ClaudeCodeOnboarding: NSObject {
         helpLink.sizeToFit()
         introHelpLink = helpLink
 
-        let continueButton = NSButton(title: "Continue",
+        let continueButton = NSButton(title: NSLocalizedString("Continue", comment: "UI"),
                                       target: self,
                                       action: #selector(dismissIntroSheet(_:)))
         continueButton.bezelStyle = .rounded
@@ -1107,10 +1107,10 @@ class ClaudeCodeOnboarding: NSObject {
         doItButton.isHidden = false
 
         if isLastStep {
-            nextButton.title = "Close"
+            nextButton.title = NSLocalizedString("Close", comment: "UI")
             nextButton.isEnabled = true
         } else {
-            nextButton.title = "Next"
+            nextButton.title = NSLocalizedString("Next", comment: "UI")
             // Show Toolbelt is optional: Next is always enabled so the
             // user can skip it. The default-button logic below keeps
             // Show as the default until the toolbelt has actually been
@@ -1573,8 +1573,8 @@ class ClaudeCodeOnboarding: NSObject {
         alert.informativeText = "Pick the profiles you\u{2019}ll run claude in. "
             + "We\u{2019}ll add Enter/Exit Workgroup triggers to each one so the "
             + "Claude Code workgroup is entered automatically."
-        alert.addButton(withTitle: "Install")
-        alert.addButton(withTitle: "Cancel")
+        alert.addButton(withTitle: NSLocalizedString("Install", comment: "UI"))
+        alert.addButton(withTitle: NSLocalizedString("Cancel", comment: "UI"))
         alert.accessoryView = accessoryView
 
         // Pre-select every visible row so the default action is "all
@@ -1772,7 +1772,7 @@ class ClaudeCodeOnboarding: NSObject {
         let listed = profiles.map { "\u{2022} \($0.name)" }.joined(separator: "\n")
         let warning = iTermWarning()
         warning.heading = "Dynamic Profiles Selected"
-        warning.title = "These profiles are dynamic and not marked "
+        warning.title = NSLocalizedString("These profiles are dynamic and not marked ", comment: "UI")
             + "\u{201C}rewritable,\u{201D} so iTerm2 normally regenerates them "
             + "from disk and any change here would be lost:\n\n\(listed)\n\n"
             + "iTerm2 can write the triggers back to dynamic profiles when "
@@ -1782,7 +1782,7 @@ class ClaudeCodeOnboarding: NSObject {
         warning.actionLabels = [
             "Mark Rewritable & Install",
             "Skip Dynamic Profiles",
-            "Cancel"
+            NSLocalizedString("Cancel", comment: "UI")
         ]
         switch warning.runModal() {
         case .kiTermWarningSelection0:

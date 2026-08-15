@@ -103,7 +103,7 @@ static id gAltOpenAllRepresentedObject;
                                       accessibilityDescription:nil];
         }
     }
-    openAll.identifier = identifier ?: NSLocalizedString(@"Open All", @"Menu");
+    openAll.identifier = identifier ?: @"Open All";
     [openAll setTarget:params.target];
 
     // Add alternate open all menu

@@ -199,7 +199,7 @@ static const NSTimeInterval iTermStatusBarGitComponentDefaultCadence = 2;
                                 [self formatTimeoutSeconds:proposedTimeout]];
     const iTermWarningSelection selection =
     [iTermWarning showWarningWithTitle:title
-                               actions:@[ increaseAction, @"Cancel" ]
+                               actions:@[ increaseAction, NSLocalizedString(@"Cancel", @"UI") ]
                              accessory:nil
                             identifier:nil
                            silenceable:kiTermWarningTypePersistent
@@ -332,7 +332,7 @@ static const NSTimeInterval iTermStatusBarGitComponentDefaultCadence = 2;
 
     if (_maker.xcode.length > 0) {
         [iTermWarning showWarningWithTitle:[_maker.xcode stringByReplacingOccurrencesOfString:@"\t" withString:@"\n"]
-                                   actions:@[ @"OK" ]
+                                   actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                  accessory:nil
                                 identifier:@"GitPollerXcodeWarning"
                                silenceable:kiTermWarningTypePersistent
@@ -580,7 +580,7 @@ static const NSTimeInterval iTermStatusBarGitComponentDefaultCadence = 2;
     NSString *command = [NSString stringWithFormat:@"git %@", [quotedArgs componentsJoinedByString:@" "]];
     const iTermWarningSelection selection =
     [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"Looks like you're sshed somewhere. OK to send the command “%@”?", command]
-                               actions:@[ @"OK", @"Cancel" ]
+                               actions:@[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI") ]
                              accessory:nil
                             identifier:@"GitPollerSshWarning"
                            silenceable:kiTermWarningTypePermanentlySilenceable

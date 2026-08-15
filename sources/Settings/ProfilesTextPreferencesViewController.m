@@ -255,7 +255,7 @@
                                                    @"East Asian text combined with legacy or "
                                                    @"mathematical character sets. "
                                                    @"Are you sure you want this?"
-                                           actions:@[ @"Enable", @"Cancel" ]
+                                           actions:@[ @"Enable", NSLocalizedString(@"Cancel", @"UI") ]
                                         identifier:kWarnAboutAmbiguousWidth
                                        silenceable:kiTermWarningTypePermanentlySilenceable
                                             window:weakSelf.view.window];

@@ -19,20 +19,20 @@
         }
       }
     },
-    "8.headerCell.title": {
-      "comment": "Class = \"NSTableColumn\"; headerCell.title = \"Session\"; ObjectID = \"8\";",
+    "103.title": {
+      "comment": "Class = \"NSButtonCell\"; title = \"Detach\"; ObjectID = \"103\";",
       "extractionState": "extracted_with_value",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "new",
-            "value": "Session"
+            "value": "Detach"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "会话"
+            "value": "分离"
           }
         }
       }
@@ -69,6 +69,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "附加"
+          }
+        }
+      }
+    },
+    "31.placeholderString": {
+      "comment": "Class = \"NSSearchFieldCell\"; placeholderString = \"Search Windows\"; ObjectID = \"31\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Search Windows"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "搜索窗口"
           }
         }
       }
@@ -123,6 +141,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "Text Cell"
+          }
+        }
+      }
+    },
+    "8.headerCell.title": {
+      "comment": "Class = \"NSTableColumn\"; headerCell.title = \"Session\"; ObjectID = \"8\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Session"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "会话"
           }
         }
       }
@@ -195,24 +231,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "在标签页中打开"
-          }
-        }
-      }
-    },
-    "103.title": {
-      "comment": "Class = \"NSButtonCell\"; title = \"Detach\"; ObjectID = \"103\";",
-      "extractionState": "extracted_with_value",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "new",
-            "value": "Detach"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "分离"
           }
         }
       }

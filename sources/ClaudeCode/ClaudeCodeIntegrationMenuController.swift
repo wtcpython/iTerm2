@@ -46,8 +46,8 @@ final class ClaudeCodeIntegrationMenuController: NSObject {
             + "settings, and the Enter/Exit Workgroup triggers from every "
             + "profile. You can reinstall any time using iTerm2 > Install Claude Code Integration."
         confirm.alertStyle = .warning
-        confirm.addButton(withTitle: "Uninstall")
-        confirm.addButton(withTitle: "Cancel")
+        confirm.addButton(withTitle: NSLocalizedString("Uninstall", comment: "UI"))
+        confirm.addButton(withTitle: NSLocalizedString("Cancel", comment: "UI"))
         guard confirm.runModal() == .alertFirstButtonReturn else { return }
 
         // Hooks first — they're the only step that can fail (disk).
@@ -81,8 +81,8 @@ final class ClaudeCodeIntegrationMenuController: NSObject {
                 + "workgroup and triggers anyway? cc-status will keep "
                 + "running until you fix the underlying issue and try again."
             failure.alertStyle = .warning
-            failure.addButton(withTitle: "Continue")
-            failure.addButton(withTitle: "Cancel")
+            failure.addButton(withTitle: NSLocalizedString("Continue", comment: "UI"))
+            failure.addButton(withTitle: NSLocalizedString("Cancel", comment: "UI"))
             guard failure.runModal() == .alertFirstButtonReturn else { return }
         }
 
@@ -105,8 +105,8 @@ final class ClaudeCodeIntegrationMenuController: NSObject {
             apiAlert.informativeText = "The installer enabled iTerm2\u{2019}s "
                 + "Python API. Other scripts or integrations may be using "
                 + "it now. Leave it enabled, or turn it off?"
-            apiAlert.addButton(withTitle: "Leave Enabled")
-            apiAlert.addButton(withTitle: "Disable")
+            apiAlert.addButton(withTitle: NSLocalizedString("Leave Enabled", comment: "UI"))
+            apiAlert.addButton(withTitle: NSLocalizedString("Disable", comment: "UI"))
             if apiAlert.runModal() == .alertSecondButtonReturn {
                 iTermAPIHelper.setEnabled(false)
             }

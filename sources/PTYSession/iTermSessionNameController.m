@@ -398,7 +398,7 @@ NSString *const iTermSessionNameControllerSystemTitleUniqueIdentifier = @"com.it
                 return;
             }
             strongSelf->_appliedCount = count;
-            NSString *safeName = presentationName ?: @"Untitled";
+            NSString *safeName = presentationName ?: NSLocalizedString(@"Untitled", @"UI");
             if ([NSObject object:strongSelf->_cachedEvaluation isEqualToObject:safeName]) {
                 DLog(@"result is unchanged %@", strongSelf.delegate);
                 return;

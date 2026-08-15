@@ -108,6 +108,24 @@
           }
         }
       }
+    },
+    "dfd-7C-O0k.placeholderString": {
+      "comment": "Class = \"NSSearchFieldCell\"; placeholderString = \"Search\"; ObjectID = \"dfd-7C-O0k\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Search"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "搜索"
+          }
+        }
+      }
     }
   },
   "version": "1.0"

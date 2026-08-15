@@ -139,7 +139,7 @@ class iTermNonTextPasteHelper: NSObject {
         let fileDescription = descriptionForFiles(existingPaths, isDirectory: isDirectory)
 
         let warning = iTermWarning()
-        warning.title = "How would you like to paste \(fileDescription)?"
+        warning.title = NSLocalizedString("How would you like to paste \(fileDescription)?", comment: "UI")
         warning.actionLabels = actions.map { $0.rawValue }
         warning.identifier = singleFile ? "NoSyncPasteNonTextFile" : "NoSyncPasteNonTextFiles"
         warning.warningType = .kiTermWarningTypePermanentlySilenceable
@@ -227,7 +227,7 @@ class iTermNonTextPasteHelper: NSObject {
         alert.messageText = "Paste Failed"
         alert.informativeText = message
         alert.alertStyle = .warning
-        alert.addButton(withTitle: "OK")
+        alert.addButton(withTitle: NSLocalizedString("OK", comment: "UI"))
         if let window = delegate?.nonTextPasteHelperWindow(self) {
             alert.beginSheetModal(for: window)
         } else {
@@ -267,7 +267,7 @@ class iTermNonTextPasteHelper: NSObject {
         DLog("handleImageDataPaste: actions=\(actions.map { $0.rawValue })")
 
         let warning = iTermWarning()
-        warning.title = "The clipboard contains \(typeDescription) image data (\(sizeDescription)). How would you like to paste it?"
+        warning.title = NSLocalizedString("The clipboard contains \(typeDescription) image data (\(sizeDescription)). How would you like to paste it?", comment: "UI")
         warning.actionLabels = actions.map { $0.rawValue }
         warning.identifier = canUpload ? "NoSyncPasteImageDataRemote" : "NoSyncPasteImageData"
         warning.warningType = .kiTermWarningTypePermanentlySilenceable
@@ -408,12 +408,12 @@ class iTermNonTextPasteHelper: NSObject {
         }
 
         let warning = iTermWarning()
-        warning.title = "OK to paste \(base64.count.formatted()) bytes of base64-encoded data?"
-        warning.actionLabels = ["OK", "Cancel"]
+        warning.title = NSLocalizedString("OK to paste \(base64.count.formatted()) bytes of base64-encoded data?", comment: "UI")
+        warning.actionLabels = [NSLocalizedString("OK", comment: "UI"), NSLocalizedString("Cancel", comment: "UI")]
         warning.identifier = "NoSyncPasteLargeBase64"
         warning.warningType = .kiTermWarningTypePermanentlySilenceable
         warning.heading = "Large Paste"
-        warning.cancelLabel = "Cancel"
+        warning.cancelLabel = NSLocalizedString("Cancel", comment: "UI")
         warning.window = delegate?.nonTextPasteHelperWindow(self)
 
         warning.runModalAsync { [weak self] selection, _ in

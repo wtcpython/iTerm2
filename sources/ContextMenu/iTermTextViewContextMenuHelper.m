@@ -525,7 +525,7 @@ const int kMaxSelectedTextLengthForCustomActions = 400;
     // Menu items for acting on text selections
     const BOOL sshIntegrationDownload = [self.delegate contextMenuWillDownloadWithSSHIntegrationOnAbsLine:selection.lastAbsRange.coordRange.start.y];
 
-    __block NSString *scpTitle = sshIntegrationDownload ? NSLocalizedString(NSLocalizedString(@"Download using SSH Integration", @"Context menu"), @"Context menu") : NSLocalizedString(NSLocalizedString(@"Download with scp", @"Context menu"), @"Context menu");
+    __block NSString *scpTitle = sshIntegrationDownload ? NSLocalizedString(@"Download using SSH Integration", @"Context menu") : NSLocalizedString(@"Download with scp", @"Context menu");
     if (haveShortSelection) {
         [self.delegate contextMenu:self withRelativeCoord:selection.lastAbsRange.coordRange.start block:^(VT100GridCoord coord) {
             SCPPath *scpPath = [self.delegate contextMenu:self scpPathForFile:shortSelectedText onLine:coord.y];

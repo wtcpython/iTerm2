@@ -91,6 +91,60 @@
         }
       }
     },
+    "lef-nJ-tqb.ibShadowedObjectValues[0]": {
+      "comment": "Class = \"NSComboBoxCell\"; lef-nJ-tqb.ibShadowedObjectValues[0] = \"Item 1\"; ObjectID = \"lef-nJ-tqb\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Item 1"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Item 1"
+          }
+        }
+      }
+    },
+    "lef-nJ-tqb.ibShadowedObjectValues[1]": {
+      "comment": "Class = \"NSComboBoxCell\"; lef-nJ-tqb.ibShadowedObjectValues[1] = \"Item 2\"; ObjectID = \"lef-nJ-tqb\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Item 2"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Item 2"
+          }
+        }
+      }
+    },
+    "lef-nJ-tqb.ibShadowedObjectValues[2]": {
+      "comment": "Class = \"NSComboBoxCell\"; lef-nJ-tqb.ibShadowedObjectValues[2] = \"Item 3\"; ObjectID = \"lef-nJ-tqb\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Item 3"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Item 3"
+          }
+        }
+      }
+    },
     "ntf-01-trm.title": {
       "comment": "Class = \"NSMenuItem\"; title = \"Notify on Termination\"; ObjectID = \"ntf-01-trm\";",
       "extractionState": "extracted_with_value",

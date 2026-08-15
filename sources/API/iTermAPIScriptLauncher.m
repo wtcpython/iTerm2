@@ -72,7 +72,7 @@ static NSString *const iTermAPIScriptLauncherScriptDidFailUserNotificationCallba
     NSString *message = [NSString stringWithFormat:@"The Python API script “%@” needs a newer version of the runtime environment for security reasons. You must upgrade it before this version of iTerm2 can launch the script.", fullPath.lastPathComponent];
     const iTermWarningSelection selection =
     [iTermWarning showWarningWithTitle:message
-                               actions:@[ @"Upgrade", @"Cancel" ]
+                               actions:@[ @"Upgrade", NSLocalizedString(@"Cancel", @"UI") ]
                              accessory:nil
                             identifier:@"UpgradeFullEnvironmentScript"
                            silenceable:kiTermWarningTypePersistent
@@ -189,7 +189,7 @@ static NSString *const iTermAPIScriptLauncherScriptDidFailUserNotificationCallba
 
         dispatch_async(dispatch_get_main_queue(), ^{
             [iTermWarning showWarningWithTitle:errorStatus.localizedDescription
-                                       actions:@[ @"OK" ]
+                                       actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                      accessory:nil
                                     identifier:nil
                                    silenceable:kiTermWarningTypePersistent
@@ -482,7 +482,7 @@ static NSString *const iTermAPIScriptLauncherScriptDidFailUserNotificationCallba
 + (BOOL)userConsentsToInstallingRosetta {
     const iTermWarningSelection selection =
     [iTermWarning showWarningWithTitle:@"You must install Rosetta 2 in order to use the Python API. Install it now?"
-                               actions:@[ @"OK", @"Cancel" ]
+                               actions:@[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI") ]
                              accessory:nil
                             identifier:@"NoSyncInstallRosetta"
                            silenceable:kiTermWarningTypePersistent
@@ -560,7 +560,7 @@ static NSString *const iTermAPIScriptLauncherScriptDidFailUserNotificationCallba
                                          completion:(void (^)(iTermPythonRuntimeDownloaderStatus status))completion {
     const iTermWarningSelection selection =
     [iTermWarning showWarningWithTitle:@"The shared Python runtime is Intel-only and cannot run on this version of macOS. Download the Apple Silicon version now?"
-                               actions:@[ @"Download", @"Cancel" ]
+                               actions:@[ @"Download", NSLocalizedString(@"Cancel", @"UI") ]
                              accessory:nil
                             identifier:@"NoSyncRefetchArm64Runtime"
                            silenceable:kiTermWarningTypePersistent

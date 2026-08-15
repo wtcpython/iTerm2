@@ -108,7 +108,7 @@ class iTermKeyMappingRepair: NSObject {
 
         let selection = iTermWarning.show(
             withTitle: message,
-            actions: ["Repair", "Cancel"],
+            actions: ["Repair", NSLocalizedString("Cancel", comment: "UI")],
             identifier: nil,
             silenceable: .kiTermWarningTypePersistent,
             window: window

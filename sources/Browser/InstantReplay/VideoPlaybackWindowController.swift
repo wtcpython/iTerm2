@@ -39,7 +39,7 @@ class VideoPlaybackWindowController: NSWindowController, NSMenuItemValidation {
             backing: .buffered,
             defer: false
         )
-        window.title = "Instant Replay"
+        window.title = NSLocalizedString("Instant Replay", comment: "UI")
         window.center()
         
         super.init(window: window)
@@ -151,7 +151,7 @@ class VideoPlaybackWindowController: NSWindowController, NSMenuItemValidation {
         
         revealInFinderButton = NSButton()
         let smallerSymbolConfig = NSImage.SymbolConfiguration(pointSize: 14, weight: .medium)
-        revealInFinderButton.image = NSImage(systemSymbolName: SFSymbol.arrowUpRightSquare.rawValue, accessibilityDescription: "Reveal in Finder")?.withSymbolConfiguration(smallerSymbolConfig)
+        revealInFinderButton.image = NSImage(systemSymbolName: SFSymbol.arrowUpRightSquare.rawValue, accessibilityDescription: NSLocalizedString("Reveal in Finder", comment: "UI"))?.withSymbolConfiguration(smallerSymbolConfig)
         revealInFinderButton.bezelStyle = .shadowlessSquare
         revealInFinderButton.isBordered = false
         revealInFinderButton.target = self

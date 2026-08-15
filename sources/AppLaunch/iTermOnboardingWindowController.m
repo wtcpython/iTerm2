@@ -29,7 +29,7 @@ static void iTermOpenWhatsNewURL(NSString *path, NSWindow *window) {
     if ([path isEqualToString:@"companion"]) {
         if (![iTermAdvancedSettingsModel generativeAIAllowed]) {
             [iTermWarning showWarningWithTitle:@"Generative AI features have been disabled. Talk to your enterprise system administrator."
-                                       actions:@[ @"OK" ]
+                                       actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                      accessory:nil
                                     identifier:nil
                                    silenceable:kiTermWarningTypePersistent
@@ -39,7 +39,7 @@ static void iTermOpenWhatsNewURL(NSString *path, NSWindow *window) {
         }
         if (![iTermAdvancedSettingsModel companionPairingAllowed]) {
             [iTermWarning showWarningWithTitle:@"Companion device pairing has been disabled. Talk to your enterprise system administrator."
-                                       actions:@[ @"OK" ]
+                                       actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                      accessory:nil
                                     identifier:nil
                                    silenceable:kiTermWarningTypePersistent
@@ -61,7 +61,7 @@ static void iTermOpenWhatsNewURL(NSString *path, NSWindow *window) {
     if ([path isEqualToString:@"screenshot"]) {
         if (![iTermController sharedInstance].currentTerminal) {
             [iTermWarning showWarningWithTitle:@"You need an open terminal window to make a screenshot."
-                                       actions:@[ @"OK" ]
+                                       actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                      accessory:nil
                                     identifier:nil
                                    silenceable:kiTermWarningTypePersistent

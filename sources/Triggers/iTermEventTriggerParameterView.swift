@@ -169,7 +169,7 @@ class EventTriggerParameterView: NSView, NSTextFieldDelegate {
 
         let textField = NSTextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.placeholderString = "Exit code"
+        textField.placeholderString = NSLocalizedString("Exit code", comment: "UI")
         textField.isHidden = true
         textField.widthAnchor.constraint(equalToConstant: 60).isActive = true
         textField.delegate = self

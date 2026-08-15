@@ -131,14 +131,14 @@ static NSButton *iTermToolSnippetsNewButton(NSString *imageName, NSString *title
             _folderIcon = [NSImage imageWithSystemSymbolName:SFSymbolGetString(SFSymbolFolderFill) accessibilityDescription:@"Folder icon"];
         }
         if (@available(macOS 10.16, *)) {
-            _applyButton = iTermToolSnippetsNewButton(@"play", @"Send", self, @selector(apply:), frame);
-            _addButton = iTermToolSnippetsNewButton(@"plus", @"Add", self, @selector(add:), frame);
+            _applyButton = iTermToolSnippetsNewButton(@"play", NSLocalizedString(@"Send", @"UI"), self, @selector(apply:), frame);
+            _addButton = iTermToolSnippetsNewButton(@"plus", NSLocalizedString(@"Add", @"UI"), self, @selector(add:), frame);
             _removeButton = iTermToolSnippetsNewButton(@"minus", @"Remove", self, @selector(remove:), frame);
             _editButton = iTermToolSnippetsNewButton(@"square.and.pencil", @"Edit", self, @selector(edit:), frame);
             _advancedPasteButton = iTermToolSnippetsNewButton(@"rectangle.and.pencil.and.ellipsis", @"Open in Advanced Paste", self, @selector(openInAdvancedPaste:), frame);
             [self addSubview:_advancedPasteButton];
         } else {
-            _applyButton = iTermToolSnippetsNewButton(nil, @"Send", self, @selector(apply:), frame);
+            _applyButton = iTermToolSnippetsNewButton(nil, NSLocalizedString(@"Send", @"UI"), self, @selector(apply:), frame);
             _addButton = iTermToolSnippetsNewButton(NSImageNameAddTemplate, nil, self, @selector(add:), frame);
             _removeButton = iTermToolSnippetsNewButton(NSImageNameRemoveTemplate, nil, self, @selector(remove:), frame);
             _editButton = iTermToolSnippetsNewButton(nil, @"✐", self, @selector(edit:), frame);
@@ -974,7 +974,7 @@ static NSButton *iTermToolSnippetsNewButton(NSString *imageName, NSString *title
     NSArray<NSString *> *parts = [string componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
     return [parts objectPassingTest:^BOOL(NSString *element, NSUInteger index, BOOL *stop) {
         return [[element stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length] > 0;
-    }] ?: @"Untitled";
+    }] ?: NSLocalizedString(@"Untitled", @"UI");
 }
 
 - (BOOL)prepareForDragOperation:(id<NSDraggingInfo>)sender {

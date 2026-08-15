@@ -162,13 +162,13 @@ class iTermJobInfoPopoverViewController: NSViewController, NSTableViewDataSource
 
     private func copyButton(action: Selector) -> NSButton {
         let image = NSImage.it_image(forSymbolName: SFSymbol.docOnDoc.rawValue,
-                                     accessibilityDescription: "Copy") ?? NSImage()
+                                     accessibilityDescription: NSLocalizedString("Copy", comment: "UI")) ?? NSImage()
         let button = NSButton(image: image, target: self, action: action)
         button.isBordered = false
         button.imagePosition = .imageOnly
         button.imageScaling = .scaleProportionallyDown
         button.contentTintColor = .secondaryLabelColor
-        button.toolTip = "Copy"
+        button.toolTip = NSLocalizedString("Copy", comment: "UI")
         // Clicking the button should not steal first responder (the popover
         // stays keyed off the outline view / space bar).
         button.refusesFirstResponder = true
@@ -233,7 +233,7 @@ class iTermJobInfoPopoverViewController: NSViewController, NSTableViewDataSource
             startTimeFetched = true
         }
         guard let start = startTime else {
-            return "Unknown"
+            return NSLocalizedString("Unknown", comment: "UI")
         }
         let absolute = DateFormatter.localizedString(from: start, dateStyle: .medium, timeStyle: .short)
         let formatter = DateComponentsFormatter()
@@ -257,7 +257,7 @@ class iTermJobInfoPopoverViewController: NSViewController, NSTableViewDataSource
     private func setWorkingDirectory(_ pwd: String?) {
         let hasValue = (pwd?.isEmpty == false)
         workingDirectory = hasValue ? pwd : nil
-        directoryValue.stringValue = hasValue ? pwd! : "Unknown"
+        directoryValue.stringValue = hasValue ? pwd! : NSLocalizedString("Unknown", comment: "UI")
         copyDirectoryButton.isEnabled = (workingDirectory != nil)
         // Re-layout to accommodate a possibly multi-line directory.
         relayout(forWidth: view.bounds.width)

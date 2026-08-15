@@ -25,7 +25,7 @@
 }
 
 - (NSString *)triggerOptionalParameterPlaceholderWithInterpolation:(BOOL)interpolation {
-  return @"Directory";
+  return NSLocalizedString(@"Directory", @"UI");
 }
 
 - (BOOL)isIdempotent {

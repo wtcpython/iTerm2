@@ -413,7 +413,7 @@ class CompletionsWindow: NSWindow, NSTableViewDataSource, NSTableViewDelegate {
         if searchField == nil {
             let searchField = NSSearchField(frame: .zero)
             searchField.focusRingType = .none
-            searchField.placeholderString = "Search"
+            searchField.placeholderString = NSLocalizedString("Search", comment: "UI")
             searchField.delegate = self
             self.searchField = searchField
             contentView?.addSubview(searchField)

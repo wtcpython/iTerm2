@@ -96,7 +96,7 @@ final class ChatWindowController: NSWindowController, DictionaryCodable {
                                              client: client)
         } else if showErrors && _instance == nil {
             iTermWarning.show(withTitle: "AI Chat could not open because of a problem loading the database. Verify there is only one instance of iTerm2 running.",
-                              actions: ["OK"],
+                              actions: [NSLocalizedString("OK", comment: "UI")],
                               accessory: nil,
                               identifier: nil,
                               silenceable: .kiTermWarningTypePersistent,
@@ -279,7 +279,7 @@ final class ChatWindowController: NSWindowController, DictionaryCodable {
            let model = model.chat(id: chatID) {
             window.title = model.title
         } else {
-            window.title = "AI Chat"
+            window.title = NSLocalizedString("AI Chat", comment: "UI")
         }
 
         // Hide the native title
@@ -694,8 +694,8 @@ extension ChatWindowController: ChatListViewControllerDelegate {
         let alert = NSAlert()
         alert.messageText = "Rename Chat"
         alert.informativeText = "Choose a new name for this chat."
-        alert.addButton(withTitle: "Rename")
-        alert.addButton(withTitle: "Cancel")
+        alert.addButton(withTitle: NSLocalizedString("Rename", comment: "UI"))
+        alert.addButton(withTitle: NSLocalizedString("Cancel", comment: "UI"))
 
         let field = NSTextField(frame: NSRect(x: 0, y: 0, width: 320, height: 24))
         field.stringValue = chat.title
@@ -720,7 +720,7 @@ extension ChatWindowController: ChatListViewControllerDelegate {
         } catch {
             DLog("Failed to rename chat \(chatID): \(error)")
             iTermWarning.show(withTitle: "The chat could not be renamed.",
-                              actions: ["OK"],
+                              actions: [NSLocalizedString("OK", comment: "UI")],
                               accessory: nil,
                               identifier: nil,
                               silenceable: .kiTermWarningTypePersistent,
@@ -763,11 +763,11 @@ extension ChatWindowController: ChatViewControllerDelegate {
         let warning = iTermWarning()
         let count = uniqueChatIDs.count
         warning.title = count == 1
-            ? "Are you sure you want to delete this chat? This action cannot be undone."
+            ? NSLocalizedString("Are you sure you want to delete this chat? This action cannot be undone.", comment: "UI")
             : "Are you sure you want to delete \(count) chats? This action cannot be undone."
         warning.heading = count == 1 ? "Delete Chat?" : "Delete \(count) Chats?"
 
-        let action = iTermWarningAction(label: "Delete") { [weak self] _ in
+        let action = iTermWarningAction(label: NSLocalizedString("Delete", comment: "UI")) { [weak self] _ in
             guard let self else {
                 return
             }
@@ -781,7 +781,7 @@ extension ChatWindowController: ChatViewControllerDelegate {
             completion?()
         }
         action.destructive = true
-        warning.warningActions = [ iTermWarningAction(label: "Cancel"), action ]
+        warning.warningActions = [ iTermWarningAction(label: NSLocalizedString("Cancel", comment: "UI")), action ]
         warning.warningType = .kiTermWarningTypePersistent
         warning.runModal()
     }

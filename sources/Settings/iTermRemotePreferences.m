@@ -1682,7 +1682,7 @@ static NSDictionary *iTermRemotePreferencesSave(NSDictionary *myDict, NSString *
             // "Lose Changes" is destructive and shouldn't be remembered.
             iTermWarning *warning = [[iTermWarning alloc] init];
             warning.title = theTitle;
-            warning.actionLabels = @[ @"Copy", @"Lose Changes" ];
+            warning.actionLabels = @[ NSLocalizedString(@"Copy", @"UI"), @"Lose Changes" ];
             warning.identifier = @"NoSyncNeverRemindPrefsChangesLostForFile";
             warning.warningType = kiTermWarningTypePermanentlySilenceable;
             warning.doNotRememberLabels = @[ @"Lose Changes" ];
@@ -1720,7 +1720,7 @@ static NSDictionary *iTermRemotePreferencesSave(NSDictionary *myDict, NSString *
                                   [self customFolderOrURL]];
             iTermWarning *warning = [[iTermWarning alloc] init];
             warning.title = theTitle;
-            warning.actionLabels = @[ @"Copy", @"Lose Changes" ];
+            warning.actionLabels = @[ NSLocalizedString(@"Copy", @"UI"), @"Lose Changes" ];
             warning.identifier = @"NoSyncNeverRemindDataFileChangesLostForFile";
             warning.warningType = kiTermWarningTypePermanentlySilenceable;
             warning.doNotRememberLabels = @[ @"Lose Changes" ];

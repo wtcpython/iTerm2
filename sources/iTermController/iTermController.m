@@ -922,7 +922,7 @@ replaceInitialDirectoryForSessionWithGUID:(NSString *)guid
     NSString *theTitle = [NSString stringWithFormat:@"You are about to open %d profiles.", count];
     iTermWarningSelection selection =
         [iTermWarning showWarningWithTitle:theTitle
-                                   actions:@[ @"OK", @"Cancel" ]
+                                   actions:@[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI") ]
                                 identifier:@"AboutToOpenManyProfiles"
                                silenceable:kiTermWarningTypePermanentlySilenceable
                                     window:nil];

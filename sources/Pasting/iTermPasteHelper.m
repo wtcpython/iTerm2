@@ -718,7 +718,7 @@ const NSInteger iTermQuickPasteBytesPerCallDefaultValue = 768;
             numberFormatter.numberStyle = NSNumberFormatterDecimalStyle;
             const iTermWarningSelection selection =
             [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"OK to paste %@ characters?", [numberFormatter stringFromNumber:@(pasteEvent.string.length)]]
-                                       actions:@[ @"OK", @"Cancel", @"Advanced…" ]
+                                       actions:@[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI"), @"Advanced…" ]
                                      accessory:nil
                                     identifier:@"NoSyncPasteOverCharacterLimitWarning"
                                    silenceable:kiTermWarningTypePersistent
@@ -771,7 +771,7 @@ const NSInteger iTermQuickPasteBytesPerCallDefaultValue = 768;
     NSMutableArray<iTermWarningAction *> *actions = [NSMutableArray array];
 
     __block BOOL result = YES;
-    iTermWarningAction *cancel = [iTermWarningAction warningActionWithLabel:@"Cancel"
+    iTermWarningAction *cancel = [iTermWarningAction warningActionWithLabel:NSLocalizedString(@"Cancel", @"UI")
                                                                       block:^(iTermWarningSelection selection) { result = NO; }];
     iTermWarningAction *paste = [iTermWarningAction warningActionWithLabel:@"Paste"
                                                                      block:^(iTermWarningSelection selection) { result = YES; }];
@@ -831,7 +831,7 @@ const NSInteger iTermQuickPasteBytesPerCallDefaultValue = 768;
     warning.warningActions = actions;
     warning.identifier = identifier;
     warning.warningType = kiTermWarningTypePermanentlySilenceable;
-    warning.cancelLabel = @"Cancel";
+    warning.cancelLabel = NSLocalizedString(@"Cancel", @"UI");
     warning.window = [[self.delegate pasteHelperViewForIndicator] window];
     [warning runModal];
     DLog(@"Return result of %@", @(result));
@@ -872,7 +872,7 @@ const NSInteger iTermQuickPasteBytesPerCallDefaultValue = 768;
 
         iTermWarningSelection selection =
             [iTermWarning showWarningWithTitle:@"You're about to paste a string with tabs."
-                                       actions:@[ @"OK", @"Cancel", @"Convert tabs to spaces", @"Advanced…" ]
+                                       actions:@[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI"), @"Convert tabs to spaces", @"Advanced…" ]
                                      accessory:accessoryController.view
                                     identifier:@"AboutToPasteTabsWithCancel"
                                    silenceable:kiTermWarningTypePermanentlySilenceable

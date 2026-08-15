@@ -465,7 +465,7 @@ const CGFloat sideMarginWidth = 40;
             [[iTermSearchableComboViewItem alloc] initWithLabel:@"Compose…" tag:KEY_ACTION_COMPOSE],
         ] arrayByRemovingNulls]],
 
-        [[iTermSearchableComboViewGroup alloc] initWithLabel:@"Search" items:[@[
+        [[iTermSearchableComboViewGroup alloc] initWithLabel:NSLocalizedString(@"Search", @"UI") items:[@[
             hideTerminalOnlyItems ? [NSNull null] : [[iTermSearchableComboViewItem alloc] initWithLabel:@"Find Regular Expression…" tag:KEY_ACTION_FIND_REGEX],
             [[iTermSearchableComboViewItem alloc] initWithLabel:@"Find Again Down" tag:KEY_FIND_AGAIN_DOWN],
             [[iTermSearchableComboViewItem alloc] initWithLabel:@"Find Again Up" tag:KEY_FIND_AGAIN_UP],
@@ -517,7 +517,7 @@ const CGFloat sideMarginWidth = 40;
         case iTermEditKeyActionWindowControllerModeKeyboardShortcut:
             break;
         case iTermEditKeyActionWindowControllerModeTouchBarItem:
-            _touchBarLabel.placeholderString = @"Label to show in Touch Bar";
+            _touchBarLabel.placeholderString = NSLocalizedString(@"Label to show in Touch Bar", @"UI");
             break;
         case iTermEditKeyActionWindowControllerModeUnbound:
             _touchBarLabel.placeholderString = self.titleIsInterpolated ? @"Title (Interpolated String)" : @"Title";

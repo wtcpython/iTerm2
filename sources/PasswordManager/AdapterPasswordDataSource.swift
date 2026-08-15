@@ -222,8 +222,8 @@ class AdapterPasswordDataSource: CommandLinePasswordDataSource {
     private func requestPathToDatabaseViaTextField(handshake: HandshakeResponse) -> Bool {
         let alert = NSAlert()
         alert.messageText = handshake.pathToDatabasePrompt ?? "Enter database URL for \(identifier)"
-        alert.addButton(withTitle: "OK")
-        alert.addButton(withTitle: "Cancel")
+        alert.addButton(withTitle: NSLocalizedString("OK", comment: "UI"))
+        alert.addButton(withTitle: NSLocalizedString("Cancel", comment: "UI"))
 
         let textField = NSTextField(frame: NSRect(x: 0, y: 0, width: 300, height: 24))
         textField.placeholderString = handshake.pathToDatabasePlaceholder ?? "https://\u{2026}"
@@ -502,7 +502,7 @@ class AdapterPasswordDataSource: CommandLinePasswordDataSource {
                 if case let .runtime(description) = error as? AdapterError {
                     let loginFailed = AdapterError.loginFailed(description)
                     let selection = iTermWarning.show(withTitle: loginFailed.reason ?? description,
-                                                      actions: ["Try Again", "Cancel"],
+                                                      actions: ["Try Again", NSLocalizedString("Cancel", comment: "UI")],
                                                       accessory: nil,
                                                       identifier: nil,
                                                       silenceable: .kiTermWarningTypePersistent,
@@ -870,7 +870,7 @@ extension AdapterPasswordDataSource {
         }
         DispatchQueue.main.async {
             iTermWarning.show(withTitle: reason,
-                              actions: ["OK"],
+                              actions: [NSLocalizedString("OK", comment: "UI")],
                               accessory: nil,
                               identifier: nil,
                               silenceable: .kiTermWarningTypePersistent,

@@ -551,7 +551,7 @@
             NSString *error = [state.db.lastError localizedDescription] ?: @"Unknown error";
             dispatch_async(dispatch_get_main_queue(), ^{
                 [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"Failed to migrate session database (adding generation column): %@", error]
-                                           actions:@[ @"OK" ]
+                                           actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                         identifier:@"NoSyncGraphDatabaseMigrationFailed"
                                        silenceable:kiTermWarningTypePersistent
                                             window:nil];
@@ -562,7 +562,7 @@
             NSString *error = [state.db.lastError localizedDescription] ?: @"Unknown error";
             dispatch_async(dispatch_get_main_queue(), ^{
                 [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"Failed to migrate session database (adding large_data column): %@", error]
-                                           actions:@[ @"OK" ]
+                                           actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                         identifier:@"NoSyncGraphDatabaseMigrationFailed"
                                        silenceable:kiTermWarningTypePersistent
                                             window:nil];

@@ -123,7 +123,7 @@ class NerdFontInstaller {
     private func askUserForPermissionToDownload() -> Bool {
         let selection = iTermWarning.show(
             withTitle: "To install the Nerd Font Bundle iTerm2 must first download and install these fonts: \(neededFontPostscriptNames.joined(separator: ", ")).",
-            actions: ["Download", "Cancel"],
+            actions: ["Download", NSLocalizedString("Cancel", comment: "UI")],
             accessory: nil,
             identifier: "SpecialExceptionsMissingFontsForNerdBundle",
             silenceable: .kiTermWarningTypePersistent,

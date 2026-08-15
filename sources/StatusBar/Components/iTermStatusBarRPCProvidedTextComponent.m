@@ -400,7 +400,7 @@ static NSString *const iTermStatusBarRPCRegistrationRequestV2Key = @"registratio
     }
 
     if ([iTermWarning showWarningWithTitle:@"This will move the script into the AutoLaunch folder."
-                                   actions:@[ @"OK", @"Cancel" ]
+                                   actions:@[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI") ]
                                  accessory:nil
                                 identifier:[NSString stringWithFormat:@"NoSyncAutoLaunchScript_%@", _fullPath]
                                silenceable:kiTermWarningTypePermanentlySilenceable
@@ -535,12 +535,12 @@ static NSString *const iTermStatusBarRPCRegistrationRequestV2Key = @"registratio
         iTermWarning *warning = [[iTermWarning alloc] init];
         warning.title = _errorMessage;
         warning.heading = @"Status Bar Component Problem";
-        NSArray *actions = @[ [iTermWarningAction warningActionWithLabel:@"OK" block:nil] ];
+        NSArray *actions = @[ [iTermWarningAction warningActionWithLabel:NSLocalizedString(@"OK", @"UI") block:nil] ];
         if ([self scriptIsNotRunningButCouldBeLaunched]) {
             iTermWarningAction *launch = [iTermWarningAction warningActionWithLabel:@"Launch Script" block:^(iTermWarningSelection selection) {
                 [self launchScript];
             }];
-            iTermWarningAction *reveal = [iTermWarningAction warningActionWithLabel:@"Reveal in Finder" block:^(iTermWarningSelection selection) {
+            iTermWarningAction *reveal = [iTermWarningAction warningActionWithLabel:NSLocalizedString(@"Reveal in Finder", @"UI") block:^(iTermWarningSelection selection) {
                 [self revealInFinder];
             }];
             actions = [actions arrayByAddingObjectsFromArray:@[ launch, reveal ]];

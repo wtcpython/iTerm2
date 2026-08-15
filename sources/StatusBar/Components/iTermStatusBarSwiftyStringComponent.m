@@ -93,7 +93,7 @@ NSString *const iTermStatusBarSwiftyStringComponentExpressionKey = @"expression"
 - (void)onClick:(id)sender {
     if (_errorReason) {
         [iTermWarning showWarningWithTitle:_errorReason
-                                   actions:@[ @"OK" ]
+                                   actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                  accessory:nil
                                 identifier:@"NoSyncInterpolatedStatusBarComponentError"
                                silenceable:kiTermWarningTypePersistent

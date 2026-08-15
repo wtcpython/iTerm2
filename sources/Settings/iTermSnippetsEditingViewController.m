@@ -442,7 +442,7 @@ static NSString *const iTermSnippetsEditingPasteboardType = @"com.googlecode.ite
                                                      error:&error];
     if (!content || error) {
         [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"While loading %@: %@", url.path, error.localizedDescription]
-                                   actions:@[ @"OK" ]
+                                   actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                  accessory:nil
                                 identifier:@"NoSyncImportSnippetsFailed"
                                silenceable:kiTermWarningTypePersistent
@@ -454,7 +454,7 @@ static NSString *const iTermSnippetsEditingPasteboardType = @"com.googlecode.ite
     id root = [NSJSONSerialization it_objectForJsonString:content error:&error];
     if (!root) {
         [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"While parsing %@: %@", url.path, error.localizedDescription]
-                                   actions:@[ @"OK" ]
+                                   actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                  accessory:nil
                                 identifier:@"NoSyncImportSnippetsFailed"
                                silenceable:kiTermWarningTypePersistent
@@ -487,7 +487,7 @@ static NSString *const iTermSnippetsEditingPasteboardType = @"com.googlecode.ite
 
 - (void)showEncodingErrorForURL:(NSURL *)url {
     [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"Malformed file at %@", url.path]
-                               actions:@[ @"OK" ]
+                               actions:@[ NSLocalizedString(@"OK", @"UI") ]
                              accessory:nil
                             identifier:@"NoSyncSnippetEncodingError"
                            silenceable:kiTermWarningTypePersistent
@@ -509,7 +509,7 @@ static NSString *const iTermSnippetsEditingPasteboardType = @"com.googlecode.ite
         if (error) {
             [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"Error saving to %@: %@",
                                                 item.displayName, error.localizedDescription]
-                                       actions:@[ @"OK" ]
+                                       actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                      accessory:nil
                                     identifier:@"NoSyncSnippetWritingError"
                                    silenceable:kiTermWarningTypePersistent

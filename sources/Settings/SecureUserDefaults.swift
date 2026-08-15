@@ -330,7 +330,7 @@ class SecureUserDefault<T: SecureUserDefaultStringTranscodable & Codable & Equat
         } catch {
             RLog("Fail: \(error)")
             iTermWarning.show(withTitle: error.localizedDescription,
-                              actions: ["OK"],
+                              actions: [NSLocalizedString("OK", comment: "UI")],
                               accessory: nil,
                               identifier: "NoSyncSecureUserDefaultsSetFailed",
                               silenceable: .kiTermWarningTypeTemporarilySilenceable,

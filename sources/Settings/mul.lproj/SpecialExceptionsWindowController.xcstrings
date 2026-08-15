@@ -1,6 +1,24 @@
 {
   "sourceLanguage": "en",
   "strings": {
+    "19O-2l-lvt.placeholderString": {
+      "comment": "Class = \"NSTextFieldCell\"; placeholderString = \"U+xxx\"; ObjectID = \"19O-2l-lvt\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "U+xxx"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "U+xxx"
+          }
+        }
+      }
+    },
     "4Hg-ra-GQd.title": {
       "comment": "Class = \"NSTextFieldCell\"; title = \"Table View Cell\"; ObjectID = \"4Hg-ra-GQd\";",
       "extractionState": "extracted_with_value",
@@ -87,6 +105,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "编辑特殊例外"
+          }
+        }
+      }
+    },
+    "Eaw-6f-gXv.placeholderString": {
+      "comment": "Class = \"NSTextFieldCell\"; placeholderString = \"U+xxx\"; ObjectID = \"Eaw-6f-gXv\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "U+xxx"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "U+xxx"
           }
         }
       }
@@ -195,6 +231,24 @@
           "stringUnit": {
             "state": "translated",
             "value": "Text Cell"
+          }
+        }
+      }
+    },
+    "YOm-En-lgT.placeholderString": {
+      "comment": "Class = \"NSTextFieldCell\"; placeholderString = \"U+xxx\"; ObjectID = \"YOm-En-lgT\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "U+xxx"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "U+xxx"
           }
         }
       }

@@ -584,7 +584,7 @@ NSString *const kStatusTextComboBoxIdentifier = @"kStatusTextComboBoxIdentifier"
     if (!content || error) {
         [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"While loading %@: %@",
                                             filename, error.localizedDescription]
-                                   actions:@[ @"OK" ]
+                                   actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                  accessory:nil
                                 identifier:@"NoSyncImportTriggersFailed"
                                silenceable:kiTermWarningTypePersistent
@@ -597,7 +597,7 @@ NSString *const kStatusTextComboBoxIdentifier = @"kStatusTextComboBoxIdentifier"
     if (!root) {
         [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"While parsing %@: %@",
                                             filename, error.localizedDescription]
-                                   actions:@[ @"OK" ]
+                                   actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                  accessory:nil
                                 identifier:@"NoSyncImportTriggersFailed"
                                silenceable:kiTermWarningTypePersistent
@@ -616,7 +616,7 @@ NSString *const kStatusTextComboBoxIdentifier = @"kStatusTextComboBoxIdentifier"
     }
     if (!array) {
         [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"Malformed file at %@", filename]
-                                   actions:@[ @"OK" ]
+                                   actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                  accessory:nil
                                 identifier:@"NoSyncTriggerEncodingError"
                                silenceable:kiTermWarningTypePersistent
@@ -630,7 +630,7 @@ NSString *const kStatusTextComboBoxIdentifier = @"kStatusTextComboBoxIdentifier"
         NSDictionary *dict = [NSDictionary castFrom:element];
         if (!dict) {
             [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"Malformed file at %@", filename]
-                                       actions:@[ @"OK" ]
+                                       actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                      accessory:nil
                                     identifier:@"NoSyncTriggerEncodingError"
                                    silenceable:kiTermWarningTypePersistent
@@ -641,7 +641,7 @@ NSString *const kStatusTextComboBoxIdentifier = @"kStatusTextComboBoxIdentifier"
         Trigger *trigger = [Trigger triggerFromUntrustedDict:dict];
         if (!trigger) {
             [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"Malformed file at %@", filename]
-                                       actions:@[ @"OK" ]
+                                       actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                      accessory:nil
                                     identifier:@"NoSyncTriggerEncodingError"
                                    silenceable:kiTermWarningTypePersistent
@@ -899,7 +899,7 @@ NSString *const kStatusTextComboBoxIdentifier = @"kStatusTextComboBoxIdentifier"
         iTermTuple<NSString *, NSString *> *pair = [iTermTwoParameterTriggerCodec tupleFromString:[NSString castFrom:value]];
         NSTextField *nameTextField = [self newTextFieldOfSize:subsize
                                                         value:pair.firstObject
-                                                  placeholder:@"Name"
+                                                  placeholder:NSLocalizedString(@"Name", @"UI")
                                                    identifier:kTwoPraramNameColumnIdentifier];
         nameTextField.delegate = delegate;
 
@@ -1139,7 +1139,7 @@ NSString *const kStatusTextComboBoxIdentifier = @"kStatusTextComboBoxIdentifier"
             if (error) {
                 [iTermWarning showWarningWithTitle:[NSString stringWithFormat:@"Error saving to %@: %@",
                                                     item.displayName, error.localizedDescription]
-                                           actions:@[ @"OK" ]
+                                           actions:@[ NSLocalizedString(@"OK", @"UI") ]
                                          accessory:nil
                                         identifier:@"NoSyncTriggerWritingError"
                                        silenceable:kiTermWarningTypePersistent

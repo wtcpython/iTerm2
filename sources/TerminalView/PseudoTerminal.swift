@@ -248,7 +248,7 @@ extension PseudoTerminal: ColorsMenuItemViewDelegate {
         let button = NSButton(frame: NSMakeRect(0, buttonY, 0, 0))
         button.isBordered = false
         button.image = image
-        button.title = "Default Picker"
+        button.title = NSLocalizedString("Default Picker", comment: "UI")
         button.imagePosition = .imageAbove
         button.target = self
         button.action = #selector(switchToCustomPicker(_:))

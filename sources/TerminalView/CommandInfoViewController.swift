@@ -231,7 +231,7 @@ class CommandInfoViewController: NSViewController {
         if let codeNumber = _returnCode.maybeValue {
             commandDidFinish(returnCode: codeNumber.intValue)
         } else {
-            returnCode.stringValue = "Still Running"
+            returnCode.stringValue = NSLocalizedString("Still Running", comment: "UI")
             if _startDate != nil {
                 timer = Timer.scheduledTimer(withTimeInterval: 0.017, repeats: true) { [weak self] timer in
                     self?.timerDidFire()
@@ -244,7 +244,7 @@ class CommandInfoViewController: NSViewController {
         if let _runningTime {
             runningTime.stringValue = String(_runningTime.formattedHMS)
         } else {
-            runningTime.stringValue = "Unknown"
+            runningTime.stringValue = NSLocalizedString("Unknown", comment: "UI")
         }
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .decimal
@@ -261,7 +261,7 @@ class CommandInfoViewController: NSViewController {
             }
         }
         if let _startDate {
-            startedAt.stringValue = "Started at " + formattedDate(_startDate)
+            startedAt.stringValue = NSLocalizedString("Started at ", comment: "UI") + formattedDate(_startDate)
         } else {
             startedAtStackView.isHidden = true
             stackView.removeArrangedSubview(startedAtStackView)

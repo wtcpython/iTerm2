@@ -243,14 +243,14 @@ class NotifyOnStatusChangeController: NSObject {
             let alert = NSAlert()
             alert.messageText = "Session status changed"
             alert.informativeText = "\(name) changed from “\(fromText)” to “\(toText)”."
-            alert.addButton(withTitle: "OK")
+            alert.addButton(withTitle: NSLocalizedString("OK", comment: "UI"))
             // Offer Reveal only when the session can still be resolved; it may
             // have gone away between the change and the alert being shown.
             let canReveal = sessionGuid.flatMap {
                 iTermController.sharedInstance()?.anySession(withGUID: $0)
             } != nil
             if canReveal {
-                alert.addButton(withTitle: "Reveal")
+                alert.addButton(withTitle: NSLocalizedString("Reveal", comment: "UI"))
             }
             let reveal: () -> Void = {
                 if let sessionGuid {

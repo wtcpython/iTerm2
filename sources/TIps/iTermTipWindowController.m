@@ -187,7 +187,7 @@ static const CGFloat kWindowTopMargin = 8;
 
     button =
     [card addActionWithTitle:kShowThisLaterTitle
-                        icon:[NSImage it_imageNamed:@"Later" forClass:self.class]
+                        icon:[NSImage it_imageNamed:NSLocalizedString(@"Later", @"UI") forClass:self.class]
                        block:^(id sendingCard) {
         [weakSelf showThisLater];
     }];

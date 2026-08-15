@@ -55,6 +55,24 @@
         }
       }
     },
+    "6tA-bg-olR.ibShadowedToolTip": {
+      "comment": "Class = \"NSButton\"; ibShadowedToolTip = \"Note: the window is reopened only if it was closed because another app became active.\"; ObjectID = \"6tA-bg-olR\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Note: the window is reopened only if it was closed because another app became active."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "注意：仅当窗口因其他应用变为活动而关闭时，才会重新打开。"
+          }
+        }
+      }
+    },
     "EOt-Jx-9Xl.title": {
       "comment": "Class = \"NSButtonCell\"; title = \"Don’t do anything special\"; ObjectID = \"EOt-Jx-9Xl\";",
       "extractionState": "extracted_with_value",

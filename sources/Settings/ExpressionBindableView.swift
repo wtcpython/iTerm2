@@ -65,7 +65,7 @@ extension ExpressionBindableView where Self: NSView, Self: NSAlertDelegate {
         textField.isEditable = true
         textField.isSelectable = true
         textField.stringValue = expression ?? ""
-        textField.placeholderString = "Expression (e.g., \(example))"
+        textField.placeholderString = NSLocalizedString("Expression (e.g., \(example))", comment: "UI")
 
         let pathSource = iTermVariableHistory.pathSource(for: .session)
         textFieldDelegate = iTermFunctionCallTextFieldDelegate(
@@ -81,8 +81,8 @@ extension ExpressionBindableView where Self: NSView, Self: NSAlertDelegate {
         DispatchQueue.main.async {
             alert.window.makeFirstResponder(textField)
         }
-        alert.addButton(withTitle: "OK")
-        alert.addButton(withTitle: "Cancel")
+        alert.addButton(withTitle: NSLocalizedString("OK", comment: "UI"))
+        alert.addButton(withTitle: NSLocalizedString("Cancel", comment: "UI"))
         alert.showsHelp = true
         alert.delegate = self
         alert.beginSheetModal(for: window) { [weak self] response in

@@ -274,7 +274,7 @@ extension iTermBrowserViewController {
                     videoWindowController?.close()
                     videoWindowController = nil
                     iTermWarning.show(withTitle: "Could not create movie: \(error.localizedDescription)",
-                                      actions: ["OK"],
+                                      actions: [NSLocalizedString("OK", comment: "UI")],
                                       accessory: nil,
                                       identifier: nil,
                                       silenceable: .kiTermWarningTypePersistent,
@@ -1328,7 +1328,7 @@ extension iTermBrowserViewController {
             }
 
             let savePanel = iTermModernSavePanel()
-            savePanel.defaultFilename = browserManager.webView.title ?? "Untitled"
+            savePanel.defaultFilename = browserManager.webView.title ?? NSLocalizedString("Untitled", comment: "UI")
             let response = await savePanel.beginSheetModal(for: window)
             if response == .OK,
                 let item = savePanel.item,

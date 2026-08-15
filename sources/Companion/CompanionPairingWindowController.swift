@@ -232,12 +232,12 @@ final class CompanionPairingWindowController: NSWindowController, NSWindowDelega
         case .connected(let since):
             relayStatusLabel.isHidden = false
             relayStatusLabel.textColor = .secondaryLabelColor
-            relayStatusLabel.stringValue = NSLocalizedString("Connected to relay for \(Self.elapsed(since))", comment: "UI")
+            relayStatusLabel.stringValue = String(format: NSLocalizedString("Connected to relay for %@", comment: "UI"), Self.elapsed(since))
         case .reconnecting(let lastAttempt):
             relayStatusLabel.isHidden = false
             relayStatusLabel.textColor = .systemYellow
             if let lastAttempt {
-                relayStatusLabel.stringValue = NSLocalizedString("Not connected to relay (last try \(Self.elapsed(lastAttempt)) ago)", comment: "UI")
+                relayStatusLabel.stringValue = String(format: NSLocalizedString("Not connected to relay (last try %@ ago)", comment: "UI"), Self.elapsed(lastAttempt))
             } else {
                 relayStatusLabel.stringValue = NSLocalizedString("Not connected to relay", comment: "UI")
             }

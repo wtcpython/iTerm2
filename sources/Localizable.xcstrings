@@ -161,16 +161,6 @@
         }
       }
     },
-    "A file with the name “\\(descriptor.absolutePath.lastPathComponent)” on \\(descriptor.sshIdentity.displayName) already exists in this location. Do you want to replace it?": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\\(descriptor.sshIdentity.displayName) 上名为“\\(descriptor.absolutePath.lastPathComponent)”的文件已存在于该位置。要替换它吗？"
-          }
-        }
-      }
-    },
     "A keyboard shortcut didn’t run because this physical key now produces a different character than it did when the shortcut was created, usually after switching keyboard layout or input method. Matching key bindings by physical key makes shortcuts work regardless of the character a key produces. This affects all key bindings; you can change it later in Settings > Keys.": {
       "localizations": {
         "zh-Hans": {
@@ -197,16 +187,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "AI 聊天"
-          }
-        }
-      }
-    },
-    "AI can \\(category.rawValue)": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "AI 可以\\(category.rawValue)"
           }
         }
       }
@@ -401,16 +381,6 @@
         }
       }
     },
-    "Allow \\(permissionType.displayName)": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "允许\\(permissionType.displayName)"
-          }
-        }
-      }
-    },
     "Alternate Screen": {
       "localizations": {
         "zh-Hans": {
@@ -427,16 +397,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "始终"
-          }
-        }
-      }
-    },
-    "An error occurred while removing the file that authorizes clipboard reporting: \\(error.localizedDescription).\\nAs long as this file exists, clipboard reporting could be enabled by programs running on this computer.": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "移除授权剪贴板报告的文件时出错：\\(error.localizedDescription)。\\n只要此文件存在，此计算机上运行的程序就可能启用剪贴板报告。"
           }
         }
       }
@@ -667,16 +627,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "认证失败"
-          }
-        }
-      }
-    },
-    "Authentication failed because \\(reason)": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "认证失败，因为 \\(reason)"
           }
         }
       }
@@ -1331,16 +1281,6 @@
         }
       }
     },
-    "Connected to relay for \\(Self.elapsed(since))": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "已连接中继 \\(Self.elapsed(since))"
-          }
-        }
-      }
-    },
     "Content Regex:": {
       "localizations": {
         "zh-Hans": {
@@ -1396,7 +1336,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "复制"
+            "value": "拷贝"
           }
         }
       }
@@ -1436,7 +1376,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "复制文件"
+            "value": "拷贝文件"
           }
         }
       }
@@ -1446,7 +1386,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "复制文件夹名称"
+            "value": "拷贝文件夹名称"
           }
         }
       }
@@ -1456,7 +1396,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "复制图像"
+            "value": "拷贝图像"
           }
         }
       }
@@ -1466,7 +1406,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "复制链接地址"
+            "value": "拷贝链接地址"
           }
         }
       }
@@ -1496,7 +1436,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "复制路径"
+            "value": "拷贝路径"
           }
         }
       }
@@ -1516,7 +1456,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "复制 URL"
+            "value": "拷贝 URL"
           }
         }
       }
@@ -1557,36 +1497,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "无法读取文件：解压数据解档失败。"
-          }
-        }
-      }
-    },
-    "Could not save the page: \\(error.localizedDescription)": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "无法存储页面：\\(error.localizedDescription)"
-          }
-        }
-      }
-    },
-    "Could not write to \\(settingsURL.path): \\(error.localizedDescription)": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "无法写入 \\(settingsURL.path)：\\(error.localizedDescription)"
-          }
-        }
-      }
-    },
-    "Couldn\\u{2019}t Remove Hooks": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "无法移除钩子"
           }
         }
       }
@@ -1921,16 +1831,6 @@
         }
       }
     },
-    "Do you want to allow all apps running on this machine to use the Python API?\\n\\nThis will disable the check for Automation permission. If you agree, you’ll be prompted for administrator access to make the change.": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "要允许此机器上运行的所有应用使用 Python API 吗？\\n\\n这将停用对“自动化”权限的检查。如果你同意，系统将提示你提供管理员访问权限以进行更改。"
-          }
-        }
-      }
-    },
     "Done": {
       "localizations": {
         "zh-Hans": {
@@ -2017,16 +1917,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "下载 Python 支持？"
-          }
-        }
-      }
-    },
-    "Download \\(path.path.lastPathComponent) or view in browser?": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "下载 \\(path.path.lastPathComponent) 或在浏览器中查看？"
           }
         }
       }
@@ -2541,16 +2431,6 @@
         }
       }
     },
-    "Expression (e.g., \\(example))": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "表达式（例如 \\(example)）"
-          }
-        }
-      }
-    },
     "Failed to connect to %@:%d. Double-check that the host name is correct.": {
       "localizations": {
         "zh-Hans": {
@@ -2587,16 +2467,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "迁移会话数据库失败（添加 large_data 列）：%@"
-          }
-        }
-      }
-    },
-    "Failed to remove the file “%@”: %@\\n\\nPlease remove this file manually to require Automation permission for the Python API.\\n\\nThe Python API has been disabled for your security.": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "移除文件“%@”失败：%@\\n\\n请手动移除此文件，以便为 Python API 要求“自动化”权限。\\n\\n为安全起见，Python API 已停用。"
           }
         }
       }
@@ -2906,7 +2776,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "隐藏剪贴"
+            "value": "隐藏 Clippings"
           }
         }
       }
@@ -2937,16 +2807,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "主机"
-          }
-        }
-      }
-    },
-    "How would you like to paste \\(fileDescription)?": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "你想如何粘贴 \\(fileDescription)？"
           }
         }
       }
@@ -3187,16 +3047,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "无效编码：既未设置 $LC_CTYPE 也未设置 $LANG。"
-          }
-        }
-      }
-    },
-    "It is taking a long time to locate all scripts under %@. Avoid storing many files or using network mounts for the scripts folder.\\n\\nContinue?": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "定位 %@ 下的所有脚本耗时较长。避免在脚本文件夹中存储大量文件或使用网络挂载。\\n\\n继续？"
           }
         }
       }
@@ -3651,16 +3501,6 @@
         }
       }
     },
-    "Looks like the selection changed and is no longer a valid JSON object.\\nYou can find this feature under Edit > Replace Selection > Replace with Pretty-Printed JSON if you want to try again.": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "所选内容似乎已更改，不再是有效的 JSON 对象。\\n如果你想重试，可以在“编辑 > 替换所选内容 > 替换为格式化 JSON”下找到此功能。"
-          }
-        }
-      }
-    },
     "Looks like you're sshed somewhere. OK to send the command “%@”?": {
       "localizations": {
         "zh-Hans": {
@@ -3897,16 +3737,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "名称"
-          }
-        }
-      }
-    },
-    "Name of new folder inside “\\(currentPath.absolutePath.lastPathComponent)”:": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "位于“\\(currentPath.absolutePath.lastPathComponent)”内的新文件夹名称："
           }
         }
       }
@@ -4191,16 +4021,6 @@
         }
       }
     },
-    "No Image Selected\\u2009—\\u2009Click to set": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "未选择图像 — 点按设置"
-          }
-        }
-      }
-    },
     "No Preference": {
       "localizations": {
         "zh-Hans": {
@@ -4311,16 +4131,6 @@
         }
       }
     },
-    "Not connected to relay (last try \\(Self.elapsed(lastAttempt)) ago)": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "未连接到中继（上次尝试于 \\(Self.elapsed(lastAttempt)) 前）"
-          }
-        }
-      }
-    },
     "Notify": {
       "localizations": {
         "zh-Hans": {
@@ -4357,16 +4167,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "粘贴 %@ 个字符？"
-          }
-        }
-      }
-    },
-    "OK to paste \\(base64.count.formatted()) bytes of base64-encoded data?": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "粘贴 \\(base64.count.formatted()) 字节的 Base64 编码数据？"
           }
         }
       }
@@ -4821,16 +4621,6 @@
         }
       }
     },
-    "Pick the profiles you\\u{2019}ll run claude in. ": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "选择你要在其中运行 claude 的配置文件。"
-          }
-        }
-      }
-    },
     "Pin Tab": {
       "localizations": {
         "zh-Hans": {
@@ -4856,7 +4646,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "请选择一个账户："
+            "value": "选择一个账户："
           }
         }
       }
@@ -5316,7 +5106,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "重新加载："
+            "value": "重新载入："
           }
         }
       }
@@ -6016,7 +5806,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "另存为…"
+            "value": "存储为…"
           }
         }
       }
@@ -6036,7 +5826,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "文件另存为…"
+            "value": "文件存储为…"
           }
         }
       }
@@ -6056,7 +5846,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "图像另存为…"
+            "value": "图像存储为…"
           }
         }
       }
@@ -6097,26 +5887,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "将标签页存储为窗口布局"
-          }
-        }
-      }
-    },
-    "Save selection to arrangement \\(arrangementName)": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "将选择存储到布局 \\(arrangementName)"
-          }
-        }
-      }
-    },
-    "Save selection to profile \\(profileName)": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "将选择存储到配置文件 \\(profileName)"
           }
         }
       }
@@ -6187,26 +5957,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "在网上搜索所选内容"
-          }
-        }
-      }
-    },
-    "Search with \\(searchEngineName)": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "用 \\(searchEngineName) 搜索"
-          }
-        }
-      }
-    },
-    "Secure keyboard entry is enabled.\\n\\nIn macOS 12 and later, enabling Secure Keyboard Entry prevents other programs from being activated. This affects the `open` command as well as the panel shown when using Touch ID for sudo.": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "已启用安全键盘输入。\\n\\n在 macOS 12 及更高版本中，启用安全键盘输入会阻止其他程序被激活。这会影响 `open` 命令以及使用 Touch ID 进行 sudo 时显示的面板。"
           }
         }
       }
@@ -6301,16 +6051,6 @@
         }
       }
     },
-    "Select \\(allowedBundleName)": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "选择 \\(allowedBundleName)"
-          }
-        }
-      }
-    },
     "Select a model for this chat.": {
       "localizations": {
         "zh-Hans": {
@@ -6376,7 +6116,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "为支持它的模型选择推理强度"
+            "value": "为支持该功能的模型选择推理强度"
           }
         }
       }
@@ -6687,16 +6427,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "tmux 响应缓慢"
-          }
-        }
-      }
-    },
-    "Smart Selection Playground\\nEnter text here, then click to see which rule matches at that location.": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "智能选择演练场\\n在此输入文本，然后点按查看该位置匹配的规则。"
           }
         }
       }
@@ -7031,16 +6761,6 @@
         }
       }
     },
-    "The LastPass service took too long to respond. \\(message)": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "LastPass 服务响应超时。\\(message)"
-          }
-        }
-      }
-    },
     "The Python API allows scripts you run to control iTerm2 and access all its data.": {
       "localizations": {
         "zh-Hans": {
@@ -7061,32 +6781,12 @@
         }
       }
     },
-    "The clipboard contains \\(typeDescription) image data (\\(sizeDescription)). How would you like to paste it?": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "剪贴板包含 \\(typeDescription) 图像数据（\\(sizeDescription)）。你想如何粘贴它？"
-          }
-        }
-      }
-    },
     "The download “%@” is larger than %@. Continue?": {
       "localizations": {
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "下载“%@”大于 %@。继续？"
-          }
-        }
-      }
-    },
-    "The existing installation of the OnePassword CLI at \\(path) is an incompatible. The iTerm2 integration requires version 2.": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\\(path) 处已安装的 1Password CLI 不兼容。iTerm2 集成需要版本 2。"
           }
         }
       }
@@ -7171,26 +6871,6 @@
         }
       }
     },
-    "The installer enabled iTerm2\\u{2019}s ": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "安装程序已启用 iTerm2 的 "
-          }
-        }
-      }
-    },
-    "The key-binding action Copy Interpolated String “%@” failed:\\n\\n%@": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "按键绑定操作“拷贝内插字符串”“%@”失败：\\n\\n%@"
-          }
-        }
-      }
-    },
     "The keyboard shortcut you have set for this profile will take precedence over an existing shortcut for the same key combination in a global shortcut.": {
       "localizations": {
         "zh-Hans": {
@@ -7247,46 +6927,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "共享 Python 运行时仅支持 Intel，无法在此版本的 macOS 上运行。立即下载 Apple Silicon 版本？"
-          }
-        }
-      }
-    },
-    "The website \\(origin) wants to access \\(permissionType.displayName.lowercased()).": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "网站 \\(origin) 想要访问\\(permissionType.displayName.lowercased())。"
-          }
-        }
-      }
-    },
-    "There was a problem finding or creating the config directory. You can set “Settings > Advanced > Folder for config files“ to set a custom location for this directory. Until this is fixed, some features will be disabled.\\n%@": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "查找或创建配置目录时出现问题。你可以设置“设置 > 高级 > 配置文件文件夹”为此目录指定自定义位置。在此问题修复前，某些功能将被停用。\\n%@"
-          }
-        }
-      }
-    },
-    "There was a problem finding or creating your application support directory. iTerm2 won't work very well until this problem is fixed.\\n\\nIt should be at ~/Library/Application Support/iTerm2.\\n\\nThe error was:\\n%@": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "查找或创建应用支持目录时出现问题。在此问题修复前，iTerm2 将无法正常工作。\\n\\n它应位于 ~/Library/Application Support/iTerm2。\\n\\n错误为：\\n%@"
-          }
-        }
-      }
-    },
-    "There was a problem saving snippets to “%@”.\\n\\nThe error was:\\n%@": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "将代码片段存储到“%@”时出现问题。\\n\\n错误为：\\n%@"
           }
         }
       }
@@ -7871,16 +7511,6 @@
         }
       }
     },
-    "Uploading \\u{201C}\\(filename)\\u{201D}…": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "正在上传“\\(filename)”…"
-          }
-        }
-      }
-    },
     "Uploads": {
       "localizations": {
         "zh-Hans": {
@@ -8011,32 +7641,12 @@
         }
       }
     },
-    "Version 2 of the OnePassword CLI could not be found. Check that \\(OnePasswordUtils.pathToCLI) is installed and has version 2.x.": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "找不到 1Password CLI 版本 2。请检查 \\(OnePasswordUtils.pathToCLI) 已安装且为 2.x 版本。"
-          }
-        }
-      }
-    },
     "View Source": {
       "localizations": {
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "查看源代码"
-          }
-        }
-      }
-    },
-    "Viewing archived clippings (\\(historyIndex + 1) of \\(total))": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "正在查看已归档的剪贴（\\(historyIndex + 1) / \\(total)）"
           }
         }
       }
@@ -8106,7 +7716,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "将更改什么"
+            "value": "要更改的内容"
           }
         }
       }
@@ -8157,16 +7767,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "当你在文件名上启用语义历史记录时，关联的应用会载入该文件。"
-          }
-        }
-      }
-    },
-    "When you activate Semantic History on a text file, the specified editor opens it.\\nOther kinds of files will be opened with their default apps.": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "当你在文本文件上启用语义历史记录时，指定的编辑器会打开它。\\n其他类型的文件将用默认应用打开。"
           }
         }
       }
@@ -8251,16 +7851,6 @@
         }
       }
     },
-    "You can also try opening a terminal window and running `lpass login \\(email)`.": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "你也可以尝试打开终端窗口并运行 `lpass login \\(email)`。"
-          }
-        }
-      }
-    },
     "You can choose to use both, so that your file name ends in “.%@.%@”.": {
       "localizations": {
         "zh-Hans": {
@@ -8277,16 +7867,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "如果你想再次使用此功能，可以在“编辑 > 替换所选内容 > 替换为格式化 JSON”下找到它。"
-          }
-        }
-      }
-    },
-    "You can use captured strings from the Smart Selection's regular expression in the parameter. Use \\\\0 for match, \\\\1…\\\\9 for match groups, \\\\d for directory, \\\\u for user, \\\\h for host.": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "你可以在参数中使用智能选择正则表达式捕获的字符串。使用 \\\\0 表示匹配项，\\\\1…\\\\9 表示匹配组，\\\\d 表示目录，\\\\u 表示用户，\\\\h 表示主机。"
           }
         }
       }
@@ -8461,36 +8041,6 @@
         }
       }
     },
-    "\\(detail) Continue removing the ": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\\(detail) 继续移除 "
-          }
-        }
-      }
-    },
-    "\\(name) changed from “\\(fromText)” to “\\(toText)”.": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\\(name) 已从“\\(fromText)”更改为“\\(toText)”。"
-          }
-        }
-      }
-    },
-    "\\(providerName) doesn’t accept this file type as a chat attachment: \\(names).": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\\(providerName) 不接受此文件类型作为聊天附件：\\(names)。"
-          }
-        }
-      }
-    },
     "_Allow Once": {
       "localizations": {
         "zh-Hans": {
@@ -8546,7 +8096,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "列乘"
+            "value": "列 ×"
           }
         }
       }
@@ -8611,16 +8161,6 @@
         }
       }
     },
-    "iTerm2 cannot watch the job \\(displayName) with process ID \\(pid) because it has already terminated.": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "iTerm2 无法监视进程 ID 为 \\(pid) 的任务 \\(displayName)，因为它已经终止。"
-          }
-        }
-      }
-    },
     "iTerm2 has moved to the new relay. For your Mac and iPhone to keep connecting, ": {
       "localizations": {
         "zh-Hans": {
@@ -8637,16 +8177,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "iTerm2 不再在粘贴多行前发出警告，除非你位于 Shell 提示符处。"
-          }
-        }
-      }
-    },
-    "iTerm2\\u{2019}s cc-status hook is no longer in ~/.claude/settings.json. This usually means Claude Code rewrote that file. Reinstall the hook so per-tab status indicators (\\u{201C}Working\\u{2026},\\u{201D} \\u{201C}Waiting\\u{2026}\\u{201D}) work again?": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "iTerm2 的 cc-status 钩子已不在 ~/.claude/settings.json 中。这通常意味着 Claude Code 重写了该文件。重新安装钩子，以便每个标签页的状态指示器（“正在处理…”、“正在等待…”）重新工作？"
           }
         }
       }
@@ -8741,16 +8271,6 @@
         }
       }
     },
-    "⚠️ Large screenshot will be saved as \\(cachedNumberOfParts) files.": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "⚠️ 大型截屏将存储为 \\(cachedNumberOfParts) 个文件。"
-          }
-        }
-      }
-    },
     "⚠️ Secure keyboard entry disables paste history.": {
       "localizations": {
         "zh-Hans": {
@@ -8767,6 +8287,618 @@
           "stringUnit": {
             "state": "translated",
             "value": "😞 你的 Shell 不受支持，或者 $SHELL 环境变量可能未正确设置。按“继续”重试。"
+          }
+        }
+      }
+    },
+    "iTerm2’s cc-status hook is no longer in ~/.claude/settings.json. This usually means Claude Code rewrote that file. Reinstall the hook so per-tab status indicators (“Working…,” “Waiting…”) work again?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iTerm2 的 cc-status 钩子已不在 ~/.claude/settings.json 中。这通常意味着 Claude Code 重写了该文件。重新安装钩子，以便每个标签页的状态指示器（“正在处理…”、“正在等待…”）重新工作？"
+          }
+        }
+      }
+    },
+    "Couldn’t Remove Hooks": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法移除钩子"
+          }
+        }
+      }
+    },
+    "The installer enabled iTerm2’s ": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "安装程序已启用 iTerm2 的 "
+          }
+        }
+      }
+    },
+    "Pick the profiles you’ll run claude in. ": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选择你要在其中运行 claude 的配置文件。"
+          }
+        }
+      }
+    },
+    "There was a problem saving snippets to “%@”.\n\nThe error was:\n%@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "将代码片段存储到“%@”时出现问题。\\n\\n错误为：\\n%@"
+          }
+        }
+      }
+    },
+    "Smart Selection Playground\nEnter text here, then click to see which rule matches at that location.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "智能选择演练场\\n在此输入文本，然后点按查看该位置匹配的规则。"
+          }
+        }
+      }
+    },
+    "When you activate Semantic History on a text file, the specified editor opens it.\nOther kinds of files will be opened with their default apps.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "当你在文本文件上启用语义历史记录时，指定的编辑器会打开它。\\n其他类型的文件将用默认应用打开。"
+          }
+        }
+      }
+    },
+    "You can use captured strings from the Smart Selection's regular expression in the parameter. Use \\0 for match, \\1…\\9 for match groups, \\d for directory, \\u for user, \\h for host.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你可以在参数中使用智能选择正则表达式捕获的字符串。使用 \\\\0 表示匹配项，\\\\1…\\\\9 表示匹配组，\\\\d 表示目录，\\\\u 表示用户，\\\\h 表示主机。"
+          }
+        }
+      }
+    },
+    "The key-binding action Copy Interpolated String “%@” failed:\n\n%@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "按键绑定操作“拷贝内插字符串”“%@”失败：\\n\\n%@"
+          }
+        }
+      }
+    },
+    "Looks like the selection changed and is no longer a valid JSON object.\nYou can find this feature under Edit > Replace Selection > Replace with Pretty-Printed JSON if you want to try again.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "所选内容似乎已更改，不再是有效的 JSON 对象。\\n如果你想重试，可以在“编辑 > 替换所选内容 > 替换为格式化 JSON”下找到此功能。"
+          }
+        }
+      }
+    },
+    "Do you want to allow all apps running on this machine to use the Python API?\n\nThis will disable the check for Automation permission. If you agree, you’ll be prompted for administrator access to make the change.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "要允许此机器上运行的所有应用使用 Python API 吗？\\n\\n这将停用对“自动化”权限的检查。如果你同意，系统将提示你提供管理员访问权限以进行更改。"
+          }
+        }
+      }
+    },
+    "Failed to remove the file “%@”: %@\n\nPlease remove this file manually to require Automation permission for the Python API.\n\nThe Python API has been disabled for your security.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "移除文件“%@”失败：%@\\n\\n请手动移除此文件，以便为 Python API 要求“自动化”权限。\\n\\n为安全起见，Python API 已停用。"
+          }
+        }
+      }
+    },
+    "It is taking a long time to locate all scripts under %@. Avoid storing many files or using network mounts for the scripts folder.\n\nContinue?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "定位 %@ 下的所有脚本耗时较长。避免在脚本文件夹中存储大量文件或使用网络挂载。\\n\\n继续？"
+          }
+        }
+      }
+    },
+    "No Image Selected — Click to set": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未选择图像 — 点按设置"
+          }
+        }
+      }
+    },
+    "There was a problem finding or creating your application support directory. iTerm2 won't work very well until this problem is fixed.\n\nIt should be at ~/Library/Application Support/iTerm2.\n\nThe error was:\n%@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "查找或创建应用支持目录时出现问题。在此问题修复前，iTerm2 将无法正常工作。\\n\\n它应位于 ~/Library/Application Support/iTerm2。\\n\\n错误为：\\n%@"
+          }
+        }
+      }
+    },
+    "There was a problem finding or creating the config directory. You can set “Settings > Advanced > Folder for config files“ to set a custom location for this directory. Until this is fixed, some features will be disabled.\n%@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "查找或创建配置目录时出现问题。你可以设置“设置 > 高级 > 配置文件文件夹”为此目录指定自定义位置。在此问题修复前，某些功能将被停用。\\n%@"
+          }
+        }
+      }
+    },
+    "Secure keyboard entry is enabled.\n\nIn macOS 12 and later, enabling Secure Keyboard Entry prevents other programs from being activated. This affects the `open` command as well as the panel shown when using Touch ID for sudo.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已启用安全键盘输入。\\n\\n在 macOS 12 及更高版本中，启用安全键盘输入会阻止其他程序被激活。这会影响 `open` 命令以及使用 Touch ID 进行 sudo 时显示的面板。"
+          }
+        }
+      }
+    },
+    "Authentication failed because %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "认证失败，因为 %@"
+          }
+        }
+      }
+    },
+    "The LastPass service took too long to respond. %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LastPass 服务响应超时。%@"
+          }
+        }
+      }
+    },
+    "You can also try opening a terminal window and running `lpass login %@`.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你也可以尝试打开终端窗口并运行 `lpass login %@`。"
+          }
+        }
+      }
+    },
+    "The existing installation of the OnePassword CLI at %@ is an incompatible. The iTerm2 integration requires version 2.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ 处已安装的 1Password CLI 不兼容。iTerm2 集成需要版本 2。"
+          }
+        }
+      }
+    },
+    "Version 2 of the OnePassword CLI could not be found. Check that %@ is installed and has version 2.x.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "找不到 1Password CLI 版本 2。请检查 %@ 已安装且为 2.x 版本。"
+          }
+        }
+      }
+    },
+    "Select %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选择 %@"
+          }
+        }
+      }
+    },
+    "Expression (e.g., %@)": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "表达式（例如 %@）"
+          }
+        }
+      }
+    },
+    "Viewing archived clippings (%@ of %@)": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在查看已归档的剪贴（%@ / %@）"
+          }
+        }
+      }
+    },
+    "⚠️ Large screenshot will be saved as %@ files.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "⚠️ 大型截屏将存储为 %@ 个文件。"
+          }
+        }
+      }
+    },
+    "Save selection to arrangement %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "将选择存储到布局 %@"
+          }
+        }
+      }
+    },
+    "Save selection to profile %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "将选择存储到配置文件 %@"
+          }
+        }
+      }
+    },
+    "iTerm2 cannot watch the job %@ with process ID %@ because it has already terminated.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iTerm2 无法监视进程 ID 为 %2$@ 的任务 %1$@，因为它已经终止。"
+          }
+        }
+      }
+    },
+    "An error occurred while removing the file that authorizes clipboard reporting: %@.\\nAs long as this file exists, clipboard reporting could be enabled by programs running on this computer.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "移除授权剪贴板报告的文件时出错：%@。\\n只要此文件存在，此计算机上运行的程序就可能启用剪贴板报告。"
+          }
+        }
+      }
+    },
+    "How would you like to paste %@?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你想如何粘贴 %@？"
+          }
+        }
+      }
+    },
+    "The clipboard contains %@ image data (%@). How would you like to paste it?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "剪贴板包含 %@ 图像数据（%@）。你想如何粘贴它？"
+          }
+        }
+      }
+    },
+    "OK to paste %@ bytes of base64-encoded data?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "粘贴 %@ 字节的 Base64 编码数据？"
+          }
+        }
+      }
+    },
+    "%@ Continue removing the workgroup and triggers anyway? cc-status will keep running until you fix the underlying issue and try again.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ 继续移除 workgroup 和触发器？cc-status 将继续运行，直到你修复根本问题并重试。"
+          }
+        }
+      }
+    },
+    "Could not write to %@: %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法写入 %@：%@"
+          }
+        }
+      }
+    },
+    "Search with %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用 %@ 搜索"
+          }
+        }
+      }
+    },
+    "Allow %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "允许%@"
+          }
+        }
+      }
+    },
+    "The website %@ wants to access %@.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "网站 %@ 想要访问%@。"
+          }
+        }
+      }
+    },
+    "Could not save the page: %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法存储页面：%@"
+          }
+        }
+      }
+    },
+    "A file with the name “%@” on %@ already exists in this location. Do you want to replace it?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%2$@ 上名为“%1$@”的文件已存在于该位置。你想替换它吗？"
+          }
+        }
+      }
+    },
+    "Name of new folder inside “%@”:": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "位于“%@”内的新文件夹名称："
+          }
+        }
+      }
+    },
+    "Download %@ or view in browser?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "下载 %@ 或在浏览器中查看？"
+          }
+        }
+      }
+    },
+    "%@ changed from “%@” to “%@”.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ 已从“%@”更改为“%@”。"
+          }
+        }
+      }
+    },
+    "Uploading “%@”…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在上传“%@”…"
+          }
+        }
+      }
+    },
+    "AI can %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI 可以%@"
+          }
+        }
+      }
+    },
+    "%@ doesn’t accept this file type as a chat attachment: %@.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ 不接受此文件类型作为聊天附件：%@。"
+          }
+        }
+      }
+    },
+    "Connected to relay for %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已连接中继 %@"
+          }
+        }
+      }
+    },
+    "Not connected to relay (last try %@ ago)": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未连接到中继（上次尝试于 %@ 前）"
+          }
+        }
+      }
+    },
+    "Allow _Once": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "允许一次"
+          }
+        }
+      }
+    },
+    "Allow _Always": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "始终允许"
+          }
+        }
+      }
+    },
+    "_Deny Once": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拒绝一次"
+          }
+        }
+      }
+    },
+    "De_ny Always": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "始终拒绝"
+          }
+        }
+      }
+    },
+    "Link": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "链接"
+          }
+        }
+      }
+    },
+    "Approve": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "批准"
+          }
+        }
+      }
+    },
+    "Revoke": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "撤销"
+          }
+        }
+      }
+    },
+    "Select a Session": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选择会话"
+          }
+        }
+      }
+    },
+    "Allow Once": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "允许一次"
+          }
+        }
+      }
+    },
+    "Always Allow": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "始终允许"
+          }
+        }
+      }
+    },
+    "Deny this Time": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "本次拒绝"
+          }
+        }
+      }
+    },
+    "Always Deny": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "始终拒绝"
           }
         }
       }

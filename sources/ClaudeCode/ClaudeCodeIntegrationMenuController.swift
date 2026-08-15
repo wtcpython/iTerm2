@@ -77,9 +77,7 @@ final class ClaudeCodeIntegrationMenuController: NSObject {
             }
             let failure = NSAlert()
             failure.messageText = NSLocalizedString("Couldn\u{2019}t Remove Hooks", comment: "UI")
-            failure.informativeText = NSLocalizedString("\(detail) Continue removing the ", comment: "UI")
-                + "workgroup and triggers anyway? cc-status will keep "
-                + "running until you fix the underlying issue and try again."
+            failure.informativeText = String(format: NSLocalizedString("%@ Continue removing the workgroup and triggers anyway? cc-status will keep running until you fix the underlying issue and try again.", comment: "UI"), detail)
             failure.alertStyle = .warning
             failure.addButton(withTitle: NSLocalizedString("Continue", comment: "UI"))
             failure.addButton(withTitle: NSLocalizedString("Cancel", comment: "UI"))

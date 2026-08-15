@@ -2390,7 +2390,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "其他操作..."
+            "value": "其他操作…"
           }
         }
       }
@@ -2516,7 +2516,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "从所选配置文件批量拷贝..."
+            "value": "从所选配置文件批量拷贝…"
           }
         }
       }
@@ -3668,7 +3668,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "缩放仅垂直最大化"
+            "value": "缩放时仅垂直最大化"
           }
         }
       }
@@ -4766,7 +4766,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "选择更新时安装 beta 还是 release 构建。"
+            "value": "选择更新时安装 beta 还是正式版构建。"
           }
         }
       }

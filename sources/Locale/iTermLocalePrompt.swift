@@ -166,9 +166,9 @@ class iTermLocalePromptAlert {
         alert.showsSuppressionButton = allowRemember
         if allowRemember, let profileName {
             if let arrangementName {
-                alert.suppressionButton?.title = NSLocalizedString("Save selection to arrangement \(arrangementName)", comment: "UI")
+                alert.suppressionButton?.title = String(format: NSLocalizedString("Save selection to arrangement %@", comment: "UI"), arrangementName)
             } else {
-                alert.suppressionButton?.title = NSLocalizedString("Save selection to profile \(profileName)", comment: "UI")
+                alert.suppressionButton?.title = String(format: NSLocalizedString("Save selection to profile %@", comment: "UI"), profileName)
             }
         }
         let popup = self.popup

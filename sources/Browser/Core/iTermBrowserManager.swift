@@ -2084,10 +2084,10 @@ extension iTermBrowserManager: iTermBrowserAudioHandlerDelegate {
                 let announcement = BrowserAnnouncement(
                     message: "Audio was muted. Allow playback by \(origin)?",
                     style: .kiTermAnnouncementViewStyleQuestion,
-                    options: [.init(title: "Allow _Once", identifier: Action.allowOnce),
-                              .init(title: "Allow _Always", identifier: Action.allowAlways),
-                              .init(title: "_Deny Once", identifier: Action.denyOnce),
-                              .init(title: "De_ny Always", identifier: Action.denyAlways) ],
+                    options: [.init(title: NSLocalizedString("Allow _Once", comment: "UI"), identifier: Action.allowOnce),
+                              .init(title: NSLocalizedString("Allow _Always", comment: "UI"), identifier: Action.allowAlways),
+                              .init(title: NSLocalizedString("_Deny Once", comment: "UI"), identifier: Action.denyOnce),
+                              .init(title: NSLocalizedString("De_ny Always", comment: "UI"), identifier: Action.denyAlways) ],
                     identifier: "NoSyncMuteAudio_\(origin)")
                 switch await delegate?.browserManager(self, announce: announcement) {
                 case .allowOnce:

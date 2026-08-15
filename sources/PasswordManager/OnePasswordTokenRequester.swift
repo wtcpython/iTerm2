@@ -80,9 +80,9 @@ class OnePasswordUtils {
         let alert = NSAlert()
         alert.messageText = NSLocalizedString("OnePassword Unavailable", comment: "UI")
         if let path = path {
-            alert.informativeText = NSLocalizedString("The existing installation of the OnePassword CLI at \(path) is an incompatible. The iTerm2 integration requires version 2.", comment: "UI")
+            alert.informativeText = String(format: NSLocalizedString("The existing installation of the OnePassword CLI at %@ is an incompatible. The iTerm2 integration requires version 2.", comment: "UI"), path)
         } else {
-            alert.informativeText = NSLocalizedString("Version 2 of the OnePassword CLI could not be found. Check that \(OnePasswordUtils.pathToCLI) is installed and has version 2.x.", comment: "UI")
+            alert.informativeText = String(format: NSLocalizedString("Version 2 of the OnePassword CLI could not be found. Check that %@ is installed and has version 2.x.", comment: "UI"), OnePasswordUtils.pathToCLI)
         }
         alert.addButton(withTitle: NSLocalizedString("OK", comment: "UI"))
         alert.runModal()

@@ -278,7 +278,7 @@ class iTermClippingsView: NSView {
 
         if !viewingLive {
             historyStatusLabel.stringValue = "\(historyIndex + 1)/\(total)"
-            historyStatusLabel.toolTip = NSLocalizedString("Viewing archived clippings (\(historyIndex + 1) of \(total))", comment: "UI")
+            historyStatusLabel.toolTip = String(format: NSLocalizedString("Viewing archived clippings (%@ of %@)", comment: "UI"), String(historyIndex + 1), String(total))
             historyStatusLabel.isHidden = false
         } else {
             historyStatusLabel.stringValue = ""

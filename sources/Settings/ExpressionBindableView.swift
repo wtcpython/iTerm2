@@ -65,7 +65,7 @@ extension ExpressionBindableView where Self: NSView, Self: NSAlertDelegate {
         textField.isEditable = true
         textField.isSelectable = true
         textField.stringValue = expression ?? ""
-        textField.placeholderString = NSLocalizedString("Expression (e.g., \(example))", comment: "UI")
+        textField.placeholderString = String(format: NSLocalizedString("Expression (e.g., %@)", comment: "UI"), example)
 
         let pathSource = iTermVariableHistory.pathSource(for: .session)
         textFieldDelegate = iTermFunctionCallTextFieldDelegate(

@@ -920,7 +920,7 @@ class iTermScreenshotPanel: NSPanel {
         NSLog("updateLargeScreenshotUI: lineRange=\(lineRange), maxLinesPerPart=\(cachedMaxLinesPerPart), numberOfParts=\(cachedNumberOfParts)")
 
         if cachedNumberOfParts > 1 {
-            largeScreenshotWarningLabel.stringValue = NSLocalizedString("⚠️ Large screenshot will be saved as \(cachedNumberOfParts) files.", comment: "UI")
+            largeScreenshotWarningLabel.stringValue = String(format: NSLocalizedString("⚠️ Large screenshot will be saved as %@ files.", comment: "UI"), String(cachedNumberOfParts))
             largeScreenshotWarningLabel.isHidden = false
             copyButton.isEnabled = false
         } else {

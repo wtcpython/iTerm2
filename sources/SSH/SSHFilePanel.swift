@@ -1145,7 +1145,7 @@ extension SSHFilePanel {
     private func presentFileExistsAlert(for descriptor: SSHFileDescriptor) async -> NSApplication.ModalResponse {
         let alert = NSAlert()
         alert.alertStyle = .warning
-        alert.messageText = NSLocalizedString("A file with the name “\(descriptor.absolutePath.lastPathComponent)” on \(descriptor.sshIdentity.displayName) already exists in this location. Do you want to replace it?", comment: "UI")
+        alert.messageText = String(format: NSLocalizedString("A file with the name “%@” on %@ already exists in this location. Do you want to replace it?", comment: "UI"), descriptor.absolutePath.lastPathComponent, descriptor.sshIdentity.displayName)
         alert.informativeText = NSLocalizedString("Replacing it will overwrite its current contents.", comment: "UI")
 
         let replaceButton = alert.addButton(withTitle: NSLocalizedString("Replace", comment: "UI"))
@@ -1486,7 +1486,7 @@ extension SSHFilePanel {
         mainTitle.alignment = .left
         
         // Create subtitle
-        let subtitleLabel = NSTextField(labelWithString: NSLocalizedString("Name of new folder inside “\(currentPath.absolutePath.lastPathComponent)”:", comment: "UI"))
+        let subtitleLabel = NSTextField(labelWithString: String(format: NSLocalizedString("Name of new folder inside “%@”:", comment: "UI"), currentPath.absolutePath.lastPathComponent))
         subtitleLabel.translatesAutoresizingMaskIntoConstraints = false
         subtitleLabel.font = NSFont.systemFont(ofSize: NSFont.smallSystemFontSize)
         subtitleLabel.textColor = NSColor.secondaryLabelColor

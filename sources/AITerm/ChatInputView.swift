@@ -587,7 +587,7 @@ class ChatInputView: NSView, NSTextFieldDelegate {
         alert.messageText = urls.count == 1
             ? "Attachment not supported"
             : "Attachments not supported"
-        alert.informativeText = NSLocalizedString("\(providerName) doesn’t accept this file type as a chat attachment: \(names).", comment: "UI")
+        alert.informativeText = String(format: NSLocalizedString("%@ doesn’t accept this file type as a chat attachment: %@.", comment: "UI"), providerName, names)
         alert.alertStyle = .informational
         alert.addButton(withTitle: NSLocalizedString("OK", comment: "UI"))
         alert.beginSheetModal(for: window)

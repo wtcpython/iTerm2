@@ -1400,7 +1400,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "慢速粘贴放慢"
+            "value": "更慢速粘贴"
           }
         }
       }
@@ -5252,7 +5252,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "复制性能统计信息"
+            "value": "拷贝性能统计信息"
           }
         }
       }
@@ -6440,7 +6440,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "从文件加载窗口布局…"
+            "value": "从文件载入窗口布局…"
           }
         }
       }
@@ -6638,7 +6638,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "全局查找..."
+            "value": "全局查找…"
           }
         }
       }

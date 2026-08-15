@@ -2647,7 +2647,7 @@ extension Message {
             case .streamingChanged(let state):
                 switch state {
                 case .active:
-                    return [.init(title: "Stop", destructive: true, identifier: "")]
+                    return [.init(title: NSLocalizedString("Stop", comment: "UI"), destructive: true, identifier: "")]
                 case .stopped, .stoppedAutomatically:
                     return []
                 }
@@ -2656,7 +2656,7 @@ extension Message {
                 // handler in configure(cell:RegularMessageCellView,...);
                 // empty-string ids would conflict with the
                 // single-button cases above.
-                return [.init(title: "Link", destructive: false, identifier: "link"),
+                return [.init(title: NSLocalizedString("Link", comment: "UI"), destructive: false, identifier: "link"),
                         .init(title: NSLocalizedString("Enable Orchestration", comment: "UI"), destructive: false, identifier: "orchestrate")]
             case .offerOrchestration:
                 // Identifier matches the offerOrchestration buttonClicked
@@ -2695,10 +2695,10 @@ extension Message {
                 // wires the buttonClicked handler that parses them and
                 // publishes the matching workgroupPermissionResponse.
                 return [
-                    .init(title: "Approve",
+                    .init(title: NSLocalizedString("Approve", comment: "UI"),
                           destructive: false,
                           identifier: "workgroupPermission:\(ApprovalChoice.approve.rawValue):\(requestID)"),
-                    .init(title: "Deny",
+                    .init(title: NSLocalizedString("Deny", comment: "UI"),
                           destructive: true,
                           identifier: "workgroupPermission:\(ApprovalChoice.deny.rawValue):\(requestID)"),
                 ]
@@ -2707,7 +2707,7 @@ extension Message {
                     .init(title: NSLocalizedString("Enable Orchestration", comment: "UI"),
                           destructive: false,
                           identifier: "enableOrchestration:\(ApprovalChoice.approve.rawValue):\(requestID)"),
-                    .init(title: "Not Now",
+                    .init(title: NSLocalizedString("Not Now", comment: "UI"),
                           destructive: true,
                           identifier: "enableOrchestration:\(ApprovalChoice.deny.rawValue):\(requestID)"),
                 ]
@@ -2717,21 +2717,21 @@ extension Message {
                 // so handleRevokeOrchestrationPermissionButton splits with
                 // maxSplits 1 and keeps everything after it verbatim.
                 return [
-                    .init(title: "Revoke",
+                    .init(title: NSLocalizedString("Revoke", comment: "UI"),
                           destructive: true,
                           identifier: "revokeOrchestrationPermission:\(scope)"),
                 ]
             }
         case .selectSessionRequest:
-            return [.init(title: "Select a Session", destructive: false, identifier: PickSessionButtonIdentifier.pickSession.rawValue),
+            return [.init(title: NSLocalizedString("Select a Session", comment: "UI"), destructive: false, identifier: PickSessionButtonIdentifier.pickSession.rawValue),
                     .init(title: NSLocalizedString("Cancel", comment: "UI"), destructive: true, identifier: PickSessionButtonIdentifier.cancel.rawValue)]
         case .remoteCommandRequest(let payload, safe: _):
             switch payload {
             case .classic:
-                return [.init(title: "Allow Once", destructive: false, identifier: RemoteCommandButtonIdentifier.allowOnce.rawValue),
-                        .init(title: "Always Allow", destructive: false, identifier: RemoteCommandButtonIdentifier.allowAlways.rawValue),
-                        .init(title: "Deny this Time", destructive: true, identifier: RemoteCommandButtonIdentifier.denyOnce.rawValue),
-                        .init(title: "Always Deny", destructive: true, identifier: RemoteCommandButtonIdentifier.denyAlways.rawValue)]
+                return [.init(title: NSLocalizedString("Allow Once", comment: "UI"), destructive: false, identifier: RemoteCommandButtonIdentifier.allowOnce.rawValue),
+                        .init(title: NSLocalizedString("Always Allow", comment: "UI"), destructive: false, identifier: RemoteCommandButtonIdentifier.allowAlways.rawValue),
+                        .init(title: NSLocalizedString("Deny this Time", comment: "UI"), destructive: true, identifier: RemoteCommandButtonIdentifier.denyOnce.rawValue),
+                        .init(title: NSLocalizedString("Always Deny", comment: "UI"), destructive: true, identifier: RemoteCommandButtonIdentifier.denyAlways.rawValue)]
             case .external:
                 // Orchestration tool calls aren't per-call gated; no buttons.
                 return []
@@ -2754,7 +2754,7 @@ extension ChatViewController: NSMenuItemValidation {
             if menuItem.state == .on {
                 menuItem.title = autoTitle
             } else {
-                menuItem.title = NSLocalizedString("AI can \(category.rawValue)", comment: "UI")
+                menuItem.title = String(format: NSLocalizedString("AI can %@", comment: "UI"), category.rawValue)
             }
         }
         return true
@@ -3008,7 +3008,7 @@ extension ChatViewController: ChatToolbarDataSource {
                     if !category.isBrowserSpecific {
                         continue
                     }
-                    menu.addItem(withTitle: NSLocalizedString("AI can \(category.rawValue)", comment: "UI"),
+                    menu.addItem(withTitle: String(format: NSLocalizedString("AI can %@", comment: "UI"), category.rawValue),
                                  action: #selector(toggleAlwaysAllow(_:)),
                                  target: self,
                                  state: rce.controlState(chatID: chatID,

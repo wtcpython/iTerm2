@@ -303,7 +303,7 @@ class LastPassDataSource: CommandLinePasswordDataSource {
             if error as? LPError == LPError.timedOut {
                 let alert = NSAlert()
                 alert.messageText = NSLocalizedString("Timeout", comment: "UI")
-                alert.informativeText = NSLocalizedString("The LastPass service took too long to respond. \(message)", comment: "UI")
+                alert.informativeText = String(format: NSLocalizedString("The LastPass service took too long to respond. %@", comment: "UI"), message)
                 alert.addButton(withTitle: NSLocalizedString("OK", comment: "UI"))
                 alert.runModal()
                 return
@@ -518,7 +518,7 @@ class LastPassUtils {
         let alert = NSAlert()
         let email = iTermUserDefaults.userDefaults().string(forKey: usernameUserDefaultsKey) ?? "your@email.address"
         alert.messageText = NSLocalizedString("Authentication Failed", comment: "UI")
-        alert.informativeText = NSLocalizedString("You can also try opening a terminal window and running `lpass login \(email)`.", comment: "UI")
+        alert.informativeText = String(format: NSLocalizedString("You can also try opening a terminal window and running `lpass login %@`.", comment: "UI"), email)
         alert.addButton(withTitle: NSLocalizedString("Open Terminal Window", comment: "UI"))
         alert.addButton(withTitle: NSLocalizedString("Copy Command", comment: "UI"))
         alert.addButton(withTitle: NSLocalizedString("Cancel", comment: "UI"))

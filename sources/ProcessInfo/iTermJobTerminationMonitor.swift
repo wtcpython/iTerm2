@@ -145,7 +145,7 @@ class iTermJobTerminationMonitor: NSObject {
         NSApp.activate(ignoringOtherApps: true)
         let alert = NSAlert()
         alert.messageText = NSLocalizedString("Cannot Notify on Termination", comment: "UI")
-        alert.informativeText = NSLocalizedString("iTerm2 cannot watch the job \(displayName) with process ID \(pid) because it has already terminated.", comment: "UI")
+        alert.informativeText = String(format: NSLocalizedString("iTerm2 cannot watch the job %@ with process ID %@ because it has already terminated.", comment: "UI"), displayName, String(pid))
         alert.addButton(withTitle: NSLocalizedString("OK", comment: "UI"))
         alert.runModal()
     }

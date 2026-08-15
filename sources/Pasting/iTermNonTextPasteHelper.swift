@@ -139,7 +139,7 @@ class iTermNonTextPasteHelper: NSObject {
         let fileDescription = descriptionForFiles(existingPaths, isDirectory: isDirectory)
 
         let warning = iTermWarning()
-        warning.title = NSLocalizedString("How would you like to paste \(fileDescription)?", comment: "UI")
+        warning.title = String(format: NSLocalizedString("How would you like to paste %@?", comment: "UI"), fileDescription)
         warning.actionLabels = actions.map { $0.rawValue }
         warning.identifier = singleFile ? "NoSyncPasteNonTextFile" : "NoSyncPasteNonTextFiles"
         warning.warningType = .kiTermWarningTypePermanentlySilenceable
@@ -267,7 +267,7 @@ class iTermNonTextPasteHelper: NSObject {
         DLog("handleImageDataPaste: actions=\(actions.map { $0.rawValue })")
 
         let warning = iTermWarning()
-        warning.title = NSLocalizedString("The clipboard contains \(typeDescription) image data (\(sizeDescription)). How would you like to paste it?", comment: "UI")
+        warning.title = String(format: NSLocalizedString("The clipboard contains %@ image data (%@). How would you like to paste it?", comment: "UI"), typeDescription, sizeDescription)
         warning.actionLabels = actions.map { $0.rawValue }
         warning.identifier = canUpload ? "NoSyncPasteImageDataRemote" : "NoSyncPasteImageData"
         warning.warningType = .kiTermWarningTypePermanentlySilenceable
@@ -408,7 +408,7 @@ class iTermNonTextPasteHelper: NSObject {
         }
 
         let warning = iTermWarning()
-        warning.title = NSLocalizedString("OK to paste \(base64.count.formatted()) bytes of base64-encoded data?", comment: "UI")
+        warning.title = String(format: NSLocalizedString("OK to paste %@ bytes of base64-encoded data?", comment: "UI"), base64.count.formatted())
         warning.actionLabels = [NSLocalizedString("OK", comment: "UI"), NSLocalizedString("Cancel", comment: "UI")]
         warning.identifier = "NoSyncPasteLargeBase64"
         warning.warningType = .kiTermWarningTypePermanentlySilenceable

@@ -146,7 +146,7 @@ class iTermBrowserContextMenuHelper: NSObject {
         if let searchEngineName = delegate?.contextMenuSearchEngineName(),
            let i = menu.items.firstIndex(where: { $0.identifier == NSUserInterfaceItemIdentifier(rawValue: "WKMenuItemIdentifierSearchWeb") }) {
             menu.removeItem(at: i)
-            let item = NSMenuItem(title: NSLocalizedString("Search with \(searchEngineName)", comment: "UI"),
+            let item = NSMenuItem(title: String(format: NSLocalizedString("Search with %@", comment: "UI"), searchEngineName),
                                   action: #selector(search(_:)),
                                   keyEquivalent: "")
             item.target = self

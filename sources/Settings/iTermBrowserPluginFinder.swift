@@ -19,7 +19,7 @@ class iTermBrowserPluginFinder: NSObject, NSOpenSavePanelDelegate {
         panel.canChooseDirectories = true
         panel.canChooseFiles = true
         panel.allowsMultipleSelection = false
-        panel.title = NSLocalizedString("Select \(allowedBundleName)", comment: "UI")
+        panel.title = String(format: NSLocalizedString("Select %@", comment: "UI"), allowedBundleName)
         panel.prompt = "Choose"
         panel.message = "Select \(allowedBundleName)."
         panel.allowedContentTypes = [.bundle, .application, .applicationBundle]

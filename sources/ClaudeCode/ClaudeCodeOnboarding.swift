@@ -1387,7 +1387,7 @@ class ClaudeCodeOnboarding: NSObject {
             RLog("Onboarding: failed to write settings.json: \(error)")
             let alert = NSAlert()
             alert.messageText = NSLocalizedString("Failed to install hook", comment: "UI")
-            alert.informativeText = NSLocalizedString("Could not write to \(settingsURL.path): \(error.localizedDescription)", comment: "UI")
+            alert.informativeText = String(format: NSLocalizedString("Could not write to %@: %@", comment: "UI"), settingsURL.path, error.localizedDescription)
             alert.runModal()
             return false
         }

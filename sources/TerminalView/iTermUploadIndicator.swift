@@ -29,7 +29,7 @@ class iTermUploadIndicator: NSView {
         layer?.borderColor = NSColor.separatorColor.cgColor
 
         // Configure label
-        label.stringValue = NSLocalizedString("Uploading \u{201C}\(filename)\u{201D}…", comment: "UI")
+        label.stringValue = String(format: NSLocalizedString("Uploading \u{201C}%@\u{201D}…", comment: "UI"), filename)
         label.font = NSFont.systemFont(ofSize: 12)
         label.textColor = NSColor.labelColor
         label.lineBreakMode = .byTruncatingMiddle

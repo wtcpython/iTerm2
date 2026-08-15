@@ -91,7 +91,7 @@ class PasteboardReporter: NSObject {
         }
         let alert = NSAlert()
         alert.messageText = NSLocalizedString("Error Updating Settings", comment: "UI")
-        alert.informativeText = NSLocalizedString("An error occurred while removing the file that authorizes clipboard reporting: \(error.localizedDescription).\nAs long as this file exists, clipboard reporting could be enabled by programs running on this computer.", comment: "UI")
+        alert.informativeText = String(format: NSLocalizedString("An error occurred while removing the file that authorizes clipboard reporting: %@.\nAs long as this file exists, clipboard reporting could be enabled by programs running on this computer.", comment: "UI"), error.localizedDescription)
         alert.alertStyle = .warning
         alert.addButton(withTitle: NSLocalizedString("Reveal in Finder", comment: "UI"))
         alert.runModal()

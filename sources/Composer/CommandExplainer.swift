@@ -77,7 +77,7 @@ class CommandExplainer: NSObject {
                                           accessory: nil,
                                           identifier: "NoSyncExplainShell",
                                           silenceable: .kiTermWarningTypePermanentlySilenceable,
-                                          heading: "Open ExplainShell?",
+                                          heading: NSLocalizedString("Open ExplainShell?", comment: "UI"),
                                           window: window)
         if selection == .kiTermWarningSelection0 {
             NSWorkspace.shared.open(url)

@@ -134,16 +134,16 @@ static CGFloat SplitHalfDistanceFromEdge(SplitSessionHalf half, NSSize size, NSP
             [self drawSourceWithMessage:@"Select pane to swap with" rect:dirtyRect];
             return;
         case SplitSelectionViewModeTargetMove:
-            [self drawTargetWithMessage:@"Click to move source pane to this split"];
+            [self drawTargetWithMessage:NSLocalizedString(@"Click to move source pane to this split", @"UI")];
             return;
         case SplitSelectionViewModeTargetSwap:
-            [self drawTargetWithMessage:@"Click to swap source pane with this one"];
+            [self drawTargetWithMessage:NSLocalizedString(@"Click to swap source pane with this one", @"UI")];
             return;
         case SplitSelectionViewModeInspect:
-            [self drawInspectWithMessage:@"Click to inspect" rect:dirtyRect];
+            [self drawInspectWithMessage:NSLocalizedString(@"Click to inspect", @"UI") rect:dirtyRect];
             return;
         case SplitSelectionViewModeSelect:
-            [self drawInspectWithMessage:@"Click to select" rect:dirtyRect];
+            [self drawInspectWithMessage:NSLocalizedString(@"Click to select", @"UI") rect:dirtyRect];
             return;
     }
 }

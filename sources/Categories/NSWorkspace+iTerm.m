@@ -420,7 +420,7 @@ withApplicationAtURL:appURL
                                                     accessory:nil
                                                    identifier:identifier
                                                   silenceable:kiTermWarningTypePermanentlySilenceable
-                                                      heading:@"Open in iTerm2?"
+                                                      heading:NSLocalizedString(@"Open in iTerm2?", @"UI")
                                                        window:window];
             } else {
                 selection = [iTermWarning showWarningWithTitle:NSLocalizedString(@"iTerm2 can display web pages! Would you like to open this link in iTerm2?", @"UI")
@@ -428,7 +428,7 @@ withApplicationAtURL:appURL
                                                     accessory:nil
                                                    identifier:identifier
                                                   silenceable:kiTermWarningTypePermanentlySilenceable
-                                                      heading:@"Open in iTerm2?"
+                                                      heading:NSLocalizedString(@"Open in iTerm2?", @"UI")
                                                        window:window];
             }
             break;

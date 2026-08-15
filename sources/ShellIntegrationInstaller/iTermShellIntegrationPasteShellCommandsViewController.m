@@ -144,7 +144,7 @@
             if (stage < i) {
                 prefix = [NSString stringWithFormat:@"Step %d. Update", i + 1];
             } else if (stage == i && !_busy) {
-                prefix = [NSString stringWithFormat:@"➡ Select “Continue” to update"];
+                prefix = NSLocalizedString(@"➡ Select “Continue” to update", @"UI");
                 indexToBold = lines.count;
             } else if (stage == i && _busy) {
                 prefix = self.waitingText;

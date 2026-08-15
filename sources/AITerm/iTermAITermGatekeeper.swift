@@ -29,7 +29,7 @@ class iTermAITermGatekeeper: NSObject {
                                   accessory: nil,
                                   identifier: nil,
                                   silenceable: .kiTermWarningTypePersistent,
-                                  heading: "Feature Unavailable",
+                                  heading: NSLocalizedString("Feature Unavailable", comment: "UI"),
                                   window: nil)
             }
             return false
@@ -41,7 +41,7 @@ class iTermAITermGatekeeper: NSObject {
                                                   accessory: nil,
                                                   identifier: nil,
                                                   silenceable: .kiTermWarningTypePersistent,
-                                                  heading: "Plugin Missing",
+                                                  heading: NSLocalizedString("Plugin Missing", comment: "UI"),
                                                   window: nil)
                 if selection == .kiTermWarningSelection0 {
                     PreferencePanel.sharedInstance().openToPreference(withKey: kPhonyPreferenceKeyInstallAIPlugin)
@@ -56,7 +56,7 @@ class iTermAITermGatekeeper: NSObject {
                                                   accessory: nil,
                                                   identifier: nil,
                                                   silenceable: .kiTermWarningTypePersistent,
-                                                  heading: "Feature Unavailable",
+                                                  heading: NSLocalizedString("Feature Unavailable", comment: "UI"),
                                                   window: nil)
                 if selection == .kiTermWarningSelection0 {
                     PreferencePanel.sharedInstance().openToPreference(withKey: kPreferenceKeyEnableAI)
@@ -74,7 +74,7 @@ class iTermAITermGatekeeper: NSObject {
                                   accessory: nil,
                                   identifier: nil,
                                   silenceable: .kiTermWarningTypePersistent,
-                                  heading: "Feature Unavailable",
+                                  heading: NSLocalizedString("Feature Unavailable", comment: "UI"),
                                   window: nil)
             }
             return false
@@ -85,7 +85,7 @@ class iTermAITermGatekeeper: NSObject {
                                   accessory: nil,
                                   identifier: nil,
                                   silenceable: .kiTermWarningTypePersistent,
-                                  heading: "Feature Unavailable",
+                                  heading: NSLocalizedString("Feature Unavailable", comment: "UI"),
                                   window: nil)
             }
             return false

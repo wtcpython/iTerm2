@@ -480,7 +480,7 @@ extension TextViewPorthole: NSTextViewDelegate {
                                  accessory: nil,
                                  identifier: "NoSyncOpenFileFromMarkdownLink",
                                  silenceable: .kiTermWarningTypePermanentlySilenceable,
-                                 heading: "Confirm",
+                                 heading: NSLocalizedString("Confirm", comment: "UI"),
                                  window: textView.window) == .kiTermWarningSelection0 {
                 NSWorkspace.shared.open(url)
             }
@@ -490,7 +490,7 @@ extension TextViewPorthole: NSTextViewDelegate {
                                  accessory: nil,
                                  identifier: "NoSyncOpenURLFromMarkdownLink",
                                  silenceable: .kiTermWarningTypePermanentlySilenceable,
-                                 heading: "Confirm",
+                                 heading: NSLocalizedString("Confirm", comment: "UI"),
                                  window: textView.window) == .kiTermWarningSelection0 {
                 NSWorkspace.shared.open(url)
             }

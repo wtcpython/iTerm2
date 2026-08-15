@@ -309,11 +309,11 @@ const CGFloat iTermGetStatusBarHeight(void) {
     }
     if (![_component statusBarComponentIsInternal]) {
         if ([[_component statusBarComponentKnobs] count]) {
-            [menu addItemWithTitle:[NSString stringWithFormat:@"Configure %@", [self.component statusBarComponentShortDescription]]
+            [menu addItemWithTitle:[NSString stringWithFormat:NSLocalizedString(@"Configure %@", @"Menu"), [self.component statusBarComponentShortDescription]]
                             action:@selector(configureComponent:)
                      keyEquivalent:@""];
         }
-        [menu addItemWithTitle:[NSString stringWithFormat:@"Hide %@", [self.component statusBarComponentShortDescription]]
+        [menu addItemWithTitle:[NSString stringWithFormat:NSLocalizedString(@"Hide %@", @"Menu"), [self.component statusBarComponentShortDescription]]
                         action:@selector(hideComponent:)
                  keyEquivalent:@""];
     }

@@ -147,9 +147,9 @@
     _semanticHistoryPrefController.guid = selectedGuid;
     [_boundHostsTableView reloadData];
     if (self.profileType == ProfileTypeBrowser) {
-        _triggersHelp.helpText = @"Triggers are actions you configure to run when certain URLs are visited or text on a web page is found.";
+        _triggersHelp.helpText = NSLocalizedString(@"Triggers are actions you configure to run when certain URLs are visited or text on a web page is found.", @"UI");
     } else {
-        _triggersHelp.helpText = @"Triggers watch for text matching a regular expression to arrive in a terminal session and then perform an action in response.";
+        _triggersHelp.helpText = NSLocalizedString(@"Triggers watch for text matching a regular expression to arrive in a terminal session and then perform an action in response.", @"UI");
     }
 }
 

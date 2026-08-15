@@ -1092,7 +1092,7 @@ extension ChatViewController {
                                         accessory: nil,
                                         identifier: nil,
                                         silenceable: .kiTermWarningTypePersistent,
-                                        heading: "Confirm Change",
+                                        heading: NSLocalizedString("Confirm Change", comment: "UI"),
                                         window: view.window)
             switch sel {
             case .kiTermWarningSelection0:
@@ -1255,7 +1255,7 @@ extension ChatViewController {
                                           accessory: nil,
                                           identifier: nil,
                                           silenceable: .kiTermWarningTypePersistent,
-                                          heading: "Privacy Warning",
+                                          heading: NSLocalizedString("Privacy Warning", comment: "UI"),
                                           window: nil)
         if selection == .kiTermWarningSelection0 {
             streaming = true
@@ -1267,7 +1267,7 @@ extension ChatViewController {
     }
 
     @objc private func showLinkedSessionHelp(_ sender: Any) {
-        chatToolbar.sessionButton.it_showWarning(withMarkdown: "When a terminal session is linked to this chat, the AI may view terminal contents and run commands in that session. You will be prompted to grant permission before it is able to view, type to, or modify a terminal session.")
+        chatToolbar.sessionButton.it_showWarning(withMarkdown: String(localized: "When a terminal session is linked to this chat, the AI may view terminal contents and run commands in that session. You will be prompted to grant permission before it is able to view, type to, or modify a terminal session.", comment: "Warning"))
     }
 
     @objc private func deleteChat(_ sender: Any) {

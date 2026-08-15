@@ -646,7 +646,7 @@ static void iTermPreferencesRefreshFastCachesForKey(NSString *key);
                              accessory:nil
                             identifier:nil
                            silenceable:kiTermWarningTypePersistent
-                               heading:@"Load Gitlab Settings"
+                               heading:NSLocalizedString(@"Load Gitlab Settings", @"UI")
                                 window:nil];
     if (selection == kiTermWarningSelection0) {
         [ud setBool:YES forKey:kPreferenceKeyLoadPrefsFromCustomFolder];

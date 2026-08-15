@@ -270,7 +270,7 @@ NS_ASSUME_NONNULL_BEGIN
                              accessory:nil
                             identifier:@"NoSyncUvVersionBumpWarning"
                            silenceable:kiTermWarningTypePermanentlySilenceable
-                               heading:@"Python Version Changes"
+                               heading:NSLocalizedString(@"Python Version Changes", @"UI")
                                 window:nil];
 }
 
@@ -381,7 +381,7 @@ NS_ASSUME_NONNULL_BEGIN
                                                                        accessory:nil
                                                                       identifier:@"TakingTooLongToEnumerateScripts"
                                                                      silenceable:kiTermWarningTypePersistent
-                                                                         heading:@"Performance Issue"
+                                                                         heading:NSLocalizedString(@"Performance Issue", @"UI")
                                                                           window:nil];
             if (selection == kiTermWarningSelection0) {
                 _disableEnumeration = YES;
@@ -390,7 +390,7 @@ NS_ASSUME_NONNULL_BEGIN
                                                                            accessory:nil
                                                                           identifier:@"TakingTooLongToEnumerateScripts2"
                                                                          silenceable:kiTermWarningTypePersistent
-                                                                             heading:@"Scripts Disabled"
+                                                                             heading:NSLocalizedString(@"Scripts Disabled", @"UI")
                                             window:nil];
                 return;
             } else {
@@ -452,7 +452,7 @@ NS_ASSUME_NONNULL_BEGIN
     warning.actionLabels = @[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI"), @"Move to Trash" ];
     warning.identifier = @"NoSyncInstallScriptArchive";
     warning.warningType = kiTermWarningTypeTemporarilySilenceable;
-    warning.heading = @"Install Script Archive?";
+    warning.heading = NSLocalizedString(@"Install Script Archive?", @"UI");
     warning.doNotRememberLabels = @[ @"Move to Trash", NSLocalizedString(@"Cancel", @"UI") ];
     const iTermWarningSelection selection = [warning runModal];
     NSURL *url = [NSURL fileURLWithPath:file];
@@ -849,7 +849,7 @@ NS_ASSUME_NONNULL_BEGIN
         warning.actionLabels = @[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Reveal", @"UI") ];
         warning.identifier = @"NoSyncScriptMalformed";
         warning.warningType = kiTermWarningTypeTemporarilySilenceable;
-        warning.heading = @"Cannot Run Script";
+        warning.heading = NSLocalizedString(@"Cannot Run Script", @"UI");
         warning.doNotRememberLabels = @[ NSLocalizedString(@"Reveal", @"UI") ];
         iTermWarningSelection selection = [warning runModal];
         if (selection == kiTermWarningSelection1) {
@@ -888,7 +888,7 @@ NS_ASSUME_NONNULL_BEGIN
                              accessory:nil
                             identifier:@"NoSyncRebuildMissingUvEnv"
                            silenceable:kiTermWarningTypePersistent
-                               heading:@"Rebuild Python Environment?"
+                               heading:NSLocalizedString(@"Rebuild Python Environment?", @"UI")
                                 window:nil];
     if (selection != kiTermWarningSelection0) {
         return;
@@ -1591,7 +1591,7 @@ NS_ASSUME_NONNULL_BEGIN
                              accessory:nil
                             identifier:@"FullEnvironmentScriptsLocationRestricted"
                            silenceable:kiTermWarningTypePersistent
-                               heading:@"Invalid Folder"
+                               heading:NSLocalizedString(@"Invalid Folder", @"UI")
                                 window:sender];
     return NO;
 }

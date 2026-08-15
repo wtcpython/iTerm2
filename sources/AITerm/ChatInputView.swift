@@ -516,7 +516,7 @@ class ChatInputView: NSView, NSTextFieldDelegate {
                 accessory: nil,
                 identifier: "NoSyncAIChatAttachDroppedFile",
                 silenceable: .kiTermWarningTypePermanentlySilenceable,
-                heading: supported.count == 1 ? "Attach File?" : "Attach Files?",
+                heading: supported.count == 1 ? NSLocalizedString("Attach File?", comment: "UI") : NSLocalizedString("Attach Files?", comment: "UI"),
                 window: window)
             if selection == .kiTermWarningSelection0 {
                 addFiles(from: supported)
@@ -585,8 +585,8 @@ class ChatInputView: NSView, NSTextFieldDelegate {
         let providerName = AITermController.provider?.displayName ?? "the current AI provider"
         let alert = NSAlert()
         alert.messageText = urls.count == 1
-            ? "Attachment not supported"
-            : "Attachments not supported"
+            ? NSLocalizedString("Attachment not supported", comment: "UI")
+            : NSLocalizedString("Attachments not supported", comment: "UI")
         alert.informativeText = String(format: NSLocalizedString("%@ doesn’t accept this file type as a chat attachment: %@.", comment: "UI"), providerName, names)
         alert.alertStyle = .informational
         alert.addButton(withTitle: NSLocalizedString("OK", comment: "UI"))

@@ -525,7 +525,7 @@ final class SpecialExceptionsWindowController: NSWindowController {
                           accessory: nil,
                           identifier: "SpecialExceptionsImportError",
                           silenceable: .kiTermWarningTypePersistent,
-                          heading: "Problem Importing Special Exceptions",
+                          heading: NSLocalizedString("Problem Importing Special Exceptions", comment: "UI"),
                           window: window)
     }
 
@@ -545,7 +545,7 @@ final class SpecialExceptionsWindowController: NSWindowController {
                                               accessory: nil,
                                               identifier: "SpecialExceptionsInstallNerdBundleConfirmation",
                                               silenceable: .kiTermWarningTypePersistent,
-                                              heading: "Confirm",
+                                              heading: NSLocalizedString("Confirm", comment: "UI"),
                                               window: window)
             if selection == .kiTermWarningSelection1 {
                 return

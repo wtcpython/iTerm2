@@ -121,7 +121,13 @@ static NSString *const INTERCHANGE_TOUCH_BAR_ITEMS = @"Touch Bar Items";
     [_tableView setTarget:self];
     NSArray* presetArray = [_delegate keyMappingPresetNames:self];
     if (presetArray) {
-        [_presetsPopup addItemsWithTitles:presetArray];
+        for (NSString *name in presetArray) {
+            NSMenuItem *item = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(name, @"UI")
+                                                          action:nil
+                                                   keyEquivalent:@""];
+            item.identifier = name;
+            [_presetsPopup.menu addItem:item];
+        }
     }
     if (_presetsPopup.menu.itemArray.count) {
         [_presetsPopup.menu addItem:[NSMenuItem separatorItem]];
@@ -406,7 +412,7 @@ static NSString *const INTERCHANGE_TOUCH_BAR_ITEMS = @"Touch Bar Items";
 }
 
 - (IBAction)loadPresets:(id)sender {
-    [_delegate keyMapping:self loadPresetsNamed:[[sender selectedItem] title]];
+    [_delegate keyMapping:self loadPresetsNamed:[[sender selectedItem] identifier]];
     [_tableView reloadData];
 }
 
@@ -534,7 +540,7 @@ static NSString *const INTERCHANGE_TOUCH_BAR_ITEMS = @"Touch Bar Items";
                              accessory:nil
                             identifier:@"RemoveExistingGlobalKeyMappingsBeforeLoading"
                            silenceable:kiTermWarningTypePersistent
-                               heading:@"Load Preset"
+                               heading:NSLocalizedString(@"Load Preset", @"UI")
                                 window:self.view.window];
     switch (selection) {
         case kiTermWarningSelection0:

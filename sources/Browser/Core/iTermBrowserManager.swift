@@ -2082,7 +2082,7 @@ extension iTermBrowserManager: iTermBrowserAudioHandlerDelegate {
                     case denyAlways
                 }
                 let announcement = BrowserAnnouncement(
-                    message: "Audio was muted. Allow playback by \(origin)?",
+                    message: String(format: NSLocalizedString("Audio was muted. Allow playback by %@?", comment: "UI"), origin),
                     style: .kiTermAnnouncementViewStyleQuestion,
                     options: [.init(title: NSLocalizedString("Allow _Once", comment: "UI"), identifier: Action.allowOnce),
                               .init(title: NSLocalizedString("Allow _Always", comment: "UI"), identifier: Action.allowAlways),

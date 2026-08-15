@@ -100,15 +100,15 @@ class StatusBarFilterComponent: iTermStatusBarBaseComponent, iTermFilterViewCont
     }
 
     override func statusBarComponentShortDescription() -> String {
-        return "Filter Tool"
+        return NSLocalizedString("Filter Tool", comment: "UI")
     }
 
     override func statusBarComponentDetailedDescription() -> String {
-        return "Filter tool to remove non-matching lines from terminal window."
+        return NSLocalizedString("Filter tool to remove non-matching lines from terminal window.", comment: "UI")
     }
 
     override func statusBarComponentKnobs() -> [iTermStatusBarComponentKnob] {
-        return [iTermStatusBarComponentKnob(labelText: "Color",
+        return [iTermStatusBarComponentKnob(labelText: NSLocalizedString("Color", comment: "UI"),
                                             type: .color,
                                             placeholder: nil,
                                             defaultValue: nil,

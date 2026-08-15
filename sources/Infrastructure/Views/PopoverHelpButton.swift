@@ -41,7 +41,7 @@ class PopoverHelpButton: NSButton {
 
     override func sendAction(_ action: Selector?, to target: Any?) -> Bool {
         // Call the existing help method
-        it_showWarning(withMarkdown: helpText)
+        it_showWarning(withMarkdown: NSLocalizedString(helpText, comment: "UI"))
         return super.sendAction(action, to: target)
     }
 }

@@ -919,7 +919,7 @@ replaceInitialDirectoryForSessionWithGUID:(NSString *)guid
 }
 
 - (BOOL)shouldOpenManyProfiles:(int)count {
-    NSString *theTitle = [NSString stringWithFormat:@"You are about to open %d profiles.", count];
+    NSString *theTitle = [NSString stringWithFormat:NSLocalizedString(@"You are about to open %d profiles.", @"UI"), count];
     iTermWarningSelection selection =
         [iTermWarning showWarningWithTitle:theTitle
                                    actions:@[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI") ]

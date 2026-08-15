@@ -339,7 +339,7 @@ class CommandInfoViewController: NSViewController {
             let snippet = iTermSnippet(title: command, value: command, guid: UUID().uuidString, tags: [], escaping: .none, version: iTermSnippet.currentVersion())
             iTermSnippetsModel.sharedInstance().addSnippet(snippet)
             if let window = view.window {
-                ToastWindowController.showToast(withMessage: "Snippet Added",
+                ToastWindowController.showToast(withMessage: String(localized: "Snippet Added", comment: "Toast"),
                                                 duration: 1,
                                                 screenCoordinate: window.convertPoint(toScreen: event.locationInWindow), pointSize: 12.0)
             }

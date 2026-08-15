@@ -103,7 +103,7 @@ class CommandShareMenuProvider: NSObject {
             return
         }
         let point = window.convertPoint(toScreen: locationInWindow)
-        ToastWindowController.showToast(withMessage: "Snippet Added",
+        ToastWindowController.showToast(withMessage: String(localized: "Snippet Added", comment: "Toast"),
                                         duration: 1,
                                         topLeftScreenCoordinate: point,
                                         pointSize: 12)
@@ -143,7 +143,7 @@ class CommandShareMenuProvider: NSObject {
             return
         }
         let point = window.convertPoint(toScreen: locationInWindow)
-        ToastWindowController.showToast(withMessage: "Copied",
+        ToastWindowController.showToast(withMessage: String(localized: "Copied", comment: "Toast"),
                                         duration: 1,
                                         topLeftScreenCoordinate: point,
                                         pointSize: 12)

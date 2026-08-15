@@ -290,7 +290,7 @@ class iTermJobInfoPopoverViewController: NSViewController, NSTableViewDataSource
         }
         let rectInScreen = window.convertToScreen(button.convert(button.bounds, to: nil))
         let topLeft = NSPoint(x: rectInScreen.maxX + 6, y: rectInScreen.maxY)
-        ToastWindowController.showToast(withMessage: "Copied",
+        ToastWindowController.showToast(withMessage: String(localized: "Copied", comment: "Toast"),
                                         duration: 1,
                                         topLeftScreenCoordinate: topLeft,
                                         pointSize: 12)

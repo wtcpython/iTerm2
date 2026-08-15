@@ -725,7 +725,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
     // Sends a live probe with the current form values so the user can confirm the
     // endpoint and API key work before saving. Sits on the far left of the button
     // row, away from Save/Cancel.
-    _testButton = [NSButton buttonWithTitle:@"Test Connection"
+    _testButton = [NSButton buttonWithTitle:NSLocalizedString(@"Test Connection", @"UI")
                                      target:self
                                      action:@selector(testClicked:)];
     _testButton.bezelStyle = NSBezelStyleRounded;
@@ -3285,16 +3285,16 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
 }
 
 - (IBAction)exportAllSettingsAndData:(id)sender {
-    [self showMessage:[iTerm2ImportExport exportAll] title:@"Problem Exporting"];
+    [self showMessage:[iTerm2ImportExport exportAll] title:NSLocalizedString(@"Problem Exporting", @"UI")];
 }
 
 - (IBAction)importAllSettingsAndData:(id)sender {
-    [self showMessage:[iTerm2ImportExport importAll] title:@"Problem Importing"];
+    [self showMessage:[iTerm2ImportExport importAll] title:NSLocalizedString(@"Problem Importing", @"UI")];
 }
 
 - (IBAction)eraseAllSettingsAndData:(id)sender {
     [self showMessage:[iTerm2ImportExport eraseAllWithWindow:self.view.window]
-                title:@"Problem Erasing Settings and Data"];
+                title:NSLocalizedString(@"Problem Erasing Settings and Data", @"UI")];
 }
 
 - (void)showMessage:(NSString *)message title:(NSString *)title {
@@ -3315,12 +3315,12 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
     NSString *action;
     NSString *path;
     if (@available(macOS 13, *)) {
-        message = @"System window restoration has been disabled, which prevents iTerm2 from respecting this setting. Disable ”System Settings > Desktop & Dock > Close windows when quitting an application“ to enable window restoration.";
-        action = @"Open System Settings";
+        message = NSLocalizedString(@"System window restoration has been disabled, which prevents iTerm2 from respecting this setting. Disable ”System Settings > Desktop & Dock > Close windows when quitting an application“ to enable window restoration.", @"UI");
+        action = NSLocalizedString(@"Open System Settings", @"UI");
         path = @"/System/Library/PreferencePanes/Dock.prefPane";
     } else {
-        message = @"System window restoration has been disabled, which prevents iTerm2 from respecting this setting. Disable System Settings > General > Close windows when quitting an app to enable window restoration.";
-        action = @"Open System Preferences";
+        message = NSLocalizedString(@"System window restoration has been disabled, which prevents iTerm2 from respecting this setting. Disable System Settings > General > Close windows when quitting an app to enable window restoration.", @"UI");
+        action = NSLocalizedString(@"Open System Preferences", @"UI");
         path = @"/System/Library/PreferencePanes/Appearance.prefPane";
     }
     const iTermWarningSelection selection =
@@ -3329,7 +3329,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
                              accessory:nil
                             identifier:@"NoSyncWindowRestorationDisabled"
                            silenceable:kiTermWarningTypePersistent
-                               heading:@"Window Restoration Disabled"
+                               heading:NSLocalizedString(@"Window Restoration Disabled", @"UI")
                                 window:self.view.window];
     if (selection == kiTermWarningSelection0) {
         [[NSWorkspace sharedWorkspace] it_openURL:[NSURL fileURLWithPath:path]

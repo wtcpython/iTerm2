@@ -123,7 +123,7 @@ static NSString *kCommandTimestamp = @"timestamp";
 
 - (void)abortWithErrorMessage:(NSString *)message {
     [self abortWithErrorMessage:[NSString stringWithFormat:@"%@", message]
-                          title:@"tmux Reported a Problem"];
+                          title:NSLocalizedString(@"tmux Reported a Problem", @"UI")];
 }
 
 // TODO: be more forgiving of errors.

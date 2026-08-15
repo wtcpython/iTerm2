@@ -304,7 +304,7 @@ extension PTYSession {
                               accessory: nil,
                               identifier: nil,
                               silenceable: .kiTermWarningTypePersistent,
-                              heading: "Error",
+                              heading: NSLocalizedString("Error", comment: "UI"),
                               window: self.genericView?.window)
             return
         }

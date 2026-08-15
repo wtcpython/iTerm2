@@ -9046,15 +9046,15 @@ hidingToolbeltShouldResizeWindow:(BOOL)hidingToolbeltShouldResizeWindow
     if (closable.count == 0) {
         return;
     }
-    NSString *count = (closable.count == 1) ? @"1 tab"
-                                            : [NSString stringWithFormat:@"%lu tabs", (unsigned long)closable.count];
+    NSString *count = (closable.count == 1) ? NSLocalizedString(@"1 tab", @"UI")
+                                            : [NSString stringWithFormat:NSLocalizedString(@"%lu tabs", @"UI"), (unsigned long)closable.count];
     const iTermWarningSelection selection =
         [iTermWarning showWarningWithTitle:[NSString stringWithFormat:NSLocalizedString(@"%@ (%@)", @"UI"), question, count]
                                    actions:@[ NSLocalizedString(@"Close", @"UI"), NSLocalizedString(@"Cancel", @"UI") ]
                                  accessory:nil
                                 identifier:@"NoSyncCloseTabGroup"
                                silenceable:kiTermWarningTypePersistent
-                                   heading:@"Close Tabs"
+                                   heading:NSLocalizedString(@"Close Tabs", @"UI")
                                     window:self.window];
     if (selection != kiTermWarningSelection0) {
         return;
@@ -14435,7 +14435,7 @@ typedef NS_ENUM(NSUInteger, iTermBroadcastCommand) {
                                                                     accessory:nil
                                                                    identifier:nil
                                                                   silenceable:kiTermWarningTypePersistent
-                                                                      heading:@"Not all sessions at password prompt"
+                                                                      heading:NSLocalizedString(@"Not all sessions at password prompt", @"UI")
                                                                        window:self.window];
          switch (selection) {
              case kiTermWarningSelection0:

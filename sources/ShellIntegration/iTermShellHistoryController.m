@@ -363,14 +363,8 @@ static NSString *iTermShellIntegrationRemoteHostKey(id<VT100RemoteHostReading> s
         firstResponder = nil;
     }
     NSAlert *alert = [[[NSAlert alloc] init] autorelease];
-    alert.messageText = @"About Shell Integration";
-    alert.informativeText =
-        @"To use shell integration features such as "
-        @"Command History, "
-        @"Recent Directories, "
-        @"Select Output of Last Command, "
-        @"and Automatic Profile Switching, "
-        @"your shell must be properly configured.";
+    alert.messageText = NSLocalizedString(@"About Shell Integration", @"UI");
+    alert.informativeText = NSLocalizedString(@"To use shell integration features such as Command History, Recent Directories, Select Output of Last Command, and Automatic Profile Switching, your shell must be properly configured.", @"UI");
     [alert addButtonWithTitle:NSLocalizedString(@"Learn More…", @"UI")];
     [alert addButtonWithTitle:NSLocalizedString(@"OK", @"UI")];
     if (firstResponder) {

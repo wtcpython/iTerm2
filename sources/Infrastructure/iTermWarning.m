@@ -322,12 +322,12 @@ BOOL gShowRememberedAlerts = NO;
 
 - (NSAlert *)makeAlert {
     NSAlert *alert = [[NSAlert alloc] init];
-    alert.messageText = _heading ?: @"Warning";
+    alert.messageText = _heading ?: NSLocalizedString(@"Warning", @"UI");
 
     // If this warning is being shown due to the "always show alerts with remembered
     // selections" mode, prepend explanatory text.
     if (_shownDueToRememberedAlertsMode && _savedSelectionLabel) {
-        alert.informativeText = [NSString stringWithFormat:@"%@\n\nThis alert had a saved selection of “%@”. It is being shown because “Always show alerts with remembered selections” is turned on in iTerm2 > Suppressed Alerts.", _title, _savedSelectionLabel];
+        alert.informativeText = [NSString stringWithFormat:NSLocalizedString(@"%@\n\nThis alert had a saved selection of “%@”. It is being shown because “Always show alerts with remembered selections” is turned on in iTerm2 > Suppressed Alerts.", @"UI"), _title, _savedSelectionLabel];
     } else {
         alert.informativeText = _title;
     }

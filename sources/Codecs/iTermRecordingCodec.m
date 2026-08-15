@@ -40,7 +40,7 @@
                                  accessory:nil
                                 identifier:@"RecordingMalformed"
                                silenceable:kiTermWarningTypePersistent
-                                   heading:@"Could not read the file: its envelope was malformed."
+                                   heading:NSLocalizedString(@"Could not read the file: its envelope was malformed.", @"UI")
                                     window:nil];
         return;
     }
@@ -76,7 +76,7 @@
                                  accessory:nil
                                 identifier:@"RecordingMalformed"
                                silenceable:kiTermWarningTypePersistent
-                                   heading:@"Can’t Load Recording"
+                                   heading:NSLocalizedString(@"Can’t Load Recording", @"UI")
                                     window:nil];
         return;
     }
@@ -90,7 +90,7 @@
                                  accessory:nil
                                 identifier:@"RecordingMalformed"
                                silenceable:kiTermWarningTypePersistent
-                                   heading:@"Can’t Load Recording"
+                                   heading:NSLocalizedString(@"Can’t Load Recording", @"UI")
                                     window:nil];
         return;
     }
@@ -118,7 +118,7 @@
                                      accessory:nil
                                     identifier:@"NoSyncCouldNotLoadRecording"
                                    silenceable:kiTermWarningTypePersistent
-                                       heading:@"Error Loading Recording"
+                                       heading:NSLocalizedString(@"Error Loading Recording", @"UI")
                                         window:nil];
             makeSessionCompletion(nil);
             return;
@@ -191,7 +191,7 @@
                                                      accessory:nil
                                                     identifier:@"ErrorSavingRecording"
                                                    silenceable:kiTermWarningTypePersistent
-                                                       heading:@"The recording could not be saved."
+                                                       heading:NSLocalizedString(@"The recording could not be saved.", @"UI")
                                                         window:nil];
                         }
                     });

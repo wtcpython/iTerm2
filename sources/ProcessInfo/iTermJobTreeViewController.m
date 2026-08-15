@@ -435,7 +435,7 @@ static int gSignalsToList[] = {
                              accessory:nil
                             identifier:@"NoSyncSuppressSendSignal"
                            silenceable:kiTermWarningTypePermanentlySilenceable
-                               heading:@"Confirmation Needed"
+                               heading:NSLocalizedString(@"Confirmation Needed", @"UI")
                                 window:self.view.window];
     return selection == kiTermWarningSelection0;
 }

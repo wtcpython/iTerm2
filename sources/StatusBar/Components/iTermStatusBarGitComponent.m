@@ -203,7 +203,7 @@ static const NSTimeInterval iTermStatusBarGitComponentDefaultCadence = 2;
                              accessory:nil
                             identifier:nil
                            silenceable:kiTermWarningTypePersistent
-                               heading:@"git timed out"
+                               heading:NSLocalizedString(@"git timed out", @"UI")
                                 window:window];
     if (selection == kiTermWarningSelection0) {
         [iTermAdvancedSettingsModel setGitTimeout:proposedTimeout];
@@ -336,7 +336,7 @@ static const NSTimeInterval iTermStatusBarGitComponentDefaultCadence = 2;
                                  accessory:nil
                                 identifier:@"GitPollerXcodeWarning"
                                silenceable:kiTermWarningTypePersistent
-                                   heading:@"Problem Running git"
+                                   heading:NSLocalizedString(@"Problem Running git", @"UI")
                                     window:containingView.window];
         return;
     }
@@ -495,7 +495,7 @@ static const NSTimeInterval iTermStatusBarGitComponentDefaultCadence = 2;
         [popoverVC appendString:[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]];
         if (popoverVC.textView.textStorage.length > 100000) {
             stopped = YES;
-            [popoverVC appendString:@"\n[Truncated]\n"];
+            [popoverVC appendString:NSLocalizedString(@"\n[Truncated]\n", @"UI")];
             [weakLogRunner terminate];
         }
         completion();
@@ -506,19 +506,19 @@ static const NSTimeInterval iTermStatusBarGitComponentDefaultCadence = 2;
 - (void)commit:(id)sender {
     NSMenuItem *menuItem = sender;
     iTermGitMenuItemContext *context = menuItem.representedObject;
-    [self runGitInWindowWithArguments:@[ @"commit" ] pwd:context.directory status:@"Committing…" bury:NO];
+    [self runGitInWindowWithArguments:@[ @"commit" ] pwd:context.directory status:NSLocalizedString(@"Committing…", @"UI") bury:NO];
 }
 
 - (void)debug {
     NSAlert *alert = [[NSAlert alloc] init];
-    alert.messageText = @"Debug Info";
+    alert.messageText = NSLocalizedString(@"Debug Info", @"UI");
     alert.informativeText = [NSString stringWithFormat:
-                             @"Directory: %@\n"
-                             @"Polling cadence: %@ sec\n"
-                             @"Polling enabled: %@\n"
-                             @"Last polled %@ seconds ago\n"
-                             @"Repo state: %@\n"
-                             @"%@",
+                             NSLocalizedString(@"Directory: %@\n"
+                                               @"Polling cadence: %@ sec\n"
+                                               @"Polling enabled: %@\n"
+                                               @"Last polled %@ seconds ago\n"
+                                               @"Repo state: %@\n"
+                                               @"%@", @"UI"),
                              _maker.gitPoller.currentDirectory,
                              @(_maker.gitPoller.cadence),
                              _maker.gitPoller.enabled ? NSLocalizedString(@"Yes", @"UI") : NSLocalizedString(@"No", @"UI"),
@@ -537,13 +537,13 @@ static const NSTimeInterval iTermStatusBarGitComponentDefaultCadence = 2;
 - (void)addAndCommit:(id)sender {
     NSMenuItem *menuItem = sender;
     iTermGitMenuItemContext *context = menuItem.representedObject;
-    [self runGitInWindowWithArguments:@[ @"commit", @"-a" ] pwd:context.directory status:@"Committing…" bury:NO];
+    [self runGitInWindowWithArguments:@[ @"commit", @"-a" ] pwd:context.directory status:NSLocalizedString(@"Committing…", @"UI") bury:NO];
 }
 
 - (void)stash:(id)sender {
     NSMenuItem *menuItem = sender;
     iTermGitMenuItemContext *context = menuItem.representedObject;
-    [self runGitInWindowWithArguments:@[ @"stash" ] pwd:context.directory status:@"Stashing…" bury:YES];
+    [self runGitInWindowWithArguments:@[ @"stash" ] pwd:context.directory status:NSLocalizedString(@"Stashing…", @"UI") bury:YES];
 }
 
 - (void)push:(id)sender {
@@ -551,7 +551,7 @@ static const NSTimeInterval iTermStatusBarGitComponentDefaultCadence = 2;
     iTermGitMenuItemContext *context = menuItem.representedObject;
     [self runGitInWindowWithArguments:@[ @"push", @"origin", context.state.branch ]
                                   pwd:context.directory
-                               status:@"Pushing…"
+                               status:NSLocalizedString(@"Pushing…", @"UI")
                                  bury:YES];
 }
 
@@ -560,7 +560,7 @@ static const NSTimeInterval iTermStatusBarGitComponentDefaultCadence = 2;
     iTermGitMenuItemContext *context = menuItem.representedObject;
     [self runGitInWindowWithArguments:@[ @"pull", @"origin", context.state.branch ]
                                   pwd:context.directory
-                               status:@"Pulling…"
+                               status:NSLocalizedString(@"Pulling…", @"UI")
                                  bury:YES];
 }
 
@@ -569,7 +569,7 @@ static const NSTimeInterval iTermStatusBarGitComponentDefaultCadence = 2;
     iTermGitMenuItemContext *context = menuItem.representedObject;
     [self runGitInWindowWithArguments:@[ @"checkout", context.userData ]
                                   pwd:context.directory
-                               status:@"Checking out…"
+                               status:NSLocalizedString(@"Checking out…", @"UI")
                                  bury:YES];
 }
 
@@ -584,7 +584,7 @@ static const NSTimeInterval iTermStatusBarGitComponentDefaultCadence = 2;
                              accessory:nil
                             identifier:@"GitPollerSshWarning"
                            silenceable:kiTermWarningTypePermanentlySilenceable
-                               heading:@"Send Command?"
+                               heading:NSLocalizedString(@"Send Command?", @"UI")
                                 window:self.statusBarComponentView.window];
     if (selection == kiTermWarningSelection0) {
         [self.delegate statusBarComponent:self writeString:[command stringByAppendingString:@"\n"]];

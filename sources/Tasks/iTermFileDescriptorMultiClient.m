@@ -785,7 +785,7 @@ static NSString *iTermMultiServerStringForMessageFromClient(iTermMultiServerClie
         [rateLimit performRateLimitedBlock:^{
             DLog(@"Called");
             NSAlert *alert = [[NSAlert alloc] init];
-            alert.messageText = @"Problem Starting iTerm2 Daemon";
+            alert.messageText = NSLocalizedString(@"Problem Starting iTerm2 Daemon", @"UI");
             alert.informativeText = message;
             [alert runModal];
         }];
@@ -849,8 +849,8 @@ static NSString *iTermMultiServerStringForMessageFromClient(iTermMultiServerClie
         if (!sourcePath || ![fileManager fileExistsAtPath:sourcePath]) {
             dispatch_sync(dispatch_get_main_queue(), ^{
                 NSAlert *alert = [[NSAlert alloc] init];
-                alert.messageText = @"Required File Missing";
-                alert.informativeText = @"The iTermServer executable is missing from the application bundle. This indicates iTerm2 is corrupted or incomplete. Please reinstall iTerm2 from the official website.";
+                alert.messageText = NSLocalizedString(@"Required File Missing", @"UI");
+                alert.informativeText = NSLocalizedString(@"The iTermServer executable is missing from the application bundle. This indicates iTerm2 is corrupted or incomplete. Please reinstall iTerm2 from the official website.", @"UI");
                 alert.alertStyle = NSAlertStyleCritical;
                 [alert addButtonWithTitle:NSLocalizedString(@"Quit", @"UI")];
                 [alert runModal];

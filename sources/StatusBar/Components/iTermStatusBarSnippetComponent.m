@@ -22,11 +22,11 @@
 }
 
 - (NSString *)statusBarComponentShortDescription {
-    return @"Snippets Menu";
+    return NSLocalizedString(@"Snippets Menu", @"UI");
 }
 
 - (NSString *)statusBarComponentDetailedDescription {
-    return @"When clicked, opens a menu of snippets. Snippets are saved text strings that can be pasted quickly.";
+    return NSLocalizedString(@"When clicked, opens a menu of snippets. Snippets are saved text strings that can be pasted quickly.", @"UI");
 }
 
 - (id)statusBarComponentExemplarWithBackgroundColor:(NSColor *)backgroundColor
@@ -39,7 +39,7 @@
 }
 
 - (nullable NSString *)stringValue {
-    return @"Send Snippet…";
+    return NSLocalizedString(@"Send Snippet…", @"Status bar snippet");
 }
 
 - (nullable NSString *)stringValueForCurrentWidth {

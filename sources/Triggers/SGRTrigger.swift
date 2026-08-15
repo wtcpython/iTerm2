@@ -22,11 +22,11 @@ class SGRTrigger: Trigger {
     }
 
     override func triggerOptionalParameterPlaceholder(withInterpolation interpolation: Bool) -> String? {
-        return "Enter SGR codes. See help button for details."
+        return NSLocalizedString("Enter SGR codes. See help button for details.", comment: "UI")
     }
 
     override var helpText: String? {
-        """
+        NSLocalizedString("""
         A sequence of SGR codes specifying the style to apply. Codes are delimited by semicolons. For example, to change text to be bold and red you’d use `1;31`. You may use the following codes:
         
         ```
@@ -109,7 +109,7 @@ class SGRTrigger: Trigger {
                         I is a value in 0…255.
               48;5;I    8-bit background color. 
                         I is a value in 0…255.
-        """
+        """, comment: "UI")
     }
 
     override func performAction(withCapturedStrings strings: [String],

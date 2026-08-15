@@ -284,7 +284,7 @@ static const CGFloat kSponsorRowY = 170.0;
 }
 
 - (NSAttributedString *)defaultPatronsString {
-    NSString *string = [NSString stringWithFormat:@"Loading supporters…"];
+    NSString *string = NSLocalizedString(@"Loading supporters…", @"UI");
     NSMutableAttributedString *attributedString =
         [[NSMutableAttributedString alloc] initWithString:string
                                                attributes:self.attributes];

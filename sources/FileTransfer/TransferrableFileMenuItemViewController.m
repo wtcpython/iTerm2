@@ -117,7 +117,7 @@ static const CGFloat kCollapsedHeight = 51;
     switch (_transferrableFile.status) {
         case kTransferrableFileStatusUnstarted:
         case kTransferrableFileStatusStarting:
-            view.statusMessage = @"Starting…";
+            view.statusMessage = NSLocalizedString(@"Starting…", @"UI");
             [self collapse];
             break;
 
@@ -125,32 +125,32 @@ static const CGFloat kCollapsedHeight = 51;
             [self expand];
             [view.progressIndicator setHidden:[_transferrableFile fileSize] < 0];
             if (self.transferrableFile.isDownloading) {
-                view.statusMessage = @"Downloading…";
+                view.statusMessage = NSLocalizedString(@"Downloading…", @"UI");
             } else {
-                view.statusMessage = @"Uploading…";
+                view.statusMessage = NSLocalizedString(@"Uploading…", @"UI");
             }
             [self showMenu];
             break;
 
         case kTransferrableFileStatusFinishedSuccessfully:
             [self collapse];
-            view.statusMessage = @"Finished";
+            view.statusMessage = NSLocalizedString(@"Finished", @"UI");
             break;
 
         case kTransferrableFileStatusFinishedWithError:
             [self collapse];
-            view.statusMessage = @"Failed";
+            view.statusMessage = NSLocalizedString(@"Failed", @"UI");
             [self showMenu];
             break;
 
         case kTransferrableFileStatusCancelling:
             [self expand];
-            view.statusMessage = @"Cancelling…";
+            view.statusMessage = NSLocalizedString(@"Cancelling…", @"UI");
             break;
 
         case kTransferrableFileStatusCancelled:
             [self collapse];
-            view.statusMessage = @"Cancelled";
+            view.statusMessage = NSLocalizedString(@"Cancelled", @"UI");
             break;
     }
     [view setNeedsDisplay:YES];
@@ -192,34 +192,35 @@ static const CGFloat kCollapsedHeight = 51;
 - (NSString *)stringForStatus:(TransferrableFileStatus)status {
     switch (_transferrableFile.status) {
         case kTransferrableFileStatusUnstarted:
-            return @"Unstarted";
+            return NSLocalizedString(@"Unstarted", @"UI");
         case kTransferrableFileStatusStarting:
-            return @"Starting";
+            return NSLocalizedString(@"Starting", @"UI");
         case kTransferrableFileStatusTransferring:
-            return @"Transferring";
+            return NSLocalizedString(@"Transferring", @"UI");
         case kTransferrableFileStatusFinishedSuccessfully:
-            return @"Finished";
+            return NSLocalizedString(@"Finished", @"UI");
         case kTransferrableFileStatusFinishedWithError:
-            return [NSString stringWithFormat:@"Failed with error “%@”", [_transferrableFile error]];
+            return [NSString stringWithFormat:NSLocalizedString(@"Failed with error “%@”", @"UI"), [_transferrableFile error]];
         case kTransferrableFileStatusCancelling:
-            return @"Waiting to cancel";
+            return NSLocalizedString(@"Waiting to cancel", @"UI");
         case kTransferrableFileStatusCancelled:
-            return @"Canceled by user";
+            return NSLocalizedString(@"Canceled by user", @"UI");
     }
 }
 
 - (void)getInfo:(id)sender {
     NSString *extra = @"";
     if (_transferrableFile.destination) {
-        extra = [NSString stringWithFormat:@"\nDestination: %@",
+        extra = [NSString stringWithFormat:NSLocalizedString(@"\nDestination: %@", @"UI"),
                        _transferrableFile.destination];
     } else if (_transferrableFile.localPath) {
-        extra = [NSString stringWithFormat:@"\nLocal path: %@",
+        extra = [NSString stringWithFormat:NSLocalizedString(@"\nLocal path: %@", @"UI"),
                        _transferrableFile.localPath];
     }
-    NSString *text = [NSString stringWithFormat:@"%@\n\nStatus: %@%@",
+    NSString *text = [NSString stringWithFormat:@"%@\n\n%@%@",
                       [_transferrableFile displayName],
-                      [self stringForStatus:_transferrableFile.status],
+                      [NSString stringWithFormat:NSLocalizedString(@"Status: %@", @"UI"),
+                                            [self stringForStatus:_transferrableFile.status]],
                       extra];
     NSAlert *alert = [[NSAlert alloc] init];
     alert.messageText = NSLocalizedString(@"File Transfer Summary", @"UI");

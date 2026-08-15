@@ -481,7 +481,7 @@ static NSInteger CompareEncodingByLocalizedName(id a, id b, void *unused) {
 - (IBAction)changeCustomLocale:(id)sender {
     iTermLocalePrompt *prompt = [[iTermLocalePrompt alloc] initWithEncoding:[self unsignedIntegerForKey:KEY_CHARACTER_ENCODING]];
     prompt.defaultLocale = [self stringForKey:KEY_CUSTOM_LOCALE];
-    prompt.message = @"Select your preferred locale:";
+    prompt.message = NSLocalizedString(@"Select your preferred locale:", @"UI");
     prompt.allowRemember = NO;
     [prompt requestLocaleFromUserForProfile:nil inWindow:self.view.window cancelUsesC:NO];
     NSString *locale = prompt.selectedLocale;
@@ -493,7 +493,7 @@ static NSInteger CompareEncodingByLocalizedName(id a, id b, void *unused) {
                                  accessory:nil
                                 identifier:[@"NoSyncUTF8Mismatch_" stringByAppendingString:guid]
                                silenceable:kiTermWarningTypePermanentlySilenceable
-                                   heading:@"Wrong Encoding Detected"
+                                   heading:NSLocalizedString(@"Wrong Encoding Detected", @"UI")
                                     window:self.view.window];
         if (selection == kiTermWarningSelection0) {
             [self changeCustomLocale:sender];
@@ -509,7 +509,7 @@ static NSInteger CompareEncodingByLocalizedName(id a, id b, void *unused) {
 }
 
 - (IBAction)shellIntegrationRequired:(id)sender {
-    NSString *html = @"This feature requires shell integration to be installed. <a href=\"https://iterm2.com/documentation-shell-integration.html\">Learn more.</a>";
+    NSString *html = NSLocalizedString(@"This feature requires shell integration to be installed. <a href=\"https://iterm2.com/documentation-shell-integration.html\">Learn more.</a>", @"UI");
     NSAttributedString *attributedString = [NSAttributedString attributedStringWithHTML:html
                                                                                    font:[NSFont systemFontOfSize:[NSFont systemFontSize]]
                                                                          paragraphStyle:[NSParagraphStyle defaultParagraphStyle]];

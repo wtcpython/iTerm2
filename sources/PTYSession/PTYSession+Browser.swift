@@ -263,7 +263,7 @@ extension PTYSession: iTermBrowserViewControllerDelegate {
                                 accessory: nil,
                                 identifier: nil,
                                 silenceable: .kiTermWarningTypePersistent,
-                                heading: "Run command?",
+                                heading: NSLocalizedString("Run command?", comment: "UI"),
                                 window: view?.window) == .kiTermWarningSelection0 else {
             return
         }
@@ -298,7 +298,7 @@ extension PTYSession: iTermBrowserViewControllerDelegate {
                                 accessory: nil,
                                 identifier: nil,
                                 silenceable: .kiTermWarningTypePersistent,
-                                heading: "Open file?",
+                                heading: NSLocalizedString("Open file?", comment: "UI"),
                                 window: view?.window) == .kiTermWarningSelection0 else {
             return
         }

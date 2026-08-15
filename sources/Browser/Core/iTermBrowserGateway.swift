@@ -112,7 +112,7 @@ class iTermBrowserGateway: NSObject {
                                           accessory: nil,
                                           identifier: nil,
                                           silenceable: .kiTermWarningTypePersistent,
-                                          heading: "Plugin Required",
+                                          heading: NSLocalizedString("Plugin Required", comment: "UI"),
                                           window: nil)
         if selection == .kiTermWarningSelection0 {
             NSWorkspace.shared.open(URL(string: "https://iterm2.com/browser-plugin.html")!)
@@ -139,11 +139,13 @@ class iTermBrowserGateway: NSObject {
         // Remembering "Cancel" is also not useful.
         let warning = iTermWarning()
         warning.title = NSLocalizedString("iTerm2 can display web pages! But first you must download the Browser Plugin.", comment: "UI")
-        warning.actionLabels = ["Download", "Use System Browser", NSLocalizedString("Cancel", comment: "UI")]
+        warning.actionLabels = [NSLocalizedString("Download", comment: "UI"),
+                                NSLocalizedString("Use System Browser", comment: "UI"),
+                                NSLocalizedString("Cancel", comment: "UI")]
         warning.identifier = upsellWarningIdentifier
         warning.warningType = .kiTermWarningTypePermanentlySilenceable
         warning.heading = NSLocalizedString("Plugin Required", comment: "UI")
-        warning.doNotRememberLabels = ["Download", NSLocalizedString("Cancel", comment: "UI")]
+        warning.doNotRememberLabels = [NSLocalizedString("Download", comment: "UI"), NSLocalizedString("Cancel", comment: "UI")]
         let selection = warning.runModal()
         switch selection {
         case .kiTermWarningSelection0:

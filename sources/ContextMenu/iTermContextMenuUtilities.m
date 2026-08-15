@@ -361,7 +361,7 @@
         }
         if (decoded) {
             NSMenuItem *item = [[NSMenuItem alloc] init];
-            item.title = [NSString stringWithFormat:@"Base64: %@", [[decoded humanFriendlyStringRepresentation] ellipsizedDescriptionNoLongerThan:20]];
+            item.title = [NSString stringWithFormat:NSLocalizedString(@"Base64: %@", @"UI"), [[decoded humanFriendlyStringRepresentation] ellipsizedDescriptionNoLongerThan:20]];
             item.action = selector;
             item.target = target;
             item.representedObject = decoded;
@@ -421,7 +421,7 @@ static uint64_t iTermInt64FromBytes(const unsigned char *bytes, BOOL bigEndian) 
             if (data.length == 4) {
                 const uint32_t be = iTermInt32FromBytes(data.bytes, YES);
                 theItem = [[NSMenuItem alloc] init];
-                theItem.title = [NSString stringWithFormat:@"Big-Endian int32: %@", @(be)];
+                theItem.title = [NSString stringWithFormat:NSLocalizedString(@"Big-Endian int32: %@", @"UI"), @(be)];
                 theItem.target = self;
                 theItem.action = selector;
                 theItem.target = target;
@@ -430,7 +430,7 @@ static uint64_t iTermInt64FromBytes(const unsigned char *bytes, BOOL bigEndian) 
 
                 const uint32_t le = iTermInt32FromBytes(data.bytes, NO);
                 theItem = [[NSMenuItem alloc] init];
-                theItem.title = [NSString stringWithFormat:@"Little-Endian int32: %@", @(le)];
+                theItem.title = [NSString stringWithFormat:NSLocalizedString(@"Little-Endian int32: %@", @"UI"), @(le)];
                 theItem.target = self;
                 theItem.action = selector;
                 theItem.target = target;
@@ -439,7 +439,7 @@ static uint64_t iTermInt64FromBytes(const unsigned char *bytes, BOOL bigEndian) 
             } else if (data.length == 8) {
                 const uint64_t be = iTermInt64FromBytes(data.bytes, YES);
                 theItem = [[NSMenuItem alloc] init];
-                theItem.title = [NSString stringWithFormat:@"Big-Endian int64: %@", @(be)];
+                theItem.title = [NSString stringWithFormat:NSLocalizedString(@"Big-Endian int64: %@", @"UI"), @(be)];
                 theItem.target = self;
                 theItem.action = selector;
                 theItem.target = target;
@@ -448,7 +448,7 @@ static uint64_t iTermInt64FromBytes(const unsigned char *bytes, BOOL bigEndian) 
 
                 const uint64_t le = iTermInt64FromBytes(data.bytes, NO);
                 theItem = [[NSMenuItem alloc] init];
-                theItem.title = [NSString stringWithFormat:@"Little-Endian int64: %@", @(le)];
+                theItem.title = [NSString stringWithFormat:NSLocalizedString(@"Little-Endian int64: %@", @"UI"), @(le)];
                 theItem.target = self;
                 theItem.action = selector;
                 theItem.target = target;
@@ -458,7 +458,7 @@ static uint64_t iTermInt64FromBytes(const unsigned char *bytes, BOOL bigEndian) 
                 NSString *stringValue = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
                 if (stringValue) {
                     theItem = [[NSMenuItem alloc] init];
-                    theItem.title = [NSString stringWithFormat:@"%@ UTF-8 bytes: %@", @(data.length), stringValue];
+                    theItem.title = [NSString stringWithFormat:NSLocalizedString(@"%@ UTF-8 bytes: %@", @"UI"), @(data.length), stringValue];
                     theItem.target = self;
                     theItem.action = selector;
                     theItem.target = target;
@@ -468,7 +468,7 @@ static uint64_t iTermInt64FromBytes(const unsigned char *bytes, BOOL bigEndian) 
             }
             if (!theItem && data.length > 4) {
                 theItem = [[NSMenuItem alloc] init];
-                theItem.title = [NSString stringWithFormat:@"%@ hex bytes", @(data.length)];
+                theItem.title = [NSString stringWithFormat:NSLocalizedString(@"%@ hex bytes", @"UI"), @(data.length)];
                 [theMenu insertItem:theItem atIndex:index++];
             }
         }

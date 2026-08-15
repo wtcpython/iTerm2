@@ -65,7 +65,7 @@
                              accessory:nil
                             identifier:@"NoSyncMoveOpenAIAPIKeyIntoKeychain"
                            silenceable:kiTermWarningTypePersistent
-                               heading:@"Move Key" 
+                               heading:NSLocalizedString(@"Move Key", @"UI") 
                                 window:nil];
     if (selection == kiTermWarningSelection0) {
         [self addOpenAIKeyToKeychain:key];
@@ -300,7 +300,7 @@ static NSString *const iTermMigrationHelperRemoveDeprecatedKeyMappingsUserDefaul
                              accessory:nil
                             identifier:nil
                            silenceable:kiTermWarningTypePersistent
-                               heading:@"Remove Deprecated Key Mappings?"
+                               heading:NSLocalizedString(@"Remove Deprecated Key Mappings?", @"UI")
                                 window:nil];
     switch (selection) {
         case kiTermWarningSelection0:  // ok

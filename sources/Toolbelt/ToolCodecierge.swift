@@ -253,7 +253,7 @@ class ToolCodecierge: NSView, ToolbeltTool {
                                       accessory: nil,
                                       identifier: "CodeciergeCommandWarning",
                                       silenceable: .kiTermWarningTypePermanentlySilenceable,
-                                      heading: "Codecierge Usage Warning",
+                                      heading: NSLocalizedString("Codecierge Usage Warning", comment: "UI"),
                                       window: delegate?.sessionWindow)
                     switch selection {
                     case .kiTermWarningSelection0:
@@ -841,7 +841,7 @@ class CodeciergeGoalView: NSView, NSTextViewDelegate, NSControlTextEditingDelega
                               accessory: nil,
                               identifier: nil,
                               silenceable: .kiTermWarningTypePersistent,
-                              heading: "Danger!",
+                              heading: NSLocalizedString("Danger!", comment: "UI"),
                               window: window)
             if selection == .kiTermWarningSelection1 {
                 autoButton.state = .off
@@ -890,7 +890,7 @@ class CodeciergeGoalView: NSView, NSTextViewDelegate, NSControlTextEditingDelega
                               accessory: nil,
                               identifier: nil,
                               silenceable: .kiTermWarningTypePersistent,
-                              heading: "Privacy Warning",
+                              heading: NSLocalizedString("Privacy Warning", comment: "UI"),
                               window: window)
             if option == .kiTermWarningSelection0 {
                 iTermUserDefaults.userDefaults().setValue(true, forKey: codeciergeWarningAcknowledgedUserDefaultsKey)

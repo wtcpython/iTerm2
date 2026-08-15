@@ -421,7 +421,7 @@ class CommandURLHandler: NSObject {
                                               accessory: nil,
                                               identifier: "NoSyncRunCommand_\(self.command)",
                                               silenceable: .kiTermWarningTypePermanentlySilenceable,
-                                              heading: "Run Command?",
+                                              heading: NSLocalizedString("Run Command?", comment: "UI"),
                                               window: nil)
             if selection == .kiTermWarningSelection0 {
                 _action = .runSilently

@@ -92,7 +92,7 @@
 
     iTermHelpMessageViewController *viewController = [[iTermHelpMessageViewController alloc] initWithNibName:@"iTermHelpMessageViewController"
                                                                                                       bundle:[NSBundle bundleForClass:self.class]];
-    [viewController setMessage:@"Click the stop icon exit picker mode without making a selection."];
+    [viewController setMessage:NSLocalizedString(@"Click the stop icon exit picker mode without making a selection.", @"UI")];
 
     // Create popover
     NSPopover *popover = [[NSPopover alloc] init];

@@ -76,7 +76,7 @@ static NSString *const iTermAPIScriptLauncherScriptDidFailUserNotificationCallba
                              accessory:nil
                             identifier:@"UpgradeFullEnvironmentScript"
                            silenceable:kiTermWarningTypePersistent
-                               heading:@"Upgrade Python Runtime?"
+                               heading:NSLocalizedString(@"Upgrade Python Runtime?", @"UI")
                                 window:nil];
     switch (selection) {
         case kiTermWarningSelection0:
@@ -193,7 +193,7 @@ static NSString *const iTermAPIScriptLauncherScriptDidFailUserNotificationCallba
                                      accessory:nil
                                     identifier:nil
                                    silenceable:kiTermWarningTypePersistent
-                                       heading:@"Error Upgrading Script"
+                                       heading:NSLocalizedString(@"Error Upgrading Script", @"UI")
                                         window:nil];
         });
     }];
@@ -486,7 +486,7 @@ static NSString *const iTermAPIScriptLauncherScriptDidFailUserNotificationCallba
                              accessory:nil
                             identifier:@"NoSyncInstallRosetta"
                            silenceable:kiTermWarningTypePersistent
-                               heading:@"Install Rosetta?"
+                               heading:NSLocalizedString(@"Install Rosetta?", @"UI")
                                 window:nil];
     return selection == kiTermWarningSelection0;
 }
@@ -524,7 +524,7 @@ static NSString *const iTermAPIScriptLauncherScriptDidFailUserNotificationCallba
     dispatch_async(dispatch_get_main_queue(), ^{
         NSAlert *alert = [[NSAlert alloc] init];
         alert.messageText = NSLocalizedString(@"Script Cannot Run", @"UI");
-        alert.informativeText = [NSString stringWithFormat:@"%@ %@", base, recovery];
+        alert.informativeText = [NSString stringWithFormat:NSLocalizedString(@"%@ %@", @"UI"), base, recovery];
         [alert runModal];
     });
 }
@@ -564,7 +564,7 @@ static NSString *const iTermAPIScriptLauncherScriptDidFailUserNotificationCallba
                              accessory:nil
                             identifier:@"NoSyncRefetchArm64Runtime"
                            silenceable:kiTermWarningTypePersistent
-                               heading:@"Download Apple Silicon Runtime?"
+                               heading:NSLocalizedString(@"Download Apple Silicon Runtime?", @"UI")
                                 window:nil];
     if (selection != kiTermWarningSelection0) {
         completion(iTermPythonRuntimeDownloaderStatusCanceledByUser);

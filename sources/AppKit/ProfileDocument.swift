@@ -45,7 +45,7 @@ class ProfileDocument: NSObject {
                     accessory: nil,
                     identifier: "NoSyncOpenRenamedProfile",
                     silenceable: .kiTermWarningTypePermanentlySilenceable,
-                    heading: "Profile Renamed",
+                    heading: NSLocalizedString("Profile Renamed", comment: "UI"),
                     window: controller.currentTerminal?.window())
                 switch selection {
                 case .kiTermWarningSelection0:

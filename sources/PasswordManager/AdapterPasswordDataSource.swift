@@ -506,7 +506,7 @@ class AdapterPasswordDataSource: CommandLinePasswordDataSource {
                                                       accessory: nil,
                                                       identifier: nil,
                                                       silenceable: .kiTermWarningTypePersistent,
-                                                      heading: "Authentication Problem",
+                                                      heading: NSLocalizedString("Authentication Problem", comment: "UI"),
                                                       window: loginInputs.window)
                     if selection == .kiTermWarningSelection0 {
                         DispatchQueue.main.async {
@@ -874,7 +874,7 @@ extension AdapterPasswordDataSource {
                               accessory: nil,
                               identifier: nil,
                               silenceable: .kiTermWarningTypePersistent,
-                              heading: "Password Manager Error",
+                              heading: NSLocalizedString("Password Manager Error", comment: "UI"),
                               window: window)
         }
     }

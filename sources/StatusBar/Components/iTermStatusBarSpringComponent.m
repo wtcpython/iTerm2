@@ -42,18 +42,18 @@ static NSString *const iTermStatusBarSpringComponentSizeMultipleKey = @"iTermSta
 - (NSString *)statusBarComponentShortDescription {
     switch (self.advancedConfiguration.layoutAlgorithm) {
         case iTermStatusBarLayoutAlgorithmSettingStable:
-            return @"Empty Space";
+            return NSLocalizedString(@"Empty Space", @"UI");
         case iTermStatusBarLayoutAlgorithmSettingTightlyPacked:
-            return @"Spring";
+            return NSLocalizedString(@"Spring", @"UI");
     }
 }
 
 - (NSString *)statusBarComponentDetailedDescription {
     switch (self.advancedConfiguration.layoutAlgorithm) {
         case iTermStatusBarLayoutAlgorithmSettingStable:
-            return @"Empty space that draws only a background color.";
+            return NSLocalizedString(@"Empty space that draws only a background color.", @"UI");
         case iTermStatusBarLayoutAlgorithmSettingTightlyPacked:
-            return @"Pushes items apart. Use one spring to right-align status bar elements that follow it. Use two to center those inbetween.";
+            return NSLocalizedString(@"Pushes items apart. Use one spring to right-align status bar elements that follow it. Use two to center those inbetween.", @"UI");
     }
 }
 
@@ -104,8 +104,8 @@ static NSString *const iTermStatusBarSpringComponentSizeMultipleKey = @"iTermSta
             break;
     }
     iTermStatusBarComponentKnob *backgroundColorKnob =
-    [[iTermStatusBarComponentKnob alloc] initWithLabelText:@"Color"
-                                                      type:iTermStatusBarComponentKnobTypeColor
+    [[iTermStatusBarComponentKnob alloc] initWithLabelText:NSLocalizedString(@"Color", @"Status bar knob")
+                                                       type:iTermStatusBarComponentKnobTypeColor
                                                placeholder:nil
                                               defaultValue:nil
                                                        key:iTermStatusBarSharedBackgroundColorKey];

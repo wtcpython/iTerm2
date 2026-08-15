@@ -37,11 +37,11 @@ class StatusBarTriggersComponent: iTermStatusBarTextComponent {
     }
 
     override func statusBarComponentShortDescription() -> String {
-        return "Triggers Menu"
+        return NSLocalizedString("Triggers Menu", comment: "UI")
     }
 
     override func statusBarComponentDetailedDescription() -> String {
-        return "When clicked, opens a menu of triggers. You can use it to enable or disable triggers."
+        return NSLocalizedString("When clicked, opens a menu of triggers. You can use it to enable or disable triggers.", comment: "UI")
     }
 
     override func statusBarComponentExemplar(withBackgroundColor backgroundColor: NSColor, textColor: NSColor) -> Any {
@@ -53,7 +53,7 @@ class StatusBarTriggersComponent: iTermStatusBarTextComponent {
     }
 
     private var stringValue: String {
-        return "Triggers…"
+        return NSLocalizedString("Triggers…", comment: "UI")
     }
 
     override func stringValueForCurrentWidth() -> String? {

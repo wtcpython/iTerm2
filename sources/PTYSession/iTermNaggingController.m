@@ -110,7 +110,7 @@ static NSString *const iTermNaggingControllerRestoreIconAndWindowNameChoiceAlway
 
 - (void)offerToFixSessionWithBrokenArrangementProfileIn:(NSString *)arrangementName
                                                    guid:(NSString *)guid {
-    NSString *notice = @"This arrangement’s profile is missing. This could be due to a bug in iTerm2 version 3.5.7, which caused profiles to be corrupted in saved arrangements.";
+    NSString *notice = NSLocalizedString(@"This arrangement’s profile is missing. This could be due to a bug in iTerm2 version 3.5.7, which caused profiles to be corrupted in saved arrangements.", @"UI");
     [self.delegate naggingControllerShowMessage:notice
                                      isQuestion:NO
                                       important:YES
@@ -156,10 +156,10 @@ static NSString *const iTermNaggingControllerRestoreIconAndWindowNameChoiceAlway
             [descriptions addObject:[NSString stringWithFormat:@"* %@", desc]];
         }
         NSString *bulletList = [descriptions componentsJoinedByString:@"\n"];
-        NSString *popoverMessage = [NSString stringWithFormat:@"**Properties to be changed:**\n\n%@", bulletList];
+        NSString *popoverMessage = [NSString stringWithFormat:NSLocalizedString(@"**Properties to be changed:**\n\n%@", @"UI"), bulletList];
         NSString *encodedMessage = [popoverMessage stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
         NSString *popoverURL = [NSString stringWithFormat:@"x-iterm2-popover:?message=%@", encodedMessage];
-        notice = [NSString stringWithFormat:@"An app tried to change [multiple profile properties](%@).", popoverURL];
+        notice = [NSString stringWithFormat:NSLocalizedString(@"An app tried to change [multiple profile properties](%@).", @"UI"), popoverURL];
     }
     __weak __typeof(self) weakSelf = self;
     [self.delegate naggingControllerShowMarkdownMessage:notice
@@ -201,7 +201,7 @@ static NSString *const iTermNaggingControllerRestoreIconAndWindowNameChoiceAlway
     if (_haveOutstandingTextReplacementOffer) {
         return;
     }
-    NSString *notice = @"Would you like macOS Text Replacements to be applied automatically?";
+    NSString *notice = NSLocalizedString(@"Would you like macOS Text Replacements to be applied automatically?", @"UI");
     _haveOutstandingTextReplacementOffer = YES;
     __weak __typeof(self) weakSelf = self;
     [self.delegate naggingControllerShowMessage:notice
@@ -294,7 +294,7 @@ static NSString *const iTermNaggingControllerRestoreIconAndWindowNameChoiceAlway
 }
 
 - (void)didRestoreOrphan {
-    [self.delegate naggingControllerShowMessage:@"This already-running session was restored but its contents were not saved."
+    [self.delegate naggingControllerShowMessage:NSLocalizedString(@"This already-running session was restored but its contents were not saved.", @"UI")
                                      isQuestion:YES
                                       important:NO
                                      identifier:iTermNaggingControllerOrphanIdentifier
@@ -312,7 +312,7 @@ static NSString *const iTermNaggingControllerRestoreIconAndWindowNameChoiceAlway
 }
 
 - (void)sessionEndedWithExecFailure:(BOOL)execDidFail {
-    [self.delegate naggingControllerShowMessage:execDidFail ? @"Session failed to start." : @"Session ended (command exited). Restart it?"
+    [self.delegate naggingControllerShowMessage:execDidFail ? NSLocalizedString(@"Session failed to start.", @"UI") : NSLocalizedString(@"Session ended (command exited). Restart it?", @"UI")
                                      isQuestion:!execDidFail
                                       important:YES
                                      identifier:iTermNaggingControllerReopenSessionAfterBrokenPipeIdentifier
@@ -323,7 +323,7 @@ static NSString *const iTermNaggingControllerRestoreIconAndWindowNameChoiceAlway
 }
 
 - (void)askAboutAbortingDownload {
-    [self.delegate naggingControllerShowMessage:@"A file is being downloaded. Abort the download?"
+    [self.delegate naggingControllerShowMessage:NSLocalizedString(@"A file is being downloaded. Abort the download?", @"UI")
                                      isQuestion:YES
                                       important:YES
                                      identifier:iTermNaggingControllerAbortDownloadIdentifier
@@ -336,7 +336,7 @@ static NSString *const iTermNaggingControllerRestoreIconAndWindowNameChoiceAlway
 }
 
 - (void)askAboutAbortingUpload {
-    [self.delegate naggingControllerShowMessage:@"A file is being uploaded. Abort the upload?"
+    [self.delegate naggingControllerShowMessage:NSLocalizedString(@"A file is being uploaded. Abort the upload?", @"UI")
                                      isQuestion:YES
                                       important:YES
                                      identifier:iTermNaggingControllerAbortUploadOnKeyPressAnnouncementIdentifier
@@ -397,7 +397,7 @@ static NSString *const iTermNaggingControllerRestoreIconAndWindowNameChoiceAlway
     if ([[iTermUserDefaults userDefaults] boolForKey:iTermNaggingControllerUserDefaultNeverAskAboutSettingAlternateMouseScroll]) {
         return;
     }
-    [self.delegate naggingControllerShowMessage:@"Do you want the scroll wheel to move the cursor in interactive programs like this?"
+    [self.delegate naggingControllerShowMessage:NSLocalizedString(@"Do you want the scroll wheel to move the cursor in interactive programs like this?", @"UI")
                                      isQuestion:YES
                                       important:YES
                                      identifier:iTermNaggingControllerAskAboutAlternateMouseScrollIdentifier
@@ -494,7 +494,7 @@ static NSString *const iTermNaggingControllerRestoreIconAndWindowNameChoiceAlway
     if ([iTermAdvancedSettingsModel noSyncNeverAskAboutMouseReportingFrustration]) {
         return;
     }
-    [self.delegate naggingControllerShowMessage:@"Looks like you’re trying to copy to the pasteboard, but mouse reporting has prevented making a selection. Disable mouse reporting?"
+    [self.delegate naggingControllerShowMessage:NSLocalizedString(@"Looks like you’re trying to copy to the pasteboard, but mouse reporting has prevented making a selection. Disable mouse reporting?", @"UI")
                                      isQuestion:YES
                                       important:YES
                                      identifier:iTermNaggingControllerAskAboutMouseReportingFrustrationIdentifier
@@ -523,7 +523,7 @@ static NSString *const iTermNaggingControllerRestoreIconAndWindowNameChoiceAlway
 
 - (void)offerToTurnOffBracketedPasteOnHostChange {
     NSString *title;
-    title = @"Looks like paste bracketing was left on when an ssh session ended unexpectedly or an app misbehaved. Turn it off?";
+    title = NSLocalizedString(@"Looks like paste bracketing was left on when an ssh session ended unexpectedly or an app misbehaved. Turn it off?", @"UI");
 
     [self.delegate naggingControllerShowMessage:title
                                      isQuestion:YES
@@ -574,7 +574,7 @@ static NSString *const iTermNaggingControllerRestoreIconAndWindowNameChoiceAlway
         return NO;
     }
     // User hasn't chosen yet - show nag
-    NSString *title = @"The key reporting mode may have been left in an unusual setting when an ssh session died or an app crashed. Restore?";
+    NSString *title = NSLocalizedString(@"The key reporting mode may have been left in an unusual setting when an ssh session died or an app crashed. Restore?", @"UI");
 
     [self.delegate naggingControllerShowMessage:title
                                      isQuestion:YES
@@ -614,7 +614,7 @@ static NSString *const iTermNaggingControllerRestoreIconAndWindowNameChoiceAlway
 
 - (void)offerToRestoreIconName:(NSString *)iconName windowName:(NSString *)windowName {
     NSString *title;
-    title = @"Automatically restore the tab and window title when an ssh session ends?";
+    title = NSLocalizedString(@"Automatically restore the tab and window title when an ssh session ends?", @"UI");
 
     _pendingRestoreIconName = [iconName copy];
     _pendingRestoreWindowName = [windowName copy];
@@ -624,7 +624,7 @@ static NSString *const iTermNaggingControllerRestoreIconAndWindowNameChoiceAlway
                                      isQuestion:YES
                                       important:YES
                                      identifier:kRestoreIconAndWindowNameOnHostChangeAnnouncementIdentifier
-                                        options:@[ @"_Only This Time", @"Always", @"Never" ]
+                                        options:@[ NSLocalizedString(@"_Only This Time", @"UI"), NSLocalizedString(@"Always", @"UI"), NSLocalizedString(@"Never", @"UI") ]
                                      completion:^(int selection) {
         switch (selection) {
             case -2:  // Dismiss programmatically
@@ -691,13 +691,13 @@ static NSString *const iTermNaggingControllerRestoreIconAndWindowNameChoiceAlway
         return;
     }
     NSString *title;
-    title = @"This session’s triggers are pretty slow. Disable them in interactive apps?";
+    title = NSLocalizedString(@"This session’s triggers are pretty slow. Disable them in interactive apps?", @"UI");
 
     [self.delegate naggingControllerShowMessage:title
                                      isQuestion:YES
                                       important:YES
                                      identifier:kTurnOffSlowTriggersOfferUserDefaultsKey
-                                        options:@[ @"_Yes", @"Stop Asking", @"View Stats", NSLocalizedString(@"Help", @"UI") ]
+                                        options:@[ NSLocalizedString(@"_Yes", @"UI"), NSLocalizedString(@"Stop Asking", @"UI"), NSLocalizedString(@"View Stats", @"UI"), NSLocalizedString(@"Help", @"UI") ]
                                      completion:^(int selection) {
         switch (selection) {
             case -2:  // Dismiss programmatically
@@ -761,11 +761,11 @@ static NSString *const iTermNaggingControllerRestoreIconAndWindowNameChoiceAlway
     if ([iTermPreferences boolForKey:kPreferenceKeyTmuxSyncClipboard]) {
         return;
     }
-    [self.delegate naggingControllerShowMessage:@"The tmux paste buffer was updated. Would you like to mirror it to the local clipboard from now on?"
+    [self.delegate naggingControllerShowMessage:NSLocalizedString(@"The tmux paste buffer was updated. Would you like to mirror it to the local clipboard from now on?", @"UI")
                                      isQuestion:YES
                                       important:NO
                                      identifier:iTermNaggingControllerOfferToSyncTmuxClipboard
-                                        options:@[ @"_Always", @"_Never" ]
+                                        options:@[ NSLocalizedString(@"_Always", @"UI"), NSLocalizedString(@"_Never", @"UI") ]
                                      completion:^(int selection) {
         switch (selection) {
             case -2:  // Dismiss programatically
@@ -789,12 +789,12 @@ static NSString *const iTermNaggingControllerRestoreIconAndWindowNameChoiceAlway
 }
 
 - (void)askAboutClearingScrollbackHistory {
-    NSString *message = @"A control sequence attempted to clear scrollback history. Allow this in the future?";
+    NSString *message = NSLocalizedString(@"A control sequence attempted to clear scrollback history. Allow this in the future?", @"UI");
     [self.delegate naggingControllerShowMessage:message
                                      isQuestion:YES
                                       important:NO
                                      identifier:iTermNaggingControllerAskAboutClearingScrollbackHistoryIdentifier
-                                        options:@[ @"Always _Allow", @"Always _Deny" ]
+                                        options:@[ NSLocalizedString(@"Always _Allow", @"UI"), NSLocalizedString(@"Always _Deny", @"UI") ]
                                      completion:^(int selection) {
         switch (selection) {
             case 0: {
@@ -815,12 +815,12 @@ static NSString *const iTermNaggingControllerRestoreIconAndWindowNameChoiceAlway
     if (!iTermAdvancedSettingsModel.warnAboutSecureKeyboardInputWithOpenCommand) {
         return;
     }
-    NSString *message = @"The open command doesn't activate other apps when Secure Keyboard Input is enabled.";
+    NSString *message = NSLocalizedString(@"The open command doesn't activate other apps when Secure Keyboard Input is enabled.", @"UI");
     [self.delegate naggingControllerShowMessage:message
                                      isQuestion:YES
                                       important:NO
                                      identifier:iTermNaggingControllerWarnAboutSecureKeyboardInputWithOpenCommand
-                                        options:@[ @"Don’t Remind Me Again" ]
+                                        options:@[ NSLocalizedString(@"Don’t Remind Me Again", @"UI") ]
                                      completion:^(int selection) {
         switch (selection) {
             case 0: {
@@ -836,12 +836,12 @@ static NSString *const iTermNaggingControllerRestoreIconAndWindowNameChoiceAlway
     if (boolPtr) {
         return !*boolPtr;
     }
-    NSString *message = @"A control sequence attempted to change the current profile. Allow this in the future?";
+    NSString *message = NSLocalizedString(@"A control sequence attempted to change the current profile. Allow this in the future?", @"UI");
     [self.delegate naggingControllerShowMessage:message
                                      isQuestion:YES
                                       important:NO
                                      identifier:iTermNaggingControllerAskAboutChangingProfileIdentifier
-                                        options:@[ @"Always _Allow", @"Always _Deny" ]
+                                        options:@[ NSLocalizedString(@"Always _Allow", @"UI"), NSLocalizedString(@"Always _Deny", @"UI") ]
                                      completion:^(int selection) {
         switch (selection) {
             case 0: {
@@ -864,12 +864,12 @@ static NSString *const iTermNaggingControllerRestoreIconAndWindowNameChoiceAlway
     if (boolPtr) {
         return *boolPtr;
     }
-    NSString *message = @"Close tmux windows after detaching?";
+    NSString *message = NSLocalizedString(@"Close tmux windows after detaching?", @"UI");
     [self.delegate naggingControllerShowMessage:message
                                      isQuestion:YES
                                       important:YES
                                      identifier:iTermNaggingControllerTmuxWindowsShouldCloseAfterDetach
-                                        options:@[ @"_Always", @"_Never" ]
+                                        options:@[ NSLocalizedString(@"_Always", @"UI"), NSLocalizedString(@"_Never", @"UI") ]
                                      completion:^(int selection) {
         if (selection == 0 || selection == 1) {
             BOOL value = (selection == 0);
@@ -889,11 +889,11 @@ static NSString *const iTermNaggingControllerRestoreIconAndWindowNameChoiceAlway
 }
 
 - (void)showJSONPromotion {
-    [_delegate naggingControllerShowMessage:@"That's a gnarly JSON blob you've got there! iTerm2 can replace this hard-to-read selection with a pretty-printed value."
+    [_delegate naggingControllerShowMessage:NSLocalizedString(@"That's a gnarly JSON blob you've got there! iTerm2 can replace this hard-to-read selection with a pretty-printed value.", @"UI")
                                  isQuestion:NO
                                   important:NO
                                  identifier:@"JSONPromotion"
-                                    options:@[ @"Try it Now", @"Dismiss" ]
+                                    options:@[ NSLocalizedString(@"Try it Now", @"UI"), NSLocalizedString(@"Dismiss", @"UI") ]
                                  completion:^(int selection) {
         switch (selection) {
             case -2:  // Dismiss programmatically
@@ -987,7 +987,7 @@ static NSString *const iTermNaggingControllerTouchIDForSudoUserDefaultsKey = @"N
         DLog(@"Touch ID for sudo already enabled");
         return;
     }
-    NSString *message = @"Would you like to enable Touch ID for sudo?";
+    NSString *message = NSLocalizedString(@"Would you like to enable Touch ID for sudo?", @"UI");
     if ([self.delegate naggingControllerAnnouncementWouldObscureCursorForText:message]) {
         DLog(@"Announcement would obscure cursor");
         return;
@@ -996,7 +996,7 @@ static NSString *const iTermNaggingControllerTouchIDForSudoUserDefaultsKey = @"N
                                      isQuestion:YES
                                       important:YES
                                      identifier:iTermNaggingControllerTouchIDForSudoIdentifier
-                                        options:@[ @"_Run In New Window", NSLocalizedString(@"Copy Command", @"UI"), NSLocalizedString(@"Don’t Ask Again", @"UI") ]
+                                        options:@[ NSLocalizedString(@"_Run In New Window", @"UI"), NSLocalizedString(@"Copy Command", @"UI"), NSLocalizedString(@"Don’t Ask Again", @"UI") ]
                                      completion:^(int selection) {
         // Any explicit user action — including closing with the X (selection -1)
         // — should suppress further offers for this sudo invocation.
@@ -1100,12 +1100,12 @@ static NSString *const iTermNaggingControllerTouchIDForSudoUserDefaultsKey = @"N
     if (![self.delegate naggingControllerCanShowMessageWithIdentifier:iTermNaggingControllerClaudeCodeStatusToolIdentifier]) {
         return;
     }
-    NSString *message = @"Want to try iTerm2’s Claude Code integration?";
+    NSString *message = NSLocalizedString(@"Want to try iTerm2’s Claude Code integration?", @"UI");
     [self.delegate naggingControllerShowMessage:message
                                      isQuestion:YES
                                       important:NO
                                      identifier:iTermNaggingControllerClaudeCodeStatusToolIdentifier
-                                        options:@[ @"_Yes", @"Never", @"Ask Later" ]
+                                        options:@[ NSLocalizedString(@"_Yes", @"UI"), NSLocalizedString(@"Never", @"UI"), NSLocalizedString(@"Ask Later", @"UI") ]
                                      completion:^(int selection) {
         [[NSNotificationCenter defaultCenter] postNotificationName:iTermNaggingControllerClaudeCodeStatusToolDismissedNotification
                                                             object:nil];

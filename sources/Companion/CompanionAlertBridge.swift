@@ -31,20 +31,20 @@ final class CompanionAlertBridge: NSObject {
     /// enabled state alone no longer conveys the notification-permission step.
     @objc static var sendToPhoneStatusMessage: String {
         if !CompanionPushRegistry.devicePaired {
-            return "Pair an iPhone running iTerm2 Buddy to use this."
+            return NSLocalizedString("Pair an iPhone running iTerm2 Buddy to use this.", comment: "UI")
         }
         if !CompanionPushRegistry.supportsContentlessWakeup {
             // Either the phone hasn't connected since pairing (so its revision isn't
             // known yet) or it is too old for terminal alerts.
-            return "Open iTerm2 Buddy on your paired iPhone (update it if needed)."
+            return NSLocalizedString("Open iTerm2 Buddy on your paired iPhone (update it if needed).", comment: "UI")
         }
         switch CompanionPushRegistry.authorization {
         case .authorized:
-            return "Alerts will be delivered to your paired iPhone."
+            return NSLocalizedString("Alerts will be delivered to your paired iPhone.", comment: "UI")
         case .denied:
-            return "Turn on notifications for iTerm2 Buddy in iOS Settings."
+            return NSLocalizedString("Turn on notifications for iTerm2 Buddy in iOS Settings.", comment: "UI")
         case .notDetermined:
-            return "Turn this on to allow notifications on your iPhone."
+            return NSLocalizedString("Turn this on to allow notifications on your iPhone.", comment: "UI")
         }
     }
 

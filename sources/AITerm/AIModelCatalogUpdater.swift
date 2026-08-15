@@ -154,7 +154,7 @@ class AIModelCatalogUpdater: NSObject {
             accessory: nil,
             identifier: nil,
             silenceable: .kiTermWarningTypePersistent,
-            heading: "Check for AI Model Updates?",
+            heading: NSLocalizedString("Check for AI Model Updates?", comment: "UI"),
             window: nil)
         switch selection {
         case .kiTermWarningSelection0:

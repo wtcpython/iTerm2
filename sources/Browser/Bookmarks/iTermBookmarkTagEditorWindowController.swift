@@ -243,7 +243,7 @@ class iTermBookmarkTagEditorWindowController: NSWindowController {
 
         await MainActor.run {
             if success {
-                ToastWindowController.showToast(withMessage: "Bookmark Deleted")
+                ToastWindowController.showToast(withMessage: String(localized: "Bookmark Deleted", comment: "Toast"))
             }
             self.close()
         }

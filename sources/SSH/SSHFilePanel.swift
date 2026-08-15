@@ -1129,7 +1129,7 @@ extension SSHFilePanel {
                               accessory: nil,
                               identifier: nil,
                               silenceable: .kiTermWarningTypePersistent,
-                              heading: "Could not save file",
+                              heading: NSLocalizedString("Could not save file", comment: "UI"),
                               window: window)
         cancelButtonClicked(nil)
     }

@@ -3117,7 +3117,7 @@ static NSDictionary *iTermTmuxControllerDefaultFontOverridesFromProfile(Profile 
                                  accessory:nil
                                 identifier:@"NoSyncResetRedTmuxTabs"
                                silenceable:kiTermWarningTypePermanentlySilenceable
-                                   heading:@"Fix corrupted tab colors?"
+                                   heading:NSLocalizedString(@"Fix corrupted tab colors?", @"UI")
                                     window:[NSApp keyWindow]];
         if (selection == kiTermWarningSelection0) {
             [_tabColors removeObjectsPassingTest:^BOOL(NSNumber *key, NSString *obj) {

@@ -93,7 +93,7 @@ static NSString *const iTermRestorableStateControllerUserDefaultsKeyCount = @"No
                                  accessory:nil
                                 identifier:@"RestoreWindows"
                                silenceable:kiTermWarningTypePersistent
-                                   heading:@"Restore Windows?"
+                                   heading:NSLocalizedString(@"Restore Windows?", @"UI")
                                     window:nil];
         if (selection == kiTermWarningSelection1) {
             [index restorableStateIndexUnlink];

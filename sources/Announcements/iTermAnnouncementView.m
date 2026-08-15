@@ -463,7 +463,7 @@ const CGFloat iTermAnnouncementViewHeightPadding = 29;
     NSMutableAttributedString *string = [_textView.originalAttributedString mutableCopy];
     NSDictionary *attributes = @{ NSFontAttributeName: [NSFont systemFontOfSize:10],
                                   NSForegroundColorAttributeName: [NSColor textColor] };
-    NSAttributedString *notice = [[NSAttributedString alloc] initWithString:@"\nPress any key to dismiss this message."
+    NSAttributedString *notice = [[NSAttributedString alloc] initWithString:NSLocalizedString(@"\nPress any key to dismiss this message.", @"UI")
                                                                  attributes:attributes];
     [string appendAttributedString:notice];
     _textView.textStorage.attributedString = string;

@@ -75,7 +75,7 @@ class AttributedStringSaver: NSObject {
                                   accessory: nil,
                                   identifier: nil,
                                   silenceable: .kiTermWarningTypePersistent,
-                                  heading: "Could Not Save File",
+                                  heading: NSLocalizedString("Could Not Save File", comment: "UI"),
                                   window: window)
         }
     }

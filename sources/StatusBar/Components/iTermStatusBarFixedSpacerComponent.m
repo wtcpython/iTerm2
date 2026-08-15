@@ -38,11 +38,11 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (NSString *)statusBarComponentShortDescription {
-    return @"Fixed-size Spacer";
+    return NSLocalizedString(@"Fixed-size Spacer", @"UI");
 }
 
 - (NSString *)statusBarComponentDetailedDescription {
-    return @"Adds a fixed amount of space";
+    return NSLocalizedString(@"Adds a fixed amount of space", @"UI");
 }
 
 - (NSView *)statusBarComponentView {
@@ -65,14 +65,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSArray<iTermStatusBarComponentKnob *> *)statusBarComponentKnobs {
     iTermStatusBarComponentKnob *backgroundColorKnob =
-    [[iTermStatusBarComponentKnob alloc] initWithLabelText:@"Color"
-                                                      type:iTermStatusBarComponentKnobTypeColor
+    [[iTermStatusBarComponentKnob alloc] initWithLabelText:NSLocalizedString(@"Color", @"Status bar knob")
+                                                       type:iTermStatusBarComponentKnobTypeColor
                                                placeholder:nil
                                               defaultValue:nil
                                                        key:iTermStatusBarSharedBackgroundColorKey];
     iTermStatusBarComponentKnob *widthKnob =
-    [[iTermStatusBarComponentKnob alloc] initWithLabelText:@"Width"
-                                                      type:iTermStatusBarComponentKnobTypeDouble
+    [[iTermStatusBarComponentKnob alloc] initWithLabelText:NSLocalizedString(@"Width", @"Status bar knob")
+                                                       type:iTermStatusBarComponentKnobTypeDouble
                                                placeholder:nil
                                               defaultValue:@5
                                                        key:iTermStatusBarFixedSpacerComponentWidthKnob];

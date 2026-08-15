@@ -86,7 +86,7 @@ NSString *const kTerminalFileShouldStopNotification = @"kTerminalFileShouldStopN
                                  accessory:nil
                                 identifier:@"NoSyncPromptForDownloadLocation"
                                silenceable:kiTermWarningTypePermanentlySilenceable
-                                   heading:@"Save Terminal-Initiated Download"
+                                   heading:NSLocalizedString(@"Save Terminal-Initiated Download", @"UI")
                                     window:window];
     return selection == kiTermWarningSelection1;
 }

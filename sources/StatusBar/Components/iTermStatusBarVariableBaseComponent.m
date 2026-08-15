@@ -141,9 +141,9 @@ static NSString *const iTermStatusBarHostnameComponentAbbreviateLocalhost = @"ab
 
 - (NSArray<iTermStatusBarComponentKnob *> *)statusBarComponentKnobs {
     iTermStatusBarComponentKnob *abbreviateLocalhostKnob =
-    [[iTermStatusBarComponentKnob alloc] initWithLabelText:@"localhost replacement"
-                                                      type:iTermStatusBarComponentKnobTypeText
-                                               placeholder:@"Enter replacement text for localhost"
+    [[iTermStatusBarComponentKnob alloc] initWithLabelText:NSLocalizedString(@"localhost replacement", @"Status bar knob")
+                                                       type:iTermStatusBarComponentKnobTypeText
+                                                placeholder:NSLocalizedString(@"Enter replacement text for localhost", @"Status bar knob placeholder")
                                               defaultValue:@""
                                                        key:iTermStatusBarHostnameComponentAbbreviateLocalhost];
     return [@[ abbreviateLocalhostKnob ] arrayByAddingObjectsFromArray:[super statusBarComponentKnobs]];
@@ -154,11 +154,11 @@ static NSString *const iTermStatusBarHostnameComponentAbbreviateLocalhost = @"ab
 }
 
 - (NSString *)statusBarComponentShortDescription {
-    return @"Host Name";
+    return NSLocalizedString(@"Host Name", @"UI");
 }
 
 - (NSString *)statusBarComponentDetailedDescription {
-    return @"Current host name. Requires shell integration.";
+    return NSLocalizedString(@"Current host name. Requires shell integration.", @"UI");
 }
 
 - (id)statusBarComponentExemplarWithBackgroundColor:(NSColor *)backgroundColor
@@ -219,11 +219,11 @@ static NSString *const iTermStatusBarHostnameComponentAbbreviateLocalhost = @"ab
 }
 
 - (NSString *)statusBarComponentShortDescription {
-    return @"User Name";
+    return NSLocalizedString(@"User Name", @"UI");
 }
 
 - (NSString *)statusBarComponentDetailedDescription {
-    return @"Current user name. Requires shell integration.";
+    return NSLocalizedString(@"Current user name. Requires shell integration.", @"UI");
 }
 
 - (id)statusBarComponentExemplarWithBackgroundColor:(NSColor *)backgroundColor
@@ -285,11 +285,11 @@ static NSString *const iTermStatusBarHostnameComponentAbbreviateLocalhost = @"ab
 }
 
 - (NSString *)statusBarComponentShortDescription {
-    return @"Current Directory";
+    return NSLocalizedString(@"Current Directory", @"UI");
 }
 
 - (NSString *)statusBarComponentDetailedDescription {
-    return @"Current directory. Best with shell integration.";
+    return NSLocalizedString(@"Current directory. Best with shell integration.", @"UI");
 }
 
 - (id)statusBarComponentExemplarWithBackgroundColor:(NSColor *)backgroundColor

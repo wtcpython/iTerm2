@@ -480,7 +480,7 @@ NSString * const kTriggerVariableValueRegexKey = @"variableValueRegex";
                              accessory:nil
                             identifier:@"NoSyncErrorInTriggerParameter"
                            silenceable:kiTermWarningTypeTemporarilySilenceable
-                               heading:@"Error in Trigger Parameter"
+                               heading:NSLocalizedString(@"Error in Trigger Parameter", @"UI")
                                 window:nil];
 }
 

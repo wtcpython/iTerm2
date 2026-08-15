@@ -97,7 +97,7 @@ NSString *const iTermStatusBarSwiftyStringComponentExpressionKey = @"expression"
                                  accessory:nil
                                 identifier:@"NoSyncInterpolatedStatusBarComponentError"
                                silenceable:kiTermWarningTypePersistent
-                                   heading:@"Error"
+                                   heading:NSLocalizedString(@"Error", @"UI")
                                     window:self.statusBarComponentView.window];
     }
 }

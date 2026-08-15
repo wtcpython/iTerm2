@@ -821,7 +821,7 @@ typedef NS_ENUM(NSUInteger, iTermWindowUnitsTag) {
     panel.canChooseFiles = YES;
     panel.allowsMultipleSelection = NO;
     panel.treatsFilePackagesAsDirectories = NO;
-    panel.message = @"Choose an image for the background, or a folder to rotate through its images.";
+    panel.message = NSLocalizedString(@"Choose an image for the background, or a folder to rotate through its images.", @"UI");
     // Image-only filter dims non-image files. Folders stay selectable because
     // canChooseDirectories=YES treats them as containers, not content.
     panel.allowedContentTypes = [NSImage.imageTypes mapWithBlock:^id _Nullable(NSString *ext) {
@@ -861,7 +861,7 @@ typedef NS_ENUM(NSUInteger, iTermWindowUnitsTag) {
                                      accessory:nil
                                     identifier:@"BackgroundFolderEmpty"
                                    silenceable:kiTermWarningTypePersistent
-                                       heading:@"Empty Folder"
+                                       heading:NSLocalizedString(@"Empty Folder", @"UI")
                                         window:self.view.window];
             [self setString:nil forKey:KEY_BACKGROUND_IMAGE_FOLDER_LOCATION];
             [self updateControlForKey:KEY_BACKGROUND_IMAGE_FOLDER_LOCATION];
@@ -970,7 +970,7 @@ typedef NS_ENUM(NSUInteger, iTermWindowUnitsTag) {
                                  accessory:nil
                                 identifier:@"BackgroundImageUnreadable"
                                silenceable:kiTermWarningTypePersistent
-                                   heading:@"Problem Loading Image"
+                                   heading:NSLocalizedString(@"Problem Loading Image", @"UI")
                                     window:self.view.window];
         return NO;
     }
@@ -980,7 +980,7 @@ typedef NS_ENUM(NSUInteger, iTermWindowUnitsTag) {
                                  accessory:nil
                                 identifier:@"BackgroundImageUnreadable"
                                silenceable:kiTermWarningTypePersistent
-                                   heading:@"Problem Loading Image"
+                                   heading:NSLocalizedString(@"Problem Loading Image", @"UI")
                                     window:self.view.window];
         return NO;
     }
@@ -990,7 +990,7 @@ typedef NS_ENUM(NSUInteger, iTermWindowUnitsTag) {
                                  accessory:nil
                                 identifier:@"BackgroundImageUnreadable"
                                silenceable:kiTermWarningTypePersistent
-                                   heading:@"Problem Loading Image"
+                                   heading:NSLocalizedString(@"Problem Loading Image", @"UI")
                                     window:self.view.window];
         return NO;
     }
@@ -1005,7 +1005,7 @@ typedef NS_ENUM(NSUInteger, iTermWindowUnitsTag) {
                                  accessory:nil
                                 identifier:@"BackgroundFolderUnreadable"
                                silenceable:kiTermWarningTypePersistent
-                                   heading:@"Problem Loading Folder"
+                                   heading:NSLocalizedString(@"Problem Loading Folder", @"UI")
                                     window:self.view.window];
         return NO;
     }
@@ -1019,7 +1019,7 @@ typedef NS_ENUM(NSUInteger, iTermWindowUnitsTag) {
                                  accessory:nil
                                 identifier:@"BackgroundFolderUnreadable"
                                silenceable:kiTermWarningTypePersistent
-                                   heading:@"Problem Loading Folder"
+                                   heading:NSLocalizedString(@"Problem Loading Folder", @"UI")
                                     window:self.view.window];
         return NO;
     }

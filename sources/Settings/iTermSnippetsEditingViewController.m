@@ -430,7 +430,7 @@ static NSString *const iTermSnippetsEditingPasteboardType = @"com.googlecode.ite
 
 - (IBAction)help:(id)sender {
     NSView *view = [NSView castFrom:sender];
-    [view it_showWarningWithMarkdown:iTermSnippetHelpMarkdown];
+    [view it_showWarningWithMarkdown:iTermSnippetHelpMarkdown()];
 }
 
 #pragma mark - Import

@@ -127,7 +127,7 @@ class NerdFontInstaller {
             accessory: nil,
             identifier: "SpecialExceptionsMissingFontsForNerdBundle",
             silenceable: .kiTermWarningTypePersistent,
-            heading: "Download Needed",
+            heading: NSLocalizedString("Download Needed", comment: "UI"),
             window: window)
         return selection == .kiTermWarningSelection0
     }

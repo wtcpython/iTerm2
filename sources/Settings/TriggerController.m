@@ -503,6 +503,7 @@ NSString *const kStatusTextComboBoxIdentifier = @"kStatusTextComboBoxIdentifier"
 }
 
 + (NSTextField *)labelWithString:(NSString *)string origin:(NSPoint)origin {
+    string = NSLocalizedString(string, @"UI");
     NSTextField *textField = [[NSTextField alloc] initWithFrame:NSMakeRect(origin.x,
                                                                            origin.y,
                                                                            0,
@@ -588,7 +589,7 @@ NSString *const kStatusTextComboBoxIdentifier = @"kStatusTextComboBoxIdentifier"
                                  accessory:nil
                                 identifier:@"NoSyncImportTriggersFailed"
                                silenceable:kiTermWarningTypePersistent
-                                   heading:@"Import Failed"
+                                   heading:NSLocalizedString(@"Import Failed", @"UI")
                                     window:window];
         return nil;
     }
@@ -601,7 +602,7 @@ NSString *const kStatusTextComboBoxIdentifier = @"kStatusTextComboBoxIdentifier"
                                  accessory:nil
                                 identifier:@"NoSyncImportTriggersFailed"
                                silenceable:kiTermWarningTypePersistent
-                                   heading:@"Import Failed"
+                                   heading:NSLocalizedString(@"Import Failed", @"UI")
                                     window:window];
         return nil;
     }
@@ -620,7 +621,7 @@ NSString *const kStatusTextComboBoxIdentifier = @"kStatusTextComboBoxIdentifier"
                                  accessory:nil
                                 identifier:@"NoSyncTriggerEncodingError"
                                silenceable:kiTermWarningTypePersistent
-                                   heading:@"Import Failed"
+                                   heading:NSLocalizedString(@"Import Failed", @"UI")
                                     window:window];
         return nil;
     }
@@ -634,7 +635,7 @@ NSString *const kStatusTextComboBoxIdentifier = @"kStatusTextComboBoxIdentifier"
                                      accessory:nil
                                     identifier:@"NoSyncTriggerEncodingError"
                                    silenceable:kiTermWarningTypePersistent
-                                       heading:@"Import Failed"
+                                       heading:NSLocalizedString(@"Import Failed", @"UI")
                                         window:window];
             return nil;
         }
@@ -645,7 +646,7 @@ NSString *const kStatusTextComboBoxIdentifier = @"kStatusTextComboBoxIdentifier"
                                      accessory:nil
                                     identifier:@"NoSyncTriggerEncodingError"
                                    silenceable:kiTermWarningTypePersistent
-                                       heading:@"Import Failed"
+                                       heading:NSLocalizedString(@"Import Failed", @"UI")
                                         window:window];
             return nil;
         }
@@ -1109,7 +1110,7 @@ NSString *const kStatusTextComboBoxIdentifier = @"kStatusTextComboBoxIdentifier"
         [pasteboard clearContents];
         NSArray *objects = @[ url, url.absoluteString ];
         [pasteboard writeObjects:objects];
-        [ToastWindowController showToastWithMessage:@"Copied"
+        [ToastWindowController showToastWithMessage:NSLocalizedString(@"Copied", @"UI")
                                            duration:1
                             topLeftScreenCoordinate:screenPoint
                                           pointSize:12];
@@ -1143,7 +1144,7 @@ NSString *const kStatusTextComboBoxIdentifier = @"kStatusTextComboBoxIdentifier"
                                          accessory:nil
                                         identifier:@"NoSyncTriggerWritingError"
                                        silenceable:kiTermWarningTypePersistent
-                                           heading:@"Export Failed"
+                                           heading:NSLocalizedString(@"Export Failed", @"UI")
                                             window:self.window];
             } else {
                 [item revealInFinderIfLocal];

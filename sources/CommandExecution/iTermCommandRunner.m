@@ -390,10 +390,10 @@ static NSMutableArray<iTermBufferedCommandRunner *> *gCommandRunners;
         return;
     }
     iTermWarning *warning = [[iTermWarning alloc] init];
-    warning.title = [NSString stringWithFormat:@"The following command returned a non-zero exit code:\n\n“%@ %@”",
+    warning.title = [NSString stringWithFormat:NSLocalizedString(@"The following command returned a non-zero exit code:\n\n“%@ %@”", @"UI"),
                      runner.command,
                      [runner.arguments componentsJoinedByString:@" "]];
-    warning.heading = @"Command Failed";
+    warning.heading = NSLocalizedString(@"Command Failed", @"UI");
     static const iTermSingleUseWindowOptions options = iTermSingleUseWindowOptionsShortLived;
     NSMutableData *inject = [runner.output mutableCopy];
     NSString *truncationWarning = [NSString stringWithFormat:@"\n%c[m;[output truncated]\n", 27];
@@ -403,7 +403,7 @@ static NSMutableArray<iTermBufferedCommandRunner *> *gCommandRunners;
     [inject it_replaceOccurrencesOfData:[NSData dataWithBytes:"\n" length:1]
                                withData:[NSData dataWithBytes:"\r\n" length:2]];
     warning.warningActions = @[ [iTermWarningAction warningActionWithLabel:NSLocalizedString(@"OK", @"UI") block:nil],
-                                [iTermWarningAction warningActionWithLabel:@"View" block:^(iTermWarningSelection selection) {
+                                [iTermWarningAction warningActionWithLabel:NSLocalizedString(@"View", @"UI") block:^(iTermWarningSelection selection) {
                                     [[iTermController sharedInstance] openSingleUseWindowWithCommand:@"/usr/bin/true"
                                                                                            arguments:nil
                                                                                               inject:inject

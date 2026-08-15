@@ -96,7 +96,7 @@ class ImportExport: NSObject {
                 accessory: nil,
                 identifier: nil,
                 silenceable: .kiTermWarningTypePersistent,
-                heading: "Importing Settings and Data",
+                heading: NSLocalizedString("Importing Settings and Data", comment: "UI"),
                 window: nil)
             if selection == .kiTermWarningSelection1 {
                 return nil
@@ -130,7 +130,7 @@ class ImportExport: NSObject {
             accessory: nil,
             identifier: nil,
             silenceable: .kiTermWarningTypePersistent,
-            heading: "Erase All Settings and Data",
+            heading: NSLocalizedString("Erase All Settings and Data", comment: "UI"),
             window: window)
 
         switch exportSelection {
@@ -154,7 +154,7 @@ class ImportExport: NSObject {
                     accessory: nil,
                     identifier: nil,
                     silenceable: .kiTermWarningTypePersistent,
-                    heading: "Problem Exporting Settings and Data",
+                    heading: NSLocalizedString("Problem Exporting Settings and Data", comment: "UI"),
                     window: window)
                 return nil
             }
@@ -215,7 +215,7 @@ class ImportExport: NSObject {
             accessory: nil,
             identifier: nil,
             silenceable: .kiTermWarningTypePersistent,
-            heading: "Dry Run Complete",
+            heading: NSLocalizedString("Dry Run Complete", comment: "UI"),
             window: window)
         return nil
     }

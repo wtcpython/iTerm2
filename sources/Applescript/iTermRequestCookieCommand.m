@@ -48,16 +48,16 @@ static NSString *const kReusableCookieAnnouncementIdentifier = @"ReusableCookieA
     }
 
     NSString *appName = self.arguments[@"appName"] ?: @"An app";
-    NSString *message = [NSString stringWithFormat:@"%@ requests a reusable API cookie.", appName];
+    NSString *message = [NSString stringWithFormat:NSLocalizedString(@"%@ requests a reusable API cookie.", @"UI"), appName];
 
     __weak __typeof(self) weakSelf = self;
     iTermAnnouncementViewController *announcement =
         [iTermAnnouncementViewController announcementWithTitle:message
                                                          style:kiTermAnnouncementViewStyleQuestion
-                                                   withActions:@[ @"_24 Hours",
-                                                                  @"Forever",
-                                                                  @"Always Allow All Apps",
-                                                                  NSLocalizedString(@"Deny", @"UI") ]
+                                                    withActions:@[ NSLocalizedString(@"_24 Hours", @"UI"),
+                                                                   NSLocalizedString(@"Forever", @"UI"),
+                                                                   NSLocalizedString(@"Always Allow All Apps", @"UI"),
+                                                                   NSLocalizedString(@"Deny", @"UI") ]
                                                     completion:^(int selection) {
             [weakSelf handleReusableCookieSelection:selection];
         }];

@@ -96,7 +96,7 @@ static const CGFloat kLockButtonSize = 14;
         [lockButton_ setAction:@selector(toggleLock:)];
         [lockButton_ setBordered:NO];
         [lockButton_ setTitle:@""];
-        [lockButton_ setToolTip:@"This pane is locked. It cannot be moved, swapped, or dragged, and closing it requires confirmation. Right-click to unlock."];
+        [lockButton_ setToolTip:NSLocalizedString(@"This pane is locked. It cannot be moved, swapped, or dragged, and closing it requires confirmation. Right-click to unlock.", @"UI")];
         [[lockButton_ cell] setHighlightsBy:NSContentsCellMask];
         [lockButton_ setHidden:YES]; // Hidden by default until delegate says it's locked
         [self addSubview:lockButton_];

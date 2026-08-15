@@ -344,7 +344,7 @@
     [textField setSelectable:YES];
 
     iTermWarning *warning = [[iTermWarning alloc] init];
-    warning.heading = @"Add Dependency";
+    warning.heading = NSLocalizedString(@"Add Dependency", @"UI");
     warning.title = NSLocalizedString(@"What dependency would you like to add?", @"UI");
     warning.actionLabels = @[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI") ];
     warning.accessory = textField;
@@ -391,7 +391,7 @@
                                                                accessory:nil
                                                               identifier:@"DependencyEditorPip3Confirmation"
                                                              silenceable:kiTermWarningTypePersistent
-                                                                 heading:@"Run this Command?"
+                                                                 heading:NSLocalizedString(@"Run this Command?", @"UI")
                                                                   window:self.window];
     if (selection == kiTermWarningSelection1) {
         return;
@@ -425,7 +425,7 @@
                              accessory:nil
                             identifier:@"DependencyEditorInstallationFailed"
                            silenceable:kiTermWarningTypePersistent
-                               heading:@"Removal Failed"
+                               heading:NSLocalizedString(@"Removal Failed", @"UI")
                                 window:self.window];
 }
 
@@ -438,7 +438,7 @@
                                  accessory:nil
                                 identifier:@"DependencyEditorInstallationFailed"
                                silenceable:kiTermWarningTypePersistent
-                                   heading:@"Installation Failed"
+                                   heading:NSLocalizedString(@"Installation Failed", @"UI")
                                     window:self.window];
         return;
     }
@@ -483,7 +483,7 @@
     if ([[NSFileManager defaultManager] fileExistsAtPath:folder.path]) {
         iTermWarning *warning = [[iTermWarning alloc] init];
         warning.title = [NSString stringWithFormat:NSLocalizedString(@"Can’t upgrade because %@ already exists", @"UI"), folder.path];
-        warning.heading = @"Error";
+        warning.heading = NSLocalizedString(@"Error", @"UI");
         warning.actionLabels = @[ NSLocalizedString(@"OK", @"UI") ];
         warning.warningType = kiTermWarningTypePersistent;
         warning.window = self.window;
@@ -661,7 +661,7 @@
     if ([comparator compareVersion:selectedVersion toVersion:_pythonVersion] == NSOrderedAscending) {
         iTermWarning *warning = [[iTermWarning alloc] init];
         warning.title = NSLocalizedString(@"You have asked to downgrade to an older Python version. Dependencies will need to be reinstalled. This may go badly. Are you sure you want to do this?", @"UI");
-        warning.heading = @"Confirm Python Downgrade";
+        warning.heading = NSLocalizedString(@"Confirm Python Downgrade", @"UI");
         warning.actionLabels = @[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI") ];
         warning.identifier = @"DependencyEditorConfirmDowngrade";
         warning.warningType = kiTermWarningTypePersistent;
@@ -675,7 +675,7 @@
     } else {
         iTermWarning *warning = [[iTermWarning alloc] init];
         warning.title = NSLocalizedString(@"You have asked to upgrade to a newer Python version. Dependencies will need to be reinstalled. OK to continue?", @"UI");
-        warning.heading = @"Confirm Python Upgrade";
+        warning.heading = NSLocalizedString(@"Confirm Python Upgrade", @"UI");
         warning.actionLabels = @[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI") ];
         warning.identifier = @"DependencyEditorConfirmUpgrade";
         warning.warningType = kiTermWarningTypePersistent;

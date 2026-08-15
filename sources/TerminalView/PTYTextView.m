@@ -6870,7 +6870,7 @@ extendResultsAcrossSoftBoundaries:(BOOL)extendResultsAcrossSoftBoundaries {
                                                       encoding:NSUTF8StringEncoding
                                                          error:&error];
         if (content) {
-            [weakSelf it_showWarningWithMarkdown:content];
+            [weakSelf it_showWarningWithMarkdown:NSLocalizedString(content, @"UI")];
         }
     }];
 
@@ -6888,7 +6888,7 @@ extendResultsAcrossSoftBoundaries:(BOOL)extendResultsAcrossSoftBoundaries {
         __weak __typeof(self) weakSelf = self;
         [menu addItemWithTitle:NSLocalizedString(@"Copy Command", @"Menu") action:^{
             [weakSelf copyString:command];
-            [ToastWindowController showToastWithMessage:@"Command Copied"
+            [ToastWindowController showToastWithMessage:NSLocalizedString(@"Command Copied", @"UI")
                                                duration:1.5
                                 topLeftScreenCoordinate:[weakSelf.window convertPointToScreen:locationInWindow]
                                               pointSize:12];
@@ -6897,7 +6897,7 @@ extendResultsAcrossSoftBoundaries:(BOOL)extendResultsAcrossSoftBoundaries {
             iTermRenegablePromise<NSString *> *promise = [self promisedOutputForMark:mark progress:nil];
             [[promise wait] whenFirst:^(NSString * _Nonnull string) {
                 [weakSelf copyString:string];
-                [ToastWindowController showToastWithMessage:@"Output Copied"
+                [ToastWindowController showToastWithMessage:NSLocalizedString(@"Output Copied", @"UI")
                                                    duration:1.5
                                     topLeftScreenCoordinate:[weakSelf.window convertPointToScreen:locationInWindow]
                                                   pointSize:12];
@@ -6983,7 +6983,7 @@ extendResultsAcrossSoftBoundaries:(BOOL)extendResultsAcrossSoftBoundaries {
 
 - (void)copyBlock:(NSString *)block absLine:(long long)absLine screenCoordinate:(NSPoint)screenCoordinate {
     if ([self copyBlock:block includingAbsLine:absLine]) {
-        [ToastWindowController showToastWithMessage:@"Copied"
+        [ToastWindowController showToastWithMessage:NSLocalizedString(@"Copied", @"UI")
                                            duration:1
                             topLeftScreenCoordinate:screenCoordinate
                                           pointSize:12];
@@ -7599,7 +7599,7 @@ static NSString *iTermStringFromRange(NSRange range) {
                                                                      accessory:nil
                                                                     identifier:@"NoSyncConfirmRemoveAnnotation"
                                                                    silenceable:kiTermWarningTypePermanentlySilenceable
-                                                                       heading:@"Confirm"
+                                                                       heading:NSLocalizedString(@"Confirm", @"UI")
                                                                         window:self.window];
     if (selection == kiTermWarningSelection1) {
         return;
@@ -8579,7 +8579,7 @@ dragSemanticHistoryWithEvent:(NSEvent *)event
         NSString *copyString = url.absoluteString;
         [pasteboard setString:copyString forType:NSPasteboardTypeString];
         [[PasteboardHistory sharedInstance] save:copyString];
-        [ToastWindowController showToastWithMessage:@"Copied"
+        [ToastWindowController showToastWithMessage:NSLocalizedString(@"Copied", @"UI")
                                            duration:1
                                    screenCoordinate:[NSEvent mouseLocation]
                                           pointSize:12];

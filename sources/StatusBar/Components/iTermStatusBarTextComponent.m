@@ -26,19 +26,19 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSArray<iTermStatusBarComponentKnob *> *)statusBarComponentKnobs {
     iTermStatusBarComponentKnob *textColorKnob =
-        [[iTermStatusBarComponentKnob alloc] initWithLabelText:@"Text Color:"
+        [[iTermStatusBarComponentKnob alloc] initWithLabelText:NSLocalizedString(@"Text Color:", @"Status bar knob")
                                                           type:iTermStatusBarComponentKnobTypeColor
                                                    placeholder:nil
                                                   defaultValue:nil
                                                            key:iTermStatusBarSharedTextColorKey];
     iTermStatusBarComponentKnob *backgroundColorKnob =
-        [[iTermStatusBarComponentKnob alloc] initWithLabelText:@"Background Color:"
+        [[iTermStatusBarComponentKnob alloc] initWithLabelText:NSLocalizedString(@"Background Color:", @"Status bar knob")
                                                           type:iTermStatusBarComponentKnobTypeColor
                                                    placeholder:nil
                                                   defaultValue:nil
                                                            key:iTermStatusBarSharedBackgroundColorKey];
     iTermStatusBarComponentKnob *fontKnob =
-        [[iTermStatusBarComponentKnob alloc] initWithLabelText:@"Custom Font"
+        [[iTermStatusBarComponentKnob alloc] initWithLabelText:NSLocalizedString(@"Custom Font", @"Status bar knob")
                                                           type:iTermStatusBarComponentKnobTypeFont
                                                    placeholder:nil
                                                   defaultValue:nil

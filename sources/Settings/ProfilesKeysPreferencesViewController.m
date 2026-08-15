@@ -320,7 +320,7 @@ static NSString *const kDeleteKeyString = @"0x7f-0x0";
 }
 
 - (IBAction)optionAsMetaHelp:(id)sender {
-    [[NSView castFrom:sender] it_showWarningWithMarkdown:@"In most key reporting modes, when reporting special keys like arrows, the ⌥ key may act as either Meta or Alt. Prior to version 3.5.6, iTerm2 used Meta. The default changed to Alt because some programs like Emacs expect it."];
+    [[NSView castFrom:sender] it_showWarningWithMarkdown:NSLocalizedString(@"In most key reporting modes, when reporting special keys like arrows, the ⌥ key may act as either Meta or Alt. Prior to version 3.5.6, iTerm2 used Meta. The default changed to Alt because some programs like Emacs expect it.", @"UI")];
 }
 
 - (void)updateExtendedModifierLabelColors {
@@ -372,7 +372,7 @@ static NSString *const kDeleteKeyString = @"0x7f-0x0";
                                  0,
                                  accessory.intrinsicContentSize.width,
                                  accessory.intrinsicContentSize.height);
-    warning.heading = @"Remove Incompatible Key Bindings?";
+    warning.heading = NSLocalizedString(@"Remove Incompatible Key Bindings?", @"UI");
     NSArray *actions = @[ [iTermWarningAction warningActionWithLabel:NSLocalizedString(@"Remove", @"UI") block:^(iTermWarningSelection selection) {
         [self removeKeystrokeBindings:incompatibles];
     }],

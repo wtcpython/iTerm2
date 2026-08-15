@@ -41,7 +41,7 @@
                                  accessory:nil
                                 identifier:@"NoSyncAllowPrinting"
                                silenceable:kiTermWarningTypePersistent
-                                   heading:@"Allow Printing?"
+                                   heading:NSLocalizedString(@"Allow Printing?", @"UI")
                                     window:window];
         switch (selection) {
             case kiTermWarningSelection0:

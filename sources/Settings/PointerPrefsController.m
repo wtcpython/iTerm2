@@ -300,15 +300,15 @@ typedef enum {
 {
     switch (n) {
         case 1:
-            return @"single click";
+            return NSLocalizedString(@"single click", @"UI");
         case 2:
-            return @"double click";
+            return NSLocalizedString(@"double click", @"UI");
         case 3:
-            return @"triple click";
+            return NSLocalizedString(@"triple click", @"UI");
         case 4:
-            return @"quad click";
+            return NSLocalizedString(@"quad click", @"UI");
         default:
-            return @"(error)";  // shouldn't happen
+            return NSLocalizedString(@"(error)", @"UI");  // shouldn't happen
     }
 }
 
@@ -316,13 +316,13 @@ typedef enum {
 {
     switch (n) {
         case -1:
-            return @"Unknown button";
+            return NSLocalizedString(@"Unknown button", @"UI");
         case kLeftButton:
-            return @"Left button";
+            return NSLocalizedString(@"Left button", @"UI");
         case kRightButton:
-            return @"Right button";
+            return NSLocalizedString(@"Right button", @"UI");
         case kMiddleButton:
-            return @"Middle button";
+            return NSLocalizedString(@"Middle button", @"UI");
         default:
             return [NSString stringWithFormat:NSLocalizedString(@"Button #%d", @"UI"), n+1];
     }
@@ -330,12 +330,12 @@ typedef enum {
 
 + (NSDictionary *)gestureNamesDict
 {
-    NSDictionary *names = @{ kThreeFingerClickGesture: @"Three-finger Tap",
-                             kThreeFingerSwipeRight: @"Three-finger Swipe Right",
-                             kThreeFingerSwipeLeft: @"Three-finger Swipe Left",
-                             kThreeFingerSwipeUp: @"Three-finger Swipe Up",
-                             kThreeFingerSwipeDown: @"Three-finger Swipe Down",
-                             kForceTouchSingleClick: @"Force Touch Single Click" };
+    NSDictionary *names = @{ kThreeFingerClickGesture: NSLocalizedString(@"Three-finger Tap", @"UI"),
+                             kThreeFingerSwipeRight: NSLocalizedString(@"Three-finger Swipe Right", @"UI"),
+                             kThreeFingerSwipeLeft: NSLocalizedString(@"Three-finger Swipe Left", @"UI"),
+                             kThreeFingerSwipeUp: NSLocalizedString(@"Three-finger Swipe Up", @"UI"),
+                             kThreeFingerSwipeDown: NSLocalizedString(@"Three-finger Swipe Down", @"UI"),
+                             kForceTouchSingleClick: NSLocalizedString(@"Force Touch Single Click", @"UI") };
     return names;
 }
 
@@ -407,38 +407,38 @@ typedef enum {
 {
     NSDictionary *names = [NSDictionary dictionaryWithObjectsAndKeys:
                            NSLocalizedString(@"Ignore", @"UI"), kIgnoreAction,
-                           @"Invoke Script Function…", kInvokeScriptFunction,
-                           @"Paste from Clipboard…", kPasteFromClipboardPointerAction,
-                           @"Paste from Selection…", kPasteFromSelectionPointerAction,
-                           @"Extend Selection", kExtendSelectionPointerAction,
-                           @"Open URL/Semantic History", kOpenTargetPointerAction,
-                           @"Open URL in background", kOpenTargetInBackgroundPointerAction,
-                           @"Smart Selection", kSmartSelectionPointerAction,
-                           @"Smart Selection Ignoring Newlines", kSmartSelectionIgnoringNewlinesPointerAction,
-                           @"Open Context Menu", kContextMenuPointerAction,
-                           @"Next Tab", kNextTabPointerAction,
-                           @"Previous Tab", kPrevTabPointerAction,
-                           @"Next Window", kNextWindowPointerAction,
-                           @"Previous Window", kPrevWindowPointerAction,
-                           @"Move Pane", kMovePanePointerAction,
-                           @"Send Escape Sequence…", kSendEscapeSequencePointerAction,
-                           @"Send Hex Code…", kSendHexCodePointerAction,
-                           @"Send Text…", kSendTextPointerAction,
-                           @"Select Pane Left", kSelectPaneLeftPointerAction,
-                           @"Select Pane Right", kSelectPaneRightPointerAction,
-                           @"Select Pane Above", kSelectPaneAbovePointerAction,
-                           @"Select Pane Below", kSelectPaneBelowPointerAction,
-                           @"New Window With Profile…", kNewWindowWithProfilePointerAction,
-                           @"New Tab With Profile…", kNewWindowWithProfilePointerAction,
-                           @"New Tab With Profile…", kNewTabWithProfilePointerAction,
-                           @"New Vertical Split With Profile…", kNewVerticalSplitWithProfilePointerAction,
-                           @"New Horizontal Split With Profile…", kNewHorizontalSplitWithProfilePointerAction,
-                           @"QuickLook", kQuickLookAction,
-                           @"Select Menu Item", kSelectMenuItemPointerAction,
-                           @"Copy Link Address", kCopyLinkAddressPointerAction,
-                           @"Select Next Pane", kSelectNextPanePointerAction,
-                           @"Select Previous Pane", kSelectPreviousPanePointerAction,
-                           @"Copy or Paste", kCopyOrPastePointerAction,
+                           NSLocalizedString(@"Invoke Script Function…", @"UI"), kInvokeScriptFunction,
+                           NSLocalizedString(@"Paste from Clipboard…", @"UI"), kPasteFromClipboardPointerAction,
+                           NSLocalizedString(@"Paste from Selection…", @"UI"), kPasteFromSelectionPointerAction,
+                           NSLocalizedString(@"Extend Selection", @"UI"), kExtendSelectionPointerAction,
+                           NSLocalizedString(@"Open URL/Semantic History", @"UI"), kOpenTargetPointerAction,
+                           NSLocalizedString(@"Open URL in background", @"UI"), kOpenTargetInBackgroundPointerAction,
+                           NSLocalizedString(@"Smart Selection", @"UI"), kSmartSelectionPointerAction,
+                           NSLocalizedString(@"Smart Selection Ignoring Newlines", @"UI"), kSmartSelectionIgnoringNewlinesPointerAction,
+                           NSLocalizedString(@"Open Context Menu", @"UI"), kContextMenuPointerAction,
+                           NSLocalizedString(@"Next Tab", @"UI"), kNextTabPointerAction,
+                           NSLocalizedString(@"Previous Tab", @"UI"), kPrevTabPointerAction,
+                           NSLocalizedString(@"Next Window", @"UI"), kNextWindowPointerAction,
+                           NSLocalizedString(@"Previous Window", @"UI"), kPrevWindowPointerAction,
+                           NSLocalizedString(@"Move Pane", @"UI"), kMovePanePointerAction,
+                           NSLocalizedString(@"Send Escape Sequence…", @"UI"), kSendEscapeSequencePointerAction,
+                           NSLocalizedString(@"Send Hex Code…", @"UI"), kSendHexCodePointerAction,
+                           NSLocalizedString(@"Send Text…", @"UI"), kSendTextPointerAction,
+                           NSLocalizedString(@"Select Pane Left", @"UI"), kSelectPaneLeftPointerAction,
+                           NSLocalizedString(@"Select Pane Right", @"UI"), kSelectPaneRightPointerAction,
+                           NSLocalizedString(@"Select Pane Above", @"UI"), kSelectPaneAbovePointerAction,
+                           NSLocalizedString(@"Select Pane Below", @"UI"), kSelectPaneBelowPointerAction,
+                           NSLocalizedString(@"New Window With Profile…", @"UI"), kNewWindowWithProfilePointerAction,
+                           NSLocalizedString(@"New Tab With Profile…", @"UI"), kNewWindowWithProfilePointerAction,
+                           NSLocalizedString(@"New Tab With Profile…", @"UI"), kNewTabWithProfilePointerAction,
+                           NSLocalizedString(@"New Vertical Split With Profile…", @"UI"), kNewVerticalSplitWithProfilePointerAction,
+                           NSLocalizedString(@"New Horizontal Split With Profile…", @"UI"), kNewHorizontalSplitWithProfilePointerAction,
+                           NSLocalizedString(@"QuickLook", @"UI"), kQuickLookAction,
+                           NSLocalizedString(@"Select Menu Item", @"UI"), kSelectMenuItemPointerAction,
+                           NSLocalizedString(@"Copy Link Address", @"UI"), kCopyLinkAddressPointerAction,
+                           NSLocalizedString(@"Select Next Pane", @"UI"), kSelectNextPanePointerAction,
+                           NSLocalizedString(@"Select Previous Pane", @"UI"), kSelectPreviousPanePointerAction,
+                           NSLocalizedString(@"Copy or Paste", @"UI"), kCopyOrPastePointerAction,
                            nil];
     return names;
 }
@@ -475,7 +475,7 @@ typedef enum {
         name = [names objectForKey:action];
     }
     if (!name) {
-        name = @"(Unknown)";
+        name = NSLocalizedString(@"(Unknown)", @"UI");
     }
     return name;
 }
@@ -489,7 +489,7 @@ typedef enum {
         name = [names objectForKey:action];
     }
     if (!name) {
-        name = @"(Unknown)";
+        name = NSLocalizedString(@"(Unknown)", @"UI");
     }
     if (action) {
         switch ([PointerPrefsController argumentTypeForAction:action]) {
@@ -497,23 +497,23 @@ typedef enum {
                 break;
             case kEscPlusArg:
                 return [name stringByReplacingOccurrencesOfString:@"…"
-                                                       withString:[NSString stringWithFormat:@" Esc + %@", argument]];
+                                                       withString:[NSString stringWithFormat:NSLocalizedString(@" Esc + %@", @"UI"), argument]];
             case kHexCodeArg:
             case kTextArg:
             case kScriptFunctionArg:
                 return [name stringByReplacingOccurrencesOfString:@"…"
-                                                       withString:[NSString stringWithFormat:@" \"%@\"", argument]];
+                                                       withString:[NSString stringWithFormat:NSLocalizedString(@" \"%@\"", @"UI"), argument]];
             case kProfileArg: {
                 NSString *bookmarkName = [[[ProfileModel sharedInstance] bookmarkWithGuid:argument] objectForKey:KEY_NAME];
                 if (!bookmarkName) {
                     bookmarkName = @"?";
                 }
                 return [name stringByReplacingOccurrencesOfString:@"…"
-                                                       withString:[NSString stringWithFormat:@" \"%@\"", bookmarkName]];
+                                                       withString:[NSString stringWithFormat:NSLocalizedString(@" \"%@\"", @"UI"), bookmarkName]];
             }
             case kAdvancedPasteArg: {
                 if (argument.length) {
-                    return [NSString stringWithFormat:@"%@: %@",
+                    return [NSString stringWithFormat:NSLocalizedString(@"%@: %@", @"UI"),
                             [name stringByReplacingOccurrencesOfString:@"…" withString:@""],
                             [iTermPasteSpecialViewController descriptionForCodedSettings:argument]];
                 }

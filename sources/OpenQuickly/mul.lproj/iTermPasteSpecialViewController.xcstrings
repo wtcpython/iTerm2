@@ -230,7 +230,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "ICU regular expression syntax"
+            "value": "ICU 正则表达式语法"
           }
         }
       }

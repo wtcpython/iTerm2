@@ -33,7 +33,7 @@ static void iTermOpenWhatsNewURL(NSString *path, NSWindow *window) {
                                      accessory:nil
                                     identifier:nil
                                    silenceable:kiTermWarningTypePersistent
-                                       heading:@"Feature Unavailable"
+                                       heading:NSLocalizedString(@"Feature Unavailable", @"UI")
                                         window:window];
             return;
         }
@@ -43,7 +43,7 @@ static void iTermOpenWhatsNewURL(NSString *path, NSWindow *window) {
                                      accessory:nil
                                     identifier:nil
                                    silenceable:kiTermWarningTypePersistent
-                                       heading:@"Feature Unavailable"
+                                       heading:NSLocalizedString(@"Feature Unavailable", @"UI")
                                         window:window];
             return;
         }
@@ -65,7 +65,7 @@ static void iTermOpenWhatsNewURL(NSString *path, NSWindow *window) {
                                      accessory:nil
                                     identifier:nil
                                    silenceable:kiTermWarningTypePersistent
-                                       heading:@"No Terminal Window"
+                                       heading:NSLocalizedString(@"No Terminal Window", @"UI")
                                         window:window];
             return;
         }

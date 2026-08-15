@@ -1126,7 +1126,7 @@ class ChatAgent {
                 accessory: nil,
                 identifier: nil,
                 silenceable: .kiTermWarningTypePersistent,
-                heading: "Share Terminal Contents Automatically?",
+                heading: NSLocalizedString("Share Terminal Contents Automatically?", comment: "UI"),
                 window: nil)
             iTermUserDefaults.autoProvideConsent = (selection == .kiTermWarningSelection0) ? .granted : .denied
         }

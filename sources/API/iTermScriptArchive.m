@@ -146,7 +146,7 @@ NSString *const iTermScriptMetadataName = @"metadata.json";
                                                                      accessory:nil
                                                                     identifier:nil
                                                                    silenceable:kiTermWarningTypePersistent
-                                                                       heading:@"Allow Auto-Launch?"
+                                                                       heading:NSLocalizedString(@"Allow Auto-Launch?", @"UI")
                                                                         window:nil];
     return (selection == kiTermWarningSelection0);
 }
@@ -158,7 +158,7 @@ NSString *const iTermScriptMetadataName = @"metadata.json";
                                                                      accessory:nil
                                                                     identifier:nil
                                                                    silenceable:kiTermWarningTypePersistent
-                                                                       heading:@"Allow Auto-Launch?"
+                                                                       heading:NSLocalizedString(@"Allow Auto-Launch?", @"UI")
                                                                         window:nil];
     return (selection == kiTermWarningSelection0);
 }

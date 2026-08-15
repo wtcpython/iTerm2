@@ -214,7 +214,7 @@ static NSString *iTermPasteViewControllerNibName(BOOL mini) {
     }
     if (!_queuedHintView) {
         _queuedHintView = [[iTermPasteQueuedHintView alloc] initWithFrame:NSZeroRect];
-        _queuedHintView.message = @"Typing is queued while pasting. Click the keyboard to toggle queueing.";
+        _queuedHintView.message = NSLocalizedString(@"Typing is queued while pasting. Click the keyboard to toggle queueing.", @"UI");
     }
     const NSRect buttonFrame = [_keystrokePassthroughButton convertRect:_keystrokePassthroughButton.bounds
                                                                  toView:content];

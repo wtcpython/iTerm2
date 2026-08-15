@@ -155,7 +155,7 @@ iTermCommandInfoViewControllerDelegate>
     if (item.action == @selector(sshDisconnect:)) {
         NSString *name = [self.delegate textViewCurrentSSHSessionName];
         if (name) {
-            item.title = [NSString stringWithFormat:@"Disconnect from %@", name];
+            item.title = [NSString stringWithFormat:NSLocalizedString(@"Disconnect from %@", @"UI"), name];
             return YES;
         } else {
             item.title = NSLocalizedString(@"Disconnect", @"UI");
@@ -1981,7 +1981,7 @@ copyRangeAccordingToUserPreferences:(VT100GridWindowedRange)range {
         }
     }
     if (copied) {
-        [ToastWindowController showToastWithMessage:@"Copied"
+        [ToastWindowController showToastWithMessage:NSLocalizedString(@"Copied", @"UI")
                                            duration:1.5
                                    screenCoordinate:[NSEvent mouseLocation]
                                           pointSize:12];
@@ -2148,9 +2148,8 @@ toggleTerminalStateForMenuItem:(nonnull NSMenuItem *)item {
 - (void)contextMenu:(iTermTextViewContextMenuHelper *)contextMenu
        inspectImage:(id<iTermImageInfoReading>)imageInfo {
     if (imageInfo) {
-        NSString *text = [NSString stringWithFormat:
-                          @"Filename: %@\n"
-                          @"Dimensions: %d x %d",
+        NSString *text = [NSString stringWithFormat:NSLocalizedString(@"Filename: %@\n"
+                                                                      @"Dimensions: %d x %d", @"UI"),
                           imageInfo.filename,
                           (int)imageInfo.image.size.width,
                           (int)imageInfo.image.size.height];
@@ -3043,7 +3042,7 @@ toggleAnimationOfImage:(id<iTermImageInfoReading>)imageInfo {
     [self copyString:content];
     const NSPoint p = view.centerScreenCoordinate;
     if (p.x == p.x) {
-        [ToastWindowController showToastWithMessage:@"Copied"
+        [ToastWindowController showToastWithMessage:NSLocalizedString(@"Copied", @"UI")
                                            duration:1
                                    screenCoordinate:p
                                           pointSize:12];

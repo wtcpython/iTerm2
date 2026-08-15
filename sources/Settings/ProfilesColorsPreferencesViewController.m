@@ -567,11 +567,11 @@ static NSString * const kColorGalleryURL = @"https://www.iterm2.com/colorgallery
 
     [_presetsMenu addItem:[NSMenuItem separatorItem]];
 
-    [self addPresetItemWithTitle:@"Import…" action:@selector(importColorPreset:)];
-    [self addPresetItemWithTitle:@"Export…" action:@selector(exportColorPreset:)];
+    [self addPresetItemWithTitle:NSLocalizedString(@"Import…", @"UI") action:@selector(importColorPreset:)];
+    [self addPresetItemWithTitle:NSLocalizedString(@"Export…", @"UI") action:@selector(exportColorPreset:)];
     [self addPresetItemWithTitle:NSLocalizedString(@"Save As…", @"UI") action:@selector(saveColorPreset:)];
-    [self addPresetItemWithTitle:@"Delete Preset…" action:@selector(deleteColorPreset:)];
-    [self addPresetItemWithTitle:@"Visit Online Gallery" action:@selector(visitGallery:)];
+    [self addPresetItemWithTitle:NSLocalizedString(@"Delete Preset…", @"UI") action:@selector(deleteColorPreset:)];
+    [self addPresetItemWithTitle:NSLocalizedString(@"Visit Online Gallery", @"UI") action:@selector(visitGallery:)];
     _presetsMenu.delegate = self;
 }
 
@@ -585,12 +585,12 @@ static NSString * const kColorGalleryURL = @"https://www.iterm2.com/colorgallery
     for (int i = 0; i < 2; i++) {
         NSInteger count = 0;
         for (NSString* key in  [[presetsDict allKeys] sortedArrayUsingSelector:@selector(compare:)]) {
-            NSString *title = key;
+            NSString *title = NSLocalizedString(key, @"UI");
             if ([model presetHasMultipleModes:key]) {
                 if (i == 1) {
                     continue;
                 }
-                title = [@"☯ " stringByAppendingString:key];
+                title = [@"☯ " stringByAppendingString:title];
             } else if (i == 0) {
                 continue;
             }
@@ -797,7 +797,7 @@ static NSString * const kColorGalleryURL = @"https://www.iterm2.com/colorgallery
                                  accessory:nil
                                 identifier:@"NoSyncUpdateWhichModes_PresetHasModes"
                                silenceable:kiTermWarningTypePersistent
-                                   heading:@"Update Which Modes?"
+                                   heading:NSLocalizedString(@"Update Which Modes?", @"UI")
                                     window:self.view.window];
         return (selection == 0);
     }
@@ -813,7 +813,7 @@ static NSString * const kColorGalleryURL = @"https://www.iterm2.com/colorgallery
                              accessory:nil
                             identifier:@"NoSyncUpdateWhichModes_PresetLacksModes"
                            silenceable:kiTermWarningTypePersistent
-                               heading:@"Update Which Modes?"
+                               heading:NSLocalizedString(@"Update Which Modes?", @"UI")
                                 window:self.view.window];
     return (selection == 0);
 }
@@ -1000,7 +1000,7 @@ static NSString * const kColorGalleryURL = @"https://www.iterm2.com/colorgallery
 }
 
 - (IBAction)showModeWarning:(id)sender {
-    [_modeWarning it_showWarning:@"Your current theme overrides the system light and dark mode setting, so color switching will not occur. You can change it in Settings > Appearance > General > Theme."];
+    [_modeWarning it_showWarning:NSLocalizedString(@"Your current theme overrides the system light and dark mode setting, so color switching will not occur. You can change it in Settings > Appearance > General > Theme.", @"UI")];
 }
 
 #pragma mark - Overrides

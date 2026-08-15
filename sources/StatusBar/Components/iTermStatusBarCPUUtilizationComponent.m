@@ -51,11 +51,11 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (NSString *)statusBarComponentShortDescription {
-    return @"CPU Utilization";
+    return NSLocalizedString(@"CPU Utilization", @"UI");
 }
 
 - (NSString *)statusBarComponentDetailedDescription {
-    return @"Shows current CPU utilization.";
+    return NSLocalizedString(@"Shows current CPU utilization.", @"UI");
 }
 
 - (id)statusBarComponentExemplarWithBackgroundColor:(NSColor *)backgroundColor

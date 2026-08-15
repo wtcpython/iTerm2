@@ -523,7 +523,7 @@ static NSArray<NSString *> *gTerminalCachedCombinedAccountNames;
                                                                      accessory:nil
                                                                     identifier:nil
                                                                    silenceable:kiTermWarningTypePersistent
-                                                                       heading:@"Are you sure?"
+                                                                       heading:NSLocalizedString(@"Are you sure?", @"UI")
                                                                         window:self.window];
     if (selection == kiTermWarningSelection0) {
         [self.currentDataSource resetConfiguration];
@@ -1323,7 +1323,7 @@ static NSInteger const kDynamicMenuItemTag = 9999;
     else if (menuItem.action == @selector(resetIntegrationConfiguration:)) {
         const BOOL allowed = [[self currentDataSource] canResetConfiguration];
         if (allowed) {
-            menuItem.title = [NSString stringWithFormat:@"Reset %@ Configuration", [[self currentDataSource] name]];
+            menuItem.title = [NSString stringWithFormat:NSLocalizedString(@"Reset %@ Configuration", @"UI"), [[self currentDataSource] name]];
         } else {
             menuItem.title = NSLocalizedString(@"Reset Integration Configuration", @"UI");
         }

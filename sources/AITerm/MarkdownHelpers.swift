@@ -187,7 +187,7 @@ private func AttributedStringForMessage(_ md: SwiftyMarkdown,
                 modified.insertButton(withImage: DynamicImage(image: image, dark: .white, light: .black), at: range.location) { point in
                     NSPasteboard.general.declareTypes([.string], owner: NSApp)
                     NSPasteboard.general.setString(attributedString.string.substring(nsrange: range), forType: .string)
-                    ToastWindowController.showToast(withMessage: "Copied", duration: 1, screenCoordinate: point, pointSize: 12)
+                    ToastWindowController.showToast(withMessage: String(localized: "Copied", comment: "Toast"), duration: 1, screenCoordinate: point, pointSize: 12)
                     didCopy()
                 }
                 modified.insert(

@@ -229,7 +229,7 @@ const double iTermStatusBarBaseComponentDefaultPriority = 5;
 }
 
 - (iTermStatusBarComponentKnob *)newPriorityKnob {
-    return [[iTermStatusBarComponentKnob alloc] initWithLabelText:@"Priority:"
+    return [[iTermStatusBarComponentKnob alloc] initWithLabelText:NSLocalizedString(@"Priority:", @"Status bar knob")
                                                              type:iTermStatusBarComponentKnobTypeDouble
                                                       placeholder:@""
                                                      defaultValue:self.class.statusBarComponentDefaultKnobs[iTermStatusBarPriorityKey]

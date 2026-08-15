@@ -130,13 +130,13 @@ static NSMutableSet<NSString *> *iTermTransferrableFileLockedFileNames(void) {
     if (retries == 1 || !prompt) {
         return finalDestination;
     }
-    NSString *message = [NSString stringWithFormat:@"A file named %@ already exists. Keep both files or replace the existing file?", baseName];
+    NSString *message = [NSString stringWithFormat:NSLocalizedString(@"A file named %@ already exists. Keep both files or replace the existing file?", @"UI"), baseName];
     const iTermWarningSelection selection = [iTermWarning showWarningWithTitle:message
                                                                        actions:@[ NSLocalizedString(@"Keep Both", @"UI"), NSLocalizedString(@"Replace", @"UI") ]
                                                                      accessory:nil
                                                                     identifier:@"NoSyncOverwriteOrReplaceFile"
                                                                    silenceable:kiTermWarningTypePermanentlySilenceable
-                                                                       heading:@"Overwrite existing file?"
+                                                                       heading:NSLocalizedString(@"Overwrite existing file?", @"UI")
                                                                         window:nil];
     if (selection == kiTermWarningSelection1) {
         return [destinationDirectory stringByAppendingPathComponent:baseName];
@@ -218,7 +218,7 @@ static NSMutableSet<NSString *> *iTermTransferrableFileLockedFileNames(void) {
                              accessory:nil
                             identifier:nil
                            silenceable:kiTermWarningTypePersistent
-                               heading:@"Danger!"
+                               heading:NSLocalizedString(@"Danger!", @"UI")
                                 window:nil];
 }
 

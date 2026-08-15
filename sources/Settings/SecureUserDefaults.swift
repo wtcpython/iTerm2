@@ -334,7 +334,7 @@ class SecureUserDefault<T: SecureUserDefaultStringTranscodable & Codable & Equat
                               accessory: nil,
                               identifier: "NoSyncSecureUserDefaultsSetFailed",
                               silenceable: .kiTermWarningTypeTemporarilySilenceable,
-                              heading: "Failed to Save Secure Setting",
+                              heading: NSLocalizedString("Failed to Save Secure Setting", comment: "UI"),
                               window: nil)
             throw error
         }

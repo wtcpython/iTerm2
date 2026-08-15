@@ -40,7 +40,7 @@
                                  accessory:nil
                                 identifier:nil
                                silenceable:kiTermWarningTypePersistent
-                                   heading:@"Invalid Profile"
+                                   heading:NSLocalizedString(@"Invalid Profile", @"UI")
                                     window:nil];
         return NO;
     }
@@ -591,7 +591,7 @@
                                      accessory:nil
                                     identifier:nil
                                    silenceable:kiTermWarningTypePersistent
-                                       heading:@"Illegal Username"
+                                       heading:NSLocalizedString(@"Illegal Username", @"UI")
                                         window:nil];
             RLog(@"bad username");
             return nil;

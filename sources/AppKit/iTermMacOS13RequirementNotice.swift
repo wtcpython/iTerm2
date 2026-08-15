@@ -35,7 +35,7 @@ class iTermMacOS13RequirementNotice: NSObject {
             // separate NoSyncHaveShownMacOS13RequirementNotice flag set below.
             identifier: nil,
             silenceable: .kiTermWarningTypePersistent,
-            heading: "Deprecation Notice",
+            heading: NSLocalizedString("Deprecation Notice", comment: "UI"),
             window: nil)
         iTermUserDefaults.haveShownMacOS13RequirementNotice = true
     }

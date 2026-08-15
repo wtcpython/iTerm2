@@ -75,7 +75,7 @@ class iTermScriptRuntime: NSObject {
     }
 
     @objc static func pythonRuntimeMenuItemTitle(for action: iTermPythonRuntimeMenuAction) -> String {
-        return isCheckForUpdate(action) ? "Check for Updated Runtime" : "Install Python Runtime"
+        return isCheckForUpdate(action) ? NSLocalizedString("Check for Updated Runtime", comment: "UI") : NSLocalizedString("Install Python Runtime", comment: "UI")
     }
 
     @objc static let venvDirectoryName = ".venv"

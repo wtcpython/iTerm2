@@ -227,7 +227,7 @@ typedef NS_ENUM(NSUInteger, iTermLaunchExperienceChoice) {
                                      accessory:nil
                                     identifier:@"SystemPythonModuleOutdated"
                                    silenceable:kiTermWarningTypePersistent
-                                       heading:@"Upgrade system Python iterm2 module?"
+                                       heading:NSLocalizedString(@"Upgrade system Python iterm2 module?", @"UI")
                                         window:nil];
             switch (selection) {
                 case kiTermWarningSelection0: {
@@ -279,7 +279,7 @@ typedef NS_ENUM(NSUInteger, iTermLaunchExperienceChoice) {
                              accessory:nil
                             identifier:nil
                            silenceable:kiTermWarningTypePersistent
-                               heading:@"Important Change"
+                               heading:NSLocalizedString(@"Important Change", @"UI")
                                 window:nil];
     [[iTermUserDefaults userDefaults] setBool:YES forKey:kHaveWarnedAboutPasteConfirmationChange];
 }

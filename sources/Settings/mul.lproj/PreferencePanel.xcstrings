@@ -2588,7 +2588,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "将左控制 (⌃) 键重映射为："
+            "value": "将左 Control (⌃) 键重映射为："
           }
         }
       }
@@ -2606,7 +2606,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "将右选项 (⌥) 键重映射为："
+            "value": "将右 Option (⌥) 键重映射为："
           }
         }
       }
@@ -2624,7 +2624,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "将左命令 (⌘) 键重映射为："
+            "value": "将左 Command (⌘) 键重映射为："
           }
         }
       }
@@ -2642,7 +2642,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "将左选项 (⌥) 键重映射为："
+            "value": "将左 Option (⌥) 键重映射为："
           }
         }
       }
@@ -2840,7 +2840,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "⌥ 右选项"
+            "value": "⌥ 右 Option"
           }
         }
       }
@@ -2984,7 +2984,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "⌥ 右选项"
+            "value": "⌥ 右 Option"
           }
         }
       }
@@ -3002,7 +3002,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "⌃ 左控制"
+            "value": "⌃ 左 Control"
           }
         }
       }
@@ -3020,7 +3020,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "⌘ 左命令"
+            "value": "⌘ 左 Command"
           }
         }
       }
@@ -3038,7 +3038,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "⌥ 左选项"
+            "value": "⌥ 左 Option"
           }
         }
       }
@@ -3128,7 +3128,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "将右命令 (⌘) 键重映射为："
+            "value": "将右 Command (⌘) 键重映射为："
           }
         }
       }
@@ -3146,7 +3146,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "⌘ 右命令"
+            "value": "⌘ 右 Command"
           }
         }
       }
@@ -3182,7 +3182,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "⌘ 右命令"
+            "value": "⌘ 右 Command"
           }
         }
       }
@@ -3200,7 +3200,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "⌥ 左选项"
+            "value": "⌥ 左 Option"
           }
         }
       }
@@ -3218,7 +3218,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "⌘ 左命令"
+            "value": "⌘ 左 Command"
           }
         }
       }
@@ -3236,7 +3236,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "⌥ 右选项"
+            "value": "⌥ 右 Option"
           }
         }
       }
@@ -3272,7 +3272,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "⌥ 右选项"
+            "value": "⌥ 右 Option"
           }
         }
       }
@@ -3290,7 +3290,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "⌘ 左命令"
+            "value": "⌘ 左 Command"
           }
         }
       }
@@ -3308,7 +3308,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "⌥ 左选项"
+            "value": "⌥ 左 Option"
           }
         }
       }
@@ -3326,7 +3326,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "⌘ 右命令"
+            "value": "⌘ 右 Command"
           }
         }
       }
@@ -3362,7 +3362,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "⌘ 右命令"
+            "value": "⌘ 右 Command"
           }
         }
       }
@@ -3380,7 +3380,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "⌥ 左选项"
+            "value": "⌥ 左 Option"
           }
         }
       }
@@ -3398,7 +3398,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "⌘ 左命令"
+            "value": "⌘ 左 Command"
           }
         }
       }
@@ -3416,7 +3416,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "⌥ 右选项"
+            "value": "⌥ 右 Option"
           }
         }
       }
@@ -3452,7 +3452,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "⌘ 右命令"
+            "value": "⌘ 右 Command"
           }
         }
       }
@@ -3470,7 +3470,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "⌥ 左选项"
+            "value": "⌥ 左 Option"
           }
         }
       }
@@ -3488,7 +3488,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "⌘ 左命令"
+            "value": "⌘ 左 Command"
           }
         }
       }
@@ -3506,7 +3506,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "⌥ 右选项"
+            "value": "⌥ 右 Option"
           }
         }
       }
@@ -4658,7 +4658,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "⌃ 右控制"
+            "value": "⌃ 右 Control"
           }
         }
       }
@@ -5738,7 +5738,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "开启后，可以在“显示 > 使用透明度”下按窗口切换透明度。请注意，这不适用于原生全屏幕窗口（由 macOS 管理并进入自己桌面的窗口），因为它们后面没有内容可看。使用“设置 > 通用 > 窗口 > 原生全屏幕窗口”来控制使用哪种类型的全屏幕窗口。热键窗口在全屏幕时只能是原生全屏幕窗口。"
+            "value": "开启后，可以在“显示 > 使用透明度”下按窗口调整透明度。请注意，这不适用于原生全屏幕窗口（由 macOS 管理并进入自己桌面的窗口），因为它们后面没有内容可看。使用 `设置 > 通用 > 窗口 > 原生全屏幕窗口` 来控制使用哪种类型的全屏幕窗口。热键窗口在全屏幕时只能是非原生全屏幕窗口。"
           }
         }
       }
@@ -7178,7 +7178,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "单击"
+            "value": "单点按"
           }
         }
       }
@@ -7250,7 +7250,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "将右控制 (⌃) 键重映射为："
+            "value": "将右 Control (⌃) 键重映射为："
           }
         }
       }
@@ -8288,13 +8288,13 @@
         "en": {
           "stringUnit": {
             "state": "new",
-            "value": "This will force iTerm2 to use the specified keyboard locale\\ninstead of the system keyboard."
+            "value": "This will force iTerm2 to use the specified keyboard locale\ninstead of the system keyboard."
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "这将强制 iTerm2 使用指定的键盘语言环境\\n而非系统键盘。"
+            "value": "这将强制 iTerm2 使用指定的键盘语言环境\n而非系统键盘。"
           }
         }
       }
@@ -9536,7 +9536,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "⌥ 左选项"
+            "value": "⌥ 左 Option"
           }
         }
       }
@@ -9554,7 +9554,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "已启用"
+            "value": "启用"
           }
         }
       }
@@ -9572,7 +9572,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "右选项 (⌥) 键："
+            "value": "右 Option (⌥) 键："
           }
         }
       }
@@ -9626,7 +9626,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "⌃ 右控制"
+            "value": "⌃ 右 Control"
           }
         }
       }
@@ -10022,7 +10022,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "⌘ 右命令"
+            "value": "⌘ 右 Command"
           }
         }
       }
@@ -10094,7 +10094,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "⌃ 左控制"
+            "value": "⌃ 左 Control"
           }
         }
       }
@@ -10148,7 +10148,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "fn 功能键"
+            "value": "fn Function"
           }
         }
       }
@@ -10292,7 +10292,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "fn 功能键"
+            "value": "fn Function"
           }
         }
       }
@@ -10490,7 +10490,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "左控制 (⌃) 键："
+            "value": "左 Control (⌃) 键："
           }
         }
       }
@@ -10616,7 +10616,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "⌘ 左命令"
+            "value": "⌘ 左 Command"
           }
         }
       }
@@ -11192,7 +11192,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "⌃ 右控制"
+            "value": "⌃ 右 Control"
           }
         }
       }
@@ -11606,7 +11606,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "右控制 (⌃) 键："
+            "value": "右 Control (⌃) 键："
           }
         }
       }
@@ -11804,7 +11804,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "fn 功能键"
+            "value": "fn Function"
           }
         }
       }
@@ -12290,7 +12290,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "⌥ 右选项"
+            "value": "⌥ 右 Option"
           }
         }
       }
@@ -12362,7 +12362,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "引导键："
+            "value": "Leader："
           }
         }
       }
@@ -12632,7 +12632,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "⌃ 左控制"
+            "value": "⌃ 左 Control"
           }
         }
       }
@@ -13154,7 +13154,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "⌘ 左命令"
+            "value": "⌘ 左 Command"
           }
         }
       }
@@ -13334,7 +13334,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "⌥ 左选项"
+            "value": "⌥ 左 Option"
           }
         }
       }
@@ -13478,7 +13478,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "应用可以更改右选项键"
+            "value": "应用可以更改右 Option 键"
           }
         }
       }
@@ -13496,7 +13496,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "启用后，应用可以通过 DECSET 1036 让此选项键发送 Esc+。请注意，在某些外接键盘上左右选项键是互换的。"
+            "value": "启用后，应用可以通过 DECSET 1036 让此 Option 键发送 Esc+。请注意，在某些外接键盘上左右 Option 键是互换的。"
           }
         }
       }
@@ -13532,7 +13532,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "左命令 (⌘) 键："
+            "value": "左 Command (⌘) 键："
           }
         }
       }
@@ -14432,7 +14432,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "⌃ 右控制"
+            "value": "⌃ 右 Control"
           }
         }
       }
@@ -15224,7 +15224,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "允许应用程序小键盘模式"
+            "value": "允许应用程序键盘区模式"
           }
         }
       }
@@ -15350,7 +15350,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "状态栏已启用"
+            "value": "启用状态栏"
           }
         }
       }
@@ -15566,7 +15566,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "⌃ 左控制"
+            "value": "⌃ 左 Control"
           }
         }
       }
@@ -15638,7 +15638,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "屏幕百分比"
+            "value": "% 屏幕"
           }
         }
       }
@@ -15854,7 +15854,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "⌃ 左控制"
+            "value": "⌃ 左 Control"
           }
         }
       }
@@ -16016,7 +16016,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "左选项 (⌥) 键："
+            "value": "左 Option (⌥) 键："
           }
         }
       }
@@ -16520,7 +16520,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "⌃ 右控制"
+            "value": "⌃ 右 Control"
           }
         }
       }
@@ -16664,7 +16664,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "⌃ 右控制"
+            "value": "⌃ 右 Control"
           }
         }
       }
@@ -16754,7 +16754,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "⌃ 右控制"
+            "value": "⌃ 右 Control"
           }
         }
       }
@@ -17294,7 +17294,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "fn 功能键"
+            "value": "fn Function"
           }
         }
       }
@@ -17744,7 +17744,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "fn 功能键"
+            "value": "fn Function"
           }
         }
       }
@@ -18752,7 +18752,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "⌘ 右命令"
+            "value": "⌘ 右 Command"
           }
         }
       }
@@ -18968,7 +18968,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "右命令 (⌘) 键："
+            "value": "右 Command (⌘) 键："
           }
         }
       }
@@ -19076,7 +19076,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "⌃ 左控制"
+            "value": "⌃ 左 Control"
           }
         }
       }
@@ -19232,13 +19232,13 @@
         "en": {
           "stringUnit": {
             "state": "new",
-            "value": "Send \\\\n rather than \\\\r to terminate commands"
+            "value": "Send \\n rather than \\r to terminate commands"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "发送 \\\\n 而非 \\\\r 来终止命令"
+            "value": "发送 \\n 而非 \\r 来终止命令"
           }
         }
       }
@@ -19472,7 +19472,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "屏幕百分比"
+            "value": "% 屏幕"
           }
         }
       }
@@ -19562,7 +19562,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "fn 功能键"
+            "value": "fn Function"
           }
         }
       }
@@ -19724,7 +19724,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "应用可以更改左选项键"
+            "value": "应用可以更改左 Option 键"
           }
         }
       }
@@ -19742,7 +19742,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "启用后，应用可以通过 DECSET 1036 让此选项键发送 Esc+。请注意，在某些外接键盘上左右选项键是互换的。"
+            "value": "启用后，应用可以通过 DECSET 1036 让此 Option 键发送 Esc+。请注意，在某些外接键盘上左右 Option 键是互换的。"
           }
         }
       }
@@ -20048,7 +20048,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "⌃ 左控制"
+            "value": "⌃ 左 Control"
           }
         }
       }
@@ -20624,7 +20624,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "fn 功能键"
+            "value": "fn Function"
           }
         }
       }

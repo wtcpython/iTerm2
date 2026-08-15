@@ -278,7 +278,7 @@ extension iTermBrowserViewController {
                                       accessory: nil,
                                       identifier: nil,
                                       silenceable: .kiTermWarningTypePersistent,
-                                      heading: "Problem saving instant replay movie",
+                                      heading: NSLocalizedString("Problem saving instant replay movie", comment: "UI"),
                                       window: view.window)
                 }
             }
@@ -978,7 +978,7 @@ extension iTermBrowserViewController: iTermBrowserToolbarDelegate {
             // Remove bookmark
             let success = await database.removeBookmark(url: currentURL)
             if success {
-                ToastWindowController.showToast(withMessage: "Bookmark Removed")
+                ToastWindowController.showToast(withMessage: String(localized: "Bookmark Removed", comment: "Toast"))
             }
         } else {
             // Add bookmark first, then show tag editor

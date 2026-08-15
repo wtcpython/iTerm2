@@ -26,32 +26,32 @@ static NSString *const iTermStatusBarTimeoutKey = @"timeout";
 
 - (NSArray<iTermStatusBarComponentKnob *> *)statusBarComponentKnobs {
     iTermStatusBarComponentKnob *labelKnob =
-        [[iTermStatusBarComponentKnob alloc] initWithLabelText:@"Label:"
+        [[iTermStatusBarComponentKnob alloc] initWithLabelText:NSLocalizedString(@"Label:", @"Status bar knob")
                                                           type:iTermStatusBarComponentKnobTypeText
-                                                   placeholder:@"Button Label"
+                                                   placeholder:NSLocalizedString(@"Button Label", @"Status bar knob placeholder")
                                                   defaultValue:nil
                                                            key:iTermStatusBarLabelKey];
     iTermStatusBarComponentKnob *invocationKnob =
-        [[iTermStatusBarComponentKnob alloc] initWithLabelText:@"Function call:"
+        [[iTermStatusBarComponentKnob alloc] initWithLabelText:NSLocalizedString(@"Function call:", @"Status bar knob")
                                                           type:iTermStatusBarComponentKnobTypeInvocation
                                                    placeholder:@"foo(bar: \"baz\")"
                                                   defaultValue:nil
                                                            key:iTermStatusBarFunctionInvocationKey];
     iTermStatusBarComponentKnob *timeoutKnob =
-        [[iTermStatusBarComponentKnob alloc] initWithLabelText:@"Timeout (seconds):"
+        [[iTermStatusBarComponentKnob alloc] initWithLabelText:NSLocalizedString(@"Timeout (seconds):", @"Status bar knob")
                                                           type:iTermStatusBarComponentKnobTypeDouble
                                                    placeholder:nil
                                                   defaultValue:self.class.statusBarComponentDefaultKnobs[iTermStatusBarTimeoutKey]
                                                            key:iTermStatusBarTimeoutKey];
     iTermStatusBarComponentKnob *backgroundColorKnob =
-        [[iTermStatusBarComponentKnob alloc] initWithLabelText:@"Background Color:"
-                                                          type:iTermStatusBarComponentKnobTypeColor
+        [[iTermStatusBarComponentKnob alloc] initWithLabelText:NSLocalizedString(@"Background Color:", @"Status bar knob")
+                                                           type:iTermStatusBarComponentKnobTypeColor
                                                    placeholder:nil
                                                   defaultValue:nil
                                                            key:iTermStatusBarSharedBackgroundColorKey];
     iTermStatusBarComponentKnob *textColorKnob =
-        [[iTermStatusBarComponentKnob alloc] initWithLabelText:@"Text Color:"
-                                                          type:iTermStatusBarComponentKnobTypeColor
+        [[iTermStatusBarComponentKnob alloc] initWithLabelText:NSLocalizedString(@"Text Color:", @"Status bar knob")
+                                                           type:iTermStatusBarComponentKnobTypeColor
                                                    placeholder:nil
                                                   defaultValue:nil
                                                            key:iTermStatusBarSharedTextColorKey];
@@ -142,7 +142,7 @@ static NSString *const iTermStatusBarTimeoutKey = @"timeout";
 }
 
 - (NSString *)statusBarComponentShortDescription {
-    return @"Call Script Function";
+    return NSLocalizedString(@"Call Script Function", @"UI");
 }
 
 - (BOOL)statusBarComponentCanStretch {
@@ -150,7 +150,7 @@ static NSString *const iTermStatusBarTimeoutKey = @"timeout";
 }
 
 - (NSString *)statusBarComponentDetailedDescription {
-    return @"Adds a button that invokes a script function with a user-provided invocation.";
+    return NSLocalizedString(@"Adds a button that invokes a script function with a user-provided invocation.", @"UI");
 }
 
 - (id)statusBarComponentExemplarWithBackgroundColor:(NSColor *)backgroundColor

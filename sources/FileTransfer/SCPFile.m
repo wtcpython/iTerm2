@@ -428,7 +428,7 @@ static NSError *SCPFileError(NSString *description) {
                                          accessory:nil
                                         identifier:kSecureCopyConnectionFailedWarning
                                        silenceable:kiTermWarningTypePermanentlySilenceable
-                                           heading:@"Connection Failed"
+                                           heading:NSLocalizedString(@"Connection Failed", @"UI")
                                        cancelLabel:NSLocalizedString(@"Help", @"UI")
                                             window:nil];
             if (selection == kiTermWarningSelection1) {
@@ -468,7 +468,7 @@ static NSError *SCPFileError(NSString *description) {
                 break;
             }
             if ([authType isEqualToString:@"password"]) {
-                NSString *password = [self keyboardInteractiveRequest:@"password"];
+                NSString *password = [self keyboardInteractiveRequest:NSLocalizedString(@"password", @"UI")];
                 if (self.stopped || !password) {
                     break;
                 }
@@ -513,10 +513,10 @@ static NSError *SCPFileError(NSString *description) {
                         if (keyIsEncrypted) {
                             NSString *prompt;
                             if (firstAttempt) {
-                                prompt = [NSString stringWithFormat:@"passphrase for private key “%@”:",
+                                prompt = [NSString stringWithFormat:NSLocalizedString(@"passphrase for private key “%@”:", @"UI"),
                                           keyPath];
                             } else {
-                                prompt = [NSString stringWithFormat:@"correct passphrase for “%@”:",
+                                prompt = [NSString stringWithFormat:NSLocalizedString(@"correct passphrase for “%@”:", @"UI"),
                                           keyPath];
                             }
                             password = [self keyboardInteractiveRequest:prompt];
@@ -815,7 +815,7 @@ static NSString *const SCPFileKnownHostsUserDefaultsKey = @"NoSyncKnownHosts";
                              accessory:nil
                             identifier:[@"NoSyncConnectTo_" stringByAppendingString:self.userHostPort]
                            silenceable:kiTermWarningTypePermanentlySilenceable
-                               heading:@"Connect to New Host?"
+                               heading:NSLocalizedString(@"Connect to New Host?", @"UI")
                                 window:nil];
     return selection == kiTermWarningSelection0;
 }
@@ -946,10 +946,10 @@ static NSString *const SCPFileKnownHostsUserDefaultsKey = @"NoSyncKnownHosts";
         NSString *title = @"Notice";  // The default value should never be used.
         switch (status) {
             case NMSSHKnownHostStatusFailure:
-                title = [NSString stringWithFormat:@"Problem connecting to %@", host];
-                message = [NSString stringWithFormat:@"Could not read the known_hosts file.\n"
-                                                     @"As a result, the authenticity of host '%@' can't be established."
-                                                     @"%@ key fingerprint is %@. Connect anyway?",
+                title = [NSString stringWithFormat:NSLocalizedString(@"Problem connecting to %@", @"UI"), host];
+                message = [NSString stringWithFormat:NSLocalizedString(@"Could not read the known_hosts file.\n"
+                                                                       @"As a result, the authenticity of host '%@' can't be established."
+                                                                       @"%@ key fingerprint is %@. Connect anyway?", @"UI"),
                            host, hashName, fingerprint];
                 break;
 
@@ -959,20 +959,20 @@ static NSString *const SCPFileKnownHostsUserDefaultsKey = @"NoSyncKnownHosts";
                 break;
 
             case NMSSHKnownHostStatusMismatch:
-                title = @"Warning!";
+                title = NSLocalizedString(@"Warning!", @"UI");
                 message =
-                    [NSString stringWithFormat:@"REMOTE HOST IDENTIFICATION HAS CHANGED!\n\n"
-                                               @"The %@ key fingerprint of host '%@' has changed. It is %@.\n\n"
-                                               @"Someone could be eavesdropping on you right now (man-in-the-middle attack)!\n"
-                                               @"It is also possible that a host key has just been changed.\nConnect anyway?",
+                    [NSString stringWithFormat:NSLocalizedString(@"REMOTE HOST IDENTIFICATION HAS CHANGED!\n\n"
+                                                                 @"The %@ key fingerprint of host '%@' has changed. It is %@.\n\n"
+                                                                 @"Someone could be eavesdropping on you right now (man-in-the-middle attack)!\n"
+                                                                 @"It is also possible that a host key has just been changed.\nConnect anyway?", @"UI"),
                      host, hashName, fingerprint];
                 break;
 
             case NMSSHKnownHostStatusNotFound:
-                title = [NSString stringWithFormat:@"First time connecting to %@", host];
+                title = [NSString stringWithFormat:NSLocalizedString(@"First time connecting to %@", @"UI"), host];
                 message =
-                    [NSString stringWithFormat:@"The authenticity of host '%@' can't be established.\n\n"
-                                               @"%@ key fingerprint is %@.\n\nConnect anyway?",
+                    [NSString stringWithFormat:NSLocalizedString(@"The authenticity of host '%@' can't be established.\n\n"
+                                                                 @"%@ key fingerprint is %@.\n\nConnect anyway?", @"UI"),
                      host, hashName, fingerprint];
                 _okToAdd = YES;
                 break;

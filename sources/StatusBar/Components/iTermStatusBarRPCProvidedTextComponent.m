@@ -404,7 +404,7 @@ static NSString *const iTermStatusBarRPCRegistrationRequestV2Key = @"registratio
                                  accessory:nil
                                 identifier:[NSString stringWithFormat:@"NoSyncAutoLaunchScript_%@", _fullPath]
                                silenceable:kiTermWarningTypePermanentlySilenceable
-                                   heading:@"Always launch this script when iTerm2 starts?"
+                                   heading:NSLocalizedString(@"Always launch this script when iTerm2 starts?", @"UI")
                                     window:self.delegate.textField.window] == kiTermWarningSelection0) {
         [menuController moveScriptToAutoLaunch:_fullPath];
     }
@@ -534,10 +534,10 @@ static NSString *const iTermStatusBarRPCRegistrationRequestV2Key = @"registratio
     if (_errorMessage) {
         iTermWarning *warning = [[iTermWarning alloc] init];
         warning.title = _errorMessage;
-        warning.heading = @"Status Bar Component Problem";
+        warning.heading = NSLocalizedString(@"Status Bar Component Problem", @"UI");
         NSArray *actions = @[ [iTermWarningAction warningActionWithLabel:NSLocalizedString(@"OK", @"UI") block:nil] ];
         if ([self scriptIsNotRunningButCouldBeLaunched]) {
-            iTermWarningAction *launch = [iTermWarningAction warningActionWithLabel:@"Launch Script" block:^(iTermWarningSelection selection) {
+            iTermWarningAction *launch = [iTermWarningAction warningActionWithLabel:NSLocalizedString(@"Launch Script", @"UI") block:^(iTermWarningSelection selection) {
                 [self launchScript];
             }];
             iTermWarningAction *reveal = [iTermWarningAction warningActionWithLabel:NSLocalizedString(@"Reveal in Finder", @"UI") block:^(iTermWarningSelection selection) {
@@ -545,11 +545,11 @@ static NSString *const iTermStatusBarRPCRegistrationRequestV2Key = @"registratio
             }];
             actions = [actions arrayByAddingObjectsFromArray:@[ launch, reveal ]];
 
-            warning.title = [NSString stringWithFormat:@"%@It looks like the script is not running. Launching it might fix the problem.", _errorMessage];
+            warning.title = [NSString stringWithFormat:NSLocalizedString(@"%@It looks like the script is not running. Launching it might fix the problem.", @"UI"), _errorMessage];
         }
         warning.warningActions = actions;
         warning.warningType = kiTermWarningTypePersistent;
-        warning.heading = @"Status Bar Script Error";
+        warning.heading = NSLocalizedString(@"Status Bar Script Error", @"UI");
         warning.window = self.delegate.textField.window;
         [warning runModal];
         return;

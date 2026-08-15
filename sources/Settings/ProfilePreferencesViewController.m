@@ -496,7 +496,7 @@ andEditComponentWithIdentifier:(NSString *)identifier
 }
 
 - (void)profileTableTagsVisibilityDidChange:(ProfileListView *)profileListView {
-    [_toggleTagsButton setTitle:profileListView.tagsVisible ? @"< Tags" : @"Tags >"];
+    [_toggleTagsButton setTitle:profileListView.tagsVisible ? NSLocalizedString(@"< Tags", @"UI") : NSLocalizedString(@"Tags >", @"UI")];
 }
 
 #pragma mark - Private
@@ -940,7 +940,7 @@ andEditComponentWithIdentifier:(NSString *)identifier
                                              accessory:nil
                                             identifier:@"NoSyncJSONImportFailed"
                                            silenceable:kiTermWarningTypeTemporarilySilenceable
-                                               heading:@"Could not Import Profile"
+                                               heading:NSLocalizedString(@"Could not Import Profile", @"UI")
                                                 window:self.view.window];
                     if (selection == kiTermWarningSelection1) {
                         return;

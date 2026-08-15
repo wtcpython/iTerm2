@@ -157,7 +157,7 @@
     } else if (isFirstResponder) {
         string = self.hotkeyBeingRecorded;
     } else if (self.stringValue.length == 0) {
-        string = self.isEnabled ? @"Click to Set" : @"";
+        string = self.isEnabled ? NSLocalizedString(@"Click to Set", @"UI") : @"";
     } else {
         string = self.stringValue;
     }
@@ -238,7 +238,7 @@
                                      accessory:nil
                                     identifier:nil
                                    silenceable:kiTermWarningTypePersistent
-                                       heading:@"Confirm Shortcut"
+                                       heading:NSLocalizedString(@"Confirm Shortcut", @"UI")
                                         window:self.window];
             if (selection == kiTermWarningSelection1) {
                 [self revert];

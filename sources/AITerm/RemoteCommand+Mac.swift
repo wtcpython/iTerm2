@@ -44,7 +44,7 @@ extension RemoteCommand {
                             accessory: nil,
                             identifier: nil,
                             silenceable: .kiTermWarningTypePersistent,
-                            heading: "Enable Command Safety Checking?",
+                            heading: NSLocalizedString("Enable Command Safety Checking?", comment: "UI"),
                             window: nil)
                         iTermPreferences.setBool(true, forKey: nagKey)
                         if selection == .kiTermWarningSelection0 {
@@ -90,7 +90,7 @@ extension RemoteCommand {
             accessory: nil,
             identifier: nil,
             silenceable: .kiTermWarningTypePersistent,
-            heading: "Command Safety Checking Has Changed",
+            heading: NSLocalizedString("Command Safety Checking Has Changed", comment: "UI"),
             window: nil)
         // Selection 0 == switch to the configured model; 1 == keep Apple.
         defaults.set(selection != .kiTermWarningSelection0,

@@ -297,7 +297,7 @@ extension ToolStatus {
         updateSelectionWithoutChangingFirstResponder()
     }
 
-    static let helpMarkdown = """
+    static let helpMarkdown = NSLocalizedString("""
     ## Session Status
 
     The **Session Status** tool shows the status of sessions across all tabs. Each entry displays the \
@@ -334,7 +334,7 @@ extension ToolStatus {
 
     Right-click a row and choose **Snooze** to move it to the bottom of the list and \
     dim it. A snoozed entry automatically un-snoozes the next time its status changes.
-    """
+    """, comment: "UI")
 }
 
 // MARK: - Private methods

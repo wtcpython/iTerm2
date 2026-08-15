@@ -67,7 +67,7 @@ class iTermTouchIDHelper: NSObject {
                               accessory: nil,
                               identifier: nil,
                               silenceable: .kiTermWarningTypePersistent,
-                              heading: "Cannot Enable Touch ID for Sudo",
+                              heading: NSLocalizedString("Cannot Enable Touch ID for Sudo", comment: "UI"),
                               window: nil)
             return
         }

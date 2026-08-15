@@ -66,11 +66,11 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (NSString *)statusBarComponentShortDescription {
-    return @"Job Name";
+    return NSLocalizedString(@"Job Name", @"UI");
 }
 
 - (NSString *)statusBarComponentDetailedDescription {
-    return @"Shows the currently running job. If space permits, parent process names are also shown.";
+    return NSLocalizedString(@"Shows the currently running job. If space permits, parent process names are also shown.", @"UI");
 }
 
 - (id)statusBarComponentExemplarWithBackgroundColor:(NSColor *)backgroundColor

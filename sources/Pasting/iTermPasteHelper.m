@@ -722,7 +722,7 @@ const NSInteger iTermQuickPasteBytesPerCallDefaultValue = 768;
                                      accessory:nil
                                     identifier:@"NoSyncPasteOverCharacterLimitWarning"
                                    silenceable:kiTermWarningTypePersistent
-                                       heading:@"Paste Limit Exceeded"
+                                       heading:NSLocalizedString(@"Paste Limit Exceeded", @"UI")
                                         window:self.delegate.pasteHelperViewForIndicator.window];
             switch (selection) {
                 case kiTermWarningSelection0:
@@ -773,10 +773,10 @@ const NSInteger iTermQuickPasteBytesPerCallDefaultValue = 768;
     __block BOOL result = YES;
     iTermWarningAction *cancel = [iTermWarningAction warningActionWithLabel:NSLocalizedString(@"Cancel", @"UI")
                                                                       block:^(iTermWarningSelection selection) { result = NO; }];
-    iTermWarningAction *paste = [iTermWarningAction warningActionWithLabel:@"Paste"
-                                                                     block:^(iTermWarningSelection selection) { result = YES; }];
+    iTermWarningAction *paste = [iTermWarningAction warningActionWithLabel:NSLocalizedString(@"Paste", @"UI")
+                                                                      block:^(iTermWarningSelection selection) { result = YES; }];
     iTermWarningAction *pasteWithoutNewline =
-        [iTermWarningAction warningActionWithLabel:@"Paste Without Newline"
+        [iTermWarningAction warningActionWithLabel:NSLocalizedString(@"Paste Without Newline", @"UI")
                                              block:^(iTermWarningSelection selection) {
             [pasteEvent trimNewlines];
             RLog(@"paste without newline selected: set result to YES");

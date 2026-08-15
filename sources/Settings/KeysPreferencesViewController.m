@@ -119,16 +119,16 @@ static NSString *const kKeyCode0MitigationSuffixGlobal = @"Global";
     __weak __typeof(self) weakSelf = self;
 
     _leader.leaderAllowed = NO;
-    _leader.purpose = @"as the leader";
+    _leader.purpose = NSLocalizedString(@"as the leader", @"UI");
     iTermKeystroke *leaderKeystroke = [iTermKeyMappings leader];
     _leader.stringValue = leaderKeystroke ? [iTermKeystrokeFormatter stringForKeystroke:leaderKeystroke] : @"";
     [self updatePrivateNonDefaultInicators];
 
     _hotkeyField.leaderAllowed = NO;
-    _hotkeyField.purpose = @"as a hotkey";
+    _hotkeyField.purpose = NSLocalizedString(@"as a hotkey", @"UI");
 
     _openQuicklyHotkeyField.leaderAllowed = NO;
-    _openQuicklyHotkeyField.purpose = @"as the Open Quickly hotkey";
+    _openQuicklyHotkeyField.purpose = NSLocalizedString(@"as the Open Quickly hotkey", @"UI");
     [self updateOpenQuicklyHotkeyField];
 
     [_keyMappingViewController addViewsToSearchIndex:self];
@@ -409,7 +409,7 @@ static NSString *const kKeyCode0MitigationSuffixGlobal = @"Global";
                                                                    accessory:nil
                                                                   identifier:@"NoSyncSuppressAddAnotherHotkeyProfileWarning"
                                                                  silenceable:kiTermWarningTypePersistent
-                                                                     heading:@"Add Another Hotkey Window Profile?"
+                                                                     heading:NSLocalizedString(@"Add Another Hotkey Window Profile?", @"UI")
                                                                       window:self.view.window];
         if (selection == cancel) {
             return;
@@ -419,7 +419,7 @@ static NSString *const kKeyCode0MitigationSuffixGlobal = @"Global";
     }
     iTermHotkeyPreferencesModel *model = [[iTermHotkeyPreferencesModel alloc] init];
     _hotkeyPanel = [[iTermHotkeyPreferencesWindowController alloc] init];
-    [_hotkeyPanel setExplanation:@"This panel helps you configure a new profile that will be bound to a keystroke you assign. Pressing the hotkey (even when iTerm2 is not active) will toggle a special window."];
+    [_hotkeyPanel setExplanation:NSLocalizedString(@"This panel helps you configure a new profile that will be bound to a keystroke you assign. Pressing the hotkey (even when iTerm2 is not active) will toggle a special window.", @"UI")];
     _hotkeyPanel.descriptorsInUseByOtherProfiles = [[iTermHotKeyController sharedInstance] descriptorsForProfileHotKeysExcept:nil];
     _hotkeyPanel.model = model;
 
@@ -639,7 +639,7 @@ static NSString *const kKeyCode0MitigationSuffixGlobal = @"Global";
     [_popoverVC view];
     _popoverVC.textView.font = [NSFont systemFontOfSize:[NSFont systemFontSize]];
     _popoverVC.textView.drawsBackground = NO;
-    [_popoverVC appendString:@"The leader behaves like a modifier key, such as Command or Option, but is a separate keystroke. It can be used in key bindings. For example, if you set the leader to ⌘b then you could bind an action to the two-keystroke sequence “⌘b x”. ⌘b is the recommended leader and that keystroke will not be used for other purposes in the future."];
+    [_popoverVC appendString:NSLocalizedString(@"The leader behaves like a modifier key, such as Command or Option, but is a separate keystroke. It can be used in key bindings. For example, if you set the leader to ⌘b then you could bind an action to the two-keystroke sequence “⌘b x”. ⌘b is the recommended leader and that keystroke will not be used for other purposes in the future.", @"UI")];
     NSRect frame = _popoverVC.view.frame;
     frame.size.width = 300;
     frame.size.height = 108;
@@ -853,7 +853,7 @@ static NSString *const kKeyCode0MitigationSuffixGlobal = @"Global";
                              accessory:nil
                             identifier:@"RemoveExistingGlobalKeyMappingsBeforeLoading"
                            silenceable:kiTermWarningTypePersistent
-                               heading:@"Load Preset"
+                               heading:NSLocalizedString(@"Load Preset", @"UI")
                                 window:self.view.window];
     switch (selection) {
         case kiTermWarningSelection0:

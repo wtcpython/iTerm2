@@ -329,7 +329,7 @@ typedef NS_ENUM(NSUInteger, iTermSavePanelAction) {
     }
 
     NSString *heading =
-    [NSString stringWithFormat:@"“%@” already exists. Do you want to replace it or append to it?",
+    [NSString stringWithFormat:NSLocalizedString(@"“%@” already exists. Do you want to replace it or append to it?", @"UI"),
      [self.item.filename lastPathComponent]];
     NSString *body = [NSString stringWithFormat:@"A file or folder with the same name already exists%@. "
                       @"Replacing it will overwrite its current contents.",
@@ -411,8 +411,8 @@ typedef NS_ENUM(NSUInteger, iTermSavePanelAction) {
                                                                accessory:nil
                                                               identifier:nil
                                                              silenceable:kiTermWarningTypePersistent
-                                                                 heading:[NSString stringWithFormat:@"You cannot save this document with extension “.%@” at the end of the name. The required extension is “.%@”.",
-                                                                          proposedExtension, _requiredExtension]
+                                                                  heading:[NSString stringWithFormat:NSLocalizedString(@"You cannot save this document with extension “.%@” at the end of the name. The required extension is “.%@”.", @"UI"),
+                                                                           proposedExtension, _requiredExtension]
                                                                   window:nil];
     switch (selection) {
         case kiTermWarningSelection0:

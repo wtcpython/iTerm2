@@ -222,7 +222,7 @@ NSString *const iTermDidToggleSecureInputNotification = @"iTermDidToggleSecureIn
                              accessory:nil
                             identifier:@"NoSyncMontereySecureKeyboardEntryWarning"
                            silenceable:kiTermWarningTypePermanentlySilenceable
-                               heading:@"Secure Keyboard Entry Enabled"
+                               heading:NSLocalizedString(@"Secure Keyboard Entry Enabled", @"UI")
                                 window:[NSApp keyWindow]];
     if (selection == kiTermWarningSelection0) {
         return;

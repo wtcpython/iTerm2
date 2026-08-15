@@ -546,9 +546,9 @@ static NSModalResponse iTermCompareRenderingRunModal(id self, SEL _cmd) {
         NSDate *recent = suppressed.firstObject.lastSuppressed;
         if (recent) {
             NSString *rel = [NSDateFormatter compactDateDifferenceStringFromDate:recent];
-            menuItem.title = [NSString stringWithFormat:@"%@ (%@ ago)…", countPart, rel];
+            menuItem.title = [NSString stringWithFormat:NSLocalizedString(@"%@ (%@ ago)…", @"UI"), countPart, rel];
         } else {
-            menuItem.title = [NSString stringWithFormat:@"%@…", countPart];
+            menuItem.title = [NSString stringWithFormat:NSLocalizedString(@"%@…", @"UI"), countPart];
         }
         return YES;
     } else if (menuItem.action == @selector(arrangeSplitPanesEvenly:)) {
@@ -1513,7 +1513,7 @@ void TurnOnDebugLoggingAutomatically(void) {
                                  accessory:nil
                                 identifier:@"NoSyncMacOS11Deprecation"
                                silenceable:kiTermWarningTypePermanentlySilenceable
-                                   heading:@"Deprecation Notice"
+                                   heading:NSLocalizedString(@"Deprecation Notice", @"UI")
                                     window:nil];
     }
     [iTermMacOS13RequirementNotice maybeShow];
@@ -2759,7 +2759,8 @@ static iTermKeyEventReplayer *gReplayer;
 }
 
 - (IBAction)toggleToolbeltTool:(NSMenuItem *)menuItem {
-    [iTermToolbeltView toggleShouldShowTool:[menuItem title]];
+    NSString *name = [menuItem.identifier stringByReplacingOccurrencesOfString:@"Toolbelt." withString:@""];
+    [iTermToolbeltView toggleShouldShowTool:name];
 }
 
 - (IBAction)toggleFullScreenTabBar:(id)sender {
@@ -3227,7 +3228,7 @@ static iTermKeyEventReplayer *gReplayer;
                                       accessory:nil
                                      identifier:nil
                                     silenceable:kiTermWarningTypePersistent
-                                        heading:@"Python Runtime"
+                                        heading:NSLocalizedString(@"Python Runtime", @"UI")
                                          window:nil];
          }
      }];
@@ -3283,7 +3284,7 @@ static iTermKeyEventReplayer *gReplayer;
                                              accessory:nil
                                             identifier:nil
                                            silenceable:kiTermWarningTypePersistent
-                                               heading:@"Python Runtime"
+                                               heading:NSLocalizedString(@"Python Runtime", @"UI")
                                                 window:nil];
                 } else {
                     [iTermWarning showWarningWithTitle:error.localizedDescription ?: @"Unknown error"
@@ -3291,7 +3292,7 @@ static iTermKeyEventReplayer *gReplayer;
                                              accessory:nil
                                             identifier:nil
                                            silenceable:kiTermWarningTypePersistent
-                                               heading:@"Error Installing Python Runtime"
+                                               heading:NSLocalizedString(@"Error Installing Python Runtime", @"UI")
                                                 window:nil];
                 }
             }];
@@ -3627,7 +3628,7 @@ static iTermKeyEventReplayer *gReplayer;
     double rate = bytes;
     rate /= delay;
 
-    [ToastWindowController showToastWithMessage:[NSString stringWithFormat:@"Pasting at up to %@/sec", [NSString it_formatBytes:rate]]];
+    [ToastWindowController showToastWithMessage:[NSString stringWithFormat:NSLocalizedString(@"Pasting at up to %@/sec", @"UI"), [NSString it_formatBytes:rate]]];
 }
 
 - (void)hideStuckToolTips {

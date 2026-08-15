@@ -100,7 +100,7 @@ final class ChatWindowController: NSWindowController, DictionaryCodable {
                               accessory: nil,
                               identifier: nil,
                               silenceable: .kiTermWarningTypePersistent,
-                              heading: "Error",
+                              heading: NSLocalizedString("Error", comment: "UI"),
                               window: nil)
         }
         return _instance
@@ -724,7 +724,7 @@ extension ChatWindowController: ChatListViewControllerDelegate {
                               accessory: nil,
                               identifier: nil,
                               silenceable: .kiTermWarningTypePersistent,
-                              heading: "Rename Failed",
+                              heading: NSLocalizedString("Rename Failed", comment: "UI"),
                               window: window)
         }
     }

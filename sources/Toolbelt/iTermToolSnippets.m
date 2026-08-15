@@ -409,7 +409,7 @@ static NSButton *iTermToolSnippetsNewButton(NSString *imageName, NSString *title
 }
 
 - (void)help:(id)sender {
-    [_help it_showWarningWithMarkdown:iTermSnippetHelpMarkdown];
+    [_help it_showWarningWithMarkdown:iTermSnippetHelpMarkdown()];
 }
 
 - (void)doubleClickOnOutlineView:(id)sender {

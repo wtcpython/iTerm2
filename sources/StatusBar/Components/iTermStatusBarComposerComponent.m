@@ -36,14 +36,14 @@
 
 - (NSArray<iTermStatusBarComponentKnob *> *)statusBarComponentKnobs {
     iTermStatusBarComponentKnob *textColorKnob =
-    [[iTermStatusBarComponentKnob alloc] initWithLabelText:@"Icon Color:"
-                                                      type:iTermStatusBarComponentKnobTypeColor
+    [[iTermStatusBarComponentKnob alloc] initWithLabelText:NSLocalizedString(@"Icon Color:", @"Status bar knob")
+                                                       type:iTermStatusBarComponentKnobTypeColor
                                                placeholder:nil
                                               defaultValue:nil
                                                        key:iTermStatusBarSharedTextColorKey];
     iTermStatusBarComponentKnob *backgroundColorKnob =
-    [[iTermStatusBarComponentKnob alloc] initWithLabelText:@"Background Color:"
-                                                      type:iTermStatusBarComponentKnobTypeColor
+    [[iTermStatusBarComponentKnob alloc] initWithLabelText:NSLocalizedString(@"Background Color:", @"Status bar knob")
+                                                       type:iTermStatusBarComponentKnobTypeColor
                                                placeholder:nil
                                               defaultValue:nil
                                                        key:iTermStatusBarSharedBackgroundColorKey];
@@ -66,11 +66,11 @@
 }
 
 - (NSString *)statusBarComponentShortDescription {
-    return @"Composer";
+    return NSLocalizedString(@"Composer", @"UI");
 }
 
 - (NSString *)statusBarComponentDetailedDescription {
-    return @"Adds a text field for composing command lines.";
+    return NSLocalizedString(@"Adds a text field for composing command lines.", @"UI");
 }
 
 - (id)statusBarComponentExemplarWithBackgroundColor:(NSColor *)backgroundColor

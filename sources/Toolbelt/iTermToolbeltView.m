@@ -191,7 +191,7 @@ static NSString *const kDynamicToolURL = @"URL";
 + (void)addToolsToMenu:(NSMenu *)menu {
     NSArray *names = [[iTermToolbeltView allTools] sortedArrayUsingSelector:@selector(compare:)];
     for (NSString *theName in names) {
-        NSMenuItem *i = [[NSMenuItem alloc] initWithTitle:theName
+        NSMenuItem *i = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(theName, @"UI")
                                                    action:@selector(toggleToolbeltTool:)
                                             keyEquivalent:@""];
         i.tag = (ProfileType)[gRegisteredTools[theName] supportedProfileTypes];

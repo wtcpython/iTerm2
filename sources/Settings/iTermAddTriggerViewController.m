@@ -421,7 +421,7 @@ static const CGFloat kLabelWidth = 124;
     performanceRow.hidden = YES;
     
     // Create help button
-    NSString *helpText = @"This histogram shows how much CPU time was used evaluating the regular expression for this trigger over the lifetime of the current terminal session. The X axis gives time in microseconds while the Y axis gives the number of samples which fell in that duration bucket. The vertical red line indicates the mean duration. You can use this to diagnose triggers that cause performance problems.";
+    NSString *helpText = NSLocalizedString(@"This histogram shows how much CPU time was used evaluating the regular expression for this trigger over the lifetime of the current terminal session. The X axis gives time in microseconds while the Y axis gives the number of samples which fell in that duration bucket. The vertical red line indicates the mean duration. You can use this to diagnose triggers that cause performance problems.", @"UI");
     iTermPopoverHelpButton *helpButton = [[iTermPopoverHelpButton alloc] initWithHelpText:helpText];
     helpButton.translatesAutoresizingMaskIntoConstraints = NO;
     [performanceRow addSubview:helpButton];

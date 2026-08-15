@@ -917,12 +917,12 @@ const int kMaxSelectedTextLengthForCustomActions = 400;
     theMenu = [[NSMenu alloc] initWithTitle:@"Contextual Menu"];
 
     NSMenuItem *theItem = [[NSMenuItem alloc] init];
-    theItem.title = [NSString stringWithFormat:@"Command: %@", mark.firstLineOfCommand];
+    theItem.title = [NSString stringWithFormat:NSLocalizedString(@"Command: %@", @"UI"), mark.firstLineOfCommand];
     [theMenu addItem:theItem];
 
     if (directory) {
         theItem = [[NSMenuItem alloc] init];
-        theItem.title = [NSString stringWithFormat:@"Directory: %@", directory];
+        theItem.title = [NSString stringWithFormat:NSLocalizedString(@"Directory: %@", @"UI"), directory];
         [theMenu addItem:theItem];
     }
 

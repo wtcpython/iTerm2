@@ -87,7 +87,7 @@ class iTermSavePanelItem: NSObject {
                               accessory: nil,
                               identifier: nil,
                               silenceable: .kiTermWarningTypePersistent,
-                              heading: "Upload Failed",
+                              heading: NSLocalizedString("Upload Failed", comment: "UI"),
                               window: nil)
         }
     }

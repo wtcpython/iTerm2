@@ -302,7 +302,7 @@
                                      accessory:nil
                                     identifier:nil
                                    silenceable:kiTermWarningTypePersistent
-                                       heading:@"AI Error"
+                                       heading:NSLocalizedString(@"AI Error", @"UI")
                                         window:weakSelf.view.window];
         }];
     }];
@@ -334,22 +334,22 @@
     _popoverVC.textView.defaultParagraphStyle = style;
 
     NSArray<NSString*> *lines = @[
-        @"^⇧↑\tAdd cursor above",
-        @"^⇧↓\tAdd cursor below",
-        @"^⇧-click\tAdd cursor",
-        @"⌥-drag\tAdd cursors"
+        NSLocalizedString(@"^⇧↑\tAdd cursor above", @"UI"),
+        NSLocalizedString(@"^⇧↓\tAdd cursor below", @"UI"),
+        NSLocalizedString(@"^⇧-click\tAdd cursor", @"UI"),
+        NSLocalizedString(@"⌥-drag\tAdd cursors", @"UI")
     ];
     if ([iTermAdvancedSettingsModel generativeAIAllowed]) {
-        lines = [lines arrayByAddingObject:@"⌘Y\tNatural language AI lookup"];
+        lines = [lines arrayByAddingObject:NSLocalizedString(@"⌘Y\tNatural language AI lookup", @"UI")];
     }
     lines = [lines arrayByAddingObjectsFromArray:@[
-        @"⌘F\tOpen Find bar",
-        @"⌥⌘V\tOpen in Advanced Paste",
-        @"⌘-click\tOpen in explainshell.com",
-        @"⇧↩\tSend contents or selection",
-        @"⌥⇧↩\tSend command at cursor",
-        @"⌥↩\tEnqueue command at cursor",
-        @"⇧⌘;\tView command history"
+        NSLocalizedString(@"⌘F\tOpen Find bar", @"UI"),
+        NSLocalizedString(@"⌥⌘V\tOpen in Advanced Paste", @"UI"),
+        NSLocalizedString(@"⌘-click\tOpen in explainshell.com", @"UI"),
+        NSLocalizedString(@"⇧↩\tSend contents or selection", @"UI"),
+        NSLocalizedString(@"⌥⇧↩\tSend command at cursor", @"UI"),
+        NSLocalizedString(@"⌥↩\tEnqueue command at cursor", @"UI"),
+        NSLocalizedString(@"⇧⌘;\tView command history", @"UI")
     ]];
     [_popoverVC appendString:[lines componentsJoinedByString:@"\n"]];
     [_popoverVC.textView.textStorage addAttribute:NSParagraphStyleAttributeName value:style range:NSMakeRange(0, _popoverVC.textView.textStorage.string.length)];

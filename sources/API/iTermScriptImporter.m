@@ -271,7 +271,7 @@ static NSString *const iTermInstallStagingPrefix = @".installing-";
                                                                accessory:nil
                                                               identifier:nil
                                                              silenceable:kiTermWarningTypePersistent
-                                                                 heading:@"Confirm Installation"
+                                                                 heading:NSLocalizedString(@"Confirm Installation", @"UI")
                                                                   window:nil];
     completion(selection != kiTermWarningSelection1, selection == kiTermWarningSelection2);
 }
@@ -347,7 +347,7 @@ static NSString *const iTermInstallStagingPrefix = @".installing-";
                                                  accessory:nil
                                                 identifier:nil
                                                silenceable:kiTermWarningTypePersistent
-                                                   heading:@"Script Already Exists"
+                                                   heading:NSLocalizedString(@"Script Already Exists", @"UI")
                                                     window:nil];
         }
         if (selection == kiTermWarningSelection0) {

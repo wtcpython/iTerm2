@@ -9222,7 +9222,7 @@ You can choose to define the characters considered part of a word with a regular
                                             <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Co8-1H-3eo">
                                                 <rect key="frame" x="86" y="23" width="142" height="16"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                <textFieldCell key="cell" lineBreakMode="clipping" title="Top &amp; bottom margins:" id="moN-8d-dZd">
+                                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Top &amp; bottom margins:" id="moN-8d-dZd">
                                                     <font key="font" metaFont="system"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>

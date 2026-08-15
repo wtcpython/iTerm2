@@ -7862,7 +7862,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "始终在新窗口中打开，绝不在标签页中"
+            "value": "始终在新窗口中打开，而不是标签页"
           }
         }
       }
@@ -12110,7 +12110,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "按"
+            "value": "×"
           }
         }
       }

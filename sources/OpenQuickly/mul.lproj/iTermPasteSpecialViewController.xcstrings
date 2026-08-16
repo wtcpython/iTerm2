@@ -476,7 +476,7 @@
         "en": {
           "stringUnit": {
             "state": "new",
-            "value": "Escape shell characters with \\\\"
+            "value": "Escape shell characters with \\"
           }
         },
         "zh-Hans": {

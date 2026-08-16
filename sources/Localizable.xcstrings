@@ -6901,16 +6901,6 @@
         }
       }
     },
-    "These profiles are dynamic and not marked ": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "这些配置文件是动态的，且未标记 "
-          }
-        }
-      }
-    },
     "This instance of iTerm2 is already attached to this session": {
       "localizations": {
         "zh-Hans": {
@@ -6977,16 +6967,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "此录制来自较新版本的 iTerm2，无法在此版本中回放。"
-          }
-        }
-      }
-    },
-    "This removes the cc-status hook from ": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "这将从以下位置移除 cc-status 钩子："
           }
         }
       }
@@ -8091,16 +8071,6 @@
         }
       }
     },
-    "iTerm2 has moved to the new relay. For your Mac and iPhone to keep connecting, ": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "iTerm2 已迁移到新中继。为了让你的 Mac 和 iPhone 保持连接，"
-          }
-        }
-      }
-    },
     "iTerm2 no longer warns before a multi-line paste, unless you are at the shell prompt.": {
       "localizations": {
         "zh-Hans": {
@@ -8237,26 +8207,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "无法移除钩子"
-          }
-        }
-      }
-    },
-    "The installer enabled iTerm2’s ": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "安装程序已启用 iTerm2 的 "
-          }
-        }
-      }
-    },
-    "Pick the profiles you’ll run claude in. ": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "选择你要在其中运行 claude 的配置文件。"
           }
         }
       }
@@ -13580,79 +13530,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "创建配置文件夹时出现问题"
-          }
-        }
-      }
-    },
-    "When you activate Semantic History on a filename, the browser opens a URL.\n": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "当你在文件名上启用语义历史记录时，关联的应用会载入该文件。\n"
-          }
-        }
-      }
-    },
-    "Command runs when you activate Semantic History on any text, even if it’s not a valid filename. ": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "命令"
-          }
-        }
-      }
-    },
-    "Toggle Economy Model. A cheaper model used for frequent background jobs ": {
-      "sourceLanguage": "en",
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "切换经济模型。一种更便宜的模型，用于频繁的后台任务，例如命令安全检查与屏幕空闲检测。"
-          }
-        }
-      }
-    },
-    "Enable for reasoning models with a thinking mode, such as GPT-5, ": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "启用"
-          }
-        }
-      }
-    },
-    "Uncheck for models that reject a temperature parameter, such as ": {
-      "sourceLanguage": "en",
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "对于拒绝温度参数的模型（例如 Anthropic Opus 4.7 及更高版本），请取消选中。"
-          }
-        }
-      }
-    },
-    "Settings at %@ changed since iTerm2 started. ": {
-      "sourceLanguage": "en",
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "自 iTerm2 启动以来，%@ 处的设置已更改。覆盖它？"
-          }
-        }
-      }
-    },
-    "No Image Selected\\u2009—\\u2009Click to set": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "否"
           }
         }
       }
@@ -21368,17 +21245,6 @@
         }
       }
     },
-    "\\u2002\\u2002\\u2002%@": {
-      "sourceLanguage": "en",
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\\u2002\\u2002\\u2002%@"
-          }
-        }
-      }
-    },
     "Select your preferred locale:": {
       "sourceLanguage": "en",
       "localizations": {
@@ -22039,17 +21905,6 @@
         }
       }
     },
-    "## Session Status\n\nThe **Session Status** tool shows the status of sessions across all tabs. Each entry displays the session name, a colored indicator dot, status text, and a keyboard shortcut to jump to that session.\n\n### Setting Status\n\n**Triggers:** Add a **Set Tab Status** trigger in **Prefs > Profiles > Advanced > Triggers**. It lets you set the status text, dot color, and text color when a regex matches terminal output.\n\n**Control Sequence (OSC 21337):** Programs can set tab status directly:\n\n`printf '\\\\e]21337;status=Working;indicator=#ffa500\\\\a'`\n\nSupported keys (separated by `;`):\n\n* `status=TEXT` — Sets the status text (e.g., \\u{201c}Working\\u{201d}, \\u{201c}Waiting\\u{201d}).\n* `indicator=COLOR` — Sets the dot color.\n* `status-color=COLOR` — Sets the status text color.\n* `detail=TEXT` — Sets optional detail text shown below the status (wraps up to 3 lines).\n\nColors use xterm format: `rgb:RR/GG/BB` (hex, 1–4 digits per component) or `#RRGGBB`.\n\nSet a key to empty to clear it: `status=` clears the status text.\n\n**Clear all status:** `printf '\\\\e]21337;status=;indicator=\\\\a'`\n\n### Priority Sorting\n\nSessions are sorted by priority. Click the ⚙ button to configure which status keywords have the highest priority. The default order is: waiting, working, idle.\n\n### Snoozing\n\nRight-click a row and choose **Snooze** to move it to the bottom of the list and dim it. A snoozed entry automatically un-snoozes the next time its status changes.": {
-      "sourceLanguage": "en",
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "## 会话状态\n\n**会话状态**工具显示所有标签页中各个会话的状态。每个条目显示会话名称、彩色指示点、状态文本以及跳转到该会话的键盘快捷键。\n\n### 设置状态\n\n**触发器：**在**偏好设置 > 配置文件 > 高级 > 触发器**中添加**设置标签页状态**触发器。当正则表达式匹配终端输出时，它可设置状态文本、指示点颜色和文本颜色。\n\n**控制序列（OSC 21337）：**程序可以直接设置标签页状态：\n\n`printf '\\e]21337;status=Working;indicator=#ffa500\\a'`\n\n支持的键（以 `;` 分隔）：\n\n* `status=TEXT` — 设置状态文本（例如“Working”“Waiting”）。\n* `indicator=COLOR` — 设置指示点颜色。\n* `status-color=COLOR` — 设置状态文本颜色。\n* `detail=TEXT` — 设置显示在状态下方的可选详细信息（最多换行 3 行）。\n\n颜色使用 xterm 格式：`rgb:RR/GG/BB`（十六进制，每个分量 1–4 位数字）或 `#RRGGBB`。\n\n将某个键设为空值可将其清除：`status=` 清除状态文本。\n\n**清除全部状态：**`printf '\\e]21337;status=;indicator=\\a'`\n\n### 优先级排序\n\n会话按优先级排序。点按 ⚙ 按钮配置哪些状态关键字具有最高优先级。默认顺序为：waiting、working、idle。\n\n### 暂缓\n\n右键点按某一行并选择**稍后提醒**，可将其移至列表底部并调暗显示。稍后提醒的条目会在其状态下次变化时自动恢复。"
-          }
-        }
-      }
-    },
     "Snippet Added": {
       "sourceLanguage": "en",
       "localizations": {
@@ -22138,7 +21993,18 @@
         }
       }
     },
-    "### Background\nBinding a setting to an expression lets you change settings programmatically.\n\niTerm2 tracks a collection of “Variables” for each session. You can learn more about them in [Scripting Fundamentals](https://iterm2.com/documentation-scripting-fundamentals.html).\n\nTypically this feature is used by binding a setting to a user-defined variable.\n\n### Example\nThe easiest way to set a user-defined variable is to install shell integration and then define a `iterm2_print_user_vars` function. Here’s an example using bash:\n\n```\niterm2_print_user_vars() {\n  iterm2_set_user_var %@ $(echo $%@))\n}\n```\n\nThis runs each time the shell prompt is printed. The example sets a user-defined variable to the value of the environment variable `%@`.\n\nThe appropriate expression to bind this example would be `user.%@`. All user-defined variables go in the `user` scope.\n\n### Debugging\nYou can view variables in the Inspector (**Scripts > Manage > Console** and then click **Inspector**).": {
+    "## Session Status\n\nThe **Session Status** tool shows the status of sessions across all tabs. Each entry displays the session name, a colored indicator dot, status text, and a keyboard shortcut to jump to that session.\n\n### Setting Status\n\n**Triggers:** Add a **Set Tab Status** trigger in **Prefs > Profiles > Advanced > Triggers**. It lets you set the status text, dot color, and text color when a regex matches terminal output.\n\n**Control Sequence (OSC 21337):** Programs can set tab status directly:\n\n`printf '\\e]21337;status=Working;indicator=#ffa500\\a'`\n\nSupported keys (separated by `;`):\n\n* `status=TEXT` — Sets the status text (e.g., “Working”, “Waiting”).\n* `indicator=COLOR` — Sets the dot color.\n* `status-color=COLOR` — Sets the status text color.\n* `detail=TEXT` — Sets optional detail text shown below the status (wraps up to 3 lines).\n\nColors use xterm format: `rgb:RR/GG/BB` (hex, 1–4 digits per component) or `#RRGGBB`.\n\nSet a key to empty to clear it: `status=` clears the status text.\n\n**Clear all status:** `printf '\\e]21337;status=;indicator=\\a'`\n\n### Priority Sorting\n\nSessions are sorted by priority. Click the ⚙ button to configure which status keywords have the highest priority. The default order is: waiting, working, idle.\n\n### Snoozing\n\nRight-click a row and choose **Snooze** to move it to the bottom of the list and dim it. A snoozed entry automatically un-snoozes the next time its status changes.": {
+      "sourceLanguage": "en",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "## 会话状态\n\n**会话状态**工具显示所有标签页中各个会话的状态。每个条目显示会话名称、彩色指示点、状态文本以及跳转到该会话的键盘快捷键。\n\n### 设置状态\n\n**触发器：**在**偏好设置 > 配置文件 > 高级 > 触发器**中添加**设置标签页状态**触发器。当正则表达式匹配终端输出时，它可设置状态文本、指示点颜色和文本颜色。\n\n**控制序列（OSC 21337）：**程序可以直接设置标签页状态：\n\n`printf '\\e]21337;status=Working;indicator=#ffa500\\a'`\n\n支持的键（以 `;` 分隔）：\n\n* `status=TEXT` — 设置状态文本（例如“Working”“Waiting”）。\n* `indicator=COLOR` — 设置指示点颜色。\n* `status-color=COLOR` — 设置状态文本颜色。\n* `detail=TEXT` — 设置显示在状态下方的可选详细信息（最多换行 3 行）。\n\n颜色使用 xterm 格式：`rgb:RR/GG/BB`（十六进制，每个分量 1–4 位数字）或 `#RRGGBB`。\n\n将某个键设为空值可将其清除：`status=` 清除状态文本。\n\n**清除全部状态：**`printf '\\e]21337;status=;indicator=\\a'`\n\n### 优先级排序\n\n会话按优先级排序。点按 ⚙ 按钮配置哪些状态关键字具有最高优先级。默认顺序为：waiting、working、idle。\n\n### 暂缓\n\n右键点按某一行并选择**稍后提醒**，可将其移至列表底部并调暗显示。稍后提醒的条目会在其状态下次变化时自动恢复。"
+          }
+        }
+      }
+    },
+    "### Background\nBinding a setting to an expression lets you change settings programmatically.\n\niTerm2 tracks a collection of “Variables” for each session. You can learn more about them in [Scripting Fundamentals](https://iterm2.com/documentation-scripting-fundamentals.html).\n\nTypically this feature is used by binding a setting to a user-defined variable.\n\n### Example\nThe easiest way to set a user-defined variable is to install shell integration and then define a `iterm2_print_user_vars` function. Here’s an example using bash:\n\n```\niterm2_print_user_vars() {\n  iterm2_set_user_var %@ $(echo $%@)\n}\n```\n\nThis runs each time the shell prompt is printed. The example sets a user-defined variable to the value of the environment variable `%@`.\n\nThe appropriate expression to bind this example would be `user.%@`. All user-defined variables go in the `user` scope.\n\n### Debugging\nYou can view variables in the Inspector (**Scripts > Manage > Console** and then click **Inspector**).": {
       "sourceLanguage": "en",
       "localizations": {
         "zh-Hans": {

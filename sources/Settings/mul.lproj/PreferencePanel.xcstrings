@@ -11546,13 +11546,13 @@
         "en": {
           "stringUnit": {
             "state": "new",
-            "value": "The prompt must contain the substring \\\\(ai.prompt). The query you enter will replace it when speaking to the AI. For example: “Write a unix command to \\\\(ai.prompt)."
+            "value": "The prompt must contain the substring \\(ai.prompt). The query you enter will replace it when speaking to the AI. For example: “Write a unix command to \\(ai.prompt)."
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "提示符必须包含子字符串 \\\\(ai.prompt)。你输入的查询将在与 AI 对话时替换它。例如：“写一条 unix 命令 \\\\(ai.prompt)。"
+            "value": "提示符必须包含子字符串 \\(ai.prompt)。你输入的查询将在与 AI 对话时替换它。例如：“写一条 unix 命令 \\(ai.prompt)。"
           }
         }
       }
@@ -14678,13 +14678,13 @@
         "en": {
           "stringUnit": {
             "state": "new",
-            "value": "Use \\\\0 for match, \\\\1…\\\\9 for match groups, \\\\d for directory, \\\\u for user, \\\\h for host."
+            "value": "Use \\0 for match, \\1…\\9 for match groups, \\d for directory, \\u for user, \\h for host."
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "使用 \\\\0 表示匹配项，\\\\1…\\\\9 表示匹配组，\\\\d 表示目录，\\\\u 表示用户，\\\\h 表示主机。"
+            "value": "使用 \\0 表示匹配项，\\1…\\9 表示匹配组，\\d 表示目录，\\u 表示用户，\\h 表示主机。"
           }
         }
       }

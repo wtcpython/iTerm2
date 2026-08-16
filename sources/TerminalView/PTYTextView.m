@@ -6870,7 +6870,7 @@ extendResultsAcrossSoftBoundaries:(BOOL)extendResultsAcrossSoftBoundaries {
                                                       encoding:NSUTF8StringEncoding
                                                          error:&error];
         if (content) {
-            [weakSelf it_showWarningWithMarkdown:NSLocalizedString(content, @"UI")];
+            [weakSelf it_showWarningWithMarkdown:content];
         }
     }];
 

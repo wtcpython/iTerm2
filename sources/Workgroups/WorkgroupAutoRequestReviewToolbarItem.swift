@@ -60,7 +60,7 @@ final class WorkgroupAutoRequestReviewToolbarItem: SessionToolbarControl {
         // glyph as well as the tint (matching the paperplane auto-send toggle).
         let symbol: SFSymbol = (isOn && enabled) ? .checkmarkSealFill : .checkmarkSeal
         button.image = NSImage(systemSymbolName: symbol.rawValue,
-                               accessibilityDescription: "Auto-request review when idle")
+                               accessibilityDescription: NSLocalizedString("Auto-request review when idle", comment: "UI"))
         if !enabled {
             button.contentTintColor = .tertiaryLabelColor
             button.toolTip = NSLocalizedString("Auto-request a review when idle (needs exactly one code review session)", comment: "UI")

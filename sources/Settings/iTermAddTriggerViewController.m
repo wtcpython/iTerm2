@@ -580,7 +580,7 @@ static const CGFloat kLabelWidth = 124;
     // Create label
     NSTextField *label = [[NSTextField alloc] init];
     label.translatesAutoresizingMaskIntoConstraints = NO;
-    label.stringValue = labelText;
+    label.stringValue = NSLocalizedString(labelText, @"UI");
     label.editable = NO;
     label.bordered = NO;
     label.backgroundColor = [NSColor clearColor];

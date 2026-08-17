@@ -376,8 +376,8 @@ workingDirectory:(NSString *)workingDirectory
     iTermBackgroundCommandRunner *runner =
         [[iTermBackgroundCommandRunner alloc] initWithCommand:command
                                                         shell:[self.delegate urlActionHelperShell:self]
-                                                        title:@"URL Handler"];
-    runner.notificationTitle = @"URL Handler Command Failed";
+                                                        title:NSLocalizedString(@"URL Handler", @"UI")];
+    runner.notificationTitle = NSLocalizedString(@"URL Handler Command Failed", @"UI");
     [runner run];
 }
 

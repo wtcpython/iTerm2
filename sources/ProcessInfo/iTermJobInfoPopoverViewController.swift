@@ -72,16 +72,16 @@ class iTermJobInfoPopoverViewController: NSViewController, NSTableViewDataSource
         view.controller = self
         view.autoresizingMask = [.width, .height]
 
-        let commandHeader = Self.headerLabel("Command")
+        let commandHeader = Self.headerLabel(NSLocalizedString("Command", comment: "UI"))
         commandValue = Self.valueLabel(fullCommand, wrapping: true)
 
-        let directoryHeader = Self.headerLabel("Working Directory")
-        directoryValue = Self.valueLabel("Loading…", wrapping: true)
+        let directoryHeader = Self.headerLabel(NSLocalizedString("Working Directory", comment: "UI"))
+        directoryValue = Self.valueLabel(NSLocalizedString("Loading…", comment: "UI"), wrapping: true)
 
-        let pidHeader = Self.headerLabel("Process ID")
+        let pidHeader = Self.headerLabel(NSLocalizedString("Process ID", comment: "UI"))
         pidValue = Self.valueLabel("\(pid)", wrapping: false)
 
-        let startedHeader = Self.headerLabel("Started")
+        let startedHeader = Self.headerLabel(NSLocalizedString("Started", comment: "UI"))
         startedValue = Self.valueLabel(startedDescription(), wrapping: false)
 
         topFields = [commandHeader, commandValue, directoryHeader, directoryValue,
@@ -101,19 +101,19 @@ class iTermJobInfoPopoverViewController: NSViewController, NSTableViewDataSource
         loadEnvironment()
         loadFileDescriptors()
 
-        environmentHeader = Self.headerLabel("Environment")
+        environmentHeader = Self.headerLabel(NSLocalizedString("Environment", comment: "UI"))
         view.addSubview(environmentHeader)
         (environmentScrollView, environmentTableView) =
-            makeTableScrollView(columns: [(identifier: "key", title: "Variable", width: 130),
-                                          (identifier: "value", title: "Value", width: 0)])
+            makeTableScrollView(columns: [(identifier: "key", title: NSLocalizedString("Variable", comment: "UI"), width: 130),
+                                          (identifier: "value", title: NSLocalizedString("Value", comment: "UI"), width: 0)])
         view.addSubview(environmentScrollView)
 
-        fileDescriptorHeader = Self.headerLabel("Open Files & Sockets")
+        fileDescriptorHeader = Self.headerLabel(NSLocalizedString("Open Files & Sockets", comment: "UI"))
         view.addSubview(fileDescriptorHeader)
         (fileDescriptorScrollView, fileDescriptorTableView) =
-            makeTableScrollView(columns: [(identifier: "fd", title: "FD", width: 36),
-                                          (identifier: "type", title: "Type", width: 58),
-                                          (identifier: "detail", title: "Detail", width: 0)])
+            makeTableScrollView(columns: [(identifier: "fd", title: NSLocalizedString("FD", comment: "UI"), width: 36),
+                                          (identifier: "type", title: NSLocalizedString("Type", comment: "UI"), width: 58),
+                                          (identifier: "detail", title: NSLocalizedString("Detail", comment: "UI"), width: 0)])
         view.addSubview(fileDescriptorScrollView)
 
         self.view = view

@@ -203,7 +203,7 @@ class MenuItemPopupView: NSView {
         let identifier = selectedIdentifier
         comboView?.removeFromSuperview()
         let newComboView = SearchableComboView(SearchableComboViewGroup.fromMainMenu(),
-                                               defaultTitle: "Select Menu Item…")
+                                               defaultTitle: NSLocalizedString("Select Menu Item…", comment: "UI"))
         newComboView.frame = self.bounds
         newComboView.delegate = comboView?.delegate
         addSubview(newComboView)

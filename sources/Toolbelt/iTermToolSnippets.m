@@ -127,15 +127,15 @@ static NSButton *iTermToolSnippetsNewButton(NSString *imageName, NSString *title
     self = [super initWithFrame:frame];
     if (self) {
         if (@available(macOS 11.0, *)) {
-            _icon = [NSImage imageWithSystemSymbolName:SFSymbolGetString(SFSymbolTextBubbleFill) accessibilityDescription:@"Snippet icon"];
-            _folderIcon = [NSImage imageWithSystemSymbolName:SFSymbolGetString(SFSymbolFolderFill) accessibilityDescription:@"Folder icon"];
+            _icon = [NSImage imageWithSystemSymbolName:SFSymbolGetString(SFSymbolTextBubbleFill) accessibilityDescription:NSLocalizedString(@"Snippet icon", @"UI")];
+            _folderIcon = [NSImage imageWithSystemSymbolName:SFSymbolGetString(SFSymbolFolderFill) accessibilityDescription:NSLocalizedString(@"Folder icon", @"UI")];
         }
         if (@available(macOS 10.16, *)) {
             _applyButton = iTermToolSnippetsNewButton(@"play", NSLocalizedString(@"Send", @"UI"), self, @selector(apply:), frame);
             _addButton = iTermToolSnippetsNewButton(@"plus", NSLocalizedString(@"Add", @"UI"), self, @selector(add:), frame);
             _removeButton = iTermToolSnippetsNewButton(@"minus", NSLocalizedString(@"Remove", @"UI"), self, @selector(remove:), frame);
-            _editButton = iTermToolSnippetsNewButton(@"square.and.pencil", @"Edit", self, @selector(edit:), frame);
-            _advancedPasteButton = iTermToolSnippetsNewButton(@"rectangle.and.pencil.and.ellipsis", @"Open in Advanced Paste", self, @selector(openInAdvancedPaste:), frame);
+            _editButton = iTermToolSnippetsNewButton(@"square.and.pencil", NSLocalizedString(@"Edit", @"UI"), self, @selector(edit:), frame);
+            _advancedPasteButton = iTermToolSnippetsNewButton(@"rectangle.and.pencil.and.ellipsis", NSLocalizedString(@"Open in Advanced Paste", @"UI"), self, @selector(openInAdvancedPaste:), frame);
             [self addSubview:_advancedPasteButton];
         } else {
             _applyButton = iTermToolSnippetsNewButton(nil, NSLocalizedString(@"Send", @"UI"), self, @selector(apply:), frame);

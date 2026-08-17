@@ -414,7 +414,7 @@ class iTermScreenshotPanel: NSPanel {
         contentView.addSubview(addHighlightButton)
 
         // Segmented control with "-" (remove selected) and "Clear All"
-        annotationActionsControl = NSSegmentedControl(labels: ["−", "Clear All"],
+        annotationActionsControl = NSSegmentedControl(labels: ["−", NSLocalizedString("Clear All", comment: "UI")],
                                                        trackingMode: .momentary,
                                                        target: self,
                                                        action: #selector(annotationActionClicked(_:)))
@@ -459,7 +459,7 @@ class iTermScreenshotPanel: NSPanel {
         methodLabel.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(methodLabel)
 
-        segmentedControl = NSSegmentedControl(labels: ["Blur", "Solid Color"],
+        segmentedControl = NSSegmentedControl(labels: [NSLocalizedString("Blur", comment: "UI"), NSLocalizedString("Solid Color", comment: "UI")],
                                                trackingMode: .selectOne,
                                                target: self,
                                                action: #selector(segmentChanged(_:)))
@@ -963,7 +963,7 @@ class iTermScreenshotPanel: NSPanel {
             return
         }
 
-        let typePrefix = annotationType == .redaction ? "Redact" : "Highlight"
+        let typePrefix = annotationType == .redaction ? NSLocalizedString("Redact", comment: "UI") : NSLocalizedString("Highlight", comment: "UI")
         let baseLabel = iTermScreenshotRedactionManager.labelForSelection(selection, textView: textView)
         let label = "\(typePrefix): \(baseLabel)"
         _ = redactionManager.addAnnotation(from: selection, annotationType: annotationType, label: label)
@@ -1281,7 +1281,7 @@ class iTermScreenshotPanel: NSPanel {
         streamingEncoder = encoder
 
         // Show encoding progress UI
-        showEncodingProgress(title: "Copying…")
+        showEncodingProgress(title: NSLocalizedString("Copying…", comment: "UI"))
 
         let totalLines = lineRange.length
         encoder.onProgress = { [weak self] completed, _ in
@@ -1328,7 +1328,7 @@ class iTermScreenshotPanel: NSPanel {
         let generation = copyFeedbackGeneration
 
         copyButton.image = NSImage(systemSymbolName: SFSymbol.checkmarkCircleFill.rawValue,
-                                   accessibilityDescription: "Copied")
+                                   accessibilityDescription: NSLocalizedString("Copied", comment: "UI"))
         copyButton.imagePosition = .imageLeading
         copyButton.contentTintColor = .systemGreen
         copyButton.title = NSLocalizedString("Copied!", comment: "UI")
@@ -1486,9 +1486,9 @@ class iTermScreenshotPanel: NSPanel {
 
         // Show encoding progress UI with file number for multi-part
         if totalParts > 1 {
-            showEncodingProgress(title: "Saving file \(partIndex + 1) of \(totalParts)")
+            showEncodingProgress(title: String(format: NSLocalizedString("Saving file %ld of %ld", comment: "UI"), partIndex + 1, totalParts))
         } else {
-            showEncodingProgress(title: "Saving…")
+            showEncodingProgress(title: NSLocalizedString("Saving…", comment: "UI"))
         }
 
         // Calculate base progress from completed parts

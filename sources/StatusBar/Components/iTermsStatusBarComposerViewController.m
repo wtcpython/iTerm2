@@ -238,7 +238,7 @@ doCommandBySelector:(SEL)commandSelector {
         static NSImage *darkImage;
         static dispatch_once_t onceToken;
         dispatch_once(&onceToken, ^{
-            lightImage = [NSImage imageWithSystemSymbolName:SFSymbolGetString(SFSymbolChevronDown) accessibilityDescription:@"Show History"];
+            lightImage = [NSImage imageWithSystemSymbolName:SFSymbolGetString(SFSymbolChevronDown) accessibilityDescription:NSLocalizedString(@"Show History", @"UI")];
             darkImage = [lightImage it_imageWithTintColor:[NSColor whiteColor]];
         });
         NSImage *image = controlView.effectiveAppearance.it_isDark ? darkImage : lightImage;

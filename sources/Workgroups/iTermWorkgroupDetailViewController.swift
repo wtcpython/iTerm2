@@ -572,15 +572,15 @@ extension iTermWorkgroupDetailViewController: NSOutlineViewDataSource, NSOutline
     private func displayLabel(for session: iTermWorkgroupSessionConfig) -> String {
         switch session.kind {
         case .root:
-            return "Main session"
+            return NSLocalizedString("Main session", comment: "UI")
         case .peer:
-            return "Peer: \(session.displayName)"
+            return String(format: NSLocalizedString("Peer: %@", comment: "UI"), session.displayName)
         case .split(let s):
-            let dir = s.orientation == .vertical ? "Vertical" : "Horizontal"
+            let dir = s.orientation == .vertical ? NSLocalizedString("Vertical", comment: "UI") : NSLocalizedString("Horizontal", comment: "UI")
             let pct = Int((s.location * 100).rounded())
-            return "Split: \(dir) \(pct)%"
+            return String(format: NSLocalizedString("Split: %@ %@%%", comment: "UI"), dir, String(pct))
         case .tab:
-            return "Tab"
+            return NSLocalizedString("Tab", comment: "UI")
         }
     }
 }
@@ -618,6 +618,6 @@ extension iTermWorkgroupDetailViewController: WorkgroupVisualViewDelegate {
         }) else { return }
         wg.sessions[idx] = s
         parentEditor?.replaceSelectedWorkgroup(wg,
-                                               actionName: "Change Split Location")
+                                               actionName: NSLocalizedString("Change Split Location", comment: "UI"))
     }
 }

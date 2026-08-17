@@ -1841,7 +1841,7 @@ final class CompanionHostBridge {
         let rawName = instance.workgroup.name
         send(.workgroupInfo(CompanionWorkgroupInfo(
             workgroupID: workgroupID,
-            name: rawName.isEmpty ? "Untitled workgroup" : rawName,
+            name: rawName.isEmpty ? NSLocalizedString("Untitled workgroup", comment: "UI") : rawName,
             members: members)),
              requestID: requestID)
     }

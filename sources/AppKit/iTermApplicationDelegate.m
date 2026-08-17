@@ -376,7 +376,7 @@ static NSModalResponse iTermCompareRenderingRunModal(id self, SEL _cmd) {
     NSSize tabColorViewSize = [ColorsMenuItemView preferredSize];
     ColorsMenuItemView *labelTrackView = [[[ColorsMenuItemView alloc]
                                            initWithFrame:NSMakeRect(0, 0, tabColorViewSize.width, tabColorViewSize.height)] autorelease];
-    [self addMenuItemView:labelTrackView toMenu:viewMenu title:@"Current Tab Color"];
+    [self addMenuItemView:labelTrackView toMenu:viewMenu title:NSLocalizedString(@"Current Tab Color", @"UI")];
 
     if (![iTermTipController sharedInstance]) {
         [_showTipOfTheDay.menu removeItem:_showTipOfTheDay];
@@ -542,7 +542,7 @@ static NSModalResponse iTermCompareRenderingRunModal(id self, SEL _cmd) {
             menuItem.title = NSLocalizedString(@"Suppressed Alerts…", @"UI");
             return YES;
         }
-        NSString *countPart = (n == 1) ? @"1 Alert Suppressed" : [NSString stringWithFormat:@"%@ Alerts Suppressed", @(n)];
+        NSString *countPart = (n == 1) ? NSLocalizedString(@"1 Alert Suppressed", @"UI") : [NSString stringWithFormat:NSLocalizedString(@"%@ Alerts Suppressed", @"UI"), @(n)];
         NSDate *recent = suppressed.firstObject.lastSuppressed;
         if (recent) {
             NSString *rel = [NSDateFormatter compactDateDifferenceStringFromDate:recent];
@@ -1300,8 +1300,8 @@ void TurnOnDebugLoggingAutomatically(void) {
             TurnOffDebugLoggingSilently();
             [[iTermUserDefaults userDefaults] setBool:NO forKey:@"StartDebugLoggingAutomatically"];
         }];
-      [[iTermNotificationController sharedInstance] postNotificationWithTitle:@"Debug logging turned on"
-                                                                       detail:@"You may notice worse performance while debug logging is on."
+      [[iTermNotificationController sharedInstance] postNotificationWithTitle:NSLocalizedString(@"Debug logging turned on", @"UI")
+                                                                       detail:NSLocalizedString(@"You may notice worse performance while debug logging is on.", @"UI")
                                                      callbackNotificationName:iTermDisableDebugLoggingNotificationName
                                                  callbackNotificationUserInfo:@{}
                                                             actionButtonTitle:NSLocalizedString(@"Disable", @"UI")];
@@ -4103,7 +4103,7 @@ static iTermKeyEventReplayer *gReplayer;
             }];
         }
         for (id<iTermGenericNamedMarkReading> mark in namedMarks) {
-            NSMenuItem *menuItem = [[NSMenuItem alloc] initWithTitle:mark.name ?: @"Unnamed Mark"
+            NSMenuItem *menuItem = [[NSMenuItem alloc] initWithTitle:mark.name ?: NSLocalizedString(@"Unnamed Mark", @"UI")
                                                               action:@selector(navigateToNamedMark:)
                                                        keyEquivalent:@""];
             menuItem.representedObject = mark.guid;

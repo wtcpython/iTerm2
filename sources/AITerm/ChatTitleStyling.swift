@@ -68,7 +68,7 @@ enum ChatTitleStyling {
         }
         let config = NSImage.SymbolConfiguration(pointSize: pointSize, weight: .regular)
         guard let image = NSImage(systemSymbolName: SFSymbol.wandAndRays.rawValue,
-                                  accessibilityDescription: "Orchestrator chat")?
+                                  accessibilityDescription: NSLocalizedString("Orchestrator chat", comment: "UI"))?
             .withSymbolConfiguration(config) else {
             return nil
         }

@@ -41,7 +41,7 @@
                 _title = [pasteboardString ellipsizedDescriptionNoLongerThan:40];
                 _value = pasteboardString;
             } else {
-                _title = NSLocalizedString(@"Untitled", @"UI");
+                _title = @"Untitled";
                 _value = @"";
             }
             _guid = [[NSUUID UUID] UUIDString];

@@ -158,11 +158,11 @@ class EventTriggerParameterView: NSView, NSTextFieldDelegate {
     // MARK: - UI Construction
 
     private func addExitCodeFilterUI() {
-        let row = createRow(label: "Exit Code:")
+        let row = createRow(label: NSLocalizedString("Exit Code:", comment: "UI"))
 
         let popup = NSPopUpButton()
         popup.translatesAutoresizingMaskIntoConstraints = false
-        popup.addItems(withTitles: ["Any", "Zero (Success)", "Non-Zero (Failure)", "Specific Value…"])
+        popup.addItems(withTitles: [NSLocalizedString("Any", comment: "UI"), NSLocalizedString("Zero (Success)", comment: "UI"), NSLocalizedString("Non-Zero (Failure)", comment: "UI"), NSLocalizedString("Specific Value…", comment: "UI")])
         popup.target = self
         popup.action = #selector(exitCodeFilterChanged(_:))
         exitCodeFilterPopup = popup
@@ -182,7 +182,7 @@ class EventTriggerParameterView: NSView, NSTextFieldDelegate {
     }
 
     private func addJobNameUI() {
-        let row = createRow(label: "Job:")
+        let row = createRow(label: NSLocalizedString("Job:", comment: "UI"))
 
         let textField = NSTextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -203,7 +203,7 @@ class EventTriggerParameterView: NSView, NSTextFieldDelegate {
 
     private func addVariableChangedUI() {
         // Variable name row (with completion).
-        let nameRow = createRow(label: "Variable:")
+        let nameRow = createRow(label: NSLocalizedString("Variable:", comment: "UI"))
 
         let nameField = NSTextField()
         nameField.translatesAutoresizingMaskIntoConstraints = false
@@ -222,7 +222,7 @@ class EventTriggerParameterView: NSView, NSTextFieldDelegate {
         stackView.addArrangedSubview(nameHelp)
 
         // Value regex row.
-        let valueRow = createRow(label: "Value:")
+        let valueRow = createRow(label: NSLocalizedString("Value:", comment: "UI"))
 
         let valueField = NSTextField()
         valueField.translatesAutoresizingMaskIntoConstraints = false
@@ -242,7 +242,7 @@ class EventTriggerParameterView: NSView, NSTextFieldDelegate {
     }
 
     private func addDirectoryRegexUI() {
-        let row = createRow(label: "Directory:")
+        let row = createRow(label: NSLocalizedString("Directory:", comment: "UI"))
 
         let textField = NSTextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -262,7 +262,7 @@ class EventTriggerParameterView: NSView, NSTextFieldDelegate {
     }
 
     private func addTimeoutUI() {
-        let row = createRow(label: "Timeout:")
+        let row = createRow(label: NSLocalizedString("Timeout:", comment: "UI"))
 
         let textField = NSTextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -281,7 +281,7 @@ class EventTriggerParameterView: NSView, NSTextFieldDelegate {
     }
 
     private func addSequenceIdUI() {
-        let row = createRow(label: "Sequence ID:")
+        let row = createRow(label: NSLocalizedString("Sequence ID:", comment: "UI"))
 
         let textField = NSTextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -301,7 +301,7 @@ class EventTriggerParameterView: NSView, NSTextFieldDelegate {
     }
 
     private func addNotificationMessageRegexUI() {
-        let row = createRow(label: "Message:")
+        let row = createRow(label: NSLocalizedString("Message:", comment: "UI"))
 
         let textField = NSTextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -321,7 +321,7 @@ class EventTriggerParameterView: NSView, NSTextFieldDelegate {
     }
 
     private func addHostRegexUI() {
-        let row = createRow(label: "Host:")
+        let row = createRow(label: NSLocalizedString("Host:", comment: "UI"))
 
         let textField = NSTextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -341,7 +341,7 @@ class EventTriggerParameterView: NSView, NSTextFieldDelegate {
     }
 
     private func addUserRegexUI() {
-        let row = createRow(label: "User:")
+        let row = createRow(label: NSLocalizedString("User:", comment: "UI"))
 
         let textField = NSTextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -362,7 +362,7 @@ class EventTriggerParameterView: NSView, NSTextFieldDelegate {
 
     private func addLongRunningCommandUI() {
         // Threshold row
-        let thresholdRow = createRow(label: "Threshold:")
+        let thresholdRow = createRow(label: NSLocalizedString("Threshold:", comment: "UI"))
 
         let thresholdField = NSTextField()
         thresholdField.translatesAutoresizingMaskIntoConstraints = false
@@ -380,7 +380,7 @@ class EventTriggerParameterView: NSView, NSTextFieldDelegate {
         stackView.addArrangedSubview(thresholdRow)
 
         // Command regex row
-        let commandRow = createRow(label: "Command:")
+        let commandRow = createRow(label: NSLocalizedString("Command:", comment: "UI"))
 
         let commandField = NSTextField()
         commandField.translatesAutoresizingMaskIntoConstraints = false
@@ -400,11 +400,11 @@ class EventTriggerParameterView: NSView, NSTextFieldDelegate {
     }
 
     private func addProgressBarFilterUI() {
-        let row = createRow(label: "Fire When:")
+        let row = createRow(label: NSLocalizedString("Fire When:", comment: "UI"))
 
         let popup = NSPopUpButton()
         popup.translatesAutoresizingMaskIntoConstraints = false
-        popup.addItems(withTitles: ["Appears or Disappears", "Appears", "Disappears"])
+        popup.addItems(withTitles: [NSLocalizedString("Appears or Disappears", comment: "UI"), NSLocalizedString("Appears", comment: "UI"), NSLocalizedString("Disappears", comment: "UI")])
         popup.target = self
         popup.action = #selector(progressBarFilterChanged(_:))
         progressBarFilterPopup = popup
@@ -793,7 +793,7 @@ class EventTriggerMatchTypeHelper: NSObject {
         case .eventVariableChanged:
             return NSLocalizedString("Fires when a session variable changes to a value matching the regex.", comment: "UI")
         default:
-            return NSLocalizedString("", comment: "UI")
+            return ""
         }
     }
 

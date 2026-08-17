@@ -3550,7 +3550,7 @@ static void SetAgainstGrainDim(BOOL isVertical, NSSize *dest, CGFloat value) {
     }
     [theTab setParentWindow:term];
     theTab.delegate = term;
-    [theTab->tabViewItem_ setLabel:@"Restoring..."];
+    [theTab->tabViewItem_ setLabel:NSLocalizedString(@"Restoring...", @"UI")];
 
     [theTab setObjectCount:[term numberOfTabs] + 1];
 
@@ -6959,11 +6959,11 @@ typedef struct {
                 // See if a notification should be posted.
                 if (!session.havePostedIdleNotification && [session shouldPostUserNotification]) {
                     NSString *theDescription =
-                        [NSString stringWithFormat:@"Session %@ in tab #%d became idle.",
+                        [NSString stringWithFormat:NSLocalizedString(@"Session %@ in tab #%d became idle.", @"UI"),
                             [[session name] removingHTMLFromTabTitleIfNeeded],
                             [self tabNumber]];
                     if ([iTermProfilePreferences boolForKey:KEY_SEND_IDLE_ALERT inProfile:session.profile]) {
-                        [[iTermNotificationController sharedInstance] notify:@"Idle"
+                        [[iTermNotificationController sharedInstance] notify:NSLocalizedString(@"Idle", @"UI")
                                                          withDescription:theDescription
                                                              windowIndex:[session screenWindowIndex]
                                                                 tabIndex:[session screenTabIndex]

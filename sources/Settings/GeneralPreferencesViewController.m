@@ -336,7 +336,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
     if ([identifier isEqualToString:kAIManualModelsModelColumn]) {
         NSString *name = [configuration[kAIManualModelNameKey] isKindOfClass:NSString.class]
             ? configuration[kAIManualModelNameKey]
-            : @"Untitled model";
+            : NSLocalizedString(@"Untitled model", @"UI");
         // A leading black star marks the default model, matching the profile list.
         // A leaf SF Symbol marks the economy model. The two are mutually
         // exclusive per row.
@@ -375,7 +375,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
     NSImageSymbolConfiguration *config =
         [NSImageSymbolConfiguration configurationWithHierarchicalColor:NSColor.labelColor];
     NSImage *image = [[NSImage imageWithSystemSymbolName:SFSymbolGetString(SFSymbolLeaf)
-                               accessibilityDescription:@"Economy model"]
+                               accessibilityDescription:NSLocalizedString(@"Economy model", @"UI")]
                       imageWithSymbolConfiguration:config];
     const CGFloat side = font.pointSize + 1;
     image.size = NSMakeSize(side, side);
@@ -562,7 +562,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
                                           styleMask:NSWindowStyleMaskTitled
                                             backing:NSBackingStoreBuffered
                                               defer:NO];
-    _window.title = _isEditing ? @"Edit Manual AI Model" : @"Add Manual AI Model";
+    _window.title = _isEditing ? NSLocalizedString(@"Edit Manual AI Model", @"UI") : NSLocalizedString(@"Add Manual AI Model", @"UI");
     NSView *content = _window.contentView;
 
     NSTextField *title = [NSTextField labelWithString:_window.title];
@@ -1301,7 +1301,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
 
     info = [self defineControl:_irMemory
                            key:kPreferenceKeyInstantReplayMemoryMegabytes
-                   displayName:@"Instant Replay memory usage limit"
+                   displayName:NSLocalizedString(@"Instant Replay memory usage limit", @"UI")
                           type:kPreferenceInfoTypeIntegerTextField];
     info.range = NSMakeRange(0, 1000);
 
@@ -1340,7 +1340,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
 
     info = [self defineControl:_apiPermission
                            key:kPreferenceKeyAPIAuthentication
-                   displayName:@"Authentication method for Python API"
+                   displayName:NSLocalizedString(@"Authentication method for Python API", @"UI")
                           type:kPreferenceInfoTypePopup];
     info.syntheticGetter = ^id{
         return @([iTermAPIHelper requireApplescriptAuth] ? 0 : 1);
@@ -1393,7 +1393,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
 
 
     [self addViewToSearchIndex:_advancedGPUPrefsButton
-                   displayName:@"Advanced GPU settings"
+                   displayName:NSLocalizedString(@"Advanced GPU settings", @"UI")
                        phrases:@[ _advancedGPUWindowController.viewController.disableWhenDisconnected.title,
                                   _advancedGPUWindowController.viewController.disableInLowPowerMode.title,
                                   _advancedGPUWindowController.viewController.preferIntegratedGPU.title ]
@@ -1445,7 +1445,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
 
     info = [self defineControl:_customScriptsFolder
                            key:kPreferenceKeyCustomScriptsFolder
-                   displayName:@"Custom folder for Python API scripts"
+                   displayName:NSLocalizedString(@"Custom folder for Python API scripts", @"UI")
                           type:kPreferenceInfoTypeStringTextField];
     info.shouldBeEnabled = ^BOOL() {
         return [iTermPreferences boolForKey:kPreferenceKeyUseCustomScriptsFolder];
@@ -1597,7 +1597,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
 
     info = [self defineControl:_placementContainer
                            key:kPreferenceKeyWindowPlacement
-                   displayName:@"New window placement"
+                   displayName:NSLocalizedString(@"New window placement", @"UI")
                           type:kPreferenceInfoTypeRadioButton];
 
     [self defineControl:_adjustWindowForFontSizeChange
@@ -1679,7 +1679,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
 
     [self defineControl:_tmuxPauseModeAgeLimit
                     key:kPreferenceKeyTmuxPauseModeAgeLimit
-            displayName:@"Pause a tmux pane if it would take more than this many seconds to catch up."
+            displayName:NSLocalizedString(@"Pause a tmux pane if it would take more than this many seconds to catch up.", @"UI")
                    type:kPreferenceInfoTypeUnsignedIntegerTextField];
     [self defineControl:_unpauseTmuxAutomatically
                     key:kPreferenceKeyTmuxUnpauseAutomatically
@@ -1709,7 +1709,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
     /// -------
 
     [self addViewToSearchIndex:_openAIAPIKey
-                   displayName:@"Manage AI API Keys"
+                   displayName:NSLocalizedString(@"Manage AI API Keys", @"UI")
                        phrases:@[ @"Set API key for AI",
                                    @"OpenAI Anthropic Gemini DeepSeek API keys" ]
                            key:kPreferenceKeyAIAPIKey];
@@ -1748,7 +1748,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
     _aiResponseTokenLimitInfo = responseTokenLimitInfo;
     PreferenceInfo *urlInfo = [self defineControl:_customAIEndpoint
                                               key:kPreferenceKeyAITermURL
-                                      displayName:@"Custom URL for AI"
+                                      displayName:NSLocalizedString(@"Custom URL for AI", @"UI")
                                              type:kPreferenceInfoTypeStringTextField];
     _aiURLInfo = urlInfo;
     urlInfo.onUpdate = ^BOOL{
@@ -1870,7 +1870,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
         [weakSelf reloadDefaultAIModelPopup];
     }];
     [self addViewToSearchIndex:_aiPluginLabel
-                   displayName:@"Install AI Plugin"
+                   displayName:NSLocalizedString(@"Install AI Plugin", @"UI")
                        phrases:@[ @"AI Plugin" ]
                            key:kPhonyPreferenceKeyInstallAIPlugin];
 
@@ -1908,7 +1908,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
     };
     [self defineControl:_aiTimeout
                     key:kPreferenceKeyAITimeout
-            displayName:@"AI timeout"
+            displayName:NSLocalizedString(@"AI timeout", @"UI")
                    type:kPreferenceInfoTypeIntegerTextField];
 
     [self defineControl:_aiSafetyCheck
@@ -2099,7 +2099,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
 }
 
 - (NSString *)defaultAIModelTitleForManualConfiguration:(NSDictionary *)configuration {
-    NSString *name = configuration[kAIManualModelNameKey] ?: @"Untitled model";
+    NSString *name = configuration[kAIManualModelNameKey] ?: NSLocalizedString(@"Untitled model", @"UI");
     iTermAIVendor provider = [self providerForManualAIModelConfiguration:configuration];
     return [NSString stringWithFormat:@"Manual: %@ — %@",
             name,
@@ -2114,7 +2114,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
     _aiVendor.action = @selector(defaultAIModelPopupDidChange:);
 
     [self addViewToSearchIndex:_aiVendor
-                   displayName:@"Default model for new AI chats"
+                   displayName:NSLocalizedString(@"Default model for new AI chats", @"UI")
                        phrases:@[ @"AI default provider",
                                    @"AI manual model default" ]
                            key:kPreferenceKeyAIModel];
@@ -2577,7 +2577,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
         field.usesSingleLineMode = YES;
         field.editable = YES;
         field.selectable = YES;
-        field.placeholderString = [NSString stringWithFormat:@"%@ API key", name];
+        field.placeholderString = [NSString stringWithFormat:NSLocalizedString(@"%@ API key", @"UI"), name];
         field.stringValue = [AITermControllerObjC apiKeyForVendor:vendor] ?: @"";
         [accessory addSubview:field];
         [_aiAPIKeySheetFields addObject:field];
@@ -3024,7 +3024,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
 }
 
 - (NSString *)manualAIModelTitle:(NSDictionary *)configuration {
-    NSString *name = configuration[kAIManualModelNameKey] ?: @"Untitled model";
+    NSString *name = configuration[kAIManualModelNameKey] ?: NSLocalizedString(@"Untitled model", @"UI");
     NSString *url = configuration[kAIManualModelURLKey] ?: @"";
     iTermAIAPI api = (iTermAIAPI)[self manualAIModelConfiguration:configuration
                                                    integerForKey:kAIManualModelAPIKey
@@ -3066,7 +3066,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
     NSMutableDictionary *copy = [panel.configurations[(NSUInteger)row] mutableCopy];
     copy[kAIManualModelIDKey] = NSUUID.UUID.UUIDString;
     copy[kAIManualModelNameKey] =
-        [NSString stringWithFormat:@"%@ copy", copy[kAIManualModelNameKey] ?: @"Manual model"];
+        [NSString stringWithFormat:NSLocalizedString(@"%@ copy", @"UI"), copy[kAIManualModelNameKey] ?: NSLocalizedString(@"Manual model", @"UI")];
     [self presentManualModelEditorForPanel:panel base:copy isEditing:NO editingIndex:-1];
 }
 

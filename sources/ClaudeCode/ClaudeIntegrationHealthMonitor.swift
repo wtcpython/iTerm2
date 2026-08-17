@@ -146,14 +146,14 @@ final class ClaudeIntegrationHealthMonitor: NSObject {
         warning.title = NSLocalizedString("iTerm2\u{2019}s cc-status hook is no longer in ~/.claude/settings.json. This usually means Claude Code rewrote that file. Reinstall the hook so per-tab status indicators (\u{201C}Working\u{2026},\u{201D} \u{201C}Waiting\u{2026}\u{201D}) work again?", comment: "UI")
         warning.warningType = .kiTermWarningTypePermanentlySilenceable
         warning.identifier = Self.warningIdentifier
-        warning.actionLabels = ["Reinstall", "Not Now"]
+        warning.actionLabels = [NSLocalizedString("Reinstall", comment: "UI"), NSLocalizedString("Not Now", comment: "UI")]
         // Without this, "Reinstall + Remember My Choice" would
         // preempt the dialog on every future broken-state launch
         // and silently open the onboarding window — almost
         // certainly not what a user means by "remember." Only the
         // dismiss path is rememberable; "Reinstall" always
         // requires a fresh click.
-        warning.doNotRememberLabels = ["Reinstall"]
+        warning.doNotRememberLabels = [NSLocalizedString("Reinstall", comment: "UI")]
         warning.runModalAsync { [weak self] selection, _ in
             self?.alertInFlight = false
             if selection == .kiTermWarningSelection0 {

@@ -97,7 +97,7 @@ class ChatInputView: NSView, NSTextFieldDelegate {
             sendConfig = nil
         }
         let rawSendImage = NSImage(systemSymbolName: SFSymbol.paperplaneFill.rawValue, accessibilityDescription: NSLocalizedString("Send", comment: "UI"))!
-        let rawStopImage = NSImage(systemSymbolName: SFSymbol.stopCircleFill.rawValue, accessibilityDescription: "Stop")!
+        let rawStopImage = NSImage(systemSymbolName: SFSymbol.stopCircleFill.rawValue, accessibilityDescription: NSLocalizedString("Stop", comment: "UI"))!
         if #available(macOS 11.0, *), let sendConfig {
             sendImage = rawSendImage.withSymbolConfiguration(sendConfig) ?? rawSendImage
             stopImage = rawStopImage.withSymbolConfiguration(sendConfig) ?? rawStopImage
@@ -108,7 +108,7 @@ class ChatInputView: NSView, NSTextFieldDelegate {
         vev = NSVisualEffectView()
         super.init(frame: .zero)
 
-        inputTextFieldContainer.placeholder = "Type a message…"
+        inputTextFieldContainer.placeholder = NSLocalizedString("Type a message…", comment: "UI")
         inputTextFieldContainer.isEnabled = false
         inputTextFieldContainer.textView.delegate = self
         inputTextFieldContainer.textView.onDropFileURLs = { [weak self] urls in
@@ -126,7 +126,7 @@ class ChatInputView: NSView, NSTextFieldDelegate {
         sendButton.setButtonType(.momentaryPushIn)
 
         var addImage = NSImage.it_image(forSymbolName: SFSymbol.plus.rawValue,
-                                        accessibilityDescription: "Attach files",
+                                        accessibilityDescription: NSLocalizedString("Attach files", comment: "UI"),
                                         fallbackImageName: "plus",
                                         for: ChatInputView.self)!
         if #available(macOS 11.0, *) {
@@ -512,7 +512,7 @@ class ChatInputView: NSView, NSTextFieldDelegate {
             }
             let selection = iTermWarning.show(
                 withTitle: dropPromptTitle(for: supported),
-                actions: ["Attach", "Insert Path"],
+                actions: [NSLocalizedString("Attach", comment: "UI"), NSLocalizedString("Insert Path", comment: "UI")],
                 accessory: nil,
                 identifier: "NoSyncAIChatAttachDroppedFile",
                 silenceable: .kiTermWarningTypePermanentlySilenceable,
@@ -534,9 +534,9 @@ class ChatInputView: NSView, NSTextFieldDelegate {
 
     private func dropPromptTitle(for urls: [URL]) -> String {
         if urls.count == 1 {
-            return "Add “\(urls[0].lastPathComponent)” to your message as an attachment, or insert its path as text?"
+            return String(format: NSLocalizedString("Add “%@” to your message as an attachment, or insert its path as text?", comment: "UI"), urls[0].lastPathComponent)
         }
-        return "Add the \(urls.count) dropped files to your message as attachments, or insert their paths as text?"
+        return String(format: NSLocalizedString("Add the %ld dropped files to your message as attachments, or insert their paths as text?", comment: "UI"), urls.count)
     }
 
     private func insertFilePathsAsText(_ urls: [URL]) {
@@ -582,7 +582,7 @@ class ChatInputView: NSView, NSTextFieldDelegate {
     private func presentRejectedAttachments(_ urls: [URL]) {
         guard let window else { return }
         let names = urls.map { $0.lastPathComponent }.joined(separator: ", ")
-        let providerName = AITermController.provider?.displayName ?? "the current AI provider"
+        let providerName = AITermController.provider?.displayName ?? NSLocalizedString("the current AI provider", comment: "UI")
         let alert = NSAlert()
         alert.messageText = urls.count == 1
             ? NSLocalizedString("Attachment not supported", comment: "UI")
@@ -644,8 +644,8 @@ class ChatInputView: NSView, NSTextFieldDelegate {
     func refreshPlaceholder() {
         let orchestration = orchestrationEnabledProvider?() ?? false
         inputTextFieldContainer.placeholder = orchestration
-            ? "Type a message, or @ to mention a session…"
-            : "Type a message…"
+            ? NSLocalizedString("Type a message, or @ to mention a session…", comment: "UI")
+            : NSLocalizedString("Type a message…", comment: "UI")
     }
 
     private func revealSelectedRange() {

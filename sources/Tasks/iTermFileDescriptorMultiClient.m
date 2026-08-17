@@ -867,7 +867,7 @@ static NSString *iTermMultiServerStringForMessageFromClient(iTermMultiServerClie
                               error:&error];
         if (error) {
             [self showError:error
-                    message:[NSString stringWithFormat:@"Could not copy %@ to %@: %@", sourcePath, desiredPath, error.localizedDescription]
+                    message:[NSString stringWithFormat:NSLocalizedString(@"Could not copy %@ to %@: %@", @"UI"), sourcePath, desiredPath, error.localizedDescription]
                      badURL:[NSURL fileURLWithPath:desiredPath]];
             return nil;
         }
@@ -879,7 +879,7 @@ static NSString *iTermMultiServerStringForMessageFromClient(iTermMultiServerClie
         NSDictionary *attributes = [fileManager attributesOfItemAtPath:desiredPath error:&error];
         if (error) {
             [self showError:error
-                    message:[NSString stringWithFormat:@"Could not check permissions on %@", desiredPath]
+                    message:[NSString stringWithFormat:NSLocalizedString(@"Could not check permissions on %@", @"UI"), desiredPath]
                      badURL:[NSURL fileURLWithPath:desiredPath]];
             return nil;
         }
@@ -897,7 +897,7 @@ static NSString *iTermMultiServerStringForMessageFromClient(iTermMultiServerClie
                                                 error:&error];
         if (error) {
             [self showError:error
-                    message:[NSString stringWithFormat:@"Could not set 0700 permissions on %@", desiredPath]
+                    message:[NSString stringWithFormat:NSLocalizedString(@"Could not set 0700 permissions on %@", @"UI"), desiredPath]
                      badURL:[NSURL fileURLWithPath:desiredPath]];
             return nil;
         }

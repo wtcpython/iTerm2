@@ -136,7 +136,7 @@ class AITermController {
             case .pluginError(let error): return "pluginError(\(error.reason))"
             case .webResponse: return "webResponse"
             case .word(let word): return "<stream \(word)>"
-            case .cancel: return NSLocalizedString("Cancel", comment: "UI")
+            case .cancel: return "Cancel"
             }
         }
         case begin
@@ -471,7 +471,7 @@ class AITermController {
             case .webResponse(let response):
                 if let error = response.error, !error.isEmpty {
                     let provider = llmProvider?.displayName ?? "server"
-                    var message = "Error from \(provider): \(error)"
+                    var message = String(format: NSLocalizedString("Error from %@: %@", comment: "UI"), provider, error)
                     if let reason = LLMErrorParser.errorReason(data: response.data.lossyData), !reason.isEmpty {
                         message += " " + reason
                     }
@@ -646,7 +646,7 @@ class AITermController {
                 case .success(let webResponse):
                     if let error = webResponse.error, !error.isEmpty {
                         let provider = llmProvider.displayName
-                        var message = "Error from \(provider): \(error)"
+                        var message = String(format: NSLocalizedString("Error from %@: %@", comment: "UI"), provider, error)
                         if let reason = LLMErrorParser.errorReason(data: webResponse.data.lossyData), !reason.isEmpty {
                             message += " " + reason
                         }
@@ -697,7 +697,7 @@ class AITermController {
                 case .success(let webResponse):
                     if let error = webResponse.error, !error.isEmpty {
                         let provider = llmProvider.displayName
-                        var message = "Error from \(provider): \(error)"
+                        var message = String(format: NSLocalizedString("Error from %@: %@", comment: "UI"), provider, error)
                         if let reason = LLMErrorParser.errorReason(data: webResponse.data.lossyData), !reason.isEmpty {
                             message += " " + reason
                         }
@@ -763,7 +763,7 @@ class AITermController {
                 case .success(let webResponse):
                     if let error = webResponse.error, !error.isEmpty {
                         let provider = llmProvider.displayName
-                        var message = "Error from \(provider): \(error)"
+                        var message = String(format: NSLocalizedString("Error from %@: %@", comment: "UI"), provider, error)
                         if let reason = LLMErrorParser.errorReason(data: webResponse.data.lossyData), !reason.isEmpty {
                             message += " " + reason
                         }
@@ -825,7 +825,7 @@ class AITermController {
                 case .success(let webResponse):
                     if let error = webResponse.error, !error.isEmpty {
                         let provider = llmProvider.displayName
-                        var message = "Error from \(provider): \(error)"
+                        var message = String(format: NSLocalizedString("Error from %@: %@", comment: "UI"), provider, error)
                         if let reason = LLMErrorParser.errorReason(data: webResponse.data.lossyData), !reason.isEmpty {
                             message += " " + reason
                         }

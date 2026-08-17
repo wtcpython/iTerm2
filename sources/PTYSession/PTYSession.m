@@ -4544,9 +4544,9 @@ webViewConfiguration:(WKWebViewConfiguration *)webViewConfiguration
     if ([self shouldPostUserNotification] &&
         [iTermProfilePreferences boolForKey:KEY_SEND_SESSION_ENDED_ALERT inProfile:self.profile]) {
         NSString *customText = [iTermAdvancedSettingsModel sessionEndMessageText];
-        NSString *notificationText = (customText.length > 0) ? customText : @"Session Ended";
+        NSString *notificationText = (customText.length > 0) ? customText : NSLocalizedString(@"Session Ended", @"UI");
         [[iTermNotificationController sharedInstance] notify:notificationText
-                                             withDescription:[NSString stringWithFormat:@"Session \"%@\" in tab #%d just terminated.",
+                                             withDescription:[NSString stringWithFormat:NSLocalizedString(@"Session \"%@\" in tab #%d just terminated.", @"UI"),
                                                               [[self name] removingHTMLFromTabTitleIfNeeded],
                                                               [_delegate tabNumber]]];
     }
@@ -5276,8 +5276,8 @@ webViewConfiguration:(WKWebViewConfiguration *)webViewConfiguration
             if ([_textview keyIsARepeat] == NO &&
                 [self shouldPostUserNotification] &&
                 [iTermProfilePreferences boolForKey:KEY_SEND_BELL_ALERT inProfile:self.profile]) {
-                [[iTermNotificationController sharedInstance] notify:@"Bell"
-                                                     withDescription:[NSString stringWithFormat:@"Session %@ #%d just rang a bell!",
+                [[iTermNotificationController sharedInstance] notify:NSLocalizedString(@"Bell", @"UI")
+                                                     withDescription:[NSString stringWithFormat:NSLocalizedString(@"Session %@ #%d just rang a bell!", @"UI"),
                                                                       [[self name] removingHTMLFromTabTitleIfNeeded],
                                                                       [_delegate tabNumber]]
                                                          windowIndex:[self screenWindowIndex]
@@ -10357,8 +10357,8 @@ typedef NS_ENUM(NSUInteger, PTYSessionTmuxReport) {
 
         static NSString *const kAutoBurialKey = @"NoSyncAutoBurialReveal";
         if (![[iTermUserDefaults userDefaults] boolForKey:kAutoBurialKey]) {
-            [[iTermNotificationController sharedInstance] notify:@"Session Buried"
-                                                 withDescription:@"It can be restored by detaching from tmux, or from the Sessions > Buried Sessions menu."];
+            [[iTermNotificationController sharedInstance] notify:NSLocalizedString(@"Session Buried", @"UI")
+                                                 withDescription:NSLocalizedString(@"It can be restored by detaching from tmux, or from the Sessions > Buried Sessions menu.", @"UI")];
             [[iTermUserDefaults userDefaults] setBool:YES forKey:kAutoBurialKey];
         }
     }
@@ -10794,7 +10794,7 @@ typedef NS_ENUM(NSUInteger, PTYSessionTmuxReport) {
 }
 
 - (void)tmuxDoubleAttachForSessionGUID:(NSString *)sessionGUID {
-    NSArray<NSString *> *actions = @[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Reveal", @"UI"), @"Force Detach Other" ];
+    NSArray<NSString *> *actions = @[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Reveal", @"UI"), NSLocalizedString(@"Force Detach Other", @"UI") ];
     TmuxController *controller = [[TmuxControllerRegistry sharedInstance] tmuxControllerWithSessionGUID:sessionGUID];
     if (!controller) {
         actions = @[ NSLocalizedString(@"OK", @"UI") ];
@@ -16153,10 +16153,10 @@ typedef NS_ENUM(NSUInteger, PTYSessionTmuxReport) {
     self.alertOnNextMark = NO;
     NSString *action = [iTermApplication.sharedApplication delegate].markAlertAction;
     if ([action isEqualToString:kMarkAlertActionPostNotification]) {
-        NSString *markDescription = [NSString stringWithFormat:@"Session %@ #%d had a mark set.",
+        NSString *markDescription = [NSString stringWithFormat:NSLocalizedString(@"Session %@ #%d had a mark set.", @"UI"),
                                      [[self name] removingHTMLFromTabTitleIfNeeded],
                                      [_delegate tabNumber]];
-        [[iTermNotificationController sharedInstance] notify:@"Mark Set"
+        [[iTermNotificationController sharedInstance] notify:NSLocalizedString(@"Mark Set", @"UI")
                                              withDescription:markDescription
                                                  windowIndex:[self screenWindowIndex]
                                                     tabIndex:[self screenTabIndex]
@@ -19394,7 +19394,7 @@ static const NSTimeInterval PTYSessionFocusReportBellSquelchTimeIntervalThreshol
         if ([iTermAdvancedSettingsModel simpleNotifications]) {
             description = message;
         } else {
-            description = [NSString stringWithFormat:@"Session %@ #%d: %@",
+            description = [NSString stringWithFormat:NSLocalizedString(@"Session %@ #%d: %@", @"UI"),
                                      [[self name] removingHTMLFromTabTitleIfNeeded],
                                      [_delegate tabNumber],
                                      message];
@@ -23279,14 +23279,14 @@ static const NSTimeInterval PTYSessionFocusReportBellSquelchTimeIntervalThreshol
     NSDictionary *update = @{ KEY_ENABLE_TRIGGERS_IN_INTERACTIVE_APPS: @NO };
     if (self.isDivorced) {
         [self setSessionSpecificProfileValues:update];
-        [[iTermNotificationController sharedInstance] notify:@"Session Updated"
-                                             withDescription:@"Triggers disabled in interactive apps. You can change this in Edit Session > Advanced."];
+        [[iTermNotificationController sharedInstance] notify:NSLocalizedString(@"Session Updated", @"UI")
+                                             withDescription:NSLocalizedString(@"Triggers disabled in interactive apps. You can change this in Edit Session > Advanced.", @"UI")];
         return;
     }
 
     [iTermProfilePreferences setObjectsFromDictionary:update inProfile:self.profile model:[ProfileModel sharedInstance]];
-    [[iTermNotificationController sharedInstance] notify:@"Profile Updated"
-                                         withDescription:@"Triggers disabled in interactive apps. You can change this in Settings > Profiles > Advanced."];
+    [[iTermNotificationController sharedInstance] notify:NSLocalizedString(@"Profile Updated", @"UI")
+                                         withDescription:NSLocalizedString(@"Triggers disabled in interactive apps. You can change this in Settings > Profiles > Advanced.", @"UI")];
 }
 
 - (void)naggingControllerAssignProfileToSession:(NSString *)arrangementName guid:(NSString *)guid {
@@ -24513,7 +24513,7 @@ getOptionKeyBehaviorLeft:(iTermOptionKeyBehavior *)left
 - (void)triggerSideEffectPostUserNotificationWithMessage:(NSString * _Nonnull)message {
     [iTermGCD assertMainQueueSafe];
     iTermNotificationController *notificationController = [iTermNotificationController sharedInstance];
-    NSString *triggerDescription = [NSString stringWithFormat:@"A trigger fired in session “%@” in tab #%d.",
+    NSString *triggerDescription = [NSString stringWithFormat:NSLocalizedString(@"A trigger fired in session “%@” in tab #%d.", @"UI"),
                                     [[self name] removingHTMLFromTabTitleIfNeeded],
                                     self.delegate.tabNumber];
     [notificationController notify:message
@@ -24561,7 +24561,7 @@ getOptionKeyBehaviorLeft:(iTermOptionKeyBehavior *)left
     iTermBackgroundCommandRunner *runner = [pool requestBackgroundCommandRunnerWithTerminationBlock:nil];
     runner.command = command;
     runner.title = NSLocalizedString(@"Run Command Trigger", @"UI");
-    runner.notificationTitle = @"Run Command Trigger Failed";
+    runner.notificationTitle = NSLocalizedString(@"Run Command Trigger Failed", @"UI");
     runner.shell = self.userShell;
     [runner run];
 }
@@ -24907,8 +24907,8 @@ static NSString *IT2AuthorizationAnnouncementIdentifier(NSString *guid) {
         return;
     }
     [[iTermNotificationController sharedInstance]
-        notify:[NSString stringWithFormat:@"Session \u201c%@\u201d", [[self name] removingHTMLFromTabTitleIfNeeded]]
-        withDescription:[NSString stringWithFormat:@"Status changed to \u201c%@\u201d", newStatusText]
+        notify:[NSString stringWithFormat:NSLocalizedString(@"Session \u201c%@\u201d", @"UI"), [[self name] removingHTMLFromTabTitleIfNeeded]]
+        withDescription:[NSString stringWithFormat:NSLocalizedString(@"Status changed to \u201c%@\u201d", @"UI"), newStatusText]
         windowIndex:[self screenWindowIndex]
         tabIndex:[self screenTabIndex]
         viewIndex:[self screenViewIndex]];

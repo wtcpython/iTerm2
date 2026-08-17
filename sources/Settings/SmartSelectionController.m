@@ -139,7 +139,7 @@ const double SmartSelectionVeryHighPrecision = 1000000.0;
                                                                                ofType:@"plist"];
         NSDictionary* rulesDict = [NSDictionary dictionaryWithContentsOfFile:plistFile];
         if (!plistFile) {
-            [iTermAppSignatureValidator warnWithReason:@"While loading the default smart selection rules"];
+            [iTermAppSignatureValidator warnWithReason:NSLocalizedString(@"While loading the default smart selection rules", @"UI")];
         }
         ITCriticalError(rulesDict != nil, @"Failed to parse SmartSelectionRules in %@: %@", plistFile, [NSString stringWithContentsOfFile:plistFile encoding:NSUTF8StringEncoding error:nil]);
         rulesArray = [rulesDict objectForKey:@"Rules"];
@@ -294,11 +294,11 @@ const double SmartSelectionVeryHighPrecision = 1000000.0;
 }
 
 - (NSString *)displayNameForPrecision:(NSString *)precision {
-    NSDictionary *names = @{ kVeryLowPrecision: @"Very Low",
+    NSDictionary *names = @{ kVeryLowPrecision: NSLocalizedString(@"Very Low", @"UI"),
                              kLowPrecision: @"Low",
                              kNormalPrecision: @"Normal",
                              kHighPrecision: @"High",
-                             kVeryHighPrecision: @"Very High" };
+                             kVeryHighPrecision: NSLocalizedString(@"Very High", @"UI") };
     return names[precision] ?: @"Undefined";
 }
 
@@ -366,7 +366,7 @@ const double SmartSelectionVeryHighPrecision = 1000000.0;
         NSParagraphStyleAttributeName: paragraphStyle,
         NSFontAttributeName: [NSFont systemFontOfSize:[NSFont systemFontSize] weight:NSFontWeightSemibold]
     };
-    NSString *name = [[self displayNameForPrecision:precision] stringByAppendingString:@" precision"];
+    NSString *name = [[self displayNameForPrecision:precision] stringByAppendingString:NSLocalizedString(@" precision", @"UI")];
     if (actionCount == 1) {
         name = [name stringByAppendingFormat:@", one action"];
     } else if (actionCount > 1) {

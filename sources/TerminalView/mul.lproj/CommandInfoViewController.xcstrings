@@ -338,7 +338,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "可拖拽文件夹"
+            "value": "可拖移文件夹"
           }
         }
       }

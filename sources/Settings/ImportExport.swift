@@ -42,13 +42,13 @@ class ImportExport: NSObject {
             RLog("Failed: \(error)")
             switch error {
             case ImportExportError.failedToCreateTempDir(let reason):
-                return .failure("Failed to create temporary directory: \(reason)")
+                return .failure(String(format: NSLocalizedString("Failed to create temporary directory: %@", comment: "UI"), reason))
             case ImportExportError.failedToCreateIntermediateFolder(let reason):
-                return .failure("Failed to create folder: \(reason)")
+                return .failure(String(format: NSLocalizedString("Failed to create folder: %@", comment: "UI"), reason))
             case ImportExportError.failedToCopyFile(let reason):
-                return .failure("Failed to copy file: \(reason)")
+                return .failure(String(format: NSLocalizedString("Failed to copy file: %@", comment: "UI"), reason))
             case ImportExportError.failedToSaveFile(let reason):
-                return .failure("Failed to save file: \(reason)")
+                return .failure(String(format: NSLocalizedString("Failed to save file: %@", comment: "UI"), reason))
             case ImportExportError.bug(let reason):
                 return .failure("A bug was encountered: \(reason). Please report this at https://iterm2.com/bugs")
             case ImportExportError.failedToCreateArchive(let reason):
@@ -126,7 +126,7 @@ class ImportExport: NSObject {
     static func eraseAll(window: NSWindow?) -> String? {
         let exportSelection = iTermWarning.show(
             withTitle: NSLocalizedString("Would you like to export your settings and data first? You will be able to re-import the exported file later if you change your mind.", comment: "UI"),
-            actions: ["Export First", "Skip Export", NSLocalizedString("Cancel", comment: "UI")],
+            actions: [NSLocalizedString("Export First", comment: "UI"), NSLocalizedString("Skip Export", comment: "UI"), NSLocalizedString("Cancel", comment: "UI")],
             accessory: nil,
             identifier: nil,
             silenceable: .kiTermWarningTypePersistent,
@@ -391,23 +391,23 @@ private struct ImportExportConfig {
     }
     var entities: [Entity] = [
         Entity(key: "python-runtimes",
-               displayName: "Python Runtimes",
+               displayName: NSLocalizedString("Python Runtimes", comment: "UI"),
                flavor: .pythonRuntimes),
         Entity(key: "secure-user-defaults",
-               displayName: "Secure Settings",
+               displayName: NSLocalizedString("Secure Settings", comment: "UI"),
                flavor: .secureUserDefaults),
         Entity(key: "disable-automation-auth",
-               displayName: "Python API Authorization Setting",
+               displayName: NSLocalizedString("Python API Authorization Setting", comment: "UI"),
                flavor: .disableAutomationAuth),
         Entity(key: "user-defaults",
-               displayName: "User Defaults",
+               displayName: NSLocalizedString("User Defaults", comment: "UI"),
                flavor: .userDefaults),
         Entity(key: "dot-iterm2",
                displayName: "~/.iterm2",
                flavor: .folder(Path(baseDirectory: .home, relativePath: ".iterm2"),
                                exclude: Set(["AppSupport", "iTermServer-*", "sockets", "Scripts"]))),
         Entity(key: "app-support",
-               displayName: "Application Support",
+               displayName: NSLocalizedString("Application Support", comment: "UI"),
                flavor: .folder(Path(baseDirectory: .applicationSupport, relativePath: nil),
                                exclude: Set(["????????-????-????-????-????????????",
                                              "*.secureSetting",
@@ -422,7 +422,7 @@ private struct ImportExportConfig {
                                              "servers",
                                              "version.txt"]))),
         Entity(key: "scripts",
-               displayName: "Python API Scripts",
+               displayName: NSLocalizedString("Python API Scripts", comment: "UI"),
                flavor: .scripts),
     ]
 }
@@ -478,7 +478,7 @@ private class Importer {
 
     func importEntities(from url: URL) throws {
         let tempDir = try makeTempDir()
-        setStatus("Extracting Archive")
+        setStatus(NSLocalizedString("Extracting Archive", comment: "UI"))
         if NSData.untar(fromArchive: url, to: tempDir) != 0 {
             return
         }
@@ -501,7 +501,7 @@ private class Importer {
                               from baseURL: URL,
                               phase: Phase) throws {
         let url = baseURL.appendingPathComponent(entity.key)
-        setStatus("Importing \(entity.displayName)")
+        setStatus(String(format: NSLocalizedString("Importing %@", comment: "UI"), entity.displayName))
         switch entity.flavor {
         case .pythonRuntimes:
             switch phase {
@@ -769,11 +769,11 @@ private struct PythonRuntimesImporterExporter {
             if !install(requirement: nil) {
                 throw ImportExportError.failedToInstallPythonRuntime
             }
-            setStatus?("Installing Python runtime \(i) of \(n)")
+            setStatus?(String(format: NSLocalizedString("Installing Python runtime %ld of %ld", comment: "UI"), i, n))
             i += 1
         }
         for requirement in info.requirements {
-            setStatus?("Installing Python runtime \(i) of \(n)")
+            setStatus?(String(format: NSLocalizedString("Installing Python runtime %ld of %ld", comment: "UI"), i, n))
             i += 1
             DLog("Install \(requirement)")
             if !install(requirement: requirement) {
@@ -1058,7 +1058,7 @@ private struct ScriptsImporterExporter {
         }
         for (i, path) in items.enumerated() {
             DLog("\(path)")
-            setStatus?("Import script \(i + 1) of \(items.count)")
+            setStatus?(String(format: NSLocalizedString("Import script %ld of %ld", comment: "UI"), i + 1, items.count))
             importScript(from: path, autolaunch: path.lastPathComponent.hasPrefix("autolaunch"))
         }
     }

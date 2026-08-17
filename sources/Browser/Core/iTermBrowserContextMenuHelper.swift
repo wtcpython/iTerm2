@@ -117,24 +117,24 @@ class iTermBrowserContextMenuHelper: NSObject {
             menu.insertItem(item, at: i)
             i += 1
         }
-        add(title: "Split Pane Vertically",
+        add(title: NSLocalizedString("Split Pane Vertically", comment: "UI"),
             selector: #selector(splitPaneVertically(_:)),
             i: &i)
-        add(title: "Split Pane Horizontally",
+        add(title: NSLocalizedString("Split Pane Horizontally", comment: "UI"),
             selector: #selector(splitPaneHorizontally(_:)),
             i: &i)
-        add(title: "Move Browser to Split Pane",
+        add(title: NSLocalizedString("Move Browser to Split Pane", comment: "UI"),
             selector: #selector(movePane(_:)),
             i: &i)
         if delegate?.contextMenuCurrentTabHasMultipleSessions() ?? false {
-            add(title: "Move Browser to Tab",
+            add(title: NSLocalizedString("Move Browser to Tab", comment: "UI"),
                 selector: #selector(moveBrowserToTab(_:)),
                 i: &i)
-            add(title: "Move Browser to Window",
+            add(title: NSLocalizedString("Move Browser to Window", comment: "UI"),
                 selector: #selector(moveBrowserToWindow(_:)),
                 i: &i)
         }
-        add(title: "Swap With Session…",
+        add(title: NSLocalizedString("Swap With Session…", comment: "UI"),
             selector: #selector(swapSessions(_:)),
             i: &i)
 

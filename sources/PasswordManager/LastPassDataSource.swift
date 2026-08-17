@@ -47,7 +47,7 @@ class LastPassDataSource: CommandLinePasswordDataSource {
                 return nil
             }
             requestedAuthentication = true
-            guard let password = ModalPasswordAlert("Enter your LastPass master password:").run(window: nil) else {
+            guard let password = ModalPasswordAlert(NSLocalizedString("Enter your LastPass master password:", comment: "UI")).run(window: nil) else {
                 throw LPError.canceledByUser
             }
             return (password + "\n").data(using: .utf8)
@@ -174,7 +174,7 @@ class LastPassDataSource: CommandLinePasswordDataSource {
                                sendOTP: false)
             }
         }
-        return wrap("The account list could not be fetched.", AnyRecipe(recipe))
+        return wrap(NSLocalizedString("The account list could not be fetched.", comment: "UI"), AnyRecipe(recipe))
     }
 
     private var getPasswordRecipe: AnyRecipe<AccountIdentifier, Password> {
@@ -192,7 +192,7 @@ class LastPassDataSource: CommandLinePasswordDataSource {
             }
             return Password(password: string.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines))
         }
-        return wrap("The password could not be fetched.", AnyRecipe(recipe))
+        return wrap(NSLocalizedString("The password could not be fetched.", comment: "UI"), AnyRecipe(recipe))
     }
 
     private var setPasswordRecipe: AnyRecipe<SetPasswordRequest, Void> {
@@ -219,7 +219,7 @@ class LastPassDataSource: CommandLinePasswordDataSource {
                 throw LPError.runtime
             }
         }
-        return wrap("The password could not be set.", AnyRecipe(recipe))
+        return wrap(NSLocalizedString("The password could not be set.", comment: "UI"), AnyRecipe(recipe))
     }
 
     private var deleteRecipe: AnyRecipe<AccountIdentifier, Void> {
@@ -234,7 +234,7 @@ class LastPassDataSource: CommandLinePasswordDataSource {
                 throw LPError.runtime
             }
         }
-        return wrap("The account could not be deleted", AnyRecipe(recipe))
+        return wrap(NSLocalizedString("The account could not be deleted", comment: "UI"), AnyRecipe(recipe))
     }
 
     private var addAccountRecipe: AnyRecipe<AddRequest, AccountIdentifier> {
@@ -295,7 +295,7 @@ class LastPassDataSource: CommandLinePasswordDataSource {
             LastPassDynamicCommandRecipe<AddRequest, Void>,
                 LastPassBasicCommandRecipe<(AddRequest, Void), Void>> = SequenceRecipe(addRecipe, syncRecipe)
         let sequence = SequenceRecipe(addSyncSequence, showRecipe)
-        return wrap("The account could not be added.", AnyRecipe(sequence))
+        return wrap(NSLocalizedString("The account could not be added.", comment: "UI"), AnyRecipe(sequence))
     }
 
     func wrap<Inputs, Outputs>(_ message: String, _ recipe: AnyRecipe<Inputs, Outputs>) -> AnyRecipe<Inputs, Outputs> {
@@ -487,7 +487,7 @@ class LastPassUtils {
     private static let usernameUserDefaultsKey = "LastPassUserName"
 
     static func showLoginUI() throws {
-        let alert = ModalPasswordAlert("Please log in to LastPass")
+        let alert = ModalPasswordAlert(NSLocalizedString("Please log in to LastPass", comment: "UI"))
         alert.username = iTermUserDefaults.userDefaults().string(forKey: usernameUserDefaultsKey) ?? ""
         if let password = alert.run(window: nil), let username = alert.username {
             iTermUserDefaults.userDefaults().set(alert.username, forKey: usernameUserDefaultsKey)

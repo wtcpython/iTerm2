@@ -33,7 +33,7 @@ extension FileManager {
                 return true
             } catch {
                 let selection = iTermWarning.show(withTitle: String(format: NSLocalizedString("Failed to create %@:\n\n%@", comment: "UI"), directoryPath, error.localizedDescription),
-                                                  actions: ["Try Again", NSLocalizedString("Cancel", comment: "UI")],
+                                                  actions: [NSLocalizedString("Try Again", comment: "UI"), NSLocalizedString("Cancel", comment: "UI")],
                                                   accessory: nil,
                                                   identifier: nil,
                                                   silenceable: .kiTermWarningTypePersistent,

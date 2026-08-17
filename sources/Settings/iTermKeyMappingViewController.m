@@ -152,18 +152,18 @@ static NSString *const INTERCHANGE_TOUCH_BAR_ITEMS = @"Touch Bar Items";
 
 - (void)addViewsToSearchIndex:(iTermPreferencesBaseViewController *)vc {
     [vc addViewToSearchIndex:_addTouchBarItem
-                 displayName:@"Add touch bar item"
+                 displayName:NSLocalizedString(@"Add touch bar item", @"UI")
                      phrases:@[]
                          key:nil];
     [vc addViewToSearchIndex:_presetsPopup
-                 displayName:@"Key binding presets"
+                 displayName:NSLocalizedString(@"Key binding presets", @"UI")
                      phrases:@[]
                          key:nil];
     [vc addViewToSearchIndex:_touchBarMitigationsButton
-                 displayName:@"Touch bar mitigations"
-                     phrases:@[ @"Haptic feedback for esc key",
-                                @"Key click sound for esc key",
-                                @"Visual indicator for esc key" ]
+                 displayName:NSLocalizedString(@"Touch bar mitigations", @"UI")
+                     phrases:@[ NSLocalizedString(@"Haptic feedback for esc key", @"UI"),
+                                NSLocalizedString(@"Key click sound for esc key", @"UI"),
+                                NSLocalizedString(@"Visual indicator for esc key", @"UI") ]
                          key:_touchBarMitigationsButton.accessibilityIdentifier];
 }
 
@@ -390,7 +390,7 @@ static NSString *const INTERCHANGE_TOUCH_BAR_ITEMS = @"Touch Bar Items";
                      second:
      ^(iTermTouchbarItem * _Nonnull touchbarItem) {
         iTermKeyBindingAction *action = [iTermKeyBindingAction withDictionary:dict[touchbarItem.identifier]];
-        _editActionWindowController.label = action.label ?: @"[bug]";
+        _editActionWindowController.label = action.label ?: NSLocalizedString(@"[bug]", @"UI");
         _editActionWindowController.touchBarItemID = touchbarItem.identifier;
         binding = dict[touchbarItem.identifier];
     }];

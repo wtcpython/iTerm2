@@ -188,7 +188,7 @@ static NSString *const iTermSnippetsEditingPasteboardType = @"com.googlecode.ite
         [weakSelf snippetsDidChange:notification];
     }];
     [container addViewToSearchIndex:_tableView
-                        displayName:@"Snippets"
+                        displayName:NSLocalizedString(@"Snippets", @"UI")
                             phrases:@[ @"Snippets" ]
                                 key:kPreferenceKeySnippets];
 }

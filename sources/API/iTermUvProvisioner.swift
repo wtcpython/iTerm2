@@ -86,7 +86,7 @@ class iTermUvProvisioner: NSObject {
         }
         guard let entry = iTermUvManifest.select(entries: entries,
                                                  runningMacOSVersion: runningMacOSVersion) else {
-            return .failure(error("uv is not available for macOS \(runningMacOSVersion)."))
+            return .failure(error(String(format: NSLocalizedString("uv is not available for macOS %@.", comment: "UI"), runningMacOSVersion)))
         }
         // The manifest itself is not signed (only the tarball is), so a compromised
         // host could offer an older, still-validly-signed uv (a rollback). Refuse any
@@ -594,7 +594,7 @@ class iTermUvProvisioner: NSObject {
                     return
                 }
                 DispatchQueue.main.async {
-                    self.fetcher.fetch(url: url, title: "Downloading uv…", byteCount: entry.size) { result in
+                    self.fetcher.fetch(url: url, title: NSLocalizedString("Downloading uv…", comment: "UI"), byteCount: entry.size) { result in
                         switch result {
                         case .failure(let error):
                             deliver(error)
@@ -1081,7 +1081,7 @@ class iTermUvProvisioner: NSObject {
     @objc func userRequestedUpgradeCheck(completion: @escaping (Bool, String) -> Void) {
         DispatchQueue.global(qos: .utility).async {
             guard Self.isInstalled else {
-                DispatchQueue.main.async { completion(false, "uv is not installed.") }
+                DispatchQueue.main.async { completion(false, NSLocalizedString("uv is not installed.", comment: "UI")) }
                 return
             }
             let outcome = Self.upgradeUvBinaryIfNewerAvailable()
@@ -1093,10 +1093,10 @@ class iTermUvProvisioner: NSObject {
             switch outcome {
             case .upToDate(let version):
                 ok = true
-                message = "uv \(version) is up to date."
+                message = String(format: NSLocalizedString("uv %@ is up to date.", comment: "UI"), version)
             case .upgraded(let from, let to):
                 ok = true
-                message = "Upgraded uv \(from) to \(to). Updated the Python modules in shared environments."
+                message = String(format: NSLocalizedString("Upgraded uv %@ to %@. Updated the Python modules in shared environments.", comment: "UI"), from, to)
             case .failed(let failureMessage):
                 ok = false
                 message = failureMessage
@@ -1128,7 +1128,7 @@ class iTermUvProvisioner: NSObject {
             if case .failure(let err) = selected {
                 reason = err.localizedDescription
             }
-            return .failed(message: "Could not check for a uv update: \(reason)")
+            return .failed(message: String(format: NSLocalizedString("Could not check for a uv update: %@", comment: "UI"), reason))
         }
         let installed = installedUvVersion(uvPath: uvBinaryPath)
         guard shouldUpgradeUv(installedVersion: installed, manifestVersion: entry.uvVersion) else {
@@ -1142,7 +1142,7 @@ class iTermUvProvisioner: NSObject {
               let data = boundedDownload(from: url,
                                          maxBytes: entry.size + 16 * 1024 * 1024,
                                          resourceTimeout: 3600) else {
-            return .failed(message: "Could not download the uv update.")
+            return .failed(message: NSLocalizedString("Could not download the uv update.", comment: "UI"))
         }
         var outcome: UvBinaryUpgradeOutcome = .upToDate(version: installed)
         // Do the swap on provisionQueue so it is serialized with any concurrent provisioning.
@@ -1434,10 +1434,7 @@ final class iTermUvWindowControllerFetcher: iTermUvTarballFetcher {
         let megabytes = max(1, (declaredSize + 512 * 1024) / (1024 * 1024))
         let alert = NSAlert()
         alert.messageText = NSLocalizedString("Download Python Support?", comment: "UI")
-        alert.informativeText = NSLocalizedString("To run Python scripts, iTerm2 needs to download uv ", comment: "UI")
-            + "(about \(megabytes) MB) and a Python interpreter. Additional Python "
-            + "versions are downloaded automatically later if a script needs them. "
-            + "OK to download it now?"
+        alert.informativeText = String(format: NSLocalizedString("To run Python scripts, iTerm2 needs to download uv (about %@ MB) and a Python interpreter. Additional Python versions are downloaded automatically later if a script needs them. OK to download it now?", comment: "UI"), String(megabytes))
         alert.addButton(withTitle: NSLocalizedString("OK", comment: "UI"))
         alert.addButton(withTitle: NSLocalizedString("Cancel", comment: "UI"))
         guard alert.runModal() == .alertFirstButtonReturn else {

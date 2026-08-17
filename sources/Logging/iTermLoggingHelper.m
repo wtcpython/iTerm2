@@ -210,7 +210,7 @@ asciicastMetadata:(iTermAsciicastMetadata *)asciicastMetadata
     } else {
         self->_enabled = NO;
         dispatch_async(dispatch_get_main_queue(), ^{
-            [[iTermNotificationController sharedInstance] postNotificationWithTitle:@"Couldn’t write to session log"
+            [[iTermNotificationController sharedInstance] postNotificationWithTitle:NSLocalizedString(@"Couldn’t write to session log", @"UI")
                                                                              detail:self.path
                                                            callbackNotificationName:iTermLoggingHelperErrorNotificationName
                                                        callbackNotificationUserInfo:@{ iTermLoggingHelperErrorNotificationGUIDKey: self->_profileGUID ?: @"" }];

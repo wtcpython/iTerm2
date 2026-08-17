@@ -59,9 +59,9 @@ final class InlineChatToolbarView: NSView {
         titleLabel = label
 
         newChatButton = Self.makeButton(symbol: .squareAndPencil,
-                                        tooltip: "New chat")
+                                        tooltip: NSLocalizedString("New chat", comment: "UI"))
         switchChatButton = Self.makeButton(symbol: .bubbleLeftAndBubbleRight,
-                                           tooltip: "Switch to another chat")
+                                           tooltip: NSLocalizedString("Switch to another chat", comment: "UI"))
         // Same info-circle control the chat window toolbar uses.
         sessionInfoButton = ChatToolbar.makeSessionInfoButton()
         sessionInfoButton.imageScaling = .scaleProportionallyDown
@@ -69,9 +69,9 @@ final class InlineChatToolbarView: NSView {
         // makeSessionInfoButton builds the image with a nil accessibility
         // description, so give VoiceOver an explicit label (the tooltip only
         // maps to accessibility help, not the element's label).
-        sessionInfoButton.setAccessibilityLabel("Link or unlink terminal/browser session")
+        sessionInfoButton.setAccessibilityLabel(NSLocalizedString("Link or unlink terminal/browser session", comment: "UI"))
         closeButton = Self.makeButton(symbol: .xmark,
-                                      tooltip: "Hide chat")
+                                      tooltip: NSLocalizedString("Hide chat", comment: "UI"))
 
         separator = NSBox()
         separator.boxType = .separator

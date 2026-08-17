@@ -15,7 +15,7 @@ import AppKit
         var localizedDescription: String {
             switch self {
             case .chatNotFound:
-                "The messages for this chat could not be loaded."
+                NSLocalizedString("The messages for this chat could not be loaded.", comment: "UI")
             }
         }
 
@@ -343,7 +343,7 @@ final class ChatWindowController: NSWindowController, DictionaryCodable {
 
     private func createNewChat(offerGuid guid: String?, enableOrchestration: Bool = false) {
         do {
-            let chatID = try client.create(chatWithTitle: "New Chat",
+            let chatID = try client.create(chatWithTitle: NSLocalizedString("New Chat", comment: "UI"),
                                            terminalSessionGuid: nil,
                                            browserSessionGuid: nil,
                                            initialMessages: [],
@@ -439,11 +439,11 @@ extension ChatWindowController: NSToolbarDelegate {
         switch itemIdentifier {
         case .toggleChatList:
             let item = NSToolbarItem(itemIdentifier: itemIdentifier)
-            item.label = "Toggle Chat List"
-            item.paletteLabel = "Toggle Chat List"
+            item.label = NSLocalizedString("Toggle Chat List", comment: "UI")
+            item.paletteLabel = NSLocalizedString("Toggle Chat List", comment: "UI")
             item.toolTip = NSLocalizedString("Show or hide the chat list", comment: "UI")
             item.image = NSImage(systemSymbolName: SFSymbol.sidebarLeft.rawValue,
-                                 accessibilityDescription: "Toggle Chat List")
+                                 accessibilityDescription: NSLocalizedString("Toggle Chat List", comment: "UI"))
             item.target = self
             item.action = #selector(toggleChatList)
             // Standard toolbar buttons get automatic glass backing on macOS 26
@@ -458,8 +458,8 @@ extension ChatWindowController: NSToolbarDelegate {
             if let providerSelector = chatViewController.chatToolbar.providerSelectorButton,
                !providerSelector.isHidden {
                 let item = NSToolbarItem(itemIdentifier: itemIdentifier)
-                item.label = "Provider"
-                item.paletteLabel = "AI Provider"
+                item.label = NSLocalizedString("Provider", comment: "UI")
+                item.paletteLabel = NSLocalizedString("AI Provider", comment: "UI")
                 item.toolTip = NSLocalizedString("Select AI provider for new chats", comment: "UI")
                 item.view = providerSelector
                 return item
@@ -470,8 +470,8 @@ extension ChatWindowController: NSToolbarDelegate {
             // Only create if we have multiple models
             if let modelSelector = chatViewController.chatToolbar.modelSelectorButton {
                 let item = NSToolbarItem(itemIdentifier: itemIdentifier)
-                item.label = "Model"
-                item.paletteLabel = "AI Model"
+                item.label = NSLocalizedString("Model", comment: "UI")
+                item.paletteLabel = NSLocalizedString("AI Model", comment: "UI")
                 item.toolTip = NSLocalizedString("Select AI model", comment: "UI")
                 item.view = modelSelector
                 return item
@@ -481,8 +481,8 @@ extension ChatWindowController: NSToolbarDelegate {
         case .thinkingToggle:
             if let button = chatViewController.chatToolbar.thinkingButton {
                 let item = NSToolbarItem(itemIdentifier: itemIdentifier)
-                item.label = "Thinking"
-                item.paletteLabel = "Toggle Thinking"
+                item.label = NSLocalizedString("Thinking", comment: "UI")
+                item.paletteLabel = NSLocalizedString("Toggle Thinking", comment: "UI")
                 item.toolTip = NSLocalizedString("Enable or disable thinking/reasoning mode", comment: "UI")
                 item.view = button
                 return item
@@ -493,8 +493,8 @@ extension ChatWindowController: NSToolbarDelegate {
             if let selector = chatViewController.chatToolbar.reasoningEffortButton,
                !selector.isHidden {
                 let item = NSToolbarItem(itemIdentifier: itemIdentifier)
-                item.label = "Effort"
-                item.paletteLabel = "Reasoning Effort"
+                item.label = NSLocalizedString("Effort", comment: "UI")
+                item.paletteLabel = NSLocalizedString("Reasoning Effort", comment: "UI")
                 item.toolTip = NSLocalizedString("Select reasoning effort", comment: "UI")
                 item.view = selector
                 return item
@@ -505,8 +505,8 @@ extension ChatWindowController: NSToolbarDelegate {
             if let selector = chatViewController.chatToolbar.serviceTierButton,
                !selector.isHidden {
                 let item = NSToolbarItem(itemIdentifier: itemIdentifier)
-                item.label = "Speed"
-                item.paletteLabel = "AI Speed"
+                item.label = NSLocalizedString("Speed", comment: "UI")
+                item.paletteLabel = NSLocalizedString("AI Speed", comment: "UI")
                 item.toolTip = NSLocalizedString("Select AI service tier", comment: "UI")
                 item.view = selector
                 return item
@@ -516,8 +516,8 @@ extension ChatWindowController: NSToolbarDelegate {
         case .webSearchToggle:
             if let button = chatViewController.chatToolbar.webSearchButton {
                 let item = NSToolbarItem(itemIdentifier: itemIdentifier)
-                item.label = "Web Search"
-                item.paletteLabel = "Toggle Web Search"
+                item.label = NSLocalizedString("Web Search", comment: "UI")
+                item.paletteLabel = NSLocalizedString("Toggle Web Search", comment: "UI")
                 item.toolTip = NSLocalizedString("Enable or disable web search", comment: "UI")
                 item.view = button
                 return item
@@ -527,8 +527,8 @@ extension ChatWindowController: NSToolbarDelegate {
         case .sessionButton:
             if let button = chatViewController.chatToolbar.sessionButton {
                 let item = NSToolbarItem(itemIdentifier: itemIdentifier)
-                item.label = "Session"
-                item.paletteLabel = "Link Session"
+                item.label = NSLocalizedString("Session", comment: "UI")
+                item.paletteLabel = NSLocalizedString("Link Session", comment: "UI")
                 item.toolTip = NSLocalizedString("Link or unlink terminal/browser session", comment: "UI")
                 item.view = button
                 return item
@@ -560,7 +560,7 @@ extension ChatWindowController: NSToolbarDelegate {
             chatListViewController.select(chatID: chat.id)
         } else {
             do {
-                let chatID = try client.create(chatWithTitle: "Chat about \(name)",
+                let chatID = try client.create(chatWithTitle: String(format: NSLocalizedString("Chat about %@", comment: "UI"), name),
                                                terminalSessionGuid: terminal ? guid : nil,
                                                browserSessionGuid: terminal ? nil : guid,
                                                initialMessages: [],
@@ -764,8 +764,8 @@ extension ChatWindowController: ChatViewControllerDelegate {
         let count = uniqueChatIDs.count
         warning.title = count == 1
             ? NSLocalizedString("Are you sure you want to delete this chat? This action cannot be undone.", comment: "UI")
-            : "Are you sure you want to delete \(count) chats? This action cannot be undone."
-        warning.heading = count == 1 ? "Delete Chat?" : "Delete \(count) Chats?"
+            : String(format: NSLocalizedString("Are you sure you want to delete %ld chats? This action cannot be undone.", comment: "UI"), count)
+        warning.heading = count == 1 ? NSLocalizedString("Delete Chat?", comment: "UI") : String(format: NSLocalizedString("Delete %ld Chats?", comment: "UI"), count)
 
         let action = iTermWarningAction(label: NSLocalizedString("Delete", comment: "UI")) { [weak self] _ in
             guard let self else {

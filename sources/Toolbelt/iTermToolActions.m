@@ -73,12 +73,12 @@ static NSButton *iTermToolActionsNewButton(NSString *imageName, NSString *title,
     self = [super initWithFrame:frame];
     if (self) {
         if (@available(macOS 10.16, *)) {
-            _applyButton = iTermToolActionsNewButton(@"play", @"Apply", self, @selector(apply:), frame);
+            _applyButton = iTermToolActionsNewButton(@"play", NSLocalizedString(@"Apply", @"UI"), self, @selector(apply:), frame);
             _addButton = iTermToolActionsNewButton(@"plus", NSLocalizedString(@"Add", @"UI"), self, @selector(add:), frame);
             _removeButton = iTermToolActionsNewButton(@"minus", NSLocalizedString(@"Remove", @"UI"), self, @selector(remove:), frame);
-            _editButton = iTermToolActionsNewButton(@"pencil", @"Edit", self, @selector(edit:), frame);
+            _editButton = iTermToolActionsNewButton(@"pencil", NSLocalizedString(@"Edit", @"UI"), self, @selector(edit:), frame);
         } else {
-            _applyButton = iTermToolActionsNewButton(nil, @"Apply", self, @selector(apply:), frame);
+            _applyButton = iTermToolActionsNewButton(nil, NSLocalizedString(@"Apply", @"UI"), self, @selector(apply:), frame);
             _addButton = iTermToolActionsNewButton(NSImageNameAddTemplate, nil, self, @selector(add:), frame);
             _removeButton = iTermToolActionsNewButton(NSImageNameRemoveTemplate, nil, self, @selector(remove:), frame);
             _editButton = iTermToolActionsNewButton(nil, @"✐", self, @selector(edit:), frame);

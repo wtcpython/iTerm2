@@ -67,13 +67,13 @@ class ToolNamedMarks: NSView, ToolbeltTool, NSTableViewDelegate, NSTableViewData
                                        frame: frameRect)
         addSubview(addButton!)
         removeButton = makeToolbeltButton(imageName: SFSymbol.minus.rawValue,
-                                          title: "Remove",
+                                          title: NSLocalizedString("Remove", comment: "UI"),
                                           target: self,
                                           selector: #selector(remove(_:)),
                                           frame: frameRect)
         addSubview(removeButton!)
         editButton = makeToolbeltButton(imageName: SFSymbol.pencil.rawValue,
-                                        title: "Edit",
+                                        title: NSLocalizedString("Edit", comment: "UI"),
                                         target: self,
                                         selector: #selector(edit(_:)),
                                         frame: frameRect)

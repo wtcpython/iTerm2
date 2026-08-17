@@ -233,7 +233,7 @@ class NotifyOnStatusChangeController: NSObject {
                               from: String?,
                               to: String?,
                               window: NSWindow?) {
-        let name = sessionName ?? "A session"
+        let name = sessionName ?? NSLocalizedString("A session", comment: "UI")
         let fromText = from ?? "none"
         let toText = to ?? "none"
         // Present asynchronously so the modal alert doesn't run

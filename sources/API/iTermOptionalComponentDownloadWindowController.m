@@ -203,7 +203,7 @@ didCompleteWithError:(nullable NSError *)error {
 - (instancetype)initWithURL:(NSURL *)url
      requestedPythonVersion:(NSString *)requestedPythonVersion
            nextPhaseFactory:(iTermOptionalComponentDownloadPhase *(^)(iTermOptionalComponentDownloadPhase *))nextPhaseFactory {
-    self = [super initWithURL:url title:@"Finding latest version…" nextPhaseFactory:nextPhaseFactory];
+    self = [super initWithURL:url title:NSLocalizedString(@"Finding latest version…", @"UI") nextPhaseFactory:nextPhaseFactory];
     if (self) {
         _requestedPythonVersion = [requestedPythonVersion copy];
     }
@@ -360,7 +360,7 @@ didCompleteWithError:(nullable NSError *)error {
      requestedPythonVersion:(NSString *)requestedPythonVersion
            expectedVersions:(NSArray<NSString *> *)expectedVersions
            nextPhaseFactory:(iTermOptionalComponentDownloadPhase *(^)(iTermOptionalComponentDownloadPhase *))nextPhaseFactory {
-    self = [super initWithURL:url title:@"Downloading Python runtime…" nextPhaseFactory:nextPhaseFactory];
+    self = [super initWithURL:url title:NSLocalizedString(@"Downloading Python runtime…", @"UI") nextPhaseFactory:nextPhaseFactory];
     if (self) {
         _version = version;
         _expectedSignature = [expectedSignature copy];
@@ -511,7 +511,7 @@ didCompleteWithError:(nullable NSError *)error {
                                ofTotal:(double)totalBytes {
     DLog(@"downloaded %@/%@ %@", @(bytesWritten), @(totalBytes), self);
     self->_progressIndicator.doubleValue = bytesWritten / totalBytes;
-    self->_progressLabel.stringValue = [NSString stringWithFormat:@"%@ of %@",
+    self->_progressLabel.stringValue = [NSString stringWithFormat:NSLocalizedString(@"%@ of %@", @"UI"),
                                         [NSString it_formatBytes:bytesWritten],
                                         [NSString it_formatBytes:totalBytes]];
 }

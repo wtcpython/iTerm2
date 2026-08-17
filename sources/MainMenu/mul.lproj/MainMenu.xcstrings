@@ -14,7 +14,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "复制会话"
+            "value": "拷贝会话"
           }
         }
       }
@@ -2948,7 +2948,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "复制窗口"
+            "value": "拷贝窗口"
           }
         }
       }
@@ -3596,7 +3596,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "复制标签页"
+            "value": "拷贝标签页"
           }
         }
       }

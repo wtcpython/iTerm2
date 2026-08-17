@@ -113,7 +113,7 @@
     PreferenceInfo *info;
     info = [self defineControl:_cursorType
                     key:KEY_CURSOR_TYPE
-            displayName:@"Cursor style"
+            displayName:NSLocalizedString(@"Cursor style", @"UI")
                    type:kPreferenceInfoTypeMatrix
          settingChanged:^(id sender) { [self setInt:[[sender selectedCell] tag] forKey:KEY_CURSOR_TYPE]; }
                  update:^BOOL{
@@ -312,7 +312,7 @@
     [self defineControl:_asciiFontPicker.horizontalSpacing.textField
                     key:KEY_HORIZONTAL_SPACING
             relatedView:nil
-            displayName:@"Horizontal spacing"
+            displayName:NSLocalizedString(@"Horizontal spacing", @"UI")
                    type:kPreferenceInfoTypeIntegerTextField
          settingChanged:^(id sender) { assert(false); }
                  update:^BOOL{
@@ -328,7 +328,7 @@
     [self defineControl:_asciiFontPicker.verticalSpacing.textField
                     key:KEY_VERTICAL_SPACING
             relatedView:nil
-            displayName:@"Vertical spacing"
+            displayName:NSLocalizedString(@"Vertical spacing", @"UI")
                    type:kPreferenceInfoTypeIntegerTextField
          settingChanged:^(id sender) { assert(false); }
                  update:^BOOL{

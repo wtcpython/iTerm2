@@ -136,12 +136,12 @@ class iTermJobTerminationMonitor: NSObject {
     }
 
     private func sentence(for termination: (name: String, pid: pid_t)) -> String {
-        let displayName = termination.name.isEmpty ? "(unknown)" : termination.name
-        return "The job \(displayName) with process ID \(termination.pid) has terminated."
+        let displayName = termination.name.isEmpty ? NSLocalizedString("(unknown)", comment: "UI") : termination.name
+        return String(format: NSLocalizedString("The job %@ with process ID %@ has terminated.", comment: "UI"), displayName, String(termination.pid))
     }
 
     private func showCannotMonitorAlert(pid: pid_t, name: String?) {
-        let displayName = (name?.isEmpty == false) ? name! : "(unknown)"
+        let displayName = (name?.isEmpty == false) ? name! : NSLocalizedString("(unknown)", comment: "UI")
         NSApp.activate(ignoringOtherApps: true)
         let alert = NSAlert()
         alert.messageText = NSLocalizedString("Cannot Notify on Termination", comment: "UI")

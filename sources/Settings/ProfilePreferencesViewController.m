@@ -770,7 +770,7 @@ andEditComponentWithIdentifier:(NSString *)identifier
     }
 
     NSString *title =
-        [NSString stringWithFormat:@"Replace profile “%@” with the current session's settings?",
+        [NSString stringWithFormat:NSLocalizedString(@"Replace profile “%@” with the current session's settings?", @"UI"),
             [iTermProfilePreferences stringForKey:KEY_NAME inProfile:destination]];
     if ([iTermWarning showWarningWithTitle:title
                                    actions:@[ NSLocalizedString(@"Replace", @"UI"), NSLocalizedString(@"Cancel", @"UI") ]
@@ -1216,7 +1216,7 @@ andEditComponentWithIdentifier:(NSString *)identifier
     }
     NSString *profileName = [profile objectForKey:KEY_NAME] ?: @"(unknown name)";
     NSString *message = [NSString stringWithFormat:NSLocalizedString(@"The selected profile, “%@”, is a dynamic profile. These are generally only edited by hand.\n\niTerm2 is now able to write changes back to dynamic profiles when they are marked as “rewritable“. Rewriting can cause the order of values to change.", @"UI"), profileName];
-    // @"Reveal in Finder" is a one-time navigation action and shouldn't be remembered.
+    // "Reveal in Finder" is a one-time navigation action and shouldn't be remembered.
     iTermWarning *warning = [[iTermWarning alloc] init];
     warning.title = message;
     warning.actionLabels = @[ NSLocalizedString(@"Mark as Rewritable", @"UI"), NSLocalizedString(@"Reveal in Finder", @"UI"), NSLocalizedString(@"Cancel", @"UI") ];

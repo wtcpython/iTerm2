@@ -253,7 +253,7 @@ static NSString *const iTermAPIScriptLauncherScriptDidFailUserNotificationCallba
                                                     provisioningDidBegin:^{
             // Show progress only once the download phase is done and the venv build
             // starts, so a launch-time migration is not a silent multi-second stall.
-            [progress showWithMessage:@"Migrating this script to the new Python runtime…"];
+            [progress showWithMessage:NSLocalizedString(@"Migrating this script to the new Python runtime…", @"UI")];
         }
                                                               completion:^(NSError *migrationError) {
             [progress dismiss];
@@ -988,8 +988,8 @@ static NSString *const iTermAPIScriptLauncherScriptDidFailUserNotificationCallba
                           completion:^{}];
                 }
                 if (!entry.terminatedByUser) {
-                    NSString *message = [NSString stringWithFormat:@"“%@” ended unexpectedly.", entry.name];
-                    [[iTermNotificationController sharedInstance] postNotificationWithTitle:@"Script Failed"
+                    NSString *message = [NSString stringWithFormat:NSLocalizedString(@"“%@” ended unexpectedly.", @"UI"), entry.name];
+                    [[iTermNotificationController sharedInstance] postNotificationWithTitle:NSLocalizedString(@"Script Failed", @"UI")
                                                                                      detail:message
                                                                    callbackNotificationName:iTermAPIScriptLauncherScriptDidFailUserNotificationCallbackNotification
                                                                callbackNotificationUserInfo:@{ @"entry": entry.identifier ?: @"" }];

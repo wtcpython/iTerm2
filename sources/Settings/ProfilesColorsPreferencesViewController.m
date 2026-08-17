@@ -201,7 +201,7 @@ static NSString * const kColorGalleryURL = @"https://www.iterm2.com/colorgallery
         PreferenceInfo *info = [self defineControl:colorWell
                                                key:key
                                        relatedView:nil
-                                       displayName:[NSString stringWithFormat:@"%@ color", relatedView.stringValue]
+                                       displayName:[NSString stringWithFormat:NSLocalizedString(@"%@ color", @"UI"), relatedView.stringValue]
                                               type:kPreferenceInfoTypeColorWell
                                     settingChanged:nil
                                             update:nil
@@ -304,18 +304,18 @@ static NSString * const kColorGalleryURL = @"https://www.iterm2.com/colorgallery
 
     info = [self defineControl:_useBrightBold
                            key:KEY_USE_BOLD_COLOR
-                   displayName:@"Custom color for bold text"
+                   displayName:NSLocalizedString(@"Custom color for bold text", @"UI")
                           type:kPreferenceInfoTypeCheckbox];
     info.observer = ^{ [weakSelf updateColorControlsEnabled]; };
 
     info = [self defineControl:_brightenBoldText
                            key:KEY_BRIGHTEN_BOLD_TEXT
-                   displayName:@"Brighten bold text"
+                   displayName:NSLocalizedString(@"Brighten bold text", @"UI")
                           type:kPreferenceInfoTypeCheckbox];
     info.observer = ^{ [weakSelf updateColorControlsEnabled]; };
 
     [self addViewToSearchIndex:_presetsPopupButton
-                   displayName:@"Color presets"
+                   displayName:NSLocalizedString(@"Color presets", @"UI")
                        phrases:@[]
                            key:nil];
 
@@ -788,7 +788,7 @@ static NSString * const kColorGalleryURL = @"https://www.iterm2.com/colorgallery
         if (!modes) {
             return YES;
         }
-        NSString *currentMode = currentModeIsDark ? @"Dark Mode" : @"Light Mode";
+        NSString *currentMode = currentModeIsDark ? NSLocalizedString(@"Dark Mode", @"UI") : NSLocalizedString(@"Light Mode", @"UI");
         const iTermWarningSelection selection =
         [iTermWarning showWarningWithTitle:NSLocalizedString(@"This preset has colors for both light mode and dark mode.", @"UI")
                                    actions:@[ NSLocalizedString(@"Update Both Modes", @"UI"),
@@ -804,7 +804,7 @@ static NSString * const kColorGalleryURL = @"https://www.iterm2.com/colorgallery
     if (!modes) {
         return NO;
     }
-    NSString *currentMode = currentModeIsDark ? @"Dark Mode" : @"Light Mode";
+    NSString *currentMode = currentModeIsDark ? NSLocalizedString(@"Dark Mode", @"UI") : NSLocalizedString(@"Light Mode", @"UI");
     const iTermWarningSelection selection =
     [iTermWarning showWarningWithTitle:NSLocalizedString(@"This preset does not have separate colors for light mode and dark mode.", @"UI")
                                actions:@[ NSLocalizedString(@"Update Both Modes", @"UI"),

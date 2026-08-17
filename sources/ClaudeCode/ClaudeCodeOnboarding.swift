@@ -32,19 +32,19 @@ class ClaudeCodeOnboarding: NSObject {
 
         var title: String {
             switch self {
-            case .enablePythonAPI: return "Enable Python API"
-            case .installHook: return "Install Hook"
-            case .showToolbelt: return "Show Toolbelt"
-            case .installWorkgroup: return "Install Workgroup"
-            case .installTriggers: return "Auto-Enter Workgroup"
+            case .enablePythonAPI: return NSLocalizedString("Enable Python API", comment: "UI")
+            case .installHook: return NSLocalizedString("Install Hook", comment: "UI")
+            case .showToolbelt: return NSLocalizedString("Show Toolbelt", comment: "UI")
+            case .installWorkgroup: return NSLocalizedString("Install Workgroup", comment: "UI")
+            case .installTriggers: return NSLocalizedString("Auto-Enter Workgroup", comment: "UI")
             }
         }
 
         var buttonTitle: String {
             switch self {
-            case .enablePythonAPI: return "Enable"
+            case .enablePythonAPI: return NSLocalizedString("Enable", comment: "UI")
             case .installHook: return NSLocalizedString("Install", comment: "UI")
-            case .showToolbelt: return "Show"
+            case .showToolbelt: return NSLocalizedString("Show", comment: "UI")
             case .installWorkgroup: return NSLocalizedString("Install", comment: "UI")
             case .installTriggers: return NSLocalizedString("Install", comment: "UI")
             }
@@ -53,15 +53,15 @@ class ClaudeCodeOnboarding: NSObject {
         var description: String {
             switch self {
             case .enablePythonAPI:
-                return "The Claude Code integration relies on iTerm2\u{2019}s Python API to find sessions running Claude and track their status.\n\nThe Python API is currently disabled. Setup can\u{2019}t continue until it is enabled. Click Enable to turn it on."
+                return NSLocalizedString("The Claude Code integration relies on iTerm2\u{2019}s Python API to find sessions running Claude and track their status.\n\nThe Python API is currently disabled. Setup can\u{2019}t continue until it is enabled. Click Enable to turn it on.", comment: "UI")
             case .installHook:
-                return "Install a Claude Code hook that lets iTerm2 detect Claude\u{2019}s state (working, waiting, idle) and display it in the Session Status tool.\n\nThis adds a hook to your Claude Code settings that runs automatically as Claude works."
+                return NSLocalizedString("Install a Claude Code hook that lets iTerm2 detect Claude\u{2019}s state (working, waiting, idle) and display it in the Session Status tool.\n\nThis adds a hook to your Claude Code settings that runs automatically as Claude works.", comment: "UI")
             case .showToolbelt:
-                return "Show the toolbelt and enable the Session Status tool. The toolbelt appears on the right side of your terminal window.\n\nYou can toggle the toolbelt from View > Toolbelt > Show Toolbelt, or with the shortcut \u{2318}\u{21E7}B."
+                return NSLocalizedString("Show the toolbelt and enable the Session Status tool. The toolbelt appears on the right side of your terminal window.\n\nYou can toggle the toolbelt from View > Toolbelt > Show Toolbelt, or with the shortcut \u{2318}\u{21E7}B.", comment: "UI")
             case .installWorkgroup:
-                return "Install the Claude Code workgroup, which groups your main Claude session with two peer sessions: a diff viewer and a code-review session. You can switch between them with one click.\n\nYou can customize this layout later in Settings > Shortcuts > Workgroups."
+                return NSLocalizedString("Install the Claude Code workgroup, which groups your main Claude session with two peer sessions: a diff viewer and a code-review session. You can switch between them with one click.\n\nYou can customize this layout later in Settings > Shortcuts > Workgroups.", comment: "UI")
             case .installTriggers:
-                return "Pick the terminal profiles where you run claude. iTerm2 will add triggers so the Claude Code workgroup is entered automatically when claude starts and exited when it stops.\n\nWithout this, you can still enter the workgroup manually via Shell > Workgroups > Claude Code."
+                return NSLocalizedString("Pick the terminal profiles where you run claude. iTerm2 will add triggers so the Claude Code workgroup is entered automatically when claude starts and exited when it stops.\n\nWithout this, you can still enter the workgroup manually via Shell > Workgroups > Claude Code.", comment: "UI")
             }
         }
     }
@@ -850,8 +850,7 @@ class ClaudeCodeOnboarding: NSObject {
         introTitleLabel = titleLabel
 
         let lead = NSTextField(wrappingLabelWithString:
-            "Don’t panic! All of this can be undone later via "
-            + "iTerm2 > Uninstall Claude Code Integration.")
+            NSLocalizedString("Don’t panic! All of this can be undone later via iTerm2 > Uninstall Claude Code Integration.", comment: "UI"))
         lead.font = NSFont.systemFont(ofSize: 13)
         lead.textColor = .labelColor
         lead.isSelectable = false
@@ -880,11 +879,7 @@ class ClaudeCodeOnboarding: NSObject {
         introDisclosureLabel = disclosureLabel
 
         let details = NSTextField(wrappingLabelWithString:
-            "\u{2022} iTerm2\u{2019}s Python API is enabled\n"
-            + "\u{2022} A cc-status hook is added to ~/.claude/settings.json\n"
-            + "\u{2022} The toolbelt is shown\n"
-            + "\u{2022} A Claude Code workgroup is added to iTerm2\u{2019}s settings\n"
-            + "\u{2022} Enter/Exit Workgroup triggers are added to the profiles you pick")
+            NSLocalizedString("\u{2022} iTerm2\u{2019}s Python API is enabled\n\u{2022} A cc-status hook is added to ~/.claude/settings.json\n\u{2022} The toolbelt is shown\n\u{2022} A Claude Code workgroup is added to iTerm2\u{2019}s settings\n\u{2022} Enter/Exit Workgroup triggers are added to the profiles you pick", comment: "UI"))
         details.font = NSFont.systemFont(ofSize: 13)
         details.textColor = .secondaryLabelColor
         details.isSelectable = false
@@ -895,7 +890,7 @@ class ClaudeCodeOnboarding: NSObject {
         // Always-visible link to the full writeup, regardless of the
         // disclosure state. Sits below the "What gets changed" row so
         // users who want the whole story can read it on the web.
-        let helpLink = LinkButton(title: "Learn more about the Claude Code integration",
+        let helpLink = LinkButton(title: NSLocalizedString("Learn more about the Claude Code integration", comment: "UI"),
                                   target: self,
                                   action: #selector(openIntegrationHelp(_:)))
         helpLink.font = NSFont.systemFont(ofSize: 13)
@@ -1532,8 +1527,8 @@ class ClaudeCodeOnboarding: NSObject {
         let orphanCount = orphanScan.sessionCount
         if orphanCount > 0 {
             let title = orphanCount == 1
-                ? "Also update 1 session whose profile is missing"
-                : "Also update \(orphanCount) sessions whose profiles are missing"
+                ? NSLocalizedString("Also update 1 session whose profile is missing", comment: "UI")
+                : String(format: NSLocalizedString("Also update %ld sessions whose profiles are missing", comment: "UI"), orphanCount)
             let checkbox = NSButton(
                 checkboxWithTitle: title,
                 target: nil,
@@ -1773,8 +1768,8 @@ class ClaudeCodeOnboarding: NSObject {
         warning.title = String(format: NSLocalizedString("These profiles are dynamic and not marked “rewritable,” so iTerm2 normally regenerates them from disk and any change here would be lost:\n\n%@\n\niTerm2 can write the triggers back to dynamic profiles when they’re marked rewritable. Rewriting can change the order of values in the underlying file.", comment: "UI"), listed)
         warning.warningType = .kiTermWarningTypePersistent
         warning.actionLabels = [
-            "Mark Rewritable & Install",
-            "Skip Dynamic Profiles",
+            NSLocalizedString("Mark Rewritable & Install", comment: "UI"),
+            NSLocalizedString("Skip Dynamic Profiles", comment: "UI"),
             NSLocalizedString("Cancel", comment: "UI")
         ]
         switch warning.runModal() {

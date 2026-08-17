@@ -1648,12 +1648,12 @@ extension Conductor {
             // repeated download prompts if the download fails or isn't handled.
             let warning = iTermWarning()
             warning.title = String(format: NSLocalizedString("Download %@ or view in browser?", comment: "UI"), path.path.lastPathComponent)
-            warning.actionLabels = ["Download", "View", NSLocalizedString("Cancel", comment: "UI")]
+            warning.actionLabels = [NSLocalizedString("Download", comment: "UI"), NSLocalizedString("View", comment: "UI"), NSLocalizedString("Cancel", comment: "UI")]
             warning.identifier = "DownloadOrViewInBrowser_" + mimeType + " " + path.usernameHostnameString
             warning.warningType = .kiTermWarningTypePermanentlySilenceable
             warning.heading = NSLocalizedString("Download or View File?", comment: "UI")
             warning.window = window
-            warning.doNotRememberLabels = ["Download", NSLocalizedString("Cancel", comment: "UI")]
+            warning.doNotRememberLabels = [NSLocalizedString("Download", comment: "UI"), NSLocalizedString("Cancel", comment: "UI")]
             switch warning.runModal() {
             case .kiTermWarningSelection0:  // Download
                 download(path: path)

@@ -153,7 +153,7 @@ static NSString *const ProfilesSessionPreferencesViewControllerPhonyShortLivedSe
     PreferenceInfo *info;
     info = [self defineControl:_onEndAction
                            key:KEY_SESSION_END_ACTION
-                   displayName:@"Close or restart session on end"
+                   displayName:NSLocalizedString(@"Close or restart session on end", @"UI")
                           type:kPreferenceInfoTypePopup];
     info.customSettingChangedHandler = ^(id sender) {
         [weakSelf onEndSettingDidChange];
@@ -177,7 +177,7 @@ static NSString *const ProfilesSessionPreferencesViewControllerPhonyShortLivedSe
 
     [self defineControl:_undoTimeout
                     key:KEY_UNDO_TIMEOUT
-            displayName:@"Undo close session timeout"
+            displayName:NSLocalizedString(@"Undo close session timeout", @"UI")
                    type:kPreferenceInfoTypeIntegerTextField];
 
     info = [self defineControl:_autoLog
@@ -218,7 +218,7 @@ static NSString *const ProfilesSessionPreferencesViewControllerPhonyShortLivedSe
 
     [self defineControl:_loggingStyle
                     key:KEY_LOGGING_STYLE
-            displayName:@"Log plain text, igoring control sequences"
+            displayName:NSLocalizedString(@"Log plain text, igoring control sequences", @"UI")
                    type:kPreferenceInfoTypePopup];
 
     info = [self defineUnsearchableControl:_logDir
@@ -237,7 +237,7 @@ static NSString *const ProfilesSessionPreferencesViewControllerPhonyShortLivedSe
 
     info = [self defineControl:_sendCodeWhenIdle
                            key:KEY_SEND_CODE_WHEN_IDLE
-                   displayName:@"Send ASCII code when idle?"
+                   displayName:NSLocalizedString(@"Send ASCII code when idle?", @"UI")
                           type:kPreferenceInfoTypeCheckbox];
     info.customSettingChangedHandler = ^(id sender) {
         __strong __typeof(weakSelf) strongSelf = weakSelf;
@@ -281,13 +281,13 @@ static NSString *const ProfilesSessionPreferencesViewControllerPhonyShortLivedSe
 
     info = [self defineControl:_idleCode
                            key:KEY_IDLE_CODE
-                   displayName:@"Send character periodically while idle"
+                   displayName:NSLocalizedString(@"Send character periodically while idle", @"UI")
                           type:kPreferenceInfoTypeIntegerTextField];
     info.range = NSMakeRange(0, 256);
 
     [self defineControl:_idlePeriod
                     key:KEY_IDLE_PERIOD
-            displayName:@"Time between sending characters when idle"
+            displayName:NSLocalizedString(@"Time between sending characters when idle", @"UI")
                    type:kPreferenceInfoTypeDoubleTextField];
 
     [self updateRemoveJobButtonEnabled];
@@ -349,7 +349,7 @@ static NSString *const ProfilesSessionPreferencesViewControllerPhonyShortLivedSe
 
     _progressBarHeightInfo = [self defineControl:_progressBarHeight
                                               key:KEY_PROGRESS_BAR_HEIGHT
-                                      displayName:@"Progress bar height"
+                                      displayName:NSLocalizedString(@"Progress bar height", @"UI")
                                              type:kPreferenceInfoTypeIntegerTextField];
     _progressBarHeightInfo.shouldBeEnabled = ^BOOL {
         return [weakSelf boolForKey:KEY_ENABLE_PROGRESS_BARS];
@@ -368,7 +368,7 @@ static NSString *const ProfilesSessionPreferencesViewControllerPhonyShortLivedSe
     [self populateProgressBarColorSchemes];
     info = [self defineControl:_progressBarColorScheme
                            key:KEY_PROGRESS_BAR_COLOR_SCHEME
-                   displayName:@"Progress bar color scheme"
+                   displayName:NSLocalizedString(@"Progress bar color scheme", @"UI")
                           type:kPreferenceInfoTypeStringPopup];
     info.shouldBeEnabled = ^BOOL {
         return [weakSelf boolForKey:KEY_ENABLE_PROGRESS_BARS];
@@ -437,7 +437,7 @@ static NSString *const ProfilesSessionPreferencesViewControllerPhonyShortLivedSe
     };
     [self updateNonDefaultIndicatorVisibleForInfo:info];
     [self addViewToSearchIndex:_configureStatusBar
-                   displayName:@"Configure status bar"
+                   displayName:NSLocalizedString(@"Configure status bar", @"UI")
                        phrases:@[]
                            key:nil];
     [self commitControls];
@@ -457,7 +457,7 @@ static NSString *const ProfilesSessionPreferencesViewControllerPhonyShortLivedSe
         iTermProgressBarColorSchemeOrange
     ];
     NSDictionary<NSString *, NSString *> *titles = @{
-        iTermProgressBarColorSchemeDefault: @"Default",
+        iTermProgressBarColorSchemeDefault: NSLocalizedString(@"Default", @"UI"),
         iTermProgressBarColorSchemeRainbow: @"Rainbow",
         iTermProgressBarColorSchemeRed: @"Red",
         iTermProgressBarColorSchemeGreen: @"Green",

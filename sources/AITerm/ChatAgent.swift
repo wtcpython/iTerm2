@@ -1122,7 +1122,7 @@ class ChatAgent {
             guard iTermUserDefaults.autoProvideConsent == .unknown else { return }
             let selection = iTermWarning.show(
                 withTitle: NSLocalizedString("iTerm2 can include this session’s visible screen and terminal state with every message you send in AI chats where you’ve allowed it, so the assistant sees what you see. You can turn this off any time from a chat’s permission settings.", comment: "UI"),
-                actions: ["Turn On", "Not Now"],
+                actions: [NSLocalizedString("Turn On", comment: "UI"), NSLocalizedString("Not Now", comment: "UI")],
                 accessory: nil,
                 identifier: nil,
                 silenceable: .kiTermWarningTypePersistent,

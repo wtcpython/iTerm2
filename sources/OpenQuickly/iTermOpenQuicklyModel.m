@@ -183,27 +183,27 @@ static const double kProfileNameMultiplierForWindowItem = 0.08;
 // Returns a function PTYSession -> (Feature name, Feature value) that gives the value which most distinguishes sessions from one another.
 - (iTermTuple<NSString *, NSString *> *(^)(PTYSession *))detailFunctionForSessions:(NSArray<PTYSession *> *)sessions {
     iTermTriple<NSString *, NSString *, NSNumber *> *(^pwd)(PTYSession *) = ^id(PTYSession *session) {
-        return [iTermTriple tripleWithObject:NSLocalizedString(@"Directory", @"UI")
+        return [iTermTriple tripleWithObject:@"Directory"
                                    andObject:session.variablesScope.path
                                    object:@(session.variablesScope.path.length > 0)];
     };
     iTermTriple<NSString *, NSString *, NSNumber *> *(^command)(PTYSession *) = ^id(PTYSession *session) {
-        return [iTermTriple tripleWithObject:NSLocalizedString(@"Command", @"UI")
+        return [iTermTriple tripleWithObject:@"Command"
                                    andObject:session.commands.lastObject
                                    object:@(session.commands.lastObject.length > 0)];
     };
     iTermTriple<NSString *, NSString *, NSNumber *> *(^hostname)(PTYSession *) = ^id(PTYSession *session) {
-        return [iTermTriple tripleWithObject:NSLocalizedString(@"Host", @"UI")
+        return [iTermTriple tripleWithObject:@"Host"
                                    andObject:session.currentHost.usernameAndHostname
                                    object:@(session.currentHost != nil)];
     };
     iTermTriple<NSString *, NSString *, NSNumber *> *(^badge)(PTYSession *) = ^id(PTYSession *session) {
-        return [iTermTriple tripleWithObject:NSLocalizedString(@"Badge", @"UI")
+        return [iTermTriple tripleWithObject:@"Badge"
                                    andObject:session.badgeLabel
                                    object:@(session.badgeLabel.length > 0)];
     };
     iTermTriple<NSString *, NSString *, NSNumber *> *(^webSite)(PTYSession *) = ^id(PTYSession *session) {
-        return [iTermTriple tripleWithObject:NSLocalizedString(@"Web Site", @"UI")
+        return [iTermTriple tripleWithObject:@"Web Site"
                                    andObject:session.webSiteTitle ?: @""
                                       object:@(session.webSiteTitle.length > 0)];
     };
@@ -384,7 +384,7 @@ static const double kProfileNameMultiplierForWindowItem = 0.08;
         NSFontAttributeName: [NSFont boldSystemFontOfSize:[NSFont systemFontSize]]
     };
     NSMutableAttributedString *detail =
-        [[NSMutableAttributedString alloc] initWithString:menuItem.alternate ? @"Alternate menu item under " : @"Menu item under "
+        [[NSMutableAttributedString alloc] initWithString:menuItem.alternate ? NSLocalizedString(@"Alternate menu item under ", @"UI") : NSLocalizedString(@"Menu item under ", @"UI")
                                                attributes:regularAttributes];
     NSString *combinedPath = [path componentsJoinedByString:@" > "];
     NSAttributedString *breadcrumbs = [[NSAttributedString alloc] initWithString:combinedPath
@@ -411,7 +411,7 @@ static const double kProfileNameMultiplierForWindowItem = 0.08;
         return nil;
     }
     item.detail = [_delegate openQuicklyModelDisplayStringForFeatureNamed:nil
-                                                                    value:[NSString stringWithFormat:@"Named mark “%@”", namedMark.name]
+                                                                    value:[NSString stringWithFormat:NSLocalizedString(@"Named mark “%@”", @"UI"), namedMark.name]
                                                        highlightedIndexes:nil];
     item.title = attributedName;
     item.identifier = namedMark.guid;
@@ -432,25 +432,25 @@ static const double kProfileNameMultiplierForWindowItem = 0.08;
             if (multipleDisplays) {
                 NSString *name = [term.window.screen it_uniqueName];
                 if (name) {
-                    [features addObject:[NSString stringWithFormat:@"On %@", name]];
+                    [features addObject:[NSString stringWithFormat:NSLocalizedString(@"On %@", @"UI"), name]];
                 } else {
-                    [features addObject:@"Offscreen"];
+                    [features addObject:NSLocalizedString(@"Offscreen", @"UI")];
                 }
             }
             if (term.window.isMiniaturized) {
-                [features addObject:@"Miniaturized"];
+                [features addObject:NSLocalizedString(@"Miniaturized", @"UI")];
             }
             if (term.anyFullScreen) {
-                [features addObject:@"Full screen"];
+                [features addObject:NSLocalizedString(@"Full screen", @"UI")];
             }
             if (!term.window.isOnActiveSpace && !(term.window.collectionBehavior & NSWindowCollectionBehaviorCanJoinAllSpaces)) {
-                [features addObject:@"On other Space"];
+                [features addObject:NSLocalizedString(@"On other Space", @"UI")];
             }
             if (term.isHotKeyWindow) {
                 iTermProfileHotKey *profileHotkey = [[iTermHotKeyController sharedInstance] profileHotKeyForWindowController:term];
                 iTermShortcut *shortcut = profileHotkey.shortcuts.firstObject;
                 if (shortcut) {
-                    [features addObject:[NSString stringWithFormat:@"Hotkey %@", shortcut.stringValue]];
+                    [features addObject:[NSString stringWithFormat:NSLocalizedString(@"Hotkey %@", @"UI"), shortcut.stringValue]];
                 } else if (profileHotkey.hasModifierActivation) {
                     const iTermHotKeyModifierActivation mod = profileHotkey.modifierActivation;
                     NSEventModifierFlags flags = 0;
@@ -470,7 +470,7 @@ static const double kProfileNameMultiplierForWindowItem = 0.08;
                     }
                     if (flags) {
                         NSString *key = [NSString stringForModifiersWithMask:flags];
-                        [features addObject:[NSString stringWithFormat:@"Hotkey %@%@", key, key]];
+                        [features addObject:[NSString stringWithFormat:NSLocalizedString(@"Hotkey %@%@", @"UI"), key, key]];
                     }
                 }
             }
@@ -1301,7 +1301,7 @@ static const double kProfileNameMultiplierForWindowItem = 0.08;
     score += [self scoreUsingMatcher:matcher
                            documents:session.directories
                           multiplier:kDirectoryMultiplier
-                                name:NSLocalizedString(@"Directory", @"UI")
+                                name:@"Directory"
                             features:features
                                limit:maxScorePerFeature];
 

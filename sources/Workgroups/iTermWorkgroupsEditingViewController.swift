@@ -246,7 +246,7 @@ class iTermWorkgroupsEditingViewController: NSViewController {
 
     private func addWorkgroup() {
         pushUndo()
-        let wg = iTermWorkgroup.newEmpty(name: "Untitled Workgroup")
+        let wg = iTermWorkgroup.newEmpty(name: NSLocalizedString("Untitled Workgroup", comment: "UI"))
         iTermWorkgroupModel.instance.add(wg)
         if let idx = iTermWorkgroupModel.instance.workgroups.firstIndex(where: {
             $0.uniqueIdentifier == wg.uniqueIdentifier

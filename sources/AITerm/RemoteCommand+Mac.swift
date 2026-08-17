@@ -86,7 +86,7 @@ extension RemoteCommand {
         defaults.set(false, forKey: kPreferenceKeyAISafetyCheckProviderSwitchPending)
         let selection = iTermWarning.show(
             withTitle: NSLocalizedString("Until now, iTerm2 checked the safety of AI-suggested commands on your Mac using Apple Intelligence, at no cost. It can now use your configured AI model instead, which is more accurate but sends each checked command to your AI provider and may incur charges.\n\nSwitch to your configured model? If you decline, iTerm2 keeps using Apple Intelligence.", comment: "UI"),
-            actions: ["Switch to My Model", "Keep Apple Intelligence"],
+            actions: [NSLocalizedString("Switch to My Model", comment: "UI"), NSLocalizedString("Keep Apple Intelligence", comment: "UI")],
             accessory: nil,
             identifier: nil,
             silenceable: .kiTermWarningTypePersistent,

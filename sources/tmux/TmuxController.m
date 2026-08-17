@@ -639,9 +639,9 @@ static NSDictionary *iTermTmuxControllerDefaultFontOverridesFromProfile(Profile 
     }
     [[TmuxDashboardController sharedInstance] didAttachWithHiddenWindows:haveHidden tooManyWindows:tooMany];
     if (tooMany) {
-        [[iTermNotificationController sharedInstance] notify:@"Too many tmux windows!" withDescription:@"Use the tmux dashboard to select which to open."];
+        [[iTermNotificationController sharedInstance] notify:NSLocalizedString(@"Too many tmux windows!", @"UI") withDescription:NSLocalizedString(@"Use the tmux dashboard to select which to open.", @"UI")];
     } else if (haveHidden) {
-        [[iTermNotificationController sharedInstance] notify:@"Some tmux windows were hidden." withDescription:@"Use the tmux dashboard to select which to open."];
+        [[iTermNotificationController sharedInstance] notify:NSLocalizedString(@"Some tmux windows were hidden.", @"UI") withDescription:NSLocalizedString(@"Use the tmux dashboard to select which to open.", @"UI")];
     }
     for (NSArray *record in windowsToOpen) {
         DLog(@"Open window %@", record);
@@ -1538,8 +1538,8 @@ static NSDictionary *iTermTmuxControllerDefaultFontOverridesFromProfile(Profile 
 
 - (void)checkForUTF8Response:(NSString *)response {
     if ([response containsString:@"_"]) {
-        [gateway_ abortWithErrorMessage:@"tmux is not in UTF-8 mode. Please pass the -u command line argument to tmux or change your LANG environment variable to end with “.UTF-8”."
-                                  title:@"UTF-8 Mode Not Detected"];
+        [gateway_ abortWithErrorMessage:NSLocalizedString(@"tmux is not in UTF-8 mode. Please pass the -u command line argument to tmux or change your LANG environment variable to end with “.UTF-8”.", @"UI")
+                                  title:NSLocalizedString(@"UTF-8 Mode Not Detected", @"UI")];
     }
 }
 
@@ -1857,12 +1857,10 @@ static NSDictionary *iTermTmuxControllerDefaultFontOverridesFromProfile(Profile 
 - (void)optionValidationFailedForOption:(NSString *)option
 {
     NSString *message = [NSString stringWithFormat:
-                            @"The \"%@\" option is turned on in tmux. "
-                             "It is not compatible with the iTerm2-tmux integration. "
-                             "Please disable it and try again.",
+                            NSLocalizedString(@"The \"%@\" option is turned on in tmux. It is not compatible with the iTerm2-tmux integration. Please disable it and try again.", @"UI"),
                              option];
     [gateway_ abortWithErrorMessage:message
-                              title:@"Unsupported tmux option"];
+                              title:NSLocalizedString(@"Unsupported tmux option", @"UI")];
 }
 
 - (NSArray *)unsupportedGlobalOptions
@@ -3521,8 +3519,8 @@ static NSDictionary *iTermTmuxControllerDefaultFontOverridesFromProfile(Profile 
     [pendingWindowOpens_ removeObject:windowIndex];
     if (windowOpener.errorCount != 0) {
         [affinities_ removeValue:[@(windowOpener.windowIndex) stringValue]];
-        [[iTermNotificationController sharedInstance] notify:@"Error opening tmux tab"
-                                             withDescription:@"A tmux pane terminated immediately after creation"];
+        [[iTermNotificationController sharedInstance] notify:NSLocalizedString(@"Error opening tmux tab", @"UI")
+                                             withDescription:NSLocalizedString(@"A tmux pane terminated immediately after creation", @"UI")];
         return;
     }
     [[NSNotificationCenter defaultCenter] postNotificationName:kTmuxControllerWindowDidOpen

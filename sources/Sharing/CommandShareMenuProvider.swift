@@ -36,7 +36,7 @@ class CommandShareMenuProvider: NSObject {
         let command = mark.fullCommand ?? ""
         if !command.isEmpty {
             let snippetTitle = mark.firstLineOfCommand.flatMap { $0.isEmpty ? nil : $0 } ?? command
-            menu.addItem(title: "Add Command as Snippet") { [weak window] in
+            menu.addItem(title: NSLocalizedString("Add Command as Snippet", comment: "UI")) { [weak window] in
                 CommandShareMenuProvider.addCommandAsSnippet(title: snippetTitle,
                                                              value: command,
                                                              window: window,
@@ -49,7 +49,7 @@ class CommandShareMenuProvider: NSObject {
         let mark = self.mark
         let promisedContent = self.promisedContent
         let defaultBackgroundColor = self.defaultBackgroundColor
-        menu.addItem(title: "Save Command & Output…") { [weak window] in
+        menu.addItem(title: NSLocalizedString("Save Command & Output…", comment: "UI")) { [weak window] in
             CommandShareMenuProvider.saveCommandAndOutput(promisedContent: promisedContent,
                                                           defaultBackgroundColor: defaultBackgroundColor,
                                                           mark: mark,
@@ -58,7 +58,7 @@ class CommandShareMenuProvider: NSObject {
 
         menu.addSeparator()
 
-        menu.addItem(title: "Share Command Output…") { [weak view] in
+        menu.addItem(title: NSLocalizedString("Share Command Output…", comment: "UI")) { [weak view] in
             if let view {
                 CommandShareMenuProvider.shareCommandOutput(locationInWindow: locationInWindow,
                                                             promisedContent: promisedContent,
@@ -69,12 +69,12 @@ class CommandShareMenuProvider: NSObject {
         menu.addSeparator()
 
         if let commandURL {
-            menu.addItem(title: "Copy Command URL to Clipboard") { [weak window] in
+            menu.addItem(title: NSLocalizedString("Copy Command URL to Clipboard", comment: "UI")) { [weak window] in
                 CommandShareMenuProvider.copyCommandURL(url: commandURL,
                                                         window: window,
                                                         locationInWindow: locationInWindow)
             }
-            menu.addItem(title: "Share Command URL…") { [weak view] in
+            menu.addItem(title: NSLocalizedString("Share Command URL…", comment: "UI")) { [weak view] in
                 if let view {
                     CommandShareMenuProvider.shareCommandURL(locationInWindow: locationInWindow,
                                                              url: commandURL,

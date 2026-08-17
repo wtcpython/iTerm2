@@ -244,10 +244,10 @@ const CGFloat iTermAnnouncementViewHeightPadding = 29;
         NSImage *image;
         switch (_style) {
             case kiTermAnnouncementViewStyleWarning:
-                image = [NSImage imageWithSystemSymbolName:SFSymbolGetString(SFSymbolExclamationmarkTriangle) accessibilityDescription:@"Warning icon"];
+                image = [NSImage imageWithSystemSymbolName:SFSymbolGetString(SFSymbolExclamationmarkTriangle) accessibilityDescription:NSLocalizedString(@"Warning icon", @"UI")];
                 break;
             case kiTermAnnouncementViewStyleQuestion:
-                image = [NSImage imageWithSystemSymbolName:SFSymbolGetString(SFSymbolQuestionmarkCircle) accessibilityDescription:@"Question icon"];
+                image = [NSImage imageWithSystemSymbolName:SFSymbolGetString(SFSymbolQuestionmarkCircle) accessibilityDescription:NSLocalizedString(@"Question icon", @"UI")];
                 break;
         }
         NSImageSymbolConfiguration *config = [NSImageSymbolConfiguration configurationWithPointSize:22.0 weight:NSFontWeightRegular];

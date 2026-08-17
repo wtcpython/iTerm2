@@ -139,10 +139,10 @@ static NSString *const kSubstitution = @"Substitution";
         units = @"ms";
         multiplier = 0.001;
     } else if (duration < 60) {
-        units = @"sec";
+        units = NSLocalizedString(@"sec", @"UI");
         multiplier = 1;
     } else {
-        units = @"min";
+        units = NSLocalizedString(@"min", @"UI");
         multiplier = 60;
     }
 

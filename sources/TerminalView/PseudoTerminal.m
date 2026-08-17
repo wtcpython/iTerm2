@@ -2143,7 +2143,7 @@ ITERM_WEAKLY_REFERENCEABLE
         const BOOL anyIsLocked = [sessions anyWithBlock:^BOOL(PTYSession *anObject) {
             return anObject.locked;
         }];
-        NSString *const pinnedPrefix = aTab.isPinned ? @"pinned " : @"";
+        NSString *const pinnedPrefix = aTab.isPinned ? NSLocalizedString(@"pinned ", @"UI") : @"";
         // When numClosing is 0 (e.g., closing a pinned tab whose sessions all
         // exited) fall back to the tab's pane count to pick singular vs plural
         // wording.
@@ -2512,8 +2512,8 @@ ITERM_WEAKLY_REFERENCEABLE
         okToClose = YES;
     } else {
       okToClose = [self confirmCloseForSessions:[NSArray arrayWithObject:aSession]
-                                     identifier:aSession.locked ? @"This locked session" : @"This session"
-                                    genericName:[NSString stringWithFormat:@"session \"%@\"",
+                                     identifier:aSession.locked ? NSLocalizedString(@"This locked session", @"UI") : NSLocalizedString(@"This session", @"UI")
+                                    genericName:[NSString stringWithFormat:NSLocalizedString(@"session \"%@\"", @"UI"),
                                                     [[aSession name] removingHTMLFromTabTitleIfNeeded]]
                               additionalMessage:[iTermWorkgroupInstance closeCascadeWarningForSessions:@[aSession]]];
     }
@@ -8465,7 +8465,7 @@ hidingToolbeltShouldResizeWindow:(BOOL)hidingToolbeltShouldResizeWindow
     if (!theTab) {
         return;
     }
-    NSString *defaultName = [tabViewItem label].length > 0 ? [tabViewItem label] : @"Group";
+    NSString *defaultName = [tabViewItem label].length > 0 ? [tabViewItem label] : NSLocalizedString(@"Group", @"UI");
     NSString *name = [self promptForTabGroupName:defaultName title:NSLocalizedString(@"New Tab Group", @"Tab group name prompt")];
     if (!name) {
         return;  // user cancelled
@@ -8910,7 +8910,7 @@ hidingToolbeltShouldResizeWindow:(BOOL)hidingToolbeltShouldResizeWindow
     if (members.count == 0) {
         return;
     }
-    NSString *name = [self promptForTabGroupName:(members.firstObject.tabGroupName ?: @"") title:@"Rename Tab Group"];
+    NSString *name = [self promptForTabGroupName:(members.firstObject.tabGroupName ?: @"") title:NSLocalizedString(@"Rename Tab Group", @"UI")];
     if (!name) {
         return;  // cancelled
     }
@@ -8971,7 +8971,7 @@ hidingToolbeltShouldResizeWindow:(BOOL)hidingToolbeltShouldResizeWindow
         return;
     }
     NSString *newID = [[NSUUID UUID] UUIDString];
-    NSString *newName = [(members.firstObject.tabGroupName ?: @"Group") stringByAppendingString:@" copy"];
+    NSString *newName = [(members.firstObject.tabGroupName ?: NSLocalizedString(@"Group", @"UI")) stringByAppendingString:@" copy"];
     NSColor *newColor = members.firstObject.tabGroupColor;
     // Duplicate each member (new sessions), then group the freshly created tabs.
     NSMutableSet<PTYTab *> *before = [NSMutableSet setWithArray:[self tabs]];
@@ -12828,15 +12828,16 @@ typedef NS_ENUM(NSUInteger, iTermBroadcastCommand) {
     if (broadcast.count < 2) {
         return @[ self.currentSession ];
     }
-    NSString *action;
+    NSString *actionKey;
     switch (command) {
     case iTermBroadcastCommandClear:
-        action = NSLocalizedString(@"Clear", @"UI");
+        actionKey = @"Clear";
         break;
     case iTermBroadcastCommandReset:
-            action = NSLocalizedString(@"Reset", @"UI");
+            actionKey = @"Reset";
         break;
     }
+    NSString *action = NSLocalizedString(actionKey, @"UI");
     NSString *title = [NSString stringWithFormat:NSLocalizedString(@"%@ all sessions to which input is broadcast? This will affect %@ sessions.", @"UI"),
                        action,
                        @(broadcast.count)];
@@ -13447,8 +13448,8 @@ typedef NS_ENUM(NSUInteger, iTermBroadcastCommand) {
         return session.locked;
     }];
     return ([self confirmCloseForSessions:[self allSessions]
-                               identifier:hasLockedSession ? @"This window (with locked sessions)" : @"This window"
-                              genericName:[NSString stringWithFormat:@"Window #%d", number_+1]]);
+                               identifier:hasLockedSession ? NSLocalizedString(@"This window (with locked sessions)", @"UI") : NSLocalizedString(@"This window", @"UI")
+                              genericName:[NSString stringWithFormat:NSLocalizedString(@"Window #%d", @"UI"), number_+1]]);
 }
 
 - (PSMTabBarControl*)tabBarControl
@@ -14426,7 +14427,7 @@ typedef NS_ENUM(NSUInteger, iTermBroadcastCommand) {
          }
          NSArray *actions;
          if (okSessions.count > 0) {
-             actions = @[ NSLocalizedString(@"Cancel", @"UI"), @"Enter Password in Sessions at Prompt" ];
+             actions = @[ NSLocalizedString(@"Cancel", @"UI"), NSLocalizedString(@"Enter Password in Sessions at Prompt", @"UI") ];
          } else {
              actions = @[ NSLocalizedString(@"OK", @"UI") ];
          }

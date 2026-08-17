@@ -412,7 +412,7 @@ static ContextMenuActionDeclaration ContextMenuActionDeclarationForTag(ContextMe
 
     NSString *title = action[kTitleKey];
     if (title.length == 0) {
-        title = @"Untitled Action";
+        title = NSLocalizedString(@"Untitled Action", @"UI");
     }
     NSAttributedString *nameAttributedString = [[NSAttributedString alloc] initWithString:title
                                                                                attributes:self.nameAttributes];

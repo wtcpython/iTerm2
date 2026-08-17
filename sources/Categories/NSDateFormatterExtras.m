@@ -30,50 +30,50 @@
     theTime *= -1;
     if (theTime < 60) {
         if (lowerCase) {
-            return @"moments ago";
+            return NSLocalizedString(@"moments ago", @"UI");
         } else {
-            return @"Moments ago";
+            return NSLocalizedString(@"Moments ago", @"UI");
         }
     } else if (theTime < 3600) {
         int diff = round(theTime / 60);
         if (diff == 1) {
             return NSLocalizedString(@"1 minute ago", @"UI");
         }
-        return [NSString stringWithFormat:@"%d minutes ago", diff];
+        return [NSString stringWithFormat:NSLocalizedString(@"%d minutes ago", @"UI"), diff];
     } else if (theTime < 86400) {
         int diff = round(theTime / 60 / 60);
         if (diff == 1) {
             return NSLocalizedString(@"1 hour ago", @"UI");
         }
-        return [NSString stringWithFormat:@"%d hours ago", diff];
+        return [NSString stringWithFormat:NSLocalizedString(@"%d hours ago", @"UI"), diff];
     } else if (theTime < 604800) {
         int diff = round(theTime / 60 / 60 / 24);
         if (diff == 1) {
             if (lowerCase) {
-                return @"yesterday";
+                return NSLocalizedString(@"yesterday", @"UI");
             } else {
-                return @"Yesterday";
+                return NSLocalizedString(@"Yesterday", @"UI");
             }
         }
         if (diff == 7) {
             if (lowerCase) {
-                return @"one week ago";
+                return NSLocalizedString(@"one week ago", @"UI");
             } else {
-                return @"One week ago";
+                return NSLocalizedString(@"One week ago", @"UI");
             }
         }
-        return[NSString stringWithFormat:@"%d days ago", diff];
+        return[NSString stringWithFormat:NSLocalizedString(@"%d days ago", @"UI"), diff];
     } else {
         int diff = round(theTime / 60 / 60 / 24 / 7);
         if (diff == 1) {
             if (lowerCase) {
-                return @"last week";
+                return NSLocalizedString(@"last week", @"UI");
             } else {
-                return @"Last week";
+                return NSLocalizedString(@"Last week", @"UI");
             }
 
         }
-        return [NSString stringWithFormat:@"%d weeks ago", diff];
+        return [NSString stringWithFormat:NSLocalizedString(@"%d weeks ago", @"UI"), diff];
     }
 }
 
@@ -87,19 +87,19 @@
 
 + (NSString *)compactDateDifferenceStringFromTimeDelta:(NSTimeInterval)theTime {
     if (theTime < 60) {
-        return @"< 1 min";
+        return NSLocalizedString(@"< 1 min", @"UI");
     } else if (theTime < 3600) {
         int diff = round(theTime / 60);
         if (diff == 1) {
             return NSLocalizedString(@"1 min", @"UI");
         }
-        return [NSString stringWithFormat:@"%d min", diff];
+        return [NSString stringWithFormat:NSLocalizedString(@"%d min", @"UI"), diff];
     } else if (theTime < 86400) {
         int diff = round(theTime / 60 / 60);
         if (diff == 1) {
             return NSLocalizedString(@"1 hour", @"UI");
         }
-        return [NSString stringWithFormat:@"%d hrs", diff];
+        return [NSString stringWithFormat:NSLocalizedString(@"%d hrs", @"UI"), diff];
     } else if (theTime < 604800) {
         int diff = round(theTime / 60 / 60 / 24);
         if (diff == 1) {
@@ -108,14 +108,14 @@
         if (diff == 7) {
             return NSLocalizedString(@"1 week", @"UI");
         }
-        return[NSString stringWithFormat:@"%d days", diff];
+        return[NSString stringWithFormat:NSLocalizedString(@"%d days", @"UI"), diff];
     } else {
         int diff = round(theTime / 60 / 60 / 24 / 7);
         if (diff == 1) {
             return NSLocalizedString(@"1 week", @"UI");
 
         }
-        return [NSString stringWithFormat:@"%d wks", diff];
+        return [NSString stringWithFormat:NSLocalizedString(@"%d wks", @"UI"), diff];
     }
 }
 
@@ -124,7 +124,7 @@
     const NSTimeInterval interval = fabs(seconds);
 
     if (interval == 0) {
-        return @"Baseline";
+        return NSLocalizedString(@"Baseline", @"UI");
     }
     NSString *sign = negative ? @"-" : @"+";
 

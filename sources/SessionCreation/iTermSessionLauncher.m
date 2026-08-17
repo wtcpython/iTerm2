@@ -584,7 +584,7 @@
     if (username) {
         NSString *part = [self validatedAndShellEscapedUsername:username];
         if (!part) {
-            NSString *message = [NSString stringWithFormat:@"The SSH user name “%@” contained a disallowed character. The set of allowed characters is limited for security reasons. You can modify it in Settings > Advanced > Valid characters in SSH user names.",
+            NSString *message = [NSString stringWithFormat:NSLocalizedString(@"The SSH user name “%@” contained a disallowed character. The set of allowed characters is limited for security reasons. You can modify it in Settings > Advanced > Valid characters in SSH user names.", @"UI"),
                                  username];
             [iTermWarning showWarningWithTitle:message
                                        actions:@[ NSLocalizedString(@"OK", @"UI") ]

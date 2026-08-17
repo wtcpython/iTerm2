@@ -116,7 +116,7 @@ typedef NS_ENUM(NSUInteger, iTermWindowUnitsTag) {
     PreferenceInfo *info;
     info = [self defineControl:_backgroundImageTextField
                            key:KEY_BACKGROUND_IMAGE_LOCATION
-                   displayName:@"Path to background image"
+                   displayName:NSLocalizedString(@"Path to background image", @"UI")
                           type:kPreferenceInfoTypeStringTextField];
     info.observer = ^{
         [weakSelf backgroundImageTextFieldDidChange];
@@ -128,7 +128,7 @@ typedef NS_ENUM(NSUInteger, iTermWindowUnitsTag) {
     _backgroundImageFolderTextField.delegate = _backgroundImageTextFieldDelegate;
     info = [self defineControl:_backgroundImageSourceMode
                            key:KEY_BACKGROUND_IMAGE_SOURCE_MODE
-                   displayName:@"Background image source mode"
+                   displayName:NSLocalizedString(@"Background image source mode", @"UI")
                           type:kPreferenceInfoTypePopup];
     info.observer = ^{
         [weakSelf synchronizeBackgroundImageEnabledState];
@@ -137,14 +137,14 @@ typedef NS_ENUM(NSUInteger, iTermWindowUnitsTag) {
     };
     info = [self defineControl:_backgroundImageFolderTextField
                            key:KEY_BACKGROUND_IMAGE_FOLDER_LOCATION
-                   displayName:@"Path to background image folder"
+                   displayName:NSLocalizedString(@"Path to background image folder", @"UI")
                           type:kPreferenceInfoTypeStringTextField];
     info.observer = ^{
         [weakSelf backgroundImageFolderTextFieldDidChange];
     };
     info = [self defineControl:_backgroundImageFolderIntervalField
                            key:KEY_BACKGROUND_IMAGE_FOLDER_INTERVAL
-                   displayName:@"Background image folder interval"
+                   displayName:NSLocalizedString(@"Background image folder interval", @"UI")
                           type:kPreferenceInfoTypeIntegerTextField];
     info.observer = ^{
         [weakSelf sanitizeBackgroundImageFolderInterval];
@@ -188,7 +188,7 @@ typedef NS_ENUM(NSUInteger, iTermWindowUnitsTag) {
     _blurRadius.maxValue = iTermMaxBlurRadius();
     info = [self defineControl:_blurRadius
                            key:KEY_BLUR_RADIUS
-                   displayName:@"Blur radius"
+                   displayName:NSLocalizedString(@"Blur radius", @"UI")
                           type:kPreferenceInfoTypeSlider];
     info.observer = ^{
         [weakSelf updateBlurRadiusWarning];
@@ -197,7 +197,7 @@ typedef NS_ENUM(NSUInteger, iTermWindowUnitsTag) {
 
     info = [self defineControl:_backgroundImageMode
                            key:KEY_BACKGROUND_IMAGE_MODE
-                   displayName:@"Background image scaling mode"
+                   displayName:NSLocalizedString(@"Background image scaling mode", @"UI")
                           type:kPreferenceInfoTypePopup];
     info.observer = ^() {
         __strong __typeof(weakSelf) strongSelf = weakSelf;
@@ -230,44 +230,44 @@ typedef NS_ENUM(NSUInteger, iTermWindowUnitsTag) {
 
     [self defineControl:_blendAmount
                     key:KEY_BLEND
-            displayName:@"Background image blending"
+            displayName:NSLocalizedString(@"Background image blending", @"UI")
                    type:kPreferenceInfoTypeSlider];
     [self updateBackgroundImageUI];
     [self loadBackgroundImageForCurrentSource];
 
     info = [self defineControl:_columnsField
                            key:KEY_COLUMNS
-                   displayName:@"Window width in columns"
+                   displayName:NSLocalizedString(@"Window width in columns", @"UI")
                           type:kPreferenceInfoTypeIntegerTextField];
     info.range = NSMakeRange(1, iTermMaxInitialSessionSize);
 
     info = [self defineControl:_rowsField
                            key:KEY_ROWS
-                   displayName:@"Window height in rows"
+                   displayName:NSLocalizedString(@"Window height in rows", @"UI")
                           type:kPreferenceInfoTypeIntegerTextField];
     info.range = NSMakeRange(1, iTermMaxInitialSessionSize);
 
     info = [self defineControl:_widthField
                            key:KEY_WIDTH
-                   displayName:@"Window width in pixels"
+                   displayName:NSLocalizedString(@"Window width in pixels", @"UI")
                           type:kPreferenceInfoTypeIntegerTextField];
     info.range = NSMakeRange(1, iTermMaxInitialSessionSize);
 
     info = [self defineControl:_percentageWidthField
                            key:KEY_WIDTH_PERCENTAGE
-                   displayName:@"Window width in percentage of screen width"
+                   displayName:NSLocalizedString(@"Window width in percentage of screen width", @"UI")
                           type:kPreferenceInfoTypeIntegerTextField];
     info.range = NSMakeRange(1, 100);
 
     info = [self defineControl:_percentageHeightField
                            key:KEY_HEIGHT_PERCENTAGE
-                   displayName:@"Window height in percentage of screen height"
+                   displayName:NSLocalizedString(@"Window height in percentage of screen height", @"UI")
                           type:kPreferenceInfoTypeIntegerTextField];
     info.range = NSMakeRange(1, 100);
 
     info = [self defineControl:_heightField
                            key:KEY_HEIGHT
-                   displayName:@"Window height in pixels"
+                   displayName:NSLocalizedString(@"Window height in pixels", @"UI")
                           type:kPreferenceInfoTypeIntegerTextField];
     info.range = NSMakeRange(1, iTermMaxInitialSessionSize);
 
@@ -284,7 +284,7 @@ typedef NS_ENUM(NSUInteger, iTermWindowUnitsTag) {
 
     info = [self defineControl:_windowStyle
                            key:KEY_WINDOW_TYPE
-                   displayName:@"Window style for new windows"
+                   displayName:NSLocalizedString(@"Window style for new windows", @"UI")
                           type:kPreferenceInfoTypePopup];
     info.onUpdate = ^BOOL{
         // Reading KEY_WINDOW_TYPE can give a value for which the popup has no tag because when
@@ -298,14 +298,14 @@ typedef NS_ENUM(NSUInteger, iTermWindowUnitsTag) {
     };
     [self defineControl:_screen
                     key:KEY_SCREEN
-            displayName:@"Initial screen for new windows"
+            displayName:NSLocalizedString(@"Initial screen for new windows", @"UI")
                    type:kPreferenceInfoTypePopup
          settingChanged:^(id sender) { [self screenDidChange]; }
                  update:^BOOL{ [weakSelf updateScreen]; return YES; }];
 
     info = [self defineControl:_space
                            key:KEY_SPACE
-                   displayName:@"Initial desktop/space for new windows"
+                   displayName:NSLocalizedString(@"Initial desktop/space for new windows", @"UI")
                           type:kPreferenceInfoTypePopup];
     info.onChange = ^() {
         __strong __typeof(weakSelf) strongSelf = weakSelf;
@@ -336,7 +336,7 @@ typedef NS_ENUM(NSUInteger, iTermWindowUnitsTag) {
     {
         info = [self defineControl:_useCustomWindowTitle
                                key:KEY_USE_CUSTOM_WINDOW_TITLE
-                       displayName:@"Enable custom window title for new windows"
+                       displayName:NSLocalizedString(@"Enable custom window title for new windows", @"UI")
                               type:kPreferenceInfoTypeCheckbox];
         info.onChange = ^{
             [weakSelf updateCustomWindowTitleEnabled];
@@ -350,7 +350,7 @@ typedef NS_ENUM(NSUInteger, iTermWindowUnitsTag) {
         _customWindowTitle.delegate = _customWindowTitleDelegate;
         [self defineControl:_customWindowTitle
                         key:KEY_CUSTOM_WINDOW_TITLE
-                displayName:@"Custom window title for new windows"
+                displayName:NSLocalizedString(@"Custom window title for new windows", @"UI")
                        type:kPreferenceInfoTypeStringTextField];
         [self updateCustomWindowTitleEnabled];
     }
@@ -359,7 +359,7 @@ typedef NS_ENUM(NSUInteger, iTermWindowUnitsTag) {
     {
         info = [self defineControl:_useCustomTabTitle
                                key:KEY_USE_CUSTOM_TAB_TITLE
-                       displayName:@"Enable custom tab title for new tabs"
+                       displayName:NSLocalizedString(@"Enable custom tab title for new tabs", @"UI")
                               type:kPreferenceInfoTypeCheckbox];
         info.onChange = ^{
             [weakSelf updateCustomTabTitleEnabled];
@@ -373,17 +373,17 @@ typedef NS_ENUM(NSUInteger, iTermWindowUnitsTag) {
         _customTabTitle.delegate = _customTabTitleDelegate;
         [self defineControl:_customTabTitle
                         key:KEY_CUSTOM_TAB_TITLE
-                displayName:@"Custom tab title for new tabs"
+                displayName:NSLocalizedString(@"Custom tab title for new tabs", @"UI")
                        type:kPreferenceInfoTypeStringTextField];
         [self updateCustomTabTitleEnabled];
     }
 
     [self addViewToSearchIndex:_useBackgroundImage
-                   displayName:@"Background image enabled"
+                   displayName:NSLocalizedString(@"Background image enabled", @"UI")
                        phrases:@[]
                            key:nil];
     [self addViewToSearchIndex:_backgroundImageSourceMode
-                   displayName:@"Background image source mode"
+                   displayName:NSLocalizedString(@"Background image source mode", @"UI")
                        phrases:@[]
                            key:nil];
 }

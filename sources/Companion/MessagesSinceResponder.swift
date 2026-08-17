@@ -98,7 +98,7 @@ enum MessagesSinceResponder {
         case .remoteCommandRequest(.classic(let command), safe: _):
             return command.permissionDescription
         case .selectSessionRequest:
-            return "The agent needs you to choose a session."
+            return NSLocalizedString("The agent needs you to choose a session.", comment: "UI")
         default:
             return message.content.snippetText(maxLength: maxLength) ?? ""
         }

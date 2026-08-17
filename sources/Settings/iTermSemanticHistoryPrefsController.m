@@ -397,7 +397,7 @@ enum {
     NSDictionary *attributes = @{ NSFontAttributeName: caveat_.font ?: [NSFont systemFontOfSize:[NSFont smallSystemFontSize]] };
     NSAttributedString *legacy = [NSAttributedString attributedStringWithString:text
                                                                      attributes:attributes];
-    NSAttributedString *learnMore = [NSAttributedString attributedStringWithLinkToURL:@"iterm2-private://semantic-history-learn-more/" string:@"Learn more"];
+    NSAttributedString *learnMore = [NSAttributedString attributedStringWithLinkToURL:@"iterm2-private://semantic-history-learn-more/" string:NSLocalizedString(@"Learn more", @"UI")];
     NSArray<NSAttributedString *> *parts = @[ legacy, learnMore ];
     return [NSAttributedString attributedStringWithAttributedStrings:parts];
 }

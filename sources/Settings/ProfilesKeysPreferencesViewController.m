@@ -199,12 +199,12 @@ static NSString *const kDeleteKeyString = @"0x7f-0x0";
     [self updateNonDefaultIndicatorVisibleForInfo:info];
 
     [self addViewToSearchIndex:_configureHotKey
-                   displayName:@"Configure hotkey window"
+                   displayName:NSLocalizedString(@"Configure hotkey window", @"UI")
                        phrases:@[]
                            key:nil];
 
     [self addViewToSearchIndex:_keyMappingViewController.view
-                   displayName:@"Profile key bindings"
+                   displayName:NSLocalizedString(@"Profile key bindings", @"UI")
                        phrases:@[ @"mapping", @"shortcuts", @"touch bar", @"preset", @"xterm", @"natural", @"terminal.app compatibility", @"numeric keypad" ]
                            key:nil];
 
@@ -348,7 +348,7 @@ static NSString *const kDeleteKeyString = @"0x7f-0x0";
         NSString *formattedAction = action.displayName;
         return [NSString stringWithFormat:@"%@\t%@", formattedCombo, formattedAction];
     }];
-    warning.title = [NSString stringWithFormat  :@"This profile has some key bindings from a preset that conflict with CSI u. Remove them?"];
+    warning.title = [NSString stringWithFormat  :NSLocalizedString(@"This profile has some key bindings from a preset that conflict with CSI u. Remove them?", @"UI")];
     NSString *message = [descriptions componentsJoinedByString:@"\n"];
 
     iTermScrollingDisclosableView *accessory = [[iTermScrollingDisclosableView alloc] initWithFrame:NSZeroRect
@@ -598,7 +598,7 @@ static NSString *const kDeleteKeyString = @"0x7f-0x0";
     Profile *profile = [self.delegate profilePreferencesCurrentProfile];
     NSSet<iTermKeystroke *> *keystrokesInProfile = [iTermKeyMappings keystrokesInKeyMappingsInProfile:profile];
     if (![keystrokesInProfile isSubsetOfSet:keystrokesThatWillChange]) {
-        NSNumber *n = [viewController removeBeforeLoading:@"importing mappings"];
+        NSNumber *n = [viewController removeBeforeLoading:NSLocalizedString(@"importing mappings", @"UI")];
         if (!n) {
             return NO;
         }
@@ -689,7 +689,7 @@ static NSString *const kDeleteKeyString = @"0x7f-0x0";
     NSSet<iTermKeystroke *> *keystrokesInProfile = [iTermKeyMappings keystrokesInKeyMappingsInProfile:profile];
     BOOL replaceAll = NO;
     if (![keystrokesInProfile isSubsetOfSet:keystrokesThatWillChange]) {
-        NSNumber *n = [viewController removeBeforeLoading:@"loading preset"];
+        NSNumber *n = [viewController removeBeforeLoading:NSLocalizedString(@"loading preset", @"UI")];
         if (!n) {
             return;
         }

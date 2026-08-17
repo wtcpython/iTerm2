@@ -127,9 +127,9 @@ class SSHFilePanelSidebar: NSView {
         var name: String {
             switch identifier {
             case .favorites:
-                return "Favorites"
+                return NSLocalizedString("Favorites", comment: "UI")
             case .connectedHosts:
-                return "Connected Hosts"
+                return NSLocalizedString("Connected Hosts", comment: "UI")
             }
         }
 
@@ -729,14 +729,14 @@ extension SSHFilePanelSidebar: NSOutlineViewDelegate {
                 } else {
                     image = NSImage.it_image(
                         forSymbolName: SFSymbol.folder.rawValue,
-                        accessibilityDescription: "Folder",
+                        accessibilityDescription: NSLocalizedString("Folder", comment: "UI"),
                         fallbackImageName: "folder",
                         for: SSHFilePanelSidebar.self)
                 }
             } else {
                 image = NSImage.it_image(
                     forSymbolName: SFSymbol.folder.rawValue,
-                    accessibilityDescription: "Folder",
+                    accessibilityDescription: NSLocalizedString("Folder", comment: "UI"),
                     fallbackImageName: "folder",
                     for: SSHFilePanel.self)
             }
@@ -749,7 +749,7 @@ extension SSHFilePanelSidebar: NSOutlineViewDelegate {
             } else {
                 image = NSImage.it_image(
                     forSymbolName: SFSymbol.serverRack.rawValue,
-                    accessibilityDescription: "Server",
+                    accessibilityDescription: NSLocalizedString("Server", comment: "UI"),
                     fallbackImageName: "rack",
                     for: SSHFilePanel.self
                 )

@@ -142,32 +142,32 @@ class SpecialExceptionEntryEditorWindowController: NSWindowController, NSTextFie
         preview.textColor = .textColor
         switch checkedRange {
         case .ascii:
-            preview.string = "Start must be at least U+80. ASCII doesn’t support special exceptions."
+            preview.string = NSLocalizedString("Start must be at least U+80. ASCII doesn’t support special exceptions.", comment: "UI")
         case .incomplete:
             preview.string = ""
         case .inverted:
-            preview.string = "Invalid range."
+            preview.string = NSLocalizedString("Invalid range.", comment: "UI")
         case .limitTooLarge:
-            preview.string = "End is higher than U+110000, the maximum Unicode code point."
+            preview.string = NSLocalizedString("End is higher than U+110000, the maximum Unicode code point.", comment: "UI")
         case .taken:
-            preview.string = "Range includes an already-assigned code point."
+            preview.string = NSLocalizedString("Range includes an already-assigned code point.", comment: "UI")
         case .invalidDestination:
-            preview.string = "Invalid destination"
+            preview.string = NSLocalizedString("Invalid destination", comment: "UI")
         case let .valid(source: sourceRange, destination: _):
             guard let familyName = affordance.familyName,
                   let font = NSFont(name: familyName, size: NSFont.systemFontSize) else {
-                preview.string = "No font selected."
+                preview.string = NSLocalizedString("No font selected.", comment: "UI")
                 return
             }
             if (!destinationIsValid(range: sourceRange)) {
-                preview.string = "Invalid destination."
+                preview.string = NSLocalizedString("Invalid destination.", comment: "UI")
                 return
             }
             let disallowed = IndexSet([9, 10, 13, 0xad, 0x200e, 0x200f, 0x200b, 0x200c])
             let combined = NSMutableAttributedString()
             for i in sourceRange {
                 if combined.length >= 1024 * 10 {
-                    combined.append(NSAttributedString(string: " [truncated]",
+                    combined.append(NSAttributedString(string: NSLocalizedString(" [truncated]", comment: "UI"),
                                                        attributes: [
                                                         .foregroundColor: NSColor.textColor,
                                                         .font: NSFont.systemFont(ofSize: NSFont.systemFontSize)]))
@@ -478,16 +478,16 @@ final class SpecialExceptionsWindowController: NSWindowController {
 
     private func importString(_ content: String) {
         guard let newConfig = FontTable.Config(string: content) else {
-            showError("This file is not well formed. Is it from a newer version of iTerm2?")
+            showError(NSLocalizedString("This file is not well formed. Is it from a newer version of iTerm2?", comment: "UI"))
             return
         }
         guard newConfig.version <= FontTable.Config.latestKnownVersion else {
-            showError("This file is from a newer version of iTerm2 and cannot be loaded.")
+            showError(NSLocalizedString("This file is from a newer version of iTerm2 and cannot be loaded.", comment: "UI"))
             return
         }
         let missing = missingFonts(newConfig)
         guard missing.isEmpty else {
-            showError("You must install the following fonts to use the exceptions in this file:\n\n\(missing.joined(separator: "\n"))")
+            showError(String(format: NSLocalizedString("You must install the following fonts to use the exceptions in this file:\n\n%@", comment: "UI"), missing.joined(separator: "\n")))
             return
         }
         crud.undoable {

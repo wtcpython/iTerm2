@@ -128,10 +128,10 @@ static CGFloat SplitHalfDistanceFromEdge(SplitSessionHalf half, NSSize size, NSP
     dirtyRect = NSIntersectionRect(dirtyRect, self.bounds);
     switch (_mode) {
         case SplitSelectionViewModeSourceMove:
-            [self drawSourceWithMessage:@"Select a destination pane" rect:dirtyRect];
+            [self drawSourceWithMessage:NSLocalizedString(@"Select a destination pane", @"UI") rect:dirtyRect];
             return;
         case SplitSelectionViewModeSourceSwap:
-            [self drawSourceWithMessage:@"Select pane to swap with" rect:dirtyRect];
+            [self drawSourceWithMessage:NSLocalizedString(@"Select pane to swap with", @"UI") rect:dirtyRect];
             return;
         case SplitSelectionViewModeTargetMove:
             [self drawTargetWithMessage:NSLocalizedString(@"Click to move source pane to this split", @"UI")];

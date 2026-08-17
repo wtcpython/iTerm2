@@ -151,7 +151,7 @@ static NSError *SCPFileError(NSString *description) {
 }
 
 - (NSString *)displayName {
-    return [NSString stringWithFormat:@"Secure copy\nUser name: %@\nHost: %@\nFile: %@", _path.username, _path.hostname, _path.path];
+    return [NSString stringWithFormat:NSLocalizedString(@"Secure copy\nUser name: %@\nHost: %@\nFile: %@", @"UI"), _path.username, _path.hostname, _path.path];
 }
 
 - (NSString *)shortName {
@@ -375,10 +375,10 @@ static NSError *SCPFileError(NSString *description) {
     RLog(@"performTransfer download=%@ agentAllowed=%@ path=%@ baseName=%@",
          @(isDownload), @(agentAllowed), self.path, baseName);
     if (!baseName) {
-        self.error = [NSString stringWithFormat:@"Invalid path: %@", self.path.path];
+        self.error = [NSString stringWithFormat:NSLocalizedString(@"Invalid path: %@", @"UI"), self.path.path];
         [self performOnMainThread:^{
             [[FileTransferManager sharedInstance] transferrableFile:self
-                                     didFinishTransmissionWithError:SCPFileError(@"Invalid filename")];
+                                     didFinishTransmissionWithError:SCPFileError(NSLocalizedString(@"Invalid filename", @"UI"))];
         }];
         return;
     }
@@ -414,9 +414,9 @@ static NSError *SCPFileError(NSString *description) {
             // error. Should that ever change, this clause will not execute.
             theError = [NSError errorWithDomain:@"com.googlecode.iterm2"
                                            code:-1
-                                       userInfo:@{ NSLocalizedDescriptionKey: @"Could not connect." }];
+                                       userInfo:@{ NSLocalizedDescriptionKey: NSLocalizedString(@"Could not connect.", @"UI") }];
         }
-        self.error = [NSString stringWithFormat:@"Connection failed: %@",
+        self.error = [NSString stringWithFormat:NSLocalizedString(@"Connection failed: %@", @"UI"),
                          theError.localizedDescription];
         [self performOnMainThread:^{
             [[FileTransferManager sharedInstance] transferrableFile:self
@@ -584,9 +584,9 @@ static NSError *SCPFileError(NSString *description) {
             if (!error) {
                 error = [NSError errorWithDomain:@"com.googlecode.iterm2.SCPFile"
                                             code:0
-                                        userInfo:@{ NSLocalizedDescriptionKey: @"Authentication failed." }];
+                                        userInfo:@{ NSLocalizedDescriptionKey: NSLocalizedString(@"Authentication failed.", @"UI") }];
             }
-            self.error = @"Authentication error.";
+            self.error = NSLocalizedString(@"Authentication error.", @"UI");
             [[FileTransferManager sharedInstance] transferrableFile:self
                                      didFinishTransmissionWithError:error];
         }];
@@ -610,7 +610,7 @@ static NSError *SCPFileError(NSString *description) {
             tempfile = [downloadDirectory stringByAppendingPathComponent:tempFileName];
         }
         if (!tempfile) {
-            self.error = [NSString stringWithFormat:@"Downloads folder not writable. Tried %@",
+            self.error = [NSString stringWithFormat:NSLocalizedString(@"Downloads folder not writable. Tried %@", @"UI"),
                           downloadDirectory];
             [self performOnMainThread:^{
                 [[FileTransferManager sharedInstance] transferrableFile:self
@@ -702,16 +702,16 @@ static NSError *SCPFileError(NSString *description) {
                 return;
             } else {
                 if (quarantineError) {
-                    self.error = @"Quarantine Error";
+                    self.error = NSLocalizedString(@"Quarantine Error", @"UI");
                 } else {
                     NSString *errorDescription = [[self lastError] localizedDescription];
                     if (errorDescription.length) {
                         self.error = errorDescription;
                     } else {
-                        self.error = @"Download failed";
+                        self.error = NSLocalizedString(@"Download failed", @"UI");
                     }
                 }
-                error = SCPFileError(@"Download failed");
+                error = SCPFileError(NSLocalizedString(@"Download failed", @"UI"));
             }
         }
         [self performOnMainThread:^{

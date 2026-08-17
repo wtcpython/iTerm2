@@ -62,7 +62,7 @@ static NSString *const iTermActionsEditingPasteboardType = @"com.googlecode.iter
                                                [weakSelf actionsDidChange:notification];
                                            }];
     [container addViewToSearchIndex:_tableView
-                        displayName:@"Actions"
+                        displayName:NSLocalizedString(@"Actions", @"UI")
                             phrases:@[ @"Actions" ]
                                 key:kPreferenceKeyActions];
 }

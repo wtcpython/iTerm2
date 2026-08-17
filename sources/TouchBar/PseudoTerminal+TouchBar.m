@@ -289,7 +289,7 @@ ITERM_IGNORE_PARTIAL_BEGIN
         // Constrain last button's right to document view's right
         [self constrainButton:previous toRightOfSuperview:documentView];
     }
-    item.customizationLabel = @"Function Keys";
+    item.customizationLabel = NSLocalizedString(@"Function Keys", @"UI");
     return item;
 }
 
@@ -399,7 +399,7 @@ ITERM_IGNORE_PARTIAL_BEGIN
         NSScrubber *scrubber;
         if (!self.tabsTouchBarItem) {
             self.tabsTouchBarItem = [[[NSCustomTouchBarItem alloc] initWithIdentifier:identifier] autorelease];
-            self.tabsTouchBarItem.customizationLabel = @"Full Screen Tab Bar";
+            self.tabsTouchBarItem.customizationLabel = NSLocalizedString(@"Full Screen Tab Bar", @"UI");
 
             scrubber = [[NSScrubber alloc] initWithFrame:NSMakeRect(0, 0, 320, 30)];
             scrubber.delegate = self;   // So we can respond to selection.
@@ -434,7 +434,7 @@ ITERM_IGNORE_PARTIAL_BEGIN
     } else if ([identifier isEqualToString:iTermTouchBarIdentifierAutocomplete]) {
         self.autocompleteCandidateListItem = [[[NSCandidateListTouchBarItem alloc] initWithIdentifier:identifier] autorelease];
         self.autocompleteCandidateListItem.delegate = self;
-        self.autocompleteCandidateListItem.customizationLabel = @"Autocomplete Suggestions";
+        self.autocompleteCandidateListItem.customizationLabel = NSLocalizedString(@"Autocomplete Suggestions", @"UI");
         NSAttributedString *(^commandUseToAttributedString)(NSString *commandUse,
                                                             NSInteger index) = ^(NSString *command,
                                                                                  NSInteger index) {
@@ -450,26 +450,26 @@ ITERM_IGNORE_PARTIAL_BEGIN
 
     if ([identifier isEqualToString:iTermTouchBarIdentifierManPage]) {
         selector = @selector(manPageTouchBarItemSelected:);
-        label = @"Man Page";
+        label = NSLocalizedString(@"Man Page", @"UI");
     } else if ([identifier isEqualToString:iTermTouchBarIdentifierStatus]) {
         selector = @selector(statusTouchBarItemSelected:);
-        label = @"Your Message Here";
+        label = NSLocalizedString(@"Your Message Here", @"UI");
     } else if ([identifier isEqualToString:iTermTouchBarIdentifierAddMark]) {
         image = [[NSImage it_imageNamed:@"Add Mark Touch Bar Icon" forClass:self.class] imageWithColor:[NSColor labelColor]];
         selector = @selector(addMarkTouchBarItemSelected:);
-        label = @"Add Mark";
+        label = NSLocalizedString(@"Add Mark", @"UI");
     } else if ([identifier isEqualToString:iTermTouchBarIdentifierNextMark]) {
         image = [NSImage imageNamed:NSImageNameTouchBarGoDownTemplate];
         selector = @selector(nextMarkTouchBarItemSelected:);
-        label = @"Next Mark";
+        label = NSLocalizedString(@"Next Mark", @"UI");
     } else if ([identifier isEqualToString:iTermTouchBarIdentifierPreviousMark]) {
         image = [NSImage imageNamed:NSImageNameTouchBarGoUpTemplate];
         selector = @selector(previousMarkTouchBarItemSelected:);
-        label = @"Previous Mark";
+        label = NSLocalizedString(@"Previous Mark", @"UI");
     } else if ([identifier isEqualToString:iTermTouchBarIdentifierColorPreset]) {
         image = [NSImage imageNamed:NSImageNameTouchBarColorPickerFill];
         NSPopoverTouchBarItem *item = [[[NSPopoverTouchBarItem alloc] initWithIdentifier:identifier] autorelease];
-        item.customizationLabel = @"Color Preset";
+        item.customizationLabel = NSLocalizedString(@"Color Preset", @"UI");
         item.showsCloseButton = YES;
         item.collapsedRepresentationImage = image;
 
@@ -481,7 +481,7 @@ ITERM_IGNORE_PARTIAL_BEGIN
     } else if ([identifier isEqualToString:iTermTouchBarIdentifierFunctionKeys]) {
         image = [NSImage it_imageNamed:@"Touch Bar Function Keys" forClass:self.class];
         NSPopoverTouchBarItem *item = [[[NSPopoverTouchBarItem alloc] initWithIdentifier:identifier] autorelease];
-        item.customizationLabel = @"Function Keys Popover";
+        item.customizationLabel = NSLocalizedString(@"Function Keys Popover", @"UI");
         item.showsCloseButton = YES;
         item.collapsedRepresentationImage = image;
 

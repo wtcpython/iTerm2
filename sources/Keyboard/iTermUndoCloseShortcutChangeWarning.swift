@@ -99,8 +99,8 @@ class iTermUndoCloseShortcutChangeWarning: NSObject {
     }
 
     private static func showWarning(offeringBindingFor keystroke: iTermKeystroke) {
-        let ok = iTermWarningAction(label: "Keep New Shortcut")
-        let restore = iTermWarningAction(label: "Restore ⌘⇧T to Show Tabs") { _ in
+        let ok = iTermWarningAction(label: NSLocalizedString("Keep New Shortcut", comment: "UI"))
+        let restore = iTermWarningAction(label: NSLocalizedString("Restore ⌘⇧T to Show Tabs", comment: "UI")) { _ in
             addGlobalShowTabsBinding(for: keystroke)
         }
 

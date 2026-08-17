@@ -160,7 +160,7 @@ class SSHFolderDialog: NSObject {
                 parent: alert.window,
                 location: textFieldFrame,
                 mode: .indicator,
-                placeholder: "Loading completions…",
+                placeholder: NSLocalizedString("Loading completions…", comment: "UI"),
                 allowKey: false
             )
             textField.onSpecialKey = { [weak completionsWindow, weak self] key in
@@ -199,7 +199,7 @@ class SSHFolderDialog: NSObject {
                     // Convert to CompletionsWindow items
                     let items = suggestions.map { path in
                         let displayPath = path
-                        let detail = "Folder on " + hostname
+                        let detail = String(format: NSLocalizedString("Folder on %@", comment: "UI"), hostname)
 
                         return CompletionsWindow.Item(
                             suggestion: path,

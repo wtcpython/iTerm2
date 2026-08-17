@@ -102,19 +102,19 @@ class iTermWorkgroupSessionDetailViewController: NSViewController {
         emptyLabel.alignment = .center
         root.addSubview(emptyLabel)
 
-        profileRow = makeLabeledRow(labelText: "Profile:",
+        profileRow = makeLabeledRow(labelText: NSLocalizedString("Profile:", comment: "UI"),
                                     control: makeProfilePopup())
-        modeRow = makeLabeledRow(labelText: "Mode:",
+        modeRow = makeLabeledRow(labelText: NSLocalizedString("Mode:", comment: "UI"),
                                  control: makeModePopup())
-        commandRow = makeLabeledRow(labelText: "Command:",
+        commandRow = makeLabeledRow(labelText: NSLocalizedString("Command:", comment: "UI"),
                                     control: makeCommandField())
         perFileCommandRow = makeLabeledRow(
-            labelText: "File command:",
+            labelText: NSLocalizedString("File command:", comment: "UI"),
             control: makePerFileCommandField())
-        urlRow = makeLabeledRow(labelText: "URL:", control: makeURLField())
-        peerRow = makeLabeledRow(labelText: "Name:",
+        urlRow = makeLabeledRow(labelText: NSLocalizedString("URL:", comment: "UI"), control: makeURLField())
+        peerRow = makeLabeledRow(labelText: NSLocalizedString("Name:", comment: "UI"),
                                  control: makePeerNameField())
-        peerShortcutRow = makeLabeledRow(labelText: "Shortcut:",
+        peerShortcutRow = makeLabeledRow(labelText: NSLocalizedString("Shortcut:", comment: "UI"),
                                          control: makePeerShortcutInput())
         splitSection = makeSplitSection()
         toolbarSection = makeToolbarSection()
@@ -229,9 +229,9 @@ class iTermWorkgroupSessionDetailViewController: NSViewController {
 
         let orientation: NSSegmentedControl
         if let verticalImage = NSImage(systemSymbolName: "square.split.2x1",
-                                       accessibilityDescription: "Vertical"),
+                                       accessibilityDescription: NSLocalizedString("Vertical", comment: "UI")),
            let horizontalImage = NSImage(systemSymbolName: "square.split.1x2",
-                                         accessibilityDescription: "Horizontal") {
+                                         accessibilityDescription: NSLocalizedString("Horizontal", comment: "UI")) {
             orientation = NSSegmentedControl(
                 images: [verticalImage, horizontalImage],
                 trackingMode: .selectOne,
@@ -249,7 +249,7 @@ class iTermWorkgroupSessionDetailViewController: NSViewController {
         section.addSubview(orientation)
 
         let side = NSSegmentedControl(
-            labels: ["Left", "Right"],
+            labels: [NSLocalizedString("Left", comment: "UI"), NSLocalizedString("Right", comment: "UI")],
             trackingMode: .selectOne,
             target: self,
             action: #selector(splitSideChanged(_:)))
@@ -724,11 +724,11 @@ class iTermWorkgroupSessionDetailViewController: NSViewController {
 
     private func refreshSideLabels(for orientation: SplitSettings.Orientation) {
         if orientation == .vertical {
-            splitSidePicker.setLabel("Left", forSegment: 0)
-            splitSidePicker.setLabel("Right", forSegment: 1)
+            splitSidePicker.setLabel(NSLocalizedString("Left", comment: "UI"), forSegment: 0)
+            splitSidePicker.setLabel(NSLocalizedString("Right", comment: "UI"), forSegment: 1)
         } else {
-            splitSidePicker.setLabel("Top", forSegment: 0)
-            splitSidePicker.setLabel("Bottom", forSegment: 1)
+            splitSidePicker.setLabel(NSLocalizedString("Top", comment: "UI"), forSegment: 0)
+            splitSidePicker.setLabel(NSLocalizedString("Bottom", comment: "UI"), forSegment: 1)
         }
     }
 

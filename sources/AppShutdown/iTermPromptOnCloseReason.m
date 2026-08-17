@@ -219,25 +219,15 @@
 }
 
 + (instancetype)alwaysConfirmQuitPreferenceEnabled {
-    NSString *message = [NSString stringWithFormat:NSLocalizedString(@"“%@ > %@” is enabled and there is at least one terminal window.", @"UI"),
-                         NSLocalizedString(@"Settings > General > Closing", @"UI"),
-                         NSLocalizedString(@"Confirm \"Quit iTerm2 (⌘Q)\"", @"UI")];
-    return [[[iTermPromptOnCloseMessageReason alloc] initWithMessage:message priority:100] autorelease];
+    return [[[iTermPromptOnCloseMessageReason alloc] initWithMessage:NSLocalizedString(@"“Settings > General > Closing > Confirm Quit iTerm2” is enabled and there is at least one terminal window.", @"UI") priority:100] autorelease];
 }
 
 + (instancetype)alwaysConfirmQuitPreferenceEvenIfThereAreNoWindowsEnabled {
-    NSString *message = [NSString stringWithFormat:NSLocalizedString(@"“%@ > %@” and “%@” is enabled.", @"UI"),
-                         NSLocalizedString(@"Settings > General > Closing", @"UI"),
-                         NSLocalizedString(@"Confirm \"Quit iTerm2 (⌘Q)\"", @"UI"),
-                         NSLocalizedString(@"Even if there are no windows", @"UI")];
-    return [[[iTermPromptOnCloseMessageReason alloc] initWithMessage:message priority:100] autorelease];
+    return [[[iTermPromptOnCloseMessageReason alloc] initWithMessage:NSLocalizedString(@"“Settings > General > Closing > Confirm Quit iTerm2” and “Even if there are no windows” is enabled.", @"UI") priority:100] autorelease];
 }
 
 + (instancetype)closingMultipleSessionsPreferenceEnabled {
-    NSString *message = [NSString stringWithFormat:NSLocalizedString(@"“%@ > %@” is enabled.", @"UI"),
-                         NSLocalizedString(@"Settings > General > Closing", @"UI"),
-                         NSLocalizedString(@"Confirm closing multiple sessions", @"UI")];
-    return [[[iTermPromptOnCloseMessageReason alloc] initWithMessage:message priority:90] autorelease];
+    return [[[iTermPromptOnCloseMessageReason alloc] initWithMessage:NSLocalizedString(@"“Settings > General > Closing > Confirm closing multiple sessions” is enabled.", @"UI") priority:90] autorelease];
 }
 
 + (instancetype)tmuxClientsAlwaysPromptBecauseJobsAreNotExposed {

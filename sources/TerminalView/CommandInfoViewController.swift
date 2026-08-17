@@ -278,7 +278,7 @@ class CommandInfoViewController: NSViewController {
                                                             locale: .current)
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMM d, yyyy"
-        return "\(timeFormatter.string(from: date)) on \(dateFormatter.string(from: date))"
+        return String(format: NSLocalizedString("%@ on %@", comment: "UI"), timeFormatter.string(from: date), dateFormatter.string(from: date))
     }
 
     private func updateOutputProgress(_ progress: Double) {
@@ -335,7 +335,7 @@ class CommandInfoViewController: NSViewController {
                              event: NSEvent,
                              view: NSView) {
         let menu = SimpleContextMenu()
-        menu.addItem(title: "Add Command as Snippet") {
+        menu.addItem(title: NSLocalizedString("Add Command as Snippet", comment: "UI")) {
             let snippet = iTermSnippet(title: command, value: command, guid: UUID().uuidString, tags: [], escaping: .none, version: iTermSnippet.currentVersion())
             iTermSnippetsModel.sharedInstance().addSnippet(snippet)
             if let window = view.window {
@@ -363,10 +363,10 @@ class CommandInfoViewController: NSViewController {
             return
         }
 
-        menu.addItem(title: "Copy Command URL to Clipboard") {
+        menu.addItem(title: NSLocalizedString("Copy Command URL to Clipboard", comment: "UI")) {
             Self.copyURL(url)
         }
-        menu.addItem(title: "Open Share Sheet…") {
+        menu.addItem(title: NSLocalizedString("Open Share Sheet…", comment: "UI")) {
             let viewRect = NSRect(origin: event.locationInWindow, size: .zero)
             let picker = NSSharingServicePicker(items: [url])
             picker.show(relativeTo: viewRect, of: view, preferredEdge: .minY)

@@ -449,11 +449,11 @@ NS_ASSUME_NONNULL_BEGIN
     // script archives without prompting would be surprising.
     iTermWarning *warning = [[iTermWarning alloc] init];
     warning.title = [NSString stringWithFormat:NSLocalizedString(@"A script archive named “%@” was found in the Scripts directory. Would you like to install it?", @"UI"), file.lastPathComponent];
-    warning.actionLabels = @[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI"), @"Move to Trash" ];
+    warning.actionLabels = @[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Cancel", @"UI"), NSLocalizedString(@"Move to Trash", @"UI") ];
     warning.identifier = @"NoSyncInstallScriptArchive";
     warning.warningType = kiTermWarningTypeTemporarilySilenceable;
     warning.heading = NSLocalizedString(@"Install Script Archive?", @"UI");
-    warning.doNotRememberLabels = @[ @"Move to Trash", NSLocalizedString(@"Cancel", @"UI") ];
+    warning.doNotRememberLabels = @[ NSLocalizedString(@"Move to Trash", @"UI"), NSLocalizedString(@"Cancel", @"UI") ];
     const iTermWarningSelection selection = [warning runModal];
     NSURL *url = [NSURL fileURLWithPath:file];
     switch (selection) {
@@ -843,7 +843,7 @@ NS_ASSUME_NONNULL_BEGIN
         return;
     }
     if ([[NSFileManager defaultManager] itemIsDirectory:fullPath]) {
-        // @"Reveal" is a one-time Finder action and shouldn't be remembered.
+        // "Reveal" is a one-time Finder action and shouldn't be remembered.
         iTermWarning *warning = [[iTermWarning alloc] init];
         warning.title = [NSString stringWithFormat:NSLocalizedString(@"The script “%@” is malformed.", @"UI"), fullPath.lastPathComponent];
         warning.actionLabels = @[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Reveal", @"UI") ];
@@ -908,7 +908,7 @@ NS_ASSUME_NONNULL_BEGIN
                                                                     dependencies:dependencies
                                                                   createSetupCfg:NO
                                                             provisioningDidBegin:^{
-        [progress showWithMessage:@"Rebuilding the Python environment…"];
+        [progress showWithMessage:NSLocalizedString(@"Rebuilding the Python environment…", @"UI")];
     }
                                                                       completion:^(NSError *error) {
         [progress dismiss];
@@ -1096,7 +1096,7 @@ NS_ASSUME_NONNULL_BEGIN
                                                                             dependencies:dependencies ?: @[]
                                                                           createSetupCfg:YES
                                                                     provisioningDidBegin:^{
-                [progress showWithMessage:@"Setting up the Python environment…"];
+                [progress showWithMessage:NSLocalizedString(@"Setting up the Python environment…", @"UI")];
             }
                                                                               completion:installCompletion];
         } else {
@@ -1136,10 +1136,10 @@ NS_ASSUME_NONNULL_BEGIN
         // "Show in Finder" is a one-time navigation action and shouldn't be remembered.
         iTermWarning *warning = [[iTermWarning alloc] init];
         warning.title = [NSString stringWithFormat:NSLocalizedString(@"Open new script in %@?", @"UI"), app];
-        warning.actionLabels = @[ NSLocalizedString(@"OK", @"UI"), @"Show in Finder" ];
+        warning.actionLabels = @[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Show in Finder", @"UI") ];
         warning.identifier = @"NoSyncOpenNewPythonScriptInDefaultEditor";
         warning.warningType = kiTermWarningTypePermanentlySilenceable;
-        warning.doNotRememberLabels = @[ @"Show in Finder" ];
+        warning.doNotRememberLabels = @[ NSLocalizedString(@"Show in Finder", @"UI") ];
         iTermWarningSelection selection = [warning runModal];
         if (selection == kiTermWarningSelection0) {
             [[NSWorkspace sharedWorkspace] openURL:[NSURL fileURLWithPath:destinationTemplatePath]];

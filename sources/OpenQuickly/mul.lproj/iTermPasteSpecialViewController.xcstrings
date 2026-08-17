@@ -482,7 +482,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "使用 \\\\ 对 shell 字符进行转义"
+            "value": "使用 \\ 对 shell 字符进行转义"
           }
         }
       }

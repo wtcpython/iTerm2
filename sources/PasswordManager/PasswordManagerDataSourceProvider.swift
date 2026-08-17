@@ -245,7 +245,7 @@ class PasswordManagerDataSourceProvider: NSObject {
             return
         }
         iTermApplication.shared().localAuthenticationDialogOpen = true
-        let reason = "open the password manager"
+        let reason = NSLocalizedString("open the password manager", comment: "UI")
         context.evaluatePolicy(policy, localizedReason: reason) { success, error in
             RLog("Policy evaluation success=\(success) error=\(String(describing: error))")
             DispatchQueue.main.async {
@@ -278,58 +278,58 @@ class PasswordManagerDataSourceProvider: NSObject {
         let reason: String
         switch LAError.Code(rawValue: error.code) {
         case .authenticationFailed:
-            reason = "valid credentials weren't supplied.";
+            reason = NSLocalizedString("valid credentials weren't supplied.", comment: "UI");
 
         case .userCancel:
-            reason = "password entry was cancelled.";
+            reason = NSLocalizedString("password entry was cancelled.", comment: "UI");
 
         case .userFallback:
-            reason = "password authentication was requested.";
+            reason = NSLocalizedString("password authentication was requested.", comment: "UI");
 
         case .systemCancel:
-            reason = "the system cancelled the authentication request.";
+            reason = NSLocalizedString("the system cancelled the authentication request.", comment: "UI");
 
         case .passcodeNotSet:
-            reason = "no passcode is set.";
+            reason = NSLocalizedString("no passcode is set.", comment: "UI");
 
         case .touchIDNotAvailable:
-            reason = "touch ID is not available.";
+            reason = NSLocalizedString("touch ID is not available.", comment: "UI");
 
         case .biometryNotEnrolled:
-            reason = "touch ID doesn't have any fingers enrolled.";
+            reason = NSLocalizedString("touch ID doesn't have any fingers enrolled.", comment: "UI");
 
         case .biometryLockout:
-            reason = "there were too many failed Touch ID attempts.";
+            reason = NSLocalizedString("there were too many failed Touch ID attempts.", comment: "UI");
 
         case .appCancel:
-            reason = "authentication was cancelled by iTerm2.";
+            reason = NSLocalizedString("authentication was cancelled by iTerm2.", comment: "UI");
 
         case .invalidContext:
-            reason = "the context is invalid. This is a bug in iTerm2. Please report it.";
+            reason = NSLocalizedString("the context is invalid. This is a bug in iTerm2. Please report it.", comment: "UI");
 
         case .none:
             reason = error.localizedDescription
 
         case .touchIDNotEnrolled:
-            reason = "touch ID is not enrolled."
+            reason = NSLocalizedString("touch ID is not enrolled.", comment: "UI")
 
         case .touchIDLockout:
-            reason = "touch ID is locked out."
+            reason = NSLocalizedString("touch ID is locked out.", comment: "UI")
 
         case .notInteractive:
-            reason = "the required user interface could not be displayed."
+            reason = NSLocalizedString("the required user interface could not be displayed.", comment: "UI")
 
         case .watchNotAvailable:
-            reason = "watch is not available."
+            reason = NSLocalizedString("watch is not available.", comment: "UI")
 
         case .biometryNotPaired:
-            reason = "biometry is not paired."
+            reason = NSLocalizedString("biometry is not paired.", comment: "UI")
 
         case .biometryDisconnected:
-            reason = "biometry is disconnected."
+            reason = NSLocalizedString("biometry is disconnected.", comment: "UI")
 
         case .invalidDimensions:
-            reason = "invalid dimensions given."
+            reason = NSLocalizedString("invalid dimensions given.", comment: "UI")
 
         @unknown default:
             reason = error.localizedDescription

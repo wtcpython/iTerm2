@@ -140,11 +140,11 @@ class iTermNonTextPasteHelper: NSObject {
 
         let warning = iTermWarning()
         warning.title = String(format: NSLocalizedString("How would you like to paste %@?", comment: "UI"), fileDescription)
-        warning.actionLabels = actions.map { $0.rawValue }
+        warning.actionLabels = actions.map { NSLocalizedString($0.rawValue, comment: "UI") }
         warning.identifier = singleFile ? "NoSyncPasteNonTextFile" : "NoSyncPasteNonTextFiles"
         warning.warningType = .kiTermWarningTypePermanentlySilenceable
-        warning.heading = isDirectory ? "Paste Folder" : (singleFile ? "Paste File" : "Paste Files")
-        warning.cancelLabel = FilePasteAction.cancel.rawValue
+        warning.heading = isDirectory ? NSLocalizedString("Paste Folder", comment: "UI") : (singleFile ? NSLocalizedString("Paste File", comment: "UI") : NSLocalizedString("Paste Files", comment: "UI"))
+        warning.cancelLabel = NSLocalizedString(FilePasteAction.cancel.rawValue, comment: "UI")
         warning.window = delegate?.nonTextPasteHelperWindow(self)
 
         warning.runModalAsync { [weak self] selection, _ in
@@ -268,11 +268,11 @@ class iTermNonTextPasteHelper: NSObject {
 
         let warning = iTermWarning()
         warning.title = String(format: NSLocalizedString("The clipboard contains %@ image data (%@). How would you like to paste it?", comment: "UI"), typeDescription, sizeDescription)
-        warning.actionLabels = actions.map { $0.rawValue }
+        warning.actionLabels = actions.map { NSLocalizedString($0.rawValue, comment: "UI") }
         warning.identifier = canUpload ? "NoSyncPasteImageDataRemote" : "NoSyncPasteImageData"
         warning.warningType = .kiTermWarningTypePermanentlySilenceable
         warning.heading = NSLocalizedString("Paste Image", comment: "UI")
-        warning.cancelLabel = ImagePasteAction.cancel.rawValue
+        warning.cancelLabel = NSLocalizedString(ImagePasteAction.cancel.rawValue, comment: "UI")
         warning.window = delegate?.nonTextPasteHelperWindow(self)
 
         warning.runModalAsync { [weak self] selection, _ in

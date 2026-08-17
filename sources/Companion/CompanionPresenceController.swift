@@ -83,11 +83,11 @@ final class CompanionPresenceController: NSObject {
 
         if animated {
             if present, !connectToastShown {
-                CompanionToast.show(message: "iTerm2 Buddy connected",
+                CompanionToast.show(message: NSLocalizedString("iTerm2 Buddy connected", comment: "UI"),
                                     symbolName: SFSymbol.laptopcomputerAndIphone.rawValue,
                                     tint: .systemGreen)
             } else if !present, connectToastShown, paired {
-                CompanionToast.show(message: "iTerm2 Buddy disconnected",
+                CompanionToast.show(message: NSLocalizedString("iTerm2 Buddy disconnected", comment: "UI"),
                                     symbolName: SFSymbol.laptopcomputerAndIphone.rawValue,
                                     tint: .secondaryLabelColor)
             }
@@ -100,14 +100,14 @@ final class CompanionPresenceController: NSObject {
         statusItem = item
         if let button = item.button {
             let image = NSImage(systemSymbolName: SFSymbol.laptopcomputerAndIphone.rawValue,
-                                accessibilityDescription: "iTerm2 Buddy")
+                                accessibilityDescription: NSLocalizedString("iTerm2 Buddy", comment: "UI"))
             image?.isTemplate = true
             button.image = image
             // Dim the glyph when paired but not currently connected.
             button.alphaValue = connected ? 1.0 : 0.5
             button.toolTip = connected
-                ? "Companion device connected"
-                : "Companion device paired (not connected)"
+                ? NSLocalizedString("Companion device connected", comment: "UI")
+                : NSLocalizedString("Companion device paired (not connected)", comment: "UI")
         }
         item.menu = makeMenu(connected: connected)
     }
@@ -121,8 +121,8 @@ final class CompanionPresenceController: NSObject {
     private func makeMenu(connected: Bool) -> NSMenu {
         let menu = NSMenu()
         let header = NSMenuItem(title: connected
-                                ? "Companion device connected"
-                                : "Companion device paired (not connected)",
+                                ? NSLocalizedString("Companion device connected", comment: "UI")
+                                : NSLocalizedString("Companion device paired (not connected)", comment: "UI"),
                                 action: nil,
                                 keyEquivalent: "")
         header.isEnabled = false

@@ -37,7 +37,7 @@ class iTermAITermGatekeeper: NSObject {
         if !iTermAITermGatekeeper.pluginInstalled() {
             if !silent {
                 let selection = iTermWarning.show(withTitle: NSLocalizedString("You must install the AI plugin before you can use this feature.", comment: "UI"),
-                                                  actions: ["Reveal in Settings", NSLocalizedString("Cancel", comment: "UI")],
+                                                  actions: [NSLocalizedString("Reveal in Settings", comment: "UI"), NSLocalizedString("Cancel", comment: "UI")],
                                                   accessory: nil,
                                                   identifier: nil,
                                                   silenceable: .kiTermWarningTypePersistent,

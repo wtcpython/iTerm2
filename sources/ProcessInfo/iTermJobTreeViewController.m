@@ -333,7 +333,7 @@ static int gSignalsToList[] = {
 
 - (void)awakeFromNib {
     if (@available(macOS 10.16, *)) {
-        kill_.image = [NSImage it_imageForSymbolName:SFSymbolGetString(SFSymbolPlay) accessibilityDescription:@"Clear"];
+        kill_.image = [NSImage it_imageForSymbolName:SFSymbolGetString(SFSymbolPlay) accessibilityDescription:NSLocalizedString(@"Clear", @"UI")];
         _outlineView.style = NSTableViewStyleInset;
     }
     _outlineView.backgroundColor = [NSColor clearColor];
@@ -350,7 +350,7 @@ static int gSignalsToList[] = {
         }
     }
     NSImage *magnifyingGlass = [NSImage it_imageForSymbolName:SFSymbolGetString(SFSymbolMagnifyingglass)
-                                    accessibilityDescription:@"Inspect"];
+                                    accessibilityDescription:NSLocalizedString(@"Inspect", @"UI")];
     _inspectButton = [NSButton buttonWithImage:magnifyingGlass target:self action:@selector(inspect:)];
     _inspectButton.bordered = NO;
     _inspectButton.imageScaling = NSImageScaleProportionallyDown;
@@ -417,15 +417,15 @@ static int gSignalsToList[] = {
     }
     if ([self anySelectedProcessHasChildren]) {
         if (count == 1) {
-            description = @"one process and its children";
+            description = NSLocalizedString(@"one process and its children", @"UI");
         } else {
-            description = [NSString stringWithFormat:@"%@ processes and their children", @(count)];
+            description = [NSString stringWithFormat:NSLocalizedString(@"%@ processes and their children", @"UI"), @(count)];
         }
     } else {
         if (count == 1) {
-            description = @"one process";
+            description = NSLocalizedString(@"one process", @"UI");
         } else {
-            description = [NSString stringWithFormat:@"%@ processes", @(count)];
+            description = [NSString stringWithFormat:NSLocalizedString(@"%@ processes", @"UI"), @(count)];
         }
     }
 
@@ -774,7 +774,7 @@ static int gSignalsToList[] = {
     const BOOL monitored = (isJob && info.pid &&
                             [[iTermJobTerminationMonitor sharedInstance] isMonitoringProcessID:info.pid]);
     if (isJob) {
-        string = info.fullName ?: @"(terminated)";
+        string = info.fullName ?: NSLocalizedString(@"(terminated)", @"UI");
         NSImage *rawImage = [_graphicSource imageForJobName:info.name];
         if (rawImage) {
             image = [NSImage imageWithSize:rawImage.size flipped:NO drawingHandler:^BOOL(NSRect dstRect) {
@@ -819,13 +819,13 @@ static int gSignalsToList[] = {
     }
     // Hovering any cell in the row reveals the full, untruncated command (the
     // visible text is clipped to the column width and capped at 256 chars).
-    cell.toolTip = info.fullName ?: @"(terminated)";
+    cell.toolTip = info.fullName ?: NSLocalizedString(@"(terminated)", @"UI");
     return cell;
 }
 
 - (NSAttributedString *)monitorIndicatorPrefixWithFont:(NSFont *)font {
     NSImage *bell = [NSImage it_imageForSymbolName:@"bell"
-                            accessibilityDescription:@"Will notify when this job terminates"];
+                            accessibilityDescription:NSLocalizedString(@"Will notify when this job terminates", @"UI")];
     if (!bell) {
         return [[NSAttributedString alloc] initWithString:@""];
     }

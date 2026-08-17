@@ -20,7 +20,7 @@ final class iTermArrangementTrustGate: NSObject {
         }
 
         let filename = (path as NSString).lastPathComponent
-        let heading = "Open the arrangement “\(filename)”?"
+        let heading = String(format: NSLocalizedString("Open the arrangement “%@”?", comment: "UI"), filename)
         let body = buildBody(summary: summary)
 
         let selection = iTermWarning.show(withTitle: body,
@@ -39,16 +39,16 @@ final class iTermArrangementTrustGate: NSObject {
 
     private static func buildBody(summary: RiskSummary) -> String {
         var parts: [String] = []
-        parts.append("Window arrangements embed session profiles, which can run commands, connect to remote hosts, and configure triggers or smart-selection actions that execute when the terminal sees matching output. Opening an arrangement from an untrusted source is equivalent to running a program they gave you.")
+        parts.append(NSLocalizedString("Window arrangements embed session profiles, which can run commands, connect to remote hosts, and configure triggers or smart-selection actions that execute when the terminal sees matching output. Opening an arrangement from an untrusted source is equivalent to running a program they gave you.", comment: "UI"))
         if !summary.findings.isEmpty {
             parts.append("")
-            parts.append("This arrangement contains:")
+            parts.append(NSLocalizedString("This arrangement contains:", comment: "UI"))
             for finding in summary.findings {
                 parts.append("  • " + finding)
             }
         }
         parts.append("")
-        parts.append("Open it only if you trust where it came from.")
+        parts.append(NSLocalizedString("Open it only if you trust where it came from.", comment: "UI"))
         return parts.joined(separator: "\n")
     }
 

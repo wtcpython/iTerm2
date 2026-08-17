@@ -243,9 +243,9 @@ class OnePasswordTokenRequester {
     private var passwordPrompt: String {
         let account = iTermAdvancedSettingsModel.onePasswordAccount()!
         if account.isEmpty {
-            return "Enter your 1Password master password:"
+            return NSLocalizedString("Enter your 1Password master password:", comment: "UI")
         }
-        return "Enter the 1Password master password for account “\(account)”:"
+        return String(format: NSLocalizedString("Enter the 1Password master password for account “%@”:", comment: "UI"), account)
     }
 
     func asyncGet(_ completion: @escaping (Result<Auth, Error>) -> ()) {
@@ -309,7 +309,7 @@ class OnePasswordTokenRequester {
             guard output.returnCode == 0 else {
                 DLog("But the return code is nonzero")
                 DLog("signin failed")
-                let reason = String(data: output.stderr, encoding: .utf8) ?? "An unknown error occurred."
+                let reason = String(data: output.stderr, encoding: .utf8) ?? NSLocalizedString("An unknown error occurred.", comment: "UI")
                 RLog("Failure reason is: \(reason)")
                 if reason.contains("connecting to desktop app timed out") {
                     completion(.failure(OnePasswordDataSource.OPError.unusableCLI))
@@ -321,7 +321,7 @@ class OnePasswordTokenRequester {
             }
             guard let token = String(data: output.stdout, encoding: .utf8) else {
                 DLog("got garbage output")
-                self.showErrorMessage("The 1Password CLI app produced garbled output instead of an auth token.")
+                self.showErrorMessage(NSLocalizedString("The 1Password CLI app produced garbled output instead of an auth token.", comment: "UI"))
                 completion(.failure(OnePasswordDataSource.OPError.badOutput))
                 return
             }

@@ -90,8 +90,8 @@ class iTermKeyMappingRepair: NSObject {
                 return keystrokeString
             }
             let action = iTermKeyBindingAction.withDictionary(actionDict)
-            let actionName = action?.displayName ?? "Unknown action"
-            return "\(keystrokeString): \(actionName)"
+            let actionName = action?.displayName ?? NSLocalizedString("Unknown action", comment: "UI")
+            return String(format: NSLocalizedString("%@: %@", comment: "UI"), keystrokeString, actionName)
         }
 
         let bindingsList = descriptions.sorted().map { "• \($0)" }.joined(separator: "\n")
@@ -108,7 +108,7 @@ class iTermKeyMappingRepair: NSObject {
 
         let selection = iTermWarning.show(
             withTitle: message,
-            actions: ["Repair", NSLocalizedString("Cancel", comment: "UI")],
+            actions: [NSLocalizedString("Repair", comment: "UI"), NSLocalizedString("Cancel", comment: "UI")],
             identifier: nil,
             silenceable: .kiTermWarningTypePersistent,
             window: window

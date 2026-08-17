@@ -103,18 +103,18 @@ static const NSTimeInterval iTermStatusBarGitComponentDefaultCadence = 2;
 }
 
 - (NSString *)statusBarComponentShortDescription {
-    return @"git state";
+    return NSLocalizedString(@"git state", @"UI");
 }
 
 - (NSString *)statusBarComponentDetailedDescription {
-    return @"Shows a summary of the git state of the current directory.";
+    return NSLocalizedString(@"Shows a summary of the git state of the current directory.", @"UI");
 }
 
 - (NSArray<iTermStatusBarComponentKnob *> *)statusBarComponentKnobs {
     NSArray<iTermStatusBarComponentKnob *> *knobs;
 
     iTermStatusBarComponentKnob *formatKnob =
-    [[iTermStatusBarComponentKnob alloc] initWithLabelText:@"Polling Interval (seconds):"
+    [[iTermStatusBarComponentKnob alloc] initWithLabelText:NSLocalizedString(@"Polling Interval (seconds):", @"UI")
                                                       type:iTermStatusBarComponentKnobTypeDouble
                                                placeholder:nil
                                               defaultValue:@(iTermStatusBarGitComponentDefaultCadence)
@@ -139,7 +139,7 @@ static const NSTimeInterval iTermStatusBarGitComponentDefaultCadence = 2;
 
 - (id)statusBarComponentExemplarWithBackgroundColor:(NSColor *)backgroundColor
                                           textColor:(NSColor *)textColor {
-    return @"⎇ main";
+    return NSLocalizedString(@"⎇ main", @"UI");
 }
 
 - (BOOL)statusBarComponentCanStretch {
@@ -152,8 +152,8 @@ static const NSTimeInterval iTermStatusBarGitComponentDefaultCadence = 2;
 
 - (NSArray<NSAttributedString *> *)attributedStringVariants {
     if ([self shouldShowTimeoutError]) {
-        return @[ [self timeoutWarningAttributedStringWithString:@"⚠️ timed out"],
-                  [self timeoutWarningAttributedStringWithString:@"⚠️"] ];
+        return @[ [self timeoutWarningAttributedStringWithString:NSLocalizedString(@"⚠️ timed out", @"UI")],
+                  [self timeoutWarningAttributedStringWithString:NSLocalizedString(@"⚠️", @"UI")] ];
     }
     return [_maker attributedStringVariants];
 }
@@ -377,14 +377,14 @@ static const NSTimeInterval iTermStatusBarGitComponentDefaultCadence = 2;
             return;
         }
         strongSelf->_view = view;
-        addItem(@"Commit", @selector(commit:), state.dirty);
-        addItem(@"Add & Commit", @selector(addAndCommit:), state.dirty);
-        addItem(@"Stash", @selector(stash:), state.dirty);
-        addItem(@"Log", @selector(log:), YES);
-        addItem([NSString stringWithFormat:@"Push origin %@", state.branch],
+        addItem(NSLocalizedString(@"Commit", @"UI"), @selector(commit:), state.dirty);
+        addItem(NSLocalizedString(@"Add & Commit", @"UI"), @selector(addAndCommit:), state.dirty);
+        addItem(NSLocalizedString(@"Stash", @"UI"), @selector(stash:), state.dirty);
+        addItem(NSLocalizedString(@"Log", @"UI"), @selector(log:), YES);
+        addItem([NSString stringWithFormat:NSLocalizedString(@"Push origin %@", @"UI"), state.branch],
                 @selector(push:),
                 state.ahead.intValue > 0 || [state.ahead isEqualToString:@"error"]);
-        addItem([NSString stringWithFormat:@"Pull origin %@", state.branch],
+        addItem([NSString stringWithFormat:NSLocalizedString(@"Pull origin %@", @"UI"), state.branch],
                 @selector(pull:),
                 !state.dirty);
         [menu addItem:[NSMenuItem separatorItem]];
@@ -395,10 +395,10 @@ static const NSTimeInterval iTermStatusBarGitComponentDefaultCadence = 2;
             if ([branch isEqualToString:state.branch]) {
                 continue;
             }
-            addItem([NSString stringWithFormat:@"Check out %@", branch], @selector(checkout:), YES).userData = branch;
+            addItem([NSString stringWithFormat:NSLocalizedString(@"Check out %@", @"UI"), branch], @selector(checkout:), YES).userData = branch;
         }
         [menu addItem:[NSMenuItem separatorItem]];
-        addItem(@"Show Debug Info", @selector(debug), YES);
+        addItem(NSLocalizedString(@"Show Debug Info", @"UI"), @selector(debug), YES);
         [menu popUpMenuPositioningItem:menu.itemArray.firstObject atLocation:NSMakePoint(0, 0) inView:containingView];
     }];
 }

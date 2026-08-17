@@ -265,7 +265,7 @@ private final class StatusPriorityViewController: NSViewController, CRUDTableVie
         let container = NSView(frame: NSRect(x: 0, y: 0, width: width, height: height))
 
         // Instructional label at top
-        let label = NSTextField(wrappingLabelWithString: "Statuses are sorted by priority. Items near the top have higher priority. Drag to reorder. Click to edit.")
+        let label = NSTextField(wrappingLabelWithString: NSLocalizedString("Statuses are sorted by priority. Items near the top have higher priority. Drag to reorder. Click to edit.", comment: "UI"))
         label.font = .systemFont(ofSize: NSFont.smallSystemFontSize)
         label.textColor = .secondaryLabelColor
         label.frame = NSRect(x: margin,
@@ -279,7 +279,7 @@ private final class StatusPriorityViewController: NSViewController, CRUDTableVie
         // affecting the colored dot or this priority list’s meaning.
         // Pinned to the bottom with the other per-popover switch.
         let toggleY = margin
-        let toggle = NSButton(checkboxWithTitle: "Show status in tab subtitle",
+        let toggle = NSButton(checkboxWithTitle: NSLocalizedString("Show status in tab subtitle", comment: "UI"),
                               target: self,
                               action: #selector(showSubtitleToggleChanged(_:)))
         toggle.state = iTermUserDefaults.showSessionStatusInTabSubtitle ? .on : .off
@@ -294,7 +294,7 @@ private final class StatusPriorityViewController: NSViewController, CRUDTableVie
         // directly above the subtitle toggle so both per-popover switches are
         // grouped together.
         let mergeToggleY = toggleY + toggleHeight + toggleGap
-        let mergeToggle = NSButton(checkboxWithTitle: "Merge workgroup statuses",
+        let mergeToggle = NSButton(checkboxWithTitle: NSLocalizedString("Merge workgroup statuses", comment: "UI"),
                                    target: self,
                                    action: #selector(mergeWorkgroupsToggleChanged(_:)))
         mergeToggle.state = StatusPrioritySettings.shared.mergeWorkgroups ? .on : .off
@@ -310,7 +310,7 @@ private final class StatusPriorityViewController: NSViewController, CRUDTableVie
         let segmentY = mergeToggleY + toggleHeight + toggleGap
         let addRemove = NSSegmentedControl(images: [
             NSImage(systemSymbolName: "plus", accessibilityDescription: NSLocalizedString("Add", comment: "UI"))!,
-            NSImage(systemSymbolName: "minus", accessibilityDescription: "Remove")!
+            NSImage(systemSymbolName: "minus", accessibilityDescription: NSLocalizedString("Remove", comment: "UI"))!
         ], trackingMode: .momentary, target: nil, action: nil)
         addRemove.frame = NSRect(x: margin, y: segmentY, width: 60, height: segmentHeight)
         addRemove.autoresizingMask = [.maxXMargin, .maxYMargin]

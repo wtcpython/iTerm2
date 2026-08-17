@@ -32,7 +32,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "你发送或接收的每个令牌都可能产生 AI 提供商费用。"
+            "value": "你发送或接收的每个令牌都可能产生 AI 提供者费用。"
           }
         }
       }

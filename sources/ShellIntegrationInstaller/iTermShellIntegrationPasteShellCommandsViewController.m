@@ -41,7 +41,7 @@
 }
 
 - (NSString *)waitingText {
-    return @"⏳ Waiting for command to complete…";
+    return NSLocalizedString(@"⏳ Waiting for command to complete…", @"UI");
 }
 - (void)update {
     const int stage = _stage;
@@ -54,29 +54,29 @@
     NSString *prefix;
 
     if (stage < 0) {
-        prefix = @"1. Discover";
+        prefix = NSLocalizedString(@"1. Discover", @"UI");
     } else if (stage == 0) {
         if (_busy) {
             prefix = self.waitingText;
         } else {
-            prefix = @"➡ Select “Continue” to discover";
+            prefix = NSLocalizedString(@"➡ Select “Continue” to discover", @"UI");
         }
         indexToBold = lines.count;
     } else if (stage > 0) {
         if (self.shell == iTermShellIntegrationShellUnknown) {
-            prefix = @"🛑 Your shell is not supported.\n\nOnly bash, fish, tcsh, xonsh, and zsh work with shell integration";
+            prefix = NSLocalizedString(@"🛑 Your shell is not supported.\n\nOnly bash, fish, tcsh, xonsh, and zsh work with shell integration", @"UI");
         } else {
-            prefix = @"✅ Discovered";
+            prefix = NSLocalizedString(@"✅ Discovered", @"UI");
         }
     }
     if (self.shell == iTermShellIntegrationShellUnknown || (_busy && stage == 0)) {
         step = prefix;
     } else {
-        step = [NSString stringWithFormat:@"%@ your shell", prefix];
+        step = [NSString stringWithFormat:NSLocalizedString(@"%@ your shell", @"UI"), prefix];
     }
     if (stage > 0) {
         if (self.shell != iTermShellIntegrationShellUnknown) {
-            step = [step stringByAppendingFormat:@": you use “%@”.", iTermShellIntegrationShellString(self.shell)];
+            step = [step stringByAppendingFormat:NSLocalizedString(@": you use “%@”.", @"UI"), iTermShellIntegrationShellString(self.shell)];
         }
     } else if (stage != 0 || !_busy) {
         step = [step stringByAppendingString:@"."];
@@ -89,23 +89,23 @@
         self.skipButton.enabled = NO;
     } else {
         if (stage < 1) {
-            prefix = @"Step 2. Write";
+            prefix = NSLocalizedString(@"Step 2. Write", @"UI");
         } else if (stage == 1) {
             if (self.shell == iTermShellIntegrationShellUnknown) {
-                prefix = @"Step 2. Write";
+                prefix = NSLocalizedString(@"Step 2. Write", @"UI");
             } else if (_busy) {
                 prefix = self.waitingText;
             } else {
-                prefix = @"➡ Select “Continue” to write";
+                prefix = NSLocalizedString(@"➡ Select “Continue” to write", @"UI");
             }
             indexToBold = lines.count;
         } else if (stage > 1) {
-            prefix = @"✅ Wrote";
+            prefix = NSLocalizedString(@"✅ Wrote", @"UI");
         }
         if (_busy && stage == 1) {
             step = prefix;
         } else {
-            step = [NSString stringWithFormat:@"%@ the shell integration script.", prefix];
+            step = [NSString stringWithFormat:NSLocalizedString(@"%@ the shell integration script.", @"UI"), prefix];
         }
         [lines addObject:step];
 
@@ -113,20 +113,20 @@
         if (self.installUtilities) {
             i += 1;
             if (stage < 2) {
-                prefix = @"Step 3. Install";
+                prefix = NSLocalizedString(@"Step 3. Install", @"UI");
             } else if (stage == 2 && !_busy) {
-                prefix = @"➡ Select “Continue” to install";
+                prefix = NSLocalizedString(@"➡ Select “Continue” to install", @"UI");
                 indexToBold = lines.count;
             } else if (stage == 2 && _busy) {
                 prefix = self.waitingText;
                 indexToBold = lines.count;
             } else {
-                prefix = @"✅ Installed";
+                prefix = NSLocalizedString(@"✅ Installed", @"UI");
             }
             if (_busy && stage == 2) {
                 step = prefix;
             } else {
-                step = [NSString stringWithFormat:@"%@ iTerm2 utility scripts.", prefix];
+                step = [NSString stringWithFormat:NSLocalizedString(@"%@ iTerm2 utility scripts.", @"UI"), prefix];
             }
             [lines addObject:step];
         }
@@ -135,14 +135,14 @@
         // Show this step as already complete for xonsh.
         if (self.shell == iTermShellIntegrationShellXonsh) {
             if (stage < i) {
-                step = [NSString stringWithFormat:@"Step %d. Xonsh auto-loads scripts from rc.d (no dotfile update needed).", i + 1];
+                step = [NSString stringWithFormat:NSLocalizedString(@"Step %d. Xonsh auto-loads scripts from rc.d (no dotfile update needed).", @"UI"), i + 1];
             } else {
-                step = [NSString stringWithFormat:@"✅ Xonsh auto-loads scripts from rc.d (no dotfile update needed)."];
+                step = [NSString stringWithFormat:NSLocalizedString(@"✅ Xonsh auto-loads scripts from rc.d (no dotfile update needed).", @"UI")];
             }
             [lines addObject:step];
         } else {
             if (stage < i) {
-                prefix = [NSString stringWithFormat:@"Step %d. Update", i + 1];
+                prefix = [NSString stringWithFormat:NSLocalizedString(@"Step %d. Update", @"UI"), i + 1];
             } else if (stage == i && !_busy) {
                 prefix = NSLocalizedString(@"➡ Select “Continue” to update", @"UI");
                 indexToBold = lines.count;
@@ -150,13 +150,13 @@
                 prefix = self.waitingText;
                 indexToBold = lines.count;
             } else if (stage > i) {
-                prefix = @"✅ Updated";
+                prefix = NSLocalizedString(@"✅ Updated", @"UI");
             }
             if (_busy && stage == i) {
                 step = prefix;
             } else {
                 step =
-                [NSString stringWithFormat:@"%@ your shell's dotfile.", prefix];
+                [NSString stringWithFormat:NSLocalizedString(@"%@ your shell's dotfile.", @"UI"), prefix];
             }
             [lines addObject:step];
         }
@@ -167,7 +167,7 @@
         if (isDone) {
             [lines addObject:@""];
             indexToBold = lines.count;
-            [lines addObject:@"Done! Select “Continue” to proceed."];
+            [lines addObject:NSLocalizedString(@"Done! Select “Continue” to proceed.", @"UI")];
             self.skipButton.enabled = NO;
         } else {
             self.skipButton.enabled = !_busy;

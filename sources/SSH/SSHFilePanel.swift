@@ -678,7 +678,7 @@ extension SSHFilePanel {
         forwardButton.translatesAutoresizingMaskIntoConstraints = false
         forwardButton.bezelStyle = .texturedRounded
         forwardButton.image = NSImage.it_image(forSymbolName: SFSymbol.chevronRight.rawValue,
-                                               accessibilityDescription: "Forward",
+                                               accessibilityDescription: NSLocalizedString("Forward", comment: "UI"),
                                                fallbackImageName: "chevron.right",
                                                for: SSHFilePanel.self)
         forwardButton.isEnabled = false

@@ -116,7 +116,7 @@ class ToolStatus: NSView {
         settingsButton.bezelStyle = .regularSquare
         settingsButton.isBordered = false
         settingsButton.image = NSImage(systemSymbolName: "gearshape",
-                                       accessibilityDescription: "Settings")
+                                       accessibilityDescription: NSLocalizedString("Settings", comment: "UI"))
         settingsButton.imagePosition = .imageOnly
         settingsButton.target = self
         settingsButton.action = #selector(showSettings(_:))
@@ -493,15 +493,15 @@ private extension ToolStatus {
         let symbol: SFSymbol = armed ? .bellBadge : .bell
         notifyButton.state = armed ? .on : .off
         notifyButton.image = NSImage(systemSymbolName: symbol.rawValue,
-                                     accessibilityDescription: "Notify on status change")
+                                     accessibilityDescription: NSLocalizedString("Notify on status change", comment: "UI"))
         if armed {
             notifyButton.toolTip = targetingSession
-                ? "Watching the selected session for a status change. An alert will appear on the next change, then turn this off."
-                : "Watching this window for a session status change. An alert will appear on the next change, then turn this off."
+                ? NSLocalizedString("Watching the selected session for a status change. An alert will appear on the next change, then turn this off.", comment: "UI")
+                : NSLocalizedString("Watching this window for a session status change. An alert will appear on the next change, then turn this off.", comment: "UI")
         } else {
             notifyButton.toolTip = targetingSession
-                ? "Notify with an alert when the selected session’s status changes."
-                : "Notify with an alert when any session in this window changes status."
+                ? NSLocalizedString("Notify with an alert when the selected session’s status changes.", comment: "UI")
+                : NSLocalizedString("Notify with an alert when any session in this window changes status.", comment: "UI")
         }
     }
 
@@ -884,7 +884,7 @@ private extension ToolStatus {
                     let modString = NSString.modifierSymbols(mask: mask)
                     return "\(modString)\(ordinal)"
                 }
-                return "Pane \(ordinal)"
+                return String(format: NSLocalizedString("Pane %@", comment: "UI"), String(ordinal))
             }
         }
         // Session is in a different tab — show tab shortcut
@@ -897,7 +897,7 @@ private extension ToolStatus {
             return nil
         }
         if tabTag.rawValue == iTermPreferencesModifierTag.preferenceModifierTagNone.rawValue {
-            return "Tab \(tabIndex)"
+            return String(format: NSLocalizedString("Tab %@", comment: "UI"), String(tabIndex))
         }
         let mask = iTermPreferences.mask(for: tabTag)
         let modString = NSString.modifierSymbols(mask: mask)

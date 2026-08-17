@@ -271,15 +271,15 @@ class SecureUserDefault<T: SecureUserDefaultStringTranscodable & Codable & Equat
         var errorDescription: String? {
             switch self {
             case .usrLocalIsFile:
-                "\(FallbackFolder) is a file, not a directory. Please remove it and try again."
+                String(format: NSLocalizedString("%@ is a file, not a directory. Please remove it and try again.", comment: "UI"), FallbackFolder)
             case .failedToCreateUsrLocal:
-                "Failed to create \(FallbackFolder). Please manually create this folder."
+                String(format: NSLocalizedString("Failed to create %@. Please manually create this folder.", comment: "UI"), FallbackFolder)
             case .badMagic:
-                "The secure user default is corrupted."
+                NSLocalizedString("The secure user default is corrupted.", comment: "UI")
             case .scriptError(let message):
                 message
             case .directoryDoesNotExist:
-                "The containing directory for secure user defaults does not exist"
+                NSLocalizedString("The containing directory for secure user defaults does not exist", comment: "UI")
             }
         }
     }
@@ -383,7 +383,7 @@ class SecureUserDefault<T: SecureUserDefaultStringTranscodable & Codable & Equat
         // notifications for keys that were never written.
         try runPrivilegedWrites(statements: statements,
                                 keys: writes.map { $0.key },
-                                prompt: "iTerm2 needs to modify secure settings.")
+                                prompt: NSLocalizedString("iTerm2 needs to modify secure settings.", comment: "UI"))
     }
 
     private static func fallbackBaseDirectory(create: Bool) throws -> String {
@@ -589,7 +589,7 @@ class SecureUserDefault<T: SecureUserDefaultStringTranscodable & Codable & Equat
         let statement = try writeStatement(key: key, encodedValue: SecureUserDefaultValue<U>(value: value).encodedString)
         try runPrivilegedWrites(statements: [statement],
                                 keys: [key],
-                                prompt: "iTerm2 needs to modify a secure setting.")
+                                prompt: NSLocalizedString("iTerm2 needs to modify a secure setting.", comment: "UI"))
     }
 
     /// The double-backslash/double-quote escaping for a path embedded in the

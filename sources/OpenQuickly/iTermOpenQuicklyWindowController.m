@@ -108,7 +108,7 @@
     if (@available(macOS 10.16, *)) {
         {
             NSImage *image = [NSImage imageWithSystemSymbolName:SFSymbolGetString(SFSymbolMagnifyingglass)
-                                       accessibilityDescription:@"Search icon"];
+                                       accessibilityDescription:NSLocalizedString(@"Search icon", @"UI")];
             NSImageSymbolConfiguration *config =
             [NSImageSymbolConfiguration configurationWithPointSize:21
                                                             weight:NSFontWeightRegular];
@@ -119,7 +119,7 @@
             [NSImageSymbolConfiguration configurationWithPointSize:14
                                                             weight:NSFontWeightRegular];
             NSImage *image = [NSImage imageWithSystemSymbolName:SFSymbolGetString(SFSymbolXmarkCircleFill)
-                                       accessibilityDescription:@"Clear search query"];
+                                       accessibilityDescription:NSLocalizedString(@"Clear search query", @"UI")];
             [_xButton setImage:[image imageWithSymbolConfiguration:config]];
             NSRect frame = _xButton.frame;
             const CGFloat delta = 2;
@@ -313,9 +313,9 @@
     PTYTab *tab = (PTYTab *)session.delegate;
     NSString *windowTitle = tab.realParentWindow.window.title ?: @"";
     if (windowTitle.length == 0) {
-        return [NSString stringWithFormat:@"Tab %d", tab.objectCount];
+        return [NSString stringWithFormat:NSLocalizedString(@"Tab %d", @"UI"), tab.objectCount];
     }
-    return [NSString stringWithFormat:@"Tab %d · %@", tab.objectCount, windowTitle];
+    return [NSString stringWithFormat:NSLocalizedString(@"Tab %d · %@", @"UI"), tab.objectCount, windowTitle];
 }
 
 - (void)refreshPreview {
@@ -514,7 +514,7 @@
                         if (error) {
                             [iTermAPIHelper reportFunctionCallError:error
                                                       forInvocation:item.identifier
-                                                             origin:@"Open Quickly"
+                                                             origin:NSLocalizedString(@"Open Quickly", @"UI")
                                                              window:nil];
                         } else {
                             NSAlert *alert = [[NSAlert alloc] init];
@@ -712,7 +712,7 @@
                                 highlightedIndexes:(NSIndexSet *)highlight {
     NSString *prefix;
     if (name) {
-        prefix = [NSString stringWithFormat:@"%@: ", name];
+        prefix = [NSString stringWithFormat:@"%@: ", NSLocalizedString(name, @"UI")];
     } else {
         prefix = @"";
     }
@@ -728,7 +728,7 @@
                                                       featureName:(NSString *)featureName {
     NSString *composite;
     if (featureName) {
-        composite = [NSString stringWithFormat:@"%@: %@", featureName, detail];
+        composite = [NSString stringWithFormat:@"%@: %@", NSLocalizedString(featureName, @"UI"), detail];
     } else {
         composite = detail;
     }

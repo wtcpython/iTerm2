@@ -103,7 +103,7 @@ private extension iTermBrowserPasswordWriter {
     }
 
     private func confirm() -> Bool {
-        let message = "The focused field is not a password field. Fill it anyway?"
+        let message = NSLocalizedString("The focused field is not a password field. Fill it anyway?", comment: "UI")
         let alert = NSAlert()
         alert.messageText = message
         alert.addButton(withTitle: NSLocalizedString("OK", comment: "UI"))

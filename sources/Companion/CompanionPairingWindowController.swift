@@ -60,7 +60,7 @@ final class CompanionPairingWindowController: NSWindowController, NSWindowDelega
     // The consent setting. Always shown, never conditional on the plugin:
     // checking it grants consent (set(...), which prompts for authorization);
     // unchecking revokes it. Mirrors the AI plugin's enable checkbox.
-    private let consentCheckbox = NSButton(checkboxWithTitle: "Allow companion device pairing",
+    private let consentCheckbox = NSButton(checkboxWithTitle: NSLocalizedString("Allow companion device pairing", comment: "UI"),
                                            target: nil,
                                            action: nil)
     // The plugin setting: a status line (with a reload icon to its left that
@@ -167,24 +167,24 @@ final class CompanionPairingWindowController: NSWindowController, NSWindowDelega
         switch gate {
         case .aiAdminDisabled:
             // No remedy to offer: this is an administrator decision.
-            showBlockedTop("Generative AI features have been disabled. Check with your system administrator.")
+            showBlockedTop(NSLocalizedString("Generative AI features have been disabled. Check with your system administrator.", comment: "UI"))
         case .aiPluginMissing:
-            showBlockedTop("You must install the AI plugin before you can pair a companion device.",
-                           remedyTitle: "Reveal in Settings") {
+            showBlockedTop(NSLocalizedString("You must install the AI plugin before you can pair a companion device.", comment: "UI"),
+                           remedyTitle: NSLocalizedString("Reveal in Settings", comment: "UI")) {
                 PreferencePanel.sharedInstance().openToPreference(withKey: kPhonyPreferenceKeyInstallAIPlugin)
             }
         case .aiConsentNeeded:
-            showBlockedTop("You must enable AI features in settings before you can pair a companion device.",
+            showBlockedTop(NSLocalizedString("You must enable AI features in settings before you can pair a companion device.", comment: "UI"),
                            remedyTitle: NSLocalizedString("Reveal", comment: "UI")) {
                 PreferencePanel.sharedInstance().openToPreference(withKey: kPreferenceKeyEnableAI)
             }
         case .companionAdminDisabled:
             // No remedy to offer: this is an administrator decision.
-            showBlockedTop("Companion device pairing has been disabled. Check with your system administrator.")
+            showBlockedTop(NSLocalizedString("Companion device pairing has been disabled. Check with your system administrator.", comment: "UI"))
         case .companionPluginMissing:
-            showBlockedTop("Install the iTerm2 Companion plugin below, then allow companion device pairing.")
+            showBlockedTop(NSLocalizedString("Install the iTerm2 Companion plugin below, then allow companion device pairing.", comment: "UI"))
         case .companionConsentNeeded:
-            showBlockedTop("Turn on “Allow companion device pairing” below to begin.")
+            showBlockedTop(NSLocalizedString("Turn on “Allow companion device pairing” below to begin.", comment: "UI"))
         case .allowed:
             if controller.isConnected || controller.hasPairedDevice {
                 showPairedState()
@@ -286,7 +286,7 @@ final class CompanionPairingWindowController: NSWindowController, NSWindowDelega
         } else {
             pluginDetailLabel.stringValue = NSLocalizedString("iTerm2 Companion plugin not installed", comment: "UI")
             pluginDetailLabel.textColor = .secondaryLabelColor
-            setPluginAction(title: "Download Plugin…") {
+            setPluginAction(title: NSLocalizedString("Download Plugin…", comment: "UI")) {
                 if let url = URL(string: "https://iterm2.com/companion-plugin.html") {
                     NSWorkspace.shared.open(url)
                 }
@@ -513,11 +513,11 @@ final class CompanionPairingWindowController: NSWindowController, NSWindowDelega
             self?.showPairedState()
         }
         controller.onFailed = { [weak self] message in
-            self?.setStatus("Pairing failed: \(message)", color: .systemRed)
+            self?.setStatus(String(format: NSLocalizedString("Pairing failed: %@", comment: "UI"), message), color: .systemRed)
         }
         controller.onDisconnect = { [weak self] in
             guard let self else { return }
-            self.setStatus("Device disconnected.", color: .secondaryLabelColor)
+            self.setStatus(NSLocalizedString("Device disconnected.", comment: "UI"), color: .secondaryLabelColor)
             // Reflect the drop in the paired-state instructions right away
             // rather than waiting for the next poll.
             if self.currentGate == .allowed, self.controller.hasPairedDevice {
@@ -563,7 +563,7 @@ final class CompanionPairingWindowController: NSWindowController, NSWindowDelega
             roomNameLabel.isHidden = false
         }
         updatePairedConnectionText()
-        setStatus("To pair a different device, unpair first. Unpairing kicks the device off and deletes the pairing keys.",
+        setStatus(NSLocalizedString("To pair a different device, unpair first. Unpairing kicks the device off and deletes the pairing keys.", comment: "UI"),
                   color: .secondaryLabelColor)
     }
 
@@ -595,7 +595,7 @@ final class CompanionPairingWindowController: NSWindowController, NSWindowDelega
         guard !pairingAuthInFlight else { return }
         pairingAuthInFlight = true
         // The system sheet appears over the window; show a neutral prompt behind.
-        showBlockedTop("Authenticate to pair a companion device with this Mac.")
+        showBlockedTop(NSLocalizedString("Authenticate to pair a companion device with this Mac.", comment: "UI"))
         Task { [weak self] in
             guard let self else { return }
             let authenticated = await self.controller.authenticateToPair()
@@ -611,8 +611,8 @@ final class CompanionPairingWindowController: NSWindowController, NSWindowDelega
             if authenticated {
                 self.beginFreshPairing()
             } else {
-                self.showBlockedTop("Authentication is required to pair a companion device.",
-                                    remedyTitle: "Authenticate") { [weak self] in
+                self.showBlockedTop(NSLocalizedString("Authentication is required to pair a companion device.", comment: "UI"),
+                                    remedyTitle: NSLocalizedString("Authenticate", comment: "UI")) { [weak self] in
                     self?.startFreshPairingFlow()
                 }
             }
@@ -627,9 +627,9 @@ final class CompanionPairingWindowController: NSWindowController, NSWindowDelega
         do {
             let code = try controller.startPairing()
             qrImageView.image = CompanionPairingController.qrImage(for: code.urlString(), pointSize: 240)
-            setStatus("Waiting for your iPhone…", color: .secondaryLabelColor)
+            setStatus(NSLocalizedString("Waiting for your iPhone…", comment: "UI"), color: .secondaryLabelColor)
         } catch {
-            setStatus("Could not start pairing: \(error.localizedDescription)", color: .systemRed)
+            setStatus(String(format: NSLocalizedString("Could not start pairing: %@", comment: "UI"), error.localizedDescription), color: .systemRed)
         }
     }
 
@@ -701,7 +701,7 @@ final class CompanionPairingWindowController: NSWindowController, NSWindowDelega
         checkmarkImageView.frame = NSRect(x: 115, y: 274, width: 130, height: 130)
         let checkConfig = NSImage.SymbolConfiguration(pointSize: 96, weight: .regular)
         let checkImage = NSImage(systemSymbolName: SFSymbol.checkmarkCircleFill.rawValue,
-                                 accessibilityDescription: "Companion device connection status")?
+                                 accessibilityDescription: NSLocalizedString("Companion device connection status", comment: "UI"))?
             .withSymbolConfiguration(checkConfig)
         // Must be a template for contentTintColor to apply; .withSymbolConfiguration
         // can clear the flag. Template rendering also keeps the checkmark as a
@@ -809,7 +809,7 @@ final class CompanionPairingWindowController: NSWindowController, NSWindowDelega
         recheckButton.isBordered = false
         recheckButton.imageScaling = .scaleProportionallyDown
         recheckButton.image = NSImage(systemSymbolName: SFSymbol.arrowClockwise.rawValue,
-                                      accessibilityDescription: "Check again")?
+                                      accessibilityDescription: NSLocalizedString("Check again", comment: "UI"))?
             .withSymbolConfiguration(NSImage.SymbolConfiguration(pointSize: 12, weight: .regular))
         recheckButton.toolTip = NSLocalizedString("Check again for the plugin", comment: "UI")
         content.addSubview(recheckButton)

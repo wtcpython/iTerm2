@@ -531,7 +531,7 @@ const int kMaxSelectedTextLengthForCustomActions = 400;
             SCPPath *scpPath = [self.delegate contextMenu:self scpPathForFile:shortSelectedText onLine:coord.y];
             if (scpPath) {
                 scpTitle = [NSString stringWithFormat:NSLocalizedString(@"Download %1$@ from %2$@", @"Context menu"),
-                            sshIntegrationDownload ? @"using SSH Integration" : @"with scp",
+                            sshIntegrationDownload ? NSLocalizedString(@"using SSH Integration", @"Context menu") : NSLocalizedString(@"with scp", @"Context menu"),
                             scpPath.hostname];
             }
         }];

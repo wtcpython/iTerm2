@@ -1017,7 +1017,7 @@ andEditComponentWithIdentifier:(NSString *)identifier
             }
         }
 
-        NSMenu *menu = [[NSMenu alloc] initWithTitle:@"Search Options"];
+        NSMenu *menu = [[NSMenu alloc] initWithTitle:NSLocalizedString(@"Search Options", @"UI")];
         NSMenuItem *menuItem = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Show indicators for non-default values", @"Menu")
                                                           action:@selector(toggleIndicateNonDefaultValues:)
                                                    keyEquivalent:@""];

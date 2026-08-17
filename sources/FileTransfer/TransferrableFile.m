@@ -189,14 +189,14 @@ static NSMutableSet<NSString *> *iTermTransferrableFileLockedFileNames(void) {
 
                 case kTransferrableFileStatusFinishedSuccessfully:
                     [[iTermNotificationController sharedInstance] notify:
-                        [NSString stringWithFormat:@"%@ finished for “%@”.",
-                            self.isDownloading ? NSLocalizedString(@"Download", @"UI") : @"Upload", [self shortName]]];
+                        [NSString stringWithFormat:NSLocalizedString(@"%@ finished for “%@”.", @"UI"),
+                            self.isDownloading ? NSLocalizedString(@"Download", @"UI") : NSLocalizedString(@"Upload", @"UI"), [self shortName]]];
                     break;
 
                 case kTransferrableFileStatusFinishedWithError:
                     [[iTermNotificationController sharedInstance] notify:
-                     [NSString stringWithFormat:@"%@ failed for “%@”.",
-                      self.isDownloading ? NSLocalizedString(@"Download", @"UI") : @"Upload", [self shortName]]];
+                     [NSString stringWithFormat:NSLocalizedString(@"%@ failed for “%@”.", @"UI"),
+                      self.isDownloading ? NSLocalizedString(@"Download", @"UI") : NSLocalizedString(@"Upload", @"UI"), [self shortName]]];
             }
         }
     }

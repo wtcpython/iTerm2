@@ -404,7 +404,7 @@ class ChatListViewController: NSViewController {
                          target: self)
             menu.addItem(.separator())
         }
-        let title = count == 1 ? "Delete Chat" : "Delete \(count) Chats"
+        let title = count == 1 ? NSLocalizedString("Delete Chat", comment: "UI") : String(format: NSLocalizedString("Delete %ld Chats", comment: "UI"), count)
         menu.addItem(withTitle: title,
                      action: #selector(deleteSelectedChats(_:)),
                      target: self)

@@ -1211,7 +1211,7 @@ static void iTermUncaughtExceptionHandler(NSException *exception) {
         static dispatch_once_t onceToken;
         dispatch_once(&onceToken, ^{
             NSImage *image = [NSImage imageWithSystemSymbolName:SFSymbolGetString(SFSymbolSparkles)
-                                       accessibilityDescription:@"Leader pending"];
+                                       accessibilityDescription:NSLocalizedString(@"Leader pending", @"UI")];
             NSImage *black = [image it_imageWithTintColor:[NSColor blackColor]];
             NSImage *white = [image it_imageWithTintColor:[NSColor whiteColor]];
             NSSize size = image.size;

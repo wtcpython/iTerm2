@@ -171,11 +171,11 @@ fileprivate class CommandOptionsView: NSView {
         scrollView.translatesAutoresizingMaskIntoConstraints = false
 
         
-        addHorizontalStackView(createHorizontalStackView(label: "Command:",
+        addHorizontalStackView(createHorizontalStackView(label: NSLocalizedString("Command:", comment: "UI"),
                                                          view: scrollView,
                                                          firstBaselineAnchor: scrollView.centerYAnchor))
 
-        runOnSSHToggle = NSButton(checkboxWithTitle: "Run on \(hostname) via ssh", target: self, action: #selector(runOnSSHToggleValueChanged))
+        runOnSSHToggle = NSButton(checkboxWithTitle: String(format: NSLocalizedString("Run on %@ via ssh", comment: "UI"), hostname), target: self, action: #selector(runOnSSHToggleValueChanged))
         usernameTextField = NSTextField()
 
         if runOnSSH {
@@ -190,7 +190,7 @@ fileprivate class CommandOptionsView: NSView {
             usernameTextField.placeholderString = NSLocalizedString("Username", comment: "UI")
             usernameTextField.font = NSFont.systemFont(ofSize: NSFont.systemFontSize, weight: .regular)
             usernameTextField.translatesAutoresizingMaskIntoConstraints = false
-            usernameStackView.addArrangedSubview(createHorizontalStackView(label: "Username:",
+            usernameStackView.addArrangedSubview(createHorizontalStackView(label: NSLocalizedString("Username:", comment: "UI"),
                                                                            view: usernameTextField,
                                                                            firstBaselineAnchor: usernameTextField.firstBaselineAnchor))
             addHorizontalStackView(usernameStackView)
@@ -200,7 +200,7 @@ fileprivate class CommandOptionsView: NSView {
         directoryTextField.placeholderString = NSLocalizedString("Directory", comment: "UI")
         directoryTextField.font = NSFont.systemFont(ofSize: NSFont.systemFontSize, weight: .regular)
         directoryTextField.translatesAutoresizingMaskIntoConstraints = false
-        addHorizontalStackView(createHorizontalStackView(label: "Directory:",
+        addHorizontalStackView(createHorizontalStackView(label: NSLocalizedString("Directory:", comment: "UI"),
                                                          view: directoryTextField,
                                                          firstBaselineAnchor: directoryTextField.firstBaselineAnchor))
 
@@ -406,15 +406,15 @@ class CommandURLHandler: NSObject {
     @objc
     func show(completion: ((CommandURLHandler) -> ())?) {
         if _action == .runSilently {
-            var parts = ["Run command", "“" + self.command + "”"]
+            var parts = [String(format: NSLocalizedString("Run command “%@”", comment: "UI"), self.command)]
             if let username {
-                parts.append("as \(username)")
+                parts.append(String(format: NSLocalizedString("as %@", comment: "UI"), username))
             }
             if let hostname, !hostname.isEmpty {
-                parts.append("on \(hostname)")
+                parts.append(String(format: NSLocalizedString("on %@", comment: "UI"), hostname))
             }
             if let directory {
-                parts.append("in \(directory)")
+                parts.append(String(format: NSLocalizedString("in %@", comment: "UI"), directory))
             }
             let selection = iTermWarning.show(withTitle: String(format: NSLocalizedString("%@?\nIt will run silently in the background.", comment: "UI"), parts.joined(separator: " ")),
                                               actions: [ NSLocalizedString("OK", comment: "UI"), NSLocalizedString("Cancel", comment: "UI")],

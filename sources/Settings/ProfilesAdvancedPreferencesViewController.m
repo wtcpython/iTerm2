@@ -88,20 +88,20 @@
                    type:kPreferenceInfoTypeTokenField];
 
     [self addViewToSearchIndex:_triggersButton
-                   displayName:@"Triggers"
-                       phrases:@[ @"regular expression", @"regex" ]
+                   displayName:NSLocalizedString(@"Triggers", @"UI")
+                       phrases:@[ NSLocalizedString(@"regular expression", @"UI"), @"regex" ]
                            key:nil];
     [self addViewToSearchIndex:_smartSelectionButton
-                   displayName:@"Smart selection"
-                       phrases:@[ @"regular expression", @"regex" ]
+                   displayName:NSLocalizedString(@"Smart selection", @"UI")
+                       phrases:@[ NSLocalizedString(@"regular expression", @"UI"), @"regex" ]
                            key:nil];
     [self addViewToSearchIndex:_automaticProfileSwitchingView
-                   displayName:@"Automatic profile switching rules"
+                   displayName:NSLocalizedString(@"Automatic profile switching rules", @"UI")
                        phrases:@[]
                            key:nil];
     [self addViewToSearchIndex:_semanticHistoryAction
-                   displayName:@"Semantic history"
-                       phrases:@[ @"cmd click", @"open file", @"open url" ]
+                   displayName:NSLocalizedString(@"Semantic history", @"UI")
+                       phrases:@[ NSLocalizedString(@"cmd click", @"UI"), NSLocalizedString(@"open file", @"UI"), NSLocalizedString(@"open url", @"UI") ]
                            key:nil];
     _enableAPSLogging.state = iTermUserDefaults.enableAutomaticProfileSwitchingLogging ? NSControlStateValueOn : NSControlStateValueOff;
 }
@@ -196,7 +196,7 @@
     [[triggerController.window undoManager] registerUndoWithTarget:self
                                                           selector:@selector(setTriggersValue:)
                                                             object:[self objectForKey:KEY_TRIGGERS]];
-    [[triggerController.window undoManager] setActionName:@"Edit Triggers"];
+    [[triggerController.window undoManager] setActionName:NSLocalizedString(@"Edit Triggers", @"UI")];
 
     // No side effects because we don't want the tableview to get reloaded. We'll save when the
     // panel is closed. by setting the _triggersModelHasChanged flag.

@@ -159,10 +159,10 @@ typedef NS_ENUM(NSInteger, iTermScriptFilterControlTag) {
     [self makeTextViewHorizontallyScrollable:_logsView];
     [self makeTextViewHorizontallyScrollable:_callsView];
 
-    [self setSymbol:SFSymbolGetString(SFSymbolScope) tooltip:@"Inspector" onButton:_inspectorButton];
-    [self setSymbol:SFSymbolGetString(SFSymbolStopCircle) tooltip:@"Terminate" onButton:_terminateButton];
-    [self setSymbol:SFSymbolGetString(SFSymbolArrowClockwise) tooltip:@"Restart" onButton:_startButton];
-    [self setSymbol:SFSymbolGetString(SFSymbolTrash) tooltip:@"Clear Terminated" onButton:_clearTerminatedButton];
+    [self setSymbol:SFSymbolGetString(SFSymbolScope) tooltip:NSLocalizedString(@"Inspector", @"UI") onButton:_inspectorButton];
+    [self setSymbol:SFSymbolGetString(SFSymbolStopCircle) tooltip:NSLocalizedString(@"Terminate", @"UI") onButton:_terminateButton];
+    [self setSymbol:SFSymbolGetString(SFSymbolArrowClockwise) tooltip:NSLocalizedString(@"Restart", @"UI") onButton:_startButton];
+    [self setSymbol:SFSymbolGetString(SFSymbolTrash) tooltip:NSLocalizedString(@"Clear Terminated", @"UI") onButton:_clearTerminatedButton];
 
     [self reloadTableFully];
 }
@@ -548,9 +548,9 @@ typedef NS_ENUM(NSInteger, iTermScriptFilterControlTag) {
 
 - (NSString *)formatPIDs:(NSArray<NSNumber *> *)pids {
     if (pids.count == 1) {
-        return [NSString stringWithFormat:@"PID %@", pids[0]];
+        return [NSString stringWithFormat:NSLocalizedString(@"PID %@", @"UI"), pids[0]];
     }
-    return [NSString stringWithFormat:@"PIDs %@", [pids componentsJoinedByString:@", "]];
+    return [NSString stringWithFormat:NSLocalizedString(@"PIDs %@", @"UI"), [pids componentsJoinedByString:@", "]];
 }
 
 - (void)connectionRejected:(NSNotification *)notification {

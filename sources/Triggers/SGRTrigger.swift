@@ -10,11 +10,11 @@ import Foundation
 @objc(iTermSGRTrigger)
 class SGRTrigger: Trigger {
     override var description: String {
-        return "Change Style “\(self.param ?? "")”"
+        return String(format: NSLocalizedString("Change Style “%@”", comment: "UI"), String(describing: self.param ?? ""))
     }
 
     override static var title: String {
-        return "Change Style…"
+        return NSLocalizedString("Change Style…", comment: "UI")
     }
 
     override func takesParameter() -> Bool {

@@ -343,7 +343,7 @@ class OnePasswordDataSource: CommandLinePasswordDataSource {
     }
 
     private var setPasswordRecipe: AnyRecipe<SetPasswordRequest, Void> {
-        return AnyRecipe(UnsupportedRecipe<SetPasswordRequest, Void>(reason: "1Password's CLI has no secure way to change a password."))
+        return AnyRecipe(UnsupportedRecipe<SetPasswordRequest, Void>(reason: NSLocalizedString("1Password's CLI has no secure way to change a password.", comment: "UI")))
     }
 
     private var deleteRecipe: AnyRecipe<AccountIdentifier, Void> {

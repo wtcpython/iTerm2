@@ -28,26 +28,26 @@ class AdapterPasswordDataSource: CommandLinePasswordDataSource {
             case .runtime(let message):
                 return message
             case .loginFailed(let message):
-                return "Could not log in: \(message)"
+                return String(format: NSLocalizedString("Could not log in: %@", comment: "UI"), message)
             case .needsAuthentication:
-                return "Not authenticated."
+                return NSLocalizedString("Not authenticated.", comment: "UI")
             case .badOutput:
-                return "Invalid output."
+                return NSLocalizedString("Invalid output.", comment: "UI")
             case .canceledByUser:
                 return nil
             case .handshakeFailed:
-                return "Handshake failed."
+                return NSLocalizedString("Handshake failed.", comment: "UI")
             case .incompatibleProtocol:
-                return "Incompatible protocol. Please update iTerm2."
+                return NSLocalizedString("Incompatible protocol. Please update iTerm2.", comment: "UI")
             case .adapterNotFound:
-                return "Adapter not found."
+                return NSLocalizedString("Adapter not found.", comment: "UI")
             case .invalidToken:
-                return "Authentication failed. Log in again."
+                return NSLocalizedString("Authentication failed. Log in again.", comment: "UI")
             }
         }
 
         var errorDescription: String? {
-            reason ?? "Unknown error"
+            reason ?? NSLocalizedString("Unknown error", comment: "UI")
         }
     }
 
@@ -125,7 +125,7 @@ class AdapterPasswordDataSource: CommandLinePasswordDataSource {
                 }
 
                 guard let output = output else {
-                    completion(.failure(AdapterError.runtime("No output from adapter")))
+                    completion(.failure(AdapterError.runtime(NSLocalizedString("No output from adapter", comment: "UI"))))
                     return
                 }
 
@@ -137,7 +137,7 @@ class AdapterPasswordDataSource: CommandLinePasswordDataSource {
                 }
 
                 if output.returnCode != 0 {
-                    completion(.failure(AdapterError.runtime("Adapter returned code \(output.returnCode)")))
+                    completion(.failure(AdapterError.runtime(String(format: NSLocalizedString("Adapter returned code %@", comment: "UI"), String(output.returnCode)))))
                     return
                 }
 
@@ -221,7 +221,7 @@ class AdapterPasswordDataSource: CommandLinePasswordDataSource {
 
     private func requestPathToDatabaseViaTextField(handshake: HandshakeResponse) -> Bool {
         let alert = NSAlert()
-        alert.messageText = handshake.pathToDatabasePrompt ?? "Enter database URL for \(identifier)"
+        alert.messageText = handshake.pathToDatabasePrompt ?? String(format: NSLocalizedString("Enter database URL for %@", comment: "UI"), identifier)
         alert.addButton(withTitle: NSLocalizedString("OK", comment: "UI"))
         alert.addButton(withTitle: NSLocalizedString("Cancel", comment: "UI"))
 
@@ -461,10 +461,10 @@ class AdapterPasswordDataSource: CommandLinePasswordDataSource {
     }
 
     private func requestPassword(_ loginInputs: LoginInputs) {
-        let label = handshakeInfo?.masterPasswordLabel ?? "master password"
+        let label = handshakeInfo?.masterPasswordLabel ?? NSLocalizedString("master password", comment: "UI")
         // Use runAsync because macOS 26 is buggy garbage and doesn’t draw an insertion point
         // in an alert’s accessory in a sheet modal.
-        ModalPasswordAlert("Enter \(label) for \(loginInputs.name):")
+        ModalPasswordAlert(String(format: NSLocalizedString("Enter %@ for %@:", comment: "UI"), label, loginInputs.name))
             .runAsync(window: loginInputs.window) { [weak self] masterPassword in
                 if let masterPassword {
                     self?.completeEnsureAuthentication(masterPassword: masterPassword,
@@ -502,7 +502,7 @@ class AdapterPasswordDataSource: CommandLinePasswordDataSource {
                 if case let .runtime(description) = error as? AdapterError {
                     let loginFailed = AdapterError.loginFailed(description)
                     let selection = iTermWarning.show(withTitle: loginFailed.reason ?? description,
-                                                      actions: ["Try Again", NSLocalizedString("Cancel", comment: "UI")],
+                                                      actions: [NSLocalizedString("Try Again", comment: "UI"), NSLocalizedString("Cancel", comment: "UI")],
                                                       accessory: nil,
                                                       identifier: nil,
                                                       silenceable: .kiTermWarningTypePersistent,
@@ -528,7 +528,7 @@ class AdapterPasswordDataSource: CommandLinePasswordDataSource {
         return AnyRecipe(AsyncCommandRecipe<Void, [CommandLinePasswordDataSource.Account]>(
             inputTransformer: { [weak self] context, _, completion in
                 guard let self = self else {
-                    completion(.failure(AdapterError.runtime("Data source deallocated")))
+                    completion(.failure(AdapterError.runtime(NSLocalizedString("Data source deallocated", comment: "UI"))))
                     return
                 }
 
@@ -598,7 +598,7 @@ class AdapterPasswordDataSource: CommandLinePasswordDataSource {
         return AnyRecipe(AsyncCommandRecipe<CommandLinePasswordDataSource.AccountIdentifier, CommandLinePasswordDataSource.Password>(
             inputTransformer: { [weak self] context, accountIdentifier, completion in
                 guard let self = self else {
-                    completion(.failure(AdapterError.runtime("Data source deallocated")))
+                    completion(.failure(AdapterError.runtime(NSLocalizedString("Data source deallocated", comment: "UI"))))
                     return
                 }
 
@@ -658,7 +658,7 @@ class AdapterPasswordDataSource: CommandLinePasswordDataSource {
         return AnyRecipe(AsyncCommandRecipe<CommandLinePasswordDataSource.SetPasswordRequest, Void>(
             inputTransformer: { [weak self] context, setPasswordRequest, completion in
                 guard let self = self else {
-                    completion(.failure(AdapterError.runtime("Data source deallocated")))
+                    completion(.failure(AdapterError.runtime(NSLocalizedString("Data source deallocated", comment: "UI"))))
                     return
                 }
 
@@ -674,7 +674,7 @@ class AdapterPasswordDataSource: CommandLinePasswordDataSource {
                     }
 
                     if !handshake.canSetPasswords {
-                        completion(.failure(CommandLineRecipeError.unsupported(reason: "Adapter does not support setting passwords")))
+                        completion(.failure(CommandLineRecipeError.unsupported(reason: NSLocalizedString("Adapter does not support setting passwords", comment: "UI"))))
                         return
                     }
 
@@ -730,7 +730,7 @@ class AdapterPasswordDataSource: CommandLinePasswordDataSource {
         return AnyRecipe(AsyncCommandRecipe<CommandLinePasswordDataSource.AccountIdentifier, Void>(
             inputTransformer: { [weak self] context, accountIdentifier, completion in
                 guard let self = self else {
-                    completion(.failure(AdapterError.runtime("Data source deallocated")))
+                    completion(.failure(AdapterError.runtime(NSLocalizedString("Data source deallocated", comment: "UI"))))
                     return
                 }
 
@@ -790,7 +790,7 @@ class AdapterPasswordDataSource: CommandLinePasswordDataSource {
         return AnyRecipe(AsyncCommandRecipe<CommandLinePasswordDataSource.AddRequest, CommandLinePasswordDataSource.AccountIdentifier>(
             inputTransformer: { [weak self] context, addRequest, completion in
                 guard let self = self else {
-                    completion(.failure(AdapterError.runtime("Data source deallocated")))
+                    completion(.failure(AdapterError.runtime(NSLocalizedString("Data source deallocated", comment: "UI"))))
                     return
                 }
 

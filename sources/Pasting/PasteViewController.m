@@ -136,7 +136,7 @@ static NSString *iTermPasteViewControllerNibName(BOOL mini) {
     button.imageScaling = NSImageScaleProportionallyDown;
     [button setButtonType:NSButtonTypePushOnPushOff];
     button.image = [NSImage it_imageForSymbolName:SFSymbolGetString(SFSymbolKeyboard)
-                             accessibilityDescription:@"Send keystrokes to terminal"];
+                             accessibilityDescription:NSLocalizedString(@"Send keystrokes to terminal", @"UI")];
     button.target = self;
     button.action = @selector(toggleKeystrokePassthrough:);
     button.toolTip =

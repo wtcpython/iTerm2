@@ -128,7 +128,7 @@ class ChatToolbar {
 
         do {
             let webSearchButton = WebSearchButton(image: NSImage.it_image(forSymbolName: SFSymbol.globe.rawValue,
-                                                                          accessibilityDescription: "Web search image",
+                                                                          accessibilityDescription: NSLocalizedString("Web search image", comment: "UI"),
                                                                           fallbackImageName: "globe",
                                                                           for: Self.self)!,
                                                   target: nil,
@@ -152,7 +152,7 @@ class ChatToolbar {
 
             let image = NSImage(
                 systemSymbolName: SFSymbol.lightbulb.rawValue,
-                accessibilityDescription: "Enable high-effort reasoning?")?.withSymbolConfiguration(smallerConfig)
+                accessibilityDescription: NSLocalizedString("Enable high-effort reasoning?", comment: "UI"))?.withSymbolConfiguration(smallerConfig)
             let thinkingButton = ThinkingButton(image: image!,
                                                   target: nil,
                                                 action: nil)
@@ -412,8 +412,8 @@ extension ChatToolbar {
         selector.isHidden = selectableCount <= 1
         selector.isEnabled = !options.isEmpty && (dataSource?.canChangeProvider == true)
         selector.toolTip = selector.isEnabled
-            ? "Select the AI provider for this chat before sending the first message."
-            : "The provider is fixed after the first real message in a chat."
+            ? NSLocalizedString("Select the AI provider for this chat before sending the first message.", comment: "UI")
+            : NSLocalizedString("The provider is fixed after the first real message in a chat.", comment: "UI")
         if let selectedIdentifier = dataSource?.effectiveProviderIdentifier {
             select(selector, representedObject: selectedIdentifier)
         } else if !options.isEmpty {
@@ -575,23 +575,23 @@ extension ChatToolbar {
 
     private static func reasoningEffortTitle(_ effort: ResponsesRequestBody.ReasoningOptions.Effort) -> String {
         let value = switch effort {
-        case .none: "None"
-        case .minimal: "Minimal"
-        case .low: "Low"
-        case .medium: "Medium"
-        case .high: "High"
-        case .xhigh: "XHigh"
+        case .none: NSLocalizedString("None", comment: "UI")
+        case .minimal: NSLocalizedString("Minimal", comment: "UI")
+        case .low: NSLocalizedString("Low", comment: "UI")
+        case .medium: NSLocalizedString("Medium", comment: "UI")
+        case .high: NSLocalizedString("High", comment: "UI")
+        case .xhigh: NSLocalizedString("XHigh", comment: "UI")
         }
-        return "Effort: \(value)"
+        return String(format: NSLocalizedString("Effort: %@", comment: "UI"), value)
     }
 
     private static func serviceTierTitle(_ tier: ResponsesRequestBody.ServiceTier) -> String {
         let value = switch tier {
-        case .auto: "Auto"
-        case .default: "Standard"
-        case .priority: "Priority (Fast)"
-        case .flex: "Flex (Slow)"
+        case .auto: NSLocalizedString("Auto", comment: "UI")
+        case .default: NSLocalizedString("Standard", comment: "UI")
+        case .priority: NSLocalizedString("Priority (Fast)", comment: "UI")
+        case .flex: NSLocalizedString("Flex (Slow)", comment: "UI")
         }
-        return "Tier: \(value)"
+        return String(format: NSLocalizedString("Tier: %@", comment: "UI"), value)
     }
 }

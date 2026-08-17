@@ -988,7 +988,7 @@ static NSArray<NSString *> *gTerminalCachedCombinedAccountNames;
             NSButton *reveal = [[NSButton alloc] initWithFrame:NSMakeRect(labelWidth + 8 + fieldWidth + 4, y, eyeButtonWidth, rowHeight)];
             reveal.bezelStyle = NSBezelStyleRegularSquare;
             reveal.bordered = YES;
-            reveal.image = [NSImage imageWithSystemSymbolName:@"eye" accessibilityDescription:@"Show"];
+            reveal.image = [NSImage imageWithSystemSymbolName:@"eye" accessibilityDescription:NSLocalizedString(@"Show", @"UI")];
             reveal.imagePosition = NSImageOnly;
             reveal.buttonType = NSButtonTypeMomentaryPushIn;
             reveal.target = helper;
@@ -1545,7 +1545,7 @@ static NSInteger const kDynamicMenuItemTag = 9999;
 }
 
 - (NSString *)nameForNewAccount {
-    static NSString *const kNewAccountName = @"New Account";
+    NSString *const kNewAccountName = NSLocalizedString(@"New Account", @"UI");
     int number = 0;
     NSString *name = kNewAccountName;
     while ([self indexOfAccountName:name] != NSNotFound) {
@@ -1557,7 +1557,7 @@ static NSInteger const kDynamicMenuItemTag = 9999;
                                                                        options:0
                                                                         locale:[NSLocale currentLocale]];
             NSString *formattedDate = [dateFormatter stringFromDate:[NSDate date]];
-            return [NSString stringWithFormat:@"New Account %@", formattedDate];
+            return [NSString stringWithFormat:NSLocalizedString(@"New Account %@", @"UI"), formattedDate];
         }
     }
     return name;

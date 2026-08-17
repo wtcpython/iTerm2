@@ -46,7 +46,7 @@ static NSString *const iTermStatusBarActionKey = @"action";
 
 - (NSArray<iTermStatusBarComponentKnob *> *)statusBarComponentKnobs {
     iTermStatusBarComponentKnob *actionKnob =
-    [[iTermStatusBarComponentKnob alloc] initWithLabelText:@"Action"
+    [[iTermStatusBarComponentKnob alloc] initWithLabelText:NSLocalizedString(@"Action", @"UI")
                                                       type:iTermStatusBarComponentKnobTypeAction
                                                placeholder:nil
                                               defaultValue:nil
@@ -84,7 +84,7 @@ static NSString *const iTermStatusBarActionKey = @"action";
 }
 
 - (NSString *)statusBarComponentShortDescription {
-    return @"Custom Action";
+    return NSLocalizedString(@"Custom Action", @"UI");
 }
 
 - (BOOL)statusBarComponentCanStretch {
@@ -92,7 +92,7 @@ static NSString *const iTermStatusBarActionKey = @"action";
 }
 
 - (NSString *)statusBarComponentDetailedDescription {
-    return @"Adds a button that performs a user-configurable action, similar to a key binding.";
+    return NSLocalizedString(@"Adds a button that performs a user-configurable action, similar to a key binding.", @"UI");
 }
 
 - (id)statusBarComponentExemplarWithBackgroundColor:(NSColor *)backgroundColor
@@ -101,7 +101,7 @@ static NSString *const iTermStatusBarActionKey = @"action";
     if (dict.count) {
         return self.action.title;
     } else {
-        return @"Custom Action";
+        return NSLocalizedString(@"Custom Action", @"UI");
     }
 }
 
@@ -145,16 +145,16 @@ static NSString *const iTermStatusBarActionKey = @"action";
 }
 
 - (NSString *)statusBarComponentShortDescription {
-    return @"Actions Menu";
+    return NSLocalizedString(@"Actions Menu", @"UI");
 }
 
 - (NSString *)statusBarComponentDetailedDescription {
-    return @"When clicked, opens a menu of actions. Actions are like custom key bindings, but without a keystroke attached.";
+    return NSLocalizedString(@"When clicked, opens a menu of actions. Actions are like custom key bindings, but without a keystroke attached.", @"UI");
 }
 
 - (id)statusBarComponentExemplarWithBackgroundColor:(NSColor *)backgroundColor
                                           textColor:(NSColor *)textColor {
-    return @"Action…";
+    return NSLocalizedString(@"Action…", @"UI");
 }
 
 - (BOOL)statusBarComponentCanStretch {
@@ -162,7 +162,7 @@ static NSString *const iTermStatusBarActionKey = @"action";
 }
 
 - (nullable NSString *)stringValue {
-    return @"Perform Action…";
+    return NSLocalizedString(@"Perform Action…", @"UI");
 }
 
 - (nullable NSString *)stringValueForCurrentWidth {

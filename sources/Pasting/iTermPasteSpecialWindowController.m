@@ -137,7 +137,7 @@
                     if (title.length > kMaxLength) {
                         title = [[title substringToIndex:kMaxLength] stringByAppendingString:@"…"];
                     }
-                    [labels addObject:[NSString stringWithFormat:@"Text: “%@”", title]];
+                    [labels addObject:[NSString stringWithFormat:NSLocalizedString(@"Text: “%@”", @"UI"), title]];
                     [values addObject:entry.mainValue];
                 }
                 [labels addObject:[NSNull null]];
@@ -231,8 +231,8 @@
                     break;
                 }
             }
-            NSString *label = [NSString stringWithFormat:@"%@: “%@”",
-                               [(description ?: @"Unknown Type") stringByCapitalizingFirstLetter],
+            NSString *label = [NSString stringWithFormat:NSLocalizedString(@"%@: “%@”", @"UI"),
+                               [(description ?: NSLocalizedString(@"Unknown Type", @"UI")) stringByCapitalizingFirstLetter],
                                [string ellipsizedDescriptionNoLongerThan:100]];
             [labels addObject:label];
         }
@@ -274,9 +274,9 @@
 
     [values addObject:[modifiedFilenames componentsJoinedByString:@" "]];
     if (filenames.count > 1) {
-        [labels addObject:@"Multiple file names"];
+        [labels addObject:NSLocalizedString(@"Multiple file names", @"UI")];
     } else if (filenames.count == 1) {
-        [labels addObject:@"File name"];
+        [labels addObject:NSLocalizedString(@"File name", @"UI")];
     }
 
     // Add an item for each existing non-directory file.
@@ -286,7 +286,7 @@
         if ([fileManager fileExistsAtPath:filename isDirectory:&isDirectory] &&
             !isDirectory) {
             [values addObject:[[iTermFileReference alloc] initWithName:filename]];
-            [labels addObject:[NSString stringWithFormat:@"Contents of %@", filename]];
+            [labels addObject:[NSString stringWithFormat:NSLocalizedString(@"Contents of %@", @"UI"), filename]];
         }
     }
 }

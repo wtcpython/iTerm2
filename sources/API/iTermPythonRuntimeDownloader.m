@@ -376,7 +376,7 @@ NSString *const iTermPythonRuntimeDownloaderDidInstallRuntimeNotification = @"iT
             if (!shouldContinue) {
                 return nil;
             }
-            return [[iTermInstallingPhase alloc] initWithURL:nil title:@"Download Finished" nextPhaseFactory:nil];
+            return [[iTermInstallingPhase alloc] initWithURL:nil title:NSLocalizedString(@"Download Finished", @"UI") nextPhaseFactory:nil];
         }];
     }];
     _downloadController.completion = ^(iTermOptionalComponentDownloadPhase *lastPhase) {
@@ -463,7 +463,7 @@ NSString *const iTermPythonRuntimeDownloaderDidInstallRuntimeNotification = @"iT
     if (!payloadPhase || payloadPhase.error) {
         RLog(@"Download failed");
         [_downloadController.window makeKeyAndOrderFront:nil];
-        [[iTermNotificationController sharedInstance] notify:@"Download failed ☹️"];
+        [[iTermNotificationController sharedInstance] notify:NSLocalizedString(@"Download failed ☹️", @"UI")];
         _status = iTermPythonRuntimeDownloaderStatusError;
         dispatch_group_leave(group);
         return NO;
@@ -472,7 +472,7 @@ NSString *const iTermPythonRuntimeDownloaderDidInstallRuntimeNotification = @"iT
     const BOOL ok = [self writeInputStream:payloadPhase.stream toFile:tempfile];
     if (!ok) {
         DLog(@"Failed to write to %@", tempfile);
-        [[iTermNotificationController sharedInstance] notify:@"Could not extract archive ☹️"];
+        [[iTermNotificationController sharedInstance] notify:NSLocalizedString(@"Could not extract archive ☹️", @"UI")];
         _status = iTermPythonRuntimeDownloaderStatusError;
         dispatch_group_leave(group);
         return NO;
@@ -499,7 +499,7 @@ NSString *const iTermPythonRuntimeDownloaderDidInstallRuntimeNotification = @"iT
         void (^completion)(NSError *) = ^(NSError *error){
             if (!error) {
                 [[NSNotificationCenter defaultCenter] postNotificationName:iTermPythonRuntimeDownloaderDidInstallRuntimeNotification object:nil];
-                [[iTermNotificationController sharedInstance] notify:@"Download finished!"];
+                [[iTermNotificationController sharedInstance] notify:NSLocalizedString(@"Download finished!", @"UI")];
                 [self->_downloadController.window close];
                 self->_downloadController = nil;
                 self->_status = iTermPythonRuntimeDownloaderStatusDownloaded;

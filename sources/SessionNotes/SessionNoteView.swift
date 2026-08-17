@@ -130,7 +130,7 @@ class SessionNoteView: NSView, NSTextViewDelegate {
         collapseButton.bezelStyle = .inline
         collapseButton.isBordered = false
         collapseButton.image = NSImage(systemSymbolName: "chevron.down",
-                                       accessibilityDescription: "Collapse")
+                                       accessibilityDescription: NSLocalizedString("Collapse", comment: "UI"))
         collapseButton.imagePosition = .imageOnly
         collapseButton.setButtonType(.momentaryPushIn)
 
@@ -399,7 +399,7 @@ class SessionNoteView: NSView, NSTextViewDelegate {
     private func updateCollapseButtonImage() {
         let name = model.isCollapsed ? "chevron.right" : "chevron.down"
         collapseButton.image = NSImage(systemSymbolName: name,
-                                       accessibilityDescription: model.isCollapsed ? "Expand" : "Collapse")
+                                       accessibilityDescription: model.isCollapsed ? NSLocalizedString("Expand", comment: "UI") : NSLocalizedString("Collapse", comment: "UI"))
     }
 
     // MARK: - Drag (Title Bar) and Resize

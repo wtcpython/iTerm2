@@ -3589,7 +3589,7 @@ static NSString *iTermStringForEventPhase(NSEventPhase eventPhase) {
                                                                 blockID:block
                                                                    mark:nil
                                                                    absY:@(i + _dataSource.totalScrollbackOverflow)
-                                                                tooltip:@"Copy block to clipboard"];
+                                                                tooltip:NSLocalizedString(@"Copy block to clipboard", @"UI")];
     _hoverBlockCopyButton.isFloating = YES;
     __weak __typeof(self) weakSelf = self;
     const long long offset = _dataSource.totalScrollbackOverflow;
@@ -6709,7 +6709,7 @@ extendResultsAcrossSoftBoundaries:(BOOL)extendResultsAcrossSoftBoundaries {
                                                                                    blockID:place.mark.copyBlockID
                                                                                       mark:place.mark
                                                                                       absY:nil
-                                                                                   tooltip:@"Copy Block to clipboard"] autorelease];
+                                                                                   tooltip:NSLocalizedString(@"Copy Block to clipboard", @"UI")] autorelease];
                 NSString *blockID = [[place.mark.copyBlockID copy] autorelease];
 
                 button.action = ^(NSPoint locationInWindow) {

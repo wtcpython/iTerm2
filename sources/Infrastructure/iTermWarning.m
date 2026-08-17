@@ -373,8 +373,8 @@ BOOL gShowRememberedAlerts = NO;
             --numNonCancelActions;
         }
     }
-    // If this is silenceable and at least one button is not @"Cancel" then offer to remember the
-    // selection. But a @"Cancel" action is not remembered.
+    // If this is silenceable and at least one button is not "Cancel" then offer to remember the
+    // selection. But a "Cancel" action is not remembered.
     if (_warningType == kiTermWarningTypeTemporarilySilenceable) {
         assert(_identifier);
         if (numNonCancelActions == 1) {

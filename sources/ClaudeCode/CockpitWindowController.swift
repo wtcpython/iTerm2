@@ -270,11 +270,11 @@ class CockpitWindowController: NSWindowController {
         }
         let symbol: SFSymbol = armed ? .bellBadge : .bell
         notifyToolbarItem.image = NSImage(systemSymbolName: symbol.rawValue,
-                                          accessibilityDescription: "Notify on status change")
+                                          accessibilityDescription: NSLocalizedString("Notify on status change", comment: "UI"))
         notifyToolbarItem.isEnabled = enabled
         notifyToolbarItem.toolTip = armed
-            ? "Watching for a status change on the selected item. An alert will appear on the next change, then turn this off."
-            : "Notify with an alert when the selected window or session’s status changes."
+            ? NSLocalizedString("Watching for a status change on the selected item. An alert will appear on the next change, then turn this off.", comment: "UI")
+            : NSLocalizedString("Notify with an alert when the selected window or session’s status changes.", comment: "UI")
     }
 
     @objc private func notifyArmedDidChange(_ notification: Notification) {
@@ -442,20 +442,20 @@ fileprivate final class CockpitRow {
 
     var shortLabel: String {
         switch self {
-        case .byStatus: return "Status"
-        case .byWindow: return "Window"
-        case .byWorkgroup: return "Workgroup"
+        case .byStatus: return NSLocalizedString("Status", comment: "UI")
+        case .byWindow: return NSLocalizedString("Window", comment: "UI")
+        case .byWorkgroup: return NSLocalizedString("Workgroup", comment: "UI")
         }
     }
 
     var tooltip: String {
         switch self {
         case .byStatus:
-            return "Group sessions by status (Waiting / Working / Idle), within each window."
+            return NSLocalizedString("Group sessions by status (Waiting / Working / Idle), within each window.", comment: "UI")
         case .byWindow:
-            return "Group sessions by window, then by tab and split pane."
+            return NSLocalizedString("Group sessions by window, then by tab and split pane.", comment: "UI")
         case .byWorkgroup:
-            return "Show only sessions in a workgroup, grouped by workgroup."
+            return NSLocalizedString("Show only sessions in a workgroup, grouped by workgroup.", comment: "UI")
         }
     }
 
@@ -640,7 +640,7 @@ fileprivate final class CockpitTableCellView: NSTableCellView {
         let bell = CockpitPassthroughImageView()
         let config = NSImage.SymbolConfiguration(pointSize: 11, weight: .regular)
         bell.image = NSImage(systemSymbolName: SFSymbol.bellBadge.rawValue,
-                             accessibilityDescription: "Notify on status change armed")?
+                             accessibilityDescription: NSLocalizedString("Notify on status change armed", comment: "UI"))?
             .withSymbolConfiguration(config)
         bell.imageScaling = .scaleProportionallyDown
         bell.isHidden = true
@@ -749,9 +749,9 @@ fileprivate final class CockpitTableCellView: NSTableCellView {
 private func cockpitStateLabel(_ state: SessionState, count: Int) -> String {
     let name: String
     switch state {
-    case .waiting: name = "Waiting"
-    case .working: name = "Working"
-    case .idle, .unknown: name = "Idle"
+    case .waiting: name = NSLocalizedString("Waiting", comment: "UI")
+    case .working: name = NSLocalizedString("Working", comment: "UI")
+    case .idle, .unknown: name = NSLocalizedString("Idle", comment: "UI")
     }
     return "\(name) · \(count)"
 }
@@ -1670,11 +1670,11 @@ extension CockpitWindowController {
         if let title = tab.title, !title.isEmpty {
             return title
         }
-        return "Tab \(positionInWindow)"
+        return String(format: NSLocalizedString("Tab %@", comment: "UI"), String(positionInWindow))
     }
 
     private func cockpitWindowTitlePrefix(for terminal: PseudoTerminal) -> String {
-        return "Window \(terminal.number)"
+        return String(format: NSLocalizedString("Window %@", comment: "UI"), String(terminal.number))
     }
 
     private func cockpitWorkgroupTitle(for instance: iTermWorkgroupInstance) -> String {

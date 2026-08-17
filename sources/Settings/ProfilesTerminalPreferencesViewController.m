@@ -343,8 +343,8 @@
     
     [self addViewToSearchIndex:_filterAlertsButton
 
-                   displayName:@"Filter alerts"
-                       phrases:@[ @"bell", @"idle", @"session ended", @"new output"]
+                   displayName:NSLocalizedString(@"Filter alerts", @"UI")
+                       phrases:@[ @"bell", @"idle", NSLocalizedString(@"session ended", @"UI"), NSLocalizedString(@"new output", @"UI")]
                            key:nil];
     [self updateEnabledState];
     [self commitControls];
@@ -356,7 +356,7 @@
 }
 
 - (NSAttributedString *)attributedStringForLocale:(NSString *)lang {
-    NSString *title = [iTermLocaleGuesser titleForLocale:lang] ?: @"(No description available)";
+    NSString *title = [iTermLocaleGuesser titleForLocale:lang] ?: NSLocalizedString(@"(No description available)", @"UI");
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] init];
     NSFont *monoFont = [NSFont userFixedPitchFontOfSize:[NSFont systemFontSize]];
     NSAttributedString *langAS = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:NSLocalizedString(@"LANG=%@", @"UI"), lang]

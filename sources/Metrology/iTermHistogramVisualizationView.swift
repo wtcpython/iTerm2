@@ -145,13 +145,13 @@ struct iTermHistogramBarChart: View {
         ForEach(buckets, id: \.x) { bucket in
             RectangleMark(
                 xStart: .value(NSLocalizedString("Start", comment: "UI"), bucket.range.lowerBound),
-                xEnd: .value("End", bucket.range.upperBound),
-                yStart: .value("Count", 0),
-                yEnd: .value("Count", bucket.y)
+                xEnd: .value(NSLocalizedString("End", comment: "UI"), bucket.range.upperBound),
+                yStart: .value(NSLocalizedString("Count", comment: "UI"), 0),
+                yEnd: .value(NSLocalizedString("Count", comment: "UI"), bucket.y)
             )
             .foregroundStyle(selectedX == bucket.x ? .purple : .blue)
         }
-        RuleMark(x: .value("Mean", meanValue))
+        RuleMark(x: .value(NSLocalizedString("Mean", comment: "UI"), meanValue))
             .foregroundStyle(.red.opacity(0.75))
             .lineStyle(StrokeStyle(lineWidth: 2))
     }

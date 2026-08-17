@@ -109,18 +109,18 @@ class iTermClippingsView: NSView {
         editSegmentedControl.segmentCount = 3
         editSegmentedControl.segmentStyle = .smallSquare
         editSegmentedControl.trackingMode = .momentary
-        if let plus = NSImage(systemSymbolName: "plus", accessibilityDescription: "Add clipping") {
+        if let plus = NSImage(systemSymbolName: "plus", accessibilityDescription: NSLocalizedString("Add clipping", comment: "UI")) {
             editSegmentedControl.setImage(plus, forSegment: 0)
         }
-        if let minus = NSImage(systemSymbolName: "minus", accessibilityDescription: "Remove clipping") {
+        if let minus = NSImage(systemSymbolName: "minus", accessibilityDescription: NSLocalizedString("Remove clipping", comment: "UI")) {
             editSegmentedControl.setImage(minus, forSegment: 1)
         }
-        if let archive = NSImage(systemSymbolName: "archivebox", accessibilityDescription: "Archive clippings") {
+        if let archive = NSImage(systemSymbolName: "archivebox", accessibilityDescription: NSLocalizedString("Archive clippings", comment: "UI")) {
             editSegmentedControl.setImage(archive, forSegment: 2)
         }
-        editSegmentedControl.setToolTip("Add clipping", forSegment: 0)
-        editSegmentedControl.setToolTip("Remove selected clipping", forSegment: 1)
-        editSegmentedControl.setToolTip("Archive all clippings", forSegment: 2)
+        editSegmentedControl.setToolTip(NSLocalizedString("Add clipping", comment: "UI"), forSegment: 0)
+        editSegmentedControl.setToolTip(NSLocalizedString("Remove selected clipping", comment: "UI"), forSegment: 1)
+        editSegmentedControl.setToolTip(NSLocalizedString("Archive all clippings", comment: "UI"), forSegment: 2)
         editSegmentedControl.setEnabled(false, forSegment: 1)
         editSegmentedControl.setEnabled(false, forSegment: 2)
         editSegmentedControl.target = self
@@ -131,14 +131,14 @@ class iTermClippingsView: NSView {
         actionSegmentedControl.segmentCount = 2
         actionSegmentedControl.segmentStyle = .smallSquare
         actionSegmentedControl.trackingMode = .momentary
-        if let send = NSImage(systemSymbolName: "play.fill", accessibilityDescription: "Send clipping") {
+        if let send = NSImage(systemSymbolName: "play.fill", accessibilityDescription: NSLocalizedString("Send clipping", comment: "UI")) {
             actionSegmentedControl.setImage(send, forSegment: 0)
         }
-        if let copy = NSImage(systemSymbolName: "doc.on.doc", accessibilityDescription: "Copy clipping") {
+        if let copy = NSImage(systemSymbolName: "doc.on.doc", accessibilityDescription: NSLocalizedString("Copy clipping", comment: "UI")) {
             actionSegmentedControl.setImage(copy, forSegment: 1)
         }
-        actionSegmentedControl.setToolTip("Send selected to terminal", forSegment: 0)
-        actionSegmentedControl.setToolTip("Copy selected to pasteboard", forSegment: 1)
+        actionSegmentedControl.setToolTip(NSLocalizedString("Send selected to terminal", comment: "UI"), forSegment: 0)
+        actionSegmentedControl.setToolTip(NSLocalizedString("Copy selected to pasteboard", comment: "UI"), forSegment: 1)
         actionSegmentedControl.setEnabled(false, forSegment: 0)
         actionSegmentedControl.setEnabled(false, forSegment: 1)
         actionSegmentedControl.target = self
@@ -149,14 +149,14 @@ class iTermClippingsView: NSView {
         historySegmentedControl.segmentCount = 2
         historySegmentedControl.segmentStyle = .smallSquare
         historySegmentedControl.trackingMode = .momentary
-        if let back = NSImage(systemSymbolName: "chevron.left", accessibilityDescription: "Previous archived clippings") {
+        if let back = NSImage(systemSymbolName: "chevron.left", accessibilityDescription: NSLocalizedString("Previous archived clippings", comment: "UI")) {
             historySegmentedControl.setImage(back, forSegment: 0)
         }
-        if let forward = NSImage(systemSymbolName: "chevron.right", accessibilityDescription: "Next archived clippings") {
+        if let forward = NSImage(systemSymbolName: "chevron.right", accessibilityDescription: NSLocalizedString("Next archived clippings", comment: "UI")) {
             historySegmentedControl.setImage(forward, forSegment: 1)
         }
-        historySegmentedControl.setToolTip("Show previous archived clippings", forSegment: 0)
-        historySegmentedControl.setToolTip("Show next archived clippings", forSegment: 1)
+        historySegmentedControl.setToolTip(NSLocalizedString("Show previous archived clippings", comment: "UI"), forSegment: 0)
+        historySegmentedControl.setToolTip(NSLocalizedString("Show next archived clippings", comment: "UI"), forSegment: 1)
         historySegmentedControl.setEnabled(false, forSegment: 0)
         historySegmentedControl.setEnabled(false, forSegment: 1)
         historySegmentedControl.target = self
@@ -173,7 +173,7 @@ class iTermClippingsView: NSView {
         historyStatusLabel.autoresizingMask = [.minXMargin, .maxYMargin]
         addSubview(historyStatusLabel)
 
-        if let xmark = NSImage(systemSymbolName: "xmark", accessibilityDescription: "Hide clippings") {
+        if let xmark = NSImage(systemSymbolName: "xmark", accessibilityDescription: NSLocalizedString("Hide clippings", comment: "UI")) {
             closeButton.image = xmark
         }
         closeButton.bezelStyle = .smallSquare
@@ -608,7 +608,7 @@ private class ClippingsCellView: NSTableCellView {
         addSubview(detailLabel)
 
         if let glass = NSImage(systemSymbolName: "magnifyingglass",
-                               accessibilityDescription: "Preview clipping") {
+                               accessibilityDescription: NSLocalizedString("Preview clipping", comment: "UI")) {
             previewButton.image = glass
         }
         previewButton.bezelStyle = .smallSquare

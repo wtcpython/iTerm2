@@ -503,7 +503,6 @@ NSString *const kStatusTextComboBoxIdentifier = @"kStatusTextComboBoxIdentifier"
 }
 
 + (NSTextField *)labelWithString:(NSString *)string origin:(NSPoint)origin {
-    string = NSLocalizedString(string, @"UI");
     NSTextField *textField = [[NSTextField alloc] initWithFrame:NSMakeRect(origin.x,
                                                                            origin.y,
                                                                            0,
@@ -822,7 +821,7 @@ NSString *const kStatusTextComboBoxIdentifier = @"kStatusTextComboBoxIdentifier"
                                                                      size.width,
                                                                      size.height)];
         CGFloat x = 4;
-        NSTextField *label = [self labelWithString:@"Text:" origin:NSMakePoint(x, 0)];
+        NSTextField *label = [self labelWithString:NSLocalizedString(@"Text:", @"UI") origin:NSMakePoint(x, 0)];
         [container addSubview:label];
         x += label.frame.size.width;
         const CGFloat kWellWidth = 30;
@@ -836,7 +835,7 @@ NSString *const kStatusTextComboBoxIdentifier = @"kStatusTextComboBoxIdentifier"
         [container addSubview:well];
 
         x += 10 + kWellWidth;
-        label = [self labelWithString:@"Background:" origin:NSMakePoint(x, 0)];
+        label = [self labelWithString:NSLocalizedString(@"Background:", @"UI") origin:NSMakePoint(x, 0)];
         [container addSubview:label];
         x += label.frame.size.width;
 
@@ -872,7 +871,7 @@ NSString *const kStatusTextComboBoxIdentifier = @"kStatusTextComboBoxIdentifier"
 
         // Dot color well
         const CGFloat kWellWidth = 30;
-        NSTextField *label = [self labelWithString:@"Dot:" origin:NSMakePoint(x, 0)];
+        NSTextField *label = [self labelWithString:NSLocalizedString(@"Dot:", @"UI") origin:NSMakePoint(x, 0)];
         [container addSubview:label];
         x += label.frame.size.width;
 
@@ -883,7 +882,7 @@ NSString *const kStatusTextComboBoxIdentifier = @"kStatusTextComboBoxIdentifier"
         x += kWellWidth + 6;
 
         // Status text color well
-        label = [self labelWithString:@"Text:" origin:NSMakePoint(x, 0)];
+        label = [self labelWithString:NSLocalizedString(@"Text:", @"UI") origin:NSMakePoint(x, 0)];
         [container addSubview:label];
         x += label.frame.size.width;
 
@@ -906,7 +905,7 @@ NSString *const kStatusTextComboBoxIdentifier = @"kStatusTextComboBoxIdentifier"
 
         NSTextField *valueTextField = [self newTextFieldOfSize:subsize
                                                          value:pair.secondObject
-                                                   placeholder:@"Value"
+                                                   placeholder:NSLocalizedString(@"Value", @"UI")
                                                     identifier:kTwoPraramValueColumnIdentifier];
         valueTextField.delegate = delegate;
 

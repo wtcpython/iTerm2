@@ -259,7 +259,7 @@ class iTermURLBarGuts: NSView {
         faviconView?.imageScaling = .scaleProportionallyUpOrDown
         faviconView?.unregisterDraggedTypes()  // Clear default drag behavior
         faviconView?.setAccessibilityRole(.button)
-        faviconView?.setAccessibilityLabel("Site icon - drag to copy URL")
+        faviconView?.setAccessibilityLabel(NSLocalizedString("Site icon - drag to copy URL", comment: "UI"))
         addSubview(faviconView!)
         
         // Progress indicator
@@ -548,7 +548,7 @@ class iTermURLBarGuts: NSView {
             parent: window,
             location: locationForCompletionsWindow,
             mode: .indicator,
-            placeholder: "Loading suggestions…",
+            placeholder: NSLocalizedString("Loading suggestions…", comment: "UI"),
             allowKey: false)
         completionsWindow?.alwaysUseMaxWidth = true
     }

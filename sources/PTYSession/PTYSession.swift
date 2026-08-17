@@ -818,7 +818,7 @@ extension PTYSession {
     func deleteCurrentLineRemoteCommand(deleteCurrentLine: RemoteCommand.DeleteCurrentLine,
                                         completion: @escaping (String, String) throws -> ()) rethrows {
         writeTaskNoBroadcast("\u{15}")
-        try completion(NSLocalizedString("Done", comment: "UI"), "Current line deleted by AI.")
+        try completion(NSLocalizedString("Done", comment: "UI"), NSLocalizedString("Current line deleted by AI.", comment: "UI"))
     }
 
     func restartSessionRemoteCommand(restartSession: RemoteCommand.RestartSession,
@@ -872,10 +872,10 @@ extension PTYSession {
         DLog("Send to composer")
         conductor.create(file: createFile.filename, content: createFile.content.lossyData) { error in
             if let error {
-                try? completion("Error creating \(createFile.filename): " + error.localizedDescription,
-                           "Failed to create \(createFile) on remote host: \(error.localizedDescription)")
+                try? completion(String(format: NSLocalizedString("Error creating %@: %@", comment: "UI"), createFile.filename, error.localizedDescription),
+                           String(format: NSLocalizedString("Failed to create %@ on remote host: %@", comment: "UI"), "\(createFile)", error.localizedDescription))
             } else {
-                try? completion(NSLocalizedString("Done", comment: "UI"), "AI created \(createFile.filename) on remote host.")
+                try? completion(NSLocalizedString("Done", comment: "UI"), String(format: NSLocalizedString("AI created %@ on remote host.", comment: "UI"), createFile.filename))
             }
         }
     }
@@ -2667,7 +2667,7 @@ extension PTYSession {
             return nil
         }
         do {
-            let title = "Chat about \(self.name)"
+            let title = String(format: NSLocalizedString("Chat about %@", comment: "UI"), self.name)
             let isBrowser = self.isBrowserSession()
             let chatID = try client.create(
                 chatWithTitle: title,

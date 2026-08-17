@@ -124,7 +124,7 @@ extension NSPopUpButton {
 class iTermLocalePromptAlert {
     private let languages: [String]
     private var popup = NSPopUpButton(frame: .zero, pullsDown: false)
-    var message = "No valid UNIX locale exists for your computer’s current language and country. This may cause command-line apps to misbehave. Please select one from the list below."
+    var message = NSLocalizedString("No valid UNIX locale exists for your computer’s current language and country. This may cause command-line apps to misbehave. Please select one from the list below.", comment: "UI")
     @objc var allowRemember = true
     private let profileName: String?
     var arrangementName: String?

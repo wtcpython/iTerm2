@@ -61,13 +61,13 @@
                 role = @"RPC";
                 break;
             case ITMRPCRegistrationRequest_Role_SessionTitle:
-                role = @"Title Provider";
+                role = NSLocalizedString(@"Title Provider", @"UI");
                 break;
             case ITMRPCRegistrationRequest_Role_StatusBarComponent:
-                role = @"Status Bar Component";
+                role = NSLocalizedString(@"Status Bar Component", @"UI");
                 break;
             case ITMRPCRegistrationRequest_Role_ContextMenu:
-                role = @"Context Menu Provider";
+                role = NSLocalizedString(@"Context Menu Provider", @"UI");
                 break;
         }
         id connectionKey = subs[signature].firstObject;

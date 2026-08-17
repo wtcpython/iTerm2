@@ -136,7 +136,7 @@ class iTermSuppressedAlertsWindowController: NSWindowController {
         tableView = table
 
         // Empty-state label centered over the table area.
-        let empty = label(withText: "No alerts are currently being suppressed.")
+        let empty = label(withText: NSLocalizedString("No alerts are currently being suppressed.", comment: "UI"))
         empty.alignment = .center
         empty.textColor = .secondaryLabelColor
         empty.frame = NSRect(x: margin,
@@ -192,7 +192,7 @@ class iTermSuppressedAlertsWindowController: NSWindowController {
         // the buttons. This is the transient mode that used to live in the View
         // menu: when on, remembered alerts are shown again so you can change your
         // response.
-        let checkbox = NSButton(checkboxWithTitle: "Always show alerts with remembered selections",
+        let checkbox = NSButton(checkboxWithTitle: NSLocalizedString("Always show alerts with remembered selections", comment: "UI"),
                                 target: self,
                                 action: #selector(toggleShowRemembered(_:)))
         checkbox.sizeToFit()
@@ -202,10 +202,7 @@ class iTermSuppressedAlertsWindowController: NSWindowController {
         checkFrame.origin.y = margin + buttonHeight + checkboxGap
         checkbox.frame = checkFrame
         checkbox.autoresizingMask = [.maxXMargin, .maxYMargin]
-        checkbox.toolTip = NSLocalizedString("When you check “Remember my choice” or “Suppress this message ", comment: "UI") +
-                           "permanently” in an alert, iTerm2 stops showing it and reuses your " +
-                           "saved response. Turn this on to show those alerts again so you can " +
-                           "see them or choose differently. It stays on until you turn it off."
+        checkbox.toolTip = NSLocalizedString("When you check “Remember my choice” or “Suppress this message permanently” in an alert, iTerm2 stops showing it and reuses your saved response. Turn this on to show those alerts again so you can see them or choose differently. It stays on until you turn it off.", comment: "UI")
         content.addSubview(checkbox)
         showRememberedCheckbox = checkbox
     }

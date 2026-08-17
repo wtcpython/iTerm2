@@ -458,8 +458,8 @@ class CCDiffSelectorItem: SessionToolbarControl {
             .union(unstaged.map { $0.path })
             .count
         let allFilesTitle = hasChanges
-            ? "All Files (\(uniqueChangedFileCount))"
-            : "Empty Diff"
+            ? String(format: NSLocalizedString("All Files (%ld)", comment: "UI"), uniqueChangedFileCount)
+            : NSLocalizedString("Empty Diff", comment: "UI")
         let allFilesItem = NSMenuItem(title: allFilesTitle,
                                       action: nil,
                                       keyEquivalent: "")
@@ -467,13 +467,13 @@ class CCDiffSelectorItem: SessionToolbarControl {
         button.menu?.addItem(allFilesItem)
 
         var ordered: [String] = []
-        addGroup(title: "Staged",
+        addGroup(title: NSLocalizedString("Staged", comment: "UI"),
                  entries: staged,
                  prefixLength: prefixLength,
                  column: \.indexStatus,
                  letterColor: .systemGreen,
                  ordered: &ordered)
-        addGroup(title: "Unstaged",
+        addGroup(title: NSLocalizedString("Unstaged", comment: "UI"),
                  entries: unstaged,
                  prefixLength: prefixLength,
                  column: \.workdirStatus,

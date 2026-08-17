@@ -19,17 +19,17 @@ enum NerdFontInstallerError: LocalizedError {
     var errorDescription: String? {
         switch self {
         case .userDeniedPermission:
-            return "User denied permission"
+            return NSLocalizedString("User denied permission", comment: "UI")
         case .downloadFailed(let reason):
-            return "Download failed: \(reason)"
+            return String(format: NSLocalizedString("Download failed: %@", comment: "UI"), reason)
         case .saveDownloadFailed(let reason):
-            return "Downloaded file could not be saved: \(reason)"
+            return String(format: NSLocalizedString("Downloaded file could not be saved: %@", comment: "UI"), reason)
         case .unzipFailed(let reason):
-            return "Unzip failed: \(reason)"
+            return String(format: NSLocalizedString("Unzip failed: %@", comment: "UI"), reason)
         case .missingRequiredFonts:
-            return "The downloaded bundle is missing some required fonts"
+            return NSLocalizedString("The downloaded bundle is missing some required fonts", comment: "UI")
         case .fontInstallationFailed(let reason):
-            return "Installation of downloaded fonts failed: \(reason)"
+            return String(format: NSLocalizedString("Installation of downloaded fonts failed: %@", comment: "UI"), reason)
         }
     }
 }
@@ -123,7 +123,7 @@ class NerdFontInstaller {
     private func askUserForPermissionToDownload() -> Bool {
         let selection = iTermWarning.show(
             withTitle: String(format: NSLocalizedString("To install the Nerd Font Bundle iTerm2 must first download and install these fonts: %@.", comment: "UI"), neededFontPostscriptNames.joined(separator: ", ")),
-            actions: ["Download", NSLocalizedString("Cancel", comment: "UI")],
+            actions: [NSLocalizedString("Download", comment: "UI"), NSLocalizedString("Cancel", comment: "UI")],
             accessory: nil,
             identifier: "SpecialExceptionsMissingFontsForNerdBundle",
             silenceable: .kiTermWarningTypePersistent,
@@ -267,7 +267,7 @@ class NerdFontInstaller {
             }
             var reason = fatalErrors.compactMap { CFErrorCopyDescription($0) as String? }.joined(separator: ", ")
             if reason.isEmpty {
-                reason = "Unknown errors occurred"
+                reason = NSLocalizedString("Unknown errors occurred", comment: "UI")
             }
             RLog("\(reason)")
             DispatchQueue.main.async {

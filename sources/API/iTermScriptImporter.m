@@ -75,7 +75,7 @@ static NSString *const iTermInstallStagingPrefix = @".installing-";
     DLog(@"downloadedURL=%@ userInitiated=%@ offerAutoLauch=%@", downloadedURL, @(userInitiated), @(offerAutoLaunch));
     if (sInstallingScript) {
         RLog(@"already installing");
-        completion(@"Another import is in progress. Please try again after it completes.", NO, nil);
+        completion(NSLocalizedString(@"Another import is in progress. Please try again after it completes.", @"UI"), NO, nil);
         return;
     }
 
@@ -128,7 +128,7 @@ static NSString *const iTermInstallStagingPrefix = @".installing-";
             DLog(@"Unzip finished with %@", error);
             if (error) {
                 [pleaseWait.window close];
-                completion([NSString stringWithFormat: @"Could not unzip archive: %@", error.localizedDescription], NO, nil);
+                completion([NSString stringWithFormat: NSLocalizedString(@"Could not unzip archive: %@", @"UI"), error.localizedDescription], NO, nil);
                 sInstallingScript = NO;
                 return;
             }
@@ -163,7 +163,7 @@ static NSString *const iTermInstallStagingPrefix = @".installing-";
         DLog(@"Is .its");
         if (![verifier smellsLikeSignedArchive:NULL]) {
             DLog(@"Doesn't smell like signed archive");
-            completion(nil, @"This script archive is corrupt and cannot be installed.", NO, NO, NO);
+            completion(nil, NSLocalizedString(@"This script archive is corrupt and cannot be installed.", @"UI"), NO, NO, NO);
             return;
         }
         
@@ -183,7 +183,7 @@ static NSString *const iTermInstallStagingPrefix = @".installing-";
         return;
     }
     if (requireSignature) {
-        completion(nil, @"This is not a valid iTerm2 script archive.", NO, NO, NO);
+        completion(nil, NSLocalizedString(@"This is not a valid iTerm2 script archive.", @"UI"), NO, NO, NO);
         return;
     }
     completion(url, nil, NO, NO, NO);

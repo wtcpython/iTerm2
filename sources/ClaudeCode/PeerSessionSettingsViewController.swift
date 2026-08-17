@@ -42,7 +42,7 @@ class PeerSessionSettingsViewController: NSViewController {
         titleLabel.sizeToFit()
 
         let helpLabel = NSTextField(wrappingLabelWithString:
-            "Command to run in this pane. Changes take effect the next time the pane is restarted.")
+            NSLocalizedString("Command to run in this pane. Changes take effect the next time the pane is restarted.", comment: "UI"))
         helpLabel.font = .systemFont(ofSize: NSFont.smallSystemFontSize)
         helpLabel.textColor = .secondaryLabelColor
         helpLabel.preferredMaxLayoutWidth = width - 2 * margin

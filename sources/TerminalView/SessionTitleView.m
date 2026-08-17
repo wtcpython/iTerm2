@@ -85,7 +85,7 @@ static const CGFloat kLockButtonSize = 14;
 
         // Create lock button - positioned to the left of menu button, hidden by default
         NSImage *lockImage = [NSImage imageWithSystemSymbolName:SFSymbolGetString(SFSymbolLockFill)
-                                         accessibilityDescription:@"Pane is locked"];
+                                         accessibilityDescription:NSLocalizedString(@"Pane is locked", @"UI")];
         NSImageSymbolConfiguration *config = [NSImageSymbolConfiguration configurationWithPointSize:11 weight:NSFontWeightMedium];
         lockImage = [lockImage imageWithSymbolConfiguration:config];
 

@@ -217,10 +217,9 @@ static const CGFloat kCollapsedHeight = 51;
         extra = [NSString stringWithFormat:NSLocalizedString(@"\nLocal path: %@", @"UI"),
                        _transferrableFile.localPath];
     }
-    NSString *text = [NSString stringWithFormat:@"%@\n\n%@%@",
+    NSString *text = [NSString stringWithFormat:NSLocalizedString(@"%@\n\nStatus: %@%@", @"UI"),
                       [_transferrableFile displayName],
-                      [NSString stringWithFormat:NSLocalizedString(@"Status: %@", @"UI"),
-                                            [self stringForStatus:_transferrableFile.status]],
+                      [self stringForStatus:_transferrableFile.status],
                       extra];
     NSAlert *alert = [[NSAlert alloc] init];
     alert.messageText = NSLocalizedString(@"File Transfer Summary", @"UI");

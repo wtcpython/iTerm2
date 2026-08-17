@@ -32,19 +32,18 @@ NSString *const iTermStatusBarSwiftyStringComponentExpressionKey = @"expression"
 }
 
 - (NSString *)statusBarComponentShortDescription {
-    return @"Interpolated String";
+    return NSLocalizedString(@"Interpolated String", @"UI");
 }
 
 - (NSString *)statusBarComponentDetailedDescription {
-    return @"Shows the evaluation of a string with inline expressions which may include session "
-           @"variables or the output of registered scripting functions";
+    return NSLocalizedString(@"Shows the evaluation of a string with inline expressions which may include session variables or the output of registered scripting functions", @"UI");
 }
 
 - (NSArray<iTermStatusBarComponentKnob *> *)statusBarComponentKnobs {
     iTermStatusBarComponentKnob *expressionKnob =
-        [[iTermStatusBarComponentKnob alloc] initWithLabelText:@"String Value:"
+        [[iTermStatusBarComponentKnob alloc] initWithLabelText:NSLocalizedString(@"String Value:", @"UI")
                                                           type:iTermStatusBarComponentKnobTypeText
-                                                   placeholder:@"String with \\(expressions)"
+                                                   placeholder:NSLocalizedString(@"String with \\(expressions)", @"UI")
                                                   defaultValue:@""
                                                            key:iTermStatusBarSwiftyStringComponentExpressionKey];
     return [@[ expressionKnob ] arrayByAddingObjectsFromArray:[super statusBarComponentKnobs]];

@@ -1119,7 +1119,7 @@ final class CompanionPairingController: NSObject {
     /// attacker never sees the victim's mac, so the victim has no code to type.
     private func runSASConfirmation(expected: String) async -> Bool {
         relayLog("SAS: awaiting code entry")
-        onStatus?("Enter the code shown on your iPhone.")
+        onStatus?(NSLocalizedString("Enter the code shown on your iPhone.", comment: "UI"))
         onSASEntryNeeded?()
         for attempt in 1...3 {
             let typed = await withCheckedContinuation { (continuation: CheckedContinuation<String?, Never>) in
@@ -1134,7 +1134,7 @@ final class CompanionPairingController: NSObject {
                 return true
             }
             relayLog("SAS: mismatch (attempt \(attempt))")
-            onStatus?("That code doesn’t match. Check your iPhone and try again.")
+            onStatus?(NSLocalizedString("That code doesn’t match. Check your iPhone and try again.", comment: "UI"))
         }
         return false
     }
@@ -1283,7 +1283,7 @@ final class CompanionPairingController: NSObject {
                         // The park succeeded, so any prior quota teardown is behind us:
                         // clear the backoff marker so the UI leaves the quota state.
                         self.relayQuotaBackoffUntil = nil
-                        self.onStatus?("Waiting for your iPhone…")
+                        self.onStatus?(NSLocalizedString("Waiting for your iPhone…", comment: "UI"))
                         guard self.relayConnectedSince == nil else { return }
                         self.relayConnectedSince = Date()
                         self.notifyPresenceChanged()
@@ -1455,7 +1455,7 @@ final class CompanionPairingController: NSObject {
                         // The displayed QR is dead until the regeneration
                         // fires; say so instead of leaving the stale
                         // "Waiting for your iPhone…" up.
-                        onStatus?("Reconnecting to the relay…")
+                        onStatus?(NSLocalizedString("Reconnecting to the relay…", comment: "UI"))
                     } else {
                         onFailed?(Self.userFacingDescription(of: error))
                     }
@@ -1520,7 +1520,7 @@ final class CompanionPairingController: NSObject {
                 defer { confirmationInProgress = false }
                 RLog("Companion pairing: connection accepted; starting Noise handshake")
                 relayLog("acceptLoop: connection ACCEPTED (peer joined); starting Noise handshake")
-                onStatus?("Phone connected. Securing the connection…")
+                onStatus?(NSLocalizedString("Phone connected. Securing the connection…", comment: "UI"))
                 let channel = try await NoiseHandshake.perform(
                     role: .responder,
                     transport: transport,
@@ -1558,7 +1558,7 @@ final class CompanionPairingController: NSObject {
                         // photographed QR is invalidated and they must start over.
                         RLog("Companion pairing: SAS not confirmed; regenerating pid")
                         relayLog("acceptLoop: SAS REJECTED; closing and regenerating pid")
-                        onStatus?("Pairing declined.")
+                        onStatus?(NSLocalizedString("Pairing declined.", comment: "UI"))
                         await channel.close()
                         regenerateFreshPairing(reason: "sas-rejected")
                         return
@@ -1693,7 +1693,7 @@ final class CompanionPairingController: NSObject {
             } catch {
                 RLog("Companion pairing: handshake failed: \(error); still listening")
                 relayLog("acceptLoop: handshake FAILED (\(error)); closing socket and re-accepting")
-                onStatus?("Waiting for your iPhone…")
+                onStatus?(NSLocalizedString("Waiting for your iPhone…", comment: "UI"))
                 // The parked socket was consumed by the failed handshake; close
                 // it so the next accept() can park a fresh one (and the relay
                 // listener's wait-for-close serialization is released).

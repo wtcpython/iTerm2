@@ -83,7 +83,7 @@ class AITermRegistrationWindowController: NSWindowController {
     }
 
     override func awakeFromNib() {
-        var temp = message.string
+        var temp = NSLocalizedString("iTerm2 integrates with the major LLM providers for various AI features. <a href=\"$3\">Learn more here</a>.\n\niTerm2 is currently configured to use $4. You can change your AI provider in Settings > General > AI.\n\nBefore you can use this feature, you’ll need an API key. If you don’t already have one, you’ll need to <a href=\"$1\">create an account</a> and <a href=\"$2\">generate an API</a>. Then enter it below:", comment: "UI")
         let urls = switch vendor {
         case .openAI, .llama:
             ["https://auth.openai.com/create-account",

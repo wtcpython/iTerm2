@@ -440,11 +440,11 @@ static BOOL iTermAPIHelperLastApplescriptAuthRequiredSetting;
     // "Reveal Preference" is a one-time navigation action and shouldn't be remembered.
     iTermWarning *warning = [[iTermWarning alloc] init];
     warning.title = NSLocalizedString(@"The location of your Application Support directory appears to have moved or its contents have changed unexpectedly. As a precaution, the authentication mechanism for Python API scripts for iTerm2 has been reverted to always require Automation permission.", @"UI");
-    warning.actionLabels = @[ NSLocalizedString(@"OK", @"UI"), @"Reveal Preference" ];
+    warning.actionLabels = @[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Reveal Preference", @"UI") ];
     warning.identifier = @"NoSyncAppSupportMoved";
     warning.warningType = kiTermWarningTypePermanentlySilenceable;
     warning.heading = NSLocalizedString(@"Python API Permissions Reset", @"UI");
-    warning.doNotRememberLabels = @[ @"Reveal Preference" ];
+    warning.doNotRememberLabels = @[ NSLocalizedString(@"Reveal Preference", @"UI") ];
     const iTermWarningSelection selection = [warning runModal];
     if (selection == kiTermWarningSelection1) {
         [[PreferencePanel sharedInstance] openToPreferenceWithKey:kPreferenceKeyAPIAuthentication];

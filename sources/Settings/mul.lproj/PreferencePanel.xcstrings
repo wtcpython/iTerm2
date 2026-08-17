@@ -464,7 +464,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "锁定的窗格不能通过拖拽移动，关闭时需要确认。"
+            "value": "锁定的窗格不能通过拖移移动，关闭时需要确认。"
           }
         }
       }
@@ -2372,7 +2372,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "复制配置文件"
+            "value": "拷贝配置文件"
           }
         }
       }
@@ -4892,7 +4892,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "停用备用屏幕的保存/恢复"
+            "value": "停用备用屏幕的存储/恢复"
           }
         }
       }
@@ -5054,7 +5054,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "存在应用状态栏时将行保存到回滚缓冲区"
+            "value": "存在应用状态栏时将行存储到回滚缓冲区"
           }
         }
       }
@@ -5774,7 +5774,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "在备用屏幕模式下将行保存到回滚缓冲区"
+            "value": "在备用屏幕模式下将行存储到回滚缓冲区"
           }
         }
       }
@@ -11318,7 +11318,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "启用后，你在 Composer 中输入的所有内容都会与 AI 提供商共享。"
+            "value": "启用后，你在 Composer 中输入的所有内容都会与 AI 提供者共享。"
           }
         }
       }
@@ -11498,7 +11498,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "在会话顶部显示屏外命令行"
+            "value": "在会话顶部显示屏幕外的命令行"
           }
         }
       }
@@ -16916,7 +16916,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "你的 AI 提供商可能会按使用的令牌收费。"
+            "value": "你的 AI 提供者可能会按使用的令牌收费。"
           }
         }
       }
@@ -18410,7 +18410,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "报告鼠标点按和拖拽"
+            "value": "报告鼠标点按和拖移"
           }
         }
       }
@@ -19058,7 +19058,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "备用屏幕模式下停用拖拽滚动"
+            "value": "备用屏幕模式下停用拖移滚动"
           }
         }
       }

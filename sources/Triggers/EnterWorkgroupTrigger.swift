@@ -16,11 +16,11 @@ import Foundation
 @objc(iTermEnterWorkgroupTrigger)
 class EnterWorkgroupTrigger: Trigger {
     override static var title: String {
-        return "Enter Workgroup…"
+        return NSLocalizedString("Enter Workgroup…", comment: "UI")
     }
 
     override var description: String {
-        return "Enter Workgroup “\(displayLabel(forID: effectiveID))”"
+        return String(format: NSLocalizedString("Enter Workgroup “%@”", comment: "UI"), displayLabel(forID: effectiveID))
     }
 
     override func takesParameter() -> Bool {
@@ -74,11 +74,11 @@ class EnterWorkgroupTrigger: Trigger {
     }
 
     private func displayLabel(forID id: String?) -> String {
-        guard let id, !id.isEmpty else { return "(unset)" }
+        guard let id, !id.isEmpty else { return NSLocalizedString("(unset)", comment: "UI") }
         if let wg = availableWorkgroups.first(where: { $0.uniqueIdentifier == id }) {
             return wg.name.isEmpty ? NSLocalizedString("Untitled", comment: "UI") : wg.name
         }
-        return "(missing)"
+        return NSLocalizedString("(missing)", comment: "UI")
     }
 
     override func menuItemsForPoupupButton() -> [AnyHashable: Any]? {

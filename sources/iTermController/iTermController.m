@@ -1208,8 +1208,8 @@ replaceInitialDirectoryForSessionWithGUID:(NSString *)guid
     if (!haveUsedOlderVersion) {
         return;
     }
-    [[iTermNotificationController sharedInstance] postNotificationWithTitle:@"Creating a tab"
-                                                                     detail:@"The system preference to open a tab instead of a window is now respected in iTerm2."
+    [[iTermNotificationController sharedInstance] postNotificationWithTitle:NSLocalizedString(@"Creating a tab", @"UI")
+                                                                     detail:NSLocalizedString(@"The system preference to open a tab instead of a window is now respected in iTerm2.", @"UI")
                                                                         URL:[NSURL URLWithString:@"https://gitlab.com/gnachman/iterm2/wikis/Prefer-Tabs-When-Opening-Documents"]];
     iTermUserDefaults.haveBeenWarnedAboutTabDockSetting = YES;
 #endif

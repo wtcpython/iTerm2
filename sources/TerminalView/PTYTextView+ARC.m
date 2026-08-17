@@ -2070,8 +2070,8 @@ runCommandInBackground:(NSString *)command {
     iTermBackgroundCommandRunner *runner =
         [[iTermBackgroundCommandRunner alloc] initWithCommand:command
                                                         shell:self.delegate.textViewShell
-                                                        title:@"Smart Selection Action"];
-    runner.notificationTitle = @"Smart Selection Action Failed";
+                                                        title:NSLocalizedString(@"Smart Selection Action", @"UI")];
+    runner.notificationTitle = NSLocalizedString(@"Smart Selection Action Failed", @"UI");
     [runner run];
 }
 

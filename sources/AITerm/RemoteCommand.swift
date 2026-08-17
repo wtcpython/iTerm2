@@ -245,9 +245,9 @@ struct RemoteCommand: Codable {
             var autopopulationTitle: String? {
                 switch self {
                 case .checkTerminalState:
-                    "Provide Terminal State Automatically"
+                    NSLocalizedString("Provide Terminal State Automatically", comment: "UI")
                 case .viewContents:
-                    "Provide Screen Contents Automatically"
+                    NSLocalizedString("Provide Screen Contents Automatically", comment: "UI")
                 case .runCommands, .writeToClipboard, .controlTerminal, .viewManpages,
                         .writeToFilesystem, .actInWebBrowser:
                     nil
@@ -257,9 +257,9 @@ struct RemoteCommand: Codable {
             var autopopulationWarningText: String? {
                 switch self {
                 case .checkTerminalState:
-                    "By setting this permission to “Always Allow”, terminal state will be sent automatically on every message you send in this chat.\nThis includes:\n • The current or last command and its exit status\n •The window size\n • Your shell\n • The current working directory, username, and hostname."
+                    NSLocalizedString("By setting this permission to “Always Allow”, terminal state will be sent automatically on every message you send in this chat.\nThis includes:\n • The current or last command and its exit status\n •The window size\n • Your shell\n • The current working directory, username, and hostname.", comment: "UI")
                 case .viewContents:
-                    "By setting this permission to “Always Allow”, the current visible screen of your terminal session will be sent automatically on every message you send in this chat."
+                    NSLocalizedString("By setting this permission to “Always Allow”, the current visible screen of your terminal session will be sent automatically on every message you send in this chat.", comment: "UI")
                 case .runCommands, .writeToClipboard, .controlTerminal, .viewManpages,
                         .writeToFilesystem, .actInWebBrowser:
                     nil
@@ -267,7 +267,7 @@ struct RemoteCommand: Codable {
             }
 
             var regularTitle: String {
-                "AI can \(rawValue)"
+                String(format: NSLocalizedString("AI can %@", comment: "UI"), rawValue)
             }
 
             var autopopulatedWhenAlways: Bool {

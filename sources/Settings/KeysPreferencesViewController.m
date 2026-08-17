@@ -265,7 +265,7 @@ static NSString *const kKeyCode0MitigationSuffixGlobal = @"Global";
 
     info = [self defineControl:_keyboardLocale
                            key:kPreferenceKeyKeyboardLocale
-                   displayName:@"Keyboard locale"
+                   displayName:NSLocalizedString(@"Keyboard locale", @"UI")
                           type:kPreferenceInfoTypeStringPopup];
 
     [self defineControl:_remapModifiersGlobally
@@ -284,7 +284,7 @@ static NSString *const kKeyCode0MitigationSuffixGlobal = @"Global";
                    type:kPreferenceInfoTypeCheckbox];
 
     [self addViewToSearchIndex:_keyMappingView
-                   displayName:@"Global key bindings"
+                   displayName:NSLocalizedString(@"Global key bindings", @"UI")
                        phrases:@[ @"mapping", @"shortcuts", @"touch bar", @"preset", @"xterm", @"natural", @"terminal.app compatibility", @"numeric keypad" ]
                            key:nil];
 
@@ -395,8 +395,8 @@ static NSString *const kKeyCode0MitigationSuffixGlobal = @"Global";
         iTermWarningSelection edit = kItermWarningSelectionError;
 
         if (profileHotKeys.count == 1) {
-            namesSentence = [NSString stringWithFormat:@"You already have a Profile with a Hotkey Window named %@", joinedNames];
-            actions = @[ NSLocalizedString(@"OK", @"UI"), @"Configure Existing Profile", NSLocalizedString(@"Cancel", @"UI")];
+            namesSentence = [NSString stringWithFormat:NSLocalizedString(@"You already have a Profile with a Hotkey Window named %@", @"UI"), joinedNames];
+            actions = @[ NSLocalizedString(@"OK", @"UI"), NSLocalizedString(@"Configure Existing Profile", @"UI"), NSLocalizedString(@"Cancel", @"UI")];
             edit = kiTermWarningSelection1;
             cancel = kiTermWarningSelection2;
         } else {
@@ -739,7 +739,7 @@ static NSString *const kKeyCode0MitigationSuffixGlobal = @"Global";
 - (BOOL)keyMapping:(iTermKeyMappingViewController *)viewController shouldImportKeystrokes:(NSSet<iTermKeystroke *> *)keystrokesThatWillChange {
     NSSet<iTermKeystroke *> *keystrokesInGlobalMapping = [iTermKeyMappings keystrokesInGlobalMapping];
     if (![keystrokesInGlobalMapping isSubsetOfSet:keystrokesThatWillChange]) {
-        NSNumber *n = [viewController removeBeforeLoading:@"importing mappings"];
+        NSNumber *n = [viewController removeBeforeLoading:NSLocalizedString(@"importing mappings", @"UI")];
         if (!n) {
             return NO;
         }
@@ -794,8 +794,8 @@ static NSString *const kKeyCode0MitigationSuffixGlobal = @"Global";
     if ([[iTermTouchbarMappings globalTouchBarMap] count] != 1) {
         return;
     }
-    [[iTermNotificationController sharedInstance] notify:@"Touch Bar Item Added"
-                                         withDescription:@"Select View > Customize Touch Bar to enable your new touch bar item."];
+    [[iTermNotificationController sharedInstance] notify:NSLocalizedString(@"Touch Bar Item Added", @"UI")
+                                         withDescription:NSLocalizedString(@"Select View > Customize Touch Bar to enable your new touch bar item.", @"UI")];
     [iTermUserDefaults setHaveExplainedHowToAddTouchbarControls:YES];
 }
 
@@ -831,7 +831,7 @@ static NSString *const kKeyCode0MitigationSuffixGlobal = @"Global";
     NSSet<iTermKeystroke *> *keystrokesInGlobalMapping = [iTermKeyMappings keystrokesInGlobalMapping];
     BOOL replaceAll = YES;
     if (![keystrokesInGlobalMapping isSubsetOfSet:keystrokesThatWillChange]) {
-        NSNumber *n = [viewController removeBeforeLoading:@"loading preset"];
+        NSNumber *n = [viewController removeBeforeLoading:NSLocalizedString(@"loading preset", @"UI")];
         if (!n) {
             return;
         }

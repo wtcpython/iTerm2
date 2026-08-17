@@ -148,7 +148,7 @@ final class CodeReviewPromptManagerWindowController: NSWindowController {
             NSImage(systemSymbolName: "plus",
                      accessibilityDescription: NSLocalizedString("Add", comment: "UI"))!,
             NSImage(systemSymbolName: "minus",
-                     accessibilityDescription: "Remove")!
+                     accessibilityDescription: NSLocalizedString("Remove", comment: "UI"))!
         ], trackingMode: .momentary, target: nil, action: nil)
         segmented.frame = NSRect(x: margin, y: margin,
                                   width: 60, height: segmentHeight)

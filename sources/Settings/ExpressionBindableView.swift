@@ -27,7 +27,7 @@ extension ExpressionBindableView where Self: NSView, Self: NSAlertDelegate {
         let menu = NSMenu()
         let hasExpression = (expression?.isEmpty == false)
         do {
-            let item = NSMenuItem(title: hasExpression ? "Edit Expression Binding" : "Bind to Expression",
+            let item = NSMenuItem(title: hasExpression ? NSLocalizedString("Edit Expression Binding", comment: "UI") : NSLocalizedString("Bind to Expression", comment: "UI"),
                                   action: #selector(editBinding(_:)),
                                   keyEquivalent: "")
             item.target = self

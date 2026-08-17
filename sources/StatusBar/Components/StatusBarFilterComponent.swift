@@ -116,7 +116,7 @@ class StatusBarFilterComponent: iTermStatusBarBaseComponent, iTermFilterViewCont
     }
 
     override func statusBarComponentExemplar(withBackgroundColor backgroundColor: NSColor, textColor: NSColor) -> Any {
-        return "⥹ Filter"
+        return NSLocalizedString("⥹ Filter", comment: "UI")
     }
 
     override func statusBarComponentView() -> NSView {

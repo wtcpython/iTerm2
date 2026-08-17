@@ -173,7 +173,7 @@ static NSString *const iTermProfilePreferencesUpdateSessionName = @"iTermProfile
     
     info = [self defineControl:_profileNameField
                            key:KEY_NAME
-                   displayName:@"Profile name"
+                   displayName:NSLocalizedString(@"Profile name", @"UI")
                           type:kPreferenceInfoTypeStringTextField];
     __weak PreferenceInfo *weakInfo = info;
     info.customSettingChangedHandler = ^(id sender) {
@@ -228,7 +228,7 @@ static NSString *const iTermProfilePreferencesUpdateSessionName = @"iTermProfile
 
     info = [self defineControl:_icon
                            key:KEY_ICON
-                   displayName:@"Profile icon"
+                   displayName:NSLocalizedString(@"Profile icon", @"UI")
                           type:kPreferenceInfoTypePopup];
     info.onChange = ^{
         [weakSelf iconDidChange];
@@ -242,31 +242,31 @@ static NSString *const iTermProfilePreferencesUpdateSessionName = @"iTermProfile
 
     [self defineControl:_profileShortcut
                     key:KEY_SHORTCUT
-            displayName:@"Open profile shortcut keystroke"
+            displayName:NSLocalizedString(@"Open profile shortcut keystroke", @"UI")
                    type:kPreferenceInfoTypePopup
          settingChanged:^(id sender) { [weakSelf setShortcutValueToSelectedItem]; }
                  update:^BOOL { [weakSelf updateShortcutTitles]; return YES; }];
 
     [self defineControl:_tagsTokenField
                     key:KEY_TAGS
-            displayName:@"Profile tags"
+            displayName:NSLocalizedString(@"Profile tags", @"UI")
                    type:kPreferenceInfoTypeTokenField];
 
     [self defineControl:_commandType
                     key:KEY_CUSTOM_COMMAND
-            displayName:@"Profile uses login shell, custom shell, or custom command"
+            displayName:NSLocalizedString(@"Profile uses login shell, custom shell, or custom command", @"UI")
                    type:kPreferenceInfoTypePopup
          settingChanged:^(id sender) { [weakSelf commandTypeDidChange]; }
                  update:^BOOL { [weakSelf updateCommandType]; return YES; }];
 
     [self defineControl:_initialURL
                     key:KEY_INITIAL_URL
-            displayName:@"Initial URL for Browser mode"
+            displayName:NSLocalizedString(@"Initial URL for Browser mode", @"UI")
                    type:kPreferenceInfoTypeStringTextField];
 
     info = [self defineControl:_profileType
                            key:KEY_PROFILE_TYPE_PHONY
-                   displayName:@"Profile type"
+                   displayName:NSLocalizedString(@"Profile type", @"UI")
                           type:kPreferenceInfoTypeSegmentedControl];
     info.syntheticGetter = ^id{
         if ([[weakSelf stringForKey:KEY_CUSTOM_COMMAND] isEqualToString:kProfilePreferenceCommandTypeBrowserValue]) {
@@ -305,7 +305,7 @@ static NSString *const iTermProfilePreferencesUpdateSessionName = @"iTermProfile
 
     info = [self defineControl:_customCommand
                            key:KEY_COMMAND_LINE
-                   displayName:@"Profile custom command"
+                   displayName:NSLocalizedString(@"Profile custom command", @"UI")
                           type:kPreferenceInfoTypeStringTextField];
     info.shouldBeEnabled = ^BOOL {
         __strong __typeof(weakSelf) strongSelf = self;
@@ -329,7 +329,7 @@ static NSString *const iTermProfilePreferencesUpdateSessionName = @"iTermProfile
 
     [self defineControl:_initialDirectoryType
                     key:KEY_CUSTOM_DIRECTORY
-            displayName:@"Profile initial working directory"
+            displayName:NSLocalizedString(@"Profile initial working directory", @"UI")
                    type:kPreferenceInfoTypeMatrix
          settingChanged:^(id sender) { [weakSelf directoryTypeDidChange]; }
                  update:^BOOL { [weakSelf updateDirectoryType]; return YES; }];
@@ -358,14 +358,14 @@ static NSString *const iTermProfilePreferencesUpdateSessionName = @"iTermProfile
         return [[weakSelf objectForKey:KEY_WORKING_DIRECTORY] isEqual:NSHomeDirectory()];
     };
     [self addViewToSearchIndex:_editBadgeButton
-                   displayName:@"Edit badge appearance"
+                   displayName:NSLocalizedString(@"Edit badge appearance", @"UI")
                        phrases:@[ @"Badge font",
                                   @"Badge minum and maximum width",
                                   @"Badge right and top margins" ]
                            key:nil];
     [self defineControl:_badgeText
                     key:KEY_BADGE_FORMAT
-            displayName:@"Profile badge"
+            displayName:NSLocalizedString(@"Profile badge", @"UI")
                    type:kPreferenceInfoTypeStringTextField];
     _badgeTextFieldDelegate =
         [[iTermFunctionCallTextFieldDelegate alloc] initWithPathSource:[iTermVariableHistory pathSourceForContext:iTermVariablesSuggestionContextSession]
@@ -396,7 +396,7 @@ static NSString *const iTermProfilePreferencesUpdateSessionName = @"iTermProfile
 
     [self defineControl:_titleSettings
                     key:KEY_TITLE_COMPONENTS
-            displayName:@"Profile title options"
+            displayName:NSLocalizedString(@"Profile title options", @"UI")
                    type:kPreferenceInfoTypePopup
          settingChanged:^(id sender) { [weakSelf toggleSelectedTitleComponent]; }
                  update:^BOOL {
@@ -445,7 +445,7 @@ static NSString *const iTermProfilePreferencesUpdateSessionName = @"iTermProfile
     };
 
     [self addViewToSearchIndex:_urlSchemes
-                   displayName:@"URL schemes handled by profile"
+                   displayName:NSLocalizedString(@"URL schemes handled by profile", @"UI")
                        phrases:@[ @"ssh", @"http", @"https" ]
                            key:nil];
 

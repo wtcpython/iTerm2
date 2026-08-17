@@ -142,7 +142,7 @@ class ToolCodecierge: NSView, ToolbeltTool {
                                     pendingCompletion = { result in
                                         switch result {
                                         case .success:
-                                            try? completion(.success(NSLocalizedString("Done", comment: "UI")))
+                                            try? completion(.success("Done"))
                                         case .failure(let error):
                                             try? completion(.failure(error))
                                         }
@@ -249,7 +249,7 @@ class ToolCodecierge: NSView, ToolbeltTool {
                 if commandCount >= iTermAdvancedSettingsModel.codeciergeCommandWarningCount() {
                     let selection =
                     iTermWarning.show(withTitle: NSLocalizedString("Your codecierge session has been going on for a long time. Are you still using it? If not, stop it to save money and privacy.", comment: "UI"),
-                                      actions: ["Keep Going", "Stop Codecierge"],
+                                      actions: [NSLocalizedString("Keep Going", comment: "UI"), NSLocalizedString("Stop Codecierge", comment: "UI")],
                                       accessory: nil,
                                       identifier: "CodeciergeCommandWarning",
                                       silenceable: .kiTermWarningTypePermanentlySilenceable,
@@ -643,7 +643,7 @@ class CodeciergeOnboardingView: NSView {
     private let label: NSTextField
     private let startButton: NSButton
     private let revealButton: NSButton
-    private let originalLabelText = "Codecierge uses AI to help you in your terminal."
+    private let originalLabelText = NSLocalizedString("Codecierge uses AI to help you in your terminal.", comment: "UI")
     private var notificationObserver: (any NSObjectProtocol)?
 
     init(startCallback: @escaping () -> ()) {
@@ -986,7 +986,7 @@ class CodeciergeSuggestionView: NSView, NSTextFieldDelegate {
         replyButton.isEnabled = false
         replyButton.isBordered = false
         if #available(macOS 11.0, *) {
-            replyButton.image = NSImage(systemSymbolName: SFSymbol.paperplane.rawValue, accessibilityDescription: "Send reply")
+            replyButton.image = NSImage(systemSymbolName: SFSymbol.paperplane.rawValue, accessibilityDescription: NSLocalizedString("Send reply", comment: "UI"))
         } else {
             replyButton.stringValue = NSLocalizedString("Send", comment: "UI")
         }

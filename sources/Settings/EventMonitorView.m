@@ -59,7 +59,7 @@
 - (void)showNotSupported
 {
     [label_ setStringValue:NSLocalizedString(@"You can't customize that button", @"UI")];
-    [label_ performSelector:@selector(setStringValue:) withObject:@"Click or Tap Here to Set Input Fields" afterDelay:1];
+    [label_ performSelector:@selector(setStringValue:) withObject:NSLocalizedString(@"Click or Tap Here to Set Input Fields", @"UI") afterDelay:1];
 }
 
 - (void)mouseUp:(NSEvent *)theEvent {

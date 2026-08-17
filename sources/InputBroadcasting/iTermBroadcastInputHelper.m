@@ -243,13 +243,13 @@ NSString *const iTermBroadcastDomainsDidChangeNotification = @"iTermBroadcastDom
 - (NSString *)formatDestinationsForMode:(BroadcastMode)mode {
     switch (mode) {
         case BROADCAST_OFF:
-            return @"no sessions";
+            return NSLocalizedString(@"no sessions", @"UI");
         case BROADCAST_TO_ALL_TABS: {
             const NSInteger count = [[self allSessions] count];
             if (count < 2) {
-                return @"all panes in all tabs in this window";
+                return NSLocalizedString(@"all panes in all tabs in this window", @"UI");
             }
-            return [NSString stringWithFormat:@"%@ panes across all tabs in this window", @(count)];
+            return [NSString stringWithFormat:NSLocalizedString(@"%@ panes across all tabs in this window", @"UI"), @(count)];
         }
             break;
         case BROADCAST_TO_ALL_PANES: {

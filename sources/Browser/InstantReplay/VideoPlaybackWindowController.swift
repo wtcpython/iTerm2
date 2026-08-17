@@ -115,7 +115,7 @@ class VideoPlaybackWindowController: NSWindowController, NSMenuItemValidation {
         let symbolConfig = NSImage.SymbolConfiguration(pointSize: 18, weight: .medium)
 
         playBackwardButton = NSButton()
-        playBackwardButton.image = NSImage(systemSymbolName: SFSymbol.arrowtriangleBackwardFill.rawValue, accessibilityDescription: "Play Backward")?.withSymbolConfiguration(symbolConfig)
+        playBackwardButton.image = NSImage(systemSymbolName: SFSymbol.arrowtriangleBackwardFill.rawValue, accessibilityDescription: NSLocalizedString("Play Backward", comment: "UI"))?.withSymbolConfiguration(symbolConfig)
         playBackwardButton.bezelStyle = .shadowlessSquare
         playBackwardButton.isBordered = false
         playBackwardButton.target = self
@@ -124,7 +124,7 @@ class VideoPlaybackWindowController: NSWindowController, NSMenuItemValidation {
         controlsContainer.addSubview(playBackwardButton)
         
         playPauseButton = NSButton()
-        playPauseButton.image = NSImage(systemSymbolName: SFSymbol.playFill.rawValue, accessibilityDescription: "Play")?.withSymbolConfiguration(symbolConfig)
+        playPauseButton.image = NSImage(systemSymbolName: SFSymbol.playFill.rawValue, accessibilityDescription: NSLocalizedString("Play", comment: "UI"))?.withSymbolConfiguration(symbolConfig)
         playPauseButton.bezelStyle = .shadowlessSquare
         playPauseButton.isBordered = false
         playPauseButton.target = self
@@ -308,11 +308,11 @@ class VideoPlaybackWindowController: NSWindowController, NSMenuItemValidation {
             
             // Update forward play/pause button
             let forwardSymbolName = player.rate > 0 ? SFSymbol.pauseFill.rawValue : SFSymbol.playFill.rawValue
-            playPauseButton.image = NSImage(systemSymbolName: forwardSymbolName, accessibilityDescription: player.rate > 0 ? "Pause" : "Play")?.withSymbolConfiguration(symbolConfig)
+            playPauseButton.image = NSImage(systemSymbolName: forwardSymbolName, accessibilityDescription: player.rate > 0 ? NSLocalizedString("Pause", comment: "UI") : NSLocalizedString("Play", comment: "UI"))?.withSymbolConfiguration(symbolConfig)
             
             // Update backward play button
             let backwardSymbolName = player.rate < 0 ? SFSymbol.pauseFill.rawValue : SFSymbol.arrowtriangleBackwardFill.rawValue
-            playBackwardButton.image = NSImage(systemSymbolName: backwardSymbolName, accessibilityDescription: player.rate < 0 ? "Pause" : "Play Backward")?.withSymbolConfiguration(symbolConfig)
+            playBackwardButton.image = NSImage(systemSymbolName: backwardSymbolName, accessibilityDescription: player.rate < 0 ? NSLocalizedString("Pause", comment: "UI") : NSLocalizedString("Play Backward", comment: "UI"))?.withSymbolConfiguration(symbolConfig)
         }
     }
     

@@ -225,7 +225,7 @@ extern NSString *kWindowPasteboardType;
 - (NSString *)nameForNewSessionWithNumber:(int)n
 {
     if (n == 0) {
-        return @"New Session";
+        return NSLocalizedString(@"New Session", @"UI");
     } else {
         return [NSString stringWithFormat:NSLocalizedString(@"New Session %d", @"UI"), n + 1];
     }

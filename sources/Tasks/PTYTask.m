@@ -823,11 +823,11 @@ static void HandleSigChld(int n) {
 
         case iTermJobManagerForkAndExecStatusFailedToFork: {
             RLog(@"Unable to fork %@: %s", progpath, strerror(optionalErrorCode.intValue));
-            NSString *error = @"Unable to fork child process: you may have too many processes already running.";
+            NSString *error = NSLocalizedString(@"Unable to fork child process: you may have too many processes already running.", @"UI");
             if (optionalErrorCode) {
                 error = [NSString stringWithFormat:@"%@ The system error was: %s", error, strerror(optionalErrorCode.intValue)];
             }
-            [[iTermNotificationController sharedInstance] notify:@"Unable to fork!"
+            [[iTermNotificationController sharedInstance] notify:NSLocalizedString(@"Unable to fork!", @"UI")
                                                  withDescription:error];
             [self.delegate taskDiedWithError:error];
             break;

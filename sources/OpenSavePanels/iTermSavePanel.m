@@ -323,17 +323,15 @@ typedef NS_ENUM(NSUInteger, iTermSavePanelAction) {
     NSString *location = @"";
     NSString *directory = [self.item.filename stringByDeletingLastPathComponent];
     if ([directory isEqualToString:self.item.host.homeDirectory]) {
-        location = @" in your home directory";
+        location = NSLocalizedString(@" in your home directory", @"UI");
     } else if (self.item.host.isLocalhost && [directory isEqualToString:[[NSFileManager defaultManager] desktopDirectory]]) {
-        location = @" on the Desktop";
+        location = NSLocalizedString(@" on the Desktop", @"UI");
     }
 
     NSString *heading =
     [NSString stringWithFormat:NSLocalizedString(@"“%@” already exists. Do you want to replace it or append to it?", @"UI"),
      [self.item.filename lastPathComponent]];
-    NSString *body = [NSString stringWithFormat:@"A file or folder with the same name already exists%@. "
-                      @"Replacing it will overwrite its current contents.",
-                      location];
+    NSString *body = [NSString stringWithFormat:NSLocalizedString(@"A file or folder with the same name already exists%@. Replacing it will overwrite its current contents.", @"UI"), location];
     iTermWarningSelection selection = [iTermWarning showWarningWithTitle:body
                                                                  actions:@[ NSLocalizedString(@"Cancel", @"UI"), NSLocalizedString(@"Replace", @"UI"), NSLocalizedString(@"Append", @"UI") ]
                                                                accessory:nil
@@ -407,7 +405,7 @@ typedef NS_ENUM(NSUInteger, iTermSavePanelAction) {
     iTermWarningSelection selection = [iTermWarning showWarningWithTitle:[NSString stringWithFormat:NSLocalizedString(@"You can choose to use both, so that your file name ends in “.%@.%@”.", @"UI"), proposedExtension, _requiredExtension]
                                                                  actions:@[ [NSString stringWithFormat:NSLocalizedString(@"Use .%@", @"UI"), _requiredExtension],
                                                                             NSLocalizedString(@"Cancel", @"UI"),
-                                                                            @"Use both" ]
+                                                                            NSLocalizedString(@"Use both", @"UI") ]
                                                                accessory:nil
                                                               identifier:nil
                                                              silenceable:kiTermWarningTypePersistent
